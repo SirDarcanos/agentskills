@@ -17,10 +17,16 @@ A skill's `SKILL.md` explains when to use the skill and gives the agent its work
 
 ## Using a skill
 
-Install a skill with the `skills` CLI. For example, install `github-repo-setup` globally for Pi:
+Install the skills with the `skills` CLI:
 
 ```bash
-npx skills add SirDarcanos/agentskills --skill github-repo-setup --global --agent pi --yes
+npx skills add SirDarcanos/agentskills
+```
+
+To install a specific skill for Claude Code and Pi:
+
+```bash
+npx skills add SirDarcanos/agentskills --skill github-repo-setup --agent claude-code pi
 ```
 
 You can also clone the repository and copy or link a skill directory into the discovery path used by your coding agent:
