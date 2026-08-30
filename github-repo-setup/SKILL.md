@@ -47,6 +47,8 @@ Inspect the current directory before asking questions. Determine:
 
 Stop if the directory already points to a GitHub repository and clarify whether the user wants configuration rather than creation. Never overwrite an existing remote or project file.
 
+If the /grill-me skill is available, use it when more information are needed to properly set up the repository. Otherwise, ask the user to provide the information.
+
 ### 2. Resolve decisions
 
 Infer decisions already supplied by the user. Ask once for only the missing items:
@@ -104,6 +106,7 @@ gh repo edit OWNER/REPO --enable-secret-scanning-push-protection=true
 ```
 
 8. Apply only confirmed opt-in additions. Check feature availability and organization policy before changing access, rulesets, Actions, or other security settings.
+9. If the /setup-matt-pocock-skills is available, ask the user if they want you to run it as well.
 
 When a required security command needs unavailable permissions, a paid GitHub feature, or an organization-policy change, explain the exact constraint and mark setup as blocked rather than weakening or silently skipping the baseline.
 
