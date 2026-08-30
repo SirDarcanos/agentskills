@@ -1,11 +1,17 @@
 ---
 name: update-changelog
-description: Maintain an existing software changelog with concise, user-relevant entries. Use when recording unreleased changes, preparing a Semantic Versioning release, adding a missing historical release, or correcting an entry.
+description: Maintain an existing software changelog with concise, user-relevant entries. Use automatically after completing a notable user-facing change in a project with a changelog, or when preparing a Semantic Versioning release, adding a missing historical release, or correcting an entry.
 ---
 
 # Update a changelog
 
 Update the project's existing changelog from repository evidence. Preserve its established format unless the user explicitly requests migration. When the project already follows Keep a Changelog, use [the example changelog](references/example-changelog.md) as the target structure.
+
+## Invocation
+
+This skill is model-invoked. Use it automatically after completing work that produces a notable change for users, operators, integrators, or security reviewers in a project with an existing changelog. It can also be invoked manually for release preparation, historical entries, or corrections.
+
+If no changelog exists, ask the user to invoke `/create-changelog` when it is installed. Otherwise, report that the project needs an initial changelog rather than creating one through this workflow.
 
 ## Workflow
 

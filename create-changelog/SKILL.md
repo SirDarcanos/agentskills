@@ -1,11 +1,18 @@
 ---
 name: create-changelog
-description: Create a concise CHANGELOG.md using Semantic Versioning and a Keep a Changelog structure. Use when a software project has no changelog.
+description: Create the first concise Semantic Versioning CHANGELOG.md for a software project.
+disable-model-invocation: true
 ---
 
 # Create a changelog
 
 Create a human-readable `CHANGELOG.md` from evidence in the repository. Follow [the example changelog](references/example-changelog.md).
+
+## Invocation
+
+This skill is user-invoked. Run it manually when a project needs its first changelog.
+
+If a changelog already exists, use `/update-changelog` when available rather than replacing it. When it is unavailable, preserve the existing file and report that creation is unnecessary.
 
 ## Workflow
 
