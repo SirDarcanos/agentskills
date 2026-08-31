@@ -2,6 +2,15 @@
 
 Reusable skills for coding agents. This repository collects skills that I use in my own workflows and share for others to adapt.
 
+## Skills
+
+| Skill | When to use it |
+| --- | --- |
+| [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
+| [`github-repo-setup`](github-repo-setup/) | Create a new GitHub repository from a local project with a minimal file set, Dependabot, and secret scanning. |
+| [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |
+| [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
+
 ## Repository layout
 
 Each skill lives in its own directory and uses `SKILL.md` as its entry point:
@@ -9,11 +18,12 @@ Each skill lives in its own directory and uses `SKILL.md` as its entry point:
 ```text
 skill-name/
 ├── SKILL.md
+├── README.md
 ├── references/    # Optional supporting material
 └── scripts/       # Optional automation
 ```
 
-A skill's `SKILL.md` explains when to use the skill and gives the agent its working instructions. Supporting files stay beside the skill so it can be copied as one unit.
+A skill's `SKILL.md` explains when to use the skill and gives the agent its working instructions. Its `README.md` provides a human-facing overview. Supporting files stay beside the skill so it can be copied as one unit.
 
 ## Using a skill
 
