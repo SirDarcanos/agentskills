@@ -21,6 +21,8 @@ Apply it to prose meant for people, including documentation, reports, articles, 
 
 Infer whether the user wants an audit, edit, or draft from the request. A review authorizes findings only, not a rewrite. If two modes are plausible and the choice would change the deliverable, ask which one the user wants.
 
+When the `stay-positive` skill is installed, load and apply it in the same mode when the user requests constructive framing or the writing contract calls for it. Negative language is not itself slop; use `stay-positive` only where reframing can preserve meaning, context, stakes, emotion, and voice. If `stay-positive` loaded this skill, treat both skills as active without loading it again.
+
 ## Choose the mode
 
 - **Audit:** Identify problems without rewriting. Use when the user asks for a review, diagnosis, scan, or opinion.
