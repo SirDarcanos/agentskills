@@ -4,6 +4,8 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 ## Skills
 
+### General skills
+
 | Skill | When to use it |
 | --- | --- |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
@@ -11,6 +13,14 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |
 | [`stay-positive`](stay-positive/) | Reframe prose constructively without forcing optimism or weakening necessary negativity. |
 | [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
+
+### Dungeons & Dragons skills
+
+| Skill | When to use it |
+| --- | --- |
+| [`dnd-create-monster`](dnd-create-monster/) | Design, rebalance, or convert D&D 2024 monsters, returning Markdown by default with optional tool-specific formats. |
+| [`dnd-format-prose`](dnd-format-prose/) | Transform prose into table-ready D&D narration, boxed text, bestiary lore, or adventure lore. |
+| [`dnd-speak-with-dead`](dnd-speak-with-dead/) | Rewrite supplied text as an answer from a corpse affected by the Speak with Dead spell. |
 
 ## Repository layout
 
