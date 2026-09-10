@@ -1,5 +1,7 @@
 # Agent Skills
 
+[![skills.sh](https://skills.sh/b/SirDarcanos/agentskills)](https://skills.sh/SirDarcanos/agentskills)
+
 Reusable skills for coding agents. This repository collects skills that I use in my own workflows and share for others to adapt.
 
 ## Skills
