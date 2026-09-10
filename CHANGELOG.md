@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-09-10
+
+### Added
+
+- Add Implementation Preflight to select or create the correct Git branch before an implementation workflow begins.
+
+### Changed
+
+- Expand GitHub repository setup to configure direct-push, pull-request, development-branch, and bypass-exception workflows from explicit user choices.
+- Make GitHub repository setup explicitly user-invoked to prevent unintended remote and repository-wide changes.
+
 ## [1.2.0] - 2026-09-01
 
 ### Added

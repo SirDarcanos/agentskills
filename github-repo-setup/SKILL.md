@@ -1,6 +1,7 @@
 ---
 name: github-repo-setup
-description: Create a new GitHub repository from a new or existing local project. Use when the user asks to create or initialize an open-source, private, or enterprise-owned GitHub repo. Keep files minimal while always configuring Dependabot and secret scanning where GitHub permits them.
+description: Create and configure a GitHub repository from a new or existing local project.
+disable-model-invocation: true
 ---
 
 # GitHub repository setup
@@ -30,7 +31,9 @@ Repository settings created by this skill:
 
 These security settings are required baseline work, not opt-ins. Check their availability for the repository visibility, GitHub plan, and organization policy. If GitHub blocks one, report the exact constraint; do not silently omit it or replace it with a weaker setting.
 
-Everything beyond this baseline is opt-in. Examples include `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CODEOWNERS`, issue forms, pull-request templates, GitHub Actions, Dependabot version-update configuration, rulesets, team access, and deployment environments.
+Everything beyond this baseline is opt-in. Examples include `CODE_OF_CONDUCT.md`, `SUPPORT.md`, `CONTRIBUTING.md`, `SECURITY.md`, `CODEOWNERS`, issue forms, pull-request templates, GitHub Actions, Dependabot version-update configuration, team access, and deployment environments.
+
+The repository workflow is a required decision, not a default. Ask how changes should reach the default branch and configure branch rules only after the user confirms the workflow.
 
 ## Workflow
 
@@ -43,11 +46,13 @@ Inspect the current directory before asking questions. Determine:
 - whether an `origin` remote already exists;
 - which baseline files already exist;
 - the likely stack for `.gitignore` selection;
-- whether `gh` is installed and authenticated.
+- whether `gh` is installed and authenticated;
+- the current and default branch names;
+- any existing local development branch, GitHub ruleset, branch protection, or organization rule that constrains the workflow.
 
 Stop if the directory already points to a GitHub repository and clarify whether the user wants configuration rather than creation. Never overwrite an existing remote or project file.
 
-If the /grill-me skill is available, use it when more information are needed to properly set up the repository. Otherwise, ask the user to provide the information.
+If the /grill-me skill is available, use it when more information is needed to properly set up the repository. Otherwise, ask the user to provide the information.
 
 ### 2. Resolve decisions
 
@@ -60,9 +65,19 @@ Infer decisions already supplied by the user. Ask once for only the missing item
 - short description, if wanted;
 - open-source license;
 - whether to push the current local project;
+- how contributors should work:
+  1. push directly to the default branch;
+  2. work on branches and merge pull requests into the default branch; or
+  3. merge work into a development branch, then merge that branch into the default branch;
+- whether the default branch should reject direct pushes and require a pull request;
+- whether any people, teams, GitHub Apps, or repository roles may bypass that rule, and whether each exception applies always or only to pull requests; `none` is a valid answer;
+- for a development-branch workflow: the branch name, whether to create it, how changes enter it, and whether it receives its own direct-push or pull-request rules;
+- any additional merge requirements, such as approval count, status checks, conversation resolution, signed commits, linear history, or merge queue;
 - any opt-in additions.
 
-For enterprise repositories, treat organization rules as authoritative. Do not invent teams, owners, required checks, security contacts, or compliance requirements. Ask for them only when the requested addition needs them.
+Ask workflow questions as concrete choices and explain their effect. Recommend branch-to-default pull requests for a simple review gate. Recommend a development branch only when the user wants a persistent integration or release-staging step; do not create one by convention alone.
+
+For enterprise repositories, treat organization rules as authoritative. Do not invent teams, owners, bypass actors, required checks, security contacts, or compliance requirements. Ask for them only when the requested addition needs them. Resolve every bypass actor to the exact GitHub actor type and ID before execution, and show that resolved identity in the plan.
 
 ### 3. Present the plan
 
@@ -73,6 +88,10 @@ Before changing local files or GitHub, show a compact plan containing:
 - files to create;
 - required Dependabot and secret-scanning settings;
 - other repository settings to change;
+- the chosen branch flow, including the source and destination of each pull request;
+- branches to create;
+- rules for the default and development branches;
+- every bypass exception, or explicitly `none`;
 - opt-in additions, if any.
 
 Get confirmation before executing the plan.
@@ -105,10 +124,16 @@ gh repo edit OWNER/REPO --enable-secret-scanning=true
 gh repo edit OWNER/REPO --enable-secret-scanning-push-protection=true
 ```
 
-8. Apply only confirmed opt-in additions. Check feature availability and organization policy before changing access, rulesets, Actions, or other security settings.
-9. If the /setup-matt-pocock-skills is available, ask the user if they want you to run it as well.
+8. Establish the confirmed branch workflow after the first commit is available remotely:
+   - preserve the existing default branch unless the user approved changing it;
+   - when requested, create the development branch from the confirmed starting branch and push it;
+   - create no empty or orphan development branch merely to satisfy the plan.
+9. Apply the confirmed branch rules. Prefer repository rulesets when the account and repository support them; otherwise use branch protection when it can enforce the same confirmed behavior. Before creating a rule, inspect repository and organization rules to avoid duplicate or contradictory protection. Match explicit refs, or GitHub's default-branch selector, rather than broad patterns that capture unintended branches.
+10. A pull-request workflow must block direct updates to its protected destination branch. Configure only the confirmed requirements. Add bypass actors only when the user approved the exact resolved identity and bypass mode; an administrator is not implicitly an exception.
+11. Apply only confirmed opt-in additions. Check feature availability and organization policy before changing access, rulesets, Actions, or other security settings.
+12. If `/setup-matt-pocock-skills` is available, mention it as an optional next command for repositories that will use Matt Pocock's issue-tracking, triage, or domain-document workflows.
 
-When a required security command needs unavailable permissions, a paid GitHub feature, or an organization-policy change, explain the exact constraint and mark setup as blocked rather than weakening or silently skipping the baseline.
+When a required security command needs unavailable permissions, a paid GitHub feature, or an organization-policy change, explain the exact constraint and mark setup as blocked rather than weakening or silently skipping the baseline. Treat confirmed branch protection the same way: if GitHub cannot enforce the agreed workflow, report the protection as blocked instead of claiming the repository is ready.
 
 ### 5. Verify
 
@@ -119,8 +144,11 @@ Completion requires all applicable checks to pass:
 - Projects, Discussions, and Wikis are disabled;
 - Dependabot alerts and security updates are enabled;
 - secret scanning and push protection are enabled;
-- the expected branch and commits are present when a push was requested;
-- no pre-existing file or remote was overwritten;
+- the expected default and development branches and commits are present when requested;
+- each confirmed ruleset or branch-protection rule is active and targets only the intended branch;
+- direct pushes and pull-request requirements match the selected workflow;
+- every approved bypass actor and mode is present, with no unapproved exception;
+- no pre-existing file, remote, branch rule, or organization policy was overwritten;
 - every confirmed opt-in addition is present or reported as blocked with a reason.
 
 Report the repository URL, what was created or changed, what was intentionally left out, and any blocked step.
