@@ -10,6 +10,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 | Skill | When to use it |
 | --- | --- |
+| [`ask-nimble`](ask-nimble/) | Explicitly request an evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
 | [`github-repo-setup`](github-repo-setup/) | Create a new GitHub repository from a local project with a minimal file set, Dependabot, and secret scanning. |
 | [`implementation-preflight`](implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
