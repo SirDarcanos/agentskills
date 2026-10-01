@@ -15,7 +15,7 @@ In Pi, use `/skill:ask-nimble <question>`; `/ask-nimble` is the shorthand used b
 
 The skill is command-only, with `disable-model-invocation: true`. It also contains an explicit invocation gate for runtimes that do not enforce that frontmatter.
 
-If the subject or meaning of “correct” is unclear, the agent asks for clarification. When evidence is missing, the allowed answers include `insufficient_data`.
+If the subject or meaning of “correct” is unclear, the agent asks for clarification. It gathers neutral evidence, checks comparison coverage and freshness, and defaults to a Choice with `insufficient_data` for gaps. Up to four independent dimensions can be assessed together; their outcomes remain separate. Noul and Score are available when their meanings fit and the required evidence is present.
 
 ## Which questions fit?
 
@@ -37,7 +37,14 @@ Nimble sees only the evidence the agent sends. It does not independently read yo
 
 Results are advisory. The command does not modify your project or authorize consequential actions.
 
+## Testing
+
+The skill includes synthetic regression fixtures and a Python standard-library replay tool. Offline tests use mocked responses; live inference and retained records require explicit opt-in. See [testing guidance](references/testing.md) for commands and full agent-workflow scenarios.
+
 ## Files
 
 - [SKILL.md](SKILL.md): the agent workflow.
+- [references/judgment-design.md](references/judgment-design.md): primitives, contrasting criteria, and decomposition.
 - [references/ollama-api.md](references/ollama-api.md): local API requirements, request example, and response checks.
+- [references/testing.md](references/testing.md): offline/live validation and failure diagnosis.
+- [scripts/replay.py](scripts/replay.py) and [tests/cases.json](tests/cases.json): opt-in regression replay and synthetic fixtures.

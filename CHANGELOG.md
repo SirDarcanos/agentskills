@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-10-01
+
+### Added
+
+- Add opt-in Ask Nimble regression replay with synthetic fixtures and offline response-contract tests.
+
+### Changed
+
+- Improve Ask Nimble with neutral evidence, comparison coverage and freshness checks, contrasting criteria, and up to four independent Choice, Noul, or Score judgments.
+
+### Fixed
+
+- Recognize Pi's expanded Ask Nimble skill invocation without requiring the original slash command to remain visible.
+
 ## [1.4.0] - 2026-10-01
 
 ### Added

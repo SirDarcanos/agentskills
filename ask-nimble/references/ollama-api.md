@@ -10,7 +10,7 @@ Use this reference when building, sending, or validating an Ask Nimble request.
 - Endpoint: `http://localhost:11434/v1/systemone`.
 - Request body: at most 64 KiB.
 - Decision prompt: at most 8,192 tokens, including state, instructions, and criteria. Byte size alone does not establish token fit; keep well below the limit and reduce the request if Ollama reports a context error.
-- The API supports 1–64 questions; this skill uses one `choice` question with 2–26 options.
+- The API supports 1–64 questions; this skill uses at most four independently useful questions. Choice and Score take 2–26 options/levels.
 
 ## Server lifecycle
 
@@ -108,16 +108,29 @@ A cold load can take longer than a warm decision. A timeout or nonzero exit is a
 
 5. Read and validate the response, then remove the temporary files and directory, including on failure. Keep only the evidence and result needed for the conversation.
 
+## Question and response contracts
+
+Use string instructions and string descriptions for this skill. Every question must be self-contained; never rely on its ID to convey meaning.
+
+| Type | Request criteria | Required answer fields |
+| --- | --- | --- |
+| `choice` | Object mapping option names to descriptions. | Matching `type`; `choice` among those options; `probabilities` keyed by all those options; `confidence`. |
+| `noul` | Optional object with `true` and `false` descriptions. | Matching `type`; `noul`, a finite number from 0 to 1. No separate confidence is required. |
+| `score` | Array of level descriptions, lowest first. | Matching `type`; `score`; `legend` mapping string indices to the submitted descriptions; `probabilities` keyed by those indices; `confidence`. |
+
+For example, a Noul question can ask whether `ticket.text` explicitly requests a refund. A Score question can rate urgency with levels “No time-sensitive disruption,” “Time-sensitive disruption with a workaround,” and “Time-sensitive disruption without a workaround.” Inspect the actual state before choosing such questions; missing evidence needs an explicit unknown outcome rather than a forced Noul or Score.
+
 ## Validate the response
 
-Parse JSON and require:
+Parse JSON and require one answer for every submitted question ID, with the same question type and the fields above. Never partially interpret a batch with missing or malformed answers.
 
-- an `answers.decision` object with `type: "choice"`;
-- a `choice` matching one of the submitted option names;
-- `probabilities` keyed by those options, each a finite number from 0 to 1, summing approximately to 1 (allow rounding);
-- a finite `confidence` from 0 to 1.
+For Choice/Score, require finite probabilities from 0 to 1, exact option/index coverage, and a sum within 0.01 of 1 to allow rounding. Require finite confidence from 0 to 1. Score must be between 0 and the highest index and agree with the probability-weighted index within 0.05 to allow returned-value rounding. Booleans are not numeric probabilities.
 
-Reject an error object, missing fields, unexpected options, or invalid numbers as a malformed response. Do not treat errors or absent probabilities as evidence of uncertainty from Nimble.
+Reject an error object, missing fields, unexpected options, invalid numbers, or mismatched Score legends as a malformed response. Do not treat errors or absent probabilities as evidence of uncertainty from Nimble.
+
+[The regression runner](../scripts/replay.py) implements these checks for synthetic cases and can validate a saved request/response offline:
+`python3 scripts/replay.py --request REQUEST_FILE --response RESPONSE_FILE`
+(run from the skill directory). This validation does not establish evidence quality or judgment correctness.
 
 The API returns the selected option and its distribution, not supporting quotes or a reasoning trace. `confidence` measures how concentrated the distribution is, not the chance the answer is correct. Test application-specific thresholds against labeled examples before relying on them.
 
