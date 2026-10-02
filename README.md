@@ -10,7 +10,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 | Skill | When to use it |
 | --- | --- |
-| [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment, with approval before remote disclosure. |
+| [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment and interpretation, with confirmation only for exceptional scope. |
 | [`ask-nimble`](ask-nimble/) | Explicitly request an evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
 | [`github-repo-setup`](github-repo-setup/) | Create a new GitHub repository from a local project with a minimal file set, Dependabot, and secret scanning. |
