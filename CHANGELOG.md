@@ -7,13 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-10-02
+
 ### Added
 
 - Add command-only Ask Jev for evidence-backed hosted judgments, with invocation-scoped disclosure and optional upstream TypeSafe guidance.
-
-### Changed
-
-- Let explicit Ask Jev invocation authorize normal billable assessments, keeping interpretation while omitting routine confirmation and usage reporting.
 
 ## [1.4.1] - 2026-10-01
 
