@@ -1,6 +1,6 @@
 # Hosted API procedure
 
-Read this before checking credentials, constructing a request, or sending evidence. The disclosure gate in `SKILL.md` governs all authenticated operations.
+Read this before checking credentials, constructing a request, or sending evidence. The invocation and exceptional-disclosure rules in `SKILL.md` govern all authenticated operations.
 
 ## 1. Resolve current contracts
 
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 The SDK's documented environment variable is `TYPESAFE_API_KEY`. Check presence without printing its value. Use an existing authorized environment or secret-injection facility. If absent, ask the user to configure it outside the conversation; never ask them to paste a key into chat. Installation, account provisioning, or credential changes require permission.
 
-Use the user's chosen supported Jev model; otherwise propose `jev-latest` during disclosure approval. Aliases move. Record both the requested ID/alias and the response's versioned `model` field. Do not silently choose preview models or a different version on failure.
+Use the user's chosen supported Jev model; otherwise use `jev-latest` without routine confirmation. Aliases move. Record both the requested ID/alias and the response's versioned `model` field. Do not silently choose preview models or a different version on failure.
 
 **Complete when:** verified contracts, chosen model, authorized credentials, and any documentation limitation are known, or a blocker is reported.
 
@@ -62,7 +62,7 @@ python3 -c 'import json,sys; json.load(open(sys.argv[1], encoding="utf-8"))' '/a
 
 Replace the placeholder with the actual quoted path. Token limits require their own check or conservative budgeting.
 
-**Complete when:** the payload matches the approved disclosure, parses as JSON, and fits verified model/primitive limits.
+**Complete when:** the payload fits the invocation or exceptional disclosure approval, parses as JSON, and fits verified model/primitive limits.
 
 ## 3. Send with bounded transport
 
@@ -74,7 +74,7 @@ Use either an existing SDK with verified configuration or a short local HTTP cli
 4. Disable SDK automatic retries unless explicitly configured to fit the following budget. Allow at most two retries for explicit HTTP `429` or `529` responses, three attempts total per logical request. Use exponential backoff with jitter, bounded to 30 seconds per delay; honor `Retry-After` only within that bound, otherwise stop and report the rate-limit blocker. Bound each logical request to 420 seconds including attempts and delays.
 5. For timeouts or ambiguous network failures, stop: the service may already have processed a billable request. Report uncertain usage instead of retrying automatically. Authentication, validation, malformed-response, and other HTTP errors are blockers, not uncertain judgments.
 
-The assessment allows one initial logical request and at most one evidence-corrected logical request under `SKILL.md`: at most six HTTP attempts including explicit transient-error retries. This is a cap, not a target. Track attempts and any known usage; failed attempts may lack usage information. All calls must stay within the approved billable-call scope.
+The assessment allows one initial logical request and at most one evidence-corrected logical request under `SKILL.md`: at most six HTTP attempts including explicit transient-error retries. This is a cap, not a target. Track attempts and any known usage; failed attempts may lack usage information. All calls must stay within the invocation's normal assessment scope or explicit approval for exceptional calls. Keep normal attempt counts and usage internal; report them when requested or when unexpected billable attempts or uncertain charges are material.
 
 Sanitize error summaries before reporting them: server validation errors may echo submitted evidence. Retain sensitive raw bodies only temporarily for inspection. Never invent a response after a transport failure or substitute a chat/completion endpoint.
 
@@ -98,6 +98,6 @@ Reject error objects, missing fields, wrong IDs/types, mismatched legends, inval
 
 ## 5. Clean up
 
-Remove temporary request/response files and the owned private directory after interpretation or failure. Remove only the paths created for this assessment. Cleanup also applies when consent is declined after preparation. Preserve only the evidence and result needed for the conversation; ask separately before writing durable assessment or regression records. Document any cleanup failure without exposing payload contents.
+Remove temporary request/response files and the owned private directory after interpretation or failure. Remove only the paths created for this assessment. Cleanup also applies when exceptional disclosure approval is declined after preparation. Preserve only the evidence and result needed for the conversation; ask separately before writing durable assessment or regression records. Document any cleanup failure without exposing payload contents.
 
 **Complete when:** temporary artifacts are removed, or remaining owned paths and the cleanup blocker are reported.
