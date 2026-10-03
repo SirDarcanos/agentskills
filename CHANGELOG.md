@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-10-03
+
+### Added
+
+- Add Build with Nimble for application integrations, with composable decision design, local/self-hosted serving guidance, and validation checks.
+
 ## [1.5.0] - 2026-10-02
 
 ### Added
