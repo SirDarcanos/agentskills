@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.
+- Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
+
 ## [1.6.0] - 2026-10-03
 
 ### Added

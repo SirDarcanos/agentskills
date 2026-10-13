@@ -10,6 +10,8 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 | Skill | When to use it |
 | --- | --- |
+| [`ask-clef`](ask-clef/) | Explicitly request an evidence-backed local Clef judgment over text or images. |
+| [`ask-clef-flash`](ask-clef-flash/) | Explicitly request an evidence-backed local Clef Flash judgment over text or images. |
 | [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment and interpretation, with confirmation only for exceptional scope. |
 | [`ask-nimble`](ask-nimble/) | Explicitly request an evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
@@ -63,6 +65,10 @@ git clone https://github.com/SirDarcanos/agentskills.git
 ```
 
 Review a skill before enabling it because instructions and tool assumptions can differ between agent runtimes.
+
+## Comparing decision models
+
+[The shared decision-model benchmark](benchmarks/decision-models/) contains 100 synthetic cases with 120 known-label questions for Nimble, Clef, Clef Flash, and Jev. It reports category-level correctness and separates model mismatches from API failures. Validation is offline by default; live inference, hosted billing, and retained records require explicit opt-in.
 
 ## Adapting skills
 
