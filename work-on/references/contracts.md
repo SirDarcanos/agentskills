@@ -50,7 +50,7 @@ Changed scope invalidates affected evidence. Reviewers need actual diff/files an
 
 ## Execution and repair limits
 
-These limits constrain future consumers; entry does not itself dispatch, repair or integrate.
+These limits constrain all consumers; entry does not itself dispatch, repair or integrate. [Repair/completion](completion.md) implements checkpoint disposition and gate decisions.
 
 - At most **two active non-lead workers** across building, exploration and review, or fewer under runtime/project limits. Submitted unfinished assignments occupy slots even when idle. Declare finite runtime bounds before launch; workers cannot recursively delegate or automatically call optional models.
 - Writes need independent exclusive ownership, stable interfaces and suitable isolation. Shared interfaces serialize or have one owner. The lead alone integrates one result at a time under target branch policy; freeze writes/integration into a scope during its verification/review snapshot check.
@@ -62,7 +62,7 @@ These limits constrain future consumers; entry does not itself dispatch, repair 
 
 ## Delivery gates
 
-Later procedures must establish these gates; routing is not evidence that they passed.
+Consumer procedures must establish these gates; [repair/completion](completion.md#3-decide-the-separate-delivery-gates) records their decisions. Routing is not evidence that they passed.
 
 - **Build:** approved actionable behavior and verifiable acceptance, known material design/ownership/dependencies/risks, sufficient authority and safe preflight.
 - **Accept:** integrated-state acceptance/risk evidence and independent Standards/Spec review; material findings resolved or acceptance explicitly changed by its owner; evidence refreshed after repairs.
