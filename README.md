@@ -24,7 +24,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |
 | [`stay-positive`](stay-positive/) | Reframe prose constructively without forcing optimism or weakening necessary negativity. |
 | [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
-| [`work-on`](work-on/) | Explicitly start or resume delivery with context-aware routing, product agreement, technical planning, native ticket graphs, direct building, integrated verification, bounded repair/completion and multi-ticket dispatch/integration; recovery is not yet shipped. |
+| [`work-on`](work-on/) | Explicitly start or resume delivery with context-aware routing, product agreement, technical planning, native ticket graphs, direct building, integrated verification, bounded repair/completion, multi-ticket dispatch/integration and safe interruption/failure recovery. |
 
 ### Dungeons & Dragons skills
 

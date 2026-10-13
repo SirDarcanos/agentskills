@@ -50,7 +50,7 @@ Changed scope invalidates affected evidence. Reviewers need actual diff/files an
 
 ## Execution and repair limits
 
-These limits constrain all consumers; entry does not itself dispatch, repair or integrate. [Repair/completion](completion.md) implements checkpoint disposition and gate decisions; [dispatch](dispatch.md) implements frontier scheduling, bounded assignments and incremental integration.
+These limits constrain all consumers; entry does not itself dispatch, repair or integrate. [Repair/completion](completion.md) implements checkpoint disposition and gate decisions; [dispatch](dispatch.md) implements frontier scheduling, bounded assignments and incremental integration; [recovery](recovery.md) implements actual-state reconstruction and justified resume after interruption/failure.
 
 - At most **two active non-lead workers** across building, exploration and review, or fewer under runtime/project limits. Submitted unfinished assignments occupy slots even when idle. Declare finite runtime bounds before launch; workers cannot recursively delegate or automatically call optional models.
 - Writes need independent exclusive ownership, stable interfaces and suitable isolation. Shared interfaces serialize or have one owner. The lead alone integrates one result at a time under target branch policy; freeze writes/integration into a scope during its verification/review snapshot check.
