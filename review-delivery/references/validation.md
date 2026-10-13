@@ -30,7 +30,7 @@ These assertions demonstrate scope coverage, defect observability and helper dri
 3. Modify the untracked file after review. Repeat discovery/fingerprints and require stale evidence, not approval for the new state. Repin before renewed review.
 4. In a no-delegation/unavailable-runtime variant, require an explicit independent-review acceptance blocker. Lead inspection is not relabeled independent. Do not launch a worker to demonstrate lack of permission.
 
-The protocol remains **partly unexecuted**. A separately authorized [trial attempt](trial-attempt.md) performed fixture setup and submitted both reviewer contexts, but both failed before startup; successful finding detection and post-report drift behavior remain blocked/not run. That record distinguishes the actual unavailable-capability gate from authored expectations. Non-Git manifests, submodule/manual capture, worker timeout and resumed retained evidence also require honest branch-specific trial evidence, not extrapolation from helper tests.
+The bounded protocol is now **executed**, with [retry results and separate reviewer reports](trial-results.md). Both axes independently found the dirty/untracked defects, marked affected coverage stale after source/path changes, and assessed the unavailable-capability gate. The earlier [startup failure](trial-attempt.md) remains historical evidence, not successful review. Non-Git manifests, submodule/manual capture, worker timeout and resumed retained evidence remain unrun branches requiring honest trial evidence, not extrapolation from helper tests.
 
 ## #24 initial implementation execution record
 
@@ -44,7 +44,7 @@ Executed locally with Python 3.14.7 and Git 2.54.0 (Apple Git-157), from baselin
 | `git diff --check` | Exit 0 for tracked edits; full staged diff is checked again before commit. |
 | Direct author inspection | Procedure, scope/report tables and code blocks inspected against #24 and the accepted contract; this is self-review, not independent review. No Markdown renderer was available, so HTML rendering was not executed. |
 
-At initial implementation, independent Standards/Spec reviewer execution was **not run** because delegation permission had not been granted. After PR #39 merged, the maintainer separately authorized the [trial attempt](trial-attempt.md): permission is now granted but startup capability failed. Actual reviewer finding detection and stale-report behavior remain an acceptance evidence gap; the fixture/helper checks do not replace them. No installation, global legacy command replacement, optional assessment, model vote, repair loop or integrated workflow trial is included.
+At initial implementation, independent Standards/Spec reviewer execution was **not run** because delegation permission had not been granted. After PR #39 merged, the maintainer separately authorized the [trial attempt](trial-attempt.md), which failed at startup. Following the maintainer's runtime update, the [executed retry](trial-results.md) supplied actual independent finding-detection, stale-coverage and unavailable-capability outcomes, separately from helper/static checks. No lead-performed installation, global legacy command replacement, optional assessment, model vote, repair loop or integrated workflow trial is included.
 
 ## Documentation impact
 

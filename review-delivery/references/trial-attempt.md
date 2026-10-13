@@ -1,6 +1,6 @@
 # Independent-review trial attempt for #24
 
-**Outcome: blocked at reviewer startup, not a successful independent review.** The maintainer authorized the two-reviewer synthetic trial after merged [PR #39](https://github.com/SirDarcanos/agentskills/pull/39). The lead applied the shipped procedure's unavailable-capability gate to an actual runtime failure. No reviewer read sources or produced findings; lead inspection is not substituted for either axis.
+**Historical first-attempt outcome: blocked at reviewer startup, not a successful independent review.** A later maintainer-requested retry after the runtime update completed the bounded trial; see [current results](trial-results.md). The maintainer authorized the two-reviewer synthetic trial after merged [PR #39](https://github.com/SirDarcanos/agentskills/pull/39). The lead applied the shipped procedure's unavailable-capability gate to an actual runtime failure. No reviewer read sources or produced findings; lead inspection is not substituted for either axis.
 
 ## Scope and reproduction
 
@@ -54,7 +54,9 @@ The lead inspected the terminal workflow state and failure artifacts, confirmed 
 | Change after initial reports; stale-review disposition | **Not run:** no initial reports exist. The lead did not mutate the preserved fixture; existing offline helper drift tests remain separate evidence. |
 | Successful fresh review, renewed review, timeout and non-Git branches | **Not run:** this attempt establishes none of those behaviors or cross-runtime certification. |
 
-## Next action and documentation impact
+## Historical next action and documentation impact
+
+The recommendation below describes the first attempt's blocked state; the later update/retry is recorded separately in the current results.
 
 Keep #24 open. Recommend a bounded runtime diagnosis/repair under separate approval, or an explicitly approved compatible execution-mode alternative. After capability is restored, repin and rerun the initial Standards/Spec trial in fresh contexts, then execute the post-report drift phase and record actual findings/outcomes. Do not resume nonexistent child sessions or treat this failure record as satisfying successful review acceptance.
 
