@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
+- Add Setup Project for project-aware operating docs, domain records, safe reconciliation, and verified native issue dependencies. ([#8](https://github.com/SirDarcanos/agentskills/issues/8))
+
+### Changed
+
+- Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
 
 ## [1.6.0] - 2026-10-03
 
