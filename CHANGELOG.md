@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Document delivery installation, conditional companions, runtime limits and executed trial coverage, with a neutral review-packet checklist for prior-report exposure. ([#31](https://github.com/SirDarcanos/agentskills/issues/31), [#14](https://github.com/SirDarcanos/agentskills/issues/14), trials [#45](https://github.com/SirDarcanos/agentskills/pull/45)/[#46](https://github.com/SirDarcanos/agentskills/pull/46))
+- Document delivery installation, conditional companions, runtime limits and executed trial coverage, with a neutral review-packet checklist for prior-report exposure. ([#31](https://github.com/SirDarcanos/agentskills/issues/31), [#47](https://github.com/SirDarcanos/agentskills/pull/47), [#14](https://github.com/SirDarcanos/agentskills/issues/14), trials [#45](https://github.com/SirDarcanos/agentskills/pull/45)/[#46](https://github.com/SirDarcanos/agentskills/pull/46))
 - Clarify Setup Project's distinct spec/implementation-step roles, project-specific issue titles, and independently assessed readiness. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
 - Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
 
