@@ -13,4 +13,4 @@ Use `/review-delivery <scope>` or supply a bounded review handoff. The entry poi
 
 Missing independence or material scope/evidence blocks delivery acceptance. Lead self-review remains useful but is not independent review. No hosted service, model voting, installation or global command replacement is required. Reports do not imply merge or release permission.
 
-Read [SKILL.md](SKILL.md) for the procedure, [scope](references/scope.md) for fingerprinting and freshness limits, [report](references/report.md) for findings, and [validation](references/validation.md) for executed checks versus unrun reviewer trials. Keep this whole directory when copying the package. No runtime adapter or cross-runtime certification is claimed.
+Read [SKILL.md](SKILL.md) for the procedure, [scope](references/scope.md) for fingerprinting and freshness limits, [report](references/report.md) for findings, and [validation](references/validation.md) for portable local checks and behavioral trial scenarios. Keep this whole directory when copying the package. No runtime adapter or cross-runtime certification is claimed.
