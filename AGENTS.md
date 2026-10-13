@@ -8,6 +8,8 @@ This repository contains reusable skills for coding agents. Each top-level skill
 
 Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md) for this single-maintainer repository's authority and delivery agreement. Before creating or scheduling issues, read [tracker guidance](docs/agents/issue-tracker.md) and [label mappings](docs/agents/triage-labels.md). For terminology-dependent work, read [CONTEXT.md](CONTEXT.md); for changes to meanings or decision records, follow the workflow's domain-modeling pointer. Check documentation impact before completion.
 
+For #14 delivery-workflow design or implementation, read the [delivery contract](docs/design/delivery-workflow.md), its decision status, and the linked inventory/validation evidence before changing a phase or companion boundary.
+
 ## Working with skills
 
 - Read a skill's complete `SKILL.md` before changing it.
