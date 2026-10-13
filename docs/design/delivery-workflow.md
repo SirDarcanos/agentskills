@@ -11,7 +11,7 @@ Design deliverable for [#18](https://github.com/SirDarcanos/agentskills/issues/1
 
 The design was accepted through merged [PR #32](https://github.com/SirDarcanos/agentskills/pull/32) at `ec7de9c2725209388fd1f4ca11719f68c1e7cef1`; that acceptance supersedes the pre-merge pending-status wording above and in the linked ADR. Entry and the shared runtime contract now live in [Work On](../../work-on/SKILL.md), with [product agreement](../../work-on/references/product-agreement.md) added by #20 and [technical readiness](../../work-on/references/technical-readiness.md) by #21 and [ticketing](../../work-on/references/ticketing.md) by #22 and [direct build](../../work-on/references/build.md) by #23; independent review now lives in [Review Delivery](../../review-delivery/SKILL.md) with its delivered-scope and report contracts added by #24. Other destinations remain unimplemented until their owning tickets ship. Runtime procedure details belong in the package, not this design rationale.
 
-[Inventory and provenance](delivery-workflow-inventory.md) records observed behavior separately from this design. [ADR 0001](../adr/0001-delivery-workflow-ownership.md) records the package-boundary rationale. [Design validation](delivery-workflow-validation.md) contains acceptance coverage and paper walkthroughs, not executed workflow trials.
+[Inventory and provenance](delivery-workflow-inventory.md) records observed behavior separately from this design. [ADR 0001](../adr/0001-delivery-workflow-ownership.md) records the package-boundary rationale. [Design validation](delivery-workflow-validation.md) contains acceptance coverage and paper walkthroughs, not executed workflow trials. For #24's actual reviewer execution and its limitations, read the [repository review-validation evidence](../validation/review-delivery/README.md); delivery records are separate from the installable skill.
 
 ## Package and invocation boundary
 
@@ -39,7 +39,7 @@ The intended package-local homes are below. These are implementation destination
 | `work-on/references/completion.md` | Repair episodes, renewed checks/review, acceptance and director-level report | #26 |
 | `work-on/references/dispatch.md` | Ready frontier, assignments, ownership and serial integration | #27 |
 | `work-on/references/recovery.md` | State reconciliation, interrupted work, failure disposition and resume | #28 |
-| Package-local validation references/fixtures and READMEs | Executed trial evidence, installation/discovery and limitations | #29–#31; each earlier ticket still validates its own changes |
+| Package-local validation instructions/fixtures and READMEs; repository evidence docs | Reusable checks, executed trial records retained outside shipped packages, installation/discovery and limitations | #29–#31; each earlier ticket still validates its own changes |
 
 Keep procedure instructions in those runtime homes once implemented. This design remains the cross-ticket contract and rationale, not a second step-by-step runtime manual. Implementation tickets must reconcile changed design facts here; substantial changes to accepted ownership use the ADR process. Package-local links stay inside the copied package. Companions are reached through runtime discovery, never `../other-skill` or a workstation path.
 

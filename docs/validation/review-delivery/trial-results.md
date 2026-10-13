@@ -10,8 +10,8 @@ Workflow `bac6165d-0ad6-488c-9f32-138ea419e2c0` completed with two successful re
 
 | Axis | Identity / report |
 | --- | --- |
-| Standards | `192fc621-7d8f-44ff-90b4-e4099824d124`; [full portable report](trial-reports/standards.md) |
-| Spec | `45e3469d-66e0-4760-a842-a051b809e20f`; [full portable report](trial-reports/spec.md) |
+| Standards | `192fc621-7d8f-44ff-90b4-e4099824d124`; [full portable report](reports/standards.md) |
+| Spec | `45e3469d-66e0-4760-a842-a051b809e20f`; [full portable report](reports/spec.md) |
 
 Both were builtin `reviewer` contexts, requested/resolved **fresh**, distinct from the implementation/fixture author and each other's conclusions. The recorded route was `openai-codex/gpt-6.1-sol:high` for both; this identifies execution, not a required model or model-voting rule. Tools allowed inspection and supervisor contact, not shell, writes, network or recursive delegation. Each had a 15-minute bound and 70-call tool limit; at most two active workers. Both returned before their deadlines. The lead executed checks and integrated evidence; reviewers independently inspected actual source and raw evidence rather than approving a requested verdict.
 
