@@ -1,0 +1,134 @@
+{
+  "kind": "sanitized ordinary runtime lifecycle records, not attestation",
+  "max_active_non_lead": 2,
+  "workflows": [
+    {
+      "children": [
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "failed-standards",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "b3f9abfc2b8422134c6a65e441cb610541b89c27236857cabf4d713cd80c5b57",
+          "report": "reports/failed-standards.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "692e3e7c-f893-4510-8b34-ac6f162f089e",
+          "state": "completed"
+        },
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "failed-spec",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "4cdf710e3998e5941f37084a65684b3f559ad4a774638476090d71ace9ea0433",
+          "report": "reports/failed-spec.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "bfe10518-4740-4a2a-a4c4-077b9c090ad8",
+          "state": "completed"
+        }
+      ],
+      "inventory_complete": true,
+      "requested_timeout_ms": 600000,
+      "workflow_id": "5209e46c-d143-4c72-8260-c4b8a30cfe4d",
+      "workflow_state": "completed"
+    },
+    {
+      "children": [
+        {
+          "agent": "reviewer",
+          "eligibility": "superseded",
+          "key": "repaired-standards",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "71ae33c020e29f13e2ef72b42611aaf5a9d478c401425565cd3d1105c1457d99",
+          "report": "reports/repaired-standards.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "01148833-65ae-4a61-b36b-6a9b3aa2adb1",
+          "state": "completed"
+        },
+        {
+          "agent": "reviewer",
+          "eligibility": "superseded",
+          "key": "repaired-spec",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "427686ea28bae75830161894a6cf8e34a4ac36b816720a5b77b7350ee461b1a4",
+          "report": "reports/repaired-spec.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "db7db245-22e8-4524-89bd-16fb6cc06e32",
+          "state": "completed"
+        }
+      ],
+      "inventory_complete": true,
+      "requested_timeout_ms": 600000,
+      "workflow_id": "e43e5088-25dc-4b30-ac69-4648613c771d",
+      "workflow_state": "completed"
+    },
+    {
+      "children": [
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "repaired-clean-standards",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "ca3ff3136a5939bf22f643504bd3ba29c052ede7462c55cc076de0d9787437f7",
+          "report": "reports/repaired-clean-standards.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "7de648dd-55f0-4a1a-b3cc-56f74b68d8d2",
+          "state": "completed"
+        },
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "repaired-clean-spec",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "27a187e78890cedfb90c49b8596f969dc6591d7070e8c70460d4c0bdda144533",
+          "report": "reports/repaired-clean-spec.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "1d2589d9-4d43-46bb-b9e0-77b885d73d4c",
+          "state": "completed"
+        }
+      ],
+      "inventory_complete": true,
+      "requested_timeout_ms": 600000,
+      "workflow_id": "0f631345-4860-4692-8d89-f52855cb93b5",
+      "workflow_state": "completed"
+    },
+    {
+      "children": [
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "final-standards",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "380ee55a9e1a2d1bfb9e9d81382d854c0b9b7f4ef912a8a385742e1935ac51aa",
+          "report": "reports/final-standards.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "253a650d-1a26-4ba1-8737-6d8896ddbeba",
+          "state": "completed"
+        },
+        {
+          "agent": "reviewer",
+          "eligibility": "current-for-recorded-snapshot",
+          "key": "final-spec",
+          "model": "openai-codex/gpt-6.1-sol:high",
+          "published_report_sha256": "c0d36befac68878d87648f0a5c2e02170eca55814ce5ce76684643f65ae3b7e7",
+          "report": "reports/final-spec.md",
+          "requested_context": "fresh",
+          "resolved_context": "fresh",
+          "run_id": "89de8798-894a-4e7d-bc9c-08a7490a5c88",
+          "state": "completed"
+        }
+      ],
+      "inventory_complete": true,
+      "requested_timeout_ms": 600000,
+      "workflow_id": "ccecf9ab-fdcb-47c5-a981-8c06695e3913",
+      "workflow_state": "completed"
+    }
+  ]
+}

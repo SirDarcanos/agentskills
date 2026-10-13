@@ -1,0 +1,15 @@
+{
+  "checkpoint": "101-normalization",
+  "finding_lineage": "N1-trim",
+  "repair_count_before_resume": 0,
+  "repair_count_after_corrective_commit": 1,
+  "automatic_limit": 2,
+  "integrated_candidate": "93e4d2d2027e1db7c91f0430edc0dd22ece0514c",
+  "integrated_correction": "aaacb949d4f2113b1f4806d8812535017b161e54",
+  "ticket_102_started": false,
+  "active_implementers": 0,
+  "direct_writer": "lead",
+  "fixture_acceptance_record": null,
+  "historical_source_retained": true,
+  "historical_checks_retained": true
+}

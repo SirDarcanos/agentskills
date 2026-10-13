@@ -1,0 +1,109 @@
+{
+  "kind": "mock-native-observations",
+  "network_calls": 0,
+  "reads": {
+    "issues/100": {
+      "id": 9100,
+      "labels": [
+        "spec",
+        "ready-for-agent"
+      ],
+      "number": 100,
+      "role": "spec",
+      "state": "open"
+    },
+    "issues/100/parent": {
+      "complete": true,
+      "parent": null
+    },
+    "issues/100/sub_issues": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9101,
+            "number": 101
+          },
+          {
+            "id": 9102,
+            "number": 102
+          }
+        ]
+      ]
+    },
+    "issues/101": {
+      "acceptance": null,
+      "id": 9101,
+      "labels": [
+        "implementation-step",
+        "ready-for-agent"
+      ],
+      "number": 101,
+      "role": "work",
+      "state": "closed"
+    },
+    "issues/101/dependencies/blocked_by": {
+      "complete": true,
+      "pages": [
+        []
+      ]
+    },
+    "issues/101/dependencies/blocking": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9102,
+            "number": 102
+          }
+        ]
+      ]
+    },
+    "issues/101/parent": {
+      "complete": true,
+      "parent": {
+        "id": 9100,
+        "number": 100
+      }
+    },
+    "issues/102": {
+      "id": 9102,
+      "labels": [
+        "implementation-step",
+        "ready-for-agent"
+      ],
+      "number": 102,
+      "role": "work",
+      "state": "open"
+    },
+    "issues/102/dependencies/blocked_by": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9101,
+            "number": 101
+          }
+        ]
+      ]
+    },
+    "issues/102/dependencies/blocking": {
+      "complete": true,
+      "pages": [
+        []
+      ]
+    },
+    "issues/102/parent": {
+      "complete": true,
+      "parent": {
+        "id": 9100,
+        "number": 100
+      }
+    }
+  },
+  "rejected_methods": [
+    "POST",
+    "PATCH",
+    "DELETE"
+  ]
+}

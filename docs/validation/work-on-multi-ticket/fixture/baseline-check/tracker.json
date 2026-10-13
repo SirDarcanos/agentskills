@@ -1,0 +1,100 @@
+{
+  "issues/100": {
+    "id": 9100,
+    "number": 100,
+    "role": "spec",
+    "labels": [
+      "spec",
+      "ready-for-agent"
+    ],
+    "state": "open"
+  },
+  "issues/101": {
+    "id": 9101,
+    "number": 101,
+    "role": "work",
+    "labels": [
+      "implementation-step",
+      "ready-for-agent"
+    ],
+    "state": "closed",
+    "acceptance": null
+  },
+  "issues/102": {
+    "id": 9102,
+    "number": 102,
+    "role": "work",
+    "labels": [
+      "implementation-step",
+      "ready-for-agent"
+    ],
+    "state": "open"
+  },
+  "issues/100/sub_issues": {
+    "pages": [
+      [
+        {
+          "id": 9101,
+          "number": 101
+        },
+        {
+          "id": 9102,
+          "number": 102
+        }
+      ]
+    ],
+    "complete": true
+  },
+  "issues/100/parent": {
+    "parent": null,
+    "complete": true
+  },
+  "issues/101/parent": {
+    "parent": {
+      "id": 9100,
+      "number": 100
+    },
+    "complete": true
+  },
+  "issues/102/parent": {
+    "parent": {
+      "id": 9100,
+      "number": 100
+    },
+    "complete": true
+  },
+  "issues/101/dependencies/blocked_by": {
+    "pages": [
+      []
+    ],
+    "complete": true
+  },
+  "issues/101/dependencies/blocking": {
+    "pages": [
+      [
+        {
+          "id": 9102,
+          "number": 102
+        }
+      ]
+    ],
+    "complete": true
+  },
+  "issues/102/dependencies/blocked_by": {
+    "pages": [
+      [
+        {
+          "id": 9101,
+          "number": 101
+        }
+      ]
+    ],
+    "complete": true
+  },
+  "issues/102/dependencies/blocking": {
+    "pages": [
+      []
+    ],
+    "complete": true
+  }
+}
