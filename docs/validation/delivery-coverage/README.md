@@ -65,7 +65,7 @@ pre-merge state; accepted merged PRs supersede it, not the recorded evidence lim
 | AC5 — Work graph | [Ticketing](../../../work-on/references/ticketing.md), #22/PR #37; discovered tracker library; dispatch | Offline helper tests cover identities, cycles, pagination transport, additive/read-back failure paths. #30 uses controlled native observations and rejects writes. Live #31 reads confirm actual parent/blockers. Work On live publication/mutation, cross-repository graph and real API-failure execution are not established. |
 | AC6 — Execution | [Build](../../../work-on/references/build.md), #23/PR #38; [dispatch](../../../work-on/references/dispatch.md), #27/PR #43 | #29 one direct fix; #30 direct serial owner/integration and bounded separate reviewers. Offline #27 fixture serial merges/preservation. No concurrent implementers, real third-slot refusal or worker-timeout/kill trial. |
 | AC7 — Verification | [Verification](../../../work-on/references/verification.md), #25/PR #41 | #29 baseline/red/fixed/integrated checks; #30 baseline/failure/repair/final checks, freshness and cross-ticket behavior. Offline #25 fixture distinguishes baseline/privacy regression and missing material evidence. These do not cover every consumer's security/persistence risks. |
-| AC8 — Independent review | [Review Delivery](../../../review-delivery/SKILL.md), #24/PRs #39/#40 | Historical #24 reviewers detect dirty/untracked defects and stale scope; #29 independent axes cover the small delivered change; #30 failed, clean renewed and final axes cover integrated behavior. Packet exposure was retained as ineligible, not accepted evidence. Current #31 independent repository-diff review is absent. |
+| AC8 — Independent review | [Review Delivery](../../../review-delivery/SKILL.md), #24/PRs #39/#40 | Historical #24 reviewers detect dirty/untracked defects and stale scope; #29 independent axes cover the small delivered change; #30 failed, clean renewed and final axes cover integrated behavior. Packet exposure was retained as ineligible, not accepted evidence. Current #31 independent repository-diff review is recorded below, with its limits. |
 | AC9 — Repair/recovery | [Completion](../../../work-on/references/completion.md), #26/PR #42; [recovery](../../../work-on/references/recovery.md), #28/PR #44 | #30 one actual failed prerequisite, cycle-1 correction, retained history, pause/resume and renewed review. Offline #26 two-cycle counterfactual and #28 actual conflict/dirty-work checks are separate fixture evidence. No real worker crash, remote uncertain write or autonomous exhausted-budget trial. |
 | AC10 — Completion | Completion gates/readiness; phase-owned documentation; #31 READMEs/changelog/this matrix | #29/#30 reports separate implemented/verified/unverified/deferred/blocked with target snapshots. Direct integrated review checks no implied closure/release; [classification scenarios](tracker-scenarios.md) inspect reconciliation. #31 remains unaccepted until project gates and merge; parent completion is not inferred from ticket closure. |
 | AC11 — Portability/validation | Package READMEs, conditional contract, local helpers/validation | Both integrated trials executed on Pi/macOS; isolated package links/frontmatter/syntax/helper checks executed here. No CLI installation, installed slash expansion, Windows, alternate-runtime certification or isolated autonomous workflow run. Python 3.9 syntax is checked; execution is Python 3.14.7, not 3.9. |
@@ -132,18 +132,43 @@ Environment: macOS, Python 3.14.7, Git 2.54.0 (Apple Git-157); no installation.
    material, workstation paths, generated trial outputs, bytecode or legacy changes.
    Released changelog sections and historical trial trees remain byte-identical.
 
+## Independent review follow-up
+
+After user approval, fresh read-only Standards and Spec contexts inspected the fixed
+base above through `2c085934b0c337c601f37d2fe41d4000b10165c3`, with 15-minute bounds.
+The initial pair indirectly encountered a historical verdict in an expressly
+permitted checker source. Both stopped, returned ineligible exposure records and
+terminated before replacement. Historical narrative/checker sources were then
+excluded from supporting inputs; current changed documents remained claims under
+review. One bounded packet-correction episode; at most two active reviewers.
+
+Clean replacements reported no issues within their inspected scopes and no excluded
+conclusion exposure. They performed static source/diff inspection, not test/Git
+execution. Historical verdict contents remain unverified by them; parent-executed
+checks and receipts are separate evidence. Final parent path discovery/status,
+161-path snapshot, agreement/diff hashes and supplemental root LICENSE matched
+after both returns before releasing the freeze.
+
+[Full separate reports, original ineligible records and publication hashes](https://github.com/SirDarcanos/agentskills/pull/47#issuecomment-6150514797)
+are retained in PR #47. Only transient packet paths were normalized for publication;
+this is ordinary observed review/lifecycle evidence, not execution attestation or
+filesystem sandbox certification. This follow-up records outcomes after review;
+it is a parent-inspected administrative update, not part of that pinned review.
+No runtime source, package requirement or acceptance commitment changed afterward.
+
 ## Outstanding gates and documentation disposition
 
-**Blocking acceptance:** independent Standards/Spec inspection of this current
-repository delivery has not been authorized/executed. Lead self-review is not a
-substitute. The maintainer must assess the matrix's evidence sufficiency and any
-material gaps, accept the work and approve its merge. #31 and #14 stay open; package
+**Blocking acceptance:** the maintainer must assess the matrix's evidence sufficiency
+and any material gaps, accept the work and approve its merge. Independent review
+of the pinned delivery is complete within the stated limits; lead self-review did
+not substitute for either axis. #31 and #14 stay open; package
 checks and closed predecessors alone do not establish completion. No material
 remaining target-fixture defect was reported by #29/#30; broader missing evidence
 is not hidden by their scoped no-findings results.
 
 **Unrun/unsupported:** installation CLI/global updates, installed command expansion,
-new checklist behavior trial, live graph/label writes and failure read-back,
+a dedicated checklist behavior trial (distinct from its observed application during
+this review), live graph/label writes and failure read-back,
 concurrent implementers, real crash/timeout/kill, process restart, alternate OS/runtime
 and Python 3.9 execution. Existing offline conflict/budget evidence remains distinct.
 These need explicit bounded follow-up/permissions if material to the acceptance
