@@ -149,6 +149,12 @@ Reviewers receive the actual diff/files and relevant context, not merely hashes 
 
 The phase changing a fact owns updating its existing authoritative document. Setup's [documentation contract](../../setup-project/references/documentation-contract.md) describes the input model; runtime uses the target project's actual ownership policy rather than imposing this repository's layout. Product changes need appropriate spec approval; domain changes use the companion; implementation/review maintain the actual changelog or fragments and versioning/label policy. A justified no-change decision is valid. Publishing or classifying release impact does not authorize release.
 
+### Tracker classification across phases
+
+Consume the target project's approved title and label mappings, including optional area labels and their propagation rules. Keep area, type, readiness and native relationships separate. This repository's concrete policy lives in [label guidance](../agents/triage-labels.md); its area name and prefix-free issue convention are not defaults imposed on other projects.
+
+Specification (#20) follows the title convention, applies type/area labels and evaluates spec readiness separately from publication. Ticketing (#22) propagates only explicitly designated area labels matching the child's scope; it does not copy the parent's spec/readiness/release labels. Completion (#26) reassesses affected readiness after accepted decisions and merges within current mutation authority, with read-back. Dispatch (#27) treats a ready spec as an agreement/coordination entry point, schedules only eligible children, and uses native blockers plus evidence rather than title parsing. Review checks project-policy compliance without becoming the label administrator. Integrated validation (#31) exercises these distinctions and confirms that existing labels and native relationships survive reconciliation.
+
 ## Downstream application
 
 The destination table allocates all #19–#31 work without changing native blockers. In particular, #19 establishes the common envelope before its consumers; #24 can proceed independently after #18 because it owns the review scope/return contract; #26 connects verification and review; #27 uses those gates for dispatch. #21 can consume an existing brief independently of the new discovery route in #20.

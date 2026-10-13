@@ -37,6 +37,16 @@ The project's versioning policy owns pre-1.0, prerelease, and package-specific e
 
 For non-SemVer or unresolved versioning, retain the existing scheme and explicitly agree on release/impact vocabulary; do not falsely assign SemVer behavior to calendar versions.
 
+### Area labels, titles and readiness
+
+During the audit, establish whether the target uses area/component labels and title conventions. These are optional project choices, not a required taxonomy. Reuse meaningful existing labels; propose new ones only for a current need and include exact metadata, assignments, affected automation and any historical title migration in the approval plan. Do not hard-code another project's area names or impose prefix-free titles on a project whose conventions require prefixes.
+
+Record area, type, readiness and native relationships separately in the target's label/tracker guidance. Define which area labels may propagate from a parent to a child and under what scope condition. Propagate only those explicitly mapped labels; assess the child's type, readiness and release impact independently. A parent labeled `spec` does not make every child a spec. An area label is not a native parent or execution dependency.
+
+Document how new titles follow the approved convention and how agents identify type/area from the project's actual metadata rather than guessing from title text. Preserve existing historical titles unless their exact migration is approved.
+
+Evaluate spec readiness independently of publication. A spec may receive the mapped agent-ready label when its approved behavior and shared design decisions are actionable. On a parent spec this enables coordination of eligible children, not duplicate parent implementation. Actionable child tickets may be labeled ready while native blockers still prevent execution. Require readiness reassessment after accepted decisions and merges, using actual completion evidence and the target's mutation authority; do not invent an automated label service or infer authority from issue closure. Apply and read back approved assignment changes, preserving unrelated labels.
+
 ### Apply the approved audit
 
 1. Re-read labels, affected assignments, and automation references against the plan; changed or unknown impact blocks destructive cleanup pending clarification. Preserve label metadata and affected issue/PR references in the approved operation record before destructive changes. Deleting a label removes its assignments, including historical ones; recreating its name does not restore that history.
