@@ -1,6 +1,6 @@
 # Entry validation
 
-Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). For codebase-informed planning, readiness or domain handoffs, read [technical-readiness validation](technical-readiness-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
+Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). For codebase-informed planning, readiness or domain handoffs, read [technical-readiness validation](technical-readiness-validation.md). For decomposition, native graph reconciliation or work-ticket classification, also read [ticketing validation](ticketing-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
 
 ## Reproducible static checks
 

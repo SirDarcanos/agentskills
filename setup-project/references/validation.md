@@ -10,7 +10,7 @@ git diff --check
 
 From a copied standalone package, run unittest discovery against `tests/`. Companion-specific packaging checks may skip when the GitHub or domain-modeling package is not beside it; report skips rather than claiming those companions were checked. Each package's relative links must resolve within its copied directory; runtime discovery, not sibling file paths, supplies companions.
 
-The unit tests exercise the real dependency reconciler through an in-memory GitHub transport and mock the CLI transport. They cover additive/read-only behavior, ID direction, existing/transitive graph cycles, reruns, partial failure, read-back mismatches, API errors, pagination, and unsupported scope. No network, credentials, or model calls are used. Packaging checks verify entry-point fields and shipped relative links, not semantic correctness.
+The unit tests exercise the real dependency reconciler through an in-memory GitHub transport and mock the CLI transport. They cover additive/read-only behavior, ID direction, existing/transitive graph cycles, reruns, partial failure, read-back mismatches, API errors, pagination, unsupported scope, and database-ID mismatches in existing and newly written relationships. No network, credentials, or model calls are used. Packaging checks verify entry-point fields and shipped relative links, not semantic correctness.
 
 ## Agent scenario matrix
 

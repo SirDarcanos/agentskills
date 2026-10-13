@@ -68,6 +68,8 @@ A local/non-GitHub tracker is valid: document its location, explicit spec/type/i
 
 ## Native GitHub graph
 
+This section is also a read-only procedure library for delivery callers. Discover this package and read its entry point/library contract; using this procedure does not invoke setup. The target project's authority and exact approved graph govern any writes. Keep graph reconciliation authoritative here rather than copying the algorithm into callers.
+
 Hierarchy and blockers are distinct:
 - Parent/spec membership uses **sub-issues**.
 - Scheduling dependencies use **blocked-by/blocking**.
@@ -103,7 +105,7 @@ These are placeholder recipes, not commands to execute unchanged.
 5. Re-fetch both relationship directions and ensure the intended IDs are present. A partial response, wrong direction, or missing edge is a verification failure. Stop dependent scheduling and report it; inspect actual state before retrying.
 6. If the API or permissions cannot support the required relationship, report a blocker and seek an explicit alternative. No silent text-only fallback or false readiness.
 
-The optional [dependency helper](../scripts/dependencies.py) implements additive blocker reconciliation for **one github.com repository**, including reachable-cycle checks, deduplication, pagination, and forward/reverse read-back. It does not manage parentage, cross-repository graphs, labels, readiness decisions, or approvals. These stay with the procedure above. Unsupported graph scope fails closed; use an approved, inspected native procedure rather than changing the plan to fit the helper.
+The optional [dependency helper](../scripts/dependencies.py) implements additive blocker reconciliation for **one github.com repository**, including reachable-cycle checks, deduplication, pagination, and forward/reverse read-back against resolved database IDs. It does not manage parentage, cross-repository graphs, labels, readiness decisions, or approvals. These stay with the procedure above. Unsupported graph scope fails closed; use an approved, inspected native procedure rather than changing the plan to fit the helper.
 
 Plan format:
 

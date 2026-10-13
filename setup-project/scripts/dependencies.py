@@ -147,6 +147,9 @@ def reconcile(plan, api=None, apply=False, emit=lambda event: None):
     repository, edges = parse_plan(plan)
     api = api or GitHub(repository)
     additions, ids = inspect(repository, edges, api)
+    for a, b in edges:
+        if (a, b) not in additions:
+            verify_edge(repository, api, a, b, ids)
     if not apply:
         return {"status": "planned", "repository": repository,
                 "additions": [{"blocked": a, "by": b} for a, b in additions],
@@ -155,11 +158,11 @@ def reconcile(plan, api=None, apply=False, emit=lambda event: None):
         # Record the attempted operation before sending; a failed response may hide a successful write.
         emit({"status": "attempting", "blocked": a, "by": b})
         api.request(f"{a}/dependencies/blocked_by", method="POST", payload={"issue_id": ids[b]})
-        verify_edge(repository, api, a, b)
+        verify_edge(repository, api, a, b, ids)
         emit({"status": "verified", "blocked": a, "by": b})
     # Recheck the whole requested graph, including previously present edges.
     for a, b in edges:
-        verify_edge(repository, api, a, b)
+        verify_edge(repository, api, a, b, ids)
     # Detect a concurrent graph change that invalidated the cycle check.
     remaining, _ = inspect(repository, edges, api)
     require(not remaining, "Graph changed during verification; stop dispatch and reconcile")
@@ -167,11 +170,16 @@ def reconcile(plan, api=None, apply=False, emit=lambda event: None):
             "added": len(additions), "edges": len(edges)}
 
 
-def verify_edge(repository, api, blocked, blocker):
-    forward = issue_set(api.request(f"{blocked}/dependencies/blocked_by", paginated=True), repository)
-    reverse = issue_set(api.request(f"{blocker}/dependencies/blocking", paginated=True), repository)
+def verify_edge(repository, api, blocked, blocker, ids):
+    forward_items = api.request(f"{blocked}/dependencies/blocked_by", paginated=True)
+    reverse_items = api.request(f"{blocker}/dependencies/blocking", paginated=True)
+    forward = issue_set(forward_items, repository)
+    reverse = issue_set(reverse_items, repository)
     require(blocker in forward and blocked in reverse,
             f"Read-back mismatch for #{blocked} blocked by #{blocker}; stop dispatch, preserve partial work")
+    for items, number in [(forward_items, blocker), (reverse_items, blocked)]:
+        require(all(item["id"] == ids[number] for item in items if item["number"] == number),
+                f"Database ID mismatch for #{number}; stop dispatch, preserve partial work")
 
 
 def main():

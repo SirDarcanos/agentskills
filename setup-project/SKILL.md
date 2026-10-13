@@ -10,6 +10,10 @@ Run on an explicit setup request, including a runtime-expanded invocation. Learn
 
 Use normal file and shell tools. No particular agent SDK, literal Skill tool, subagents, or model service is required. Operating-document authoring ships here; domain work requires the maintained `domain-modeling` companion, and GitHub creation/configuration requires `github-repo-setup`. Locate applicable companions through runtime skill discovery and read them completely. Missing or incompatible companions block their affected routes; ask before installing or replacing anything. Never silently substitute a different procedure.
 
+## Read-only procedure library
+
+A delivery caller may discover this package and read [tracker integration](references/issue-tracker.md), especially its native-graph procedure, without invoking `/setup-project` or executing the setup steps below. Record the resolved source/revision and check semantic compatibility: native hierarchy/blockers, identity/pagination, conflict checks, additive writes and both-direction read-back. Target-project policy and exact caller approval govern operations; library access grants no setup, label/settings audit or mutation authority. The optional helper supports only its documented one-repository additive blocker scope; parentage, labels and unsupported cases stay with the procedure. Missing capability blocks the affected route rather than causing installation or silent prose fallback.
+
 ## 1. Inspect before asking or changing
 
 Read applicable instructions and inspect Git status, remotes, existing entry points, operating/domain docs, ADRs, tracker conventions, changelog/version sources, release automation, and discoverable build/check commands. Follow document pointers. Inspect relevant organization requirements through authorized access; unavailable information remains unknown.
