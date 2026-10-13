@@ -17,10 +17,10 @@ Run this before editing an existing project or resuming interrupted setup. The c
 ## Failure and rerun rules
 
 - Failed writes can have succeeded remotely. Read back before retrying; use idempotent operations. Never resend blindly after a timeout.
-- Preserve unrelated labels/edges. Removing, renaming, reparenting, or deleting requires a specific approved plan. Default to additive reconciliation.
+- Audit labels actively rather than preserving GitHub defaults by habit. Use the [tracker procedure](issue-tracker.md) for usage/automation analysis and approved cleanup; unrelated or unapproved labels/edges remain intact. Removing, renaming, reparenting, or deleting requires a specific approved plan.
 - Unknown remote state is not “absent.” Permission/API failures are blockers, not evidence that a repository, label, protection, or relationship should be created.
 - If local docs describe desired remote controls that could not be enforced, label them pending/blocked. Do not publish them as active enforcement.
 - If rollback would discard user work or reverse an already-used remote change, ask; do not automatically undo successful work after a later failure.
-- A clean rerun does not regenerate prose, update timestamps for their own sake, repeat settled questions, or create another ruleset.
+- A clean rerun does not regenerate prose, update timestamps for their own sake, repeat settled questions, create another ruleset, duplicate release labels, or rewrite changelog history. A missing old label after an approved migration is already reconciled, not a reason to recreate it.
 - A changed project profile does not silently remove protections. Reconcile the consequence and applicable organization policy.
 - If AGENTS and CLAUDE disagree, identify the conflict and ask for authority unless an applicable higher-level rule resolves it. A pointer or symlink relationship is preserved; nested guidance remains scoped.

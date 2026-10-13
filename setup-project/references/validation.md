@@ -19,7 +19,12 @@ Use temporary fixture projects and a command shim returning synthetic GitHub obs
 | Scenario / initial evidence | Required observation |
 | --- | --- |
 | New GitHub target; no files; identity and protections approved | One plan; approved baseline through companion; meaningful docs; exact labels; remote read-back. |
-| Existing repo with custom labels, enabled Wiki, rules, and dirty file | Configuration route; preserve unapproved settings/work; map compatible labels; no duplicate rules. |
+| Existing repo with custom/default labels, enabled Wiki, rules, and dirty file | Configuration route; audit every label and open/closed issue/PR usage; preserve unapproved settings/work; no duplicate rules. |
+| Unused default label vs zero-assignment automation label vs retired historical label | Propose evidence-backed dispositions; do not equate zero count with unused; migrate/accept historical effects only with approval; verify cleanup. |
+| Existing SemVer changelog with release automation | Preserve history, source authority, and automation-compatible patch/minor/major roles; no version bump or release. |
+| Missing changelog with confirmed policy vs generated fragments vs unresolved/CalVer policy | Approved evidence-backed creation, source-level maintenance, or clarification respectively; no forced SemVer or invented releases. |
+| Spec creation with `spec` or an approved equivalent, plus ordinary implementation tickets | Apply and read back the spec label at creation; distinguish it from readiness and native parentage; backfill only approved known specs. |
+| Label consolidation/rename interrupted after assignment migration | Inspect actual state; preserve unrelated assignments; update consumers before removing source; no blind retries or recreation on clean rerun. |
 | Local-only request vs requested GitHub with unavailable auth | First needs no auth; second reports remote blocker and only independently approved local progress. |
 | Solo high-risk product vs team low-risk tool | Separate maintenance and risk decisions; neither automatically gains/loses safeguards. |
 | Director-led vs technical co-design preference | Same accountability; different question framing; no competence labels or unnecessary private metadata. |

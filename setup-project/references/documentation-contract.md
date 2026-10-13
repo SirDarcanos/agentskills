@@ -8,9 +8,10 @@ This is the single authoring contract for setup's output. Other setup references
 | --- | --- |
 | `AGENTS.md` | Concise entry point: applicable rules and conditional read pointers. |
 | `docs/agents/project.md` | Purpose/stage, users and evidenced scale, maintenance/operating ownership, resources/constraints, credible risks, collaboration preference. |
-| `docs/agents/workflow.md` | Decision authority, delivery/review/verification expectations, permitted actions, documentation upkeep. |
+| `docs/agents/workflow.md` | Decision authority, delivery/review/verification expectations, versioning/changelog policy and sources, permitted actions, documentation upkeep. |
 | `docs/agents/issue-tracker.md` | Actual tracker location/access, capabilities, native parent/dependency operations, limitations, completion semantics. |
-| `docs/agents/triage-labels.md` | Canonical workflow roles mapped to actual labels/statuses and their meanings. Omit if no label/status system is used. |
+| `docs/agents/triage-labels.md` | Workflow/type roles (including specs) and applicable release-impact roles mapped to actual labels/statuses; audit decisions and application rules. Omit if no label/status system is used. |
+| Existing changelog path, otherwise approved `CHANGELOG.md` or package equivalent | Evidence-backed notable change history in the project's convention; use source fragments/configuration instead for generated changelogs. |
 | `CONTEXT.md` or existing context map | Confirmed domain terms and relationships, not the operating profile. |
 | `docs/adr/` | Selective enduring decisions and rationale; created only when needed. |
 
@@ -44,7 +45,7 @@ Choose verification by meaningful failure risk and existing coverage. A new test
 Generate pointers to the project's actual files with explicit conditions. For example, adapted to the selected layout:
 
 ```markdown
-Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
+Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Before classifying release impact or updating the changelog, read the workflow's release policy and linked sources. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
 ```
 
 Only link files that exist after setup. Include actual domain/tracker links when applicable. Do not copy this package reference path into the target as a runtime dependency; the generated project docs must stand on their own.
@@ -60,7 +61,10 @@ Put this maintenance contract in the target's workflow document; the entry point
 | Delivery/check procedure | Implementation: update authoritative workflow guidance and verify safe commands. |
 | Qualifying architectural decision | Analysis/implementation: create or supersede an ADR; preserve the old rationale. |
 | Product scope/behavior | Delivery lead: update the spec with the product decision-maker's approval. |
+| Spec creation and ticket classification | Spec/ticket owner: apply and verify the mapped spec/type labels; classify release impact under the agreed policy, not by guesswork. |
 | Ticket dependencies/status | Ticketing/dispatch: update native relationships and actual evidence/status together. |
+| Notable user-facing change | Implementation: update the agreed changelog or change fragment when required; review checks the entry and impact classification. |
+| Release convention or label automation changes | Lead/release owner: reconcile policy, mappings, automation, and affected assignments through an approved plan; setup does not authorize publishing. |
 
 A fact's owner updates its home when the decision is confirmed, not after it has been copied elsewhere. Proposals remain labeled as proposals. Before completion, report affected documents and their updates, or justify “no documentation change required.” Review compares docs with the actual change; link checks alone prove no semantic accuracy.
 
