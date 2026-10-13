@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Work On's explicit context-aware entry and routing for requests, existing agreements, and partial work; later delivery phases remain unavailable. ([#19](https://github.com/SirDarcanos/agentskills/issues/19))
 - Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
 - Add Setup Project for project-aware docs, changelog/versioning setup, audited spec/release labels, and verified native issue dependencies. ([#8](https://github.com/SirDarcanos/agentskills/issues/8))
