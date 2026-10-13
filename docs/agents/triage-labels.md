@@ -2,7 +2,7 @@
 
 These mappings describe the approved GitHub labels for `SirDarcanos/agentskills`. Read the live inventory before changing it. The [workflow](workflow.md) owns mutation authority and release policy; [tracker guidance](issue-tracker.md) owns relationships and completion semantics.
 
-## Types and contribution signals
+## Types
 
 | Label | Use |
 | --- | --- |
@@ -10,8 +10,6 @@ These mappings describe the approved GitHub labels for `SirDarcanos/agentskills`
 | `documentation` | Documentation or instruction wording changes; not a substitute for assessing skill behavior. |
 | `enhancement` | New or improved functionality. |
 | `spec` | Product specification with intended behavior and acceptance criteria. Apply when creating a spec issue and read back the assignment. |
-| `good first issue` | A genuinely bounded, newcomer-appropriate contribution. |
-| `help wanted` | A contribution would be useful; does not imply a team or assigned reviewer. |
 
 ## Triage and next action
 
@@ -39,9 +37,9 @@ Apply to PRs when delivered public impact is established. One resolved impact la
 
 The setup audit covered all open and closed issues/PRs, repository configuration, and local automation. The maintainer confirmed that no external tools rely on the old labels.
 
-- Keep `bug`, `documentation`, `enhancement`, `good first issue`, `help wanted`, and `wontfix` with their existing metadata.
+- Keep `bug`, `documentation`, `enhancement`, and `wontfix` with their existing metadata.
 - Rename unused `question` to `needs-info`, preserving its metadata and meaning.
-- Remove unused `accessibility`, `invalid`, and `duplicate`; no historical assignments require migration.
+- Remove unused `accessibility`, `invalid`, `duplicate`, `good first issue`, and `help wanted`; no historical assignments require migration. The maintainer does not use contribution-recruitment labels for this repository.
 - Add `spec`, `needs-triage`, `ready-for-agent`, `ready-for-human`, `patch`, `minor`, and `major`.
 - Add `spec` to confirmed specification #8 while preserving its existing `enhancement` assignment. Preserve all other historical assignments and native relationships.
 
