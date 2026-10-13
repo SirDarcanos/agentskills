@@ -9,17 +9,16 @@ These mappings describe the approved GitHub labels for `SirDarcanos/agentskills`
 | `bug` | Existing behavior fails its intended contract. |
 | `documentation` | Documentation or instruction wording changes; not a substitute for assessing skill behavior. |
 | `enhancement` | New or improved functionality. |
-| `spec` | Product specification with intended behavior and acceptance criteria. Apply when creating a spec issue and read back the assignment. |
+| `spec` | Parent specification with intended behavior and acceptance criteria. Apply when creating a spec issue and read back the assignment. |
+| `implementation-step` | Bounded work ticket under a specification, including design, implementation or validation. Apply to the work ticket, not its parent spec or delivery PR. |
 
-## Areas and titles
+## Specification and work-ticket roles
 
-| Label | Use | Color | Description |
-| --- | --- | --- | --- |
-| `delivery-workflow` | Project-aware delivery workflow work, including its spec and implementation tickets. | `0052CC` | Project-aware delivery workflow skills and supporting work. |
+`spec` and `implementation-step` are mutually exclusive workflow roles. #14 is the spec; #18–#31 are its implementation steps. The step label is generic across specifications, not a label for this particular initiative. Native parent links identify which spec owns a step; native blockers determine execution order, which may be parallel rather than a linear sequence. Do not create steps merely to give a small standalone request a hierarchy.
 
-Area, type, readiness, and native relationships are separate dimensions. Apply the approved area label when classifying related work; it neither makes an issue a spec nor establishes parentage. A child may inherit `delivery-workflow` when its actual scope belongs to that area. Copy only explicitly mapped area labels, not the parent's entire label set: `spec`, readiness and release-impact labels require their own assessment.
+The `implementation-step` label has color `0052CC` and description “Bounded work ticket under a parent specification.” Other applicable classifications such as `enhancement` or `bug` may coexist with either workflow role. Assess readiness independently; do not copy the parent's entire label set to a child. Use each issue's purpose and relationships to distinguish a work ticket from a specification.
 
-Use descriptive, sentence-case issue titles without type or area prefixes such as `Spec:` or `Delivery workflow:`. Identify type/area through labels and relationships rather than parsing titles. Existing unrelated historical titles remain unchanged unless a migration is approved. Pull-request titles continue to follow the project's existing commit/PR conventions.
+Use descriptive, sentence-case issue titles without workflow-role or initiative prefixes. Classify issues through labels and relationships rather than parsing titles. Existing unrelated historical titles remain unchanged unless a migration is approved. Pull-request titles continue to follow the project's existing commit/PR conventions.
 
 ## Triage and next action
 
@@ -53,6 +52,6 @@ The setup audit covered all open and closed issues/PRs, repository configuration
 - Add `spec`, `needs-triage`, `ready-for-agent`, `ready-for-human`, `patch`, `minor`, and `major`.
 - Add `spec` to confirmed specification #8 while preserving its existing `enhancement` assignment. Preserve all other historical assignments and native relationships.
 
-The later approved delivery-workflow reconciliation adds `delivery-workflow` to #14 and #18–#31, removes their type/area title prefixes, and marks the now-actionable #14 ready. Other assignments and native relationships are preserved; this is not a blanket historical rename or backfill.
+The later approved reconciliation removes the initiative/type prefixes from #14 and #18–#31 and marks the actionable #14 ready. Its initial area-label interpretation was corrected: #14 retains `spec`, #18–#31 receive `implementation-step`, and `delivery-workflow` is removed from those issues and PR #33 before the unused label is deleted. Other assignments and native relationships are preserved; this is not a blanket historical rename or backfill.
 
 These are reconciliation decisions, not commands to repeat. Later vocabulary changes require an inspected, approved delta, including automation and historical-assignment effects. Read back label metadata and affected assignments after each change; retain partial outcomes rather than claiming global success after a failure.

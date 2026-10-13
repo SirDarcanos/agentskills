@@ -2,7 +2,7 @@
 
 Use [GitHub Issues](https://github.com/SirDarcanos/agentskills/issues) for this repository. The repository identity is `SirDarcanos/agentskills`; access it through the authenticated `gh` CLI. Verify access read-only before a mutation, and follow [workflow authority](workflow.md) for approval.
 
-Specs record approved product behavior and acceptance criteria. Implementation tickets are cohesive work units under a spec when decomposition is useful. A small request does not require a speculative ticket hierarchy. Follow the [label and title policy](triage-labels.md) for descriptive issue titles, separate area/type/readiness classification, and authorized propagation. Apply and read back the mapped labels; a label neither approves scope nor proves readiness.
+Specs record approved product behavior and acceptance criteria. Implementation tickets are cohesive work units under a spec when decomposition is useful. A small request does not require a speculative ticket hierarchy. Follow the [label and title policy](triage-labels.md) for descriptive issue titles, mutually exclusive spec/work-ticket roles, and independently assessed readiness. Apply and read back the mapped labels; a label neither approves scope nor proves readiness.
 
 ## Native relationships
 
