@@ -1,0 +1,81 @@
+{
+  "after": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b726f4bc83748164a208d344cf4ead25c303fb4b09ecc2248e0aea7d59666e3c"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b4f4f7934f8c7675456048c80d38da7eb0e0185dfada0a1f47004fb5148005d5"
+    },
+    "REQUEST.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "d323e6cbfce5319956d0fb76f16ea814ef182493f3661b5bdfbf5af9dec2e45b"
+    },
+    "file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "87bfe0131b06d596ce7c04cb52a19ec8f01c80b9d61d1f072b7e245688a356da"
+    },
+    "note-link": {
+      "kind": "symlink",
+      "mode": "0o755",
+      "target": "unrelated-note.txt"
+    },
+    "test_file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "262ef5c0bb26fe0e57537a2b2aec16f488fe4bddae92b7d0ac7e7daba8321fb2"
+    },
+    "unrelated-note.txt": {
+      "kind": "file",
+      "mode": "0o755",
+      "sha256": "03f114111edb14422941497e6bd471131ecc7291919ee5c5a4ea16608fee77e8"
+    }
+  },
+  "before": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b726f4bc83748164a208d344cf4ead25c303fb4b09ecc2248e0aea7d59666e3c"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b4f4f7934f8c7675456048c80d38da7eb0e0185dfada0a1f47004fb5148005d5"
+    },
+    "REQUEST.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "d323e6cbfce5319956d0fb76f16ea814ef182493f3661b5bdfbf5af9dec2e45b"
+    },
+    "file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "87bfe0131b06d596ce7c04cb52a19ec8f01c80b9d61d1f072b7e245688a356da"
+    },
+    "note-link": {
+      "kind": "symlink",
+      "mode": "0o755",
+      "target": "unrelated-note.txt"
+    },
+    "test_file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "262ef5c0bb26fe0e57537a2b2aec16f488fe4bddae92b7d0ac7e7daba8321fb2"
+    },
+    "unrelated-note.txt": {
+      "kind": "file",
+      "mode": "0o755",
+      "sha256": "03f114111edb14422941497e6bd471131ecc7291919ee5c5a4ea16608fee77e8"
+    }
+  },
+  "command": "python3 -B -m unittest -v",
+  "cwd": "<fixture>",
+  "exit_code": 0,
+  "output": "test_filter_preserves_mixed_case_names (test_file_types.FileTypesTests.test_filter_preserves_mixed_case_names) ... ok\ntest_filter_preserves_order_and_duplicates (test_file_types.FileTypesTests.test_filter_preserves_order_and_duplicates) ... ok\ntest_lowercase_markdown (test_file_types.FileTypesTests.test_lowercase_markdown) ... ok\ntest_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) ... ok\ntest_no_whitespace_trimming (test_file_types.FileTypesTests.test_no_whitespace_trimming) ... ok\ntest_non_markdown_and_final_suffix (test_file_types.FileTypesTests.test_non_markdown_and_final_suffix) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n",
+  "python": "3.14.7"
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "sanitized ordinary runtime receipt projection, not attestation",
+  "workflowRunId": "07c2608f-a5f1-4533-935a-0934908977d9",
+  "resource": "parallel",
+  "state": "completed",
+  "timeoutMs": 600000,
+  "children": [
+    {
+      "key": "task-1",
+      "axis": "Standards",
+      "runId": "72f4c18d-a465-4815-8280-5f56bea0a6ba",
+      "agent": "reviewer",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "model": "openai-codex/gpt-6.1-sol:high",
+      "state": "completed",
+      "outputReference": "reports/standards.md"
+    },
+    {
+      "key": "task-2",
+      "axis": "Spec",
+      "runId": "d7dc5aab-e2b1-43a7-b9e3-b37297ebafd5",
+      "agent": "reviewer",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "model": "openai-codex/gpt-6.1-sol:high",
+      "state": "completed",
+      "outputReference": "reports/spec.md"
+    }
+  ]
+}

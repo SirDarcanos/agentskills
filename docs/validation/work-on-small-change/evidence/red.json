@@ -1,0 +1,81 @@
+{
+  "after": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b726f4bc83748164a208d344cf4ead25c303fb4b09ecc2248e0aea7d59666e3c"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "c791b54efccc977b8d867d94b22c6398f0c2fc817c20c4d87b7987f4b2b714ec"
+    },
+    "REQUEST.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "d323e6cbfce5319956d0fb76f16ea814ef182493f3661b5bdfbf5af9dec2e45b"
+    },
+    "file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "01125fe1ce918db704f61338ea036335c9493dd2f6fef000841d4e5179cd61f0"
+    },
+    "note-link": {
+      "kind": "symlink",
+      "mode": "0o755",
+      "target": "unrelated-note.txt"
+    },
+    "test_file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "262ef5c0bb26fe0e57537a2b2aec16f488fe4bddae92b7d0ac7e7daba8321fb2"
+    },
+    "unrelated-note.txt": {
+      "kind": "file",
+      "mode": "0o755",
+      "sha256": "03f114111edb14422941497e6bd471131ecc7291919ee5c5a4ea16608fee77e8"
+    }
+  },
+  "before": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "b726f4bc83748164a208d344cf4ead25c303fb4b09ecc2248e0aea7d59666e3c"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "c791b54efccc977b8d867d94b22c6398f0c2fc817c20c4d87b7987f4b2b714ec"
+    },
+    "REQUEST.md": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "d323e6cbfce5319956d0fb76f16ea814ef182493f3661b5bdfbf5af9dec2e45b"
+    },
+    "file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "01125fe1ce918db704f61338ea036335c9493dd2f6fef000841d4e5179cd61f0"
+    },
+    "note-link": {
+      "kind": "symlink",
+      "mode": "0o755",
+      "target": "unrelated-note.txt"
+    },
+    "test_file_types.py": {
+      "kind": "file",
+      "mode": "0o644",
+      "sha256": "262ef5c0bb26fe0e57537a2b2aec16f488fe4bddae92b7d0ac7e7daba8321fb2"
+    },
+    "unrelated-note.txt": {
+      "kind": "file",
+      "mode": "0o755",
+      "sha256": "03f114111edb14422941497e6bd471131ecc7291919ee5c5a4ea16608fee77e8"
+    }
+  },
+  "command": "python3 -B -m unittest -v",
+  "cwd": "<fixture>",
+  "exit_code": 1,
+  "output": "test_filter_preserves_mixed_case_names (test_file_types.FileTypesTests.test_filter_preserves_mixed_case_names) ... FAIL\ntest_filter_preserves_order_and_duplicates (test_file_types.FileTypesTests.test_filter_preserves_order_and_duplicates) ... ok\ntest_lowercase_markdown (test_file_types.FileTypesTests.test_lowercase_markdown) ... ok\ntest_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) ... \n  test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.MD') ... FAIL\n  test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.mD') ... FAIL\n  test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.Md') ... FAIL\ntest_no_whitespace_trimming (test_file_types.FileTypesTests.test_no_whitespace_trimming) ... ok\ntest_non_markdown_and_final_suffix (test_file_types.FileTypesTests.test_non_markdown_and_final_suffix) ... ok\n\n======================================================================\nFAIL: test_filter_preserves_mixed_case_names (test_file_types.FileTypesTests.test_filter_preserves_mixed_case_names)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<fixture>/test_file_types.py\", line 17, in test_filter_preserves_mixed_case_names\n    self.assertEqual(markdown_files(names), [\"B.MD\", \"a.mD\", \"B.MD\", \"plain.md\"])\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Lists differ: ['plain.md'] != ['B.MD', 'a.mD', 'B.MD', 'plain.md']\n\nFirst differing element 0:\n'plain.md'\n'B.MD'\n\nSecond list contains 3 additional elements.\nFirst extra element 1:\n'a.mD'\n\n- ['plain.md']\n+ ['B.MD', 'a.mD', 'B.MD', 'plain.md']\n\n======================================================================\nFAIL: test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.MD')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<fixture>/test_file_types.py\", line 13, in test_mixed_case_extension\n    self.assertTrue(is_markdown(name))\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n======================================================================\nFAIL: test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.mD')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<fixture>/test_file_types.py\", line 13, in test_mixed_case_extension\n    self.assertTrue(is_markdown(name))\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n======================================================================\nFAIL: test_mixed_case_extension (test_file_types.FileTypesTests.test_mixed_case_extension) (name='notes.Md')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<fixture>/test_file_types.py\", line 13, in test_mixed_case_extension\n    self.assertTrue(is_markdown(name))\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nFAILED (failures=4)\n",
+  "python": "3.14.7"
+}
