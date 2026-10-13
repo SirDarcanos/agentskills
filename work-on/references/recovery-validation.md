@@ -1,0 +1,29 @@
+# Recovery validation
+
+Use when changing or validating [recovery](recovery.md). Apply [entry static checks](validation.md#reproducible-static-checks), including complete entry/frontmatter, rendered Markdown, links/anchors, isolated package copy and diff hygiene. These cases are **authored expectations, not executed agent behavior**.
+
+| Case | Starting facts | Expected result |
+| --- | --- | --- |
+| Dirty-work sentinels | Staged and unstaged unrelated content, untracked note and symlink; partial owned patch | Step 1 inventories/protects every state; steps 3–4 preserve them through resume or blocker. |
+| Uncertain integration succeeded | Retained summary says pending; source is already in actual target | Step 2 records applied result, checks acceptance/evidence and avoids a second integration. Squashed results need content and policy inspection, not ancestry alone. |
+| Uncertain write unresolved | Remote/read-back unavailable or partial | Step 2 blocks the affected retry/dependent claim with owner and pointer; no assumed success or repeat mutation. |
+| Failed owner / unknown lifecycle | Partial artifacts remain after timeout/session crash | Steps 1–2 retain capacity/ownership until stopped or safely isolated; no replacement writer while unknown. |
+| Stale checks/review | Current target or relevant supporting input differs from checked snapshot | Step 3 marks affected evidence stale and refreshes verification/required independent review, retaining old failures/results. |
+| Blocked dependency | Closed prerequisite lacks required accepted integration | Step 3 keeps dependent waiting; recomputed dispatch may progress unaffected eligible work. |
+| Merge conflict | Unmerged entries and useful changes on both sides | Steps 1–3 preserve operation/both sides, resolve only within approved scope or report owner/action; no implicit abort/reset. |
+| Missing required tool | Material check or reviewer capability unavailable | Step 3 reports immediate affected blocker; no install, substitution or two performative retries. |
+| Budget / changed scope | Same finding resumed after two failed cycles; or requested scope/privilege changes | Steps 1–3 preserve lineage/count and escalate bounded reassessment; no fresh budget or authority. Unknown history blocks correction. |
+| Cleanup / durable pointer | Source has unique dirty work, active owner or recovery record is unavailable | Step 4 retains source; only authorized safe disposition permits removal. Unavailable durable location is explicit, not new persistence infrastructure. |
+| Non-Git / equivalent commit | Partial file manifest, or content-identical new commit | Steps 1/3 inspect modes/content/supporting inputs; retain equivalent content evidence only with proof, rerun state-sensitive checks. |
+
+## Bounded execution protocol
+
+Use a disposable local Git target with synthetic native observations, acceptance and lifecycle records. Preserve staged/unstaged/untracked/symlink sentinels. Execute an integration whose retained summary remains uncertain, inspect the actual outcome and demonstrate no duplicate application. Execute stale-check failure and refreshed checks at the current target. Exercise a stopped-owner safe direct resume and a preserved-work conflict/tool/dependency blocker; retain source and operation state until explicit fixture disposition.
+
+Retain reproduction source, commands/results, revisions and direct lead decisions outside the installable package at the approved evidence location. Fixture assertions check local facts and authored dispositions, not an implemented recovery engine or autonomous instruction-following. Distinguish executed tools from paper walkthroughs and separately authorized agent trials. #30 owns integrated multi-ticket/failure trials; this check does not replace them or independent review.
+
+## Acceptance and documentation impact
+
+#28 criteria map to step 1 (actual state/graph/findings), steps 2–3 (failed owners, prerequisites, conflicts and capability ownership/actions), steps 1/4 (preservation and safe disposition), steps 2–3 (uncertain outcomes, fresh evidence and no duplication), step 3 (justified phase/frontier, authority/bounds/escalation), step 4 (accessible recovery report).
+
+Runtime homes are recovery and this reference, with entry/shared/dispatch/completion pointers. Overviews, design implementation pointer and Unreleased changelog describe the new compatible functionality (minor impact). Domain meanings, ADR/package boundary, target policies, tracker relationships/vocabulary, legacy commands and installed copies remain unchanged. No orchestration persistence service or destructive cleanup is introduced.
