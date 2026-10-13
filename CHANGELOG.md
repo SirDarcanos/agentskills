@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Work On's cohesive ticketing, approved native graph reconciliation and work-ticket role read-back through the maintained tracker procedure. ([#22](https://github.com/SirDarcanos/agentskills/issues/22))
 - Add Work On's codebase-informed technical plans, proportionate design/verification choices and bounded domain handoffs. ([#21](https://github.com/SirDarcanos/agentskills/issues/21))
 - Add Work On's bounded product discovery, lightweight briefs and observable specs with separate publication and readiness checks. ([#20](https://github.com/SirDarcanos/agentskills/issues/20))
 - Add Work On's explicit context-aware entry and routing for requests, existing agreements, and partial work; later delivery phases remain unavailable. ([#19](https://github.com/SirDarcanos/agentskills/issues/19))
@@ -21,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Clarify Setup Project's distinct spec/implementation-step roles, project-specific issue titles, and independently assessed readiness. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
 - Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
+
+### Fixed
+
+- Reject native blocker read-back with mismatched database IDs before reporting a verified graph. ([#22](https://github.com/SirDarcanos/agentskills/issues/22))
 
 ## [1.6.0] - 2026-10-03
 

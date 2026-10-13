@@ -99,6 +99,33 @@ class DependencyWorkflowTests(unittest.TestCase):
                     deps.reconcile(plan((10, 9), (11, 9)), api, apply=True)
                 self.assertEqual(api.writes, [(10, 9)])
 
+    def test_database_id_mismatch_in_either_direction_blocks_further_writes(self):
+        for direction in ['blocked_by', 'blocking']:
+            class WrongID(FakeGitHub):
+                def request(self, suffix, **kwargs):
+                    result = super().request(suffix, **kwargs)
+                    if kwargs.get('method', 'GET') == 'GET' and self.writes and suffix.endswith('/' + direction):
+                        return [{**item, 'id': item['id'] + 5000} for item in result]
+                    return result
+            api = WrongID()
+            with self.subTest(direction=direction), self.assertRaisesRegex(deps.Blocked, 'Database ID mismatch'):
+                deps.reconcile(plan((10, 9), (11, 9)), api, apply=True)
+            self.assertEqual(api.writes, [(10, 9)])
+
+    def test_existing_edge_id_mismatch_blocks_planning_and_all_writes(self):
+        for direction in ['blocked_by', 'blocking']:
+            class WrongID(FakeGitHub):
+                def request(self, suffix, **kwargs):
+                    result = super().request(suffix, **kwargs)
+                    if kwargs.get('method', 'GET') == 'GET' and suffix.endswith('/' + direction):
+                        return [{**item, 'id': item['id'] + 5000} for item in result]
+                    return result
+            for apply in [False, True]:
+                api = WrongID({10: {9}})
+                with self.subTest(direction=direction, apply=apply), self.assertRaisesRegex(deps.Blocked, 'Database ID mismatch'):
+                    deps.reconcile(plan((10, 9), (11, 9)), api, apply=apply)
+                self.assertEqual(api.writes, [])
+
     def test_reverse_scope_and_permissions_are_checked_before_any_write(self):
         for mode in ['foreign', 'forbidden', 'mismatch']:
             class UnsupportedReverse(FakeGitHub):

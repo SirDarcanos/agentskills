@@ -32,6 +32,10 @@ An agent needs file-reading/editing and shell capabilities. The GitHub route nee
 
 Operating-document and AGENTS authoring guidance ships inside this package. Domain procedures belong to the separately installed `domain-modeling` companion; setup requests a plan first and passes approved edits afterward. A project with no existing domain records or modeling needs can omit that route without the companion. The optional blocker helper and offline tests use Python 3.9+ standard library. No particular agent SDK, model, or subagent runtime is required. Command-only frontmatter is supplemented by an explicit invocation/approval gate for runtimes that do not enforce it.
 
+## Tracker procedure library
+
+Delivery workflows may discover this package and read its entry point plus [tracker integration](references/issue-tracker.md) without invoking setup. The native-graph procedure is the authoritative reconciliation algorithm; its optional helper handles only additive blockers in one github.com repository, not parentage, labels or approval. Callers record the source/revision and verify semantic compatibility. Actual operations remain subject to the target project's policy and exact approval; reading the library grants no setup or configuration authority.
+
 ## Files and validation
 
 - [SKILL.md](SKILL.md): orchestrator and completion gates.
