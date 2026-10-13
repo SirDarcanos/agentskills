@@ -1,0 +1,29 @@
+{
+  "files": {
+    "note-link": {
+      "kind": "symlink",
+      "mode": 493,
+      "target_sha256": "e85922b356d9301621974efd6120e6ade45a7ccf2614d14be9399a8ba1d905f7"
+    },
+    "sentinel.txt": {
+      "kind": "file",
+      "mode": 493,
+      "sha256": "9340a0857cf755512ee1f081de61cf724d902bd239f1db259a65d44aeaef5ef4"
+    },
+    "untracked-note.txt": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c40a907036ec5cadbdaa624a333c3b4ac6b494f8bd86dbe250d68d19629d5ec6"
+    }
+  },
+  "format": 1,
+  "index_sha256": "8480071e9b9b621fd182b8f8a3bbc832167747b13ddbbe099ff1da84b9184cb2",
+  "paths": [
+    "note-link",
+    "sentinel.txt",
+    "untracked-note.txt"
+  ],
+  "staged_sha256": "c2e34b80e3c9e888b92f764ab1a785277738a9a4204d3c80abfb0b5b156a4d12",
+  "status_sha256": "3a2bcdaf25a21e886659d744f7c08c6f6a8a72cfbb082218d061807b58fffd2f",
+  "unstaged_sha256": "97a473ef371c0feea3cccfd15dbb92c448b5e81ed3eef49985b4c0c2d574d663"
+}

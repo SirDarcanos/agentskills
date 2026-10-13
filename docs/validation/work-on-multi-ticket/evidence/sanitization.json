@@ -1,0 +1,14 @@
+[
+  {
+    "changes": "absolute Python executable -> python3; private-root alias -> synthetic marker; no result/exit/assertion change",
+    "original_sha256": "dc207eee071a0357f43ef1104c719a6682f31ddc21e278f6811cd905218d6a24",
+    "path": "evidence/commands.jsonl",
+    "published_sha256": "069cec5dbae3efa564380d96dd7d43bcb8541e666be2d028d5d71da5dd2f703d"
+  },
+  {
+    "changes": "repository-local absolute prefix removed; report conclusions unchanged",
+    "original_sha256": "c898f8f07d2e0311a4ba8aab315bbea5e137222d6423e6bc873cc2cd39dec774",
+    "path": "reports/repaired-standards.md",
+    "published_sha256": "71ae33c020e29f13e2ef72b42611aaf5a9d478c401425565cd3d1105c1457d99"
+  }
+]

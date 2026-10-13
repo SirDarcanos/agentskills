@@ -1,0 +1,8 @@
+{
+  "after_both_final_reviews": true,
+  "command": "trial.py freshness --pointer <private-runtime-pointer> --label final",
+  "exit": 0,
+  "protected_matching": true,
+  "stdout": "{\"label\": \"final\", \"matching\": true}\n",
+  "target_scope_and_membership_matching": true
+}

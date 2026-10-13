@@ -1,0 +1,118 @@
+{
+  "acceptance_owner": "fixture lead",
+  "acceptance_recorded": true,
+  "graph_reobserved": {
+    "issues/100": {
+      "id": 9100,
+      "labels": [
+        "spec",
+        "ready-for-agent"
+      ],
+      "number": 100,
+      "role": "spec",
+      "state": "open"
+    },
+    "issues/100/parent": {
+      "complete": true,
+      "parent": null
+    },
+    "issues/100/sub_issues": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9101,
+            "number": 101
+          },
+          {
+            "id": 9102,
+            "number": 102
+          }
+        ]
+      ]
+    },
+    "issues/101": {
+      "acceptance": null,
+      "id": 9101,
+      "labels": [
+        "implementation-step",
+        "ready-for-agent"
+      ],
+      "number": 101,
+      "role": "work",
+      "state": "closed"
+    },
+    "issues/101/dependencies/blocked_by": {
+      "complete": true,
+      "pages": [
+        []
+      ]
+    },
+    "issues/101/dependencies/blocking": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9102,
+            "number": 102
+          }
+        ]
+      ]
+    },
+    "issues/101/parent": {
+      "complete": true,
+      "parent": {
+        "id": 9100,
+        "number": 100
+      }
+    },
+    "issues/102": {
+      "id": 9102,
+      "labels": [
+        "implementation-step",
+        "ready-for-agent"
+      ],
+      "number": 102,
+      "role": "work",
+      "state": "open"
+    },
+    "issues/102/dependencies/blocked_by": {
+      "complete": true,
+      "pages": [
+        [
+          {
+            "id": 9101,
+            "number": 101
+          }
+        ]
+      ]
+    },
+    "issues/102/dependencies/blocking": {
+      "complete": true,
+      "pages": [
+        []
+      ]
+    },
+    "issues/102/parent": {
+      "complete": true,
+      "parent": {
+        "id": 9100,
+        "number": 100
+      }
+    }
+  },
+  "integrated_head": "aaacb949d4f2113b1f4806d8812535017b161e54",
+  "kind": "synthetic-target-completion",
+  "limit": 2,
+  "next_owned_ticket": 102,
+  "policy": "fixture/repaired/AGENTS.md",
+  "production_tracker_mutations": 0,
+  "repair_checkpoint": "101-normalization",
+  "review_report_hashes": {
+    "repaired-clean-spec.md": "27a187e78890cedfb90c49b8596f969dc6591d7070e8c70460d4c0bdda144533",
+    "repaired-clean-standards.md": "ca3ff3136a5939bf22f643504bd3ba29c052ede7462c55cc076de0d9787437f7"
+  },
+  "scope_record": "evidence/repaired.json",
+  "spent": 1,
+  "ticket": 101
+}

@@ -1,0 +1,61 @@
+diff --git a/README.md b/README.md
+index bfe8f94e31b6c4ce2579e626a5e63f30bc925601..5e760bba3110dc7acc95dc0cc4630625895bbe7b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,6 @@
+ # Name report fixture
+ 
+-Existing normalize_name returns an unchanged string. Run python3 -B -m unittest -v.
+-The approved feature is defined in REQUEST.md. Report support is not yet built.
++normalize_name strips surrounding whitespace and lowercases strings. Run python3 -B -m unittest -v.
++render_names joins normalized strings with comma-space, preserving order,
++duplicates and empty values. An empty sequence yields an empty string.
++The approved feature is defined in REQUEST.md.
+diff --git a/names.py b/names.py
+index 6bf4c933be03808337a18f83a0ed8bc344f48a88..eabc5a524b7456c2302875e3252569e85e69d600 100644
+--- a/names.py
++++ b/names.py
+@@ -1,2 +1,2 @@
+ def normalize_name(value):
+-    return value
++    return value.strip().lower()
+diff --git a/report.py b/report.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..7d8a050bc100e8a54baf082ad0b7f9bd3e2fbadc
+--- /dev/null
++++ b/report.py
+@@ -0,0 +1,5 @@
++from names import normalize_name
++
++
++def render_names(values):
++    return ', '.join(normalize_name(value) for value in values)
+diff --git a/test_names.py b/test_names.py
+index 675370da759fdbabf31a4d7ed4518a6cb7965850..26187e7713ef1d75ed6cfe012db795766b333e67 100644
+--- a/test_names.py
++++ b/test_names.py
+@@ -5,3 +5,8 @@ from names import normalize_name
+ class NamesTest(unittest.TestCase):
+     def test_existing_lowercase(self):
+         self.assertEqual(normalize_name('a'), 'a')
++
++    def test_normalization(self):
++        self.assertEqual(normalize_name(' A '), 'a')
++        self.assertEqual(normalize_name(''), '')
++        self.assertEqual(normalize_name(' \t '), '')
+diff --git a/test_report.py b/test_report.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..70fa3450f24fbcd936f30c2c6f144f78a3206040
+--- /dev/null
++++ b/test_report.py
+@@ -0,0 +1,10 @@
++import unittest
++from report import render_names
++
++
++class ReportTest(unittest.TestCase):
++    def test_order_duplicates_and_empty_values(self):
++        self.assertEqual(render_names([' A ', 'b', ' A ', '']), 'a, b, a, ')
++
++    def test_empty_sequence(self):
++        self.assertEqual(render_names([]), '')

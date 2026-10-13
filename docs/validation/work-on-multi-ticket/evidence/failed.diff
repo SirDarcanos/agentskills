@@ -1,0 +1,31 @@
+diff --git a/README.md b/README.md
+index bfe8f94e31b6c4ce2579e626a5e63f30bc925601..926dbe2eacf1c3def9396beb4d2e17e3deaea6ba 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,4 @@
+ # Name report fixture
+ 
+-Existing normalize_name returns an unchanged string. Run python3 -B -m unittest -v.
++normalize_name strips surrounding whitespace and lowercases strings. Run python3 -B -m unittest -v.
+ The approved feature is defined in REQUEST.md. Report support is not yet built.
+diff --git a/names.py b/names.py
+index 6bf4c933be03808337a18f83a0ed8bc344f48a88..e0e77f992c828dff4e55162d8e26585c02c0b4e1 100644
+--- a/names.py
++++ b/names.py
+@@ -1,2 +1,2 @@
+ def normalize_name(value):
+-    return value
++    return value.lower()
+diff --git a/test_names.py b/test_names.py
+index 675370da759fdbabf31a4d7ed4518a6cb7965850..26187e7713ef1d75ed6cfe012db795766b333e67 100644
+--- a/test_names.py
++++ b/test_names.py
+@@ -5,3 +5,8 @@ from names import normalize_name
+ class NamesTest(unittest.TestCase):
+     def test_existing_lowercase(self):
+         self.assertEqual(normalize_name('a'), 'a')
++
++    def test_normalization(self):
++        self.assertEqual(normalize_name(' A '), 'a')
++        self.assertEqual(normalize_name(''), '')
++        self.assertEqual(normalize_name(' \t '), '')

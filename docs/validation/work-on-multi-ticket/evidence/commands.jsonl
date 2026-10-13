@@ -1,0 +1,32 @@
+{"command": ["git", "init", "-b", "main"], "exit": 0, "stderr": "", "stdout": "Initialized empty Git repository in <synthetic-target>/.git/\n"}
+{"command": ["git", "config", "user.name", "Synthetic Trial"], "exit": 0, "stderr": "", "stdout": ""}
+{"command": ["git", "config", "user.email", "trial@example.invalid"], "exit": 0, "stderr": "", "stdout": ""}
+{"command": ["git", "add", "--", "test_names.py", "tracker.json", "names.py", "README.md", "sentinel.txt", "REQUEST.md", "AGENTS.md"], "exit": 0, "stderr": "", "stdout": ""}
+{"command": ["git", "commit", "-m", "baseline synthetic target"], "exit": 0, "stderr": "", "stdout": "[main (root-commit) 2c686bb] baseline synthetic target\n 7 files changed, 141 insertions(+)\n create mode 100644 AGENTS.md\n create mode 100644 README.md\n create mode 100644 REQUEST.md\n create mode 100644 names.py\n create mode 100644 sentinel.txt\n create mode 100644 test_names.py\n create mode 100644 tracker.json\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "2c686bb8e1c04c2bcff2b3cccb028b2c9b495d8e\n"}
+{"command": ["git", "switch", "-c", "feature/name-report"], "exit": 0, "stderr": "Switched to a new branch 'feature/name-report'\n", "stdout": ""}
+{"command": ["git", "add", "--", "sentinel.txt"], "exit": 0, "stderr": "", "stdout": ""}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "2c686bb8e1c04c2bcff2b3cccb028b2c9b495d8e\n"}
+{"command": ["python3", "-B", "-m", "unittest", "-v"], "exit": 0, "stderr": "test_existing_lowercase (test_names.NamesTest.test_existing_lowercase) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n", "stdout": ""}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "2c686bb8e1c04c2bcff2b3cccb028b2c9b495d8e\n"}
+{"command": ["git", "commit", "--only", "-m", "ticket 101 candidate", "names.py", "test_names.py", "README.md"], "exit": 0, "stderr": "", "stdout": "[feature/name-report 93e4d2d] ticket 101 candidate\n 3 files changed, 7 insertions(+), 2 deletions(-)\n"}
+{"command": ["python3", "-B", "-m", "unittest", "-v"], "exit": 1, "stderr": "test_existing_lowercase (test_names.NamesTest.test_existing_lowercase) ... ok\ntest_normalization (test_names.NamesTest.test_normalization) ... FAIL\n\n======================================================================\nFAIL: test_normalization (test_names.NamesTest.test_normalization)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<synthetic-target>/test_names.py\", line 10, in test_normalization\n    self.assertEqual(normalize_name(' A '), 'a')\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ' a ' != 'a'\n-  a \n+ a\n\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n", "stdout": ""}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "93e4d2d2027e1db7c91f0430edc0dd22ece0514c\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "93e4d2d2027e1db7c91f0430edc0dd22ece0514c\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "93e4d2d2027e1db7c91f0430edc0dd22ece0514c\n"}
+{"command": ["git", "status", "--short"], "exit": 0, "stderr": "", "stdout": "MM sentinel.txt\n?? note-link\n?? untracked-note.txt\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "93e4d2d2027e1db7c91f0430edc0dd22ece0514c\n"}
+{"command": ["git", "commit", "--only", "-m", "repair ticket 101 trimming", "names.py"], "exit": 0, "stderr": "", "stdout": "[feature/name-report aaacb94] repair ticket 101 trimming\n 1 file changed, 1 insertion(+), 1 deletion(-)\n"}
+{"command": ["python3", "-B", "-m", "unittest", "-v"], "exit": 0, "stderr": "test_existing_lowercase (test_names.NamesTest.test_existing_lowercase) ... ok\ntest_normalization (test_names.NamesTest.test_normalization) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n", "stdout": ""}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "aaacb949d4f2113b1f4806d8812535017b161e54\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "aaacb949d4f2113b1f4806d8812535017b161e54\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "aaacb949d4f2113b1f4806d8812535017b161e54\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "aaacb949d4f2113b1f4806d8812535017b161e54\n"}
+{"command": ["git", "add", "--", "report.py", "test_report.py"], "exit": 0, "stderr": "", "stdout": ""}
+{"command": ["git", "commit", "--only", "-m", "ticket 102 normalized report", "report.py", "test_report.py", "README.md"], "exit": 0, "stderr": "", "stdout": "[feature/name-report 42b0995] ticket 102 normalized report\n 3 files changed, 18 insertions(+), 1 deletion(-)\n create mode 100644 report.py\n create mode 100644 test_report.py\n"}
+{"command": ["python3", "-B", "-m", "unittest", "-v"], "exit": 0, "stderr": "test_existing_lowercase (test_names.NamesTest.test_existing_lowercase) ... ok\ntest_normalization (test_names.NamesTest.test_normalization) ... ok\ntest_empty_sequence (test_report.ReportTest.test_empty_sequence) ... ok\ntest_order_duplicates_and_empty_values (test_report.ReportTest.test_order_duplicates_and_empty_values) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n", "stdout": ""}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "42b0995033daf25dc1f00bafc00ad52ab233034d\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "42b0995033daf25dc1f00bafc00ad52ab233034d\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "42b0995033daf25dc1f00bafc00ad52ab233034d\n"}
+{"command": ["git", "log", "--format=%H:%s"], "exit": 0, "stderr": "", "stdout": "42b0995033daf25dc1f00bafc00ad52ab233034d:ticket 102 normalized report\naaacb949d4f2113b1f4806d8812535017b161e54:repair ticket 101 trimming\n93e4d2d2027e1db7c91f0430edc0dd22ece0514c:ticket 101 candidate\n2c686bb8e1c04c2bcff2b3cccb028b2c9b495d8e:baseline synthetic target\n"}
+{"command": ["git", "rev-parse", "HEAD"], "exit": 0, "stderr": "", "stdout": "42b0995033daf25dc1f00bafc00ad52ab233034d\n"}

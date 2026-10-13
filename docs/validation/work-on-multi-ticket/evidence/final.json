@@ -1,0 +1,155 @@
+{
+  "membership": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "3acf10386081e50326aadc24d4ddf295c887cf6bd744b4aa566882f6183986a9"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f4a013751ad55c1e17bc567bf6872fbbc0162bcc50f20341b30846a3c0fe2872"
+    },
+    "REQUEST.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "39cd7e04b03a4ed365f38619ae3dfe6be542e3fcbc5b7dae47030d65aae8bc10"
+    },
+    "names.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "392f6238dfbd41ec0f3221ca2e35dd22b8cbd11e8d5fde44f90cff1ca7dce75c"
+    },
+    "note-link": {
+      "kind": "symlink",
+      "mode": 493,
+      "target": "untracked-note.txt"
+    },
+    "report.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f8993d768ff275a37ff2e07f63b53ac373dd43907bc62768ec053dba403cdeab"
+    },
+    "sentinel.txt": {
+      "kind": "file",
+      "mode": 493,
+      "sha256": "9340a0857cf755512ee1f081de61cf724d902bd239f1db259a65d44aeaef5ef4"
+    },
+    "test_names.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c5c6f13155172091d7615b44b91c646848ab90f3ae9f048f8872b2f4a9bfd7fa"
+    },
+    "test_report.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8cb158c79fbcf3d82c084655eed3a7f1f256673f198593c161ee6c96d6ae3a66"
+    },
+    "tracker.json": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "a5ed536c60a0ae7656490832b7228fb049479b5c418a84f8317aa5270291349c"
+    },
+    "untracked-note.txt": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c40a907036ec5cadbdaa624a333c3b4ac6b494f8bd86dbe250d68d19629d5ec6"
+    }
+  },
+  "protected": {
+    "files": {
+      "note-link": {
+        "kind": "symlink",
+        "mode": 493,
+        "target_sha256": "e85922b356d9301621974efd6120e6ade45a7ccf2614d14be9399a8ba1d905f7"
+      },
+      "sentinel.txt": {
+        "kind": "file",
+        "mode": 493,
+        "sha256": "9340a0857cf755512ee1f081de61cf724d902bd239f1db259a65d44aeaef5ef4"
+      },
+      "untracked-note.txt": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "c40a907036ec5cadbdaa624a333c3b4ac6b494f8bd86dbe250d68d19629d5ec6"
+      }
+    },
+    "format": 1,
+    "index_sha256": "8480071e9b9b621fd182b8f8a3bbc832167747b13ddbbe099ff1da84b9184cb2",
+    "paths": [
+      "note-link",
+      "sentinel.txt",
+      "untracked-note.txt"
+    ],
+    "staged_sha256": "c2e34b80e3c9e888b92f764ab1a785277738a9a4204d3c80abfb0b5b156a4d12",
+    "status_sha256": "3a2bcdaf25a21e886659d744f7c08c6f6a8a72cfbb082218d061807b58fffd2f",
+    "unstaged_sha256": "97a473ef371c0feea3cccfd15dbb92c448b5e81ed3eef49985b4c0c2d574d663"
+  },
+  "python": "3.14.7",
+  "scope": {
+    "base": "2c686bb8e1c04c2bcff2b3cccb028b2c9b495d8e",
+    "branch": "feature/name-report",
+    "committed_sha256": "1751214542e83c2f7725f727bfc30a69faff91fbe8879dec9946171db90fb68d",
+    "files": {
+      "AGENTS.md": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "3acf10386081e50326aadc24d4ddf295c887cf6bd744b4aa566882f6183986a9"
+      },
+      "README.md": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "f4a013751ad55c1e17bc567bf6872fbbc0162bcc50f20341b30846a3c0fe2872"
+      },
+      "REQUEST.md": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "39cd7e04b03a4ed365f38619ae3dfe6be542e3fcbc5b7dae47030d65aae8bc10"
+      },
+      "names.py": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "392f6238dfbd41ec0f3221ca2e35dd22b8cbd11e8d5fde44f90cff1ca7dce75c"
+      },
+      "report.py": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "f8993d768ff275a37ff2e07f63b53ac373dd43907bc62768ec053dba403cdeab"
+      },
+      "test_names.py": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "c5c6f13155172091d7615b44b91c646848ab90f3ae9f048f8872b2f4a9bfd7fa"
+      },
+      "test_report.py": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "8cb158c79fbcf3d82c084655eed3a7f1f256673f198593c161ee6c96d6ae3a66"
+      },
+      "tracker.json": {
+        "kind": "file",
+        "mode": 420,
+        "sha256": "a5ed536c60a0ae7656490832b7228fb049479b5c418a84f8317aa5270291349c"
+      }
+    },
+    "format": 1,
+    "head": "42b0995033daf25dc1f00bafc00ad52ab233034d",
+    "index_sha256": "0da0126c961ad1341b5b108ee6c700530419a886e125c6fb22fc6d5bd0dd4e94",
+    "paths": [
+      "AGENTS.md",
+      "README.md",
+      "REQUEST.md",
+      "names.py",
+      "report.py",
+      "test_names.py",
+      "test_report.py",
+      "tracker.json"
+    ],
+    "root": "<synthetic-target>",
+    "staged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unstaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "status_nul_hex": "4d4d2073656e74696e656c2e747874003f3f206e6f74652d6c696e6b003f3f20756e747261636b65642d6e6f74652e74787400",
+  "test_exit": 0
+}
