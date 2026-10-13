@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add Work On's cohesive ticketing, approved native graph reconciliation and work-ticket role read-back through the maintained tracker procedure. ([#22](https://github.com/SirDarcanos/agentskills/issues/22))
 - Add Work On's codebase-informed technical plans, proportionate design/verification choices and bounded domain handoffs. ([#21](https://github.com/SirDarcanos/agentskills/issues/21))
 - Add Work On's bounded product discovery, lightweight briefs and observable specs with separate publication and readiness checks. ([#20](https://github.com/SirDarcanos/agentskills/issues/20))
-- Add Work On's explicit context-aware entry and routing for requests, existing agreements, and partial work; later delivery phases remain unavailable. ([#19](https://github.com/SirDarcanos/agentskills/issues/19))
+- Add Work On's explicit context-aware entry and routing for requests, existing agreements, and partial work. ([#19](https://github.com/SirDarcanos/agentskills/issues/19))
 - Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
 - Add Setup Project for project-aware docs, changelog/versioning setup, audited spec/release labels, and verified native issue dependencies. ([#8](https://github.com/SirDarcanos/agentskills/issues/8))
@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Document delivery installation, conditional companions, runtime limits and executed trial coverage, with a neutral review-packet checklist for prior-report exposure. ([#31](https://github.com/SirDarcanos/agentskills/issues/31), [#14](https://github.com/SirDarcanos/agentskills/issues/14), trials [#45](https://github.com/SirDarcanos/agentskills/pull/45)/[#46](https://github.com/SirDarcanos/agentskills/pull/46))
 - Clarify Setup Project's distinct spec/implementation-step roles, project-specific issue titles, and independently assessed readiness. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
 - Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
 
