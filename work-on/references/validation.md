@@ -1,6 +1,6 @@
 # Entry validation
 
-Use when changing or validating entry and the shared contract. #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
+Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
 
 ## Reproducible static checks
 
@@ -29,4 +29,4 @@ These are synthetic starting facts and expected outcomes, **not executed agent r
 
 #19 AC1 is covered by context pointers and conditional semantic discovery; AC2 by read-only work inspection and protected scope; AC3 by three routes and lightweight brief; AC4 by conflict/gap disposition; AC5 by affected-route capability blockers. The shared envelope establishes inputs/returns and limits for later consumers without implementing their phases.
 
-Changed runtime homes: `SKILL.md`, `references/contracts.md`, this validation reference. The package overview and repository index describe entry-only availability; the changelog records the new public behavior. The accepted design remains cross-ticket rationale; domain terms, package ownership, target policies and legacy/installed skills are unchanged. No domain/ADR change is required. Direct inspection/static checks must be reported honestly; independent review and executed workflow trials require their own authority and are not implied by this matrix.
+Changed runtime homes: `SKILL.md`, `references/contracts.md`, this validation reference. The package overview and repository index describe available phases; the changelog records the new public behavior. The accepted design remains cross-ticket rationale; domain terms, package ownership, target policies and legacy/installed skills are unchanged. No domain/ADR change is required. Direct inspection/static checks must be reported honestly; independent review and executed workflow trials require their own authority and are not implied by this matrix.
