@@ -1,0 +1,39 @@
+--- baseline/README.md
++++ delivered/README.md
+@@ -1,6 +1,6 @@
+ # Markdown filename filter
+ 
+-`is_markdown(name)` recognizes the exact lowercase `.md` suffix.
++`is_markdown(name)` recognizes the final `.md` suffix regardless of extension case.
+ `markdown_files(names)` returns matching names unchanged, in their original
+ order, including duplicates. Inputs are strings; this module does not inspect
+ the filesystem or file contents.
+--- baseline/file_types.py
++++ delivered/file_types.py
+@@ -2,7 +2,7 @@
+ 
+ 
+ def is_markdown(name):
+-    return name.endswith(".md")
++    return name[-3:].lower() == ".md"
+ 
+ 
+ def markdown_files(names):
+--- baseline/test_file_types.py
++++ delivered/test_file_types.py
+@@ -6,6 +6,15 @@
+ class FileTypesTests(unittest.TestCase):
+     def test_lowercase_markdown(self):
+         self.assertTrue(is_markdown("notes.md"))
++
++    def test_mixed_case_extension(self):
++        for name in ("notes.MD", "notes.mD", "notes.Md"):
++            with self.subTest(name=name):
++                self.assertTrue(is_markdown(name))
++
++    def test_filter_preserves_mixed_case_names(self):
++        names = ["B.MD", "skip.txt", "a.mD", "B.MD", "plain.md"]
++        self.assertEqual(markdown_files(names), ["B.MD", "a.mD", "B.MD", "plain.md"])
+ 
+     def test_non_markdown_and_final_suffix(self):
+         for name in ("", "notes", "notes.txt", "notes.markdown", "notes.md.bak"):
