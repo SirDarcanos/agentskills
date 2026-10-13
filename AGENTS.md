@@ -4,6 +4,10 @@
 
 This repository contains reusable skills for coding agents. Each top-level skill directory is an independent package with `SKILL.md` as its entry point and optional supporting files beside it.
 
+## Project context and workflow
+
+Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md) for this single-maintainer repository's authority and delivery agreement. Before creating or scheduling issues, read [tracker guidance](docs/agents/issue-tracker.md) and [label mappings](docs/agents/triage-labels.md). For terminology-dependent work, read [CONTEXT.md](CONTEXT.md); for changes to meanings or decision records, follow the workflow's domain-modeling pointer. Check documentation impact before completion.
+
 ## Working with skills
 
 - Read a skill's complete `SKILL.md` before changing it.

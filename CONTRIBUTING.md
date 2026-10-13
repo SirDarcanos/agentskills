@@ -2,6 +2,8 @@
 
 Contributions that improve an existing skill or add a focused, reusable skill are welcome.
 
+This is a single-maintainer project. See the [repository workflow](docs/agents/workflow.md) for PR and release conventions, and the [label guide](docs/agents/triage-labels.md) when classifying an issue or PR.
+
 ## Add or update a skill
 
 1. Create one directory per skill.
