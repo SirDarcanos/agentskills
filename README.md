@@ -70,6 +70,12 @@ git clone https://github.com/SirDarcanos/agentskills.git
 
 Review a skill before enabling it because instructions and tool assumptions can differ between agent runtimes.
 
+### Delivery workflow
+
+Install `work-on` for explicitly requested delivery and `review-delivery` for the independent acceptance-review gate. Follow their package READMEs for installation examples and conditional companions: `implementation-preflight` for Git building, `domain-modeling` for meaning/ADR changes, and the discovered `setup-project` tracker library for GitHub graph work. Reading that library does not invoke setup. Copy complete directories and their notices; companions use semantic discovery, not sibling paths. Missing tools, compatible companions or review authority block the affected route rather than prompting automatic installation or legacy-command fallback.
+
+[Delivery coverage and installation checks](docs/validation/delivery-coverage/README.md) maps #14's criteria to shipped procedures, executed trials and remaining gaps. Observed Pi/macOS trials are not cross-runtime certification, installed slash-command tests or proof of live tracker mutation. Installation examples have not been executed here; repository merges do not refresh separately copied skills.
+
 ## Comparing decision models
 
 [The shared decision-model benchmark](benchmarks/decision-models/) contains 100 synthetic cases with 120 known-label questions for Nimble, Clef, Clef Flash, and Jev. It reports category-level correctness and separates model mismatches from API failures. Validation is offline by default; live inference, hosted billing, and retained records require explicit opt-in.

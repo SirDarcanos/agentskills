@@ -2,7 +2,15 @@
 
 ## Independent assignments
 
-Give both reviewers the same agreement, authority, pinned scope and raw evidence. Neither receives the other's conclusions before returning. Record reviewer identity/context, relationship to authors, source access and timeout/turn bound. They may inspect overlapping files while keeping distinct questions:
+Give both reviewers the same agreement, authority, pinned scope and raw evidence. Neither receives the other's conclusions before returning. Record reviewer identity/context, relationship to authors, source access and timeout/turn bound.
+
+Before launch, check the review packet and permitted search roots:
+
+1. Supply the approved agreement, actual source/diffs, standards and raw checks for the pinned scope. Keep progress metadata outcome-free; omit prior reviewer verdicts, quoted findings and the lead's preferred outcome from packet narratives and supporting inputs. Retain original reports separately as history, unchanged.
+2. Give explicit file/search boundaries that exclude prior axis reports and retrospective commentary. A fresh context alone does not prevent exposure through a broad repository search. If a material source cannot be made available independently, return that blocker rather than hiding it.
+3. If a reviewer sees excluded conclusions, stop consuming its result and retain it as ineligible. Preserve the exposure record, confirm terminal completion or isolation before replacement, correct the packet/boundaries and renew affected axes within the shared worker limit. Record what was actually observed; an allowlist is a procedural boundary, not proof of filesystem isolation.
+
+**Packet complete when:** both assignments have independently inspectable source/evidence, neutral inputs and explicit search boundaries, or the review gate is blocked. They may inspect overlapping files while keeping distinct questions:
 
 | Axis | Required challenge |
 | --- | --- |
