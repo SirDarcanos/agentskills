@@ -26,4 +26,4 @@ An agent-ready ticket has actionable acceptance criteria, resolved consequential
 
 The delivery owner reports implemented, verified, unverified, deferred, and blocked work separately. Keep implementation tickets open until their work is accepted and merged under the agreed workflow. Where appropriate, add closing references to the PR and verify issue state after an approved merge. Declined work closes with an explanation and the relevant label, not a claim of implementation.
 
-The label guide owns spec labeling and the approved historical backfill. Issue #14 is a future-workflow agreement, not authorization to implement that workflow.
+The label guide owns spec labeling and the approved historical backfill. Issue #14 is the delivery-workflow spec; #18 defines its design contract. Publishing that plan does not implement the workflow or authorize downstream execution before its design decisions and native blockers are resolved.
