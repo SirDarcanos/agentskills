@@ -18,6 +18,7 @@ Run this before editing an existing project or resuming interrupted setup. The c
 
 - Failed writes can have succeeded remotely. Read back before retrying; use idempotent operations. Never resend blindly after a timeout.
 - Audit labels actively rather than preserving GitHub defaults by habit. Use the [tracker procedure](issue-tracker.md) for usage/automation analysis and approved cleanup; unrelated or unapproved labels/edges remain intact. Removing, renaming, reparenting, or deleting requires a specific approved plan.
+- For domain deltas, use the `domain-modeling` companion through the domain handoff. Pass current evidence, prior approvals that still apply, and remaining operations; an unavailable/incompatible companion blocks that route without restarting completed operating-document work.
 - Unknown remote state is not “absent.” Permission/API failures are blockers, not evidence that a repository, label, protection, or relationship should be created.
 - If local docs describe desired remote controls that could not be enforced, label them pending/blocked. Do not publish them as active enforcement.
 - If rollback would discard user work or reverse an already-used remote change, ask; do not automatically undo successful work after a later failure.

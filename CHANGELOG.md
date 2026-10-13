@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
 - Add Setup Project for project-aware docs, changelog/versioning setup, audited spec/release labels, and verified native issue dependencies. ([#8](https://github.com/SirDarcanos/agentskills/issues/8))
+- Add Domain Modeling as a reusable companion for Setup Project and other workflows, with plan-only and approved glossary, context-map, and ADR handoffs. ([#8](https://github.com/SirDarcanos/agentskills/issues/8), [#11](https://github.com/SirDarcanos/agentskills/issues/11))
 
 ### Changed
 

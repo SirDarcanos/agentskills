@@ -16,6 +16,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`ask-nimble`](ask-nimble/) | Explicitly request an evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
+| [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
 | [`github-repo-setup`](github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
 | [`implementation-preflight`](implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
 | [`setup-project`](setup-project/) | Establish project-aware agent instructions, operating context, domain records, and approved GitHub tracker configuration. |

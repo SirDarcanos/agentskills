@@ -8,7 +8,7 @@ python3 setup-project/scripts/dependencies.py --help
 git diff --check
 ```
 
-From a copied standalone package, run unittest discovery against `tests/`. Companion-specific packaging checks may skip when the GitHub package is not beside it; report the skip rather than claiming the companion was checked.
+From a copied standalone package, run unittest discovery against `tests/`. Companion-specific packaging checks may skip when the GitHub or domain-modeling package is not beside it; report skips rather than claiming those companions were checked. Each package's relative links must resolve within its copied directory; runtime discovery, not sibling file paths, supplies companions.
 
 The unit tests exercise the real dependency reconciler through an in-memory GitHub transport and mock the CLI transport. They cover additive/read-only behavior, ID direction, existing/transitive graph cycles, reruns, partial failure, read-back mismatches, API errors, pagination, and unsupported scope. No network, credentials, or model calls are used. Packaging checks verify entry-point fields and shipped relative links, not semantic correctness.
 
@@ -34,7 +34,9 @@ Use temporary fixture projects and a command shim returning synthetic GitHub obs
 | Partial remote write followed by timeout | Re-inspect before retry; retain successes; report uncertainty and never recreate blindly. |
 | Missing helper, missing permission, unsupported required control | Explicit affected blocker; no installation, weakened baseline, or prose-only false success. |
 | Native graph: correct edges, reverse edges, cycle, foreign parent, paginated results | Distinguish hierarchy/blockers; verify IDs and direction; no implicit reparenting; stop on graph conflict or missing read-back. |
-| No terms/ADR; confirmed term; proposed decision; superseded ADR | No empty artifacts; update confirmed meanings; proposals stay proposals; history retained. |
+| No terms/ADR; confirmed term; proposed decision; superseded ADR | Explicitly omit unnecessary domain route; otherwise use domain-modeling and inspect its evidence. |
+| Domain companion absent or same-named incompatible installation | Block required domain work; no automatic install/replacement or fallback; independent approved local work stays possible. |
+| Domain plan-only handoff followed by approved exact delta | Planning makes no writes; one setup approval; reuse confirmed answers; writes stay within approved scope. |
 | Contradictory docs/code or sensitive input | Resolve/flag authority; sanitize output; do not silently override policy. |
 
 For a repeatable local fixture, start with an authored AGENTS or CLAUDE file, project/workflow guidance, an untracked sentinel, and (where relevant) a context map/ADR. Record original byte hashes and the exact synthetic GitHub state. Include both approved deltas and exclusions. After the agent run, compare the diff, command log, remote read-back, and report to the plan; run again to check idempotence. Keep fixtures synthetic, and retain assessment artifacts only in an approved location.

@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Run on an explicit setup request, including a runtime-expanded invocation. Learn the project's needs; do not assume a team size, engineering role, scale, or architecture. This command configures the working agreement, not the application.
 
-Use normal file and shell tools. No particular agent SDK, literal Skill tool, subagents, or model service is required. Local setup is self-contained. The GitHub route requires the maintained `github-repo-setup` companion; locate it through the runtime's skill discovery and read it completely. If absent, report the remote route blocked and ask before installing anything. Never silently substitute a different setup procedure.
+Use normal file and shell tools. No particular agent SDK, literal Skill tool, subagents, or model service is required. Operating-document authoring ships here; domain work requires the maintained `domain-modeling` companion, and GitHub creation/configuration requires `github-repo-setup`. Locate applicable companions through runtime skill discovery and read them completely. Missing or incompatible companions block their affected routes; ask before installing or replacing anything. Never silently substitute a different procedure.
 
 ## 1. Inspect before asking or changing
 
@@ -40,7 +40,7 @@ Show:
 - GitHub creation/configuration, full label-audit dispositions (including approved edits/removals), spec labeling, branch rules, bypasses, pushes, and opt-ins when requested;
 - deferred/blocked operations and which independent local work can proceed.
 
-For GitHub, obtain the companion's inspected plan **without executing it**, then incorporate it into this plan. Use [tracker integration](references/issue-tracker.md) for labels and relationship conventions. Existing relationships are changed only when explicitly included; setup does not create a backlog by default.
+For domain work, use the [domain handoff](references/domain-records.md) to obtain the companion's **plan-only** result and incorporate its deltas and blockers. For GitHub, obtain the companion's inspected plan **without executing it**, then incorporate it into this plan. Use [tracker integration](references/issue-tracker.md) for labels and relationship conventions. Existing relationships are changed only when explicitly included; setup does not create a backlog by default.
 
 Ask for approval before any setup mutation. Approval covers these actions, not new settings, deployment, billing, disclosure, credential changes, commits, or global installations. A plan with mandatory blocked operations cannot be called complete; the user may separately approve useful local progress.
 
@@ -51,7 +51,7 @@ Ask for approval before any setup mutation. Approval covers these actions, not n
 Recheck affected state against the plan. If it changed materially, reconcile and obtain approval for changed scope.
 
 1. Author operating docs and entry-point pointers using the documentation contract. Preserve unrelated content; do not regenerate whole existing files from a template.
-2. Read [domain records](references/domain-records.md) when established terms, a context map, or qualifying architectural decisions need creation/reconciliation. This shipped reference owns setup's domain work; an installed external domain-modeling skill is not required.
+2. For approved domain work, execute the handoff through `domain-modeling`; use the same mapping and confirmed decisions supplied during planning. Inspect its results and integrate approved pointers without moving operating context into the glossary.
 3. For approved GitHub work, hand the companion the target, inspected state, approved operations/exclusions, organization constraints, and known capability limits. It returns actual changes, read-back evidence, and blockers; it must not repeat resolved questions or expand scope.
 4. Apply the approved changelog route using the release reference without bumping versions, tagging, or publishing. Record release authority and maintenance expectations.
 5. Apply the approved full label audit using the tracker reference, including spec and applicable release roles, approved migrations/cleanup, and native relationship guidance. Preserve unapproved vocabulary, assignments, and relationships.
@@ -64,7 +64,7 @@ Do not place credentials or private personal profiles in repository docs. Record
 ## 5. Verify and report
 
 - Inspect diffs and compare actual results to the approved plan.
-- Follow every generated entry-point link. Confirm documents have useful content, one authoritative policy home, and read/update conditions.
+- Follow every generated entry-point link. Confirm documents have useful content, one authoritative policy home, and read/update conditions. Check the domain companion's actual results against its approved scope; missing required domain work leaves setup partial/blocked.
 - Verify remote settings through the companion and labels/relationships through tracker read-back, including preserved labels, approved removals/migrations, and spec assignments when in scope. Command success alone is insufficient.
 - Verify the changelog and versioning guidance agree with observed release sources/automation; preserve released history and report any unresolved convention.
 - Verify documented non-mutating commands when the environment permits. Ask before installation or any command with deployment, migration, cost, or destructive effects. Unexecuted checks remain unverified.

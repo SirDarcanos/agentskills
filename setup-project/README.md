@@ -22,19 +22,22 @@ This prepares a project; it does not implement an application, invoke the future
 
 ```sh
 npx skills add SirDarcanos/agentskills --skill setup-project
+# Required when domain records need assessment or changes:
+npx skills add SirDarcanos/agentskills --skill domain-modeling
 # Required only for GitHub creation/configuration:
 npx skills add SirDarcanos/agentskills --skill github-repo-setup
 ```
 
-An agent needs file-reading/editing and shell capabilities. The GitHub route needs authenticated `gh` and appropriate repository/organization permissions. Locate the companion through the runtime's discovery mechanism; missing companions block the affected route rather than triggering automatic installation.
+An agent needs file-reading/editing and shell capabilities. The GitHub route needs authenticated `gh` and appropriate repository/organization permissions. Locate companions through the runtime's discovery mechanism; missing or incompatible companions block the affected route rather than triggering automatic installation. A same-named older domain skill must support the maintained handoff contract before setup uses it.
 
-Local/domain authoring guidance ships inside this package and requires no external domain-modeling or AGENTS-generation skill. The optional blocker helper and offline tests use Python 3.9+ standard library. No particular agent SDK, model, or subagent runtime is required. Command-only frontmatter is supplemented by an explicit invocation/approval gate for runtimes that do not enforce it.
+Operating-document and AGENTS authoring guidance ships inside this package. Domain procedures belong to the separately installed `domain-modeling` companion; setup requests a plan first and passes approved edits afterward. A project with no existing domain records or modeling needs can omit that route without the companion. The optional blocker helper and offline tests use Python 3.9+ standard library. No particular agent SDK, model, or subagent runtime is required. Command-only frontmatter is supplemented by an explicit invocation/approval gate for runtimes that do not enforce it.
 
 ## Files and validation
 
 - [SKILL.md](SKILL.md): orchestrator and completion gates.
 - [Documentation contract](references/documentation-contract.md): authoritative output and upkeep policy.
-- [Discovery](references/discovery.md), [domain records](references/domain-records.md), and [reconciliation](references/reconciliation.md): conditional procedures.
+- [Discovery](references/discovery.md) and [reconciliation](references/reconciliation.md): conditional procedures.
+- [Domain handoff](references/domain-records.md): setup integration with the domain-modeling companion.
 - [Tracker integration](references/issue-tracker.md): label audit/cleanup, spec classification, and native relationships.
 - [Release setup](references/releases.md): versioning detection, changelog creation/maintenance, and release authority.
 - [Validation](references/validation.md): offline commands, scenario matrix, and limits.

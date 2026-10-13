@@ -28,8 +28,14 @@ class PackageTests(unittest.TestCase):
                 self.assertTrue(resolved.resolve().is_relative_to(root.resolve()),
                                 f'{path}: undeclared sibling file dependency {target}')
 
-    def test_setup_package_is_self_contained_for_local_work(self):
+    def test_setup_package_has_only_package_local_file_links(self):
         self.check_package(ROOT, 'setup-project', command_only=True)
+
+    def test_domain_companion_packaging_when_present(self):
+        companion = ROOT.parent / 'domain-modeling'
+        if not companion.exists():
+            self.skipTest('Standalone setup copy; domain companion packaging not checked')
+        self.check_package(companion, 'domain-modeling', command_only=False)
 
     def test_github_companion_packaging_when_present(self):
         companion = ROOT.parent / 'github-repo-setup'

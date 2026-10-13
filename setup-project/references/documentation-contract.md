@@ -1,6 +1,6 @@
 # Project documentation contract
 
-This is the single authoring contract for setup's output. Other setup references own procedures, not competing document schemas. Adapt to meaningful existing documents; these paths are defaults, not a migration requirement.
+This is the single authoring contract for setup's output. Other setup references own procedures, not competing document schemas. The `domain-modeling` companion owns domain/ADR procedures and receives the document mapping defined here through the domain handoff. Adapt to meaningful existing documents; these paths are defaults, not a migration requirement.
 
 ## Homes and content
 
@@ -48,7 +48,7 @@ Generate pointers to the project's actual files with explicit conditions. For ex
 Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Before classifying release impact or updating the changelog, read the workflow's release policy and linked sources. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
 ```
 
-Only link files that exist after setup. Include actual domain/tracker links when applicable. Do not copy this package reference path into the target as a runtime dependency; the generated project docs must stand on their own.
+Only link files that exist after setup. Include actual domain/tracker links when applicable. When domain records are present, add a conditional instruction to discover and read `domain-modeling` for changes to meanings, relationships, or decision records, following its handoff contract and the project's approval boundaries. Reading existing definitions alone needs no specialist invocation. If the companion is unavailable or incompatible, report affected modeling work blocked rather than treating another same-named package as equivalent. Do not copy this package reference path into the target as a runtime dependency; the generated project docs must stand on their own.
 
 ## Documentation ownership and freshness
 
@@ -56,10 +56,10 @@ Put this maintenance contract in the target's workflow document; the entry point
 
 | Change | Owner and required action |
 | --- | --- |
-| Domain term/relationship | Discovering phase, through domain modeling: update the glossary once confirmed. |
+| Domain term/relationship | Discovering phase, through `domain-modeling`: update the glossary/context map once confirmed and authorized. |
 | Operating constraint or authority | Lead/setup: reconcile the project or workflow document with appropriate approval. |
 | Delivery/check procedure | Implementation: update authoritative workflow guidance and verify safe commands. |
-| Qualifying architectural decision | Analysis/implementation: create or supersede an ADR; preserve the old rationale. |
+| Qualifying architectural decision | Analysis/implementation, through `domain-modeling`: create or supersede an ADR under the project's authority. |
 | Product scope/behavior | Delivery lead: update the spec with the product decision-maker's approval. |
 | Spec creation and ticket classification | Spec/ticket owner: apply and verify the mapped spec/type labels; classify release impact under the agreed policy, not by guesswork. |
 | Ticket dependencies/status | Ticketing/dispatch: update native relationships and actual evidence/status together. |
