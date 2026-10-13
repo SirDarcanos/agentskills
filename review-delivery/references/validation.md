@@ -30,9 +30,9 @@ These assertions demonstrate scope coverage, defect observability and helper dri
 3. Modify the untracked file after review. Repeat discovery/fingerprints and require stale evidence, not approval for the new state. Repin before renewed review.
 4. In a no-delegation/unavailable-runtime variant, require an explicit independent-review acceptance blocker. Lead inspection is not relabeled independent. Do not launch a worker to demonstrate lack of permission.
 
-This protocol is an **authored scenario, unexecuted** until authorized execution is recorded. Non-Git manifests, submodule/manual capture, worker timeout and resumed retained evidence also require honest branch-specific trial evidence, not extrapolation from helper tests.
+The protocol remains **partly unexecuted**. A separately authorized [trial attempt](trial-attempt.md) performed fixture setup and submitted both reviewer contexts, but both failed before startup; successful finding detection and post-report drift behavior remain blocked/not run. That record distinguishes the actual unavailable-capability gate from authored expectations. Non-Git manifests, submodule/manual capture, worker timeout and resumed retained evidence also require honest branch-specific trial evidence, not extrapolation from helper tests.
 
-## #24 execution record
+## #24 initial implementation execution record
 
 Executed locally with Python 3.14.7 and Git 2.54.0 (Apple Git-157), from baseline `c3d4dcb698b2ae4ebd4d0affd1dbaea7da89b5cc` on `feat/review-delivery`, with the new package still uncommitted:
 
@@ -44,7 +44,7 @@ Executed locally with Python 3.14.7 and Git 2.54.0 (Apple Git-157), from baselin
 | `git diff --check` | Exit 0 for tracked edits; full staged diff is checked again before commit. |
 | Direct author inspection | Procedure, scope/report tables and code blocks inspected against #24 and the accepted contract; this is self-review, not independent review. No Markdown renderer was available, so HTML rendering was not executed. |
 
-Independent Standards/Spec reviewer execution is **not run**: this session's implementation authority does not grant delegation. Consequently actual reviewer finding detection and runtime blocker/stale-report behavior remain an acceptance evidence gap; the fixture/helper checks do not replace them. No installation, global legacy command replacement, optional assessment, model vote, repair loop or integrated workflow trial is included.
+At initial implementation, independent Standards/Spec reviewer execution was **not run** because delegation permission had not been granted. After PR #39 merged, the maintainer separately authorized the [trial attempt](trial-attempt.md): permission is now granted but startup capability failed. Actual reviewer finding detection and stale-report behavior remain an acceptance evidence gap; the fixture/helper checks do not replace them. No installation, global legacy command replacement, optional assessment, model vote, repair loop or integrated workflow trial is included.
 
 ## Documentation impact
 
