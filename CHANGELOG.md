@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Review Delivery with independent Standards/Spec review, dirty-work scope fingerprints and stale-evidence handling. ([#24](https://github.com/SirDarcanos/agentskills/issues/24))
 - Add Work On's one-owner direct building with safe Git preflight, risk-based development checks and a truthful local correctness handoff. ([#23](https://github.com/SirDarcanos/agentskills/issues/23))
 - Add Work On's cohesive ticketing, approved native graph reconciliation and work-ticket role read-back through the maintained tracker procedure. ([#22](https://github.com/SirDarcanos/agentskills/issues/22))
 - Add Work On's codebase-informed technical plans, proportionate design/verification choices and bounded domain handoffs. ([#21](https://github.com/SirDarcanos/agentskills/issues/21))
