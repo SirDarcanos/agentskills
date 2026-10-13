@@ -17,6 +17,7 @@ For a new tracker, propose these workflow roles plus applicable type/priority/co
 | Role | Meaning |
 | --- | --- |
 | `spec` | A product specification issue, distinct from implementation tickets, discussion, and ordinary requests. |
+| `implementation-step` | A bounded work ticket under a spec; includes design, implementation and validation work. |
 | `needs-triage` | Scope, routing, or relevance still needs examination. |
 | `needs-info` | A consequential answer or evidence is missing. |
 | `ready-for-agent` | Actionable criteria, decisions, and known dependencies; start only when native blockers and completion evidence permit. |
@@ -36,6 +37,16 @@ Read [changelog/versioning setup](releases.md) before choosing release-impact ro
 The project's versioning policy owns pre-1.0, prerelease, and package-specific exceptions. Document whether these labels apply to implementation issues, PRs, or release issues and how automation consumes them. Classify actual delivered impact rather than inferring it solely from `bug` or `enhancement`. For one release unit use one resolved impact label per classified item; if several apply, resolve the highest required bump under project policy before release. Independently versioned packages may need scoped mappings. A spec need not predict a bump before its implementation is understood. Non-release work may need none. Labels are classification, not permission to publish.
 
 For non-SemVer or unresolved versioning, retain the existing scheme and explicitly agree on release/impact vocabulary; do not falsely assign SemVer behavior to calendar versions.
+
+### Spec/work-ticket roles, titles and readiness
+
+When the target uses spec decomposition, map distinct roles for the specification and its bounded work tickets. Propose `implementation-step` for the latter on new GitHub setups; reuse an explicitly approved equivalent on existing trackers. This is a generic work-ticket role, not a per-initiative area label. It includes design and validation work as well as coding. Keep spec and work-ticket roles mutually exclusive, while preserving other compatible type classifications. A small standalone request need not acquire a speculative parent/child hierarchy.
+
+Require spec creation and ticketing to apply and read back the respective mapped role. Determine the role from the issue's purpose and native relationships; do not copy the parent's spec/readiness/release labels or assume every sub-issue is an implementation step. Native parentage identifies which specification owns a step; native blockers establish execution dependencies, not a mandatory linear sequence. Delivery PRs do not become implementation-step issues merely because they implement one.
+
+Establish the target's approved title conventions and identify workflow roles through actual metadata rather than guessing from title text. Include exact label metadata, assignments, affected automation and any historical title migration in the approval plan. Preserve unrelated labels and historical titles; do not impose prefix-free titles where the project's approved convention requires prefixes.
+
+Evaluate spec readiness independently of publication. A spec may receive the mapped agent-ready label when its approved behavior and shared design decisions are actionable. On a parent spec this enables coordination of eligible children, not duplicate parent implementation. Actionable child tickets may be labeled ready while native blockers still prevent execution. Require readiness reassessment after accepted decisions and merges, using actual completion evidence and the target's mutation authority; do not invent an automated label service or infer authority from issue closure. Apply and read back approved assignment changes, preserving unrelated labels.
 
 ### Apply the approved audit
 

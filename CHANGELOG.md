@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Clarify Setup Project's distinct spec/implementation-step roles, project-specific issue titles, and independently assessed readiness. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
 - Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
 
 ## [1.6.0] - 2026-10-03

@@ -149,6 +149,12 @@ Reviewers receive the actual diff/files and relevant context, not merely hashes 
 
 The phase changing a fact owns updating its existing authoritative document. Setup's [documentation contract](../../setup-project/references/documentation-contract.md) describes the input model; runtime uses the target project's actual ownership policy rather than imposing this repository's layout. Product changes need appropriate spec approval; domain changes use the companion; implementation/review maintain the actual changelog or fragments and versioning/label policy. A justified no-change decision is valid. Publishing or classifying release impact does not authorize release.
 
+### Tracker classification across phases
+
+Consume the target project's approved title and label mappings. Distinguish specification and bounded work-ticket roles, assess readiness independently, and retain native parentage/blockers as the work graph. This repository uses mutually exclusive `spec` and generic `implementation-step` roles under its [label guidance](../agents/triage-labels.md). Other projects retain their explicitly mapped equivalents and title conventions; a small request need not acquire a hierarchy.
+
+Specification (#20) applies and reads back the mapped spec role and evaluates readiness separately from publication. Ticketing (#22) applies the mapped implementation-step role to bounded work under a spec, including design and validation; it does not copy the parent's spec/readiness/release labels or classify subordinate specs and delivery PRs as steps. Completion (#26) reassesses affected readiness after accepted decisions and merges within current mutation authority, with read-back. Dispatch (#27) treats a ready spec as a coordination entry point, schedules only eligible work tickets, and uses native blockers plus evidence rather than title parsing. Review checks project-policy compliance without becoming the label administrator. Integrated validation (#31) checks these distinctions, equivalent mappings and preservation of unrelated labels/relationships.
+
 ## Downstream application
 
 The destination table allocates all #19–#31 work without changing native blockers. In particular, #19 establishes the common envelope before its consumers; #24 can proceed independently after #18 because it owns the review scope/return contract; #26 connects verification and review; #27 uses those gates for dispatch. #21 can consume an existing brief independently of the new discovery route in #20.

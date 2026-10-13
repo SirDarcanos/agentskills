@@ -40,7 +40,7 @@ Show:
 - GitHub creation/configuration, full label-audit dispositions (including approved edits/removals), spec labeling, branch rules, bypasses, pushes, and opt-ins when requested;
 - deferred/blocked operations and which independent local work can proceed.
 
-For domain work, use the [domain handoff](references/domain-records.md) to obtain the companion's **plan-only** result and incorporate its deltas and blockers. For GitHub, obtain the companion's inspected plan **without executing it**, then incorporate it into this plan. Use [tracker integration](references/issue-tracker.md) for labels and relationship conventions. Existing relationships are changed only when explicitly included; setup does not create a backlog by default.
+For domain work, use the [domain handoff](references/domain-records.md) to obtain the companion's **plan-only** result and incorporate its deltas and blockers. For GitHub, obtain the companion's inspected plan **without executing it**, then incorporate it into this plan. Use [tracker integration](references/issue-tracker.md) for spec/work-ticket label roles, title/readiness conventions, and native relationships. Existing relationships are changed only when explicitly included; setup does not create a backlog by default.
 
 Ask for approval before any setup mutation. Approval covers these actions, not new settings, deployment, billing, disclosure, credential changes, commits, or global installations. A plan with mandatory blocked operations cannot be called complete; the user may separately approve useful local progress.
 

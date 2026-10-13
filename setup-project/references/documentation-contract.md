@@ -10,7 +10,7 @@ This is the single authoring contract for setup's output. Other setup references
 | `docs/agents/project.md` | Purpose/stage, users and evidenced scale, maintenance/operating ownership, resources/constraints, credible risks, collaboration preference. |
 | `docs/agents/workflow.md` | Decision authority, delivery/review/verification expectations, versioning/changelog policy and sources, permitted actions, documentation upkeep. |
 | `docs/agents/issue-tracker.md` | Actual tracker location/access, capabilities, native parent/dependency operations, limitations, completion semantics. |
-| `docs/agents/triage-labels.md` | Workflow/type roles (including specs) and applicable release-impact roles mapped to actual labels/statuses; audit decisions and application rules. Omit if no label/status system is used. |
+| `docs/agents/triage-labels.md` | Spec/work-ticket roles, other applicable type/readiness/release roles mapped to actual labels/statuses; approved title conventions, role-assignment/readiness rules, and audit decisions. The tracker reference owns the authoring procedure. Omit if no label/status system is used. |
 | Existing changelog path, otherwise approved `CHANGELOG.md` or package equivalent | Evidence-backed notable change history in the project's convention; use source fragments/configuration instead for generated changelogs. |
 | `CONTEXT.md` or existing context map | Confirmed domain terms and relationships, not the operating profile. |
 | `docs/adr/` | Selective enduring decisions and rationale; created only when needed. |
@@ -61,7 +61,7 @@ Put this maintenance contract in the target's workflow document; the entry point
 | Delivery/check procedure | Implementation: update authoritative workflow guidance and verify safe commands. |
 | Qualifying architectural decision | Analysis/implementation, through `domain-modeling`: create or supersede an ADR under the project's authority. |
 | Product scope/behavior | Delivery lead: update the spec with the product decision-maker's approval. |
-| Spec creation and ticket classification | Spec/ticket owner: apply and verify the mapped spec/type labels; classify release impact under the agreed policy, not by guesswork. |
+| Spec creation and ticket classification | Spec/ticket owner: follow approved title and distinct spec/work-ticket role mappings, evaluate readiness independently, and read back assignments; classify release impact under the agreed policy, not by guesswork. |
 | Ticket dependencies/status | Ticketing/dispatch: update native relationships and actual evidence/status together. |
 | Notable user-facing change | Implementation: update the agreed changelog or change fragment when required; review checks the entry and impact classification. |
 | Release convention or label automation changes | Lead/release owner: reconcile policy, mappings, automation, and affected assignments through an approved plan; setup does not authorize publishing. |
