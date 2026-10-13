@@ -1,6 +1,6 @@
 # Entry validation
 
-Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
+Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). For codebase-informed planning, readiness or domain handoffs, read [technical-readiness validation](technical-readiness-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
 
 ## Reproducible static checks
 
@@ -15,7 +15,7 @@ These are synthetic starting facts and expected outcomes, **not executed agent r
 
 | Case | Starting facts | Expected entry outcome / failure caught |
 | --- | --- | --- |
-| Raw clear request | Small approved typo fix in a non-Git directory, no unresolved consequential behavior; relevant instructions give scope/checks | Lightweight brief with acceptance ID; raw-request route to technical readiness, Git preflight inapplicable. No setup or ticket hierarchy. Absent local readiness procedure is reported unavailable. |
+| Raw clear request | Small approved typo fix in a non-Git directory, no unresolved consequential behavior; relevant instructions give scope/checks | Lightweight brief with acceptance ID; raw-request route to technical readiness, Git preflight inapplicable. No setup or ticket hierarchy. Read the shipped technical-readiness procedure; report a missing later build procedure unavailable. |
 | Existing agreement | Approved spec and tickets, actionable product decisions, codebase/design evidence missing; native observations agree | Existing-agreement route to technical readiness; reuse agreement and record graph/revision, rather than restarting discovery or treating readiness labels as evidence. |
 | Resume | Partial patch, retained failed check and repair cycle 1; interrupted worker's lifecycle unknown | Resume route to recovery; protect patch/ownership, mark stale claims, retain budget. No replacement writer or renewed implementation until reconciled. |
 | Dirty-work sentinel | Git project has staged unrelated work, an unstaged edit, untracked note and symlink; requested scope is elsewhere | Record all states and protect/exclude unrelated work. Read-only entry changes none of their bytes, index state or modes/targets; ownership uncertainty blocks only conflicting writes. Preserve unrelated commits/base history too. |

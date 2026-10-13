@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Work On's codebase-informed technical plans, proportionate design/verification choices and bounded domain handoffs. ([#21](https://github.com/SirDarcanos/agentskills/issues/21))
 - Add Work On's bounded product discovery, lightweight briefs and observable specs with separate publication and readiness checks. ([#20](https://github.com/SirDarcanos/agentskills/issues/20))
 - Add Work On's explicit context-aware entry and routing for requests, existing agreements, and partial work; later delivery phases remain unavailable. ([#19](https://github.com/SirDarcanos/agentskills/issues/19))
 - Add separate command-only Ask Clef and Ask Clef Flash skills for evidence-backed local text and image judgments through Ollama.

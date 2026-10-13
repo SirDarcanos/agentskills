@@ -1,0 +1,32 @@
+# Technical-readiness validation
+
+Use when changing or validating [technical readiness](technical-readiness.md). Follow [entry validation](validation.md#reproducible-static-checks) for frontmatter, Markdown/link checks, isolated package copying and diff hygiene. This package supplies agent instructions, not an executable architecture planner. #29/#30 own integrated behavioral trials; static reasoning over these authored cases is not executed agent evidence.
+
+## Synthetic planning cases
+
+Walk each case through the actual procedure, citing the step and recording gaps. For an executed walkthrough, additionally retain the authorized synthetic target, invocation/runtime, agreement and procedure revisions, inspected source/coverage evidence, observed actions, returned brief/gates and protected-work fingerprints. Keep expected outcomes distinct from observed results. No live tracker mutation, installation, optional model assessment or extra delegation is needed for a paper check.
+
+| Case | Supplied facts | Expected behavior |
+| --- | --- | --- |
+| Reuse suitable design | Approved filtered-export brief. Existing export module already owns access checks and formatting; its public-interface tests cover authorization and empty results. Only a selected column changes. | Step 1 reads module, callers and assertions. Step 2 extends existing formatting under its current owner, names the interface and regression check, preserves access coverage and exclusions. No generic export framework or module-per-ticket layout. Step 3 records no modeling need for unchanged terms/decisions. |
+| Material unresolved decision | Approved export outcome; inspection finds uncertain read-consistency requirements across a mutable store. Existing tests do not establish a snapshot guarantee. | Steps 1–2 record the evidence gap and investigate actual store behavior. If the answer affects a product guarantee, step 4 returns a recommended consequence/choice to its approval owner; affected readiness remains blocked. No silently added snapshot guarantee or assumption disguised as accepted limitation. |
+| Unnecessary domain handoff | Small approved heading correction; glossary meaning and accepted ADR are unchanged. | Read relevant definitions/decision evidence, record why modeling is unnecessary, produce a short technical brief and proportional text/link check. No companion invocation, glossary/ADR regeneration or mandatory new tests. |
+| Required plan-only handoff | Code/spec use one term for incompatible state transitions; resolving meaning needs a glossary/model change. Reads allowed; document writes unapproved. | Step 3 discovers compatible domain-modeling and supplies exact subject, evidence, document mapping, confirmed decisions/authority and protected work in plan-only mode. No writes, including draft artifacts. Lead inspects returned proposed deltas; unresolved meaning/approval blocks dependent build, while unrelated analysis can continue. |
+| Required approved handoff | Accepted ownership decision needs a qualifying record under the companion; exact record files/sections and pointer update are approved. | Step 3 supplies approved operations/exclusions and evidence; follows the companion's record procedure. Lead reads actual documents and per-operation evidence, checks status/rationale/history and updates only authorized caller-owned pointers. A partial write stays partial and blocks dependent reliance. |
+| Required capability absent | Needed model change above, but domain-modeling is absent, ambiguous or incompatible. | Step 3 reports affected modeling/design/build blocker and concrete discovery/approval next action; unaffected inspection continues. No local duplicate procedure, helper installation or false ready-to-build claim. |
+| Complexity and fragility | Proposal adds a configurable provider registry for one current exporter; alternative bypasses access checks to keep the patch small. | Step 2 challenges the registry's unsupported requirement and maintenance cost, and rejects the unsafe shortcut using the existing access invariant. Choose the adequate existing boundary, not maximal or minimal file count. |
+| Verification unavailable | Relevant baseline cannot run because target tool is absent; sensitive access behavior needs failure-path coverage. | Steps 1–2 inspect existing coverage and retain not-run reason, material gap and proposed meaningful check. Separate actionable design from execution/acceptance limitations; no green baseline, automatic installation or passing-suite claim. |
+| Routine refinement | Inspection shows an existing formatter can meet the same accepted behavior without the planned helper. | Step 4 updates the technical brief/evidence within authority; no repeated product interview or accepted-scope rewrite. Material changed commitments instead follow approval routing. |
+| Next phase unavailable | Approved brief and actionable technical plan, but copied package lacks build/ticketing procedures. | Step 4 returns the inspected plan, separate technical/build-gate status and unavailable next responsibility. No claim of end-to-end delivery or legacy command fallback. |
+
+## #21 acceptance coverage and documentation
+
+| Acceptance concern | Runtime home / static case |
+| --- | --- |
+| Inspect before structure | Step 1; reuse and unresolved-decision cases |
+| Bounded brief and verification | Step 2; reuse and unavailable-verification cases |
+| Proportionate complexity, both failure directions | Step 2; complexity/fragility case |
+| Required/unnecessary domain branches and missing capability | Step 3; unnecessary, plan-only, approved and capability-absent cases |
+| Approval, actionable readiness and refinements | Step 4; unresolved-decision, routine-refinement and next-phase cases |
+
+Documentation impact: entry reaches technical readiness; package overview, repository index, changelog and accepted design identify the newly shipped responsibility. Shared contracts, domain meanings, accepted package boundary/ADR, target policies, native graphs and installed/legacy skills are unchanged. No new meaning or qualifying architectural decision is introduced by implementing the accepted package-local procedure, so no domain-modeling run or new ADR is needed for this ticket. Report actual commands/revisions and static inspection in the PR, with absent independent review and unexecuted behavioral trials explicit.
