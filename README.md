@@ -26,14 +26,6 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
 | [`work-on`](work-on/) | Explicitly start or resume delivery with context-aware routing, product agreement, technical planning, native ticket graphs, direct building, integrated verification, bounded repair/completion, multi-ticket dispatch/integration and safe interruption/failure recovery. |
 
-### Dungeons & Dragons skills
-
-| Skill | When to use it |
-| --- | --- |
-| [`dnd-create-monster`](dnd-create-monster/) | Design, rebalance, or convert D&D 2024 monsters, returning Markdown by default with optional tool-specific formats. |
-| [`dnd-format-prose`](dnd-format-prose/) | Transform prose into table-ready D&D narration, boxed text, bestiary lore, or adventure lore. |
-| [`dnd-speak-with-dead`](dnd-speak-with-dead/) | Rewrite supplied text as an answer from a corpse affected by the Speak with Dead spell. |
-
 ## Repository layout
 
 Each skill lives in its own directory and uses `SKILL.md` as its entry point:
