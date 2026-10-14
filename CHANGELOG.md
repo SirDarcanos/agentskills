@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Work On Spec for bounded ticket-agent scheduling, native dependency eligibility, serial integration and aggregate verification/review/recovery under Work On's shared execution ledger. ([#68](https://github.com/SirDarcanos/agentskills/issues/68))
 - Add standalone PR for plain-language decision reports, test and measured CI impact, and authorized opening/updating, with Work On using its discovered companion. ([#66](https://github.com/SirDarcanos/agentskills/issues/66))
 - Add standalone Investigate Bug for bounded diagnosis and actionable tickets, with duplicate reconciliation and explicit investigation-only outcomes rather than automatic fixes. ([#64](https://github.com/SirDarcanos/agentskills/issues/64))
 - Add standalone Write Tickets for cohesive decomposition and ready bug publication with approved native dependencies, with Work On using its discovered companion. ([#63](https://github.com/SirDarcanos/agentskills/issues/63))

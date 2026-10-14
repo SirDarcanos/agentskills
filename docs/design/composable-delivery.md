@@ -32,6 +32,10 @@ All rows consume the minimal envelope below. Ordinary user requests supply the s
 | `pr`: report or authorized PR action | Actual delivered evidence, counting baseline, target branch and PR policy | Plain-language decision report and, if authorized, opened/updated PR with read-back; no merge/close/deploy/release | Git/host access for publication; missing evidence stays unknown and material acceptance gaps stay blocked |
 | Each maintained `ask-*`: explicit assessment or policy-authorized handoff | Bounded question/criteria, neutral current evidence, named model authority and budget reservation | Validated advisory decision or no-call/unavailable/insufficient-data outcome; no engineering or policy mutation | Named transport/model and disclosure permission; absent/denied/exhausted authority yields zero automatic calls |
 
+### Shipped coordinator ownership
+
+[#68](https://github.com/SirDarcanos/agentskills/issues/68) implements [Work On Spec](../../work-on-spec/SKILL.md): dispatch/overall recovery move there, Work On retains only dispatch compatibility pointers and local recovery, and common execution/verification/completion remain resolved Work On libraries. [Package validation](../../work-on-spec/references/validation.md) and [repository evidence](../validation/work-on-spec/README.md) distinguish offline fixtures from later #72 runtime trials. Original #14 execution records remain historical evidence; source publication performs no installed migration.
+
 ### Current procedure destination map
 
 This is the extraction map, not permission to remove files now. Validation references follow the procedure they protect; prior repository execution records remain at their historical paths.
