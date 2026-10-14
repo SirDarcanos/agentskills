@@ -2,6 +2,8 @@
 
 **Status:** Proposed for maintainer acceptance with [#18](https://github.com/SirDarcanos/agentskills/issues/18). This record authorizes no implementation or installation. The approved product agreement remains [#14](https://github.com/SirDarcanos/agentskills/issues/14).
 
+**Decision history:** The design was accepted through [PR #32](https://github.com/SirDarcanos/agentskills/pull/32), as recorded in the linked design contract. [ADR 0002](0002-composable-delivery-ownership.md) is the proposed successor under #48/#50; its detailed replacement remains pending acceptance. Preserve this record's original rationale and pre-merge status wording as history. On acceptance of ADR 0002, mark this record superseded with that decision evidence; a proposal alone is not supersession.
+
 ## Context and decision
 
 Delivery needs one lead accountable for phase selection, integration, repair and evidence, while independent review also has a useful standalone invocation. The installed commands split those responsibilities across incompatible invocation, branch, testing and review-scope assumptions; wrapping them would make those assumptions part of the new workflow. The [inventory](../design/delivery-workflow-inventory.md) records that evidence.
