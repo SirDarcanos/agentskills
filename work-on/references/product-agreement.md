@@ -10,32 +10,15 @@ Choose a lightweight brief for a small clear request whose relevant behavior, co
 
 **Complete when:** the current agreement, missing decisions, product home, approval owner and brief/spec route are identified. An existing approved agreement with no relevant gaps can proceed directly to fidelity/readiness assessment.
 
-## 2. Discover relevant product branches in manageable rounds
+## 2. Consume discovery from Shape Work
 
-Investigate facts available in authorized repository evidence, existing behavior, tests and documents directly. Ask the user about intent and consequential trade-offs, not discoverable implementation facts. Own routine engineering choices within authority; technical structure and test seams belong to technical readiness rather than a product questionnaire.
+If step 1 finds unresolved product intent, discover compatible `shape-work` through the runtime/project catalog or an explicit approved location using [capability checks](contracts.md#capability-checks). Read its complete entry and relevant references and record resolved source/revision or digest. Shape Work is the sole owner of discovery rounds, fact-finding routes and concern dispositions; this adapter carries no duplicate discovery procedure. Missing/incompatible/ambiguous capability blocks the dependent discovery, not reuse of an already actionable agreement. Do not substitute an installed grilling command or install a helper implicitly.
 
-For unresolved intent, explore the branches that matter to this request:
+Supply the shared envelope: target, outcome and agreement/acceptance references, current findings/deciding identities, confirmed decisions, unresolved intent, product home/approval owner, protected work, exact authority, finite bound and expected discovery brief. Execute in the lead's context unless separate delegation authority exists. Inspect returned facts and their cited support, observable goal/behavior/success, approval versus draft status, preserved concern dispositions, source freshness, actual document outcomes and specific blockers. A companion's completion label alone is not agreement evidence.
 
-- Users and affected parties: who acts, who benefits, and who may bear costs or harm.
-- Workflows: entry conditions, normal actions, observable results and affected existing behavior.
-- Exceptions and failure/recovery: invalid or partial input, interruption, retry, cancellation and lost or inconsistent state where relevant.
-- Abuse and constraints: misuse, access or disclosure boundaries, irreversible effects, and applicable product/operating constraints.
-- Consequences: compatibility, maintenance burden, cost and commitments the project would need to sustain.
+Reuse a current complete discovery brief without invoking Shape Work again. Changed deciding inputs reopen only dependent questions. With an actionable confirmed brief, the active authorized Work On run continues to step 3; standalone Shape Work ends at its return. An unresolved consequential decision or required unreconciled product record blocks reliance on the affected agreement; retain useful draft findings and the owner's next action. The lead retains delivery authority and routine engineering choice.
 
-Ask a short round of related questions focused on the highest-consequence uncertainty. Explain practical consequences and recommend an answer where evidence supports it. Let answers determine the next round; relevance, not an exhaustive user-story quota, sets breadth. Use the target's collaboration style for escalation, without weakening its approval boundaries.
-
-Maintain a compact concern record with evidence/rationale, owner or revisit condition where needed, and one of four dispositions:
-
-| Disposition | Record |
-| --- | --- |
-| Required now | Behavior/acceptance needed for this delivery |
-| Worth considering later | Deferred concern, why it can wait, and when to reconsider |
-| Explicitly unnecessary | Excluded behavior and the reason it does not serve this scope |
-| Accepted limitation | Consequence the approval owner has explicitly agreed to tolerate |
-
-Keep **confirmed decisions**, **proposals** and **assumptions** distinct from those dispositions. A proposed limitation is not accepted; an unconfirmed assumption affecting material acceptance remains unresolved. Obtain approval for consequential commitments and deferrals whose consequences affect the next phase. Preserve deferred concerns in the agreement/handoff rather than losing them when questions stop.
-
-**Complete when:** each relevant product branch is addressed or explicitly deferred/excluded with rationale, and no consequential product decision blocks the next phase. Stop then; do not repeat settled discovery or expand scope to cover hypothetical branches. If a decision remains blocked, return its owner, evidence, recommendation and the safe work that can continue.
+**Complete when:** current discovery is inspected and usable, or dependent discovery has an explicit blocker with preserved findings. Spec writing and publication remain this procedure's responsibilities until their separate extraction.
 
 ## 3. Express and confirm observable agreement
 

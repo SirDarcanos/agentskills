@@ -2,17 +2,11 @@
 
 Use when changing or validating [product agreement](product-agreement.md). Follow [entry validation](validation.md#reproducible-static-checks) for portability, links, frontmatter and diff hygiene. This package is agent instructions, not an executable spec generator. Static reasoning over the synthetic observations below is not an executed agent/tracker trial. #29/#30 own integrated trials; no production issue creation is a fixture.
 
-## Synthetic discovery cases
+## Discovery adapter checks (#61)
 
-Walk each case through the actual procedure, citing the step and recording any missing instruction. For an executed agent walkthrough, additionally retain the authorized fixture, invocation/runtime, source revisions, observed actions/rounds, agreement return, and protected-work fingerprints. Record unrun checks explicitly.
+Discovery scenarios now belong to the resolved Shape Work package's validation reference; load it through companion discovery, not an assumed relative path. Preserve #20's historical repository execution evidence at its existing location.
 
-| Case | Supplied facts | Expected behavior |
-| --- | --- | --- |
-| Ambiguous request | “Let users export records.” Existing policy restricts disclosure; format and authorization are unresolved. Available code/tests describe current access behavior. | Step 2 investigates access facts directly; first round asks who exports which records and the intended observable result, with a recommendation and disclosure consequences. Later rounds cover relevant failure/retry, abuse and constraints. No technical seam questionnaire or exhaustive-story quota. |
-| Dispositions and stop | Approval owner confirms current filtered export; resumable export is deferred until volume grows; scheduled emailing is unnecessary; owner accepts no resume after interruption. | Steps 2–3 retain all four dispositions with rationale/revisit condition, assign acceptance IDs to current behavior and recovery, and mark the interruption limitation accepted with its source. Stop once relevant branches are accounted for and no consequential product decision blocks the next phase. |
-| Small clear request | Approved correction of “Recrods” to “Records” in one help heading; scope and expected text are known, with no consequential choice. | Step 1 selects a brief with observable acceptance and exclusions. No new issue or hierarchy; step 5 returns technical-readiness handoff, reporting its absence if unavailable. |
-| Existing agreement | Approved spec already covers relevant workflows; only one approved export field has changed. | Reuse settled decisions; update that commitment/acceptance in the existing product home within authority, preserve previous rationale/history, and link it from summaries. No repeat discovery or duplicate policy home. |
-| Unapproved assumption | Agent assumes export links can be public; owner has not approved disclosure. | Keep it an assumption/proposal, not an accepted limitation or confirmed decision. Block the affected commitment; investigate safe facts and recommend an owner decision. |
+Inspect the actual adapter: unresolved intent sends the shared envelope to compatible Shape Work, and the lead checks its sources, approval, four concern dispositions and gaps before step 3. Current actionable agreement bypasses a fresh run. Missing/incompatible/ambiguous Shape Work blocks needed discovery only; a clear approved heading correction can still use step 1's brief route. An unapproved disclosure assumption stays unresolved. Standalone Shape Work does not continue to spec publication, while an active authorized Work On run retains steps 3–5. Test non-sibling resolution and source changes without installing or substituting legacy grilling. These adapter checks are authored expectations until actual execution is separately recorded.
 
 ## Synthetic tracker observations
 
@@ -33,13 +27,13 @@ These are authored fixture inputs and expected interpretations, not results from
 
 | Acceptance concern | Runtime home / check |
 | --- | --- |
-| Relevant discovery and direct fact-finding | Steps 1–2; ambiguous-request case |
-| Four dispositions and decision status | Step 2; dispositions and unapproved-assumption cases |
+| Relevant discovery and direct fact-finding | Step 2 → discovered Shape Work; adapter checks |
+| Four dispositions and decision status | Shape Work owns the record; steps 2–3 inspect/preserve its return |
 | Observable agreement and consequential approval | Step 3; acceptance IDs and approval-source inspection |
-| Reuse and stop condition | Steps 1–2; dispositions/existing-agreement cases |
-| Brief versus spec publication | Steps 1, 3–4; small clear request and draft cases |
-| Authoritative document and history | Step 3; existing-agreement case |
+| Reuse and stop condition | Steps 1–2; current agreement bypass and standalone stop |
+| Brief versus spec publication | Steps 1, 3–4; clear correction and draft cases |
+| Authoritative document and history | Step 3; approved delta/history inspection |
 | Title policy, mutually exclusive mapped roles | Step 4; plain title/equivalent mappings/conflict cases |
 | Independent spec readiness and coordination | Steps 4–5; draft/design-unresolved/actionable cases |
 
-Documentation updates: entry now reaches and executes available product agreement within authority; package overview, repository index and changelog describe the additive phase; design points to the runtime home. Shared contracts, target operating policies, domain meanings/ADR boundary, native graphs and legacy/installed skills are unchanged. No policy vocabulary cleanup or new technical/build procedure belongs in #20. Report actual revision/check evidence in the PR, including absent independent review and unexecuted behavioral trials.
+Historical #20 documentation disposition (not a claim about later extractions): entry now reaches and executes available product agreement within authority; package overview, repository index and changelog describe the additive phase; design points to the runtime home. Shared contracts, target operating policies, domain meanings/ADR boundary, native graphs and legacy/installed skills are unchanged. No policy vocabulary cleanup or new technical/build procedure belongs in #20. Report actual revision/check evidence in the PR, including absent independent review and unexecuted behavioral trials.
