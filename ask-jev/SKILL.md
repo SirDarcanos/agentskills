@@ -1,14 +1,15 @@
 ---
 name: ask-jev
-description: Ask hosted Jev an evidence-backed question and interpret its decision.
-disable-model-invocation: true
+description: Assess a bounded evidence-backed question with hosted Jev when explicitly requested or authorized by approved project model-use policy. Use for classification, routing, evidence support, or rubric judgments; not general research or deterministic calculations.
 ---
 
 # Ask Jev
 
-Run only on explicit user invocation: `/ask-jev <question>` or `/skill:ask-jev <question>` in Pi. A runtime-expanded `<skill name="ask-jev" ...>` block followed by the user's question also counts. Follow-up answers continue the invoked assessment; ordinary related conversation does not start one. If the question is absent, ask for it.
+Use on an explicit Jev request, including `/ask-jev <question>` or Pi's `/skill:ask-jev <question>`, or a bounded policy-authorized assessment handoff. A Pi-expanded skill block counts as explicit invocation only when it originates from the user's command; generated command text is not consent. Follow-ups retain the original scope and spent allowance. Resolve a missing question before proceeding.
 
-The agent gathers evidence and explains the result; Jev judges only the state sent to TypeSafe's hosted service. It cannot independently inspect the repository, conversation, filesystem, or telemetry. Explicit invocation authorizes a normal billable assessment at `https://api.typesafe.ai/v1/systemone` using minimal task-relevant evidence, within the API procedure's call budget. Configuring credentials alone does not authorize calls. Installations, expanded disclosure, and consequential actions remain outside that authorization.
+Before credential access or authenticated operations, read [authorization and shared hosted limits](references/authorization.md). Loading the skill, related conversation and configured credentials grant no permission. A denied autonomous route returns **no-call**; ordinary engineering continues where sufficient, or reports a material evidence gap. Authorized use needs no repeated confirmation inside valid bounds.
+
+The agent gathers evidence and explains the result; Jev judges only the state sent to TypeSafe's hosted service. It cannot independently inspect the repository, conversation, filesystem, or telemetry. Explicit invocation covers the named normal billable assessment under package bounds and applicable project restrictions, not installations, expanded sensitive disclosure or consequential actions.
 
 ## Workflow
 
@@ -53,15 +54,17 @@ Keep the agent's preliminary verdict and desired outcome out of the state and cr
 
 Prepare a minimal sanitized payload. Exclude credentials, personal data, unrelated files, unnecessary private paths, and identifying metadata. Respect project restrictions even if the user approves disclosure. If redaction would remove deciding facts, explain the limitation and seek a narrower task rather than silently changing the evidence.
 
-For an ordinary explicitly invoked assessment, proceed without another confirmation, billing reminder, or payload preview. Use the user's chosen supported Jev model, otherwise `jev-latest`. The invocation covers the initial request, bounded transient retries, and at most one evidence-corrected request within the same task and disclosure scope.
+Match the actual payload to the authorization reference's disclosure gate. Autonomous use requires exact approved private/sensitive evidence classes; explicit private-repository assessment covers only necessary sanitized excerpts within the requested scope and project restrictions. If deciding evidence cannot be disclosed, narrow the task or return the gap without sending.
 
-Ask only when the request does not clearly authorize disclosure of the necessary sensitive/private evidence, when a different recipient is proposed, or when unusually large batches, additional experiments, or calls beyond the normal budget are needed. Explain the exceptional data/call scope and wait for approval. Evidence from a private repository is not automatically out of scope when the user explicitly requests assessment of that repository; send only necessary excerpts and honor its restrictions. New evidence within the same authorized task needs no repeated confirmation, but expanded sensitive disclosure does. Show the exact payload when requested.
+Proceed without another confirmation, billing reminder, or payload preview inside valid authority. Autonomous use selects only the policy's exact supported model ID/alias; explicit use selects the user's supported Jev model, otherwise `jev-latest`, subject to any project pin. A moving alias requires compatible permission. Reserve shared calls and worst-case spending through the authorization reference; the initial request, transient retries and one correction share that allowance.
+
+For explicit use, explain exceptional scope and wait only when necessary sensitive/private disclosure is not clearly authorized or a larger batch, extra experiment or additional assessment is proposed. For autonomous use, return denied/ambiguous/exhausted permission to the lead rather than prompting to opt in. A different recipient requires a separately invoked package under exact approval; Ask Jev keeps its named transport. New evidence within the same authorized task and disclosure classes needs no repeated confirmation; expanded sensitive disclosure requires renewed authority. Show the exact payload when requested.
 
 Read [the hosted API procedure](references/hosted-api.md) before checking credentials or sending. Use only an existing authorized credential source; ask before installing SDKs or changing credentials. Do not claim zero retention based on “not used for training”; consult current service policy if retention affects the user's decision.
 
-If exceptional disclosure approval is declined, no affected call occurs. Offer an agent assessment or explicitly invoked local `/ask-nimble`; wait for the user's choice rather than switching models automatically.
+If disclosure approval is declined, no affected call occurs. For explicit use, offer an agent assessment or separately invoked local `/ask-nimble` and wait for the user's choice. For autonomous use, return no-call to the lead. Neither route switches models automatically.
 
-**Complete when:** the payload and calls fit the invocation's scope, or exceptional approval is obtained, declined, or pending.
+**Complete when:** payload and reserved calls/spending fit exact policy or explicit authority, or the affected route is no-call, declined or pending approval.
 
 ### 5. Send and validate
 
@@ -69,13 +72,13 @@ Construct self-contained questions with instructions and criteria separate from 
 
 Follow the hosted API procedure for current contracts, authenticated transport, limits, bounded retries, temporary-file cleanup, and response validation. Retain the actual response, returned model version, and usage for validation and interpretation; keep routine operational details out of the user-facing answer. Never substitute another service or model after a failure.
 
-For missing credentials, unavailable docs/contracts, service errors, or malformed responses, report the blocker and offer: “Jev is unavailable—would you like me to assess this directly instead?” Wait for approval. Label an accepted fallback **Agent assessment — Jev unavailable**, using the gathered evidence and agreed criterion without Jev probabilities or implied endorsement. A valid `insufficient_data` outcome is a decision, not an availability failure.
+For missing credentials, unavailable docs/contracts, service errors or malformed responses, report the blocker and apply the authorization reference's fallback gate. Autonomous use takes only a policy-permitted direct fallback; otherwise return **unavailable** without an attributed model result. Explicit use offers “Jev is unavailable—would you like me to assess this directly instead?” and waits unless already authorized. Label accepted fallback **Agent assessment — Jev unavailable**, using gathered evidence and the agreed criterion without Jev probabilities or implied endorsement. A valid `insufficient_data` outcome is a decision, not an availability failure.
 
 **Complete when:** a fully validated response is available, or the blocker and fallback choice are recorded or pending.
 
 ### 6. Interpret and close
 
-Recheck evidence versions and measurement freshness. If deciding facts changed or were misrepresented, refresh the state and make at most one corrected request, within the approved disclosure scope and shared correction budget. Otherwise report that a current judgment is unavailable. Report the correction. Never rerun to obtain a preferred answer.
+Recheck evidence versions and measurement freshness. If deciding facts changed or were misrepresented, refresh the state and make at most one corrected request, under rechecked disclosure authority and remaining shared call, correction and spending allowance. Otherwise report that a current judgment is unavailable. Report the correction. Never rerun to obtain a preferred answer.
 
 If the result is difficult to interpret or exposes a question-design defect, consult the upstream TypeSafe skill and relevant primitive/confidence documentation again. This may improve the explanation or identify a limitation; it does not permit changing the returned verdict. A changed criterion needs the user's agreement, and any corrected call still uses the same budget and consent rules. A further dependent request is outside this assessment: propose it and seek approval instead of starting a decision loop.
 
@@ -91,10 +94,11 @@ Keep results advisory: the command authorizes no code changes, deployments, purc
 
 ## Completion checks
 
-- Explicit invocation and original-question routing are recorded.
+- Explicit invocation or exact approved policy authority and original-question routing are recorded; denied routes return no-call with zero credential access or authenticated effects.
+- Shared reservations and actual/uncertain usage are reconciled without handoff/resume resets. Return complete, partial, no-call or unavailable with evidence/policy/ledger pointers and the next action; stop at advisory assessment.
 - Direct answers involved no Jev call or authenticated setup operations.
 - The governing criterion, neutral sourced evidence, comparison scope, and freshness are resolved or their gaps reported.
-- Disclosure and billable calls stayed within the explicit invocation or exceptional approval; credentials and unrelated private data stayed out of the payload and logs.
+- Disclosure and billable attempts stayed within exact policy or explicit authority and the stricter package/shared call, retry, correction and spending limits; credentials and unrelated private data stayed out of the payload and logs.
 - Every reported Jev answer passed contract validation; the actual returned model version and usage were retained for this assessment without routine user-facing reporting.
 - Corrections and transient retries stayed within the approved budgets; no silent model substitution occurred.
 - Any accepted fallback is attributed to the agent, and any declined/pending choice is preserved.
@@ -102,4 +106,4 @@ Keep results advisory: the command authorizes no code changes, deployments, purc
 
 ## Skill validation
 
-When changing this skill or testing its behavior, read [validation scenarios](references/testing.md). Static checks and workflow review run offline. An explicitly invoked model test authorizes its normal billable assessment; unrelated live test runs, credential changes, and retained records require separate explicit approval.
+When changing this skill or testing its behavior, read [validation scenarios](references/testing.md). Static checks, test-only procedure simulations and workflow review run offline. Live inference requires its own applicable authority; this repository's calls remain disabled absent separate approval. An explicit model test still respects project restrictions and safe spending reservations; unrelated live experiments, credential changes and retained records require separate explicit approval.
