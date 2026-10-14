@@ -2,7 +2,7 @@
 
 Design deliverable for [#18](https://github.com/SirDarcanos/agentskills/issues/18), implementing the design portion of [spec #14](https://github.com/SirDarcanos/agentskills/issues/14). Read before implementing #19–#31 or changing the delivery contracts. This document defines the intended implementation; it is not an installed skill or evidence that the workflow works.
 
-For the agreed #48 follow-up, read the [composable delivery design](composable-delivery.md) and its proposed successor ADR before changing ownership or companion boundaries. This #14 contract and its linked inventory/validation retain the earlier design and evidence; #50 does not rewrite them to imply extraction has shipped.
+For the agreed #48 follow-up, read the [composable delivery design](composable-delivery.md) and its accepted successor ADR before changing ownership or companion boundaries. This #14 contract and its linked inventory/validation retain the earlier design and evidence; #50 does not rewrite them to imply extraction has shipped.
 
 ## Status and authority
 
