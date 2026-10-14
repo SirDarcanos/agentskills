@@ -1,0 +1,13 @@
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+Traceback (most recent call last):
+  File "<repository>/docs/validation/write-tickets/check.py", line 38, in <module>
+    main()
+    ~~~~^^
+  File "<repository>/docs/validation/write-tickets/check.py", line 24, in main
+    checks.check_package(REPO / name, name, command_only, notice)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/delivery-coverage/check_packages.py", line 67, in check_package
+    assert (fields.get("disable-model-invocation") == "true") == command_only
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

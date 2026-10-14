@@ -1,0 +1,13 @@
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+Traceback (most recent call last):
+  File "<repository>/docs/validation/shape-work/check.py", line 48, in <module>
+    main()
+    ~~~~^^
+  File "<repository>/docs/validation/shape-work/check.py", line 29, in main
+    checks.check_package(source, name, command_only, notice)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/delivery-coverage/check_packages.py", line 67, in check_package
+    assert (fields.get("disable-model-invocation") == "true") == command_only
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

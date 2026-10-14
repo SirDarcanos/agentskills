@@ -1,0 +1,23 @@
+shape-extraction: exit 1
+spec-extraction: exit 1
+ticket-extraction: exit 1
+ticket-tests: exit 0
+setup-tests: exit 0
+helper-help: exit 0
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+write-spec: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+write-spec: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+Traceback (most recent call last):
+  File "<repository>/docs/validation/discovery-spec-tickets/check.py", line 74, in <module>
+    raise SystemExit(main(parser.parse_args().output))
+                     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/discovery-spec-tickets/check.py", line 55, in main
+    checks.check_package(REPO / "work-on", "work-on", False, notice)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/delivery-coverage/check_packages.py", line 80, in check_package
+    assert "only when the user explicitly requests" in body
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
