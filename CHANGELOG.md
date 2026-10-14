@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add independently usable Research with cited, version-aware findings, evidence reuse and optional authorized background delegation. ([#54](https://github.com/SirDarcanos/agentskills/issues/54))
 - Add Setup Project's approved model-use policy discovery and reconciliation, with shared budgets and zero setup-time model/service operations. ([#51](https://github.com/SirDarcanos/agentskills/issues/51))
 - Add Work On's interruption/failure recovery with actual-state reconciliation, preserved work and safe resume or precise blockers. ([#28](https://github.com/SirDarcanos/agentskills/issues/28))
 - Add Work On's evidence-aware multi-ticket scheduling, bounded ownership and incremental lead integration. ([#27](https://github.com/SirDarcanos/agentskills/issues/27))
