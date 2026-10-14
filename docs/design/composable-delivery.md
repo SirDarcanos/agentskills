@@ -6,9 +6,9 @@ Design for [#50](https://github.com/SirDarcanos/agentskills/issues/50), under th
 
 **Confirmed product direction:** independently usable specialists, all five methods in the first complete delivery, single-change `work-on`, multi-ticket `work-on-spec`, and optional project-authorized assessments. Confirmed public names remain unchanged.
 
-**Proposed for maintainer acceptance:** retain the initial method names `prototype`, `characterize`, `acceptance-first`, and `build-and-check`; use the contracts and staged cutover below. Acceptance must be recorded in the #50 PR and merged before downstream implementation relies on these consequential decisions. Neither publication nor closure alone proves accepted integration. No tracker, installed-copy, runtime skill, or model permission changes occur in #50.
+**Accepted design:** the maintainer explicitly accepted this design and authorized [PR #75](https://github.com/SirDarcanos/agentskills/pull/75)'s merge. Retain the method names `prototype`, `characterize`, `acceptance-first`, and `build-and-check`; use the contracts and staged cutover below. Downstream implementation requires accepted integration and its own authority. Neither publication nor closure alone proves that integration. #50 changes no native graph, installed copy, runtime skill, or model permission.
 
-[ADR 0002](../adr/0002-composable-delivery-ownership.md) proposes superseding ADR 0001. The [previous design](delivery-workflow.md), inventory, and validation remain historical evidence for #14; current shipped procedures remain authoritative until their approved replacements land. [Inventory](composable-delivery-inventory.md) records inputs and provenance; [validation](composable-delivery-validation.md) maps every #48 criterion and separates paper checks from actual checks.
+[ADR 0002](../adr/0002-composable-delivery-ownership.md) supersedes ADR 0001. The [previous design](delivery-workflow.md), inventory, and validation remain historical evidence for #14; current shipped procedures remain authoritative until their approved replacements land. [Inventory](composable-delivery-inventory.md) records inputs and provenance; [validation](composable-delivery-validation.md) maps every #48 criterion and separates paper checks from actual checks.
 
 ## Ownership and standalone boundaries
 
@@ -56,7 +56,7 @@ The two leads necessarily verify different scopes. Reusing the single-change ver
 
 ### Method contracts and composition
 
-Recommend retaining the initial names: they describe distinct methods, align with the approved ticket plan, and avoid another naming migration. These four names become settled only on #50 acceptance; `tdd` is already confirmed. Every method is independently usable, consumes a bounded ready scope, owns only its loop, and returns current local evidence plus partial/blocking conditions. None opens a PR or performs delivery acceptance by itself.
+Recommend retaining the initial names: they describe distinct methods, align with the approved ticket plan, and avoid another naming migration. These four names were settled by #50 acceptance; `tdd` was already confirmed. Every method is independently usable, consumes a bounded ready scope, owns only its loop, and returns current local evidence plus partial/blocking conditions. None opens a PR or performs delivery acceptance by itself.
 
 | Method | Owns / complete result | Block or limitation |
 | --- | --- | --- |
@@ -100,7 +100,7 @@ The delivery execution contract is also a read-only library in discovered `work-
 
 Required helpers block dependent responsibilities when absent/incompatible. Optional research/delegation/model routes may fall back to ordinary direct engineering only where genuinely equivalent and permitted. Required independent review, native persistence, domain decisions and material checks cannot be replaced by lead opinion. Planning or implemented-but-unaccepted returns remain useful. Installation/replacement is never the missing-helper fallback.
 
-Proposed invocation gates: specialists and methods route both ordinary matching user requests and bounded authorized handoffs; no command-only frontmatter gate that conflicts with composition. `setup-project` retains explicit setup approval. Narrowed `work-on` accepts explicit user delivery and a bounded authorized lead/investigation-and-fix assignment; `work-on-spec` requires a request for overall delivery. Mere discovery or an investigation-only request cannot authorize a fix. #67 must reconcile the current `disable-model-invocation` and body gate together so #68 assignments work without pretending a generated command is user consent. `ask-*` invocation has the separate contract below.
+Accepted invocation gates: specialists and methods route both ordinary matching user requests and bounded authorized handoffs; no command-only frontmatter gate that conflicts with composition. `setup-project` retains explicit setup approval. Narrowed `work-on` accepts explicit user delivery and a bounded authorized lead/investigation-and-fix assignment; `work-on-spec` requires a request for overall delivery. Mere discovery or an investigation-only request cannot authorize a fix. #67 must reconcile the current `disable-model-invocation` and body gate together so #68 assignments work without pretending a generated command is user consent. `ask-*` invocation has the separate contract below.
 
 ## One execution and repair ledger
 
@@ -169,7 +169,7 @@ Reverting design/source commits affects repository documentation/code only. It n
 
 ## Approved graph assessment
 
-The #48 25-ticket graph remains the plan; #50 proposes **no material graph delta**. #60 is behind #54; #61 behind #60; #64 behind #60/#63; #67 behind #64, so analysis/research arrive transitively before the cutover. #59 is behind #50 and is a native blocker of #67 alongside the other four method tickets: retain parallel method development, and require accepted integration of all five before #67 cutover under AC6; #73 proves the complete set. #62/#63 are behind #50 and exercised by #70. #68 is behind #67. #69 is preparation behind #50, with real migration #74 behind acceptance #73.
+The #48 25-ticket graph remains the plan; #50 establishes **no material graph delta**. #60 is behind #54; #61 behind #60; #64 behind #60/#63; #67 behind #64, so analysis/research arrive transitively before the cutover. #59 is behind #50 and is a native blocker of #67 alongside the other four method tickets: retain parallel method development, and require accepted integration of all five before #67 cutover under AC6; #73 proves the complete set. #62/#63 are behind #50 and exercised by #70. #68 is behind #67. #69 is preparation behind #50, with real migration #74 behind acceptance #73.
 
 If any required package is not integrated at cutover, #67 cannot claim readiness. Additional scheduling blockers discovered during implementation require an exact proposal and renewed graph approval rather than silent mutation. Similarly, material ownership or companion changes discovered during implementation require design/graph reconciliation. No labels/edges change in this task. Traceability and read-only graph evidence are recorded in validation.
 
