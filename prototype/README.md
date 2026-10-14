@@ -1,0 +1,25 @@
+# Prototype
+
+Answer one design, UX, state-model or feasibility question before investing in production implementation. Build a small runnable experiment, observe it within finite bounds, and return a recommendation with concrete production-readiness limitations.
+
+Use directly or through an authorized method handoff. A completed experiment can be inconclusive. The method returns learning and an explicit artifact disposition; it does not automatically promote code, start another method or claim delivery acceptance.
+
+## Installation and dependencies
+
+After approving installation:
+
+```sh
+npx skills add SirDarcanos/agentskills --skill prototype
+```
+
+Or copy/link this complete directory into your runtime's discovery path, keeping [SKILL.md](SKILL.md), supporting files and [LICENSE](LICENSE). This example is not executed installation authority. Same-name replacement requires separate approval; merging repository changes does not update installed skills.
+
+The method needs file inspection/editing and the experiment's target tools. Git writes need discovered compatible `implementation-preflight` or a current inspected caller result. Required meaning/ADR changes use `domain-modeling`. Delegation or acceptance-finding corrections consume the discovered `work-on` execution/repair library without invoking delivery. Ordinary direct experiments do not require Work On. Companions resolve through the runtime catalog or approved locations, not sibling paths; missing or incompatible helpers block only their dependent route.
+
+Artifacts are explicitly experimental. Useful work is preserved by default pending disposition; deletion is limited to specifically authorized owned artifacts with unchanged identities. Production promotion, publication, service use and installation retain their separate permission gates.
+
+## Provenance and validation
+
+Original instructions and synthetic fixture implement [#56](https://github.com/SirDarcanos/agentskills/issues/56) under the accepted composable-delivery design. The installed prototype candidate was inspected for contract differences; no external procedure, template or supporting file is imported. This package does not prescribe that candidate's HTML/UI formats, automatic production edits or throwaway-branch commits.
+
+See [validation](references/validation.md). Run `python3 prototype/scripts/check-fixture.py` with Python 3.9+; no extra dependencies, models or network are needed. It executes a bounded synthetic feasibility experiment and ownership-safe disposition checks, not an agent workflow or human UX study.

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add standalone Prototype for bounded experiments, recommendations and authority-safe artifact disposition, also available through Work On without claiming production readiness. ([#56](https://github.com/SirDarcanos/agentskills/issues/56))
 - Add standalone TDD with behavioral red–green–refactor and reusable coverage, also available through Work On's test-first route. ([#55](https://github.com/SirDarcanos/agentskills/issues/55))
 - Add independently usable Research with cited, version-aware findings, evidence reuse and optional authorized background delegation. ([#54](https://github.com/SirDarcanos/agentskills/issues/54))
 - Add Work On for context-aware delivery, verification and bounded recovery. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
