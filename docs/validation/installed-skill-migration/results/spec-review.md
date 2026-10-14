@@ -18,4 +18,3 @@
 - No tests, installations, network operations or assessments were run by this reviewer. Runtime discovery, installer behavior, platform metadata and actual migration remain #74 obligations. **No runtime certification.**
 - **Fixed:** None; read-only review.
 - **Merge verdict:** **OK with notes**, as a review recommendation only. No acceptance or merge performed.
-

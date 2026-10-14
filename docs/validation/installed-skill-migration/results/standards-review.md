@@ -8,4 +8,3 @@
 **Validation limits:** Read-only static review; no tests or other effects executed. Supplied final log records 14 passing methods and 4,441 audited mutations; initial failures remain disclosed. Live runtime discovery, installer behavior, platform metadata and rollback interruption remain explicitly unverified. Scope-manifest hashes were inspected but not independently recomputed.
 **Fixed:** None; no edits authorized.
 **Merge verdict: OK with notes** — Standards review evidence only, not acceptance or merge authorization.
-
