@@ -7,7 +7,7 @@ Read when changing or exercising [Shape Work](../SKILL.md). Use safe synthetic t
 1. Read/render all changed Markdown and verify entry name/description, ordinary matching and bounded handoff routing, ordered steps and checkable complete/partial/blocked returns.
 2. Follow every relative link/anchor from the entry and its shipped references. Copy only this package to a temporary non-sibling location and repeat; internal links stay inside it. Conditional companions use catalogs or approved locations, never `../companion` paths.
 3. Inspect the actual diff for private data, local paths, generated files, duplicate discovery bodies and notice loss. Preserve historical repository execution records.
-4. Check Work On's adapter and entry/contracts together: existing approved actionable agreement bypasses new discovery; unresolved intent requires compatible Shape Work; missing helper blocks only discovery. Spec writing/publication remains caller-owned until its separate extraction.
+4. Check Work On's adapter and entry/contracts together: existing approved actionable agreement bypasses new discovery; unresolved intent requires compatible Shape Work; missing helper blocks only discovery. Spec writing/publication uses discovered Write Spec; Shape Work stops at its brief.
 5. Run relevant existing offline package checks; this instruction-only package has no runtime script or shared test suite. Report commands, environment, actual results and unrun checks separately from the scenarios below.
 
 ## Behavioral cases to execute

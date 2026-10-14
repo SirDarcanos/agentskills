@@ -14,7 +14,7 @@ npx skills add SirDarcanos/agentskills --skill shape-work
 
 This example has not been executed. Copy the complete package and its [MIT notice](LICENSE). Plain discovery needs authorized source inspection and a conversation channel. Conditional companions are discovered through runtime/project catalogs or approved locations, not sibling directories. Read their complete entries and relevant references and check behavior, not names alone. Missing material sources or required companions block dependent decisions; they do not trigger installation or legacy grilling.
 
-Discovery grants no implementation, ticket publication, model, delegation or external-effect permission. Optional delegated work needs separate authority and the discovered Work On execution-contract library. In standalone use the return ends at the discovery brief. Work On now uses this companion for unresolved product intent while retaining its own spec-writing/publication route. Stage those packages coherently; settled actionable agreements need no fresh shaping run. Merging source does not change installed copies or retire grilling.
+Discovery grants no implementation, ticket publication, model, delegation or external-effect permission. Optional delegated work needs separate authority and the discovered Work On execution-contract library. In standalone use the return ends at the discovery brief. Work On uses this companion for unresolved product intent and discovered Write Spec for specification writing/publication. Stage those packages coherently; settled actionable agreements need no fresh shaping run. Merging source does not change installed copies or retire grilling.
 
 ## Validation and provenance
 
