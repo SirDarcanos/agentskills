@@ -1,6 +1,8 @@
 # ADR 0001: Keep delivery procedures together and review independently reusable
 
-**Status:** Proposed for maintainer acceptance with [#18](https://github.com/SirDarcanos/agentskills/issues/18). This record authorizes no implementation or installation. The approved product agreement remains [#14](https://github.com/SirDarcanos/agentskills/issues/14).
+**Status:** Superseded by [ADR 0002](0002-composable-delivery-ownership.md) through the maintainer's acceptance and merge authorization for [PR #75](https://github.com/SirDarcanos/agentskills/pull/75), under #48/#50.
+
+**Decision history:** Originally proposed with [#18](https://github.com/SirDarcanos/agentskills/issues/18) under the [#14 product agreement](https://github.com/SirDarcanos/agentskills/issues/14), then accepted through [PR #32](https://github.com/SirDarcanos/agentskills/pull/32). The explanation below preserves that earlier decision's rationale and pre-merge wording as history. Supersession changes future ownership, not prior execution evidence; it authorizes no installed migration.
 
 ## Context and decision
 
