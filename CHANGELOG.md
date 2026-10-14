@@ -36,6 +36,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Move the three D&D skills to [SirDarcanos/dnd-agentskills](https://github.com/SirDarcanos/dnd-agentskills); install or update them from that repository. ([#49](https://github.com/SirDarcanos/agentskills/pull/49))
 - Let GitHub Repository Setup configure existing repositories and accept approved setup handoffs while preserving unrelated settings. ([#10](https://github.com/SirDarcanos/agentskills/issues/10))
 
+### Fixed
+
+- Preserve MIT notices when skills are copied independently and make Stay Positive's companion guidance portable outside sibling directories. ([#73](https://github.com/SirDarcanos/agentskills/issues/73))
+
 ## [1.6.0] - 2026-10-03
 
 ### Added

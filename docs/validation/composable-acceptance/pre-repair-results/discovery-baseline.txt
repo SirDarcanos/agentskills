@@ -1,0 +1,8 @@
+test_empty (__main__.Baseline.test_empty) ... ok
+test_input_order (__main__.Baseline.test_input_order) ... ok
+test_privacy (__main__.Baseline.test_privacy) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

@@ -1,0 +1,566 @@
+{
+  "node": "v24.21.0",
+  "runtime": {
+    "name": "@earendil-works/pi-coding-agent",
+    "version": "1.2.0",
+    "loader_sha256": "0e20ec500ed9783d5b01b5399e6600134fc3fdd10e6dc46c9113bc01565c9aa5"
+  },
+  "packages": [
+    {
+      "name": "acceptance-first",
+      "commandOnly": false,
+      "entry_sha256": "35a96d1bbc6a022dc57a2f3aff949bfb45ff75628f29f2e7fde2301c22432ba1",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-0/acceptance-first/SKILL.md"
+    },
+    {
+      "name": "analyze",
+      "commandOnly": false,
+      "entry_sha256": "9eb3bb1fed0f6d5b3985a3ae0ac844159394277cdb3ad6d77ec62d406f45f811",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-1/analyze/SKILL.md"
+    },
+    {
+      "name": "ask-clef",
+      "commandOnly": false,
+      "entry_sha256": "0a338ffcce7117164e51ab9d023df1e7eda0e6c4b91794c6e402843051f94bc7",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-2/ask-clef/SKILL.md"
+    },
+    {
+      "name": "ask-clef-flash",
+      "commandOnly": false,
+      "entry_sha256": "d9be8b297b62c35d9977fc6fd0048179b9b4f94bcbcc04e590bf1a5654561609",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-3/ask-clef-flash/SKILL.md"
+    },
+    {
+      "name": "ask-jev",
+      "commandOnly": false,
+      "entry_sha256": "7eccdee650fdcf02abd9d7908a680dec018925bd4d5cf74e753ecf3aaf78d65d",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-4/ask-jev/SKILL.md"
+    },
+    {
+      "name": "ask-nimble",
+      "commandOnly": false,
+      "entry_sha256": "6a865a4437779d9442cfb9c2a8fcdb12e2379727ea84890a897397900728f7c5",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-5/ask-nimble/SKILL.md"
+    },
+    {
+      "name": "build-and-check",
+      "commandOnly": false,
+      "entry_sha256": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-6/build-and-check/SKILL.md"
+    },
+    {
+      "name": "build-with-nimble",
+      "commandOnly": false,
+      "entry_sha256": "d6a6052f63a01fd6c1cea993024f7fb27daf98ea7bf77a2db7f70fbecd8531c6",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-7/build-with-nimble/SKILL.md"
+    },
+    {
+      "name": "characterize",
+      "commandOnly": false,
+      "entry_sha256": "6e4c16f46ea81962a03831bd18f615dda2f0bf7c3716db3508bef9db38939b20",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-8/characterize/SKILL.md"
+    },
+    {
+      "name": "create-changelog",
+      "commandOnly": true,
+      "entry_sha256": "c5df19dace378b669ee64fe9ed61f92174f692acec4ef5f171c9ed3c24cb6130",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-9/create-changelog/SKILL.md"
+    },
+    {
+      "name": "domain-modeling",
+      "commandOnly": false,
+      "entry_sha256": "aae04989a6039707b20ca44c65b2fb9ebc0a7b35f408fc46f4ded5446ca21986",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-10/domain-modeling/SKILL.md"
+    },
+    {
+      "name": "github-repo-setup",
+      "commandOnly": false,
+      "entry_sha256": "a4feb6cbe3c5d60a70bb670cd5c8051488319b63c8f0cb10a5930270753fa848",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-11/github-repo-setup/SKILL.md"
+    },
+    {
+      "name": "implementation-preflight",
+      "commandOnly": false,
+      "entry_sha256": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-12/implementation-preflight/SKILL.md"
+    },
+    {
+      "name": "investigate-bug",
+      "commandOnly": false,
+      "entry_sha256": "d18fb686c8be27e58979c6ae76b02a7b1398d90f4092c787c74450659b0c5d71",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-13/investigate-bug/SKILL.md"
+    },
+    {
+      "name": "pr",
+      "commandOnly": false,
+      "entry_sha256": "4b2e285897d27850394da75be05ce523dc607700cc08ee70b4cddbbd27e58d7b",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-14/pr/SKILL.md"
+    },
+    {
+      "name": "prototype",
+      "commandOnly": false,
+      "entry_sha256": "3a92c92e1d593e3dd6f2bae94280d691eae580b4d9ecc4a172adc839c40d70e4",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-15/prototype/SKILL.md"
+    },
+    {
+      "name": "research",
+      "commandOnly": false,
+      "entry_sha256": "acf66c8af6f90af79c1896addec717bfe53b8655483ab09ef535109713695aa4",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-16/research/SKILL.md"
+    },
+    {
+      "name": "review-delivery",
+      "commandOnly": false,
+      "entry_sha256": "943e48fe5e9935c692c8c36dd5cd924fec3d8696c59d6e13d37a292b496d7089",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-17/review-delivery/SKILL.md"
+    },
+    {
+      "name": "setup-project",
+      "commandOnly": true,
+      "entry_sha256": "ca5a7bd5d350c487430f6adc72c8ddb0b8dd2f49b6f952fc6508ace4fa0c1f29",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-18/setup-project/SKILL.md"
+    },
+    {
+      "name": "shape-work",
+      "commandOnly": false,
+      "entry_sha256": "a5ff4a8ad043ab361f1ea3fc8d1d4b23ea8a5e6630b5c3db2136369a095b7fa1",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-19/shape-work/SKILL.md"
+    },
+    {
+      "name": "slop-guard",
+      "commandOnly": false,
+      "entry_sha256": "4b9ebfc4be54019b1d26561ec4f25ee6a2deb4201bb3bca6e927431c6e4a59b7",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-20/slop-guard/SKILL.md"
+    },
+    {
+      "name": "stay-positive",
+      "commandOnly": false,
+      "entry_sha256": "d7e1d3d6bc9af7a2e0caf3cc8ee1b4bc1b4d1c345eb54e69a26f421381fa08a6",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-21/stay-positive/SKILL.md"
+    },
+    {
+      "name": "tdd",
+      "commandOnly": false,
+      "entry_sha256": "a76bfda94990416963fabfaf4104ee80a0c694322411c76c0384137f1da7c30e",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-22/tdd/SKILL.md"
+    },
+    {
+      "name": "update-changelog",
+      "commandOnly": false,
+      "entry_sha256": "c9ebce038a4c25c2418053e5162e22bbd48498b4f3113a40c9ef059a4cb3487d",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-23/update-changelog/SKILL.md"
+    },
+    {
+      "name": "work-on",
+      "commandOnly": false,
+      "entry_sha256": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-24/work-on/SKILL.md"
+    },
+    {
+      "name": "work-on-spec",
+      "commandOnly": false,
+      "entry_sha256": "8d75abcc9b303c1d7e3be51d41e2da2b7e241443d8827366cd4274098f868a18",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-25/work-on-spec/SKILL.md"
+    },
+    {
+      "name": "write-spec",
+      "commandOnly": false,
+      "entry_sha256": "26698eaa38cb46acd7a57a97fbdac4e02e21dac1d9c7942daf4477062edb57ec",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-26/write-spec/SKILL.md"
+    },
+    {
+      "name": "write-tickets",
+      "commandOnly": false,
+      "entry_sha256": "4a7fd53c25d85f5c117a3849522f69a3006f0375c3df4513636616a3b0076cab",
+      "diagnostics": [],
+      "resolved": "<isolated>/location-27/write-tickets/SKILL.md"
+    }
+  ],
+  "collision": "first wins, diagnostic emitted",
+  "invalid": "not loaded, diagnostic",
+  "missing": "not loaded, diagnostic",
+  "rendering": [
+    {
+      "path": "README.md",
+      "sha256": "b09b2167a39ac8a563ef1f3dc33b426f4b888aefdfbdd5d33ce47efd52748387",
+      "headings": 8,
+      "tables": 1
+    },
+    {
+      "path": "docs/design/composable-delivery-validation.md",
+      "sha256": "8e49e14208f616a1750015b77cfb0db1373176b63e64ced5b8ad14112c2610c9",
+      "headings": 10,
+      "tables": 2
+    },
+    {
+      "path": "docs/validation/composable-acceptance/README.md",
+      "sha256": "48b1bf8d87bf00838d648a95c89a533302ca7ec49578b888bbb7936f64701722",
+      "headings": 8,
+      "tables": 1
+    },
+    {
+      "path": "acceptance-first/SKILL.md",
+      "sha256": "35a96d1bbc6a022dc57a2f3aff949bfb45ff75628f29f2e7fde2301c22432ba1",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "acceptance-first/README.md",
+      "sha256": "098d92c8166faf8b536590c5ad0652787e6911fc309ea42058b1153f12633333",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "analyze/SKILL.md",
+      "sha256": "9eb3bb1fed0f6d5b3985a3ae0ac844159394277cdb3ad6d77ec62d406f45f811",
+      "headings": 8,
+      "tables": 2
+    },
+    {
+      "path": "analyze/README.md",
+      "sha256": "498471d02f1c7fecf54c70ae24e41c41ef7c716e35f745e9b00cf790b9e4de4a",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "ask-clef/SKILL.md",
+      "sha256": "0a338ffcce7117164e51ab9d023df1e7eda0e6c4b91794c6e402843051f94bc7",
+      "headings": 11,
+      "tables": 0
+    },
+    {
+      "path": "ask-clef/README.md",
+      "sha256": "2c3f60550c2ffbe57e88842b8e565bb85dddec9bcd7c7fbfd9ec4d92a392ab21",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "ask-clef-flash/SKILL.md",
+      "sha256": "d9be8b297b62c35d9977fc6fd0048179b9b4f94bcbcc04e590bf1a5654561609",
+      "headings": 11,
+      "tables": 0
+    },
+    {
+      "path": "ask-clef-flash/README.md",
+      "sha256": "71e6ab35ced702a28ffc67e91a0f8483682bc2aa09d32646ed14b9490fd21ff8",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "ask-jev/SKILL.md",
+      "sha256": "7eccdee650fdcf02abd9d7908a680dec018925bd4d5cf74e753ecf3aaf78d65d",
+      "headings": 10,
+      "tables": 0
+    },
+    {
+      "path": "ask-jev/README.md",
+      "sha256": "69558c830261cd30e8349e903b10a50869700626d84c4d9a59e99a67d007af49",
+      "headings": 5,
+      "tables": 0
+    },
+    {
+      "path": "ask-nimble/SKILL.md",
+      "sha256": "6a865a4437779d9442cfb9c2a8fcdb12e2379727ea84890a897397900728f7c5",
+      "headings": 11,
+      "tables": 0
+    },
+    {
+      "path": "ask-nimble/README.md",
+      "sha256": "49be1add90d8304bcfe0188fc7a080460265116564542ce09c1ebf069a254d13",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "build-and-check/SKILL.md",
+      "sha256": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2",
+      "headings": 4,
+      "tables": 0
+    },
+    {
+      "path": "build-and-check/README.md",
+      "sha256": "ab5b1e7cbea0b999325024c7514be4551e1d6f2ad52b13cf979abdc753e93203",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "build-with-nimble/SKILL.md",
+      "sha256": "d6a6052f63a01fd6c1cea993024f7fb27daf98ea7bf77a2db7f70fbecd8531c6",
+      "headings": 9,
+      "tables": 1
+    },
+    {
+      "path": "build-with-nimble/README.md",
+      "sha256": "b7f9ddc9cf8fa6593ea067cfbe02d828400d64659b618b13eccf44fdb9600e1b",
+      "headings": 4,
+      "tables": 0
+    },
+    {
+      "path": "characterize/SKILL.md",
+      "sha256": "6e4c16f46ea81962a03831bd18f615dda2f0bf7c3716db3508bef9db38939b20",
+      "headings": 5,
+      "tables": 1
+    },
+    {
+      "path": "characterize/README.md",
+      "sha256": "5fc1c52e4d0a97646ea2fc9b69b606144eba8aee2f3427ce425346ed27bfc8f5",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "create-changelog/SKILL.md",
+      "sha256": "c5df19dace378b669ee64fe9ed61f92174f692acec4ef5f171c9ed3c24cb6130",
+      "headings": 8,
+      "tables": 0
+    },
+    {
+      "path": "create-changelog/README.md",
+      "sha256": "872205ad200bae9d0bb2906b53ff987334270f84512f013133a7745c4f017f19",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "domain-modeling/SKILL.md",
+      "sha256": "aae04989a6039707b20ca44c65b2fb9ebc0a7b35f408fc46f4ded5446ca21986",
+      "headings": 5,
+      "tables": 0
+    },
+    {
+      "path": "domain-modeling/README.md",
+      "sha256": "11f8adc43df21e6d81ebb712fe0411cee2587638e646f8c9c0c7ef4c89288088",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "github-repo-setup/SKILL.md",
+      "sha256": "a4feb6cbe3c5d60a70bb670cd5c8051488319b63c8f0cb10a5930270753fa848",
+      "headings": 8,
+      "tables": 1
+    },
+    {
+      "path": "github-repo-setup/README.md",
+      "sha256": "09410525d3b9e8e73a1ae64beb6e4fa6c4b86260da37e40371ab63f9de1d5d55",
+      "headings": 7,
+      "tables": 1
+    },
+    {
+      "path": "implementation-preflight/SKILL.md",
+      "sha256": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "implementation-preflight/README.md",
+      "sha256": "76f5d25e95482ab14b1c8257f94b04267047dbd1cf317d0c23c333897a1146f7",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "investigate-bug/SKILL.md",
+      "sha256": "d18fb686c8be27e58979c6ae76b02a7b1398d90f4092c787c74450659b0c5d71",
+      "headings": 7,
+      "tables": 1
+    },
+    {
+      "path": "investigate-bug/README.md",
+      "sha256": "8ee825fdf2c17e2fdb72b4c4a15e61eac72e69916a43de56a74756ff10d4fd55",
+      "headings": 1,
+      "tables": 0
+    },
+    {
+      "path": "pr/SKILL.md",
+      "sha256": "4b2e285897d27850394da75be05ce523dc607700cc08ee70b4cddbbd27e58d7b",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "pr/README.md",
+      "sha256": "ca69afa32dbfacacd762385551c40ac613580568c8ca5a98d1302ab024c55241",
+      "headings": 2,
+      "tables": 0
+    },
+    {
+      "path": "prototype/SKILL.md",
+      "sha256": "3a92c92e1d593e3dd6f2bae94280d691eae580b4d9ecc4a172adc839c40d70e4",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "prototype/README.md",
+      "sha256": "b61aa1d149a330662d6a61bb3fb1d35f382c13607b0f6d0b667d861128b35807",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "research/SKILL.md",
+      "sha256": "acf66c8af6f90af79c1896addec717bfe53b8655483ab09ef535109713695aa4",
+      "headings": 8,
+      "tables": 0
+    },
+    {
+      "path": "research/README.md",
+      "sha256": "69d00271598ea64de4dfd5b3db78b74cce02756fc51ad8d7612f8176cbc4e436",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "review-delivery/SKILL.md",
+      "sha256": "943e48fe5e9935c692c8c36dd5cd924fec3d8696c59d6e13d37a292b496d7089",
+      "headings": 5,
+      "tables": 0
+    },
+    {
+      "path": "review-delivery/README.md",
+      "sha256": "1dbdbc358a1cc90ad8898f1b919122cbc3ee53c208ff300189581609d8cb9558",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "setup-project/SKILL.md",
+      "sha256": "ca5a7bd5d350c487430f6adc72c8ddb0b8dd2f49b6f952fc6508ace4fa0c1f29",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "setup-project/README.md",
+      "sha256": "e6d5f1d942f25cb77dc55d9f124ef72798d1ca3b3078563618e8b660ef7e856a",
+      "headings": 5,
+      "tables": 0
+    },
+    {
+      "path": "shape-work/SKILL.md",
+      "sha256": "a5ff4a8ad043ab361f1ea3fc8d1d4b23ea8a5e6630b5c3db2136369a095b7fa1",
+      "headings": 7,
+      "tables": 2
+    },
+    {
+      "path": "shape-work/README.md",
+      "sha256": "f55fabfba0fe23a3705a3d764a6cd6048962f8402f7f1c329f8993add4bdc518",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "slop-guard/SKILL.md",
+      "sha256": "4b9ebfc4be54019b1d26561ec4f25ee6a2deb4201bb3bca6e927431c6e4a59b7",
+      "headings": 12,
+      "tables": 0
+    },
+    {
+      "path": "slop-guard/README.md",
+      "sha256": "8253a2e5d974c49e1258f74f526a661eac9c923ba6a476cf22375519e579528b",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "stay-positive/SKILL.md",
+      "sha256": "d7e1d3d6bc9af7a2e0caf3cc8ee1b4bc1b4d1c345eb54e69a26f421381fa08a6",
+      "headings": 11,
+      "tables": 0
+    },
+    {
+      "path": "stay-positive/README.md",
+      "sha256": "7abf498dd5eae3e1ce966e0c1a7a5153cfdbe3cef8ae41343f816d84ff8fda5d",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "tdd/SKILL.md",
+      "sha256": "a76bfda94990416963fabfaf4104ee80a0c694322411c76c0384137f1da7c30e",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "tdd/README.md",
+      "sha256": "fc77f9eb9c7d65f09ec135d93059a115d29bd276d38715068e046f366f361551",
+      "headings": 4,
+      "tables": 0
+    },
+    {
+      "path": "update-changelog/SKILL.md",
+      "sha256": "c9ebce038a4c25c2418053e5162e22bbd48498b4f3113a40c9ef059a4cb3487d",
+      "headings": 8,
+      "tables": 0
+    },
+    {
+      "path": "update-changelog/README.md",
+      "sha256": "4048820af2c958dfb1bf45874836394ea9951878406c3d9cfd429311fd6df268",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "work-on/SKILL.md",
+      "sha256": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "work-on/README.md",
+      "sha256": "352b596c8a5ad57aea70b43e286e87f6270577925180c7837461c71964c36c4f",
+      "headings": 4,
+      "tables": 1
+    },
+    {
+      "path": "work-on-spec/SKILL.md",
+      "sha256": "8d75abcc9b303c1d7e3be51d41e2da2b7e241443d8827366cd4274098f868a18",
+      "headings": 6,
+      "tables": 0
+    },
+    {
+      "path": "work-on-spec/README.md",
+      "sha256": "43a4674b340a0f23a020f98df0d977f9b491c1ac31a5cb65a3750c8d9dcde11a",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "write-spec/SKILL.md",
+      "sha256": "26698eaa38cb46acd7a57a97fbdac4e02e21dac1d9c7942daf4477062edb57ec",
+      "headings": 7,
+      "tables": 0
+    },
+    {
+      "path": "write-spec/README.md",
+      "sha256": "c70a1bd5d6ac208edefce7246d438f79dc280b921d0a6105cf7ff5cc1b16d0e4",
+      "headings": 3,
+      "tables": 0
+    },
+    {
+      "path": "write-tickets/SKILL.md",
+      "sha256": "4a7fd53c25d85f5c117a3849522f69a3006f0375c3df4513636616a3b0076cab",
+      "headings": 7,
+      "tables": 1
+    },
+    {
+      "path": "write-tickets/README.md",
+      "sha256": "dd5a79199b5e7e41aaa64b5aafbe7c4307690158ceeacf4618b13e4699cce1ae",
+      "headings": 3,
+      "tables": 0
+    }
+  ],
+  "limits": "Explicit-path Pi loader only; no installed CLI, command expansion or semantic invocation"
+}

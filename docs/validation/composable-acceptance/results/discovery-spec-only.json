@@ -1,0 +1,17 @@
+{
+  "issues": [
+    {
+      "number": 1,
+      "id": 9001,
+      "title": "Select next books",
+      "body": "# Select next books\n\nAuthoritative synthetic spec home: this file. Fixture approval is [input turns 1\u20132](input.md#discovery-request-and-scripted-owner-turns), consumed through the [actual discovery brief](brief.md). This is an approved fixture agreement, not maintainer consent for a real product. The fake tracker mirrors this file; revisions belong here.\n\n## Outcome and rationale\n\nA reader can find personally selected next books without losing saved list order or exposing another reader's list. Existing own-list filtering and empty-list behavior remain.\n\n| ID | Observable acceptance |\n| --- | --- |\n| P1 | Pinning an own-list book puts it in the next-read group above ordinary books; saved relative order is preserved within each group, including multiple pinned books. |\n| P2 | Unpinning returns the book to its ordinary saved-order position without dropping or duplicating entries; an empty list stays empty. |\n| P3 | Pin/unpin affects only the acting reader's own list; other readers' selections and visible entries are unchanged. |\n\nRequired now: P1\u2013P3. Deferred: reminders until the list is larger, then reconsider. Excluded: sharing because the workflow is personal. Accepted limitation: no manual pin ordering, approved by scripted turn 2. Pin means next-read selection, not reservation or reading status; the bounded domain plan remains unapplied, with no glossary/ADR prerequisite for this fixture's self-contained definition.\n\n## Agreement, readiness and publication\n\nNo changed commitment, new proposal or unresolved product intent was introduced while assigning P1\u2013P3. R1 source support is reused; baseline checks prove existing behavior only. Technical readiness is separate and assessed in [the technical return](technical.md); pinning remains unimplemented. Source/environment changes require targeted freshness inspection, not a new product interview.\n\nLocal retention is authorized. A separate exact fixture publication request in [input](input.md#exact-fake-publication-fixture) permits the spec mirror with mapped spec role only, not automatic readiness, ticket creation or native graph changes during spec publication. Standalone spec writing stops here; the caller must inspect this artifact and choose any further authorized responsibility. No delivery acceptance, merge or installation follows.\n",
+      "labels": [
+        "spec",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    }
+  ],
+  "parents": {},
+  "blockers": {}
+}

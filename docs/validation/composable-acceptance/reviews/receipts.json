@@ -1,0 +1,46 @@
+{
+  "workflow_initial": "294d3080-0262-430b-8e5d-e39dfab922e8",
+  "initial_workers": {
+    "standards": "733c32e5-b404-4db1-a7eb-a0524e8d87fb",
+    "spec": "defa40a8-41ae-41e6-b102-7cab3c4d7c6f"
+  },
+  "workflow_renewed": "2f0051fe-f0fd-442c-abaa-94c2a493f9a6",
+  "renewed_workers": {
+    "standards": "b1187ea9-0a0c-40fd-8eb2-57f4ce0a587f",
+    "spec": "11606046-2962-4c39-a32f-ac029746c01a"
+  },
+  "permission": "standing bounded independent review only",
+  "bounds_seconds": 480,
+  "peak_workers": 2,
+  "active_workers_after_terminal_notifications": 0,
+  "optional_assessments": {
+    "limit": 0,
+    "reserved": 0,
+    "attempted": 0
+  },
+  "repair_checkpoint": {
+    "id": "collector73-safety",
+    "spent": 1,
+    "limit": 2,
+    "finding": "S73-01",
+    "disposition": "corrected; refreshed executable evidence and two renewed axes"
+  },
+  "reports_sha256": {
+    "initial-spec.md": "6d957942a6e0bfb0a0b2969ad74fa5da2c288717dcc011c32b71bed254e4a47f",
+    "final-spec.md": "5904a983b1d6b35e2ea9572119615b1b0c98caddef62018fb52a43362d19a67a",
+    "final-standards.md": "0d1cd807e74e2c415c193873f7f6eaaa04201028db80334b6635fe0ac623209f",
+    "initial-standards.md": "1c63a3da6b069c9731d0d1a02deebb83edfb5de6159907ed4cdc4804926cb50e"
+  },
+  "scope_receipts": {
+    "initial": {
+      "original_sha256": "c9e4ada639f2f4e065f853428a1f3292ea2961b118a97b11338e5c38ed2c457c",
+      "public_sha256": "c54a9a7347ed14fd66cd0759ea3eced2c9add45eb75b0d851920fca341fa9875",
+      "normalization": "repository root only; archived snapshot not a live helper target"
+    },
+    "renewed": {
+      "original_sha256": "bf7a0496d09b1c59537cd52e11d0d2b10a911f9550f0ab1c0de491ad8bb10ffb",
+      "public_sha256": "81ad1161d53be088d792c68425dd191ca8d607a9cf4f685b862bcd2a89b373d6",
+      "normalization": "repository root only; archived snapshot not a live helper target"
+    }
+  }
+}

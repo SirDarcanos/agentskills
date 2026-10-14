@@ -1,0 +1,12 @@
+test_confirmed_ticket_probe_cleanup_and_investigation_only_stop (test_investigation.InvestigationCases.test_confirmed_ticket_probe_cleanup_and_investigation_only_stop) ... ok
+test_confirmed_unresolved_cause_remains_investigation (test_investigation.InvestigationCases.test_confirmed_unresolved_cause_remains_investigation) ... ok
+test_current_handoff_reused_without_new_diagnosis (test_investigation.InvestigationCases.test_current_handoff_reused_without_new_diagnosis) ... ok
+test_dirty_caller_change_invalidates_only_dependent_evidence (test_investigation.InvestigationCases.test_dirty_caller_change_invalidates_only_dependent_evidence) ... ok
+test_duplicate_reconciles_existing_issue_without_new_hierarchy (test_investigation.InvestigationCases.test_duplicate_reconciles_existing_issue_without_new_hierarchy) ... ok
+test_intermittent_observed_but_cause_unresolved (test_investigation.InvestigationCases.test_intermittent_observed_but_cause_unresolved) ... ok
+test_unconfirmed_and_harness_failure_not_bug_confirmation (test_investigation.InvestigationCases.test_unconfirmed_and_harness_failure_not_bug_confirmation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.037s
+
+OK
