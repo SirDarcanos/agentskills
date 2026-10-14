@@ -12,7 +12,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | --- | --- |
 | [`ask-clef`](ask-clef/) | Request or policy-authorize a bounded evidence-backed local Clef judgment over text or images. |
 | [`ask-clef-flash`](ask-clef-flash/) | Request or policy-authorize a bounded evidence-backed local Clef Flash judgment over text or images. |
-| [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment and interpretation, with confirmation only for exceptional scope. |
+| [`ask-jev`](ask-jev/) | Assess an evidence-backed question with hosted Jev by explicit request or exact approved project policy, within shared disclosure and spending limits. |
 | [`ask-nimble`](ask-nimble/) | Request or policy-authorize a bounded evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
 | [`characterize`](characterize/) | Protect relevant legacy behavior before risky changes, with baseline provenance and separate intent, unknown and defect evidence. |

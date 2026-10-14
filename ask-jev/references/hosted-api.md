@@ -1,6 +1,6 @@
 # Hosted API procedure
 
-Read this before checking credentials, constructing a request, or sending evidence. The invocation and exceptional-disclosure rules in `SKILL.md` govern all authenticated operations.
+Read this before checking credentials, constructing a request, or sending evidence. [Authorization and shared hosted limits](authorization.md) governs credential access and all authenticated operations. Suitability and authority precede credential checks; public documentation reads are not authenticated API probes.
 
 ## 1. Resolve current contracts
 
@@ -16,11 +16,13 @@ Authorization: Bearer <API_KEY>
 Content-Type: application/json
 ```
 
-The SDK's documented environment variable is `TYPESAFE_API_KEY`. Check presence without printing its value. Use an existing authorized environment or secret-injection facility. If absent, ask the user to configure it outside the conversation; never ask them to paste a key into chat. Installation, account provisioning, or credential changes require permission.
+The SDK's documented environment variable is `TYPESAFE_API_KEY`. Check presence without printing its value. Use an existing authorized environment or secret-injection facility. If absent, report unavailable; for explicit use, explain configuration outside the conversation and apply the fallback gate. Autonomous use returns the blocker without prompting to change credentials. Never ask for a key pasted into chat. Installation, account provisioning, or credential changes require permission.
 
-Use the user's chosen supported Jev model; otherwise use `jev-latest` without routine confirmation. Aliases move. Record both the requested ID/alias and the response's versioned `model` field. Do not silently choose preview models or a different version on failure.
+Use only the authorized requested model: the exact policy ID/alias for autonomous use, or the user's supported Jev model/default `jev-latest` for explicit use under project restrictions. Aliases move; pin-sensitive permission requires a versioned ID, not an alias. Record the requested ID/alias, verified permitted resolution and response's versioned `model` field. Never switch to preview or another version on failure. Do not make an authenticated model-list probe before authorization; public docs or authorized local contracts must establish the route.
 
-**Complete when:** verified contracts, chosen model, authorized credentials, and any documentation limitation are known, or a blocker is reported.
+Verify current pricing and both token limits before establishing the authorization reference's safe spending reservation. Account for all billed request content, not just state. Unknown cost blocks a paid send; availability does not expand a grant.
+
+**Complete when:** verified contracts, exact authorized model, pricing/limits, authorized credential source and any documentation limitation are known, or a blocker is reported.
 
 ## 2. Prepare the request
 
@@ -62,19 +64,19 @@ python3 -c 'import json,sys; json.load(open(sys.argv[1], encoding="utf-8"))' '/a
 
 Replace the placeholder with the actual quoted path. Token limits require their own check or conservative budgeting.
 
-**Complete when:** the payload fits the invocation or exceptional disclosure approval, parses as JSON, and fits verified model/primitive limits.
+**Complete when:** the payload fits exact policy or explicit disclosure authority, parses as JSON, fits verified model/primitive limits and has a safe shared spending reservation.
 
 ## 3. Send with bounded transport
 
 Use either an existing SDK with verified configuration or a short local HTTP client in the available runtime. The client must:
 
-1. Read the key from its authorized source at runtime. Keep it out of model-visible tool arguments, command lines, verbose logs, exception dumps, and retained artifacts.
+1. Recheck current authority, exact model/recipient, sanitized payload and exclusive shared call/spend reservation immediately before each send, including retries and corrections. Only then read the key from its authorized source at runtime. Keep it out of model-visible tool arguments, command lines, verbose logs, exception dumps, and retained artifacts.
 2. Send only to the approved HTTPS endpoint with certificate verification enabled. Reject redirects, including same-host redirects; never forward credentials or evidence to an unapproved destination. Honor organizational networking policy; require approval for a proxy that would receive evidence, and never silently disable a required proxy.
 3. Set a finite timeout (at most 120 seconds per attempt) and preserve HTTP status and actual response for validation. Use the runtime's tracked background facility if the request may take a long time. A launch receipt is not a response.
-4. Disable SDK automatic retries unless explicitly configured to fit the following budget. Allow at most two retries for explicit HTTP `429` or `529` responses, three attempts total per logical request. Use exponential backoff with jitter, bounded to 30 seconds per delay; honor `Retry-After` only within that bound, otherwise stop and report the rate-limit blocker. Bound each logical request to 420 seconds including attempts and delays.
+4. Disable SDK automatic retries unless explicitly configured to fit the following budget. Allow at most two retries for explicit HTTP `429` or `529` responses, three attempts total per logical request, and only while shared retry/call/spending allowance remains. Each retry is a separately reserved attempted send. Use exponential backoff with jitter, bounded to 30 seconds per delay; honor `Retry-After` only within that bound, otherwise stop and report the rate-limit blocker. Bound each logical request to 420 seconds including attempts and delays.
 5. For timeouts or ambiguous network failures, stop: the service may already have processed a billable request. Report uncertain usage instead of retrying automatically. Authentication, validation, malformed-response, and other HTTP errors are blockers, not uncertain judgments.
 
-The assessment allows one initial logical request and at most one evidence-corrected logical request under `SKILL.md`: at most six HTTP attempts including explicit transient-error retries. This is a cap, not a target. Track attempts and any known usage; failed attempts may lack usage information. All calls must stay within the invocation's normal assessment scope or explicit approval for exceptional calls. Keep normal attempt counts and usage internal; report them when requested or when unexpected billable attempts or uncertain charges are material.
+The assessment allows one initial logical request and at most one evidence-corrected logical request under `SKILL.md`: at most six HTTP attempts including explicit transient-error retries. This is a cap, not a target. Track attempts and any known usage; failed attempts may lack usage information. All calls must stay within exact policy or explicit authority and the stricter shared/package limits from the authorization reference. Log attempted dispatch before transport; failed and unknown-charge attempts retain call use and conservative spending until safely reconciled. A worker or resumed session uses the same root ledger, not a fresh six-attempt budget. Keep normal attempt counts and usage internal; report them when requested or when unexpected billable attempts or uncertain charges are material.
 
 Sanitize error summaries before reporting them: server validation errors may echo submitted evidence. Retain sensitive raw bodies only temporarily for inspection. Never invent a response after a transport failure or substitute a chat/completion endpoint.
 
@@ -82,7 +84,7 @@ Sanitize error summaries before reporting them: server validation errors may ech
 
 ## 4. Validate the whole response
 
-Parse JSON. Require a nonempty returned `model` string, an `answers` map with exactly the submitted question IDs, and a `usage` object with nonnegative integer `input_tokens` and `output_tokens`. Booleans are not numeric values. Each answer's type must match its question.
+Parse JSON. Require a nonempty returned `model` string consistent with the authorized version or verified permitted alias resolution (a mismatch invalidates the result and requires reporting possible unexpected routing/disclosure, not another call), an `answers` map with exactly the submitted question IDs, and a `usage` object with nonnegative integer `input_tokens` and `output_tokens`. Booleans are not numeric values. Each answer's type must match its question.
 
 | Type | Required validation |
 | --- | --- |
