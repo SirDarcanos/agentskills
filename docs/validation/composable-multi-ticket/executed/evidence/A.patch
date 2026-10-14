@@ -1,0 +1,8 @@
+diff --git a/render.py b/render.py
+index eb793e8..410130c 100644
+--- a/render.py
++++ b/render.py
+@@ -1,2 +1,2 @@
+ def render(name):
+-    raise NotImplementedError
++    return "Receipt: " + name

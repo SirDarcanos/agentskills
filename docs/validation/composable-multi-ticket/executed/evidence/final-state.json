@@ -1,0 +1,43 @@
+{
+  "protected": {
+    "bytes": "eef5c5847e9bdc09568e4f6beecc7574e818abfadaac4aab9d4fd1361e754bdf",
+    "untracked": "bc5621363dd1cb1fef145d1412b5f2c0cbd8cf682dd1e550ef54e49c5bd25b2a",
+    "link": "protected.txt",
+    "modes": {
+      "protected.txt": "0o100644",
+      "private-note.txt": "0o100644",
+      "protected-link": "0o120755"
+    },
+    "index": "9d79c0aef4797bdbf419e0257c4002a0dc1dfdd58269905f513f05d57dc5add4"
+  },
+  "optional_models": {
+    "limit": 0,
+    "reserved": 0,
+    "attempted": 0
+  },
+  "checkpoint": {
+    "id": "B-reject",
+    "spent": 2,
+    "limit": 2
+  },
+  "final_checkpoint": {
+    "id": "final-integration",
+    "spent": 1,
+    "limit": 2
+  },
+  "active_workers": 0,
+  "source_packages_unchanged": true,
+  "graph_unchanged": true,
+  "analysis_reused": true,
+  "head": "ea5046c2ebaf5aa450095d564284003bc0098347",
+  "workflow": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+  "fixture_acceptance": "root disposition of inspected local behavior; not repository merge",
+  "limitations": [
+    "behavioral reviewers excluded history/upstream AC definitions",
+    "no live GitHub fixture mutations",
+    "controlled failed check/partial return, not killed process",
+    "zero optional allowance, no positive/unknown-charge transport",
+    "no installed migration",
+    "tool records, not syscall attestation"
+  ]
+}

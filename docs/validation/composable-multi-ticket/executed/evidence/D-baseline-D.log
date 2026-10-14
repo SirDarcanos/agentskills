@@ -1,0 +1,17 @@
+command: python3 -B -m unittest test_trial.D
+E
+======================================================================
+ERROR: test_optional_upper (test_trial.D.test_optional_upper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/D/test_trial.py", line 24, in test_optional_upper
+    self.assertEqual(normalize(" Ada ", upper=True), "ADA")
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: normalize() got an unexpected keyword argument 'upper'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+exit_code: 1

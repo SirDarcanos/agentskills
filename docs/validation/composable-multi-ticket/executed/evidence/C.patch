@@ -1,0 +1,12 @@
+diff --git a/pipeline.py b/pipeline.py
+index fb12793..bbae787 100644
+--- a/pipeline.py
++++ b/pipeline.py
+@@ -1,2 +1,6 @@
++from normalize import normalize
++from render import render
++
++
+ def make_receipt(name):
+-    raise NotImplementedError
++    return render(normalize(name, upper=True))

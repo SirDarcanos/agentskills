@@ -1,0 +1,43 @@
+{
+  "P": {
+    "role": "spec",
+    "children": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "parent": null
+  },
+  "A": {
+    "role": "implementation-step",
+    "parent": "P",
+    "blocked_by": [],
+    "blocking": []
+  },
+  "B": {
+    "role": "implementation-step",
+    "parent": "P",
+    "blocked_by": [],
+    "blocking": [
+      "C"
+    ]
+  },
+  "C": {
+    "role": "implementation-step",
+    "parent": "P",
+    "blocked_by": [
+      "B",
+      "D"
+    ],
+    "blocking": []
+  },
+  "D": {
+    "role": "implementation-step",
+    "parent": "P",
+    "blocked_by": [],
+    "blocking": [
+      "C"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+diff --git a/normalize.py b/normalize.py
+index 5c78987e02548a761c53adffb1f706cb34da847a..0c8be9e937abecfbf6180c5edab269b62891ac12 100644
+--- a/normalize.py
++++ b/normalize.py
+@@ -1,2 +1,7 @@
+-def normalize(name):
+-    raise NotImplementedError
++def normalize(name, *, upper=False):
++    if not isinstance(name, str):
++        raise ValueError("name must be a string")
++    name = name.strip()
++    if not name:
++        raise ValueError("name must not be blank")
++    return name.upper() if upper else name
+diff --git a/pipeline.py b/pipeline.py
+index fb12793be44065b8db5210f45fa18d43cd837a72..bbae7872c655d82fef2caa8d6c75ada7496a592e 100644
+--- a/pipeline.py
++++ b/pipeline.py
+@@ -1,2 +1,6 @@
++from normalize import normalize
++from render import render
++
++
+ def make_receipt(name):
+-    raise NotImplementedError
++    return render(normalize(name, upper=True))
+diff --git a/render.py b/render.py
+index eb793e8267fbab2eeda9f076791701bb4fadf6fc..410130c984e899b3ae343b9d985e6017d3215260 100644
+--- a/render.py
++++ b/render.py
+@@ -1,2 +1,2 @@
+ def render(name):
+-    raise NotImplementedError
++    return "Receipt: " + name

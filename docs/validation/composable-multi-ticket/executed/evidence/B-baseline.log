@@ -1,0 +1,41 @@
+command: python3 -B -m unittest test_trial.B
+EEE
+======================================================================
+ERROR: test_reject_blank (test_trial.B.test_reject_blank)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/B/test_trial.py", line 16, in test_reject_blank
+    normalize(value)
+    ~~~~~~~~~^^^^^^^
+  File "<fixture>/lanes/B/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_reject_nonstring (test_trial.B.test_reject_nonstring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/B/test_trial.py", line 20, in test_reject_nonstring
+    normalize(value)
+    ~~~~~~~~~^^^^^^^
+  File "<fixture>/lanes/B/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_trim (test_trial.B.test_trim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/B/test_trial.py", line 12, in test_trim
+    self.assertEqual(normalize("  Ada  "), "Ada")
+                     ~~~~~~~~~^^^^^^^^^^^
+  File "<fixture>/lanes/B/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)
+
+exit_code: 1

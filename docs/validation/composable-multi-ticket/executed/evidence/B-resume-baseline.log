@@ -1,0 +1,29 @@
+command: python3 -B -m unittest test_trial.B
+FE.
+======================================================================
+ERROR: test_reject_nonstring (test_trial.B.test_reject_nonstring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/B/test_trial.py", line 20, in test_reject_nonstring
+    normalize(value)
+    ~~~~~~~~~^^^^^^^
+  File "<fixture>/lanes/B/normalize.py", line 2, in normalize
+    return name.strip()
+           ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'strip'
+
+======================================================================
+FAIL: test_reject_blank (test_trial.B.test_reject_blank)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/B/test_trial.py", line 15, in test_reject_blank
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=1, errors=1)
+
+exit_code: 1

@@ -1,0 +1,58 @@
+{
+  "head": "62d027704c60ec789e96bb177b6705fe69572d2d",
+  "files": {
+    "AGENTS.md": {
+      "mode": "0o100644",
+      "sha256": "371d5faf666cd5db12d3c60cae875e3ed7e2001600de3f8ea848ef6decd04ae5",
+      "link": null
+    },
+    "technical.md": {
+      "mode": "0o100644",
+      "sha256": "acc0539ef4fef27c49d9bf282b2fe5877f2fb2cc91528b101ba98e07e2917a62",
+      "link": null
+    },
+    "graph.json": {
+      "mode": "0o100644",
+      "sha256": "ae35ccb0498b2e49bcbb372dc06a251142a980d8c601a0bf339e799dfdab8e6a",
+      "link": null
+    },
+    "normalize.py": {
+      "mode": "0o100644",
+      "sha256": "6ddffb4553554487e0e56b2133df1df36a2f576ef8fe5ea9bb8d57dacb7b5d19",
+      "link": null
+    },
+    "render.py": {
+      "mode": "0o100644",
+      "sha256": "e34fe728ac31113b79ad388b5395b19365d8cbb3ce7215e4d82fee9247561631",
+      "link": null
+    },
+    "pipeline.py": {
+      "mode": "0o100644",
+      "sha256": "d714f3a1b6b0a2ad227f2dd22df7043c4b31d76ede09d72f143951629d87d14a",
+      "link": null
+    },
+    "test_trial.py": {
+      "mode": "0o100644",
+      "sha256": "34acb472e35bfc2c6c8053fd40b69724c58fcd19410afc00d03a3964198321ff",
+      "link": null
+    },
+    "protected.txt": {
+      "mode": "0o100644",
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e",
+      "link": null
+    },
+    "protected-link": {
+      "mode": "0o120755",
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e",
+      "link": "protected.txt"
+    },
+    "private-note.txt": {
+      "absent": true
+    }
+  },
+  "index": "100644 ff0467349e1a09e48144d8d8f6f330d10d757a52 0\tAGENTS.md\n100644 ee5e021bb1045053ad83005cf58dc263d1604dfd 0\tgraph.json\n100644 214718b0bb5ed4ce3cfa3b563dca1f6f79bfea26 0\tnormalize.py\n100644 fb12793be44065b8db5210f45fa18d43cd837a72 0\tpipeline.py\n120000 c3fe1d0958945757d7f3521e451a007b387150a1 0\tprotected-link\n100644 180b47c18ba7e484fc0d7350bc6cad8ec3423ea0 0\tprotected.txt\n100644 410130c984e899b3ae343b9d985e6017d3215260 0\trender.py\n100644 fb96a23594d834d32ff74b06ba5805db661c608c 0\ttechnical.md\n100644 8c7cf12a110f83ba941f57866d73964d4a7ca55b 0\ttest_trial.py\n",
+  "status": " M normalize.py\n",
+  "diff_sha256": "2697b332f7caa80b05c9184bfbb6d688b275c6cd2c20b7c166a0eae1dfdf18b3",
+  "protected_and_supporting_inputs_unchanged": true,
+  "no_staged_files": true
+}

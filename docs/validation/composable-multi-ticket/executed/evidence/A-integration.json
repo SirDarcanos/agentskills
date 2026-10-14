@@ -1,0 +1,12 @@
+{
+  "ticket": "A",
+  "source_base": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "before": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "after": "835f269f4069279a577d78da741cdf41407ccb43",
+  "paths": [
+    "render.py"
+  ],
+  "patch_sha256": "b29d3d358c19b694b34f5086a680cc41a14abac446602467214130bbb53fe8d3",
+  "content_sha256": "e34fe728ac31113b79ad388b5395b19365d8cbb3ce7215e4d82fee9247561631",
+  "source_content_equal": true
+}

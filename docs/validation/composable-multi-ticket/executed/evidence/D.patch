@@ -1,0 +1,14 @@
+diff --git a/normalize.py b/normalize.py
+index 214718b..0c8be9e 100644
+--- a/normalize.py
++++ b/normalize.py
+@@ -1,7 +1,7 @@
+-def normalize(name):
++def normalize(name, *, upper=False):
+     if not isinstance(name, str):
+         raise ValueError("name must be a string")
+     name = name.strip()
+     if not name:
+         raise ValueError("name must not be blank")
+-    return name
++    return name.upper() if upper else name

@@ -1,0 +1,58 @@
+{
+  "base": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "branch": "ticket-B",
+  "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "files": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "371d5faf666cd5db12d3c60cae875e3ed7e2001600de3f8ea848ef6decd04ae5"
+    },
+    "graph.json": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ae35ccb0498b2e49bcbb372dc06a251142a980d8c601a0bf339e799dfdab8e6a"
+    },
+    "normalize.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "82cf5baea173f7e53b19d131f0067d3ff699b756f89d77fe7385f0309eb843f0"
+    },
+    "pipeline.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "d714f3a1b6b0a2ad227f2dd22df7043c4b31d76ede09d72f143951629d87d14a"
+    },
+    "render.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "14b24984162420df4a7077dfa6d9a2e2386f394b38c1d2722b52652f6468e5c1"
+    },
+    "technical.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "acc0539ef4fef27c49d9bf282b2fe5877f2fb2cc91528b101ba98e07e2917a62"
+    },
+    "test_trial.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "34acb472e35bfc2c6c8053fd40b69724c58fcd19410afc00d03a3964198321ff"
+    }
+  },
+  "format": 1,
+  "head": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "index_sha256": "ebc9b1492baf9df570e1d6f3d58b06d801f0f71af2514377dff3463a5e27cf4c",
+  "paths": [
+    "AGENTS.md",
+    "graph.json",
+    "normalize.py",
+    "pipeline.py",
+    "render.py",
+    "technical.md",
+    "test_trial.py"
+  ],
+  "root": "<fixture>/lanes/B",
+  "staged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status_sha256": "4b26bb490569b6fa92fe951711212032a125356f5a8ffc0278f74510427671a5",
+  "unstaged_sha256": "db4344fcb9d0c49cc4d66d31c38e2a7c07ffc5f5fda0bb38f4ca60e46ea3f16e"
+}

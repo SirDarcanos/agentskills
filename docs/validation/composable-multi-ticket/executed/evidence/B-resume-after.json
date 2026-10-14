@@ -1,0 +1,105 @@
+{
+  "files": {
+    "<fixture>/lanes/B/protected.txt": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e"
+    },
+    "<fixture>/lanes/B/render.py": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "14b24984162420df4a7077dfa6d9a2e2386f394b38c1d2722b52652f6468e5c1"
+    },
+    "<fixture>/lanes/B/normalize.py": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "6540ef87e83fdae0a9b74f00fa72b5f964762edf0e22ddf1602a677f4fbc5152"
+    },
+    "<fixture>/lanes/B/pipeline.py": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "d714f3a1b6b0a2ad227f2dd22df7043c4b31d76ede09d72f143951629d87d14a"
+    },
+    "<fixture>/lanes/B/test_trial.py": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "34acb472e35bfc2c6c8053fd40b69724c58fcd19410afc00d03a3964198321ff"
+    },
+    "<fixture>/lanes/B/graph.json": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "ae35ccb0498b2e49bcbb372dc06a251142a980d8c601a0bf339e799dfdab8e6a"
+    },
+    "<fixture>/lanes/B/technical.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "acc0539ef4fef27c49d9bf282b2fe5877f2fb2cc91528b101ba98e07e2917a62"
+    },
+    "<fixture>/lanes/B/AGENTS.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "371d5faf666cd5db12d3c60cae875e3ed7e2001600de3f8ea848ef6decd04ae5"
+    },
+    "<fixture>/lanes/B/protected-link": {
+      "mode": "0o120755",
+      "link": "protected.txt",
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e"
+    },
+    "<source>/work-on/SKILL.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980"
+    },
+    "<source>/work-on/references/contracts.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "99c439dac5ed0acb469f4f797d7e38e15084b0846cd1f81ad66a049990445d8a"
+    },
+    "<source>/work-on/references/build.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "ddc9ec13e41f42b05659a13521fb9addb50490486a898ac890682bd87c04384a"
+    },
+    "<source>/work-on/references/verification.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "b676b8b7d18b5ba8973ad8557a59f5c92ff54d375018a764e3d0b7124bcdc6d4"
+    },
+    "<source>/work-on/references/completion.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "a25bcf7bc5e77614cfc7bd1d01b2d34519539ac3d8e7c9924ab92b910eec1ca2"
+    },
+    "<source>/work-on/references/recovery.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "a1395b675dd5a5e014005caf29890dd457a8021dcc09d05ca2a684a617135472"
+    },
+    "<source>/implementation-preflight/SKILL.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15"
+    },
+    "<source>/build-and-check/SKILL.md": {
+      "mode": "0o100644",
+      "link": null,
+      "sha256": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2"
+    },
+    "<fixture>/lanes/B/private-note.txt": {
+      "absent": true
+    }
+  },
+  "git": {
+    "git status --porcelain=v1 --untracked-files=all": " M normalize.py\n",
+    "git rev-parse HEAD main": "418383fcddb2d32426a9967d655e48774bbd1073\n835f269f4069279a577d78da741cdf41407ccb43\n",
+    "git ls-files -s": "100644 ff0467349e1a09e48144d8d8f6f330d10d757a52 0\tAGENTS.md\n100644 ee5e021bb1045053ad83005cf58dc263d1604dfd 0\tgraph.json\n100644 5c78987e02548a761c53adffb1f706cb34da847a 0\tnormalize.py\n100644 fb12793be44065b8db5210f45fa18d43cd837a72 0\tpipeline.py\n120000 c3fe1d0958945757d7f3521e451a007b387150a1 0\tprotected-link\n100644 180b47c18ba7e484fc0d7350bc6cad8ec3423ea0 0\tprotected.txt\n100644 eb793e8267fbab2eeda9f076791701bb4fadf6fc 0\trender.py\n100644 fb96a23594d834d32ff74b06ba5805db661c608c 0\ttechnical.md\n100644 8c7cf12a110f83ba941f57866d73964d4a7ca55b 0\ttest_trial.py\n",
+    "git diff --cached": "",
+    "git diff -- normalize.py": "diff --git a/normalize.py b/normalize.py\nindex 5c78987..214718b 100644\n--- a/normalize.py\n+++ b/normalize.py\n@@ -1,2 +1,7 @@\n def normalize(name):\n-    raise NotImplementedError\n+    if not isinstance(name, str):\n+        raise ValueError(\"name must be a string\")\n+    name = name.strip()\n+    if not name:\n+        raise ValueError(\"name must not be blank\")\n+    return name\n",
+    "python3 --version": "Python 3.14.7\n"
+  },
+  "changed_files": [
+    "<fixture>/lanes/B/normalize.py"
+  ],
+  "index_unchanged": true,
+  "diff_check": 0
+}
