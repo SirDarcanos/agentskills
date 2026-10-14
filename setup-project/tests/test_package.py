@@ -1,5 +1,7 @@
 """Offline structure checks; these do not execute the agent's prose workflow."""
 import re
+import shutil
+import tempfile
 from pathlib import Path
 import unittest
 
@@ -30,6 +32,12 @@ class PackageTests(unittest.TestCase):
 
     def test_setup_package_has_only_package_local_file_links(self):
         self.check_package(ROOT, 'setup-project', command_only=True)
+
+    def test_setup_copied_without_sibling_companions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copied = Path(directory) / 'isolated-setup'
+            shutil.copytree(ROOT, copied)
+            self.check_package(copied, 'setup-project', command_only=True)
 
     def test_domain_companion_packaging_when_present(self):
         companion = ROOT.parent / 'domain-modeling'

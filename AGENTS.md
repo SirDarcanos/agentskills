@@ -10,6 +10,8 @@ Before planning or implementing, read [project context](docs/agents/project.md) 
 
 For #14 delivery-workflow design or implementation, read the [delivery contract](docs/design/delivery-workflow.md), its decision status, and the linked inventory/validation evidence before changing a phase or companion boundary.
 
+Before proposing model assessments or model-service actions, read [workflow authority](docs/agents/workflow.md#authority). No model-use policy has been separately approved here; calls remain disabled. Link an authoritative policy here only after separate approval.
+
 For #48 composable-delivery work, read the [shared design](docs/design/composable-delivery.md), its acceptance status, inventory and validation mapping before changing specialist ownership or migration boundaries. The issue remains the product agreement; proposed design is not implementation or installation authority.
 
 ## Working with skills

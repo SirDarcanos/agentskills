@@ -13,6 +13,8 @@ The maintainer approves implementation scope and consequential changes. Agents m
 | Change repository settings, permissions, labels, or native issue relationships; perform destructive operations | Include the exact changes in an approved task or plan. |
 | Delegate work or invoke an optional assessment | Respect runtime authorization and the invoked skill's consent requirements; no standing delegation permission is granted here. |
 
+For model assessments, consult the policy linked from AGENTS.md when one has been separately approved. An approved policy may authorize exact bounded autonomous consultations only when the assessment package and runtime support that gate; explicit named assessment requests remain subject to project restrictions and package bounds. The lead checks policy fit and reserves shared allowance, and the assessment owner rechecks immediately before sending. Policy establishment through setup performs no calls or service actions. This repository has no separately approved model-use policy: model calls remain disabled until such approval; this task does not opt it in.
+
 Unknown permission remains ungranted. A configured credential, available tool, or documentation preference does not authorize its use. Explicit-invocation-only skills keep their own invocation gates.
 
 ## Branches and pull requests
@@ -53,6 +55,7 @@ Update the authoritative home when an approved change alters its facts; keep pro
 | Qualifying enduring architectural decision | Analysis/implementation: use the same specialist to create or supersede a relevant ADR, preserving rationale and links. Default home is `docs/adr/`, created only for an actual record. |
 | Purpose, maintenance context, or operating constraint | Lead/maintainer: reconcile [project context](project.md) with appropriate approval. |
 | Authority, verification, delivery, or release convention | Lead/change owner: update this document and reconcile any affected configuration through an approved plan. |
+| Model-use permission | Lead/setup: maintain the separately approved policy home linked from AGENTS.md, preserving shared budgets, disclosure, lifecycle, fallback and provenance; no default opt-in. |
 | Tracker capabilities, relationships, or completion rules | Ticketing/change owner: maintain [tracker guidance](issue-tracker.md) and read back approved native changes. |
 | Label vocabulary or application rule | Tracker/change owner: maintain [label guidance](triage-labels.md), actual labels, and affected assignments together. |
 | Product commitments | Delivery lead: update the authoritative spec with maintainer approval; setup does not invent a backlog. |

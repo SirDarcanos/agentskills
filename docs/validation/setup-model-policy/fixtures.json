@@ -1,0 +1,149 @@
+{
+  "kind": "Snapshots of direct agent fixture walkthroughs; not an executable policy engine or model enforcement test",
+  "baseRevision": "a95a9588ff86304f2390cae8d87df4addf7da1d1",
+  "fixtures": [
+    {
+      "name": "none",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "decision": {
+        "status": "complete",
+        "approval": "synthetic N1",
+        "writes": [
+          "docs/agents/model-use.md",
+          "AGENTS.md",
+          "workflow.md"
+        ]
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n\nBefore model proposals/assessments, service actions or permission changes, read [model-use policy](docs/agents/model-use.md).\n",
+        "docs/agents/model-use.md": "# Model-use policy\n\nMode: none for all fixture work. Authorized model requests, retries and spending: zero.\nService startup, installation/downloads, credentials and substitution: ungranted.\nFallback: ordinary engineering; material gaps go to the fixture owner.\nRationale: offline maintenance needs no model assessments.\nApproval: synthetic fixture owner N1; scope is these document edits only, with policy effective for this fixture. Future changes require an exact new approved delta.\n",
+        "workflow.md": "# Fixture workflow\n\nRead [model-use authority](docs/agents/model-use.md) before any model proposal, assessment, lifecycle action or permission change.\nThe lead checks policy fit and reserves shared allowance; the assessment owner rechecks authority, payload, transport and limits immediately before sending. Runtime/package gates still apply. Setup only authors approved documents, with no calls or service operations.\n"
+      },
+      "rerun": "Direct policy read-back selected no delta; no writes"
+    },
+    {
+      "name": "local",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "decision": {
+        "status": "complete",
+        "approval": "synthetic L1",
+        "writes": [
+          "docs/agents/model-use.md",
+          "AGENTS.md",
+          "workflow.md"
+        ],
+        "limitation": "current package explicit-only; no enforcement claim"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n\nBefore model proposals/assessments, service actions or permission changes, read [model-use policy](docs/agents/model-use.md).\n",
+        "docs/agents/model-use.md": "# Model-use policy\n\nMode: bounded, explicit-only until the selected package supports policy-authorized invocation.\nIdentity: ask-clef; Ollama model clef; HTTP endpoint http://127.0.0.1:11434/api/generate. No other model, endpoint or hosted transport.\nPurpose: advisory classification of synthetic issue evidence; deterministic checks and independent review stay separate.\nData: synthetic public-safe text only; no secrets, private material or images. No retained payloads/results.\nShared limits: one fixture work unit L1; 2 attempted requests total, including failures/batches; 0 transport retries; at most 1 evidence-corrected request within those 2 attempts; USD 0 spending. Package ceilings also apply, stricter wins. No automatic expiry/reset; owner approval required to replenish.\nAccounting: fixture lead reserves before send in private conversation ledger; workers request allocations; handoff/resume/new sessions preserve spent/reserved allowance. Unknown charges cannot be treated as zero.\nLifecycle: reuse-only Ollama; leave reused service untouched. Startup, shutdown, install/download and credentials are ungranted.\nFallback: autonomous agent-only assessment allowed if sufficient; explicit requests offer-and-wait unless separately authorized. Named alternatives: none.\nEscalation: no send on denial, conflict, exhaustion or unavailability; report material evidence gaps to fixture owner. Valid insufficient-data requires evidence, not repeated voting.\nRationale: restrict disclosure to a single local route and bound work.\nApproval: synthetic fixture owner L1; exact policy and entry-point document delta only. Publication does not exercise permission or establish package enforcement.\n",
+        "workflow.md": "# Fixture workflow\n\nRead [model-use authority](docs/agents/model-use.md) before any model proposal, assessment, lifecycle action or permission change.\nThe lead checks policy fit and reserves shared allowance; the assessment owner rechecks authority, payload, transport and limits immediately before sending. Runtime/package gates still apply. Setup only authors approved documents, with no calls or service operations.\n"
+      },
+      "rerun": "Direct policy read-back selected no delta; no writes"
+    },
+    {
+      "name": "hosted",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "decision": {
+        "status": "complete",
+        "approval": "synthetic H1",
+        "writes": [
+          "docs/agents/model-use.md",
+          "AGENTS.md",
+          "workflow.md"
+        ],
+        "limitation": "runtime compatibility and paid reservation required before use"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n\nBefore model proposals/assessments, service actions or permission changes, read [model-use policy](docs/agents/model-use.md).\n",
+        "docs/agents/model-use.md": "# Model-use policy\n\nMode: bounded, explicit-only until the selected package supports policy-authorized invocation.\nIdentity: ask-jev; TypeSafe Jev model alias jev-latest, resolved version recorded per response; HTTPS endpoint https://api.typesafe.ai/v1/systemone. No preview, other alias/version or endpoint substitution.\nPurpose: advisory rubric judgment of synthetic public-safe text only; deterministic checks and independent review stay separate.\nData: no private project content, secrets, identifying data or images; minimum relevant excerpts. No retained payloads/results.\nShared limits: entire fixture spec H1 across all tickets/delegates; 2 attempted requests total, including failures/batches; 0 transport retries; at most 1 evidence-corrected request within the 2 attempts; USD 0.05 total. Each request needs a safe worst-case reservation within remaining spend, otherwise blocked; unknown charge stays reserved. Stricter package ceilings apply. No automatic expiry/reset; fixture owner approves replenishment.\nAccounting: root lead owns private conversation ledger; reserve before send, record attempts and reconcile actual usage; workers request bounded allocations. Handoff/resume/new session never reset usage.\nLifecycle: hosted service, no local lifecycle authority. Credential changes, startup, installs and downloads ungranted.\nFallback: autonomous ordinary engineering when sufficient; explicit requests offer-and-wait unless preauthorized. Named alternatives: none.\nEscalation: no send when denied, ambiguous, exhausted, unavailable or paid reservation cannot be established; owner resolves material gaps. Valid insufficient-data is not a retry trigger.\nRationale: optional hosted advice with narrowly bounded disclosure and cost.\nApproval: synthetic fixture owner H1; exact policy/entry-point document delta only. Setup sends nothing and publication proves no runtime enforcement.\n",
+        "workflow.md": "# Fixture workflow\n\nRead [model-use authority](docs/agents/model-use.md) before any model proposal, assessment, lifecycle action or permission change.\nThe lead checks policy fit and reserves shared allowance; the assessment owner rechecks authority, payload, transport and limits immediately before sending. Runtime/package gates still apply. Setup only authors approved documents, with no calls or service operations.\n"
+      },
+      "rerun": "Direct policy read-back selected no delta; no writes"
+    },
+    {
+      "name": "existing",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "policy.md": "# Approved assessment policy\n\nMode: none. Requests/retries/spend: zero. Startup and substitution: none.\nScope: all fixture work. Fallback: ordinary engineering.\nRationale: offline project. Approved: fixture owner, approval E1.\nCustom retention note: preserve verbatim.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\nRead [assessment authority](policy.md) before any model proposal or use.\n"
+      },
+      "decision": {
+        "status": "complete",
+        "writes": [],
+        "decision": "preserve equivalent and E1 provenance; pointer already valid"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "policy.md": "# Approved assessment policy\n\nMode: none. Requests/retries/spend: zero. Startup and substitution: none.\nScope: all fixture work. Fallback: ordinary engineering.\nRationale: offline project. Approved: fixture owner, approval E1.\nCustom retention note: preserve verbatim.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\nRead [assessment authority](policy.md) before any model proposal or use.\n"
+      },
+      "rerun": "Direct policy read-back selected no delta; no writes"
+    },
+    {
+      "name": "missing",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "decision": {
+        "status": "blocked",
+        "writes": [],
+        "decision": "local preference without exact endpoint, disclosure, shared limits or approval cannot authorize a route; ask consequential gaps"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "rerun": "not run"
+    },
+    {
+      "name": "conflict",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "policy.md": "# Approved policy\nMode: none; owner approval C1.\n",
+        "AGENTS.md": "# Fixture instructions\nRead [policy](policy.md).\nHosted Jev is allowed without limits (unattributed older text).\n"
+      },
+      "decision": {
+        "status": "blocked",
+        "writes": [],
+        "decision": "C1 none conflicts with unattributed unlimited hosted text; zero permission expansion pending owner resolution"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "policy.md": "# Approved policy\nMode: none; owner approval C1.\n",
+        "AGENTS.md": "# Fixture instructions\nRead [policy](policy.md).\nHosted Jev is allowed without limits (unattributed older text).\n"
+      },
+      "rerun": "not run"
+    },
+    {
+      "name": "proposal",
+      "before": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "decision": {
+        "status": "plan-only",
+        "writes": [],
+        "decision": "recommend none; approval pending, no target mutations"
+      },
+      "after": {
+        "sentinel.txt": "Unrelated fixture work.\n",
+        "AGENTS.md": "# Fixture instructions\n\nPreserve this custom section.\n"
+      },
+      "rerun": "not run"
+    }
+  ]
+}
