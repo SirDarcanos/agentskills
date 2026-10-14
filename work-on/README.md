@@ -23,6 +23,8 @@ npx skills add SirDarcanos/agentskills --skill tdd
 npx skills add SirDarcanos/agentskills --skill prototype
 # When selecting executable workflow examples first:
 npx skills add SirDarcanos/agentskills --skill acceptance-first
+# When selecting small implementation-first increments:
+npx skills add SirDarcanos/agentskills --skill build-and-check
 # Before selected risky legacy changes:
 npx skills add SirDarcanos/agentskills --skill characterize
 # Only for meaning/model or qualifying ADR changes:
@@ -38,6 +40,8 @@ The entry needs file inspection and, where relevant, read-only Git/tracker acces
 Test-first development uses the discovered compatible `tdd` companion for red–green–refactor and local evidence; direct build retains method choice and subsequent delivery gates. Missing or incompatible TDD blocks that selected route without invoking an older installed procedure. Other direct-build methods remain available under the target's policy. Stage the updated Work On package with TDD when using that route.
 
 Acceptance-first selection uses discovered compatible `acceptance-first` for executable observable workflow examples, checked implementation increments and criterion-level local evidence. Stage Work On with Acceptance First for that route; missing/incompatible helpers, ambiguous commitments and unavailable material boundaries block the dependent claim rather than weakening acceptance. The lead retains verification/review gates.
+
+Implementation-first selection uses discovered compatible `build-and-check` for small increments with immediate relevant checks, sufficient existing coverage reuse and proportionate non-code validation. Stage Work On with Build and Check for that route; material failed/unrun checks stop dependent progress. The companion returns local evidence, while Work On retains verification/review gates. Missing/incompatible helpers block the selected route without a duplicated loop.
 
 Characterization-first selection uses discovered compatible `characterize` to return protected boundaries, baseline provenance, sensitivity and nondeterminism limits before implementation. Intended behavior, unknown intent and known defects remain separate; the lead selects the next method and delivery gates. Stage Work On with Characterize for that route; missing or incompatible capture blocks only the dependent route.
 
