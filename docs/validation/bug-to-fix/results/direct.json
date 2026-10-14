@@ -1,0 +1,16 @@
+{
+  "acceptance": "D1",
+  "after": {
+    "check.py": "26d153b295bce7923f3076bce9931f4fc84df2301c5297db534d23de5ae4e4a7",
+    "display.py": "d7ca4fa482c8a9fd2ffef7950de8c15d94ac62c216a616bcf7fce57b6bcbd85e"
+  },
+  "before": {
+    "check.py": "26d153b295bce7923f3076bce9931f4fc84df2301c5297db534d23de5ae4e4a7",
+    "display.py": "70d1f0cf57d2f9dd6e4b1d86ec2951abeef607c791243c2efb3871513905ad9f"
+  },
+  "limitations": "Presentation only, not a currency rounding contract or delivery acceptance",
+  "method": "build-and-check",
+  "tests_added": 0,
+  "tests_removed": 0,
+  "tests_updated": 0
+}

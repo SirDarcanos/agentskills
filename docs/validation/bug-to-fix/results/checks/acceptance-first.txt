@@ -1,0 +1,25 @@
+{"criterion": "AC3", "state": "blocked", "verified": false, "reason": "owner decision required"}
+{"quantity": 2, "observed": {"receipt": {"status": "accepted", "quantity": 2}, "rows": []}}
+{"quantity": 2, "observed": {"receipt": {"status": "accepted", "quantity": 2}, "rows": [[2]]}}
+{"quantity": 0, "observed": {"receipt": {"status": "rejected"}, "rows": [[0]]}}
+{"quantity": 0, "observed": {"receipt": {"status": "rejected"}, "rows": []}}
+{"criterion": "AC4", "state": "unverified", "verified": false, "reason": "material remote gateway unavailable; no substitute pass"}
+{"quantity": 2, "observed": {"receipt": {"status": "pending"}, "rows": []}}
+AC1 meaningful red: runnable workflow returns pending, not receipt
+{"quantity": 2, "observed": {"receipt": {"status": "accepted", "quantity": 2}, "rows": [[2]]}}
+{"quantity": 0, "observed": {"receipt": {"status": "accepted", "quantity": 0}, "rows": [[0]]}}
+AC2 meaningful red: nonpositive quantity accepted
+{"quantity": 2, "observed": {"receipt": {"status": "accepted", "quantity": 2}, "rows": [[2]]}}
+{"quantity": 0, "observed": {"receipt": {"status": "rejected"}, "rows": []}}
+{"quantity": -1, "observed": {"receipt": {"status": "rejected"}, "rows": []}}
+AC1/AC2 verified: API -> workflow -> SQLite; acceptance unchanged
+test_ambiguous_commitment_blocks_without_edit (__main__.AcceptanceFixture.test_ambiguous_commitment_blocks_without_edit) ... ok
+test_cross_component_persistence_regression (__main__.AcceptanceFixture.test_cross_component_persistence_regression) ... ok
+test_rejection_side_effect_regression (__main__.AcceptanceFixture.test_rejection_side_effect_regression) ... ok
+test_unavailable_material_boundary_never_passes (__main__.AcceptanceFixture.test_unavailable_material_boundary_never_passes) ... ok
+test_workflow_red_two_increments_green (__main__.AcceptanceFixture.test_workflow_red_two_increments_green) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.238s
+
+OK

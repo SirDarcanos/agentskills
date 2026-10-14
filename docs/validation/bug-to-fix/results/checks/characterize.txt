@@ -1,0 +1,17 @@
+Synthetic characterization: subprocess timeout 5s, at most 10 executions; no network.
+CORRECTION simulation: intended shipping protected; old defect not required.
+DEFECT diagnostic: subtotal 7, intended 10; excluded from protection gate.
+{"baseline": [{"actual": {"audit": true, "receipt": "9aabae3c-c1fb-4297-985b-2d20ac5c10bc", "shipping": 0, "subtotal": 0}, "input": []}, {"actual": {"audit": true, "receipt": "8582f5ed-5a0e-44f0-b169-86a1f3bda2fc", "shipping": 5, "subtotal": 10}, "input": [10]}, {"actual": {"audit": true, "receipt": "1e4cb1ea-0c5c-41f6-a4ac-04d5a6a612cb", "shipping": 5, "subtotal": 7}, "input": [10, -3]}], "contract": {"defect": "Negative item prices should contribute zero, not reduce subtotal.", "intended": "Shipping is 5 units for nonempty orders, 0 for empty orders.", "source": "synthetic owner agreement, revision 1", "unknown": "Receipt token format and audit flag intent are unspecified."}, "source_sha256": "83f5a9e1cb4d6b317ca19caf72955c86afdfa2a8dc1e3db7156a1171c35ecc99"}
+{"comparison": "shipping only; receipt intent unknown", "limit": "No token-format, ordering, concurrency or stability guarantee", "raw": [{"audit": true, "receipt": "b4dbf787-f99c-4e6a-a2d0-bcb4f428efd9", "shipping": 5, "subtotal": 10}, {"audit": true, "receipt": "f43b7fec-92a8-45d8-a5d9-67cbee7bf356", "shipping": 5, "subtotal": 10}, {"audit": true, "receipt": "085d7fb1-a7b7-40a8-9842-f958c41629b0", "shipping": 5, "subtotal": 10}], "repeats": 3, "variation": "observed"}
+UNKNOWN: audit True observed; no authority to make it desired acceptance.
+SENSITIVITY: isolated shipping mutation detected for intended reason; original green.
+test_defect_correction_is_allowed_by_protection (__main__.CharacterizationFixture.test_defect_correction_is_allowed_by_protection) ... ok
+test_defect_reproduction_is_not_acceptance (__main__.CharacterizationFixture.test_defect_reproduction_is_not_acceptance) ... ok
+test_intended_baseline (__main__.CharacterizationFixture.test_intended_baseline) ... ok
+test_nondeterminism_is_reported_not_snapshotted (__main__.CharacterizationFixture.test_nondeterminism_is_reported_not_snapshotted) ... ok
+test_relevant_mutation_fails_then_original_passes (__main__.CharacterizationFixture.test_relevant_mutation_fails_then_original_passes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.212s
+
+OK

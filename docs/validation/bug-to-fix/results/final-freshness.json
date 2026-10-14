@@ -1,0 +1,107 @@
+{
+  "active_workers": 0,
+  "candidate_discovery_unchanged": true,
+  "finding_disposition": {
+    "S-71-01": "resolved: sanitization regression and refreshed logs",
+    "S71-1": "resolved: both PR impact reports inspected in renewed review",
+    "S71-2": "resolved: portable tracebacks",
+    "S71-3": "resolved: source/environment fingerprints",
+    "STD-71-1": "deferred nonmaterial collector improvement; shared tracker is pinned and compared by sources.json in this run; future reuse must compare it explicitly"
+  },
+  "gates": {
+    "accept": "ready-to-accept local trial, no material findings; maintainer acceptance/merge pending",
+    "build": "pass for approved local trial",
+    "report": "pass with stated limitations"
+  },
+  "helper_result": {
+    "changed_fields": [],
+    "status": "matching-listed-paths"
+  },
+  "optional_assessment_attempts": 0,
+  "per_job_inputs_current": true,
+  "post_review_reporting_delta": {
+    "agreement_eof_normalization": {
+      "equivalence": "Only surplus final newline removed from copied issue body; Markdown content, task authority and acceptance unchanged; affected handoff checks refreshed",
+      "new_sha256": "c2b4c7a33b9cf5b2cb6a5d33a2149f0b090e87c05d524388bc54a08e522ffe08",
+      "old_sha256": "724e6d186da09d635d5df91d64e51e7ba3ca694462672cdaa6aae1ce30710cf8"
+    },
+    "appendices": "Final report/review/freshness metadata only; checked implementation and all product assertions unchanged",
+    "refresh_outcome": {
+      "checked_inputs_current": true,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "docs/validation/bug-to-fix",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "evidence": "checks/handoffs.txt",
+      "exit": 0,
+      "passed_tests": 7
+    },
+    "refresh_setup_failure": {
+      "cause": "One-off caller passed relative path to absolute-root manifest helper",
+      "evidence": "checks/normalization-refresh-failed.txt",
+      "exit": 1,
+      "next_action": "Retry same check with resolved absolute source directory",
+      "source_changed": false,
+      "tests_executed": false
+    },
+    "retained_review_basis": "Non-significant reporting/whitespace delta; both axes still cover all behavior and criteria; root direct-inspected delta"
+  },
+  "protected_content_index_mode_link_unchanged": true,
+  "reviewed_manifest": {
+    "docs/validation/bug-to-fix/README.md": "da3f7bb1ceb81fbe72867daa2be29fb30575de47e91eabc45187455d322b3068",
+    "docs/validation/bug-to-fix/agreement.md": "724e6d186da09d635d5df91d64e51e7ba3ca694462672cdaa6aae1ce30710cf8",
+    "docs/validation/bug-to-fix/fixture-pr-report.md": "857aa0c3e7a282b3896e22dcd76a5fe41ec8e82f9d516f0edf01a70e9c3fc9e4",
+    "docs/validation/bug-to-fix/pr-report.md": "840aa2cca3d8f0629728ff63bc0d1a300771ea612fd5e2cda9d5d1063c261264",
+    "docs/validation/bug-to-fix/results/branches.json": "32ac8ca92c19a8dead9dbd6d1041e31ad02f289936d804f708d4c17b0b998ad8",
+    "docs/validation/bug-to-fix/results/checks/acceptance-first.txt": "28eecc5e2b105388126f2068fa9fd2b0a142d6a21a3e98e9067bb6b0fb8cdf3c",
+    "docs/validation/bug-to-fix/results/checks/ask-clef-flash.txt": "a595b3c5de4405153d17b237f56377b6fc7f7cbff8dc2e20a0186924b434cae0",
+    "docs/validation/bug-to-fix/results/checks/ask-clef.txt": "b93c2b248014f3425d3a38fa1fc0f516b964321cba13114c26b15a858242d50d",
+    "docs/validation/bug-to-fix/results/checks/ask-jev.txt": "485628e9760411b51a7f6efeab79ea915efefd3d8e0f32f2c8db6b53431d5778",
+    "docs/validation/bug-to-fix/results/checks/ask-nimble.txt": "12f96ec041a084051dcaebee8b53854f2a8c28a044b9c2fe5aad184335db42c4",
+    "docs/validation/bug-to-fix/results/checks/build-and-check.txt": "a246cdf5419dd723a3bcc5de6a3ecbf8b6e98447e52c3f30d8d6b86182b4ecca",
+    "docs/validation/bug-to-fix/results/checks/characterize.txt": "d5cd57216986a665fdd208d8f32e91f1de0324ea31c01896afad6ab1aec3d149",
+    "docs/validation/bug-to-fix/results/checks/handoffs.txt": "8c2e3db6ff80e785b6de4da2816b2c876ca28e342beab8d65cd26e198920dec1",
+    "docs/validation/bug-to-fix/results/checks/investigation.txt": "797aef6b64565abdf465df8150861380846632de7e67c19f279f347d20f6cc0e",
+    "docs/validation/bug-to-fix/results/checks/prototype.txt": "c59b690b9e064e4bb44c655e972c6b926268e9c1ea6f36925ca13d8ec5b581e1",
+    "docs/validation/bug-to-fix/results/checks/summary.json": "d43229dadfb045cd6b37a64b9856bf1d2b4423839a6c2b12782dac643d127220",
+    "docs/validation/bug-to-fix/results/checks/tdd.txt": "a7715128f6c855f87d1249597aec39959820bccb858704d748a73bebf60056fb",
+    "docs/validation/bug-to-fix/results/commands.json": "62ac7af65dec329b41a95f5bbbabe5e4f20d2218e3b1d9591b9afe63807883df",
+    "docs/validation/bug-to-fix/results/direct.json": "62110077b22c6af664cdb8dc772b0231a1379539420bb9da87ee98d9518efac8",
+    "docs/validation/bug-to-fix/results/direct/check.py": "26d153b295bce7923f3076bce9931f4fc84df2301c5297db534d23de5ae4e4a7",
+    "docs/validation/bug-to-fix/results/direct/display.py": "d7ca4fa482c8a9fd2ffef7950de8c15d94ac62c216a616bcf7fce57b6bcbd85e",
+    "docs/validation/bug-to-fix/results/dirty-scope.json": "f5b93970091fdd0156805a8f21d9026f8e6eed57ced3cf482d3d991c5bf17bfb",
+    "docs/validation/bug-to-fix/results/initial-freshness.json": "0054afe7effc653d2359dd91b9fbfc5102435103f76b6fbcf321a423ebcb46cc",
+    "docs/validation/bug-to-fix/results/investigation-stop.json": "2e9826a7778566030e07344f3cedf158dba9eae5a57f08cba355218676bc5450",
+    "docs/validation/bug-to-fix/results/reviews/initial-spec.md": "dd69e99da6f299a8685ddd278fab9fcdd3f964b860613260fa8f0cf520284c81",
+    "docs/validation/bug-to-fix/results/reviews/initial-standards.md": "8e844c7082c314290fdad76342666ed238250c3b32d4c5c667e0e4f7dec5690f",
+    "docs/validation/bug-to-fix/results/reviews/receipts.json": "12e926ba11dbdefbe16a80d2077da80f47dc4810c7dcb585f78620dd9512efd5",
+    "docs/validation/bug-to-fix/results/sources.json": "55b0ebc48f4f606718ba69748223599e54075abc6f15d0c67ad27a0e7b8859f0",
+    "docs/validation/bug-to-fix/results/staged.patch": "bf6f600272e2ca38a693b5b591fe35a1ff1b5045e00e5e205fc9b335b68284be",
+    "docs/validation/bug-to-fix/results/state.json": "a771d68320b6de80a08e040eb4e804210e32da098f5bef5aae9efea70567d06c",
+    "docs/validation/bug-to-fix/results/status.txt": "c2541a98d0e301bae27a6c7af82f8ed3983885f2cb9a906fb83bfe0de6795a14",
+    "docs/validation/bug-to-fix/results/target/AGREEMENT.md": "6d4e81a4293a7dacf55a45e6f37ae01812a7ba325c30655c7c1398945189ede4",
+    "docs/validation/bug-to-fix/results/target/caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+    "docs/validation/bug-to-fix/results/target/pricing.py": "0b5abd7cd68d60e4c7261ce311cd14608a32abe1d01f5d5a98888a4fa7459b08",
+    "docs/validation/bug-to-fix/results/target/reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+    "docs/validation/bug-to-fix/results/target/test_discount.py": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52",
+    "docs/validation/bug-to-fix/results/target/test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4",
+    "docs/validation/bug-to-fix/results/ticket.json": "7b1ea90fa5872800bb065d57a0143d1de2756532c7460caac11402ef2166d47e",
+    "docs/validation/bug-to-fix/results/tracker.json": "54cc9c1402b9c47323229137b8c7e00ff53a33d544a509089d38cbf576a00165",
+    "docs/validation/bug-to-fix/results/unstaged.patch": "7a4556708cad9450d1a7b10b3d531405558180fcbfecb74c5a8af2d67beb5c29",
+    "docs/validation/bug-to-fix/run_checks.py": "9107e9224e57e3c951026bd229bc62dc51e7d5a0202828ec4124f0a6b055037b",
+    "docs/validation/bug-to-fix/run_fixture.py": "015a37f4246ecad86c2e5d3e0dae1dcf79ee00dda07feae74fd82572d5d40535",
+    "docs/validation/bug-to-fix/test_handoffs.py": "e42b1fc36ac9b990a73041f6a08bef23c0628d34d4d6fff2c9bfe63878382377"
+  },
+  "reviewed_manifest_unchanged": true,
+  "root_automatic_repair_cycles_spent": 1,
+  "root_checkpoint": "bug-to-fix-71",
+  "supporting_sources_unchanged": true
+}

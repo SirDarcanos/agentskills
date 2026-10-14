@@ -1,0 +1,23 @@
+check exit=0: existing behavior/config/link checks: PASS
+check exit=0: existing behavior/config/link checks: PASS
+code increment: PASS; existing harness unchanged, zero new target tests
+check exit=0: existing behavior/config/link checks: PASS
+check exit=0: existing behavior/config/link checks: PASS
+documentation then configuration: PASS; each checked before continuing
+check exit=1: Traceback (most recent call last):
+  File "<scratch>/check.py", line 5, in <module>
+    assert slug("  Hello   World  ") == "hello-world"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+material behavior failure: BLOCKED; dependent artifact absent
+check exit=0: existing behavior/config/link checks: PASS
+unavailable material consumer: BLOCKED/unverified (reporting oracle only)
+test_code_increment_reuses_existing_coverage (__main__.Fixture.test_code_increment_reuses_existing_coverage) ... ok
+test_documentation_and_configuration_increments (__main__.Fixture.test_documentation_and_configuration_increments) ... ok
+test_failure_stops_dependent_increment_then_rechecks (__main__.Fixture.test_failure_stops_dependent_increment_then_rechecks) ... ok
+test_unavailable_check_remains_unverified (__main__.Fixture.test_unavailable_check_remains_unverified) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.151s
+
+OK

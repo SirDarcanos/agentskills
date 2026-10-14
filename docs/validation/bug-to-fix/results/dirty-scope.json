@@ -1,0 +1,52 @@
+{
+  "base": "5fbaa7f0ea2c5f8a5be8f80655848cf2cbf5447a",
+  "branch": "fix/fractional-discount",
+  "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "files": {
+    "AGREEMENT.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "6d4e81a4293a7dacf55a45e6f37ae01812a7ba325c30655c7c1398945189ede4"
+    },
+    "caller.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c"
+    },
+    "pricing.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "0b5abd7cd68d60e4c7261ce311cd14608a32abe1d01f5d5a98888a4fa7459b08"
+    },
+    "reproduction.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86"
+    },
+    "test_discount.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52"
+    },
+    "test_existing.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    }
+  },
+  "format": 1,
+  "head": "5fbaa7f0ea2c5f8a5be8f80655848cf2cbf5447a",
+  "index_sha256": "433ec278105c7ac50f3b572c839b0abab0b227a1ab552107b39e041264861e10",
+  "paths": [
+    "AGREEMENT.md",
+    "caller.py",
+    "pricing.py",
+    "reproduction.py",
+    "test_discount.py",
+    "test_existing.py"
+  ],
+  "root": "<workspace>/target",
+  "staged_sha256": "ec3cfd85443e84c141d5332dc6c4ce2dadd248d022588ccf6f9302f445770530",
+  "status_sha256": "61d43cda3a31a2fb2c417667e39c0f986455fd75e25bd43d0b09e13f524270d4",
+  "unstaged_sha256": "ea4b20713f34c753d13c9dcf8d7b641109907b023def6649469c694cbb33c305"
+}
