@@ -1,0 +1,26 @@
+{
+  "python": "3.14.7",
+  "platform": "Darwin",
+  "base_and_precommit_head": "bc48d2a3aee1b341da666b908290ca8ec00d359b",
+  "scope": "dirty checker repair reviewed against bc48d2a; full fingerprint matched after both reviewers returned, before administrative report retention",
+  "replay_task": "bd85ef83c",
+  "replay_command": "python3 -B run_fixture.py <new temporary output directory>; actual full command and bounds in repair-review.md",
+  "replay_log": "results/repair-run.txt",
+  "replay_input_identities": "results/execution.json identities remain current; original fixture and source artifacts unchanged",
+  "source_sha256": {
+    "docs/validation/delivery-coverage/check_packages.py": "3b33fe24e58f8e58f7c995a979a167a04a46adc80471e12c43780e0bc925daaa",
+    "docs/validation/delivery-coverage/test_package_invocation.py": "2162acd9067d8374927ad92ff514369dc9e8402ca43a1338abf44e9749c7368d",
+    "docs/validation/shape-work/check.py": "23588f7b70fe1eeb36e16c36f5aeccc61f59e0aa3f34789eaca7d0bfcc1944d1",
+    "docs/validation/write-spec/check.py": "7c1264ac3f359fc974a64612d73f3010acf6eeebcb1d131de70750165d6bef92",
+    "docs/validation/write-tickets/check.py": "287466866df2847603e1b326322ed83e154d3e1adf807ef6495b789ef7281958",
+    "docs/validation/discovery-spec-tickets/check.py": "5552a7401ee99557d725d766b50a5a8eb860812bcb8218f4dc80eb119aa7d240",
+    "docs/validation/discovery-spec-tickets/run_fixture.py": "794fdddf60071312f6010b67f4e93c7375f51329aa8074cffedffca993e342a8"
+  },
+  "review_workflow": "5850a0a0-3ec7-4a9e-a25e-b31b428a29ab",
+  "review_contexts": {
+    "Standards": "b32f2543-6ef6-4ff0-a48b-aa47c3710112",
+    "Spec": "f59fd97e-e9cf-4c5d-b1aa-25ee66d14340"
+  },
+  "private_snapshot_sha256": "6c1665784efccca9a6f18e63fdb63d9f75a3925aa363ff47c888c9a06287fad4",
+  "limits": "ordinary observed execution and static independent review; not execution attestation, no independent test rerun"
+}

@@ -27,7 +27,7 @@ def main():
     assert (REPO / "write-spec/LICENSE").read_bytes() == expected_notice
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))
-    for name, command_only in (("write-spec", False), ("work-on", True), ("shape-work", False)):
+    for name, command_only in (("write-spec", False), ("work-on", False), ("shape-work", False)):
         checks.check_package(REPO / name, name, command_only, notice)
         with tempfile.TemporaryDirectory(prefix="spec-isolation-") as temp:
             isolated = Path(temp) / "catalog" / "not-a-sibling"

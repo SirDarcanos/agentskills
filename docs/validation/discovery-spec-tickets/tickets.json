@@ -1,0 +1,24 @@
+{
+  "repository": "example/project",
+  "spec": {
+    "title": "Select next books",
+    "body_file": "spec.md",
+    "labels": ["spec", "reading-list"]
+  },
+  "tickets": [
+    {
+      "key": "PIN",
+      "title": "Add personal next-read selection",
+      "labels": ["implementation-step", "enhancement", "reading-list"],
+      "body": "Owning agreement: spec.md P1–P3; technical.md. Outcome: own-list pin/unpin with stable pinned and ordinary groups, saved relative order, lossless undo and reader isolation. Scope: coupled selection state and reading_page presentation in the synthetic in-memory reading list, with stable fixture book identities and per-reader selections. Acceptance: P1 multiple pinned books retain saved group order; P2 unpin restores ordinary position with no duplicates or lost entries, empty stays empty; P3 reject other-reader selection without modifying either reader's selection state or exposing content. Verification planned: TDD behavior examples plus existing input-order/privacy/empty regressions. No feature checks have run. Exclusions: reminders, sharing, manual pin ordering, durable storage, production UI, installs and service/model calls. Protected: unrelated books, reader state and existing repository artifacts. Native parent: SPEC; no scheduling blocker. One cohesive state/presentation owner. Product fixture approval: input.md turns 1–2; publication authority: input.md exact fake publication fixture. No automatic readiness, worker launch, closure or build authority."
+    },
+    {
+      "key": "VERIFY",
+      "title": "Validate next-read ordering and isolation",
+      "labels": ["implementation-step", "reading-list"],
+      "body": "Owning agreement: spec.md P1–P3; technical.md. Outcome: retained acceptance evidence for integrated selection and presentation. Scope: inspect and execute observable examples after PIN is integrated; report P1 multiple-pin ordering, P2 undo/empty/no-loss, P3 other-reader rejection and isolation. Verification planned: run PIN examples and baseline regressions against the integrated source; inspect raw expected/actual results and deciding input identities. Passing child tests alone are not production acceptance. Exclusions: implementation repair, new product commitments, reminders, sharing, manual order, durability or production UI certification. Protected: PIN code and unrelated repository artifacts. Native parent: SPEC. VERIFY is blocked by PIN because its checks consume the new integrated behavior. No artificial dependency on the spec itself. One bounded validation owner; no scheduling/worker launch, readiness, closure, merge or release authority. Publication approval: input.md exact fake publication fixture."
+    }
+  ],
+  "parents": [{"parent": "SPEC", "child": "PIN"}, {"parent": "SPEC", "child": "VERIFY"}],
+  "dependencies": [{"blocked": "VERIFY", "by": "PIN"}]
+}

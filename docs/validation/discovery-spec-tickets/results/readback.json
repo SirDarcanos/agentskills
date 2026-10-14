@@ -1,0 +1,435 @@
+{
+  "bindings": {
+    "SPEC": {
+      "number": 1,
+      "id": 9001,
+      "title": "Select next books",
+      "body": "# Select next books\n\nAuthoritative synthetic spec home: this file. Fixture approval is [input turns 1\u20132](input.md#discovery-request-and-scripted-owner-turns), consumed through the [actual discovery brief](brief.md). This is an approved fixture agreement, not maintainer consent for a real product. The fake tracker mirrors this file; revisions belong here.\n\n## Outcome and rationale\n\nA reader can find personally selected next books without losing saved list order or exposing another reader's list. Existing own-list filtering and empty-list behavior remain.\n\n| ID | Observable acceptance |\n| --- | --- |\n| P1 | Pinning an own-list book puts it in the next-read group above ordinary books; saved relative order is preserved within each group, including multiple pinned books. |\n| P2 | Unpinning returns the book to its ordinary saved-order position without dropping or duplicating entries; an empty list stays empty. |\n| P3 | Pin/unpin affects only the acting reader's own list; other readers' selections and visible entries are unchanged. |\n\nRequired now: P1\u2013P3. Deferred: reminders until the list is larger, then reconsider. Excluded: sharing because the workflow is personal. Accepted limitation: no manual pin ordering, approved by scripted turn 2. Pin means next-read selection, not reservation or reading status; the bounded domain plan remains unapplied, with no glossary/ADR prerequisite for this fixture's self-contained definition.\n\n## Agreement, readiness and publication\n\nNo changed commitment, new proposal or unresolved product intent was introduced while assigning P1\u2013P3. R1 source support is reused; baseline checks prove existing behavior only. Technical readiness is separate and assessed in [the technical return](technical.md); pinning remains unimplemented. Source/environment changes require targeted freshness inspection, not a new product interview.\n\nLocal retention is authorized. A separate exact fixture publication request in [input](input.md#exact-fake-publication-fixture) permits the spec mirror with mapped spec role only, not automatic readiness, ticket creation or native graph changes during spec publication. Standalone spec writing stops here; the caller must inspect this artifact and choose any further authorized responsibility. No delivery acceptance, merge or installation follows.\n",
+      "labels": [
+        "spec",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    },
+    "PIN": {
+      "number": 2,
+      "id": 9002,
+      "title": "Add personal next-read selection",
+      "body": "Owning agreement: spec.md P1\u2013P3; technical.md. Outcome: own-list pin/unpin with stable pinned and ordinary groups, saved relative order, lossless undo and reader isolation. Scope: coupled selection state and reading_page presentation in the synthetic in-memory reading list, with stable fixture book identities and per-reader selections. Acceptance: P1 multiple pinned books retain saved group order; P2 unpin restores ordinary position with no duplicates or lost entries, empty stays empty; P3 reject other-reader selection without modifying either reader's selection state or exposing content. Verification planned: TDD behavior examples plus existing input-order/privacy/empty regressions. No feature checks have run. Exclusions: reminders, sharing, manual pin ordering, durable storage, production UI, installs and service/model calls. Protected: unrelated books, reader state and existing repository artifacts. Native parent: SPEC; no scheduling blocker. One cohesive state/presentation owner. Product fixture approval: input.md turns 1\u20132; publication authority: input.md exact fake publication fixture. No automatic readiness, worker launch, closure or build authority.",
+      "labels": [
+        "implementation-step",
+        "enhancement",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    },
+    "VERIFY": {
+      "number": 3,
+      "id": 9003,
+      "title": "Validate next-read ordering and isolation",
+      "body": "Owning agreement: spec.md P1\u2013P3; technical.md. Outcome: retained acceptance evidence for integrated selection and presentation. Scope: inspect and execute observable examples after PIN is integrated; report P1 multiple-pin ordering, P2 undo/empty/no-loss, P3 other-reader rejection and isolation. Verification planned: run PIN examples and baseline regressions against the integrated source; inspect raw expected/actual results and deciding input identities. Passing child tests alone are not production acceptance. Exclusions: implementation repair, new product commitments, reminders, sharing, manual order, durability or production UI certification. Protected: PIN code and unrelated repository artifacts. Native parent: SPEC. VERIFY is blocked by PIN because its checks consume the new integrated behavior. No artificial dependency on the spec itself. One bounded validation owner; no scheduling/worker launch, readiness, closure, merge or release authority. Publication approval: input.md exact fake publication fixture.",
+      "labels": [
+        "implementation-step",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    }
+  },
+  "children": [
+    {
+      "number": 2,
+      "id": 9002,
+      "title": "Add personal next-read selection",
+      "body": "Owning agreement: spec.md P1\u2013P3; technical.md. Outcome: own-list pin/unpin with stable pinned and ordinary groups, saved relative order, lossless undo and reader isolation. Scope: coupled selection state and reading_page presentation in the synthetic in-memory reading list, with stable fixture book identities and per-reader selections. Acceptance: P1 multiple pinned books retain saved group order; P2 unpin restores ordinary position with no duplicates or lost entries, empty stays empty; P3 reject other-reader selection without modifying either reader's selection state or exposing content. Verification planned: TDD behavior examples plus existing input-order/privacy/empty regressions. No feature checks have run. Exclusions: reminders, sharing, manual pin ordering, durable storage, production UI, installs and service/model calls. Protected: unrelated books, reader state and existing repository artifacts. Native parent: SPEC; no scheduling blocker. One cohesive state/presentation owner. Product fixture approval: input.md turns 1\u20132; publication authority: input.md exact fake publication fixture. No automatic readiness, worker launch, closure or build authority.",
+      "labels": [
+        "implementation-step",
+        "enhancement",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    },
+    {
+      "number": 3,
+      "id": 9003,
+      "title": "Validate next-read ordering and isolation",
+      "body": "Owning agreement: spec.md P1\u2013P3; technical.md. Outcome: retained acceptance evidence for integrated selection and presentation. Scope: inspect and execute observable examples after PIN is integrated; report P1 multiple-pin ordering, P2 undo/empty/no-loss, P3 other-reader rejection and isolation. Verification planned: run PIN examples and baseline regressions against the integrated source; inspect raw expected/actual results and deciding input identities. Passing child tests alone are not production acceptance. Exclusions: implementation repair, new product commitments, reminders, sharing, manual order, durability or production UI certification. Protected: PIN code and unrelated repository artifacts. Native parent: SPEC. VERIFY is blocked by PIN because its checks consume the new integrated behavior. No artificial dependency on the spec itself. One bounded validation owner; no scheduling/worker launch, readiness, closure, merge or release authority. Publication approval: input.md exact fake publication fixture.",
+      "labels": [
+        "implementation-step",
+        "reading-list"
+      ],
+      "repository_url": "https://api.github.com/repos/example/project"
+    }
+  ],
+  "blocker_report": {
+    "status": "verified",
+    "repository": "example/project",
+    "added": 1,
+    "edges": 1
+  },
+  "rerun": {
+    "status": "verified",
+    "repository": "example/project",
+    "added": 0,
+    "edges": 1
+  },
+  "pages": [
+    [
+      "1/sub_issues",
+      1
+    ],
+    [
+      "1/sub_issues",
+      2
+    ],
+    [
+      "3/dependencies/blocked_by",
+      1
+    ],
+    [
+      "2/dependencies/blocking",
+      1
+    ],
+    [
+      "2/dependencies/blocked_by",
+      1
+    ],
+    [
+      "3/dependencies/blocked_by",
+      1
+    ],
+    [
+      "2/dependencies/blocking",
+      1
+    ],
+    [
+      "3/dependencies/blocked_by",
+      1
+    ],
+    [
+      "2/dependencies/blocking",
+      1
+    ],
+    [
+      "3/dependencies/blocked_by",
+      1
+    ],
+    [
+      "2/dependencies/blocking",
+      1
+    ],
+    [
+      "2/dependencies/blocked_by",
+      1
+    ],
+    [
+      "3/dependencies/blocked_by",
+      1
+    ],
+    [
+      "2/dependencies/blocking",
+      1
+    ]
+  ],
+  "requests": [
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "1/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "1/sub_issues",
+      "POST",
+      {
+        "sub_issue_id": 9002
+      },
+      false
+    ],
+    [
+      "1/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "1/sub_issues",
+      "POST",
+      {
+        "sub_issue_id": 9003
+      },
+      false
+    ],
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "POST",
+      {
+        "issue_id": 9002
+      },
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "1/sub_issues",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/parent",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "2/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "3",
+      "GET",
+      null,
+      false
+    ],
+    [
+      "3/dependencies/blocked_by",
+      "GET",
+      null,
+      true
+    ],
+    [
+      "2/dependencies/blocking",
+      "GET",
+      null,
+      true
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+Root/evidence links: 32
+Settled-case deciding source remains unchanged: 8bd75d96a037084637b56b5d10703d1ffbc3ac49771ee3e0d6d8eea57874cc71
+Offline structural checks and baseline tests only; no autonomous routing assertion.
+test_empty (__main__.Baseline.test_empty) ... ok
+test_input_order (__main__.Baseline.test_input_order) ... ok
+test_privacy (__main__.Baseline.test_privacy) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

@@ -1,0 +1,59 @@
+{
+  "python": "3.14.7",
+  "platform": "Darwin",
+  "input_revision": "330bf0736519b4b96a873050bb542924b1f2fa38",
+  "identities": {
+    "docs/validation/shape-work/reading_list.py": "8bd75d96a037084637b56b5d10703d1ffbc3ac49771ee3e0d6d8eea57874cc71",
+    "setup-project/scripts/dependencies.py": "a9da14c303ff12bdd7d5df74f821e55a54830d35f62306dc9e78dae483399e3a",
+    "docs/validation/write-tickets/tracker_fixture.py": "908ab217fe66f87c81f07adef2bc2dddd8454926d90574de70c56022f9863ec2",
+    "shape-work/SKILL.md": "a5ff4a8ad043ab361f1ea3fc8d1d4b23ea8a5e6630b5c3db2136369a095b7fa1",
+    "write-spec/SKILL.md": "26698eaa38cb46acd7a57a97fbdac4e02e21dac1d9c7942daf4477062edb57ec",
+    "write-tickets/SKILL.md": "4a7fd53c25d85f5c117a3849522f69a3006f0375c3df4513636616a3b0076cab",
+    "analyze/SKILL.md": "9eb3bb1fed0f6d5b3985a3ae0ac844159394277cdb3ad6d77ec62d406f45f811",
+    "research/SKILL.md": "acf66c8af6f90af79c1896addec717bfe53b8655483ab09ef535109713695aa4",
+    "domain-modeling/SKILL.md": "aae04989a6039707b20ca44c65b2fb9ebc0a7b35f408fc46f4ded5446ca21986",
+    "setup-project/SKILL.md": "ca5a7bd5d350c487430f6adc72c8ddb0b8dd2f49b6f952fc6508ace4fa0c1f29",
+    "tdd/SKILL.md": "a76bfda94990416963fabfaf4104ee80a0c694322411c76c0384137f1da7c30e",
+    "docs/validation/discovery-spec-tickets/input.md": "3369fd894376a659498bb21f437bac6f8126e0b3d8573f62543f3690340105ab",
+    "docs/validation/discovery-spec-tickets/brief.md": "4416c758bceb680827aa0e156344c19289679a482272ac97754b0dd739149b1d",
+    "docs/validation/discovery-spec-tickets/spec.md": "e7968d03da8682c936a85aafed70db9eff709771e10c6275f866ebd616993dec",
+    "docs/validation/discovery-spec-tickets/technical.md": "7ff001b5604a3ad4877e4b9651ffb30885e23fa2faff3dca07e8017035a14869",
+    "docs/validation/discovery-spec-tickets/tickets.json": "52327b1bae001f956992acb998e88ef759a18d455757df825cc562db015887b2",
+    "docs/validation/discovery-spec-tickets/run_fixture.py": "794fdddf60071312f6010b67f4e93c7375f51329aa8074cffedffca993e342a8"
+  },
+  "events": [
+    {
+      "phase": "write-spec",
+      "status": "complete",
+      "stop": "one mirror, no tickets/graph"
+    },
+    {
+      "case": "permission absent",
+      "status": "plan-only",
+      "graph_writes": 0
+    },
+    {
+      "case": "native capability unavailable",
+      "status": "blocked",
+      "error": "read unavailable"
+    },
+    {
+      "status": "attempting",
+      "blocked": 3,
+      "by": 2
+    },
+    {
+      "status": "verified",
+      "blocked": 3,
+      "by": 2
+    },
+    {
+      "phase": "write-tickets",
+      "status": "verified",
+      "stop": "no scheduling/build"
+    }
+  ],
+  "baseline_exit": 0,
+  "protected_baseline_bytes_and_mode": "unchanged",
+  "limits": "authored fixture operations and direct author walkthrough; no autonomous compliance or live API proof"
+}
