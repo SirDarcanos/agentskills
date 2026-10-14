@@ -16,7 +16,8 @@ Use direct in-session walkthroughs or separately authorized agents, labeling whi
 
 | Case | Inspectable result |
 | --- | --- |
-| Non-technical feature conversation | Short related rounds on goal/users/priority/constraints/success; explain consequential options in user/scope/cost/risk terms, not seams or internal abstractions; stop at a usable confirmed brief |
+| Non-technical feature conversation | Manageable rounds on goal/users/priority/constraints/success; explain consequential options in user/scope/cost/risk terms, not seams or internal abstractions; stop only when every relevant concern is decided or explicitly dispositioned |
+| Thoroughness versus pacing | Several rounds leave a relevant recovery question unresolved; continue with that question, reusing settled answers and investigating discoverable facts. An explicit session limit returns remaining concerns, not a complete agreement |
 | Four dispositions | Required, deferred with revisit, excluded with reason, limitation explicitly accepted; proposed limitation remains unaccepted before its confirming turn |
 | Current settled decision | Inspect agreement and cited deciding inputs; reuse unchanged decisions/findings, zero new interview or automatic specialist call, no duplicate artifact |
 | Changed fact | Refresh dependent question only, preserve unaffected intent and old evidence; unclear impact expands relevant stale set honestly |

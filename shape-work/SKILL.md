@@ -23,7 +23,7 @@ Optional delegation requires separate authority and the discovered Work On execu
 
 ## 1. Bound the discovery and reuse decisions
 
-Identify target, requested outcome, users, agreement/decision owner, product home, relevant agreement revision or body digest, exclusions, prior findings, protected work and exact allowed effects. Record expected return and a finite exploration bound (relevant branches, rounds or time); ordinary context supplies these facts without a mandatory form. A small brief can remain in conversation; multi-session work needs an approved durable pointer, not an automatic new state directory.
+Identify target, requested outcome, users, agreement/decision owner, product home, relevant agreement revision or body digest, exclusions, prior findings, protected work and exact allowed effects. Record expected return and a finite exploration scope (relevant branches), plus any explicit caller round/time limit; ordinary context supplies these facts without a mandatory form. A round/time limit bounds the session, not the completeness claim: return remaining concerns if it is reached. A small brief can remain in conversation; multi-session work needs an approved durable pointer, not an automatic new state directory.
 
 Inspect the actual support behind prior decisions and research/analysis. Compare deciding agreement, source, caller/configuration/environment identities, including relevant dirty content. Reuse current findings and unchanged approved commitments. Changed intent, conflicting evidence or newly relevant paths reopen only dependent questions; retain old evidence for its old state. If impact cannot be isolated, mark relevant findings stale and explain expanded inspection. Starting a new phase alone warrants no rediscovery or repeat analysis.
 
@@ -43,7 +43,9 @@ Translate consequential findings into user, scope, cost, risk or delivery terms.
 
 ## 3. Explore the unresolved branches in manageable rounds
 
-Ask a short round of related questions, starting with the highest-consequence uncertainty. Let answers determine the next round; use the target's collaboration style rather than an exhaustive checklist. Cover only relevant branches:
+Exhaustively resolve the product questions relevant to this scope. Reuse confirmed decisions and investigate discoverable facts yourself. Ask the user about remaining intent and consequential trade-offs in manageable rounds; continue until every relevant concern has a confirmed decision or an explicit disposition.
+
+Start with the highest-consequence uncertainty and let answers determine the next round. Manageable rounds set the pace, not a total question limit. Use the target's collaboration style and examine every relevant branch:
 
 - Goals and priorities: what problem matters now, what can wait, and how success will be recognized.
 - Users and workflows: who acts or benefits, entry conditions, normal actions, observable results and existing behavior to retain.
@@ -64,7 +66,7 @@ Maintain one compact concern record with rationale/evidence and owner or revisit
 
 Until confirmed, label a proposed disposition as proposed. Obtain approval for consequential commitments and deferrals affecting the next phase; silence does not accept a limitation. Preserve all four kinds in the return when present, explicitly marking inapplicable kinds rather than inventing concerns.
 
-**Done:** relevant branches have supported decisions or explicit dispositions, with no unresolved consequential intent. Stop at a usable agreement; do not expand into hypothetical branches. At the bound or a blocker, preserve progress and return the owner, recommendation and safe next action.
+**Done:** every relevant branch and concern has a supported confirmed decision or explicit disposition, with no unresolved consequential intent. Check for overlooked relevant concerns before declaring the agreement usable; settled decisions and discoverable facts need no user questions. Stop when this criterion is met rather than after a fixed number of questions; keep unrelated hypothetical branches outside scope. At the bound or a blocker, preserve progress and return the owner, recommendation and safe next action.
 
 ## 4. Confirm and return the discovery brief
 

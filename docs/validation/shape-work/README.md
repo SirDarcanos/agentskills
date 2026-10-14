@@ -66,6 +66,10 @@ git diff --check
 
 The first checks frontmatter, ordered procedure/completion bounds and links at source and in isolated non-sibling copies, plus the three fixture baseline tests and unchanged source identity. It reuses the maintained Markdown checker; it does not implement a discovery router or claim scripted assertions prove agent adherence. This instruction-only package ships no executable runtime.
 
+## Maintainer wording clarification
+
+After the initial PR, the maintainer confirmed that discovery should be exhaustive for relevant unresolved product concerns, with manageable rounds controlling pace rather than total question count. Updated the entry's exploration scope, round guidance and completion criterion accordingly. Confirmed decisions and discoverable facts still bypass user questions; explicit caller session limits return remaining concerns rather than implying completeness. Added a pacing/thoroughness scenario to package validation; it is authored coverage, not a newly executed multi-round trial. Existing two-round walkthrough remains evidence for its original inputs, not proof of this new scenario. Reran the source/isolated package checker and fixture baselines for this clarification; no new executable tests or effects.
+
 ## Acceptance and documentation
 
 | #48 reference | #61 evidence |
