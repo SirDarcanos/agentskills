@@ -2,7 +2,7 @@
 
 Read completely on resume after interruption/failure, unknown ownership, uncertain operations or inconsistent retained progress. This internal procedure belongs to the lead. Consume the [handoff](contracts.md#handoff-envelope), update the existing [evidence record](contracts.md#lead-evidence-record), and read [recovery validation](recovery-validation.md) when changing or validating it. Recovery grants no new authority and introduces no persistence service.
 
-For the current single-change entry, apply local artifact/owner/evidence/repair recovery only. Whole-spec graph/frontier/integration recovery belongs to discovered `work-on-spec`; the multi-ticket clauses below are retained until #68 transfers them and are not an active fallback. If that coordinator is unavailable, preserve history and report the affected boundary instead of resuming a launch list.
+Apply local artifact/owner/evidence/repair recovery only. Whole-spec graph/frontier/integration and shared worker reconstruction belong to discovered `work-on-spec`. Return local observations to that overall lead; if its coordinator is unavailable, preserve history and report the affected boundary instead of resuming a launch list.
 
 ## 1. Reconstruct actual state before writes
 
@@ -10,7 +10,7 @@ Read the current agreement, target authorities and retained progress/check/revie
 
 Inspect authorized artifacts directly: every relevant branch/worktree and base/HEAD, staged/unstaged/untracked changes, conflicts and in-progress Git operations, delivered diffs, PR/acceptance/merge state and source presence in the intended target. Outside Git, inspect the authorized file/content/mode manifest and partial outputs. Classify work as integrated, not-integrated, unfinished, unrelated or uncertain; protect uncertain ownership as well as unrelated bytes, index state, modes and symlink targets. Preserve useful branches/worktrees and failed outputs.
 
-Read native graph observations through the maintained tracker procedure in the shared contract, including required pagination and directions. Compare intended relationships with actual relationships and prerequisite integration/acceptance evidence. Failed reads are unknown; closure is not integrated completion. Return graph deltas to ticketing rather than silently changing relationships.
+For the bounded ticket, read native prerequisite observations through the maintained tracker procedure in the shared contract, including required pagination and directions. Inspect prerequisite integration/acceptance evidence; failed reads are unknown and closure is not integrated completion. Return relationship deltas to ticketing rather than changing them implicitly. Overall frontier reconciliation belongs to Work On Spec.
 
 Inspect actual assignment lifecycle using available runtime evidence: identity, scope/isolation, last known state and finite bounds. Submitted unfinished assignments still occupy ownership/capacity. A crashed session or timeout report alone does not prove a writer stopped. Recover open findings, stable checkpoint IDs, lineage and spent repair cycles under the shared limits. Unknown budget blocks automatic correction, not read-only diagnosis.
 
@@ -33,7 +33,7 @@ Assign implementation disposition to the behavior owner, evidence refresh to ver
 
 **Complete when:** uncertain effects are reconciled or blocked, no already integrated work will be duplicated, and every proposed write has exclusive confirmed ownership and available authority/budget.
 
-## 3. Select the justified remaining phase or frontier
+## 3. Select the justified remaining responsibility
 
 Compare current agreement, scope/supporting-input fingerprints, target revision and environment with every retained check/review result. Mark affected results stale immediately; keep them as historical evidence for their old state. Content-equivalent commits require recorded equivalence and state-sensitive reruns. Refresh through [verification](verification.md) and [completion](completion.md), including renewed independent review for significant changes. A passing old check or author self-review cannot satisfy current acceptance.
 
@@ -43,18 +43,18 @@ Use the earliest unmet responsibility, preserving settled decisions:
 | --- | --- |
 | Actionable unfinished change, stopped/isolated owner, safe scope | Direct build with compatible preflight; findings requiring correction use completion's existing checkpoint/budget. Inspect the partial diff rather than restarting from scratch. |
 | Integrated change with stale/missing evidence | Verification, then independent review/completion as required; no duplicate build or integration. |
-| Native prerequisite lacks required accepted integration | Dispatch keeps its dependents waiting; lead inspects predecessor evidence or requests its owner’s completion. Unaffected eligible work may progress under existing scope. |
+| Native prerequisite lacks required accepted integration | This bounded ticket remains waiting; return prerequisite evidence gaps to its owner or the overall lead. No local scheduling of other tickets. |
 | Merge conflict / in-progress integration | Preserve both sides and operation state; lead names the conflict-resolution scope and authority. Resolve only within approved scope and safe ownership, inspect resulting diff and refresh affected evidence. If ambiguous, request a bounded resolution plan; no automatic abort, reset or cleanup. |
 | Required tool, companion or privilege unavailable | Block only the affected route, name capability/decision owner and recommend restoring access or approving a specific alternative. Safe equivalent direct work may continue; required independent review/checks remain gates. Installation/substitution is not implicit. |
 | Changed scope, substantive disagreement, persistent failure or exhausted budget | Preserve work and return a bounded reassessment recommendation to the proper decision-maker. Further correction needs explicitly approved scope/plan/budget. |
 
-For multiple tickets, return the reconciled state to the overall lead or discovered compatible `work-on-spec` to recompute its frontier and shared ownership/capacity; [dispatch](dispatch.md) is retained historical material, not an active fallback. Do not resume the old launch list. For a single change, use entry routing and the shared envelope for the selected available procedure. Preserve scope freezes while verifying/reviewing; integrate serially under actual branch/PR policy. A pending required merge remains pending.
+Return local reconciled state and shared-ledger observations to the overall lead when assigned; discovered compatible `work-on-spec` alone recomputes a multi-ticket frontier and shared ownership/capacity. For this single change, use entry routing and the shared envelope for the selected available responsibility. Preserve scope freezes while verifying/reviewing and actual branch/PR policy. A pending required merge remains pending.
 
-**Complete when:** every work unit is retained/integrated, eligible for one justified next phase, waiting or blocked with reason/owner; any resumed execution fits current authority, preflight, ownership and unchanged budgets.
+**Complete when:** the bounded change is retained/integrated, eligible for one justified next phase, waiting or blocked with reason/owner; any resumed execution fits current authority, preflight, ownership and unchanged budgets.
 
 ## 4. Retain and report recovery state
 
-Update the existing approved record with observation/revision pointers, protected artifacts, resolved and still-uncertain operations, finding lineage/counts, stale/refreshed evidence and selected/resumed phase/frontier. Before ending unfinished multi-session work, provide an approved durable pointer under target retention/disclosure policy; if unavailable, report that recovery limitation without inventing a committed state directory or publishing private logs.
+Update the existing approved record with observation/revision pointers, protected artifacts, resolved and still-uncertain operations, finding lineage/counts, stale/refreshed evidence and selected/resumed responsibility. Before ending unfinished multi-session work, provide an approved durable pointer under target retention/disclosure policy; if unavailable, report that recovery limitation without inventing a committed state directory or publishing private logs.
 
 Cleanup is a separate disposition: preserve useful artifacts until safe integration or explicit disposition, and perform removal only with applicable authority after checking unique commits, dirty/untracked work, active owners and recovery/evidence pointers. Integration alone does not authorize branch/worktree deletion or discard unfinished work. If any condition is uncertain, retain it and report why.
 

@@ -6,7 +6,7 @@ Use `/work-on <change or actionable ticket>`, an ordinary explicit delivery requ
 
 ## Changed boundary
 
-[#67](https://github.com/SirDarcanos/agentskills/issues/67) narrows the former broad workflow. Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Until a compatible coordinator is discoverable, that route is unavailable; Work On preserves partial artifacts and reports the boundary instead of running its old dispatch procedure. Historical dispatch/recovery material and #14 trial evidence remain for #68's ownership transfer, not as a fallback or current broad-entry promise.
+[#67](https://github.com/SirDarcanos/agentskills/issues/67) narrows the former broad workflow. Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Until a compatible coordinator is discoverable, that route is unavailable; Work On preserves partial artifacts and reports the boundary instead of running its old dispatch procedure. [#68](https://github.com/SirDarcanos/agentskills/issues/68) transfers dispatch and overall recovery to that independently installable coordinator. Only compatibility pointers remain here; original #14 trial evidence stays at its historical paths, not as a fallback or current broad-entry promise.
 
 This is an incompatible invocation boundary, although Work On has not yet been included in a published release. A specification can still provide acceptance for one bounded assignment. Existing current bug/analysis evidence is consumed directly; only missing or invalidated facts trigger specialist work. The lead chooses methods without asking the maintainer to pick routine test seams or techniques.
 

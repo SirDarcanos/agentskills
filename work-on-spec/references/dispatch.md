@@ -1,0 +1,57 @@
+# Dispatch and incremental integration
+
+Read completely when coordinating multiple implementation tickets or scheduling children of a ready spec. This Work On Spec procedure belongs to the overall lead. Consume the resolved Work On library's handoff envelope and lead evidence record, discovered as required by [entry](../SKILL.md#invocation-and-shared-ownership). For changes or validation, read [dispatch validation](dispatch-validation.md).
+
+## 1. Reconcile the intended and observed work graph
+
+Pin the approved agreement/technical plan, acceptance IDs, intended ticket graph and current authority. Read target tracker/completion, role/readiness mappings and branch/PR policy. Discover the maintained native tracker procedure through the resolved Work On contract's capability checks, reading its entry/library boundary and applicable procedure completely. Use that procedure for identities, both relationship directions, pagination, reachable blockers/parent ancestry, conflicts and read-back; it owns the graph algorithm. Scheduling reads do not invoke setup or authorize relationship/label changes.
+
+Compare the intended graph with persisted parent membership and blocker edges, including relevant edges outside the requested set. Retain actual identities, observation time, agreement revisions and protected unrelated state. Failed/incomplete reads are unknown. Missing intended edges, reversed intent, cycles, conflicting parents or material unexpected relationships block affected dispatch. Return the exact reconciliation delta to discovered `write-tickets` for required approval/application/read-back rather than repairing the graph implicitly. Preserve unrelated valid blockers and account for them in eligibility.
+
+Classify from the target's mapped metadata, purpose and native relationships, never title prefixes. A ready parent spec is a coordination entry: inspect its children and schedule eligible bounded work tickets, not a duplicate implementation of the parent. Subordinate specs require their own coordination assessment; they and delivery PRs are not implementation steps. Readiness and role are separate; the work-ticket role imposes no linear order. Missing/conflicting mappings block classification of affected items.
+
+**Complete when:** each candidate has an unambiguous role, owning agreement and reconciled native relationships, or an explicit graph/classification blocker; the parent is not in the implementation queue.
+
+## 2. Establish the ready frontier and ownership plan
+
+For every candidate, inspect its actionable criteria/design, safe preflight needs and material risks. For each native prerequisite, inspect actual accepted completion and integration evidence under target policy: delivered revision/diff, applicable checks/review, acceptance source and presence in the selected base/target. Closure or a worker's success claim alone is insufficient. Record which prerequisite obligation is satisfied at which revision; stale evidence, absent required merge or unavailable material evidence leaves the dependent waiting.
+
+Build a compact frontier record per ticket: identity/role and agreement revision; native blockers and completion evidence; owned behavior/files/interfaces and protected work; eligible/waiting/blocked/in-progress/integrated disposition with reason; owner, base/delivered revision and next gate. A candidate is eligible only when the build gate, all required prerequisite evidence and ownership safety hold. Do not redispatch already integrated work; inspect evidence gaps through verification/completion instead.
+
+Inspect coupling beyond explicit edges: shared modules, generated outputs, state, schema and interfaces, including different files using an unstable contract. Group cohesive changes with one owner when the approved boundaries permit; otherwise serialize conflicting ownership. Material ticket/graph changes return to ticketing for approval. Reserve the lead's direct writes as well as worker writes; disjoint filenames alone do not prove independence. Unknown active ownership blocks replacement or conflicting writes.
+
+Use authorized bounded Work On ticket agents under the resolved Work On library's shared execution limits, including combined implementer/exploration/review capacity. Record chosen concurrency and reason; capacity is a ceiling, not a target. Missing worker authority, writable bounded lifecycle, inspectable results or safe isolation blocks multi-ticket execution, not graph inspection/planning. A single explicitly bounded change may be proposed for separate `work-on` delivery; do not silently execute the whole spec directly. Missing independent review still blocks acceptance; it is not replaced by direct self-review.
+
+**Complete when:** every candidate has an evidence-backed disposition, the eligible frontier excludes unfinished prerequisites and conflicting owners, and the chosen execution route fits authority/capacity without speculative parallelism.
+
+## 3. Assign one bounded deliverable per owner
+
+Immediately before each start, refresh affected graph/completion evidence, active ownership and capacity. A changed agreement/base/interface requires reassessment; the old frontier is not permanent launch permission. Use compatible Git preflight before implementation writes, following target branch/PR policy and preserving unrelated work. Isolated branches/worktrees are useful where justified, not mandatory infrastructure; no forced integration branch or merger agent.
+
+Supply the shared envelope plus exact ticket/acceptance IDs, owned behavior/files/interfaces, stable interface assumptions, exclusions/protected work, resolved base/integration target, context/revision pointers, authority source and permitted effects. Name expected artifacts, actual check/evidence requirements, return snapshot and blocking conditions. For delegation, also record worker identity, isolation, finite runtime bound and available repair budget before launch; workers cannot recursively delegate. A handoff alone launches nothing. Discover compatible `work-on`, read its full entry/relevant references, and assign one bounded ticket under the original overall approval. Supply current investigation/analysis and confirmed decisions plus the root-ledger pointer and stable local checkpoint; only missing/stale facts need reassessment. Local leads select methods inline; cross-ticket decisions and additional worker/review/model requests return to the root, without recursive fan-out.
+
+Reserve ownership before starting and record active assignments, not just running tool calls. Treat submitted unfinished assignments as active until stopped or safely isolated under the shared contract. Failed/expired/partial assignments retain artifacts and uncertain operations; inspect actual progress before any replacement. For unresolved lifecycle/interruption state, read [recovery](recovery.md) completely and reconcile ownership/outcomes before replacement or resume.
+
+**Complete when:** each started assignment has one accountable owner, bounded authority/scope/result contract and recorded lifecycle; waiting work has no launched writer.
+
+## 4. Inspect returns and integrate serially
+
+Read each returned diff/files, delivered snapshot and raw check results. Compare them to the assignment, agreement, protected work and current target; inspect unexpected paths/interface changes, failed/unrun checks and documentation impact. A local passing result is not integrated evidence. Reject out-of-scope effects or missing material evidence as an affected blocker/repair handoff, preserving useful work. Use the resolved Work On completion library for findings and existing checkpoint budgets through [aggregate acceptance](aggregate.md), rather than creating new retry allowances.
+
+The lead integrates one inspected result at a time using authorized operations under target branch/PR policy. Record source branch/worktree and revision, resolved before/after target state, actual operation and included paths. A PR-only policy can require opening the inspected PR and waiting for acceptance/merge; invocation does not grant merge permission. A speculative combined branch does not satisfy a required predecessor merge. Stop on conflicts or uncertain operations, preserve both sides and obtain the required resolution authority; do not blindly retry or discard work.
+
+Before applying a result built on an older base, compare intervening changes and interface assumptions. Adapt only within authority, then inspect the resulting diff and refresh affected evidence. Keep writes and integration out of a scope frozen for verification/review. After integration, repin the actual integrated scope/supporting inputs and use [aggregate acceptance](aggregate.md); invalidate affected earlier checks/review and refresh them, renewing significant-change independent review through completion. Check cross-ticket behavior, not only each owner's isolated tests. If impact cannot be isolated, refresh all relevant evidence.
+
+Preserve useful source branches/worktrees and unfinished artifacts until verified safe integration or explicit disposition under target policy. Cleanup is a separate authorized action, never a scheduling side effect; this procedure performs no automatic cleanup.
+
+**Complete when:** each consumed return has an inspected integrated revision with refreshed evidence, or a retained not-integrated/partial/blocked state and concrete next action. Integration does not itself establish acceptance.
+
+## 5. Recompute and return accountable progress
+
+After each integration/accepted event, re-read affected native relationships and completion evidence, then recompute the frontier and ownership reservations. Release an owner only after its lifecycle is known; unlock dependents only after target-required accepted integration evidence holds. Unaffected eligible work may continue safely while another ticket waits. Missing permission or material evidence stops affected work immediately, not after performative retries.
+
+When no work can start, explain each waiting/blocked reason and recommend its next evidence, decision or capability; do not manufacture completion by closing issues, changing labels or dropping blockers. Readiness-label proposals/application belong to completion's authority-scoped reassessment. At final integration, use [aggregate acceptance](aggregate.md) for cross-ticket evidence, independent review, finding disposition and distinct gates. Dispatch does not decide product acceptance: the lead remains accountable for the whole agreement, including missing and deferred scope.
+
+Return frontier history and assignments, graph/procedure revisions, ownership/capacity decisions, inspected returns, source and integrated pointers, exact checks and freshness, preserved artifacts, documentation disposition and remaining blockers. Distinguish implemented locally, integrated, verified and accepted/merged; report unrun review and limitations honestly. Keep issues open until target completion policy permits closure; deployment/release/global installation are separate authority.
+
+**Dispatch completion:** incremental evidence-backed progress or an explicit preserved blocker, with only eligible work scheduled, serial lead integration and a traceable next gate for every requested obligation.

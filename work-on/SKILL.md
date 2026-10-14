@@ -13,7 +13,7 @@ The calling agent is always the accountable **technical lead for one change**, e
 
 Read [contracts](references/contracts.md) on every entry for discovery, handoffs, evidence, shared execution/repair/model ledgers and separate delivery gates. For package changes or validation, read [validation](references/validation.md).
 
-Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Discover and inspect that companion for an authorized overall-delivery request; if absent/incompatible, return the changed boundary and unavailable coordinator with preserved artifacts. This package cannot silently run its retained historical dispatch material or reinterpret a ticket set as one change. A specification may supply acceptance for a single explicitly bounded assignment without scheduling the rest.
+Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Discover and inspect that companion for an authorized overall-delivery request; if absent/incompatible, return the changed boundary and unavailable coordinator with preserved artifacts. This package cannot run an old dispatch procedure or reinterpret a ticket set as one change. A specification may supply acceptance for a single explicitly bounded assignment without scheduling the rest.
 
 ## 1. Inspect context, actual state and authority
 

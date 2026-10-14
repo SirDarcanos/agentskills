@@ -223,7 +223,10 @@ class SingleChange(unittest.TestCase):
         for clause in ("two active non-lead workers", "root lead alone", "two automatic repair cycles",
                        "zero autonomous calls", "without replenishing", "service/model substitution"):
             self.assertIn(clause, contract.lower())
-        self.assertIn("retained historical material", contract)
+        self.assertIn("compatibility pointer only", contract)
+        adapter = (PACKAGE / "references/dispatch.md").read_text()
+        self.assertNotIn("## 1.", adapter)
+        self.assertIn("work-on-spec", adapter)
         self.assertIn("retain", build)
         self.assertIn("without invoking Analyze again", build)
         self.assertEqual(self.ledger["repairs_spent"], 1)
