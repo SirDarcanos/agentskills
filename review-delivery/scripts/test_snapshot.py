@@ -1,6 +1,7 @@
 """Offline Git fixture checks; no agent/reviewer execution or network."""
 import json
 from pathlib import Path
+import stat
 import runpy
 import subprocess
 import sys
@@ -134,6 +135,21 @@ class SnapshotTests(unittest.TestCase):
         self.write(name, "changed policy\n")
         self.assertNotEqual(before["files"][name], self.snapshot()["files"][name])
 
+    def test_repair_invalidates_old_scope_even_with_unchanged_passing_log(self):
+        # Fingerprints detect changed inputs, not the truth of a retained log.
+        self.write("checks.txt", "PASS at pre-repair inputs\n")
+        self.paths.append("checks.txt")
+        old = self.snapshot()
+        self.write("formatter.py", "def heading(text):\n    return text.strip()\n")
+        repaired = self.snapshot()
+        self.assertNotEqual(old, repaired)
+        self.assertEqual(old["files"]["checks.txt"], repaired["files"]["checks.txt"])
+        # A fresh capture alone cannot certify that the old log was rerun.
+        self.assertEqual(repaired, self.snapshot())
+        self.write("checks.txt", "PASS at repaired inputs\n")
+        self.assertNotEqual(repaired["files"]["checks.txt"],
+                            self.snapshot()["files"]["checks.txt"])
+
     def test_outside_scope_is_protected_but_requires_rediscovery(self):
         before = self.snapshot()
         self.write("new-relevant.py", "new candidate\n")
@@ -172,6 +188,24 @@ class SnapshotTests(unittest.TestCase):
                        input=entries.encode(), check=True, capture_output=True)
         with self.assertRaises(ValueError):
             CAPTURE(self.root, self.base, ["formatter.py"])
+
+    def test_trial_packet_exposes_link_metadata_without_following(self):
+        result = subprocess.run(
+            [sys.executable, "-B", str(HELPER.parent / "trial_fixture.py")],
+            check=True, capture_output=True, text=True)
+        metadata = json.loads(result.stdout)
+        trial = Path(metadata["trial"])
+        import shutil
+        try:
+            links = json.loads((trial / "evidence/link-evidence.json").read_text())
+            link = trial / "target/note-link"
+            self.assertEqual(links, {"note-link": {
+                "target": "duplicate.py", "mode": stat.S_IMODE(link.lstat().st_mode)}})
+            self.assertFalse((trial / "procedure/references/validation.md").exists())
+            self.assertFalse((trial / "procedure/scripts/test_snapshot.py").exists())
+            self.assertTrue((trial / "procedure/references/handoff.md").is_file())
+        finally:
+            shutil.rmtree(trial)
 
     def test_invalid_base_and_snapshot_fail_closed(self):
         self.assertEqual(self.cli("pin", "--base", "missing", "formatter.py").returncode, 2)

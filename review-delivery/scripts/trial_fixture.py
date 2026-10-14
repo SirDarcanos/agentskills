@@ -5,7 +5,9 @@ The caller owns retention/cleanup of the printed temporary directory.
 """
 import hashlib
 import json
+import os
 from pathlib import Path
+import stat
 import runpy
 import shutil
 import subprocess
@@ -47,14 +49,22 @@ def main():
     )
     procedure = trial / "procedure"
     (procedure / "references").mkdir(parents=True)
-    # Author/test expectations stay outside the reviewers' authorized context.
-    for name in ["SKILL.md", "references/scope.md", "references/report.md"]:
+    # Maintenance validation/test expectations stay outside the review packet;
+    # SKILL.md's conditional validation pointer is not part of a review run.
+    procedure_paths = ["SKILL.md", "references/handoff.md", "references/scope.md",
+                       "references/report.md"]
+    for name in procedure_paths:
         shutil.copyfile(package / name, procedure / name)
     evidence = trial / "evidence"
     evidence.mkdir()
     capture = runpy.run_path(str(package / "scripts/snapshot.py"))["capture"]
     state = capture(target, base, paths)
     (evidence / "scope-before.json").write_text(json.dumps(state, indent=2, sort_keys=True))
+    # Expose included link metadata without following a target into protected work.
+    links = {name: {"target": os.readlink(target / name),
+                    "mode": stat.S_IMODE((target / name).lstat().st_mode)}
+             for name in paths if (target / name).is_symlink()}
+    (evidence / "link-evidence.json").write_text(json.dumps(links, indent=2, sort_keys=True))
     commands = {
         "committed.patch": ["diff", "--no-ext-diff", "--no-textconv", "--binary", base,
                             "HEAD", "--", *paths],
@@ -72,7 +82,7 @@ def main():
     protected = {name: sha((target / name).read_bytes())
                  for name in ["protected.txt", "private-note.txt"]}
     procedure_hashes = {name: sha((procedure / name).read_bytes())
-                        for name in ["SKILL.md", "references/scope.md", "references/report.md"]}
+                        for name in procedure_paths}
     metadata = {"trial": str(trial), "target": str(target), "base": base,
                 "head": state["head"], "paths": paths, "protected": protected,
                 "procedure_sha256": procedure_hashes}

@@ -26,7 +26,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`investigate-bug`](investigate-bug/) | Confirm defects and cause, then prepare or reconcile workable tickets; investigation-only stops before repair. |
 | [`prototype`](prototype/) | Answer bounded design, UX, state-model or feasibility questions with runnable experiments, explicit limitations and artifact disposition. |
 | [`research`](research/) | Investigate bounded questions directly or through authorized delegation, with cited sources, freshness checks and explicit uncertainty. |
-| [`review-delivery`](review-delivery/) | Independently review Standards and Spec against the actual delivered scope, including dirty work, with pinned evidence and stale-review detection. |
+| [`review-delivery`](review-delivery/) | Review standalone or bounded specialist handoffs with independent Standards/Spec contexts, full committed/dirty scope and revision-aware evidence. |
 | [`setup-project`](setup-project/) | Establish project-aware agent instructions, operating context, approved model-use policy, domain records, and GitHub tracker configuration. |
 | [`shape-work`](shape-work/) | Shape unresolved ideas into usable agreements in project terms, with evidence reuse, manageable rounds and preserved concern dispositions. |
 | [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |

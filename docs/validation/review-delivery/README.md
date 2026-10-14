@@ -4,6 +4,8 @@ Repository-only evidence for [#24](https://github.com/SirDarcanos/agentskills/is
 
 | Record | Purpose |
 | --- | --- |
+| [Authorized review follow-up](authorized-review.md) | Approved review policy, actual source/fixture reviews, packet findings and renewed evidence |
+| [Specialist handoff checks](specialist-handoffs.md) | Initial #65 checks, acceptance mapping and historical independent-review permission blocker |
 | [Implementation checks](implementation-checks.md) | Historical direct/static/offline checks and initial evidence limits |
 | [First trial attempt](trial-attempt.md) | Actual reviewer startup failure, preserved as history |
 | [Executed retry](trial-results.md) | Independent dirty/untracked findings, stale-scope and unavailable-capability outcomes; scope and limitations |

@@ -5,15 +5,17 @@ description: Review delivered changes against project standards and an approved 
 
 # Review delivery
 
-Review only; this package does not implement repairs, accept delivery, close issues, or replace `code-review`. Loading it grants no delegation, installation, disclosure, spending or mutation permission.
+Review only; this package is the maintained independent-review owner, not a competing `code-review` implementation. It does not implement repairs, accept delivery, close issues or retire installed copies. Loading it grants no delegation, installation, disclosure, spending or mutation permission.
+
+On every entry, read [handoff](references/handoff.md) completely for standalone inputs, bounded caller adaptation, execution-library discovery and evidence reuse. Standalone review stops at its report; a delivery handoff does not start the rest of a pipeline.
 
 ## 1. Establish agreement and authority
 
 Identify the target, approved change/exclusions, spec or lightweight brief and acceptance IDs. Read target instructions and their relevant project, workflow, domain/ADR, documentation and release-policy pointers. Inspect primary agreement and check evidence; the author's summary is context, not proof. Record source revisions or body digests and missing material inputs.
 
-Confirm permission for distinct read-only reviewer contexts, authorized disclosure and runtime capability: separately inspectable results, finite timeout/turn bounds and lifecycle control. Reviewers must be separate from the change's authors and each other's conclusions. Use two contexts, one Standards and one Spec; sequence them if capacity permits only one. At most two active non-lead workers across the delivery run, fewer under target/runtime limits; count unfinished assignments. No nested delegation or automatic optional assessments.
+Confirm permission for distinct read-only reviewer contexts, authorized disclosure and runtime capability: separately inspectable results, finite timeout/turn bounds and lifecycle control. Reviewers must be separate from the change's authors and each other's conclusions. Use two contexts, one Standards and one Spec; sequence them if capacity permits only one. The authorized root reserves and launches reviewers under the discovered execution library's shared limits; ticket workers request these assignments from the root. No nested delegation or automatic optional assessments.
 
-If independence, permission, lifecycle control or material agreement is unavailable, return an acceptance blocker. Direct inspection may still be labeled **lead self-review**, never independent review. A standalone Standards-only result can be useful, but does not satisfy delivery acceptance without Spec review.
+If independence, permission, lifecycle control or material agreement is unavailable, return an acceptance blocker. Inspection by an author or delivery lead remains **lead self-review**, never independent review; other direct inspection records its actual author relationship and missing axis/context limitations. A standalone Standards-only result can be useful, but does not satisfy delivery acceptance without Spec review.
 
 **Complete when:** scope/agreement, sources, permissions, reviewer identities and finite bounds are recorded, or the affected review gate is explicitly blocked.
 
