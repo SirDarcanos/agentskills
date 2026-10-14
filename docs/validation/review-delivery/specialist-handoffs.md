@@ -1,6 +1,6 @@
 # Specialist handoff adaptation checks
 
-For [#65](https://github.com/SirDarcanos/agentskills/issues/65), under [#48](https://github.com/SirDarcanos/agentskills/issues/48). This repository-only record is not shipped runtime guidance or an independent reviewer report. Historical #24 trial records remain unchanged and do not verify this adaptation.
+For [#65](https://github.com/SirDarcanos/agentskills/issues/65), under [#48](https://github.com/SirDarcanos/agentskills/issues/48). This repository-only record is not shipped runtime guidance or an independent reviewer report. Historical #24 trial records remain unchanged and do not verify this adaptation. This record predates the maintainer's subsequent review/policy approval; see the [authorized follow-up](authorized-review.md) for current review evidence and disposition of the historical permission blocker.
 
 ## Input, scope and authority
 
