@@ -1,0 +1,12 @@
+write-spec: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+write-spec: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+shape-work: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+Root/evidence links: 34
+Authorized approved-but-design-unready publication/read-back: issue 1, revision 1
+Existing identity reused without mutation: one spec, zero tickets/relationships
+Timeout inspected before retry: persisted revision 2, no second create
+Unavailable read reported as failure, not verified publication
+Offline checks passed; no model, installed mutation, public fixture or agent trial.

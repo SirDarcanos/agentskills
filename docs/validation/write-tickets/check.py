@@ -20,7 +20,7 @@ def main():
     assert (REPO / "write-tickets/LICENSE").read_bytes() == expected
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))
-    for name, command_only in (("write-tickets", False), ("work-on", True)):
+    for name, command_only in (("write-tickets", False), ("work-on", False)):
         checks.check_package(REPO / name, name, command_only, notice)
         with tempfile.TemporaryDirectory(prefix="tickets-isolation-") as temp:
             isolated = Path(temp) / "catalog" / "non-sibling-package"

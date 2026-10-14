@@ -1,0 +1,58 @@
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+review-delivery: frontmatter, procedure bounds, links/anchors and syntax passed (17 links)
+review-delivery: frontmatter, procedure bounds, links/anchors and syntax passed (17 links)
+implementation-preflight: frontmatter, procedure bounds, links/anchors and syntax passed (1 links)
+implementation-preflight: frontmatter, procedure bounds, links/anchors and syntax passed (1 links)
+domain-modeling: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+domain-modeling: frontmatter, procedure bounds, links/anchors and syntax passed (9 links)
+setup-project: frontmatter, procedure bounds, links/anchors and syntax passed (35 links)
+setup-project: frontmatter, procedure bounds, links/anchors and syntax passed (35 links)
+Repository documentation: 58 relative links/anchors passed
+Isolated copies removed by this explicitly disposable protocol; no installed copies changed.
+Static assertions and helper tests are not agent trials or runtime certification.
+test_cli_and_protected_work_unchanged (__main__.SnapshotTests.test_cli_and_protected_work_unchanged) ... ok
+test_content_identical_commit_is_not_automatically_fresh (__main__.SnapshotTests.test_content_identical_commit_is_not_automatically_fresh) ... ok
+test_dirty_only_scope_does_not_require_committed_diff (__main__.SnapshotTests.test_dirty_only_scope_does_not_require_committed_diff) ... ok
+test_index_change_even_with_identical_worktree (__main__.SnapshotTests.test_index_change_even_with_identical_worktree) ... ok
+test_invalid_base_and_snapshot_fail_closed (__main__.SnapshotTests.test_invalid_base_and_snapshot_fail_closed) ... ok
+test_invalid_paths_directories_and_symlinked_parents (__main__.SnapshotTests.test_invalid_paths_directories_and_symlinked_parents) ... ok
+test_layers_scope_and_known_dirty_findings (__main__.SnapshotTests.test_layers_scope_and_known_dirty_findings) ... ok
+test_mode_symlink_and_deletion_drift (__main__.SnapshotTests.test_mode_symlink_and_deletion_drift) ... ok
+test_outside_scope_is_protected_but_requires_rediscovery (__main__.SnapshotTests.test_outside_scope_is_protected_but_requires_rediscovery) ... ok
+test_repair_invalidates_old_scope_even_with_unchanged_passing_log (__main__.SnapshotTests.test_repair_invalidates_old_scope_even_with_unchanged_passing_log) ... ok
+test_submodule_and_unmerged_index_require_manual_capture (__main__.SnapshotTests.test_submodule_and_unmerged_index_require_manual_capture) ... ok
+test_support_input_and_unusual_names (__main__.SnapshotTests.test_support_input_and_unusual_names) ... ok
+test_trial_packet_exposes_link_metadata_without_following (__main__.SnapshotTests.test_trial_packet_exposes_link_metadata_without_following) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 4.702s
+
+OK
+test_apply_uses_database_id_correct_direction_and_rerun_is_noop (test_dependencies.DependencyWorkflowTests.test_apply_uses_database_id_correct_direction_and_rerun_is_noop) ... ok
+test_cycles_are_checked_through_existing_and_planned_edges_before_writes (test_dependencies.DependencyWorkflowTests.test_cycles_are_checked_through_existing_and_planned_edges_before_writes) ... ok
+test_database_id_mismatch_in_either_direction_blocks_further_writes (test_dependencies.DependencyWorkflowTests.test_database_id_mismatch_in_either_direction_blocks_further_writes) ... ok
+test_empty_plan_needs_no_network (test_dependencies.DependencyWorkflowTests.test_empty_plan_needs_no_network) ... ok
+test_existing_edge_id_mismatch_blocks_planning_and_all_writes (test_dependencies.DependencyWorkflowTests.test_existing_edge_id_mismatch_blocks_planning_and_all_writes) ... ok
+test_failed_write_is_not_retried_and_next_run_inspects_partial_success (test_dependencies.DependencyWorkflowTests.test_failed_write_is_not_retried_and_next_run_inspects_partial_success) ... ok
+test_large_graph_stops_before_mutations (test_dependencies.DependencyWorkflowTests.test_large_graph_stops_before_mutations) ... ok
+test_malformed_plans_never_contact_github (test_dependencies.DependencyWorkflowTests.test_malformed_plans_never_contact_github) ... ok
+test_post_write_cycle_error_preserves_truth_about_completed_writes (test_dependencies.DependencyWorkflowTests.test_post_write_cycle_error_preserves_truth_about_completed_writes) ... ok
+test_read_only_plan_deduplicates_and_preserves_existing_edges (test_dependencies.DependencyWorkflowTests.test_read_only_plan_deduplicates_and_preserves_existing_edges) ... ok
+test_reverse_scope_and_permissions_are_checked_before_any_write (test_dependencies.DependencyWorkflowTests.test_reverse_scope_and_permissions_are_checked_before_any_write) ... ok
+test_success_without_forward_or_reverse_readback_is_blocked (test_dependencies.DependencyWorkflowTests.test_success_without_forward_or_reverse_readback_is_blocked) ... ok
+test_unavailable_read_does_not_mean_missing_relationship (test_dependencies.DependencyWorkflowTests.test_unavailable_read_does_not_mean_missing_relationship) ... ok
+test_unknown_identity_cross_repository_and_pull_requests_fail_closed (test_dependencies.DependencyWorkflowTests.test_unknown_identity_cross_repository_and_pull_requests_fail_closed) ... ok
+test_cli_reads_all_pages_and_pins_host (test_dependencies.TransportTests.test_cli_reads_all_pages_and_pins_host) ... ok
+test_cli_write_passes_id_as_json_without_shell_interpolation (test_dependencies.TransportTests.test_cli_write_passes_id_as_json_without_shell_interpolation) ... ok
+test_errors_and_bad_page_shapes_are_not_empty_graphs (test_dependencies.TransportTests.test_errors_and_bad_page_shapes_are_not_empty_graphs) ... ok
+test_timeout_does_not_retry_or_claim_no_write (test_dependencies.TransportTests.test_timeout_does_not_retry_or_claim_no_write) ... ok
+test_domain_companion_packaging_when_present (test_package.PackageTests.test_domain_companion_packaging_when_present) ... skipped 'Standalone setup copy; domain companion packaging not checked'
+test_github_companion_packaging_when_present (test_package.PackageTests.test_github_companion_packaging_when_present) ... skipped 'Standalone setup copy; companion packaging not checked'
+test_setup_copied_without_sibling_companions (test_package.PackageTests.test_setup_copied_without_sibling_companions) ... ok
+test_setup_package_has_only_package_local_file_links (test_package.PackageTests.test_setup_package_has_only_package_local_file_links) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.012s
+
+OK (skipped=2)

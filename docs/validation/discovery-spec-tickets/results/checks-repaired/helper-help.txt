@@ -1,0 +1,10 @@
+usage: dependencies.py [-h] [--apply] plan
+
+Inspect or add approved native GitHub blockers; read-only unless --apply.
+
+positional arguments:
+  plan
+
+options:
+  -h, --help  show this help message and exit
+  --apply     add only explicitly approved edges; never delete

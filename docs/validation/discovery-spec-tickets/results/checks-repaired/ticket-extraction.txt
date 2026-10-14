@@ -1,0 +1,6 @@
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+write-tickets: frontmatter, procedure bounds, links/anchors and syntax passed (5 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+work-on: frontmatter, procedure bounds, links/anchors and syntax passed (96 links)
+Root/evidence links: 31
+Offline checks passed; no remote, model, installed mutation or agent trial.

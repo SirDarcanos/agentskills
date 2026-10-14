@@ -1,0 +1,51 @@
+[
+  {
+    "check": "shape-extraction",
+    "command": "python3 -B docs/validation/shape-work/check.py",
+    "exit": 0
+  },
+  {
+    "check": "spec-extraction",
+    "command": "python3 -B docs/validation/write-spec/check.py",
+    "exit": 0
+  },
+  {
+    "check": "ticket-extraction",
+    "command": "python3 -B docs/validation/write-tickets/check.py",
+    "exit": 0
+  },
+  {
+    "check": "ticket-tests",
+    "command": "python3 -B -m unittest discover -s docs/validation/write-tickets -p test_*.py",
+    "exit": 0
+  },
+  {
+    "check": "setup-tests",
+    "command": "python3 -B -m unittest discover -s setup-project/tests -p test_*.py",
+    "exit": 0
+  },
+  {
+    "check": "helper-help",
+    "command": "python3 -B setup-project/scripts/dependencies.py --help",
+    "exit": 0
+  },
+  {
+    "check": "package-invocation-tests",
+    "command": "python3 -B -m unittest discover -s docs/validation/delivery-coverage -p test_package_invocation.py",
+    "exit": 0
+  },
+  {
+    "check": "shared-package-checks",
+    "command": "python3 -B docs/validation/delivery-coverage/check_packages.py",
+    "exit": 0
+  },
+  {
+    "check": "current package source/isolation/license/frontmatter/links and Python 3.9 syntax",
+    "exit": 0,
+    "evidence_links": 37
+  },
+  {
+    "check": "git diff --check",
+    "exit": 0
+  }
+]

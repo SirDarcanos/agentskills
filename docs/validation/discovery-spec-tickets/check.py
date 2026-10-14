@@ -27,6 +27,8 @@ def main(output):
         ("ticket-tests", ["-m", "unittest", "discover", "-s", "docs/validation/write-tickets", "-p", "test_*.py"]),
         ("setup-tests", ["-m", "unittest", "discover", "-s", "setup-project/tests", "-p", "test_*.py"]),
         ("helper-help", ["setup-project/scripts/dependencies.py", "--help"]),
+        ("package-invocation-tests", ["-m", "unittest", "discover", "-s", "docs/validation/delivery-coverage", "-p", "test_package_invocation.py"]),
+        ("shared-package-checks", ["docs/validation/delivery-coverage/check_packages.py"]),
     ]
     outcomes = []
     for name, args in commands:
@@ -50,9 +52,9 @@ def main(output):
             isolated = Path(tmp) / "catalog" / "unrelated-location"
             shutil.copytree(source, isolated, symlinks=True)
             checks.check_package(isolated, name, False, notice)
-    # Do not use the historical checker's hard-coded Work On semantics to
-    # validate #67: it also assumes obsolete explicit-only wording. This trial
-    # checks the three shaping packages, not Work On's cutover acceptance.
+    # Repair #67's stale expectations rather than skip the affected package.
+    # Regression tests also reject accidentally broadened invocation authority.
+    checks.check_package(REPO / "work-on", "work-on", checks.PACKAGES["work-on"], notice)
     links = checks.check_links(list(HERE.glob("*.md")), REPO)
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))

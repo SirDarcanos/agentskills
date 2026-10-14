@@ -14,7 +14,7 @@ from urllib.parse import unquote
 
 REPO = Path(__file__).resolve().parents[3]
 PACKAGES = {
-    "work-on": True,
+    "work-on": False,
     "review-delivery": False,
     "implementation-preflight": False,
     "domain-modeling": False,
@@ -77,7 +77,12 @@ def check_package(root, name, command_only, notice):
     if name in ("work-on", "review-delivery"):
         assert (root / "LICENSE").read_bytes() == notice
     if name == "work-on":
-        assert "only when the user explicitly requests" in body
+        # #67 accepts explicit delivery and authorized bounded handoffs, not
+        # incidental mentions or investigation-only requests. Keep both the
+        # invocation routes and the no-fix-authority boundary protected.
+        assert "explicit user delivery request" in body
+        assert "bounded authorized assignment" in body
+        assert "investigation-only requests confer no fix authority" in body
         for target in re.findall(r"`(references/[^`]+\.md)`", body):
             assert (root / target).is_file(), target
     if name == "review-delivery":
