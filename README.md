@@ -10,10 +10,10 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 | Skill | When to use it |
 | --- | --- |
-| [`ask-clef`](ask-clef/) | Explicitly request an evidence-backed local Clef judgment over text or images. |
-| [`ask-clef-flash`](ask-clef-flash/) | Explicitly request an evidence-backed local Clef Flash judgment over text or images. |
+| [`ask-clef`](ask-clef/) | Request or policy-authorize a bounded evidence-backed local Clef judgment over text or images. |
+| [`ask-clef-flash`](ask-clef-flash/) | Request or policy-authorize a bounded evidence-backed local Clef Flash judgment over text or images. |
 | [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment and interpretation, with confirmation only for exceptional scope. |
-| [`ask-nimble`](ask-nimble/) | Explicitly request an evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
+| [`ask-nimble`](ask-nimble/) | Request or policy-authorize a bounded evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
 | [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |

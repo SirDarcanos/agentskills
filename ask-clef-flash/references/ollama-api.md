@@ -15,6 +15,8 @@ Use this reference when building, sending, or validating an Ask Clef Flash reque
 
 ## Server lifecycle
 
+First complete the [authorization gate](authorization.md), including local disclosure and shared reservation checks. Unauthorized routes must not run even the probes below. This reference owns process mechanics; the authorization reference owns permission and fallback decisions.
+
 ### Check and reuse
 
 Check the service and installation with:
@@ -30,20 +32,20 @@ A failed probe alone does not prove the server is absent. Distinguish connection
 
 ### Start only with permission
 
-If the local endpoint refuses the connection, ask: “Ollama is not responding locally. May I start `ollama serve` for this question?” If permission is declined, report the call as blocked.
+If the local endpoint refuses the connection, use exact policy-authorized startup and assigned ownership, without repeated confirmation. For an explicit assessment lacking startup authority, ask: “Ollama is not responding locally. May I start `ollama serve` for this question?” Autonomous denied startup returns unavailable; do not prompt to expand the policy.
 
-After permission:
+After startup authority is established:
 
 1. Recheck the endpoint in case another process started it; reuse any now-responsive server.
 2. Launch `OLLAMA_HOST=127.0.0.1:11434 ollama serve` with the runtime's managed background-process facility, not a blocking foreground shell. Record its exact task/process handle and launch command. Use loopback binding so project evidence stays local.
 3. Perform a bounded readiness check (at most 30 seconds), inspecting launch errors as needed. A task launch receipt alone does not establish readiness. Mark `server_owner: this_invocation` only if the tracked process remains running and the endpoint is ready. If the process exits with a port conflict, treat any existing server as unowned; never claim ownership merely because an endpoint responds.
-4. If readiness fails, report the startup failure and whether the owned process remains running. Offer to stop that exact process; never leave its status unmentioned.
+4. If readiness fails, report the startup failure and whether the tracked process remains running. Resolve any verified owned handle under the approved cleanup disposition below; absent disposition means ask. Never leave its status unmentioned.
 
-### Offer shutdown after the answer
+### Resolve owned shutdown after the answer
 
-After presenting the decision—or reporting a call failure—if `server_owner: this_invocation`, ask: “I started Ollama for this question. Stop that server now, or leave it running?” Keep it running while awaiting the user's choice, and preserve its handle for the follow-up.
+After presenting the decision—or reporting a call/readiness failure—if `server_owner: this_invocation`, follow the approved stop/leave-running disposition. If none was approved, ask: “I started Ollama for this question. Stop that server now, or leave it running?” Keep it running while awaiting the choice, preserve its handle, and report pending status. Resolve any still-running tracked process after readiness failure through the same ownership check.
 
-If the user chooses stop, terminate only the exact managed task/process started by this invocation and verify that it exited. Use the runtime's stop facility; never use a broad `pkill ollama`, close the desktop app, or stop another session's server. If ownership or the handle cannot be verified, explain the limitation and provide manual guidance instead of guessing.
+When stop is authorized by the policy disposition or user choice, terminate only the exact managed task/process started by this invocation and verify that it exited. Use the runtime's stop facility; never use a broad `pkill ollama`, close the desktop app, or stop another session's server. If ownership or the handle cannot be verified, explain the limitation and provide manual guidance instead of guessing.
 
 If the user chooses leave running, report that it remains available. In either case, distinguish the Ollama server from the loaded Clef Flash model: a model becoming idle or unloading does not stop the server.
 
@@ -98,7 +100,7 @@ Read image bytes and base64-encode them in Python (for example, `base64.b64encod
 1. Create a private temporary directory with `mktemp -d`. Use the returned absolute path for a request file and response file.
 2. Write the JSON with a file-writing tool or JSON serializer. Never interpolate the user's sentence, source excerpts, or model output into a shell command.
 3. Check JSON syntax without printing the payload with `python3 -m json.tool REQUEST_FILE > /dev/null` and byte size with `wc -c < REQUEST_FILE`. Keep JSON-check output out of logs when it would expose private evidence or base64; use the serializer/validator without printing the payload. Replace these placeholder paths with quoted absolute paths.
-4. Send the file, preserving the response and checking the command exit status:
+4. Immediately recheck authority, payload and the shared reservation. Send the file, preserving the response and checking the command exit status. Count the attempted request even on timeout/failure; do not automatically retry malformed/transient responses:
 
 ```sh
 curl --noproxy '*' --proxy '' --silent --show-error --fail-with-body \

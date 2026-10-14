@@ -15,7 +15,9 @@ The first command tests response validation, request limits, error categories, o
 
 Also verify that this package accepts only `clef`, rejects the other Clef variant, and validates returned model identity and usage. Test optional image requests offline; the bundled live fixtures are text-only and do not establish visual judgment quality.
 
-Also check Markdown/frontmatter, every relative link, request examples, and the diff for sensitive data or generated artifacts.
+[Authorization fixtures](../tests/test_authorization.py) execute a test-only model of the prose gates with mocked transport/lifecycle/approval callbacks and the real replay response validator. They cover absent/none/conflicting policy, exact/wrong variants, purpose/disclosure denial, shared exhaustion/resume, pre-send revocation, service/model unavailability, denied/owned startup, direct fallback, insufficient data and corrected-call limits. They are not runtime enforcement or executed agent workflows. Package checks also copy this package without siblings and resolve all Markdown links/frontmatter.
+
+Also check rendered Markdown, request examples, and the diff for sensitive data or generated artifacts.
 
 ## Opt-in model replay
 
@@ -54,7 +56,8 @@ Exercise these in a real agent session; the Python tests do not enforce prose in
 | Scenario | Expected behavior |
 | --- | --- |
 | Native Pi `/skill:ask-clef` expanded into a skill block plus question | Honor explicit invocation even though the slash command is no longer visible. |
-| Normal conversation without the command | No skill invocation. |
+| Matching bounded handoff under exact approved policy | Recheck authority/reservation, call without repeated approval; return advisory result and shared usage. |
+| Normal conversation without explicit request or approved policy | No transport/server effects; ordinary engineering or a reported gap. |
 | Newborn cat's chance of reaching 20 | Direct research/statistical answer, without transforming it into a verification question or contacting Ollama. |
 | Arithmetic or a fully deterministic rule | Direct calculation; no Clef call unless explicitly testing the model. |
 | Open-ended explanation | Direct agent answer. |
@@ -66,14 +69,14 @@ Exercise these in a real agent session; the Python tests do not enforce prose in
 | Base price and upgrade price disagree | Report both dimensions; avoid averaging or treating agreement as independent verification. |
 | A relevant file changes during inference | Detect stale evidence and refresh once or report a stale result. |
 | Fresh code conflicts with an old simulation | Do not treat historical timings as current measurements. |
-| Ollama/Clef missing, declined setup, unsupported endpoint, failed/malformed call | Report blocker; offer the permission-based agent fallback. |
+| Ollama/Clef missing, declined setup, unsupported endpoint, failed/malformed call | Report blocker; autonomous configured fallback only, explicit offer-and-wait unless preauthorized. |
 | Fallback accepted/declined/pending | Attribute any accepted assessment to the agent; never invent Clef output; preserve server ownership. |
 | Relevant image evidence | Inspect and sanitize before base64 encoding; record hashes and provenance, preserve illegible details as unknown. |
 | Other Clef variant or hosted fallback | Keep the command's exact local model; offer a separate invocation rather than switching silently. |
 | Model download already in progress | Report the pending download; do not duplicate or interrupt it. |
 | Existing server | Reuse and leave it untouched. |
 | Owned server startup fails or another process wins the port | Report the state; retain only verified ownership. |
-| Owned server after answer or failure | Offer shutdown, act only on the user's choice, and stop only its tracked process. |
+| Owned server after answer or failure | Follow approved shutdown disposition or report pending choice; stop only its tracked process. |
 
 Exercise startup/shutdown only with permission in an isolated environment; never stop an existing server as a validation step.
 
