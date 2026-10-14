@@ -19,6 +19,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
 | [`github-repo-setup`](github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
 | [`implementation-preflight`](implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
+| [`research`](research/) | Investigate bounded questions directly or through authorized delegation, with cited sources, freshness checks and explicit uncertainty. |
 | [`review-delivery`](review-delivery/) | Independently review Standards and Spec against the actual delivered scope, including dirty work, with pinned evidence and stale-review detection. |
 | [`setup-project`](setup-project/) | Establish project-aware agent instructions, operating context, approved model-use policy, domain records, and GitHub tracker configuration. |
 | [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |

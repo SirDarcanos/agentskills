@@ -1,0 +1,6 @@
+{
+  "product": "Synthetic Retry Client",
+  "version": "2.0",
+  "maxAttempts": 3,
+  "supportedRuntime": "20"
+}
