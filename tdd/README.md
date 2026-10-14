@@ -1,0 +1,23 @@
+# TDD
+
+Implement a bounded feature or bug fix through red–green–refactor. Tests observe consumer-visible behavior, implementation grows one increment at a time, and refactoring keeps the relevant checks green.
+
+Use it directly for a test-first request or through an authorized delivery handoff. The technical lead chooses routine test boundaries and strategy. Existing coverage is reused where sufficient; the method does not impose TDD on every project change or claim independent review or delivery acceptance.
+
+## Installation and dependencies
+
+After approving the installation scope:
+
+```sh
+npx skills add SirDarcanos/agentskills --skill tdd
+```
+
+Alternatively, copy or link this complete directory into your runtime's skill discovery path. Keep [SKILL.md](SKILL.md), shipped references/scripts and the [MIT notice](LICENSE) together. This is an installation example, not an automatically executed action. Installing a same-name replacement requires separate approval; repository merging does not update installed copies.
+
+The method needs file inspection/editing and the target's relevant test tools. Before Git writes it needs a discovered compatible `implementation-preflight` or a current inspected result from the caller. Required domain/ADR changes use `domain-modeling`. Delegated work or acceptance-finding corrections consume the discovered `work-on` execution/repair contract as a library without invoking delivery. Ordinary direct TDD does not require launching Work On. Companions may live anywhere exposed by the runtime or an explicit approved location; a matching name alone does not prove compatibility. Missing helpers block only dependent work and never trigger installation.
+
+These are original repository instructions implementing [#55](https://github.com/SirDarcanos/agentskills/issues/55), not a copy of the older installed TDD procedure. The maintained contract includes green refactoring and lead-selected seams; it does not inherit the older procedure's user-confirmation or review-only-refactoring rules.
+
+## Validation
+
+See [validation](references/validation.md) for package checks, an offline Python 3.9+ fixture and authored workflow cases. Run `python3 tdd/scripts/check-fixture.py` from the repository root. The fixture executes a synthetic red–green–refactor sequence, retains existing behavioral coverage and illustrates two rejected test anti-patterns. It is not an executed agent workflow or installed-runtime certification. No model service is required.

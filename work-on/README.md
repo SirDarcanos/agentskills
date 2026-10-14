@@ -17,6 +17,8 @@ npx skills add SirDarcanos/agentskills --skill work-on
 npx skills add SirDarcanos/agentskills --skill review-delivery
 # Before implementation in Git:
 npx skills add SirDarcanos/agentskills --skill implementation-preflight
+# When selecting test-first development:
+npx skills add SirDarcanos/agentskills --skill tdd
 # Only for meaning/model or qualifying ADR changes:
 npx skills add SirDarcanos/agentskills --skill domain-modeling
 # Only when the GitHub native graph procedure is needed:
@@ -26,6 +28,8 @@ npx skills add SirDarcanos/agentskills --skill setup-project
 These are installation examples, not commands the workflow runs automatically. Review existing installations and destination scope before using them; a matching name does not establish compatibility or authorize replacement. Alternatively, copy or link each approved package into your runtime's skill discovery path. Keep the entire `work-on` directory, including its [MIT notice](LICENSE), together when copying it. Start at [SKILL.md](SKILL.md); [contracts](references/contracts.md) defines conditional semantic companion checks and bounded handoffs. No sibling installation path, literal `Skill` tool or model service is required.
 
 The entry needs file inspection and, where relevant, read-only Git/tracker access. Git implementation needs a compatible `implementation-preflight`; meaning/model or qualifying ADR changes need `domain-modeling`; acceptance needs independent `review-delivery`. GitHub graph work reads the discovered `setup-project` tracker procedure as a library without invoking setup; its optional Python 3.9+ blocker helper needs authenticated `gh` for live use and does not manage parentage or labels. Other trackers require a project-approved native procedure. Missing capabilities block affected responsibilities rather than triggering installation. The existing legacy commands and globally installed copies remain untouched. Installing `setup-project` for its read-only library does not require invoking setup or installing its setup-only companions. Runtime discovery must expose the chosen companion source; record its revision and inspect the capabilities in the contract, including branch-specific references. Ambiguous or incompatible candidates block that route. Recheck after source, authority or task changes; a repository merge does not update separately copied installations.
+
+Test-first development uses the discovered compatible `tdd` companion for red–green–refactor and local evidence; direct build retains method choice and subsequent delivery gates. Missing or incompatible TDD blocks that selected route without invoking an older installed procedure. Other direct-build methods remain available under the target's policy. Stage the updated Work On package with TDD when using that route.
 
 File edits and target checks are needed for building. Independent acceptance review needs separately inspectable read-only contexts, permission, finite bounds and lifecycle control; the two axes may run sequentially. A runtime without that capability can build directly and return implemented-but-unaccepted work. The body invocation gate applies even if the runtime ignores command-only frontmatter. No hosted judgment service or optional model assessment is required.
 
