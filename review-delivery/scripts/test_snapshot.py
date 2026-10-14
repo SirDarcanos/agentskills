@@ -1,6 +1,7 @@
 """Offline Git fixture checks; no agent/reviewer execution or network."""
 import json
 from pathlib import Path
+import stat
 import runpy
 import subprocess
 import sys
@@ -187,6 +188,24 @@ class SnapshotTests(unittest.TestCase):
                        input=entries.encode(), check=True, capture_output=True)
         with self.assertRaises(ValueError):
             CAPTURE(self.root, self.base, ["formatter.py"])
+
+    def test_trial_packet_exposes_link_metadata_without_following(self):
+        result = subprocess.run(
+            [sys.executable, "-B", str(HELPER.parent / "trial_fixture.py")],
+            check=True, capture_output=True, text=True)
+        metadata = json.loads(result.stdout)
+        trial = Path(metadata["trial"])
+        import shutil
+        try:
+            links = json.loads((trial / "evidence/link-evidence.json").read_text())
+            link = trial / "target/note-link"
+            self.assertEqual(links, {"note-link": {
+                "target": "duplicate.py", "mode": stat.S_IMODE(link.lstat().st_mode)}})
+            self.assertFalse((trial / "procedure/references/validation.md").exists())
+            self.assertFalse((trial / "procedure/scripts/test_snapshot.py").exists())
+            self.assertTrue((trial / "procedure/references/handoff.md").is_file())
+        finally:
+            shutil.rmtree(trial)
 
     def test_invalid_base_and_snapshot_fail_closed(self):
         self.assertEqual(self.cli("pin", "--base", "missing", "formatter.py").returncode, 2)
