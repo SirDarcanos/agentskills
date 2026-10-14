@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add standalone Analyze for codebase-informed readiness, evidence reuse and method/check recommendations, with Work On using its discovered companion. ([#60](https://github.com/SirDarcanos/agentskills/issues/60))
 - Add standalone Build and Check for small implementation-first increments with immediate relevant validation and reusable coverage, also available through Work On. ([#59](https://github.com/SirDarcanos/agentskills/issues/59))
 - Add standalone Acceptance First for executable workflow examples, checked implementation increments and criterion-level evidence, also available through Work On. ([#58](https://github.com/SirDarcanos/agentskills/issues/58))
 - Add standalone Characterize for legacy behavior protection with baseline provenance, sensitivity and explicit unknown/defect limits, also available through Work On. ([#57](https://github.com/SirDarcanos/agentskills/issues/57))
