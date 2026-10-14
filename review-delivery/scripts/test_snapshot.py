@@ -134,6 +134,21 @@ class SnapshotTests(unittest.TestCase):
         self.write(name, "changed policy\n")
         self.assertNotEqual(before["files"][name], self.snapshot()["files"][name])
 
+    def test_repair_invalidates_old_scope_even_with_unchanged_passing_log(self):
+        # Fingerprints detect changed inputs, not the truth of a retained log.
+        self.write("checks.txt", "PASS at pre-repair inputs\n")
+        self.paths.append("checks.txt")
+        old = self.snapshot()
+        self.write("formatter.py", "def heading(text):\n    return text.strip()\n")
+        repaired = self.snapshot()
+        self.assertNotEqual(old, repaired)
+        self.assertEqual(old["files"]["checks.txt"], repaired["files"]["checks.txt"])
+        # A fresh capture alone cannot certify that the old log was rerun.
+        self.assertEqual(repaired, self.snapshot())
+        self.write("checks.txt", "PASS at repaired inputs\n")
+        self.assertNotEqual(repaired["files"]["checks.txt"],
+                            self.snapshot()["files"]["checks.txt"])
+
     def test_outside_scope_is_protected_but_requires_rediscovery(self):
         before = self.snapshot()
         self.write("new-relevant.py", "new candidate\n")

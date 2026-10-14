@@ -2,7 +2,7 @@
 
 Review delivered changes from two independent perspectives: **Standards** and **Spec**. Scope includes committed changes, staged and unstaged work, and relevant untracked files. Pinned manifests and a final freshness comparison keep old reviews from covering new work.
 
-Use `/review-delivery <scope>` or supply a bounded review handoff. The entry point is discoverable by delivery workflows; loading it does not authorize delegation. This package coexists with `code-review` and does not change its installed copy.
+Use `/review-delivery <scope>` or supply a bounded review handoff. The entry point accepts ordinary review requests and bounded single-change or integrated-spec handoffs; loading it does not authorize delegation. Review Delivery is the maintained review owner. Retiring an installed `code-review` copy is a separately approved migration, not an effect of invocation or a repository merge.
 
 ## Install
 
@@ -18,9 +18,10 @@ Alternatively, copy or link this entire directory, including its [MIT notice](LI
 
 - File inspection and actual project instructions, approved spec/brief, raw verification evidence.
 - Permission and runtime support for two distinct read-only reviewer contexts, independent of authors and each other's conclusions. They may run sequentially; finite bounds and separately inspectable results are required.
+- For delegated review, discovered compatible `work-on` execution/handoff library with shared capacity, root launch ownership, lifecycle and finding-lineage limits. Reading the library does not invoke delivery. Missing or incompatible library blocks delegated review, not plain inspection; no sibling layout is required.
 - Git for Git comparisons; an authorized before/after manifest outside Git.
 - Optional Python 3.9+ and Git for the shipped scope fingerprint helper. It uses only the standard library, captures explicit file paths and does not discover scope, run reviewers or repair findings.
 
 Missing independence or material scope/evidence blocks delivery acceptance. Lead self-review remains useful but is not independent review. No hosted service, model voting, installation or global command replacement is required. Reports do not imply merge or release permission.
 
-Read [SKILL.md](SKILL.md) for the procedure, [scope](references/scope.md) for fingerprinting and freshness limits, [report](references/report.md) for findings, and [validation](references/validation.md) for portable local checks and behavioral trial scenarios. Keep this whole directory when copying the package. Repository trial evidence exercised dirty/untracked findings, stale review and a small-change plus multi-ticket/failure route with separate Pi contexts on macOS. It remains outside the installed package; the source repository's README links the evidence and gaps. Isolated copying and helper tests verify packaging, not installed slash expansion or cross-runtime certification. No runtime adapter is claimed.
+Read [SKILL.md](SKILL.md) for the procedure, [handoff](references/handoff.md) for standalone/caller inputs and dependency behavior, [scope](references/scope.md) for fingerprinting and freshness limits, [report](references/report.md) for findings, and [validation](references/validation.md) for portable local checks and behavioral trial scenarios. Keep this whole directory when copying the package. Repository trial evidence exercised dirty/untracked findings, stale review and a small-change plus multi-ticket/failure route with separate Pi contexts on macOS. It remains outside the installed package; the source repository's README links the evidence and gaps. Isolated copying and helper tests verify packaging, not installed slash expansion or cross-runtime certification. No runtime adapter is claimed.

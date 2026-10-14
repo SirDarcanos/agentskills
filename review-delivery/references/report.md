@@ -2,7 +2,7 @@
 
 ## Independent assignments
 
-Give both reviewers the same agreement, authority, pinned scope and raw evidence. Neither receives the other's conclusions before returning. Record reviewer identity/context, relationship to authors, source access and timeout/turn bound.
+Give both reviewers the same inspected agreement, authority, pinned scope and raw evidence after the [handoff checks](handoff.md). Neither receives the other's conclusions before returning. Record reviewer identity/context, relationship to authors, source access and timeout/turn bound.
 
 Before launch, check the review packet and permitted search roots:
 
@@ -39,11 +39,13 @@ Use Markdown; no required machine schema:
 Agreement: reference/revision or digest; acceptance IDs; exclusions
 Snapshot: record pointer; base/HEAD or non-Git manifest; included paths/support
 Independence: reviewer/context per axis; author relationship; authority and bounds
+Execution: resolved library source; root/record pointer; slots and finding/checkpoint lineage
 Freshness: initial/per-review/final comparison; path-discovery and input results
 Standards: inspected files/rules; findings; checks/evidence; limitations
 Spec: per-criterion covered/gap/blocked; findings; checks/evidence; limitations
 Documentation: affected authoritative docs/changelog/impact policy; updates or justified no-change
-Outcome: current complete / incomplete / stale / blocked review, with reason
+Artifacts: original axis report locations; changed target artifacts (none for read-only review)
+Outcome: current complete / partial (incomplete) / stale / blocked review, with reason
 Next action: unresolved findings, decisions and affected review/check renewal
 ```
 

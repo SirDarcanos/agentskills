@@ -47,8 +47,11 @@ def main():
     )
     procedure = trial / "procedure"
     (procedure / "references").mkdir(parents=True)
-    # Author/test expectations stay outside the reviewers' authorized context.
-    for name in ["SKILL.md", "references/scope.md", "references/report.md"]:
+    # Maintenance validation/test expectations stay outside the review packet;
+    # SKILL.md's conditional validation pointer is not part of a review run.
+    procedure_paths = ["SKILL.md", "references/handoff.md", "references/scope.md",
+                       "references/report.md"]
+    for name in procedure_paths:
         shutil.copyfile(package / name, procedure / name)
     evidence = trial / "evidence"
     evidence.mkdir()
@@ -72,7 +75,7 @@ def main():
     protected = {name: sha((target / name).read_bytes())
                  for name in ["protected.txt", "private-note.txt"]}
     procedure_hashes = {name: sha((procedure / name).read_bytes())
-                        for name in ["SKILL.md", "references/scope.md", "references/report.md"]}
+                        for name in procedure_paths}
     metadata = {"trial": str(trial), "target": str(target), "base": base,
                 "head": state["head"], "paths": paths, "protected": protected,
                 "procedure_sha256": procedure_hashes}
