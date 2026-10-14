@@ -1,0 +1,87 @@
+{
+  "base": "d90f0e709157b82788bd11288ac1bcc0413bd157",
+  "branch": "test/installed-skill-migration",
+  "committed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "files": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "d692fb34c7ce5f78031e381ee4cd95997d7f0d366d3fad98c68ef5990913b462"
+    },
+    "README.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "2b76bfd4c6cd7cea5a3ade60d8cfa6f9ed81685a3c9e29e7c749c0995ad87e11"
+    },
+    "docs/agents/installed-skill-migration.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "1482d0895aa7f7068d47fee07bd1841d5ee4584bd20a54d76b52abf767186d89"
+    },
+    "docs/agents/project.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "97f14decfd90485e1d6490f5ccfb706b7d4242f56e517ac2278b612d467c262b"
+    },
+    "docs/agents/workflow.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "60c52e236934076b313ab46575331c3c58c87881de2859597d241b23ebb6e34b"
+    },
+    "docs/design/composable-delivery-inventory.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "7b7798a3a29879a452d43aef29fccbae8f5e9db7660a127395db31811dc7ccb5"
+    },
+    "docs/design/composable-delivery-validation.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "9ad8fe7a92b52560e78c30091f7c98c08d882b7414f575532376a3d26ee566aa"
+    },
+    "docs/design/composable-delivery.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "6f301859ae7e516bb34b273bfd72c33f2679b473c044fccad7f498df8f8f6f7a"
+    },
+    "docs/validation/installed-skill-migration/README.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "5fd0355e1211b1d39916ede095edf0a1f0edbb5e120fb898a8f371e5ab7d42a1"
+    },
+    "docs/validation/installed-skill-migration/results/initial-tests.txt": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "46d84cc974aac2a9f9ee47f34524d61302f50f5a0d24b0ddac40045ebd2facf0"
+    },
+    "docs/validation/installed-skill-migration/results/tests.txt": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "f0501e42d4547e7cd185f19910438b70a4a75c441cf7b5ca16e7f6d5e744a297"
+    },
+    "docs/validation/installed-skill-migration/test_fixture.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "41495813c2ea38115cdc9689fc091c0f9d9e8f789df051391bc44749f44c90f9"
+    }
+  },
+  "format": 1,
+  "head": "d90f0e709157b82788bd11288ac1bcc0413bd157",
+  "index_sha256": "130a7f9b843d63ada3ca64dd4cc6892cce143bab198b616bf3db584fe1914e21",
+  "paths": [
+    "AGENTS.md",
+    "README.md",
+    "docs/agents/installed-skill-migration.md",
+    "docs/agents/project.md",
+    "docs/agents/workflow.md",
+    "docs/design/composable-delivery-inventory.md",
+    "docs/design/composable-delivery-validation.md",
+    "docs/design/composable-delivery.md",
+    "docs/validation/installed-skill-migration/README.md",
+    "docs/validation/installed-skill-migration/results/initial-tests.txt",
+    "docs/validation/installed-skill-migration/results/tests.txt",
+    "docs/validation/installed-skill-migration/test_fixture.py"
+  ],
+  "staged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status_sha256": "6397e3cf6bf9380683f255c7c86215ef5946355151232ab87a5aa7d52228065a",
+  "unstaged_sha256": "9e34966c106fbef07304a5eb465b0ace8713ef4ad440d803b446d7563b831bda"
+}

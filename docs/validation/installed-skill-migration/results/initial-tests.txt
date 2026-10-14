@@ -1,0 +1,424 @@
+test_activation_failure_rolls_back (__main__.MigrationTests.test_activation_failure_rolls_back) ... ERROR
+test_changed_shared_source_blocks_restore (__main__.MigrationTests.test_changed_shared_source_blocks_restore) ... ERROR
+test_duplicate_discovery_blocks_success (__main__.MigrationTests.test_duplicate_discovery_blocks_success) ... ERROR
+test_full_package_restore (__main__.MigrationTests.test_full_package_restore) ... ERROR
+test_intervening_edit_blocks_rollback (__main__.MigrationTests.test_intervening_edit_blocks_rollback) ... ERROR
+test_invalid_backup_blocks_retirement (__main__.MigrationTests.test_invalid_backup_blocks_retirement) ... ERROR
+test_invalid_replacement_blocks_retirement (__main__.MigrationTests.test_invalid_replacement_blocks_retirement) ... ERROR
+test_missing_companion_blocks_retirement (__main__.MigrationTests.test_missing_companion_blocks_retirement) ... FAIL
+test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) ...
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-retire') ... ERROR
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-retire') ... ERROR
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-activate') ... ERROR
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-activate') ... ERROR
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-register') ... ERROR
+  test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-register') ... ERROR
+test_same_name_new_source (__main__.MigrationTests.test_same_name_new_source) ... ERROR
+test_shared_symlink_retirement_and_restore (__main__.MigrationTests.test_shared_symlink_retirement_and_restore) ... ERROR
+test_unapproved_target_untouched (__main__.MigrationTests.test_unapproved_target_untouched) ... ok
+test_unknown_interruption_blocks_resume (__main__.MigrationTests.test_unknown_interruption_blocks_resume) ... ERROR
+test_write_escape_guard (__main__.MigrationTests.test_write_escape_guard) ... ok
+
+======================================================================
+ERROR: test_activation_failure_rolls_back (__main__.MigrationTests.test_activation_failure_rolls_back)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 400, in test_activation_failure_rolls_back
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_changed_shared_source_blocks_restore (__main__.MigrationTests.test_changed_shared_source_blocks_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 440, in test_changed_shared_source_blocks_restore
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_duplicate_discovery_blocks_success (__main__.MigrationTests.test_duplicate_discovery_blocks_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 369, in test_duplicate_discovery_blocks_success
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_full_package_restore (__main__.MigrationTests.test_full_package_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 337, in test_full_package_restore
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_intervening_edit_blocks_rollback (__main__.MigrationTests.test_intervening_edit_blocks_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 430, in test_intervening_edit_blocks_rollback
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_invalid_backup_blocks_retirement (__main__.MigrationTests.test_invalid_backup_blocks_retirement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 378, in test_invalid_backup_blocks_retirement
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_invalid_replacement_blocks_retirement (__main__.MigrationTests.test_invalid_replacement_blocks_retirement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 386, in test_invalid_replacement_blocks_retirement
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-retire')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-retire')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 159, in prepare
+    raise Blocked("never replace original backup on resume")
+Blocked: never replace original backup on resume
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-activate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 159, in prepare
+    raise Blocked("never replace original backup on resume")
+Blocked: never replace original backup on resume
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-activate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 159, in prepare
+    raise Blocked("never replace original backup on resume")
+Blocked: never replace original backup on resume
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='before-register')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 159, in prepare
+    raise Blocked("never replace original backup on resume")
+Blocked: never replace original backup on resume
+
+======================================================================
+ERROR: test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) (boundary='after-register')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 413, in test_resume_all_intent_boundaries
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 159, in prepare
+    raise Blocked("never replace original backup on resume")
+Blocked: never replace original backup on resume
+
+======================================================================
+ERROR: test_same_name_new_source (__main__.MigrationTests.test_same_name_new_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 346, in test_same_name_new_source
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_shared_symlink_retirement_and_restore (__main__.MigrationTests.test_shared_symlink_retirement_and_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 356, in test_shared_symlink_retirement_and_restore
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+ERROR: test_unknown_interruption_blocks_resume (__main__.MigrationTests.test_unknown_interruption_blocks_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 449, in test_unknown_interruption_blocks_resume
+    self.t.prepare()
+    ~~~~~~~~~~~~~~^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 168, in prepare
+    copy_package(self.active.resolve(), self.backup)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 98, in copy_package
+    shutil.copytree(source, destination, symlinks=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 654, in copytree
+    return _copytree(entries=entries, src=src, dst=dst, symlinks=symlinks,
+                     ignore=ignore, copy_function=copy_function,
+                     ignore_dangling_symlinks=ignore_dangling_symlinks,
+                     dirs_exist_ok=dirs_exist_ok)
+  File "<python-stdlib>/shutil.py", line 577, in _copytree
+    copystat(srcobj, dstname, follow_symlinks=not symlinks)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<python-stdlib>/shutil.py", line 446, in copystat
+    lookup("utime")(dst, ns=(st.st_atime_ns, st.st_mtime_ns),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        follow_symlinks=follow)
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 50, in audit
+    raise Blocked("dir_fd mutation unavailable")
+Blocked: dir_fd mutation unavailable
+
+======================================================================
+FAIL: test_missing_companion_blocks_retirement (__main__.MigrationTests.test_missing_companion_blocks_retirement)
+----------------------------------------------------------------------
+Blocked: dir_fd mutation unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<repository>/docs/validation/installed-skill-migration/test_fixture.py", line 395, in test_missing_companion_blocks_retirement
+    with self.assertRaisesRegex(Blocked, "missing companion"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "missing companion" does not match "dir_fd mutation unavailable"
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.183s
+
+FAILED (failures=1, errors=16)
+{"audited_mutations": 1584, "errors": 16, "failures": 1, "real_installations_changed": false, "tests": 14}

@@ -1,0 +1,20 @@
+test_activation_failure_rolls_back (__main__.MigrationTests.test_activation_failure_rolls_back) ... ok
+test_changed_shared_source_blocks_restore (__main__.MigrationTests.test_changed_shared_source_blocks_restore) ... ok
+test_duplicate_discovery_blocks_success (__main__.MigrationTests.test_duplicate_discovery_blocks_success) ... ok
+test_full_package_restore (__main__.MigrationTests.test_full_package_restore) ... ok
+test_intervening_edit_blocks_rollback (__main__.MigrationTests.test_intervening_edit_blocks_rollback) ... ok
+test_invalid_backup_blocks_retirement (__main__.MigrationTests.test_invalid_backup_blocks_retirement) ... ok
+test_invalid_replacement_blocks_retirement (__main__.MigrationTests.test_invalid_replacement_blocks_retirement) ... ok
+test_missing_companion_blocks_retirement (__main__.MigrationTests.test_missing_companion_blocks_retirement) ... ok
+test_resume_all_intent_boundaries (__main__.MigrationTests.test_resume_all_intent_boundaries) ... ok
+test_same_name_new_source (__main__.MigrationTests.test_same_name_new_source) ... ok
+test_shared_symlink_retirement_and_restore (__main__.MigrationTests.test_shared_symlink_retirement_and_restore) ... ok
+test_unapproved_target_untouched (__main__.MigrationTests.test_unapproved_target_untouched) ... ok
+test_unknown_interruption_blocks_resume (__main__.MigrationTests.test_unknown_interruption_blocks_resume) ... ok
+test_write_escape_guard (__main__.MigrationTests.test_write_escape_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.475s
+
+OK
+{"audited_mutations": 4441, "errors": 0, "failures": 0, "real_installations_changed": false, "tests": 14}
