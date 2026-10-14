@@ -21,6 +21,8 @@ npx skills add SirDarcanos/agentskills --skill implementation-preflight
 npx skills add SirDarcanos/agentskills --skill tdd
 # When selecting a bounded experiment:
 npx skills add SirDarcanos/agentskills --skill prototype
+# When selecting executable workflow examples first:
+npx skills add SirDarcanos/agentskills --skill acceptance-first
 # Before selected risky legacy changes:
 npx skills add SirDarcanos/agentskills --skill characterize
 # Only for meaning/model or qualifying ADR changes:
@@ -34,6 +36,8 @@ These are installation examples, not commands the workflow runs automatically. R
 The entry needs file inspection and, where relevant, read-only Git/tracker access. Git implementation needs a compatible `implementation-preflight`; meaning/model or qualifying ADR changes need `domain-modeling`; acceptance needs independent `review-delivery`. GitHub graph work reads the discovered `setup-project` tracker procedure as a library without invoking setup; its optional Python 3.9+ blocker helper needs authenticated `gh` for live use and does not manage parentage or labels. Other trackers require a project-approved native procedure. Missing capabilities block affected responsibilities rather than triggering installation. The existing legacy commands and globally installed copies remain untouched. Installing `setup-project` for its read-only library does not require invoking setup or installing its setup-only companions. Runtime discovery must expose the chosen companion source; record its revision and inspect the capabilities in the contract, including branch-specific references. Ambiguous or incompatible candidates block that route. Recheck after source, authority or task changes; a repository merge does not update separately copied installations.
 
 Test-first development uses the discovered compatible `tdd` companion for red–green–refactor and local evidence; direct build retains method choice and subsequent delivery gates. Missing or incompatible TDD blocks that selected route without invoking an older installed procedure. Other direct-build methods remain available under the target's policy. Stage the updated Work On package with TDD when using that route.
+
+Acceptance-first selection uses discovered compatible `acceptance-first` for executable observable workflow examples, checked implementation increments and criterion-level local evidence. Stage Work On with Acceptance First for that route; missing/incompatible helpers, ambiguous commitments and unavailable material boundaries block the dependent claim rather than weakening acceptance. The lead retains verification/review gates.
 
 Characterization-first selection uses discovered compatible `characterize` to return protected boundaries, baseline provenance, sensitivity and nondeterminism limits before implementation. Intended behavior, unknown intent and known defects remain separate; the lead selects the next method and delivery gates. Stage Work On with Characterize for that route; missing or incompatible capture blocks only the dependent route.
 
