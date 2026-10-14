@@ -46,7 +46,7 @@ The [provenance inventory](../../design/delivery-workflow-inventory.md#license-d
 records newly authored procedures, not an imported external implementation. Direct
 integrated inspection found no newly vendored third-party bodies/notices. Existing
 notices are unchanged; each new independently distributed delivery package now
-includes the complete root MIT notice (copyright 2026 SirDarcanos). Conditional
+includes the complete root MIT notice (copyright 2026 Nicola Mustone; maintainer name corrected after the original checks). Conditional
 companions were inspected, not repackaged or relicensed by this change.
 
 ## #14 criterion-by-criterion evidence

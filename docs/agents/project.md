@@ -14,7 +14,7 @@ Keep maintenance proportionate to a collection of independently installable skil
 - Some skills use local models or hosted services. Disclosure, spending, installation, and service-management permissions must remain explicit; ordinary validation must work without live inference.
 - Public examples and retained artifacts must exclude credentials, private project material, personal profiles, and workstation-specific paths.
 - A skill copied on its own must retain its shipped references. Companion requirements must explain discovery, compatibility, and unavailable-helper behavior rather than assume a particular installation tree.
-- Imported material requires license and attribution review. Preserve existing notices and runtime assumptions unless the change deliberately updates them.
+- Maintainer copyright notices name Nicola Mustone, not the GitHub handle. Imported or directly adapted material requires license and attribution review; packages substantially inspired by Matt Pocock's skills also retain his MIT notice and source credit. Keep upstream notices with only the affected independently installable packages, not every skill. Preserve existing third-party notices and runtime assumptions unless the change deliberately updates those assumptions.
 - Static checks and synthetic benchmarks have limited scope. Report what was executed and what remains uncertain; model agreement is not independent proof of correctness.
 
 ## Policy homes

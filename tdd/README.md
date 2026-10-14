@@ -16,7 +16,11 @@ Alternatively, copy or link this complete directory into your runtime's skill di
 
 The method needs file inspection/editing and the target's relevant test tools. Before Git writes it needs a discovered compatible `implementation-preflight` or a current inspected result from the caller. Required domain/ADR changes use `domain-modeling`. Delegated work or acceptance-finding corrections consume the discovered `work-on` execution/repair contract as a library without invoking delivery. Ordinary direct TDD does not require launching Work On. Companions may live anywhere exposed by the runtime or an explicit approved location; a matching name alone does not prove compatibility. Missing helpers block only dependent work and never trigger installation.
 
-These are original repository instructions implementing [#55](https://github.com/SirDarcanos/agentskills/issues/55), not a copy of the older installed TDD procedure. The maintained contract includes green refactoring and lead-selected seams; it does not inherit the older procedure's user-confirmation or review-only-refactoring rules.
+## Attribution
+
+This package implements [#55](https://github.com/SirDarcanos/agentskills/issues/55) and is inspired by [Matt Pocock's TDD skill at revision `49dd158`](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/tdd/SKILL.md), particularly behavioral tests, independent expected outcomes, rejection of implementation coupling and small test-first increments. Its [MIT license](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/LICENSE) notice is retained in this package's [LICENSE](LICENSE), alongside Nicola Mustone's notice for this implementation.
+
+The procedure is newly written rather than a verbatim copy. It adds the approved authority/handoff contract, green refactoring and lead-selected seams; it does not inherit the older procedure's user-confirmation or review-only-refactoring rules.
 
 ## Validation
 
