@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add standalone Investigate Bug for bounded diagnosis and actionable tickets, with duplicate reconciliation and explicit investigation-only outcomes rather than automatic fixes. ([#64](https://github.com/SirDarcanos/agentskills/issues/64))
 - Add standalone Write Tickets for cohesive decomposition and ready bug publication with approved native dependencies, with Work On using its discovered companion. ([#63](https://github.com/SirDarcanos/agentskills/issues/63))
 - Add standalone Write Spec for agreed behavior, stable acceptance IDs and authorized publication with separate readiness, with Work On using its discovered companion. ([#62](https://github.com/SirDarcanos/agentskills/issues/62))
 - Add standalone Shape Work for project-oriented discovery, settled-decision reuse and preserved concern dispositions, with Work On using its discovered companion. ([#61](https://github.com/SirDarcanos/agentskills/issues/61))
