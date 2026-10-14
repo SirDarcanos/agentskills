@@ -12,7 +12,9 @@ For a ticket, consume entry's native blocker observations and accepted predecess
 
 Before any implementation writes in Git, discover and read the complete compatible `implementation-preflight` entry point and applicable references through the shared capability contract. Perform its maintained procedure; inspect the resulting HEAD, branch/base/PR target, existing PR state and preservation of protected work. Explicit target branch policy wins over incidental branch names. Record the companion source/revision and actual outcome rather than copying its branch algorithm here. Outside Git, mark preflight inapplicable and retain a before/after file manifest.
 
-**Complete when:** approved behavior and verifiable acceptance, actionable design/risks/dependencies, exclusive ownership, sufficient authority and safe preflight are evidenced. A missing compatible preflight blocks Git preparation; inspection/planning can continue. Unknown permission remains ungranted.
+For a prototype-first route, the actionable agreement is the approved experimental question, exclusions and bounded plan; unresolved production design is its subject, not a reason to pretend the production build gate passed. Require safe ownership/authority/preflight and return learning before production method selection.
+
+**Complete when:** approved behavior and verifiable acceptance (or the bounded experimental agreement), actionable design/risks/dependencies, exclusive ownership, sufficient authority and safe preflight are evidenced. A missing compatible preflight blocks Git preparation; inspection/planning can continue. Unknown permission remains ungranted.
 
 ## 2. Select development checks and method
 
@@ -23,12 +25,15 @@ Run safe relevant baseline checks when useful and authorized. Record actual comm
 Choose a method suited to the change, respecting binding project policy:
 
 - For reproducible bugs and logic changes, select test-first development when useful. The discovered compatible `tdd` companion owns the complete red–green–refactor procedure; read its full entry and applicable references, supply the current bounded agreement/check mapping/authority/state, execute in this context and inspect its local evidence return. Do not duplicate its loop here. Missing or incompatible TDD blocks the selected test-first route, not inspection or a separately justified method choice.
+- For an unresolved design/UX/state-model/feasibility question, select the discovered compatible `prototype` companion. Read its full entry and relevant references, pass the bounded question/agreement/authority/current evidence and inspect its experiment return. It owns bounds, runnable artifacts, observations, recommendation, production limitations and disposition; do not copy its loop here. Missing or incompatible Prototype blocks that selected route. A prototype result returns learning, not a production build-gate pass.
 - For already-covered behavior, copy edits or mechanical changes, existing checks or focused inspections may suffice. Record why they address the distinct failure risks; no blanket TDD, new-test quota or universal suite applies.
 - If project policy mandates TDD or another check, follow it or seek its owner's approved revision. This procedure retains method choice; selecting TDD uses the maintained companion, never an incompatible legacy `/tdd` or implementation command.
 
 **Complete when:** each material acceptance/risk has a development check or explicit gap, baseline claims have evidence, and the method and required environment are known.
 
 ## 3. Implement within the agreement
+
+When Prototype is selected, execute that method inline within the supplied authority and inspect its evidence/artifact account. Return the experiment outcome and limitations to readiness/method selection; do not continue production implementation or send the prototype to production acceptance from this invocation. Subsequent production work needs its own authorized scope and checks. The remaining actions in this step apply to production implementation.
 
 Modify only the owned scope, retaining suitable existing responsibilities and interfaces. Build directly in coherent slices and execute relevant checks as behavior changes. Refactor when it improves the affected design while relevant checks remain green; keep behavior, scope and authority stable rather than postponing all structural work to review.
 
