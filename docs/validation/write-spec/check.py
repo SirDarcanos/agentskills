@@ -22,7 +22,9 @@ spec.loader.exec_module(checks)
 
 def main():
     notice = (REPO / "LICENSE").read_bytes()
-    assert (REPO / "write-spec/LICENSE").read_bytes() == notice
+    expected_notice = notice.replace(b"Copyright (c) 2026 Nicola Mustone",
+                                     b"Copyright (c) 2026 Matt Pocock\nCopyright (c) 2026 Nicola Mustone")
+    assert (REPO / "write-spec/LICENSE").read_bytes() == expected_notice
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))
     for name, command_only in (("write-spec", False), ("work-on", True), ("shape-work", False)):
