@@ -7,12 +7,14 @@ Use this reference when building, sending, or validating an Ask Nimble request.
 - Ollama 0.35 or later, with the local service running.
 - The `nimble` model pulled locally.
 - Python 3 for checking JSON, and curl for the HTTP request.
-- Endpoint: `http://localhost:11434/v1/systemone`.
+- Endpoint: `http://127.0.0.1:11434/v1/systemone`.
 - Request body: at most 64 KiB.
 - Decision prompt: at most 8,192 tokens, including state, instructions, and criteria. Byte size alone does not establish token fit; keep well below the limit and reduce the request if Ollama reports a context error.
 - The API supports 1–64 questions; this skill uses at most four independently useful questions. Choice and Score take 2–26 options/levels.
 
 ## Server lifecycle
+
+First complete the [authorization gate](authorization.md), including local disclosure and shared reservation checks. Unauthorized routes must not run even the probes below. This reference owns process mechanics; the authorization reference owns permission and fallback decisions.
 
 ### Check and reuse
 
@@ -20,7 +22,7 @@ Check the service and installation with:
 
 ```sh
 ollama --version
-curl --silent --show-error --fail --max-time 5 http://localhost:11434/api/tags
+curl --noproxy '*' --proxy '' --silent --show-error --fail --max-time 5 http://127.0.0.1:11434/api/tags
 ```
 
 If the endpoint responds with valid Ollama model-list JSON, reuse that server and record `server_owner: existing`. The desktop app is not required. Leave an existing server running after the question; this invocation does not own it.
@@ -29,20 +31,20 @@ A failed probe alone does not prove the server is absent. Distinguish connection
 
 ### Start only with permission
 
-If the local endpoint refuses the connection, ask: “Ollama is not responding locally. May I start `ollama serve` for this question?” If permission is declined, report the call as blocked.
+If the local endpoint refuses the connection, use exact policy-authorized startup and assigned ownership, without repeated confirmation. For an explicit assessment lacking startup authority, ask: “Ollama is not responding locally. May I start `ollama serve` for this question?” Autonomous denied startup returns unavailable; do not prompt to expand the policy.
 
-After permission:
+After startup authority is established:
 
 1. Recheck the endpoint in case another process started it; reuse any now-responsive server.
 2. Launch `OLLAMA_HOST=127.0.0.1:11434 ollama serve` with the runtime's managed background-process facility, not a blocking foreground shell. Record its exact task/process handle and launch command. Use loopback binding so project evidence stays local.
 3. Perform a bounded readiness check (at most 30 seconds), inspecting launch errors as needed. A task launch receipt alone does not establish readiness. Mark `server_owner: this_invocation` only if the tracked process remains running and the endpoint is ready. If the process exits with a port conflict, treat any existing server as unowned; never claim ownership merely because an endpoint responds.
-4. If readiness fails, report the startup failure and whether the owned process remains running. Offer to stop that exact process; never leave its status unmentioned.
+4. If readiness fails, report the startup failure and whether the tracked process remains running. Resolve any verified owned handle under the approved cleanup disposition below; absent disposition means ask. Never leave its status unmentioned.
 
-### Offer shutdown after the answer
+### Resolve owned shutdown after the answer
 
-After presenting the decision—or reporting a call failure—if `server_owner: this_invocation`, ask: “I started Ollama for this question. Stop that server now, or leave it running?” Keep it running while awaiting the user's choice, and preserve its handle for the follow-up.
+After presenting the decision—or reporting a call/readiness failure—if `server_owner: this_invocation`, follow the approved stop/leave-running disposition. If none was approved, ask: “I started Ollama for this question. Stop that server now, or leave it running?” Keep it running while awaiting the choice, preserve its handle, and report pending status. Resolve any still-running tracked process after readiness failure through the same ownership check.
 
-If the user chooses stop, terminate only the exact managed task/process started by this invocation and verify that it exited. Use the runtime's stop facility; never use a broad `pkill ollama`, close the desktop app, or stop another session's server. If ownership or the handle cannot be verified, explain the limitation and provide manual guidance instead of guessing.
+When stop is authorized by the policy disposition or user choice, terminate only the exact managed task/process started by this invocation and verify that it exited. Use the runtime's stop facility; never use a broad `pkill ollama`, close the desktop app, or stop another session's server. If ownership or the handle cannot be verified, explain the limitation and provide manual guidance instead of guessing.
 
 If the user chooses leave running, report that it remains available. In either case, distinguish the Ollama server from the loaded Nimble model: a model becoming idle or unloading does not stop the server.
 
@@ -90,16 +92,16 @@ This is synthetic evidence, not real game data:
 
 1. Create a private temporary directory with `mktemp -d`. Use the returned absolute path for a request file and response file.
 2. Write the JSON with a file-writing tool or JSON serializer. Never interpolate the user's sentence, source excerpts, or model output into a shell command.
-3. Check JSON syntax with `python3 -m json.tool REQUEST_FILE` and byte size with `wc -c < REQUEST_FILE`. Replace these placeholder paths with quoted absolute paths.
-4. Send the file, preserving the response and checking the command exit status:
+3. Check JSON syntax without printing private evidence with `python3 -m json.tool REQUEST_FILE > /dev/null` and byte size with `wc -c < REQUEST_FILE`. Replace these placeholder paths with quoted absolute paths.
+4. Immediately recheck authority, payload and the shared reservation. Send the file, preserving the response and checking the command exit status. Count the attempted request even on timeout/failure; do not automatically retry malformed/transient responses:
 
 ```sh
-curl --silent --show-error --fail-with-body \
+curl --noproxy '*' --proxy '' --silent --show-error --fail-with-body \
   --connect-timeout 5 --max-time 120 \
   --header 'Content-Type: application/json' \
   --data-binary '@REQUEST_FILE' \
   --output 'RESPONSE_FILE' \
-  http://localhost:11434/v1/systemone
+  http://127.0.0.1:11434/v1/systemone
 ```
 
 Replace `REQUEST_FILE` and `RESPONSE_FILE` with the actual paths inside the quoted arguments. Keep the `@` prefix on the request path. If curl lacks `--fail-with-body`, use `--fail`; error bodies may then be unavailable.
