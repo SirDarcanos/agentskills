@@ -15,6 +15,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`ask-jev`](ask-jev/) | Explicitly request an evidence-backed hosted Jev judgment and interpretation, with confirmation only for exceptional scope. |
 | [`ask-nimble`](ask-nimble/) | Request or policy-authorize a bounded evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
 | [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
+| [`characterize`](characterize/) | Protect relevant legacy behavior before risky changes, with baseline provenance and separate intent, unknown and defect evidence. |
 | [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
 | [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
 | [`github-repo-setup`](github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
@@ -67,7 +68,7 @@ Review a skill before enabling it because instructions and tool assumptions can 
 
 ### Delivery workflow
 
-Install `work-on` for explicitly requested delivery and `review-delivery` for the independent acceptance-review gate. Follow their package READMEs for installation examples and conditional companions: `implementation-preflight` for Git building, `tdd` when selecting test-first development, `prototype` when selecting a bounded experiment, `domain-modeling` for meaning/ADR changes, and the discovered `setup-project` tracker library for GitHub graph work. Reading that library does not invoke setup. Copy complete directories and their notices; companions use semantic discovery, not sibling paths. Missing tools, compatible companions or review authority block the affected route rather than prompting automatic installation or legacy-command fallback.
+Install `work-on` for explicitly requested delivery and `review-delivery` for the independent acceptance-review gate. Follow their package READMEs for installation examples and conditional companions: `implementation-preflight` for Git building, `tdd` when selecting test-first development, `prototype` when selecting a bounded experiment, `characterize` before selected risky legacy changes, `domain-modeling` for meaning/ADR changes, and the discovered `setup-project` tracker library for GitHub graph work. Reading that library does not invoke setup. Copy complete directories and their notices; companions use semantic discovery, not sibling paths. Missing tools, compatible companions or review authority block the affected route rather than prompting automatic installation or legacy-command fallback.
 
 [Delivery coverage and installation checks](docs/validation/delivery-coverage/README.md) maps #14's criteria to shipped procedures, executed trials and remaining gaps. Observed Pi/macOS trials are not cross-runtime certification, installed slash-command tests or proof of live tracker mutation. Installation examples have not been executed here; repository merges do not refresh separately copied skills.
 
