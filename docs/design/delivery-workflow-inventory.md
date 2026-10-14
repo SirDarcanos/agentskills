@@ -42,7 +42,7 @@ domain-modeling           aae04989a6039707b20ca44c65b2fb9ebc0a7b35f408fc46f4ded5
 
 ## License decision
 
-Read the upstream [MIT license at commit 49dd158](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/LICENSE), retrieved through the GitHub contents API with that exact ref. Its copyright is **2026 Matt Pocock**; the license file blob is `f1dd2c09108dde1a5f56097cee8461b3ea834499`. This is evidence for that revision's license, not proof of the installed copies' original revision. The receiving repository's [license](../../LICENSE) is MIT, copyright 2026 SirDarcanos.
+Read the upstream [MIT license at commit 49dd158](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/LICENSE), retrieved through the GitHub contents API with that exact ref. Its copyright is **2026 Matt Pocock**; the license file blob is `f1dd2c09108dde1a5f56097cee8461b3ea834499`. This is evidence for that revision's license, not proof of the installed copies' original revision. The receiving repository's [license](../../LICENSE) is MIT, copyright 2026 Nicola Mustone (maintainer name corrected after this inventory; the upstream observation above is unchanged).
 
 The selected approach is newly authored procedures from the approved #14 behavior, not importing external skill bodies, templates, examples, smell catalogs or configuration. This design records factual observations and attribution; no external implementation is vendored by #18. Existing notices remain untouched. No new third-party license file is necessary for this no-import change.
 

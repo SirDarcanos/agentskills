@@ -22,9 +22,9 @@ Run safe relevant baseline checks when useful and authorized. Record actual comm
 
 Choose a method suited to the change, respecting binding project policy:
 
-- For reproducible bugs and logic changes, use test-first development when useful: demonstrate the intended failure, implement the smallest coherent behavior slice, then rerun the relevant checks. A failure for the wrong reason is not regression sensitivity.
+- For reproducible bugs and logic changes, select test-first development when useful. The discovered compatible `tdd` companion owns the complete red–green–refactor procedure; read its full entry and applicable references, supply the current bounded agreement/check mapping/authority/state, execute in this context and inspect its local evidence return. Do not duplicate its loop here. Missing or incompatible TDD blocks the selected test-first route, not inspection or a separately justified method choice.
 - For already-covered behavior, copy edits or mechanical changes, existing checks or focused inspections may suffice. Record why they address the distinct failure risks; no blanket TDD, new-test quota or universal suite applies.
-- If project policy mandates TDD or another check, follow it or seek its owner's approved revision. This procedure owns method choice; it does not silently invoke legacy `/tdd` or implementation commands.
+- If project policy mandates TDD or another check, follow it or seek its owner's approved revision. This procedure retains method choice; selecting TDD uses the maintained companion, never an incompatible legacy `/tdd` or implementation command.
 
 **Complete when:** each material acceptance/risk has a development check or explicit gap, baseline claims have evidence, and the method and required environment are known.
 
