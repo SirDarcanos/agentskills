@@ -9,6 +9,7 @@ This is the single authoring contract for setup's output. Other setup references
 | `AGENTS.md` | Concise entry point: applicable rules and conditional read pointers. |
 | `docs/agents/project.md` | Purpose/stage, users and evidenced scale, maintenance/operating ownership, resources/constraints, credible risks, collaboration preference. |
 | `docs/agents/workflow.md` | Decision authority, delivery/review/verification expectations, versioning/changelog policy and sources, permitted actions, documentation upkeep. |
+| `docs/agents/model-use.md` or existing authoritative equivalent | Approved none or exact bounded model permissions, purpose/disclosure, shared limits, lifecycle, fallback, rationale and provenance. The [model-use procedure](model-use.md) owns discovery/approval/reconciliation; preserve an existing home. |
 | `docs/agents/issue-tracker.md` | Actual tracker location/access, capabilities, native parent/dependency operations, limitations, completion semantics. |
 | `docs/agents/triage-labels.md` | Spec/work-ticket roles, other applicable type/readiness/release roles mapped to actual labels/statuses; approved title conventions, role-assignment/readiness rules, and audit decisions. The tracker reference owns the authoring procedure. Omit if no label/status system is used. |
 | Existing changelog path, otherwise approved `CHANGELOG.md` or package equivalent | Evidence-backed notable change history in the project's convention; use source fragments/configuration instead for generated changelogs. |
@@ -45,7 +46,7 @@ Choose verification by meaningful failure risk and existing coverage. A new test
 Generate pointers to the project's actual files with explicit conditions. For example, adapted to the selected layout:
 
 ```markdown
-Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Before classifying release impact or updating the changelog, read the workflow's release policy and linked sources. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
+Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Before proposing or using a model assessment, managing its service, or changing model permission, read the linked model-use policy. Before classifying release impact or updating the changelog, read the workflow's release policy and linked sources. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
 ```
 
 Only link files that exist after setup. Include actual domain/tracker links when applicable. When domain records are present, add a conditional instruction to discover and read `domain-modeling` for changes to meanings, relationships, or decision records, following its handoff contract and the project's approval boundaries. Reading existing definitions alone needs no specialist invocation. If the companion is unavailable or incompatible, report affected modeling work blocked rather than treating another same-named package as equivalent. Do not copy this package reference path into the target as a runtime dependency; the generated project docs must stand on their own.
@@ -57,6 +58,7 @@ Put this maintenance contract in the target's workflow document; the entry point
 | Change | Owner and required action |
 | --- | --- |
 | Domain term/relationship | Discovering phase, through `domain-modeling`: update the glossary/context map once confirmed and authorized. |
+| Model permission or budget/lifecycle/disclosure decision | Lead/setup: reconcile the single model-policy home and pointers through exact approval; the assessment package owns runtime enforcement. |
 | Operating constraint or authority | Lead/setup: reconcile the project or workflow document with appropriate approval. |
 | Delivery/check procedure | Implementation: update authoritative workflow guidance and verify safe commands. |
 | Qualifying architectural decision | Analysis/implementation, through `domain-modeling`: create or supersede an ADR under the project's authority. |

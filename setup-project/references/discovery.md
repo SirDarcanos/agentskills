@@ -15,7 +15,7 @@ Ask a few related questions per round. Explain recommendations through their con
 | Operations | Hosting/integration constraints, expected usage supported by evidence, organization requirements. | Avoid speculative scaling infrastructure. |
 | Delivery | How changes reach production/default branch; actual reviewers and required checks. | Offer a simple branch flow unless requirements need more; do not invent reviewers or checks. |
 | Releases and labels | Resolve conflicting/unknown versioning, whether a missing changelog should be created, and which audited labels serve the workflow. | Inspect changelog/history, version sources, automation, and open/closed issue/PR label usage before asking. |
-| Permissions | Delegation, hosted assessments/disclosure, spending and deployment boundaries. | Record unknown as ungranted; do not test permission by performing the action. |
+| Permissions | Delegation and deployment boundaries; none or exact model permissions through the [model-use procedure](model-use.md), including disclosure, shared limits and service lifecycle. | Inspect existing authority first; keep proposals distinct from permission and verify without exercising it. |
 
 Ask about a GitHub owner, repository visibility/license, pushes, rules, and bypass actors only on the selected remote route and only if unresolved; let the GitHub companion own those concrete settings. A missing credential is a blocker, not an invitation to print secrets or provision accounts.
 

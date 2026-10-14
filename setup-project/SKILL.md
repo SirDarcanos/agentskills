@@ -1,6 +1,6 @@
 ---
 name: setup-project
-description: Establish or reconcile project context, agent instructions, and approved GitHub configuration.
+description: On an explicit setup request, establish or reconcile project context, agent instructions, approved model-use policy, and GitHub configuration.
 disable-model-invocation: true
 ---
 
@@ -22,6 +22,8 @@ Read the [documentation contract](references/documentation-contract.md). Map eve
 
 Select **local-only**, **new GitHub repository**, or **existing GitHub repository**. A remote already present selects configuration, not another repository creation. Inspect permissions/settings read-only when the GitHub route is requested; local-only setup needs no GitHub login. Do not initialize Git, install tools, change labels, or write project documents during discovery.
 
+Read [model-use agreement](references/model-use.md) to discover and propose none or exact bounded permissions without exercising them. Setup requires no model/service calls, startup, credentials, downloads or installations.
+
 For an existing or interrupted setup, read [reconciliation](references/reconciliation.md) before proposing edits.
 
 **Done:** existing authorities, route, current work, known facts, gaps, and capability limits are identified without mutations.
@@ -40,6 +42,7 @@ Show:
 - exact target directory/repository, route, and authoritative document mapping;
 - files/sections to create or change and custom content to preserve;
 - confirmed operating decisions, permissions, and relevant unknowns;
+- model-use policy home, exact none/permitted-route delta, rationale/approval provenance, shared budgets, disclosure, lifecycle and fallback decisions from the model-use reference;
 - changelog creation/maintenance route, versioning policy, and applicable release-impact labels;
 - GitHub creation/configuration, full label-audit dispositions (including approved edits/removals), spec labeling, branch rules, bypasses, pushes, and opt-ins when requested;
 - deferred/blocked operations and which independent local work can proceed.
@@ -54,7 +57,7 @@ Ask for approval before any setup mutation. Approval covers these actions, not n
 
 Recheck affected state against the plan. If it changed materially, reconcile and obtain approval for changed scope.
 
-1. Author operating docs and entry-point pointers using the documentation contract. Preserve unrelated content; do not regenerate whole existing files from a template.
+1. Author operating docs and entry-point pointers using the documentation contract; apply only the approved model-policy delta through the model-use reference, without exercising permission. Preserve unrelated content; do not regenerate whole existing files from a template.
 2. For approved domain work, execute the handoff through `domain-modeling`; use the same mapping and confirmed decisions supplied during planning. Inspect its results and integrate approved pointers without moving operating context into the glossary.
 3. For approved GitHub work, hand the companion the target, inspected state, approved operations/exclusions, organization constraints, and known capability limits. It returns actual changes, read-back evidence, and blockers; it must not repeat resolved questions or expand scope.
 4. Apply the approved changelog route using the release reference without bumping versions, tagging, or publishing. Record release authority and maintenance expectations.
@@ -72,6 +75,7 @@ Do not place credentials or private personal profiles in repository docs. Record
 - Verify remote settings through the companion and labels/relationships through tracker read-back, including preserved labels, approved removals/migrations, and spec assignments when in scope. Command success alone is insufficient.
 - Verify the changelog and versioning guidance agree with observed release sources/automation; preserve released history and report any unresolved convention.
 - Verify documented non-mutating commands when the environment permits. Ask before installation or any command with deployment, migration, cost, or destructive effects. Unexecuted checks remain unverified.
+- Read back model policy and pointers against approval using the model-use reference; preserve existing permission/provenance and shared budgets. Policy publication does not prove assessment-package enforcement.
 - Check that a rerun would inspect existing state and propose no substantive changes unless facts or decisions changed.
 - Record documentation impact; distinguish static checks from agent walkthroughs and live verification.
 

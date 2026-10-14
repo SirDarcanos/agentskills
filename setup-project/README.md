@@ -12,11 +12,13 @@ The agent inspects first, asks only missing consequential questions, presents on
 
 The [documentation contract](references/documentation-contract.md) defines default homes under `docs/agents/`, a concise agent entry point, a domain glossary when useful, and selective ADRs. Existing valid layouts and authored content are preserved. Reruns propose only necessary changes.
 
+Setup proposes none or exact bounded model permissions using the [model-use agreement](references/model-use.md). After approval it writes or reconciles one policy home and entry-point pointers, preserving existing authority and provenance. Shared request/retry/spending limits apply across delegates and resume; disclosure, lifecycle and fallback stay explicit. Setup itself makes zero model/service/credential/installation operations. Assessment packages must separately support the selected invocation contract.
+
 Setup inspects the project's actual versioning and changelog convention, preserves existing release history/automation, and proposes an evidence-backed changelog when one is missing.
 
 For GitHub, setup composes the maintained `github-repo-setup` skill and audits the full label vocabulary—not just a fixed starter set. It adds a `spec` role, applicable release-impact roles (`patch`, `minor`, `major` for SemVer), and other useful project labels. It proposes unused default/custom labels for approved editing, migration, or removal after checking historical usage and automation. Tracker guidance requires actual native sub-issues and blocker relationships, not just issue-body references. Local-only setup is supported without GitHub authentication.
 
-This prepares a project; it does not implement an application, invoke the future work-on workflow, or grant permission for model services, deployment, destructive changes, or global installations.
+Setup stops at operating guidance and approved repository configuration. It does not implement an application, start delivery, exercise model permission, or authorize deployment, destructive changes or global installations.
 
 ## Install and requirements
 
@@ -41,6 +43,7 @@ Delivery workflows may discover this package and read its entry point plus [trac
 - [SKILL.md](SKILL.md): orchestrator and completion gates.
 - [Documentation contract](references/documentation-contract.md): authoritative output and upkeep policy.
 - [Discovery](references/discovery.md) and [reconciliation](references/reconciliation.md): conditional procedures.
+- [Model-use agreement](references/model-use.md): policy discovery, exact approval, document application and unchanged rerun.
 - [Domain handoff](references/domain-records.md): setup integration with the domain-modeling companion.
 - [Tracker integration](references/issue-tracker.md): label audit/cleanup, spec classification, and native relationships.
 - [Release setup](references/releases.md): versioning detection, changelog creation/maintenance, and release authority.
