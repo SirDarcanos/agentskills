@@ -1,0 +1,93 @@
+{
+  "cwd": "<fixture>/lanes/B",
+  "files": {
+    "render.py": {
+      "sha256": "14b24984162420df4a7077dfa6d9a2e2386f394b38c1d2722b52652f6468e5c1",
+      "mode": "0o100644",
+      "link": null
+    },
+    "normalize.py": {
+      "sha256": "704bb3a8360e7c33e7b803857c792a5dcc463897eb7b2bcb5b99da0c54efdb32",
+      "mode": "0o100644",
+      "link": null
+    },
+    "pipeline.py": {
+      "sha256": "d714f3a1b6b0a2ad227f2dd22df7043c4b31d76ede09d72f143951629d87d14a",
+      "mode": "0o100644",
+      "link": null
+    },
+    "test_trial.py": {
+      "sha256": "34acb472e35bfc2c6c8053fd40b69724c58fcd19410afc00d03a3964198321ff",
+      "mode": "0o100644",
+      "link": null
+    },
+    "AGENTS.md": {
+      "sha256": "371d5faf666cd5db12d3c60cae875e3ed7e2001600de3f8ea848ef6decd04ae5",
+      "mode": "0o100644",
+      "link": null
+    },
+    "technical.md": {
+      "sha256": "acc0539ef4fef27c49d9bf282b2fe5877f2fb2cc91528b101ba98e07e2917a62",
+      "mode": "0o100644",
+      "link": null
+    },
+    "graph.json": {
+      "sha256": "ae35ccb0498b2e49bcbb372dc06a251142a980d8c601a0bf339e799dfdab8e6a",
+      "mode": "0o100644",
+      "link": null
+    },
+    "protected.txt": {
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e",
+      "mode": "0o100644",
+      "link": null
+    },
+    "protected-link": {
+      "sha256": "4b654bd1437066b13498661f3ca14774daf1066d072036beffaf06f0c014250e",
+      "mode": "0o120755",
+      "link": "protected.txt"
+    },
+    "private-note.txt": {
+      "absent": true
+    },
+    "<source>/work-on/SKILL.md": {
+      "sha256": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/work-on/references/contracts.md": {
+      "sha256": "99c439dac5ed0acb469f4f797d7e38e15084b0846cd1f81ad66a049990445d8a",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/work-on/references/build.md": {
+      "sha256": "ddc9ec13e41f42b05659a13521fb9addb50490486a898ac890682bd87c04384a",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/work-on/references/verification.md": {
+      "sha256": "b676b8b7d18b5ba8973ad8557a59f5c92ff54d375018a764e3d0b7124bcdc6d4",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/work-on/references/completion.md": {
+      "sha256": "a25bcf7bc5e77614cfc7bd1d01b2d34519539ac3d8e7c9924ab92b910eec1ca2",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/build-and-check/SKILL.md": {
+      "sha256": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2",
+      "mode": "0o100644",
+      "link": null
+    },
+    "<source>/implementation-preflight/SKILL.md": {
+      "sha256": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15",
+      "mode": "0o100644",
+      "link": null
+    }
+  },
+  "git status --porcelain=v1 --untracked-files=all": "",
+  "git rev-parse HEAD main": "418383fcddb2d32426a9967d655e48774bbd1073\n418383fcddb2d32426a9967d655e48774bbd1073\n",
+  "git branch -avv": "+ main     418383f (<fixture>/target) test: seed synthetic receipt agreement\n+ ticket-A 418383f (<fixture>/lanes/A) test: seed synthetic receipt agreement\n* ticket-B 418383f test: seed synthetic receipt agreement\n",
+  "git remote -v": "",
+  "git ls-files -s": "100644 ff0467349e1a09e48144d8d8f6f330d10d757a52 0\tAGENTS.md\n100644 ee5e021bb1045053ad83005cf58dc263d1604dfd 0\tgraph.json\n100644 5c78987e02548a761c53adffb1f706cb34da847a 0\tnormalize.py\n100644 fb12793be44065b8db5210f45fa18d43cd837a72 0\tpipeline.py\n120000 c3fe1d0958945757d7f3521e451a007b387150a1 0\tprotected-link\n100644 180b47c18ba7e484fc0d7350bc6cad8ec3423ea0 0\tprotected.txt\n100644 eb793e8267fbab2eeda9f076791701bb4fadf6fc 0\trender.py\n100644 fb96a23594d834d32ff74b06ba5805db661c608c 0\ttechnical.md\n100644 8c7cf12a110f83ba941f57866d73964d4a7ca55b 0\ttest_trial.py\n"
+}

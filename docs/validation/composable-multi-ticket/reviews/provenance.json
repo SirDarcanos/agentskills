@@ -1,0 +1,12 @@
+{
+  "standards": {
+    "runId": "bcca3810-1df0-4f67-a233-5fbd6cfb9993",
+    "event_file_sha256": "47b1f662518f7ce10f7b0e2efb6b5576385cfb89164d6b4227286642c50d4de6",
+    "extraction": "two original assistant message_end text bodies with stopReason stop; first report, then scope addendum; no raw session retained"
+  },
+  "spec": {
+    "runId": "be16b09b-c95a-41dc-9249-08aaf8621999",
+    "event_file_sha256": "7d6c6fa6bba3804b69c28389678a5e7d71d14310f9dc2ed4100e5822ee02ee90",
+    "extraction": "two original assistant message_end text bodies with stopReason stop; first report, then scope addendum; no raw session retained"
+  }
+}

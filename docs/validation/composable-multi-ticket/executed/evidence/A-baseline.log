@@ -1,0 +1,18 @@
+COMMAND: python3 -B -m unittest test_trial.A
+E
+======================================================================
+ERROR: test_render (test_trial.A.test_render)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/A/test_trial.py", line 8, in test_render
+    self.assertEqual(render("Ada"), "Receipt: Ada")
+                     ~~~~~~^^^^^^^
+  File "<fixture>/lanes/A/render.py", line 2, in render
+    raise NotImplementedError
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+EXIT_CODE: 1

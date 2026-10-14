@@ -1,0 +1,82 @@
+EEEEEEE
+======================================================================
+ERROR: test_render (test_trial.A.test_render)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 8, in test_render
+    self.assertEqual(render("Ada"), "Receipt: Ada")
+                     ~~~~~~^^^^^^^
+  File "/private<fixture>/target/render.py", line 2, in render
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_reject_blank (test_trial.B.test_reject_blank)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 16, in test_reject_blank
+    normalize(value)
+    ~~~~~~~~~^^^^^^^
+  File "/private<fixture>/target/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_reject_nonstring (test_trial.B.test_reject_nonstring)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 20, in test_reject_nonstring
+    normalize(value)
+    ~~~~~~~~~^^^^^^^
+  File "/private<fixture>/target/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_trim (test_trial.B.test_trim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 12, in test_trim
+    self.assertEqual(normalize("  Ada  "), "Ada")
+                     ~~~~~~~~~^^^^^^^^^^^
+  File "/private<fixture>/target/normalize.py", line 2, in normalize
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_invalid (test_trial.C.test_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 33, in test_invalid
+    make_receipt(value)
+    ~~~~~~~~~~~~^^^^^^^
+  File "/private<fixture>/target/pipeline.py", line 2, in make_receipt
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_receipt (test_trial.C.test_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 29, in test_receipt
+    self.assertEqual(make_receipt(" Ada "), "Receipt: ADA")
+                     ~~~~~~~~~~~~^^^^^^^^^
+  File "/private<fixture>/target/pipeline.py", line 2, in make_receipt
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_optional_upper (test_trial.D.test_optional_upper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private<fixture>/target/test_trial.py", line 24, in test_optional_upper
+    self.assertEqual(normalize(" Ada ", upper=True), "ADA")
+                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+TypeError: normalize() got an unexpected keyword argument 'upper'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+FAILED (errors=7)
+
+Exit: 1

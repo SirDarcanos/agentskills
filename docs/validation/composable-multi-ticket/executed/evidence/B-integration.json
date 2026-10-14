@@ -1,0 +1,12 @@
+{
+  "ticket": "B",
+  "source_base": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "before": "835f269f4069279a577d78da741cdf41407ccb43",
+  "after": "62d027704c60ec789e96bb177b6705fe69572d2d",
+  "paths": [
+    "normalize.py"
+  ],
+  "patch_sha256": "6ad4220ba3b5ee9a3860b697dd3860a3d6cdf4ddc0959156681b0e09dbbbafac",
+  "content_sha256": "6540ef87e83fdae0a9b74f00fa72b5f964762edf0e22ddf1602a677f4fbc5152",
+  "source_content_equal": true
+}

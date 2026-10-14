@@ -1,0 +1,13 @@
+diff --git a/normalize.py b/normalize.py
+index 5c78987..214718b 100644
+--- a/normalize.py
++++ b/normalize.py
+@@ -1,2 +1,7 @@
+ def normalize(name):
+-    raise NotImplementedError
++    if not isinstance(name, str):
++        raise ValueError("name must be a string")
++    name = name.strip()
++    if not name:
++        raise ValueError("name must not be blank")
++    return name

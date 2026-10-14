@@ -1,0 +1,7 @@
+COMMAND: python3 -B -m unittest test_trial.A
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+EXIT_CODE: 0

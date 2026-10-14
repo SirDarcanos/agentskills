@@ -1,0 +1,254 @@
+[
+  {
+    "ts": 1791990459896,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "A-build",
+    "status": "started",
+    "agent": "worker",
+    "childRunId": "d4badaf1-536f-49b1-a323-e2a6be777c03",
+    "workflowKey": "A-build"
+  },
+  {
+    "ts": 1791990459967,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "B-partial",
+    "status": "started",
+    "agent": "worker",
+    "childRunId": "abee2d61-8d45-4d90-ae0a-ae92460b9df8",
+    "workflowKey": "B-partial"
+  },
+  {
+    "ts": 1791990573235,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "A-build",
+    "childRunId": "d4badaf1-536f-49b1-a323-e2a6be777c03",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990591370,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "B-partial",
+    "childRunId": "abee2d61-8d45-4d90-ae0a-ae92460b9df8",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990591468,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "failure-recovery-gate",
+    "status": "started",
+    "agent": "delegate",
+    "childRunId": "fb85d3a4-35aa-484b-adf7-e92d5ed24f6c",
+    "workflowKey": "failure-recovery-gate"
+  },
+  {
+    "ts": 1791990652650,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "failure-recovery-gate",
+    "childRunId": "fb85d3a4-35aa-484b-adf7-e92d5ed24f6c",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990652772,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "B-resume",
+    "status": "started",
+    "agent": "worker",
+    "childRunId": "111c391c-2e9d-49c5-8d03-fcbe510cec9d",
+    "workflowKey": "B-resume"
+  },
+  {
+    "ts": 1791990792713,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "B-resume",
+    "childRunId": "111c391c-2e9d-49c5-8d03-fcbe510cec9d",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990792823,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "validator-integration-gate",
+    "status": "started",
+    "agent": "delegate",
+    "childRunId": "6e9cae35-1717-4fee-9691-e77e4c85b40b",
+    "workflowKey": "validator-integration-gate"
+  },
+  {
+    "ts": 1791990846490,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "validator-integration-gate",
+    "childRunId": "6e9cae35-1717-4fee-9691-e77e4c85b40b",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990846573,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "D-build",
+    "status": "started",
+    "agent": "worker",
+    "childRunId": "84119a16-5921-4127-8443-ca84fc75729f",
+    "workflowKey": "D-build"
+  },
+  {
+    "ts": 1791990986953,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "D-build",
+    "childRunId": "84119a16-5921-4127-8443-ca84fc75729f",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791990987007,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "interface-review-gate",
+    "status": "started",
+    "agent": "delegate",
+    "childRunId": "e5f426ce-97b7-4c82-a262-237d752f9330",
+    "workflowKey": "interface-review-gate"
+  },
+  {
+    "ts": 1791991038641,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "interface-review-gate",
+    "childRunId": "e5f426ce-97b7-4c82-a262-237d752f9330",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991038711,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "interim-standards",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "49f9efa4-b87c-4b6a-8e1a-579dc35fd286",
+    "workflowKey": "interim-standards"
+  },
+  {
+    "ts": 1791991038758,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "interim-spec",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "919702eb-e973-4461-aa95-7bb71761e7e1",
+    "workflowKey": "interim-spec"
+  },
+  {
+    "ts": 1791991149069,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "interim-spec",
+    "childRunId": "919702eb-e973-4461-aa95-7bb71761e7e1",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991174133,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "interim-standards",
+    "childRunId": "49f9efa4-b87c-4b6a-8e1a-579dc35fd286",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991174187,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "dependent-dispatch-gate",
+    "status": "started",
+    "agent": "delegate",
+    "childRunId": "4d159340-5c01-48df-9d2c-c8aa04e2c938",
+    "workflowKey": "dependent-dispatch-gate"
+  },
+  {
+    "ts": 1791991249402,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "dependent-dispatch-gate",
+    "childRunId": "4d159340-5c01-48df-9d2c-c8aa04e2c938",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991249499,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "C-build",
+    "status": "started",
+    "agent": "worker",
+    "childRunId": "806e3d2a-c1ff-4e29-8e86-46dc896b37fc",
+    "workflowKey": "C-build"
+  },
+  {
+    "ts": 1791991361917,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "C-build",
+    "childRunId": "806e3d2a-c1ff-4e29-8e86-46dc896b37fc",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991361978,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "aggregate-review-gate",
+    "status": "started",
+    "agent": "delegate",
+    "childRunId": "2f10a167-8e75-4455-bda8-9c90d6bfc58f",
+    "workflowKey": "aggregate-review-gate"
+  },
+  {
+    "ts": 1791991437681,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "aggregate-review-gate",
+    "childRunId": "2f10a167-8e75-4455-bda8-9c90d6bfc58f",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991437748,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "final-standards",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "7144cdac-d562-4250-804d-aa046f8026de",
+    "workflowKey": "final-standards"
+  },
+  {
+    "ts": 1791991437800,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.child-status",
+    "childId": "final-spec",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "5cbab302-3ad6-4b0f-81d9-a6f695367837",
+    "workflowKey": "final-spec"
+  },
+  {
+    "ts": 1791991505511,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "final-spec",
+    "childRunId": "5cbab302-3ad6-4b0f-81d9-a6f695367837",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791991517481,
+    "runId": "533be31d-f8e9-4717-98f6-a29043c7c5c1",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "final-standards",
+    "childRunId": "7144cdac-d562-4250-804d-aa046f8026de",
+    "outcome": "completed"
+  }
+]

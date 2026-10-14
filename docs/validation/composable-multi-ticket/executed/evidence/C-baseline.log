@@ -1,0 +1,30 @@
+EE
+======================================================================
+ERROR: test_invalid (test_trial.C.test_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/C/test_trial.py", line 33, in test_invalid
+    make_receipt(value)
+    ~~~~~~~~~~~~^^^^^^^
+  File "<fixture>/lanes/C/pipeline.py", line 2, in make_receipt
+    raise NotImplementedError
+NotImplementedError
+
+======================================================================
+ERROR: test_receipt (test_trial.C.test_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<fixture>/lanes/C/test_trial.py", line 29, in test_receipt
+    self.assertEqual(make_receipt(" Ada "), "Receipt: ADA")
+                     ~~~~~~~~~~~~^^^^^^^^^
+  File "<fixture>/lanes/C/pipeline.py", line 2, in make_receipt
+    raise NotImplementedError
+NotImplementedError
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)
+
+Command: python3 -B -m unittest test_trial.C
+Exit: 1

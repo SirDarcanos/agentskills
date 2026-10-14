@@ -1,0 +1,54 @@
+Command: python3 -B -m unittest test_trial
+Cwd: <fixture>/target
+Python: 3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.3.34.2)]
+Git: git version 2.54.0 (Apple Git-157)
+Environment: stdlib only; PYTHONDONTWRITEBYTECODE=1; sanitized Git controls/hooks/templates for fixture operations.
+Source revision: c3bd79eb42918ccdb41b126f48a5b8b15a1bdd12
+Source identities: {"build-and-check/SKILL.md": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2", "implementation-preflight/SKILL.md": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15", "review-delivery/SKILL.md": "943e48fe5e9935c692c8c36dd5cd924fec3d8696c59d6e13d37a292b496d7089", "review-delivery/references/handoff.md": "2972febb28a0fed75328b7cc218699d63233a5bc125783b1ce15ad9d3553495e", "review-delivery/references/report.md": "7aba8e325bc41e2e75fe1897ec9a7b07294b509e317b96943b2e3e52f1f9f08d", "review-delivery/references/scope.md": "0c6293e042630a9cf264a917a0707e07fc744137c271a6a07b4ec92e75887f47", "work-on-spec/SKILL.md": "8d75abcc9b303c1d7e3be51d41e2da2b7e241443d8827366cd4274098f868a18", "work-on-spec/references/aggregate.md": "806dce247f2d69a5a31d98e3787cd582dfd52e75e453eeee2ea22a6050ac42d6", "work-on-spec/references/dispatch.md": "55d82f02f7fcb1a2078c162638703635d14bf7e67fd6fe9f626dc8f2d1de0166", "work-on-spec/references/recovery.md": "26b90a252ff10b092234364190284e273de36372cceddc8aaac8c76c57e55600", "work-on/SKILL.md": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980", "work-on/references/contracts.md": "99c439dac5ed0acb469f4f797d7e38e15084b0846cd1f81ad66a049990445d8a"}
+Checked base: 418383fcddb2d32426a9967d655e48774bbd1073
+Checked HEAD: ea5046c2ebaf5aa450095d564284003bc0098347
+Snapshot: final-scope.json (content/modes and separate deltas); scope/support frozen by root.
+
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK
+
+Exit: 0
+
+Actual scoped base-to-HEAD patch (all seven sources, only three changed):
+diff --git a/normalize.py b/normalize.py
+index 5c78987e02548a761c53adffb1f706cb34da847a..0c8be9e937abecfbf6180c5edab269b62891ac12 100644
+--- a/normalize.py
++++ b/normalize.py
+@@ -1,2 +1,7 @@
+-def normalize(name):
+-    raise NotImplementedError
++def normalize(name, *, upper=False):
++    if not isinstance(name, str):
++        raise ValueError("name must be a string")
++    name = name.strip()
++    if not name:
++        raise ValueError("name must not be blank")
++    return name.upper() if upper else name
+diff --git a/pipeline.py b/pipeline.py
+index fb12793be44065b8db5210f45fa18d43cd837a72..bbae7872c655d82fef2caa8d6c75ada7496a592e 100644
+--- a/pipeline.py
++++ b/pipeline.py
+@@ -1,2 +1,6 @@
++from normalize import normalize
++from render import render
++
++
+ def make_receipt(name):
+-    raise NotImplementedError
++    return render(normalize(name, upper=True))
+diff --git a/render.py b/render.py
+index eb793e8267fbab2eeda9f076791701bb4fadf6fc..410130c984e899b3ae343b9d985e6017d3215260 100644
+--- a/render.py
++++ b/render.py
+@@ -1,2 +1,2 @@
+ def render(name):
+-    raise NotImplementedError
++    return "Receipt: " + name

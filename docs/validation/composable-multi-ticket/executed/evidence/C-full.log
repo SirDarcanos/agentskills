@@ -1,0 +1,8 @@
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK
+
+Command: python3 -B -m unittest test_trial
+Exit: 0

@@ -1,0 +1,8 @@
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+Command: python3 -B -m unittest test_trial.A test_trial.B test_trial.D
+Exit: 0

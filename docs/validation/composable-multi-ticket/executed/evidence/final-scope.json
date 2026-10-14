@@ -1,0 +1,58 @@
+{
+  "base": "418383fcddb2d32426a9967d655e48774bbd1073",
+  "branch": "main",
+  "committed_sha256": "2a8cb7a4bd0da1a55db75cd577f3e35f32c09b19d28341176fccca402d8e3af5",
+  "files": {
+    "AGENTS.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "371d5faf666cd5db12d3c60cae875e3ed7e2001600de3f8ea848ef6decd04ae5"
+    },
+    "graph.json": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "ae35ccb0498b2e49bcbb372dc06a251142a980d8c601a0bf339e799dfdab8e6a"
+    },
+    "normalize.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "6ddffb4553554487e0e56b2133df1df36a2f576ef8fe5ea9bb8d57dacb7b5d19"
+    },
+    "pipeline.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "c2474a3a290c75c22e0a6be19650506912964bb56b3cb170b7da43f557f6e69d"
+    },
+    "render.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "e34fe728ac31113b79ad388b5395b19365d8cbb3ce7215e4d82fee9247561631"
+    },
+    "technical.md": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "acc0539ef4fef27c49d9bf282b2fe5877f2fb2cc91528b101ba98e07e2917a62"
+    },
+    "test_trial.py": {
+      "kind": "file",
+      "mode": 420,
+      "sha256": "34acb472e35bfc2c6c8053fd40b69724c58fcd19410afc00d03a3964198321ff"
+    }
+  },
+  "format": 1,
+  "head": "ea5046c2ebaf5aa450095d564284003bc0098347",
+  "index_sha256": "c82e2ed23f560d0d617aae1b3f2fe198f948a1217555cd40e400739e983d8ebf",
+  "paths": [
+    "AGENTS.md",
+    "graph.json",
+    "normalize.py",
+    "pipeline.py",
+    "render.py",
+    "technical.md",
+    "test_trial.py"
+  ],
+  "root": "<fixture>/target",
+  "staged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "status_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "unstaged_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

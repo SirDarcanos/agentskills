@@ -1,0 +1,74 @@
+[
+  {
+    "ts": 1791992105202,
+    "runId": "3d0343fb-a066-41fe-a281-b1cca047ff50",
+    "type": "subagent.child-status",
+    "childId": "evidence-standards",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "bcca3810-1df0-4f67-a233-5fbd6cfb9993",
+    "workflowKey": "evidence-standards"
+  },
+  {
+    "ts": 1791992105253,
+    "runId": "3d0343fb-a066-41fe-a281-b1cca047ff50",
+    "type": "subagent.child-status",
+    "childId": "evidence-spec",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "be16b09b-c95a-41dc-9249-08aaf8621999",
+    "workflowKey": "evidence-spec"
+  },
+  {
+    "ts": 1791992322914,
+    "runId": "3d0343fb-a066-41fe-a281-b1cca047ff50",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "evidence-spec",
+    "childRunId": "be16b09b-c95a-41dc-9249-08aaf8621999",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791992344947,
+    "runId": "3d0343fb-a066-41fe-a281-b1cca047ff50",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "evidence-standards",
+    "childRunId": "bcca3810-1df0-4f67-a233-5fbd6cfb9993",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791992874867,
+    "runId": "587908c0-6dfe-4c3a-a2d6-077a72df0977",
+    "type": "subagent.child-status",
+    "childId": "repair-standards",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "423a0bb5-789a-4081-bb31-b308e741d0b8",
+    "workflowKey": "repair-standards"
+  },
+  {
+    "ts": 1791992874917,
+    "runId": "587908c0-6dfe-4c3a-a2d6-077a72df0977",
+    "type": "subagent.child-status",
+    "childId": "repair-spec",
+    "status": "started",
+    "agent": "reviewer",
+    "childRunId": "1e4a5752-a255-4c43-b373-7e3a86ac551e",
+    "workflowKey": "repair-spec"
+  },
+  {
+    "ts": 1791993028424,
+    "runId": "587908c0-6dfe-4c3a-a2d6-077a72df0977",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "repair-standards",
+    "childRunId": "423a0bb5-789a-4081-bb31-b308e741d0b8",
+    "outcome": "completed"
+  },
+  {
+    "ts": 1791993054585,
+    "runId": "587908c0-6dfe-4c3a-a2d6-077a72df0977",
+    "type": "subagent.workflow.child_settled",
+    "childKey": "repair-spec",
+    "childRunId": "1e4a5752-a255-4c43-b373-7e3a86ac551e",
+    "outcome": "completed"
+  }
+]

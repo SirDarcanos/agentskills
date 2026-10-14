@@ -1,0 +1,12 @@
+{
+  "ticket": "C",
+  "source_base": "98aeea57515a3906f9e2aa33acc57526c56f3acd",
+  "before": "98aeea57515a3906f9e2aa33acc57526c56f3acd",
+  "after": "ea5046c2ebaf5aa450095d564284003bc0098347",
+  "paths": [
+    "pipeline.py"
+  ],
+  "patch_sha256": "0d2ecd5f0851c2317cf0bf84701024f89c78b31c514758f5b4b58e53b7e290f5",
+  "content_sha256": "c2474a3a290c75c22e0a6be19650506912964bb56b3cb170b7da43f557f6e69d",
+  "source_content_equal": true
+}

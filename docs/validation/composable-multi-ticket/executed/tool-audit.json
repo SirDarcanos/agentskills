@@ -1,0 +1,131 @@
+[
+  {
+    "key": "A-build",
+    "childRunId": "d4badaf1-536f-49b1-a323-e2a6be777c03",
+    "event_file_sha256": "9ae705c647ebca701403ea3ee41d3736c4872ee7f73a2e900db1186b6709eee0",
+    "tool_counts": {
+      "bash": 4,
+      "read": 1,
+      "edit": 1,
+      "write": 1
+    }
+  },
+  {
+    "key": "B-partial",
+    "childRunId": "abee2d61-8d45-4d90-ae0a-ae92460b9df8",
+    "event_file_sha256": "fb7ae20bb19ddb07267b4ae7f7ab98e5fb4ab6fb76fdb0c9ebd4e30685c0e341",
+    "tool_counts": {
+      "read": 2,
+      "bash": 6,
+      "edit": 1,
+      "write": 1
+    }
+  },
+  {
+    "key": "failure-recovery-gate",
+    "childRunId": "fb85d3a4-35aa-484b-adf7-e92d5ed24f6c",
+    "event_file_sha256": "cf2fcd0aebf081667da946a420f4d82a7a867fd0832f29f1aab6d2b43909ccd8",
+    "tool_counts": {
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "B-resume",
+    "childRunId": "111c391c-2e9d-49c5-8d03-fcbe510cec9d",
+    "event_file_sha256": "1934d3a82b9b3a35b2a35d91c3b075acdddccf8d42b3e41296f88e2552d4013a",
+    "tool_counts": {
+      "bash": 6,
+      "read": 1,
+      "edit": 1,
+      "write": 1
+    }
+  },
+  {
+    "key": "validator-integration-gate",
+    "childRunId": "6e9cae35-1717-4fee-9691-e77e4c85b40b",
+    "event_file_sha256": "9fc51faf7753edb8d2f22cf2ca65242673ed06cc663b56bb8bff709d023ebff2",
+    "tool_counts": {
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "D-build",
+    "childRunId": "84119a16-5921-4127-8443-ca84fc75729f",
+    "event_file_sha256": "bb5f9d7a26af98233e491e914ca33e6aeab2c95cc0bbbdbdd1e9e632bf51d810",
+    "tool_counts": {
+      "read": 10,
+      "bash": 4,
+      "edit": 1,
+      "write": 1
+    }
+  },
+  {
+    "key": "interface-review-gate",
+    "childRunId": "e5f426ce-97b7-4c82-a262-237d752f9330",
+    "event_file_sha256": "8ee30dba4a94d06f87ffb5bdb9474fced469876fdbf60c61b56b3d99a4dbbffb",
+    "tool_counts": {
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "interim-standards",
+    "childRunId": "49f9efa4-b87c-4b6a-8e1a-579dc35fd286",
+    "event_file_sha256": "72a7c37125ee9ded0003f2a84d6b12e0b296e60eb3704ba6f92c7803eefdefa2",
+    "tool_counts": {
+      "read": 16,
+      "contact_supervisor": 1,
+      "watchdog_diff": 7
+    }
+  },
+  {
+    "key": "interim-spec",
+    "childRunId": "919702eb-e973-4461-aa95-7bb71761e7e1",
+    "event_file_sha256": "98aca055faf93cf3f6ae1117d7afb677a4b087a9f8a97b6eac385bb5c0a20777",
+    "tool_counts": {
+      "read": 16,
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "dependent-dispatch-gate",
+    "childRunId": "4d159340-5c01-48df-9d2c-c8aa04e2c938",
+    "event_file_sha256": "954a2759c303ac89e2810a233684fc1ec77b746d6f521de5b7a5e77571800123",
+    "tool_counts": {
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "C-build",
+    "childRunId": "806e3d2a-c1ff-4e29-8e86-46dc896b37fc",
+    "event_file_sha256": "9bce51d671652e466685304be92f2527458cb61b3577e7292eb651ab2d9fce0a",
+    "tool_counts": {
+      "bash": 7,
+      "write": 2
+    }
+  },
+  {
+    "key": "aggregate-review-gate",
+    "childRunId": "2f10a167-8e75-4455-bda8-9c90d6bfc58f",
+    "event_file_sha256": "5b4986015ffc5221e4d6f181cf2cabe6894687aca2cd81ad55aa6df2100c4bd4",
+    "tool_counts": {
+      "contact_supervisor": 1
+    }
+  },
+  {
+    "key": "final-standards",
+    "childRunId": "7144cdac-d562-4250-804d-aa046f8026de",
+    "event_file_sha256": "45c9ea3a7933a6f85598f7e0ddeda055e5116f74bc943ffc785fdbcd3aba59e7",
+    "tool_counts": {
+      "read": 15,
+      "watchdog_diff": 7
+    }
+  },
+  {
+    "key": "final-spec",
+    "childRunId": "5cbab302-3ad6-4b0f-81d9-a6f695367837",
+    "event_file_sha256": "9db6747a4dcf9a42d1787d25c604ec873eed671141090086c2c871bdb1c7ff63",
+    "tool_counts": {
+      "read": 15
+    }
+  }
+]
