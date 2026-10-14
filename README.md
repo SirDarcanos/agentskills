@@ -28,11 +28,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 ### Dungeons & Dragons skills
 
-| Skill | When to use it |
-| --- | --- |
-| [`dnd-create-monster`](dnd-create-monster/) | Design, rebalance, or convert D&D 2024 monsters, returning Markdown by default with optional tool-specific formats. |
-| [`dnd-format-prose`](dnd-format-prose/) | Transform prose into table-ready D&D narration, boxed text, bestiary lore, or adventure lore. |
-| [`dnd-speak-with-dead`](dnd-speak-with-dead/) | Rewrite supplied text as an answer from a corpse affected by the Speak with Dead spell. |
+The three D&D skills—`dnd-create-monster`, `dnd-format-prose`, and `dnd-speak-with-dead`—now live in [SirDarcanos/dnd-agentskills](https://github.com/SirDarcanos/dnd-agentskills). Install them with `npx skills add SirDarcanos/dnd-agentskills`. Existing copied installations are unchanged; update them from the new repository.
 
 ## Repository layout
 
