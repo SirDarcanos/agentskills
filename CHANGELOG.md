@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add standalone Write Spec for agreed behavior, stable acceptance IDs and authorized publication with separate readiness, with Work On using its discovered companion. ([#62](https://github.com/SirDarcanos/agentskills/issues/62))
 - Add standalone Shape Work for project-oriented discovery, settled-decision reuse and preserved concern dispositions, with Work On using its discovered companion. ([#61](https://github.com/SirDarcanos/agentskills/issues/61))
 - Add standalone Analyze for codebase-informed readiness, evidence reuse and method/check recommendations, with Work On using its discovered companion. ([#60](https://github.com/SirDarcanos/agentskills/issues/60))
 - Add standalone Build and Check for small implementation-first increments with immediate relevant validation and reusable coverage, also available through Work On. ([#59](https://github.com/SirDarcanos/agentskills/issues/59))
