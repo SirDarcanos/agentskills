@@ -50,6 +50,8 @@ Re-read changed assignments and relevant native relationships, compare with the 
 
 ## 5. Return the delivery report
 
+For a PR report or authorized opening/update, discover compatible `pr` through [capability checks](contracts.md#capability-checks), read its complete entry and relevant references, and record its resolved source/revision. It solely owns plain-language PR reporting, test/CI impact accounting and authorized publication/read-back. Supply current agreement, full delivered scope, raw checks, separate review reports/findings, gate decisions, counting baseline, documentation disposition and exact effect authority. Inspect its returned report and actual PR state; missing/incompatible `pr` blocks that PR route, not this honest delivery-status return. Do not duplicate its procedure, replace an installed copy or infer merge permission. Work On retains findings, repairs, acceptance and tracker-readiness decisions.
+
 Give the user a concise outcome, with technical evidence accessible through the existing record rather than requiring code inspection:
 
 - **Implemented:** delivered behavior/artifacts and integrated revision/worktree pointer; distinguish partial and not-integrated work.
