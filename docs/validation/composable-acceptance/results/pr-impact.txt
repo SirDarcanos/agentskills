@@ -1,0 +1,11 @@
+test_actual_local_checks (test_fixture.FixtureTests.test_actual_local_checks) ... ok
+test_ci_distinctions (test_fixture.FixtureTests.test_ci_distinctions) ... ok
+test_identity_accounting (test_fixture.FixtureTests.test_identity_accounting) ... ok
+test_measurements_are_synthetic_and_separate (test_fixture.FixtureTests.test_measurements_are_synthetic_and_separate) ... ok
+test_migration_and_report_only_authority (test_fixture.FixtureTests.test_migration_and_report_only_authority) ... ok
+test_retained_reports_trace_sources_and_blockers (test_fixture.FixtureTests.test_retained_reports_trace_sources_and_blockers) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.639s
+
+OK

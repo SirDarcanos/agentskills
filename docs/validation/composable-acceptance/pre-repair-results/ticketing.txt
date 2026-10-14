@@ -1,0 +1,15 @@
+test_blocker_pagination_preserves_unrelated_edges (test_tracker.PersistedTicketTests.test_blocker_pagination_preserves_unrelated_edges) ... ok
+test_combined_blocker_cycle_stops_before_writes (test_tracker.PersistedTicketTests.test_combined_blocker_cycle_stops_before_writes) ... ok
+test_creation_timeout_duplicate_search_and_standalone_bug (test_tracker.PersistedTicketTests.test_creation_timeout_duplicate_search_and_standalone_bug) ... ok
+test_failed_parent_readback_is_unknown_not_absence (test_tracker.PersistedTicketTests.test_failed_parent_readback_is_unknown_not_absence) ... ok
+test_number_is_not_database_id (test_tracker.PersistedTicketTests.test_number_is_not_database_id) ... ok
+test_parent_conflict_and_ancestry_cycle_preserve_state (test_tracker.PersistedTicketTests.test_parent_conflict_and_ancestry_cycle_preserve_state) ... ok
+test_partial_blocker_write_inspected_before_retry (test_tracker.PersistedTicketTests.test_partial_blocker_write_inspected_before_retry) ... ok
+test_persisted_graph_both_directions_and_clean_rerun (test_tracker.PersistedTicketTests.test_persisted_graph_both_directions_and_clean_rerun) ... ok
+test_plan_only_has_no_writes_or_ready_assignments (test_tracker.PersistedTicketTests.test_plan_only_has_no_writes_or_ready_assignments) ... ok
+test_wrong_readback_id_blocks_after_persistence (test_tracker.PersistedTicketTests.test_wrong_readback_id_blocks_after_persistence) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.012s
+
+OK

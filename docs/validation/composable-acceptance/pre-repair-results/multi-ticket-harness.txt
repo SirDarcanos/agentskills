@@ -1,0 +1,13 @@
+test_sanitizes_paths_preserves_original_and_whitelists_events (test_export.Export.test_sanitizes_paths_preserves_original_and_whitelists_events) ... ok
+test_unknown_workstation_path_blocks_export (test_export.Export.test_unknown_workstation_path_blocks_export) ... ok
+test_denials_fail_closed_before_next_writer (test_gate.ApprovalGate.test_denials_fail_closed_before_next_writer) ... ok
+test_exact_approval_proceeds_without_output_binding_suffix (test_gate.ApprovalGate.test_exact_approval_proceeds_without_output_binding_suffix) ... ok
+test_graph_and_protected_layers (test_harness.Harness.test_graph_and_protected_layers) ... ok
+test_partial_failure_is_retained_as_failure (test_harness.Harness.test_partial_failure_is_retained_as_failure) ... ok
+test_scoped_integration_preserves_index_and_dirty_work (test_harness.Harness.test_scoped_integration_preserves_index_and_dirty_work) ... ok
+test_unexpected_worker_path_blocks_integration (test_harness.Harness.test_unexpected_worker_path_blocks_integration) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.345s
+
+OK

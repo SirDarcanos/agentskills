@@ -1,0 +1,1198 @@
+{
+  "python": "3.14.7",
+  "packages": [
+    {
+      "name": "acceptance-first",
+      "description": "Implement agreed workflows from executable observable acceptance examples. Use for acceptance-first requests or bounded method handoffs covering cross-component behavior, with criterion-level evidence and explicit product-decision or environment blockers.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "098d92c8166faf8b536590c5ad0652787e6911fc309ea42058b1153f12633333",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "35a96d1bbc6a022dc57a2f3aff949bfb45ff75628f29f2e7fde2301c22432ba1",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "8e7fc8da440fcfd0a3779822221fb62a9bc72557353967e43a044bfeaa355933",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "fb2b055dc0a2b93296b40a6513c2aa29ee09ae773d09638da99f98147f3bd531",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "{\"criterion\": \"AC3\", \"state\": \"blocked\", \"verified\": false, \"reason\": \"owner decision required\"}\n{\"quantity\": 2, \"observed\": {\"receipt\": {\"status\": \"accepted\", \"quantity\": 2}, \"rows\": []}}\n{\"quantity\": 2, \"observed\": {\"receipt\": {\"status\": \"accepted\", \"quantity\": 2}, \"rows\": [[2]]}}\n{\"quantity\": 0, \"observed\": {\"receipt\": {\"status\": \"rejected\"}, \"rows\": [[0]]}}\n{\"quantity\": 0, \"observed\": {\"receipt\": {\"status\": \"rejected\"}, \"rows\": []}}\n{\"criterion\": \"AC4\", \"state\": \"unverified\", \"verified\": false, \"reason\": \"material remote gateway unavailable; no substitute pass\"}\n{\"quantity\": 2, \"observed\": {\"receipt\": {\"status\": \"pending\"}, \"rows\": []}}\nAC1 meaningful red: runnable workflow returns pending, not receipt\n{\"quantity\": 2, \"observed\": {\"receipt\": {\"status\": \"accepted\", \"quantity\": 2}, \"rows\": [[2]]}}\n{\"quantity\": 0, \"observed\": {\"receipt\": {\"status\": \"accepted\", \"quantity\": 0}, \"rows\": [[0]]}}\nAC2 meaningful red: nonpositive quantity accepted\n{\"quantity\": 2, \"observed\": {\"receipt\": {\"status\": \"accepted\", \"quantity\": 2}, \"rows\": [[2]]}}\n{\"quantity\": 0, \"observed\": {\"receipt\": {\"status\": \"rejected\"}, \"rows\": []}}\n{\"quantity\": -1, \"observed\": {\"receipt\": {\"status\": \"rejected\"}, \"rows\": []}}\nAC1/AC2 verified: API -> workflow -> SQLite; acceptance unchanged\ntest_ambiguous_commitment_blocks_without_edit (__main__.AcceptanceFixture.test_ambiguous_commitment_blocks_without_edit) ... ok\ntest_cross_component_persistence_regression (__main__.AcceptanceFixture.test_cross_component_persistence_regression) ... ok\ntest_rejection_side_effect_regression (__main__.AcceptanceFixture.test_rejection_side_effect_regression) ... ok\ntest_unavailable_material_boundary_never_passes (__main__.AcceptanceFixture.test_unavailable_material_boundary_never_passes) ... ok\ntest_workflow_red_two_increments_green (__main__.AcceptanceFixture.test_workflow_red_two_increments_green) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.259s\n\nOK\n"
+    },
+    {
+      "name": "analyze",
+      "description": "Assess codebase-informed technical readiness, recommend an implementation method and meaningful checks, or refresh analysis after deciding inputs change. Use for matching technical-analysis requests and authorized bounded handoffs; stop at recommendations rather than building.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "498471d02f1c7fecf54c70ae24e41c41ef7c716e35f745e9b00cf790b9e4de4a",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "9eb3bb1fed0f6d5b3985a3ae0ac844159394277cdb3ad6d77ec62d406f45f811",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "b8d368dd0539278841cfd719fceca394d89051c1ccfd5ff22d36d5953ee2c355",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "81f458a4f377a1f6b080ea7ce09e3889abab7d7b9b1e293bce5dce08c578af28",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "fixture contract: clear behavior => tdd\nfixture contract: uncertain feasibility => prototype\nfixture contract: legacy change => characterize\nfixture contract: cross-component acceptance => acceptance-first\nfixture contract: straightforward change => build-and-check\ncurrent inputs: 3 matching content identities, reusable evidence\nchanged caller: consumer label stale; service behavior retained\nsame name without required contract: incompatible fixture\ninspection: all target bytes unchanged; no production artifacts\nprototype missing: recommendation retained, execution unavailable; no substitution\ntest_all_five_contract_sources (__main__.ContractFixtures.test_all_five_contract_sources) ... ok\ntest_current_analysis_inputs (__main__.ContractFixtures.test_current_analysis_inputs) ... ok\ntest_dirty_caller_invalidates_only_dependent_evidence (__main__.ContractFixtures.test_dirty_caller_invalidates_only_dependent_evidence) ... ok\ntest_incompatible_same_name_is_not_capability (__main__.ContractFixtures.test_incompatible_same_name_is_not_capability) ... ok\ntest_inspection_preserves_target (__main__.ContractFixtures.test_inspection_preserves_target) ... ok\ntest_missing_method_does_not_destroy_recommendation (__main__.ContractFixtures.test_missing_method_does_not_destroy_recommendation) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.014s\n\nOK\n"
+    },
+    {
+      "name": "ask-clef",
+      "description": "Assess a bounded evidence-backed question with local Clef when explicitly requested or authorized by approved project model-use policy. Use for classification, routing, evidence support, or rubric judgments; not general research or deterministic calculations.",
+      "command_only": false,
+      "links": 21,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "2c3f60550c2ffbe57e88842b8e565bb85dddec9bcd7c7fbfd9ec4d92a392ab21",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "0a338ffcce7117164e51ab9d023df1e7eda0e6c4b91794c6e402843051f94bc7",
+          "mode": 420
+        },
+        "references/authorization.md": {
+          "sha256": "32dba8bf77cb617dc3baefce68d5e835c3943b5aee620e54102e3e920353bdcd",
+          "mode": 420
+        },
+        "references/judgment-design.md": {
+          "sha256": "d4b59b7cb855a97c7262eef90edc9b060b351544b34713f67dc1c7a2e41cdf27",
+          "mode": 420
+        },
+        "references/ollama-api.md": {
+          "sha256": "169b8637bda4053c2403908279a5c495a3f2758f34c54ecb48e3ea12e6c1f82d",
+          "mode": 420
+        },
+        "references/testing.md": {
+          "sha256": "215e17b75e03fddac88884d2783f8ced25d6f95db8e4922d09c797e7f3b70c16",
+          "mode": 420
+        },
+        "scripts/replay.py": {
+          "sha256": "eee69df9cb30ba1b6a3dc84474b61a7c045b121ca9f23428675afa2812fb9522",
+          "mode": 420
+        },
+        "tests/cases.json": {
+          "sha256": "bab2d89728d62f6cdf5bf577e96ee90af479a7f9fc7cb45b634794a02dcbb4b0",
+          "mode": 420
+        },
+        "tests/test_authorization.py": {
+          "sha256": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+          "mode": 420
+        },
+        "tests/test_replay.py": {
+          "sha256": "049c31d7d1d9c71952b3e9fd111e85f43f065c7b7253bf5ddf4977d83a3a448e",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_absent_none_draft_conflicting_expired_policy_has_zero_effects (test_authorization.AuthorizationTests.test_absent_none_draft_conflicting_expired_policy_has_zero_effects) ... ok\ntest_advisory_mismatch_is_not_retried_for_preferred_verdict (test_authorization.AuthorizationTests.test_advisory_mismatch_is_not_retried_for_preferred_verdict) ... ok\ntest_autonomous_configured_fallback_and_explicit_offer_wait (test_authorization.AuthorizationTests.test_autonomous_configured_fallback_and_explicit_offer_wait) ... ok\ntest_denied_startup_and_ambiguous_probe_do_not_start_or_send (test_authorization.AuthorizationTests.test_denied_startup_and_ambiguous_probe_do_not_start_or_send) ... ok\ntest_exact_allowed_variant_needs_no_confirmation (test_authorization.AuthorizationTests.test_exact_allowed_variant_needs_no_confirmation) ... ok\ntest_exhausted_reserved_and_ambiguous_budget_have_zero_effects (test_authorization.AuthorizationTests.test_exhausted_reserved_and_ambiguous_budget_have_zero_effects) ... ok\ntest_explicit_absent_autonomous_policy_and_project_prohibition (test_authorization.AuthorizationTests.test_explicit_absent_autonomous_policy_and_project_prohibition) ... ok\ntest_failed_and_unknown_attempts_spend_allowance_without_retry (test_authorization.AuthorizationTests.test_failed_and_unknown_attempts_spend_allowance_without_retry) ... ok\ntest_generated_command_is_not_explicit_authority (test_authorization.AuthorizationTests.test_generated_command_is_not_explicit_authority) ... ok\ntest_missing_model_has_no_send_or_remote_substitution (test_authorization.AuthorizationTests.test_missing_model_has_no_send_or_remote_substitution) ... ok\ntest_named_alternative_is_returned_to_lead_not_silently_called (test_authorization.AuthorizationTests.test_named_alternative_is_returned_to_lead_not_silently_called) ... ok\ntest_only_one_evidence_correction_shared_across_resume (test_authorization.AuthorizationTests.test_only_one_evidence_correction_shared_across_resume) ... ok\ntest_owned_leave_running_and_pending_cleanup (test_authorization.AuthorizationTests.test_owned_leave_running_and_pending_cleanup) ... ok\ntest_owned_startup_cleanup_on_success_and_failure (test_authorization.AuthorizationTests.test_owned_startup_cleanup_on_success_and_failure) ... ok\ntest_pre_send_revocation_blocks_send_after_authorized_probe (test_authorization.AuthorizationTests.test_pre_send_revocation_blocks_send_after_authorized_probe) ... ok\ntest_pre_send_shared_exhaustion_has_no_send (test_authorization.AuthorizationTests.test_pre_send_shared_exhaustion_has_no_send) ... ok\ntest_shared_child_resume_does_not_reset_budget (test_authorization.AuthorizationTests.test_shared_child_resume_does_not_reset_budget) ... ok\ntest_suitability_precedes_probes (test_authorization.AuthorizationTests.test_suitability_precedes_probes) ... ok\ntest_unknown_or_excess_spending_blocks_before_effects (test_authorization.AuthorizationTests.test_unknown_or_excess_spending_blocks_before_effects) ... ok\ntest_valid_insufficient_data_is_not_fallback_or_retry (test_authorization.AuthorizationTests.test_valid_insufficient_data_is_not_fallback_or_retry) ... ok\ntest_wrong_skill_variant_remote_endpoint_purpose_and_disclosure (test_authorization.AuthorizationTests.test_wrong_skill_variant_remote_endpoint_purpose_and_disclosure) ... ok\ntest_frontmatter_contract_and_links (test_authorization.PackageTests.test_frontmatter_contract_and_links) ... ok\ntest_isolated_copy_without_siblings (test_authorization.PackageTests.test_isolated_copy_without_siblings) ... ok\ntest_all_fixture_types_and_expected_labels (test_replay.ReplayTests.test_all_fixture_types_and_expected_labels) ... ok\ntest_exact_model_is_required (test_replay.ReplayTests.test_exact_model_is_required) ... ok\ntest_expected_labels_are_not_sent (test_replay.ReplayTests.test_expected_labels_are_not_sent) ... ok\ntest_image_shape_encoding_and_body_limits (test_replay.ReplayTests.test_image_shape_encoding_and_body_limits) ... ok\ntest_live_recording_is_opt_in_and_preserves_details (test_replay.ReplayTests.test_live_recording_is_opt_in_and_preserves_details) ... ok\ntest_malformed_and_error_responses (test_replay.ReplayTests.test_malformed_and_error_responses) ... ok\ntest_mismatch_is_distinct_from_contract_error (test_replay.ReplayTests.test_mismatch_is_distinct_from_contract_error) ... ok\ntest_offline_default_never_calls_server (test_replay.ReplayTests.test_offline_default_never_calls_server) ... ok\ntest_redirects_are_refused (test_replay.ReplayTests.test_redirects_are_refused) ... ok\ntest_reject_bad_probabilities_and_confidence (test_replay.ReplayTests.test_reject_bad_probabilities_and_confidence) ... ok\ntest_reject_missing_extra_mistyped_and_unknown_answers (test_replay.ReplayTests.test_reject_missing_extra_mistyped_and_unknown_answers) ... ok\ntest_request_limits_and_types (test_replay.ReplayTests.test_request_limits_and_types) ... ok\ntest_response_model_usage_and_choice_consistency (test_replay.ReplayTests.test_response_model_usage_and_choice_consistency) ... ok\ntest_saved_response_validation_is_offline (test_replay.ReplayTests.test_saved_response_validation_is_offline) ... ok\ntest_score_and_noul_contracts (test_replay.ReplayTests.test_score_and_noul_contracts) ... ok\ntest_service_failure (test_replay.ReplayTests.test_service_failure) ... ok\ntest_transport_ignores_proxies_and_uses_loopback (test_replay.ReplayTests.test_transport_ignores_proxies_and_uses_loopback) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 0.075s\n\nOK\n"
+    },
+    {
+      "name": "ask-clef-flash",
+      "description": "Assess a bounded evidence-backed question with local Clef Flash when explicitly requested or authorized by approved project model-use policy. Use for classification, routing, evidence support, or rubric judgments; not general research or deterministic calculations.",
+      "command_only": false,
+      "links": 21,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "71e6ab35ced702a28ffc67e91a0f8483682bc2aa09d32646ed14b9490fd21ff8",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "d9be8b297b62c35d9977fc6fd0048179b9b4f94bcbcc04e590bf1a5654561609",
+          "mode": 420
+        },
+        "references/authorization.md": {
+          "sha256": "daf60502a298f24bdc1ddc15127bdb6f57b157ea897ca6a8407f87e375504040",
+          "mode": 420
+        },
+        "references/judgment-design.md": {
+          "sha256": "90561a9f47e815b7c4c65b1ae56b0edd8076292b248d37c57d0571f041824f2f",
+          "mode": 420
+        },
+        "references/ollama-api.md": {
+          "sha256": "e508f19a667fd8e81c391579ba2812cf46c4c5a063f4e65a6662bff41c549ec9",
+          "mode": 420
+        },
+        "references/testing.md": {
+          "sha256": "07325957f073a9bc8035d057a543d17e6b30bee9b607da7f74b02c4be95a23d9",
+          "mode": 420
+        },
+        "scripts/replay.py": {
+          "sha256": "8baf92e0e7e6ea89a5bf05fe4620e6c9f5bd5ea9c74dd430062f233c285151e5",
+          "mode": 420
+        },
+        "tests/cases.json": {
+          "sha256": "8dcd614b7a6a5710bd7f2ab9948db0541747bc2edf30d773359f4cfc34591351",
+          "mode": 420
+        },
+        "tests/test_authorization.py": {
+          "sha256": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+          "mode": 420
+        },
+        "tests/test_replay.py": {
+          "sha256": "a8dad3fea33c85d361eacc8b563701d9836efa7defa213e45d74180296e26029",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_absent_none_draft_conflicting_expired_policy_has_zero_effects (test_authorization.AuthorizationTests.test_absent_none_draft_conflicting_expired_policy_has_zero_effects) ... ok\ntest_advisory_mismatch_is_not_retried_for_preferred_verdict (test_authorization.AuthorizationTests.test_advisory_mismatch_is_not_retried_for_preferred_verdict) ... ok\ntest_autonomous_configured_fallback_and_explicit_offer_wait (test_authorization.AuthorizationTests.test_autonomous_configured_fallback_and_explicit_offer_wait) ... ok\ntest_denied_startup_and_ambiguous_probe_do_not_start_or_send (test_authorization.AuthorizationTests.test_denied_startup_and_ambiguous_probe_do_not_start_or_send) ... ok\ntest_exact_allowed_variant_needs_no_confirmation (test_authorization.AuthorizationTests.test_exact_allowed_variant_needs_no_confirmation) ... ok\ntest_exhausted_reserved_and_ambiguous_budget_have_zero_effects (test_authorization.AuthorizationTests.test_exhausted_reserved_and_ambiguous_budget_have_zero_effects) ... ok\ntest_explicit_absent_autonomous_policy_and_project_prohibition (test_authorization.AuthorizationTests.test_explicit_absent_autonomous_policy_and_project_prohibition) ... ok\ntest_failed_and_unknown_attempts_spend_allowance_without_retry (test_authorization.AuthorizationTests.test_failed_and_unknown_attempts_spend_allowance_without_retry) ... ok\ntest_generated_command_is_not_explicit_authority (test_authorization.AuthorizationTests.test_generated_command_is_not_explicit_authority) ... ok\ntest_missing_model_has_no_send_or_remote_substitution (test_authorization.AuthorizationTests.test_missing_model_has_no_send_or_remote_substitution) ... ok\ntest_named_alternative_is_returned_to_lead_not_silently_called (test_authorization.AuthorizationTests.test_named_alternative_is_returned_to_lead_not_silently_called) ... ok\ntest_only_one_evidence_correction_shared_across_resume (test_authorization.AuthorizationTests.test_only_one_evidence_correction_shared_across_resume) ... ok\ntest_owned_leave_running_and_pending_cleanup (test_authorization.AuthorizationTests.test_owned_leave_running_and_pending_cleanup) ... ok\ntest_owned_startup_cleanup_on_success_and_failure (test_authorization.AuthorizationTests.test_owned_startup_cleanup_on_success_and_failure) ... ok\ntest_pre_send_revocation_blocks_send_after_authorized_probe (test_authorization.AuthorizationTests.test_pre_send_revocation_blocks_send_after_authorized_probe) ... ok\ntest_pre_send_shared_exhaustion_has_no_send (test_authorization.AuthorizationTests.test_pre_send_shared_exhaustion_has_no_send) ... ok\ntest_shared_child_resume_does_not_reset_budget (test_authorization.AuthorizationTests.test_shared_child_resume_does_not_reset_budget) ... ok\ntest_suitability_precedes_probes (test_authorization.AuthorizationTests.test_suitability_precedes_probes) ... ok\ntest_unknown_or_excess_spending_blocks_before_effects (test_authorization.AuthorizationTests.test_unknown_or_excess_spending_blocks_before_effects) ... ok\ntest_valid_insufficient_data_is_not_fallback_or_retry (test_authorization.AuthorizationTests.test_valid_insufficient_data_is_not_fallback_or_retry) ... ok\ntest_wrong_skill_variant_remote_endpoint_purpose_and_disclosure (test_authorization.AuthorizationTests.test_wrong_skill_variant_remote_endpoint_purpose_and_disclosure) ... ok\ntest_frontmatter_contract_and_links (test_authorization.PackageTests.test_frontmatter_contract_and_links) ... ok\ntest_isolated_copy_without_siblings (test_authorization.PackageTests.test_isolated_copy_without_siblings) ... ok\ntest_all_fixture_types_and_expected_labels (test_replay.ReplayTests.test_all_fixture_types_and_expected_labels) ... ok\ntest_exact_model_is_required (test_replay.ReplayTests.test_exact_model_is_required) ... ok\ntest_expected_labels_are_not_sent (test_replay.ReplayTests.test_expected_labels_are_not_sent) ... ok\ntest_image_shape_encoding_and_body_limits (test_replay.ReplayTests.test_image_shape_encoding_and_body_limits) ... ok\ntest_live_recording_is_opt_in_and_preserves_details (test_replay.ReplayTests.test_live_recording_is_opt_in_and_preserves_details) ... ok\ntest_malformed_and_error_responses (test_replay.ReplayTests.test_malformed_and_error_responses) ... ok\ntest_mismatch_is_distinct_from_contract_error (test_replay.ReplayTests.test_mismatch_is_distinct_from_contract_error) ... ok\ntest_offline_default_never_calls_server (test_replay.ReplayTests.test_offline_default_never_calls_server) ... ok\ntest_redirects_are_refused (test_replay.ReplayTests.test_redirects_are_refused) ... ok\ntest_reject_bad_probabilities_and_confidence (test_replay.ReplayTests.test_reject_bad_probabilities_and_confidence) ... ok\ntest_reject_missing_extra_mistyped_and_unknown_answers (test_replay.ReplayTests.test_reject_missing_extra_mistyped_and_unknown_answers) ... ok\ntest_request_limits_and_types (test_replay.ReplayTests.test_request_limits_and_types) ... ok\ntest_response_model_usage_and_choice_consistency (test_replay.ReplayTests.test_response_model_usage_and_choice_consistency) ... ok\ntest_saved_response_validation_is_offline (test_replay.ReplayTests.test_saved_response_validation_is_offline) ... ok\ntest_score_and_noul_contracts (test_replay.ReplayTests.test_score_and_noul_contracts) ... ok\ntest_service_failure (test_replay.ReplayTests.test_service_failure) ... ok\ntest_transport_ignores_proxies_and_uses_loopback (test_replay.ReplayTests.test_transport_ignores_proxies_and_uses_loopback) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 0.075s\n\nOK\n"
+    },
+    {
+      "name": "ask-jev",
+      "description": "Assess a bounded evidence-backed question with hosted Jev when explicitly requested or authorized by approved project model-use policy. Use for classification, routing, evidence support, or rubric judgments; not general research or deterministic calculations.",
+      "command_only": false,
+      "links": 11,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "69558c830261cd30e8349e903b10a50869700626d84c4d9a59e99a67d007af49",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "7eccdee650fdcf02abd9d7908a680dec018925bd4d5cf74e753ecf3aaf78d65d",
+          "mode": 420
+        },
+        "references/authorization.md": {
+          "sha256": "ae803fa47526418538f08b9045163f3a853044492161578fd39b3a7bf6daea4d",
+          "mode": 420
+        },
+        "references/hosted-api.md": {
+          "sha256": "3499fcb5096b6a7613e9d6cbfe0cc7f9041f4ffc014f9c0cc0a8402c182c4c28",
+          "mode": 420
+        },
+        "references/judgment-design.md": {
+          "sha256": "798c205e8d6016b0f72936fca7580ab732bedec69799ac3f9d163cb6cc83a766",
+          "mode": 420
+        },
+        "references/testing.md": {
+          "sha256": "3c8f39a7d4375a465e3e7dd2418748ffd42b361a295babe172806686a0023f12",
+          "mode": 420
+        },
+        "tests/procedure_fixture.py": {
+          "sha256": "111e4d62ae719ceb7abf3de7368c8979c47164bf3f82a441c2a8868f3d3da780",
+          "mode": 420
+        },
+        "tests/test_procedure.py": {
+          "sha256": "d21d261af77a7b2b473eeb199350ba0b7bca8bd6768c63cadb6189c9b3f27010",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_absent_none_draft_conflicting_expired_has_zero_effects (test_procedure.AuthorizationTests.test_absent_none_draft_conflicting_expired_has_zero_effects) ... ok\ntest_approved_hosted_use_needs_no_confirmation (test_procedure.AuthorizationTests.test_approved_hosted_use_needs_no_confirmation) ... ok\ntest_authority_rechecked_before_retry (test_procedure.AuthorizationTests.test_authority_rechecked_before_retry) ... ok\ntest_batch_does_not_create_fresh_allowances (test_procedure.AuthorizationTests.test_batch_does_not_create_fresh_allowances) ... ok\ntest_call_exhaustion_and_outstanding_worker_reservations (test_procedure.AuthorizationTests.test_call_exhaustion_and_outstanding_worker_reservations) ... ok\ntest_explicit_request_does_not_override_project_ban (test_procedure.AuthorizationTests.test_explicit_request_does_not_override_project_ban) ... ok\ntest_explicit_request_without_autonomous_policy (test_procedure.AuthorizationTests.test_explicit_request_without_autonomous_policy) ... ok\ntest_fallback_policy_and_explicit_offer_wait (test_procedure.AuthorizationTests.test_fallback_policy_and_explicit_offer_wait) ... ok\ntest_generated_command_is_not_consent (test_procedure.AuthorizationTests.test_generated_command_is_not_consent) ... ok\ntest_local_only_and_denied_private_disclosure (test_procedure.AuthorizationTests.test_local_only_and_denied_private_disclosure) ... ok\ntest_malformed_and_http_errors_are_not_retried (test_procedure.AuthorizationTests.test_malformed_and_http_errors_are_not_retried) ... ok\ntest_missing_credentials_has_no_send_or_implicit_configuration (test_procedure.AuthorizationTests.test_missing_credentials_has_no_send_or_implicit_configuration) ... ok\ntest_missing_retry_or_correction_limits_are_not_unlimited (test_procedure.AuthorizationTests.test_missing_retry_or_correction_limits_are_not_unlimited) ... ok\ntest_no_second_initial_request_or_failed_correction_refund (test_procedure.AuthorizationTests.test_no_second_initial_request_or_failed_correction_refund) ... ok\ntest_one_correction_across_assessment_resume_and_six_attempt_cap (test_procedure.AuthorizationTests.test_one_correction_across_assessment_resume_and_six_attempt_cap) ... ok\ntest_only_429_and_529_retry_within_three_attempts (test_procedure.AuthorizationTests.test_only_429_and_529_retry_within_three_attempts) ... ok\ntest_parent_workers_and_resume_share_consumed_budget (test_procedure.AuthorizationTests.test_parent_workers_and_resume_share_consumed_budget) ... ok\ntest_policy_or_root_correction_limit_zero (test_procedure.AuthorizationTests.test_policy_or_root_correction_limit_zero) ... ok\ntest_pre_send_revocation_exhaustion_and_expanded_data (test_procedure.AuthorizationTests.test_pre_send_revocation_exhaustion_and_expanded_data) ... ok\ntest_prohibited_or_named_alternative_never_changes_transport (test_procedure.AuthorizationTests.test_prohibited_or_named_alternative_never_changes_transport) ... ok\ntest_retry_after_too_long_or_invalid_stops (test_procedure.AuthorizationTests.test_retry_after_too_long_or_invalid_stops) ... ok\ntest_retry_ceiling_on_persistent_overload (test_procedure.AuthorizationTests.test_retry_ceiling_on_persistent_overload) ... ok\ntest_retry_requires_remaining_shared_call_spend_and_retry_limits (test_procedure.AuthorizationTests.test_retry_requires_remaining_shared_call_spend_and_retry_limits) ... ok\ntest_spending_unknown_exhausted_reserved_and_wrong_currency (test_procedure.AuthorizationTests.test_spending_unknown_exhausted_reserved_and_wrong_currency) ... ok\ntest_timeout_retains_unknown_charge_and_never_retries (test_procedure.AuthorizationTests.test_timeout_retains_unknown_charge_and_never_retries) ... ok\ntest_unsuitable_question_skips_authenticated_operations (test_procedure.AuthorizationTests.test_unsuitable_question_skips_authenticated_operations) ... ok\ntest_valid_insufficient_data_is_not_failure_or_substitution (test_procedure.AuthorizationTests.test_valid_insufficient_data_is_not_failure_or_substitution) ... ok\ntest_version_pin_and_explicit_alias_permission (test_procedure.AuthorizationTests.test_version_pin_and_explicit_alias_permission) ... ok\ntest_wrong_identity_purpose_and_disclosure_has_zero_effects (test_procedure.AuthorizationTests.test_wrong_identity_purpose_and_disclosure_has_zero_effects) ... ok\ntest_frontmatter_and_internal_links (test_procedure.PackageTests.test_frontmatter_and_internal_links) ... ok\ntest_isolated_package_without_siblings (test_procedure.PackageTests.test_isolated_package_without_siblings) ... ok\ntest_synthetic_request_and_documented_syntax_check (test_procedure.PackageTests.test_synthetic_request_and_documented_syntax_check) ... ok\ntest_all_primitive_types_validate_together (test_procedure.ResponseTests.test_all_primitive_types_validate_together) ... ok\ntest_invalid_probabilities_confidence_and_selected_option (test_procedure.ResponseTests.test_invalid_probabilities_confidence_and_selected_option) ... ok\ntest_malformed_top_level_wrong_model_ids_types_and_usage (test_procedure.ResponseTests.test_malformed_top_level_wrong_model_ids_types_and_usage) ... ok\ntest_no_partial_interpretation_of_malformed_batch (test_procedure.ResponseTests.test_no_partial_interpretation_of_malformed_batch) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.033s\n\nOK\n"
+    },
+    {
+      "name": "ask-nimble",
+      "description": "Assess a bounded evidence-backed question with local Nimble when explicitly requested or authorized by approved project model-use policy. Use for classification, routing, evidence support, or rubric judgments; not general research or deterministic calculations.",
+      "command_only": false,
+      "links": 21,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "49be1add90d8304bcfe0188fc7a080460265116564542ce09c1ebf069a254d13",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "6a865a4437779d9442cfb9c2a8fcdb12e2379727ea84890a897397900728f7c5",
+          "mode": 420
+        },
+        "references/authorization.md": {
+          "sha256": "2cd7f7ee70d64aa1775d69468a35492fe4bcdee41ad89e3579b9537258f4c540",
+          "mode": 420
+        },
+        "references/judgment-design.md": {
+          "sha256": "f0d3554e135b02a3f84bb55a6dfcb4871ad28ac22f9a6d2d34168c633db574b1",
+          "mode": 420
+        },
+        "references/ollama-api.md": {
+          "sha256": "4119950ff5fc32cbe3484049f7d2a9dbb46cc2005b2c502977c45d992a49f09a",
+          "mode": 420
+        },
+        "references/testing.md": {
+          "sha256": "efcafff2844461a0590beea97991c13424509fc278e9a03552d116f8f749bf06",
+          "mode": 420
+        },
+        "scripts/replay.py": {
+          "sha256": "7a0f1f0b3815a82a56e9830b03047cceb2ea5e3970fc827d4f44f2a55836a8aa",
+          "mode": 420
+        },
+        "tests/cases.json": {
+          "sha256": "51a1af2a4c4f27215f0c90985cac3a1cda62ee090e448d9dfe09ea0c5d2d6984",
+          "mode": 420
+        },
+        "tests/test_authorization.py": {
+          "sha256": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+          "mode": 420
+        },
+        "tests/test_replay.py": {
+          "sha256": "e58b5f803e244d5f7c6d09fc335c285a732baebe74f2a031cebc41e82d9fc78a",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_absent_none_draft_conflicting_expired_policy_has_zero_effects (test_authorization.AuthorizationTests.test_absent_none_draft_conflicting_expired_policy_has_zero_effects) ... ok\ntest_advisory_mismatch_is_not_retried_for_preferred_verdict (test_authorization.AuthorizationTests.test_advisory_mismatch_is_not_retried_for_preferred_verdict) ... ok\ntest_autonomous_configured_fallback_and_explicit_offer_wait (test_authorization.AuthorizationTests.test_autonomous_configured_fallback_and_explicit_offer_wait) ... ok\ntest_denied_startup_and_ambiguous_probe_do_not_start_or_send (test_authorization.AuthorizationTests.test_denied_startup_and_ambiguous_probe_do_not_start_or_send) ... ok\ntest_exact_allowed_variant_needs_no_confirmation (test_authorization.AuthorizationTests.test_exact_allowed_variant_needs_no_confirmation) ... ok\ntest_exhausted_reserved_and_ambiguous_budget_have_zero_effects (test_authorization.AuthorizationTests.test_exhausted_reserved_and_ambiguous_budget_have_zero_effects) ... ok\ntest_explicit_absent_autonomous_policy_and_project_prohibition (test_authorization.AuthorizationTests.test_explicit_absent_autonomous_policy_and_project_prohibition) ... ok\ntest_failed_and_unknown_attempts_spend_allowance_without_retry (test_authorization.AuthorizationTests.test_failed_and_unknown_attempts_spend_allowance_without_retry) ... ok\ntest_generated_command_is_not_explicit_authority (test_authorization.AuthorizationTests.test_generated_command_is_not_explicit_authority) ... ok\ntest_missing_model_has_no_send_or_remote_substitution (test_authorization.AuthorizationTests.test_missing_model_has_no_send_or_remote_substitution) ... ok\ntest_named_alternative_is_returned_to_lead_not_silently_called (test_authorization.AuthorizationTests.test_named_alternative_is_returned_to_lead_not_silently_called) ... ok\ntest_only_one_evidence_correction_shared_across_resume (test_authorization.AuthorizationTests.test_only_one_evidence_correction_shared_across_resume) ... ok\ntest_owned_leave_running_and_pending_cleanup (test_authorization.AuthorizationTests.test_owned_leave_running_and_pending_cleanup) ... ok\ntest_owned_startup_cleanup_on_success_and_failure (test_authorization.AuthorizationTests.test_owned_startup_cleanup_on_success_and_failure) ... ok\ntest_pre_send_revocation_blocks_send_after_authorized_probe (test_authorization.AuthorizationTests.test_pre_send_revocation_blocks_send_after_authorized_probe) ... ok\ntest_pre_send_shared_exhaustion_has_no_send (test_authorization.AuthorizationTests.test_pre_send_shared_exhaustion_has_no_send) ... ok\ntest_shared_child_resume_does_not_reset_budget (test_authorization.AuthorizationTests.test_shared_child_resume_does_not_reset_budget) ... ok\ntest_suitability_precedes_probes (test_authorization.AuthorizationTests.test_suitability_precedes_probes) ... ok\ntest_unknown_or_excess_spending_blocks_before_effects (test_authorization.AuthorizationTests.test_unknown_or_excess_spending_blocks_before_effects) ... ok\ntest_valid_insufficient_data_is_not_fallback_or_retry (test_authorization.AuthorizationTests.test_valid_insufficient_data_is_not_fallback_or_retry) ... ok\ntest_wrong_skill_variant_remote_endpoint_purpose_and_disclosure (test_authorization.AuthorizationTests.test_wrong_skill_variant_remote_endpoint_purpose_and_disclosure) ... ok\ntest_frontmatter_contract_and_links (test_authorization.PackageTests.test_frontmatter_contract_and_links) ... ok\ntest_isolated_copy_without_siblings (test_authorization.PackageTests.test_isolated_copy_without_siblings) ... ok\ntest_all_fixture_types_and_expected_labels (test_replay.ReplayTests.test_all_fixture_types_and_expected_labels) ... ok\ntest_expected_labels_are_not_sent (test_replay.ReplayTests.test_expected_labels_are_not_sent) ... ok\ntest_live_recording_is_opt_in_and_preserves_details (test_replay.ReplayTests.test_live_recording_is_opt_in_and_preserves_details) ... ok\ntest_malformed_and_error_responses (test_replay.ReplayTests.test_malformed_and_error_responses) ... ok\ntest_mismatch_is_distinct_from_contract_error (test_replay.ReplayTests.test_mismatch_is_distinct_from_contract_error) ... ok\ntest_offline_default_never_calls_server (test_replay.ReplayTests.test_offline_default_never_calls_server) ... ok\ntest_redirects_are_refused (test_replay.ReplayTests.test_redirects_are_refused) ... ok\ntest_reject_bad_probabilities_and_confidence (test_replay.ReplayTests.test_reject_bad_probabilities_and_confidence) ... ok\ntest_reject_missing_extra_mistyped_and_unknown_answers (test_replay.ReplayTests.test_reject_missing_extra_mistyped_and_unknown_answers) ... ok\ntest_request_limits_and_types (test_replay.ReplayTests.test_request_limits_and_types) ... ok\ntest_saved_response_validation_is_offline (test_replay.ReplayTests.test_saved_response_validation_is_offline) ... ok\ntest_score_and_noul_contracts (test_replay.ReplayTests.test_score_and_noul_contracts) ... ok\ntest_service_failure (test_replay.ReplayTests.test_service_failure) ... ok\ntest_transport_ignores_proxies_and_uses_loopback (test_replay.ReplayTests.test_transport_ignores_proxies_and_uses_loopback) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.021s\n\nOK\n"
+    },
+    {
+      "name": "build-and-check",
+      "description": "Implement a bounded change in small implementation-first increments with immediate relevant checks. Use for build-and-check requests or authorized method handoffs, including already-covered code, documentation, configuration and mechanical changes.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "ab5b1e7cbea0b999325024c7514be4551e1d6f2ad52b13cf979abdc753e93203",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "3be8d485733eb8c505a30646093b341bf07e989f63f38ff63c8300af13b05947",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "7caac31f3c32099ad44c8a5387c1aa2a75d4d5abb0fffa8727138934895894d2",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "check exit=0: existing behavior/config/link checks: PASS\ncheck exit=0: existing behavior/config/link checks: PASS\ncode increment: PASS; existing harness unchanged, zero new target tests\ncheck exit=0: existing behavior/config/link checks: PASS\ncheck exit=0: existing behavior/config/link checks: PASS\ndocumentation then configuration: PASS; each checked before continuing\ncheck exit=1: Traceback (most recent call last):\n  File \"<scratch>/check.py\", line 5, in <module>\n    assert slug(\"  Hello   World  \") == \"hello-world\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\nmaterial behavior failure: BLOCKED; dependent artifact absent\ncheck exit=0: existing behavior/config/link checks: PASS\nunavailable material consumer: BLOCKED/unverified (reporting oracle only)\ntest_code_increment_reuses_existing_coverage (__main__.Fixture.test_code_increment_reuses_existing_coverage) ... ok\ntest_documentation_and_configuration_increments (__main__.Fixture.test_documentation_and_configuration_increments) ... ok\ntest_failure_stops_dependent_increment_then_rechecks (__main__.Fixture.test_failure_stops_dependent_increment_then_rechecks) ... ok\ntest_unavailable_check_remains_unverified (__main__.Fixture.test_unavailable_check_remains_unverified) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.157s\n\nOK\n"
+    },
+    {
+      "name": "build-with-nimble",
+      "description": " Build applications and features with Bespoke Labs' Nimble decision model through Ollama. Use when implementing or updating a Nimble integration, exploring what Nimble could add to an app, or replacing a prompt-and-parse step with bounded decisions. Covers routing, ranking, candidate selection, verification, and rubric judgments composed in code. For a one-off evidence-backed consultation, use the separately invoked ask-nimble workflow.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "07fc70220e2d24b1fde7962bc27f937de80d66b0d72e70b87167c5e0bcd8fecd",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "b7f9ddc9cf8fa6593ea067cfbe02d828400d64659b618b13eccf44fdb9600e1b",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "d6a6052f63a01fd6c1cea993024f7fb27daf98ea7bf77a2db7f70fbecd8531c6",
+          "mode": 420
+        },
+        "references/integration.md": {
+          "sha256": "c9929507790ce6e5f1b7de65fe1bb6c7c69b6ffb6c1f46f5d8f8a3067d070ae8",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "characterize",
+      "description": "Protect relevant existing behavior before risky legacy changes with characterization checks and provenance. Use for characterization-first requests or bounded method handoffs where intended behavior, unknown intent and known defects must be separated.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "5fc1c52e4d0a97646ea2fc9b69b606144eba8aee2f3427ce425346ed27bfc8f5",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "6e4c16f46ea81962a03831bd18f615dda2f0bf7c3716db3508bef9db38939b20",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "64cc50b2fc9b7cf41c7fd3da5d686116add41ed1f85bca45f61a16f248b6caa6",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "d80885736062babb18816c17143dcb3af9df611118ef6ccec7a177a6e2fcd1ee",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "Synthetic characterization: subprocess timeout 5s, at most 10 executions; no network.\nCORRECTION simulation: intended shipping protected; old defect not required.\nDEFECT diagnostic: subtotal 7, intended 10; excluded from protection gate.\n{\"baseline\": [{\"actual\": {\"audit\": true, \"receipt\": \"a058e4ad-6e56-4a88-86b3-6a2636ea49e6\", \"shipping\": 0, \"subtotal\": 0}, \"input\": []}, {\"actual\": {\"audit\": true, \"receipt\": \"4d233a5a-299c-4b97-b4be-9d65a5b3e51e\", \"shipping\": 5, \"subtotal\": 10}, \"input\": [10]}, {\"actual\": {\"audit\": true, \"receipt\": \"a81f5970-b3e7-4ee4-9283-cdbac9a37fc0\", \"shipping\": 5, \"subtotal\": 7}, \"input\": [10, -3]}], \"contract\": {\"defect\": \"Negative item prices should contribute zero, not reduce subtotal.\", \"intended\": \"Shipping is 5 units for nonempty orders, 0 for empty orders.\", \"source\": \"synthetic owner agreement, revision 1\", \"unknown\": \"Receipt token format and audit flag intent are unspecified.\"}, \"source_sha256\": \"83f5a9e1cb4d6b317ca19caf72955c86afdfa2a8dc1e3db7156a1171c35ecc99\"}\n{\"comparison\": \"shipping only; receipt intent unknown\", \"limit\": \"No token-format, ordering, concurrency or stability guarantee\", \"raw\": [{\"audit\": true, \"receipt\": \"a846fa0c-f533-4060-a29a-e4144be85a74\", \"shipping\": 5, \"subtotal\": 10}, {\"audit\": true, \"receipt\": \"4036cc42-d0e1-4a8e-bd44-bd56337d3bb5\", \"shipping\": 5, \"subtotal\": 10}, {\"audit\": true, \"receipt\": \"91ed17f2-1704-48bb-beb1-b2544fd28061\", \"shipping\": 5, \"subtotal\": 10}], \"repeats\": 3, \"variation\": \"observed\"}\nUNKNOWN: audit True observed; no authority to make it desired acceptance.\nSENSITIVITY: isolated shipping mutation detected for intended reason; original green.\ntest_defect_correction_is_allowed_by_protection (__main__.CharacterizationFixture.test_defect_correction_is_allowed_by_protection) ... ok\ntest_defect_reproduction_is_not_acceptance (__main__.CharacterizationFixture.test_defect_reproduction_is_not_acceptance) ... ok\ntest_intended_baseline (__main__.CharacterizationFixture.test_intended_baseline) ... ok\ntest_nondeterminism_is_reported_not_snapshotted (__main__.CharacterizationFixture.test_nondeterminism_is_reported_not_snapshotted) ... ok\ntest_relevant_mutation_fails_then_original_passes (__main__.CharacterizationFixture.test_relevant_mutation_fails_then_original_passes) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.218s\n\nOK\n"
+    },
+    {
+      "name": "create-changelog",
+      "description": "Create the first concise Semantic Versioning CHANGELOG.md for a software project.",
+      "command_only": true,
+      "links": 3,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "872205ad200bae9d0bb2906b53ff987334270f84512f013133a7745c4f017f19",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "c5df19dace378b669ee64fe9ed61f92174f692acec4ef5f171c9ed3c24cb6130",
+          "mode": 420
+        },
+        "references/example-changelog.md": {
+          "sha256": "246a88e7cc6f54b762465e4ffc5efe3b55f2cfc8c321b1925654e45b338266c8",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "domain-modeling",
+      "description": "Establish or revise domain terms, relationships, context maps, and architectural decision records during discovery, design, or implementation. Use for terminology conflicts, glossary changes, ADR creation or supersession, or a domain handoff from another skill; reading existing definitions alone does not require this workflow.",
+      "command_only": false,
+      "links": 9,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "11f8adc43df21e6d81ebb712fe0411cee2587638e646f8c9c0c7ef4c89288088",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "aae04989a6039707b20ca44c65b2fb9ebc0a7b35f408fc46f4ded5446ca21986",
+          "mode": 420
+        },
+        "references/decisions.md": {
+          "sha256": "7276aeb7a9dac9b45c5145b6e90b1c1dce8d5f91ad612de522475a3d9c7e31c1",
+          "mode": 420
+        },
+        "references/handoff.md": {
+          "sha256": "e5c8c69b400ae604795f1ca0e60317f8f6ea157d6e07f636fd2ba8b1c6d5fc36",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "e6051caaa59ec14d522ab17c0189cbc8eca3374a020ceef6cdd45bae0dc07f92",
+          "mode": 420
+        },
+        "references/vocabulary.md": {
+          "sha256": "a4a2521c788dec0e4c228408051d42e5ce582bbd357947aa03843ab1a8876a37",
+          "mode": 420
+        },
+        "tests/test_package.py": {
+          "sha256": "57a2d367389edf1026c191a0388c2ebf047b3987f60c717716c56d42fb9251ec",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_entry_is_discoverable (test_package.PackageTests.test_entry_is_discoverable) ... ok\ntest_markdown_links_stay_inside_the_package (test_package.PackageTests.test_markdown_links_stay_inside_the_package) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "name": "github-repo-setup",
+      "description": "Create or configure a GitHub repository when the user requests repository setup, or execute an approved GitHub handoff from setup-project.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "09410525d3b9e8e73a1ae64beb6e4fa6c4b86260da37e40371ab63f9de1d5d55",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "a4feb6cbe3c5d60a70bb670cd5c8051488319b63c8f0cb10a5930270753fa848",
+          "mode": 420
+        },
+        "references/handoff.md": {
+          "sha256": "d402dac5816478694be192035ea4263bac0867b9af1c75389b142b2281274cc6",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "b37fb284e0fa667dffcbba525d4926bc88b658a69a68b30e52fd591c30b377ea",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "implementation-preflight",
+      "description": "Prepare the correct Git branch and pull-request target before implementation begins. Use when an agent is about to implement a change in a Git repository, including work started through /implement, and it must decide whether to continue the current branch or create a short-lived branch.",
+      "command_only": false,
+      "links": 1,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "76f5d25e95482ab14b1c8257f94b04267047dbd1cf317d0c23c333897a1146f7",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "ccb940cb60819792947274f1d848636c6461d47ae3856bae80fcd83d1df39d15",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "investigate-bug",
+      "description": "Investigate a reported defect, confirm reproduction and cause, and prepare or reconcile an implementation-ready ticket through write-tickets. Use for diagnosis requests and bounded bug-evidence handoffs; investigation alone stops before fixing.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "8ee825fdf2c17e2fdb72b4c4a15e61eac72e69916a43de56a74756ff10d4fd55",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "d18fb686c8be27e58979c6ae76b02a7b1398d90f4092c787c74450659b0c5d71",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "3daa493efd66ec98534f6d931612c66a59c75b74549a5a3f76a4deaa10c48d34",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "pr",
+      "description": "Prepare a plain-language pull-request report from delivered changes and current verification/review evidence, or open/update a PR within explicit task and project authority. Use for standalone PR writing and bounded delivery handoffs.",
+      "command_only": false,
+      "links": 6,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "ca69afa32dbfacacd762385551c40ac613580568c8ca5a98d1302ab024c55241",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "4b2e285897d27850394da75be05ce523dc607700cc08ee70b4cddbbd27e58d7b",
+          "mode": 420
+        },
+        "references/impact.md": {
+          "sha256": "3f221154f3e8f5626752dda9ca700327c6c66edf18c5a2eb3c25aaa6a55e4d92",
+          "mode": 420
+        },
+        "references/publication.md": {
+          "sha256": "bfc05ba12dda351af73c176c8ee108ee0156d96fba950f1de41eae4aed1bc3af",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "006d87590660ae087a61f087192ea57bc00e669db951d4f8bfb4542ffdf57f70",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "prototype",
+      "description": "Answer a bounded design, UX, state-model or feasibility question with a runnable experiment. Use for prototype-first requests or authorized method handoffs, before committing to production implementation.",
+      "command_only": false,
+      "links": 4,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "b61aa1d149a330662d6a61bb3fb1d35f382c13607b0f6d0b667d861128b35807",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "3a92c92e1d593e3dd6f2bae94280d691eae580b4d9ecc4a172adc839c40d70e4",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "f22f7e262b034bd876cdc648c831b1f9e2c87613e9b68e9594abb7638705ff25",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "406d4bb9fd06efa9f7fac02f21e5e00971bad68da9247a962ba5c3c1f9abe339",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "Question: can an absorbing cancel state ignore a late completion?\n{\"bound\": 2, \"conclusion\": \"supported\", \"observations\": [{\"actual\": \"cancelled\", \"events\": [\"start\", \"cancel\", \"complete\"], \"exit\": 0, \"expected\": \"cancelled\"}, {\"actual\": \"done\", \"events\": [\"start\", \"complete\", \"cancel\"], \"exit\": 0, \"expected\": \"done\"}], \"production_ready\": false, \"spent\": 2}\n{\"bound\": 1, \"conclusion\": \"inconclusive\", \"observations\": [{\"actual\": \"cancelled\", \"events\": [\"start\", \"cancel\", \"complete\"], \"exit\": 0, \"expected\": \"cancelled\"}], \"production_ready\": false, \"spent\": 1}\nCounter-hypothesis: {\"bound\": 1, \"conclusion\": \"rejected\", \"observations\": [{\"actual\": \"cancelled\", \"events\": [\"start\", \"cancel\", \"complete\"], \"exit\": 0, \"expected\": \"done\"}], \"production_ready\": false, \"spent\": 1}\nRecommendation: consider absorbing cancellation for this model only.\nLimitations: no real concurrency, persistence/recovery, integration, security or load evidence; production implementation needs new scope/checks.\nRetained useful probe and learning; no automatic promotion/commit.\nDisposition checks passed: authorized scratch/link removed; unowned, changed and useful artifacts protected; shared target intact.\nPASS: synthetic experiment and disposition checks; temporary fixture ended.\n"
+    },
+    {
+      "name": "research",
+      "description": "Investigate bounded questions against authoritative sources, check existing findings for freshness, or gather cited documentation and API facts. Use for direct research requests and authorized evidence-gathering handoffs; return findings without starting implementation.",
+      "command_only": false,
+      "links": 6,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "69d00271598ea64de4dfd5b3db78b74cce02756fc51ad8d7612f8176cbc4e436",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "acf66c8af6f90af79c1896addec717bfe53b8655483ab09ef535109713695aa4",
+          "mode": 420
+        },
+        "clef-feasibility.md": {
+          "sha256": "5ffcacaae7df7ceba34b632786628a706441e6ebd4913dc78afc1a79c038f0f4",
+          "mode": 420
+        },
+        "references/delegation.md": {
+          "sha256": "ed1d8fa0ac74f0e24680993080aa10d3431a62ec6b5e9a8b9b22907e73ec7587",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "fa3044997dce4e3262007fae1ba7c68c27382a3c7d23a349996490d1730a85d8",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "review-delivery",
+      "description": "Review delivered changes against project standards and an approved spec or brief, including uncommitted work. Use for an explicit delivery review or a bounded independent-review handoff from another workflow.",
+      "command_only": false,
+      "links": 17,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "1dbdbc358a1cc90ad8898f1b919122cbc3ee53c208ff300189581609d8cb9558",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "943e48fe5e9935c692c8c36dd5cd924fec3d8696c59d6e13d37a292b496d7089",
+          "mode": 420
+        },
+        "references/handoff.md": {
+          "sha256": "2972febb28a0fed75328b7cc218699d63233a5bc125783b1ce15ad9d3553495e",
+          "mode": 420
+        },
+        "references/report.md": {
+          "sha256": "7aba8e325bc41e2e75fe1897ec9a7b07294b509e317b96943b2e3e52f1f9f08d",
+          "mode": 420
+        },
+        "references/scope.md": {
+          "sha256": "0c6293e042630a9cf264a917a0707e07fc744137c271a6a07b4ec92e75887f47",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "9d2be1ed47715cb5447605316f86fce05d2ae0583b49948ca0a7badf75971602",
+          "mode": 420
+        },
+        "scripts/snapshot.py": {
+          "sha256": "f28f1c8291959d2b13d8c54b90e5338005d8a92565e29504334f5524c58d9f0c",
+          "mode": 420
+        },
+        "scripts/test_snapshot.py": {
+          "sha256": "0b809a1017836bcb231d3669e098d0f8cfacb1caf4e01e9a65a232ec515afdeb",
+          "mode": 420
+        },
+        "scripts/trial_fixture.py": {
+          "sha256": "7fe92268e89e6ddd8cf88ca31dfd4ccac89d39b372271eb8356a96de7423f310",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/test_snapshot.py"
+      ],
+      "exit": 0,
+      "output": "test_cli_and_protected_work_unchanged (__main__.SnapshotTests.test_cli_and_protected_work_unchanged) ... ok\ntest_content_identical_commit_is_not_automatically_fresh (__main__.SnapshotTests.test_content_identical_commit_is_not_automatically_fresh) ... ok\ntest_dirty_only_scope_does_not_require_committed_diff (__main__.SnapshotTests.test_dirty_only_scope_does_not_require_committed_diff) ... ok\ntest_index_change_even_with_identical_worktree (__main__.SnapshotTests.test_index_change_even_with_identical_worktree) ... ok\ntest_invalid_base_and_snapshot_fail_closed (__main__.SnapshotTests.test_invalid_base_and_snapshot_fail_closed) ... ok\ntest_invalid_paths_directories_and_symlinked_parents (__main__.SnapshotTests.test_invalid_paths_directories_and_symlinked_parents) ... ok\ntest_layers_scope_and_known_dirty_findings (__main__.SnapshotTests.test_layers_scope_and_known_dirty_findings) ... ok\ntest_mode_symlink_and_deletion_drift (__main__.SnapshotTests.test_mode_symlink_and_deletion_drift) ... ok\ntest_outside_scope_is_protected_but_requires_rediscovery (__main__.SnapshotTests.test_outside_scope_is_protected_but_requires_rediscovery) ... ok\ntest_repair_invalidates_old_scope_even_with_unchanged_passing_log (__main__.SnapshotTests.test_repair_invalidates_old_scope_even_with_unchanged_passing_log) ... ok\ntest_submodule_and_unmerged_index_require_manual_capture (__main__.SnapshotTests.test_submodule_and_unmerged_index_require_manual_capture) ... ok\ntest_support_input_and_unusual_names (__main__.SnapshotTests.test_support_input_and_unusual_names) ... ok\ntest_trial_packet_exposes_link_metadata_without_following (__main__.SnapshotTests.test_trial_packet_exposes_link_metadata_without_following) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 4.877s\n\nOK\n"
+    },
+    {
+      "name": "setup-project",
+      "description": "On an explicit setup request, establish or reconcile project context, agent instructions, approved model-use policy, and GitHub configuration.",
+      "command_only": true,
+      "links": 35,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "e6d5f1d942f25cb77dc55d9f124ef72798d1ca3b3078563618e8b660ef7e856a",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "ca5a7bd5d350c487430f6adc72c8ddb0b8dd2f49b6f952fc6508ace4fa0c1f29",
+          "mode": 420
+        },
+        "references/discovery.md": {
+          "sha256": "41d3db0418567eeb6ef01ffbb35d81f44abf6b959c8d81ada3b39c4937e2000f",
+          "mode": 420
+        },
+        "references/documentation-contract.md": {
+          "sha256": "eb1f87b555e9a2ea56fa740f001ae1f0998c74df899b7e96ab92559a4e0c0969",
+          "mode": 420
+        },
+        "references/domain-records.md": {
+          "sha256": "d6d1c2738d4ad07ac9157207989954cbf1da0e31c2fc1203569c4f43415c1b72",
+          "mode": 420
+        },
+        "references/issue-tracker.md": {
+          "sha256": "ff4f78f53eac1b246613157fd598b3b581d3f9ab931dd90ef911267e56340a84",
+          "mode": 420
+        },
+        "references/model-use.md": {
+          "sha256": "ea6f1804b075010aca968d0ba5520fa46c1c15c4dc37f18be3ed18b98595a747",
+          "mode": 420
+        },
+        "references/reconciliation.md": {
+          "sha256": "74546326fc6e6387d21e21ed287f9ca633d9abeddbe951b216ed09bf218c48e9",
+          "mode": 420
+        },
+        "references/releases.md": {
+          "sha256": "1b0658fea469c3596cbf0af34aba461b65a7a906770e967c80dcd560b5855315",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "f46f52aafe0d2a4660dac0fd7922e728b7d7d6e810a36cc17feb99beb0096bf8",
+          "mode": 420
+        },
+        "scripts/dependencies.py": {
+          "sha256": "a9da14c303ff12bdd7d5df74f821e55a54830d35f62306dc9e78dae483399e3a",
+          "mode": 420
+        },
+        "tests/test_dependencies.py": {
+          "sha256": "f175ec10cc932ff29f022efc3a5ed768ea8f60ebd7b47285e4094f28e13b99b2",
+          "mode": 420
+        },
+        "tests/test_package.py": {
+          "sha256": "b899014da70dea4d1198e2c8c7947fceb38f0de2d3cd46fd7aad6f32e65e4c10",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "test_apply_uses_database_id_correct_direction_and_rerun_is_noop (test_dependencies.DependencyWorkflowTests.test_apply_uses_database_id_correct_direction_and_rerun_is_noop) ... ok\ntest_cycles_are_checked_through_existing_and_planned_edges_before_writes (test_dependencies.DependencyWorkflowTests.test_cycles_are_checked_through_existing_and_planned_edges_before_writes) ... ok\ntest_database_id_mismatch_in_either_direction_blocks_further_writes (test_dependencies.DependencyWorkflowTests.test_database_id_mismatch_in_either_direction_blocks_further_writes) ... ok\ntest_empty_plan_needs_no_network (test_dependencies.DependencyWorkflowTests.test_empty_plan_needs_no_network) ... ok\ntest_existing_edge_id_mismatch_blocks_planning_and_all_writes (test_dependencies.DependencyWorkflowTests.test_existing_edge_id_mismatch_blocks_planning_and_all_writes) ... ok\ntest_failed_write_is_not_retried_and_next_run_inspects_partial_success (test_dependencies.DependencyWorkflowTests.test_failed_write_is_not_retried_and_next_run_inspects_partial_success) ... ok\ntest_large_graph_stops_before_mutations (test_dependencies.DependencyWorkflowTests.test_large_graph_stops_before_mutations) ... ok\ntest_malformed_plans_never_contact_github (test_dependencies.DependencyWorkflowTests.test_malformed_plans_never_contact_github) ... ok\ntest_post_write_cycle_error_preserves_truth_about_completed_writes (test_dependencies.DependencyWorkflowTests.test_post_write_cycle_error_preserves_truth_about_completed_writes) ... ok\ntest_read_only_plan_deduplicates_and_preserves_existing_edges (test_dependencies.DependencyWorkflowTests.test_read_only_plan_deduplicates_and_preserves_existing_edges) ... ok\ntest_reverse_scope_and_permissions_are_checked_before_any_write (test_dependencies.DependencyWorkflowTests.test_reverse_scope_and_permissions_are_checked_before_any_write) ... ok\ntest_success_without_forward_or_reverse_readback_is_blocked (test_dependencies.DependencyWorkflowTests.test_success_without_forward_or_reverse_readback_is_blocked) ... ok\ntest_unavailable_read_does_not_mean_missing_relationship (test_dependencies.DependencyWorkflowTests.test_unavailable_read_does_not_mean_missing_relationship) ... ok\ntest_unknown_identity_cross_repository_and_pull_requests_fail_closed (test_dependencies.DependencyWorkflowTests.test_unknown_identity_cross_repository_and_pull_requests_fail_closed) ... ok\ntest_cli_reads_all_pages_and_pins_host (test_dependencies.TransportTests.test_cli_reads_all_pages_and_pins_host) ... ok\ntest_cli_write_passes_id_as_json_without_shell_interpolation (test_dependencies.TransportTests.test_cli_write_passes_id_as_json_without_shell_interpolation) ... ok\ntest_errors_and_bad_page_shapes_are_not_empty_graphs (test_dependencies.TransportTests.test_errors_and_bad_page_shapes_are_not_empty_graphs) ... ok\ntest_timeout_does_not_retry_or_claim_no_write (test_dependencies.TransportTests.test_timeout_does_not_retry_or_claim_no_write) ... ok\ntest_domain_companion_packaging_when_present (test_package.PackageTests.test_domain_companion_packaging_when_present) ... skipped 'Standalone setup copy; domain companion packaging not checked'\ntest_github_companion_packaging_when_present (test_package.PackageTests.test_github_companion_packaging_when_present) ... skipped 'Standalone setup copy; companion packaging not checked'\ntest_setup_copied_without_sibling_companions (test_package.PackageTests.test_setup_copied_without_sibling_companions) ... ok\ntest_setup_package_has_only_package_local_file_links (test_package.PackageTests.test_setup_package_has_only_package_local_file_links) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.012s\n\nOK (skipped=2)\n"
+    },
+    {
+      "name": "shape-work",
+      "description": "Clarify unresolved goals, users, workflows, scope, priorities, constraints, trade-offs and success criteria into a usable product agreement. Use for shaping an idea or an authorized bounded discovery handoff; preserve settled decisions and stop before spec publication, tickets or implementation.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "f55fabfba0fe23a3705a3d764a6cd6048962f8402f7f1c329f8993add4bdc518",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "a5ff4a8ad043ab361f1ea3fc8d1d4b23ea8a5e6630b5c3db2136369a095b7fa1",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "85b03fd2978be983f2d2959ca211aedc2940dfd4612bf3bec64f04bdb761992d",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "slop-guard",
+      "description": "Review, rewrite, or draft human-facing prose without generic AI-writing patterns while preserving meaning and voice. Use when the user invokes slop-guard, raises writing-quality concerns, asks to review or rewrite prose, or asks whether text sounds generic or AI-written. For prose only; do not use for code or visual design.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "8253a2e5d974c49e1258f74f526a661eac9c923ba6a476cf22375519e579528b",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "4b9ebfc4be54019b1d26561ec4f25ee6a2deb4201bb3bca6e927431c6e4a59b7",
+          "mode": 420
+        },
+        "references/fiction-patterns.md": {
+          "sha256": "77d639e0ac00b62399d5a7f1b412d90967e651836929e9111074fb1821e82583",
+          "mode": 420
+        },
+        "references/pattern-catalog.md": {
+          "sha256": "81456a2a8b77cef7914130d8526ae9b5376fa58f4ee356ee71c743a57cce58ef",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "stay-positive",
+      "description": "Reframe human-facing prose constructively without forcing optimism or weakening meaning. Use when auditing, editing, or drafting prose, and when the user invokes stay-positive or asks to make writing more positive, constructive, encouraging, or less negative.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "7abf498dd5eae3e1ce966e0c1a7a5153cfdbe3cef8ae41343f816d84ff8fda5d",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "d7e1d3d6bc9af7a2e0caf3cc8ee1b4bc1b4d1c345eb54e69a26f421381fa08a6",
+          "mode": 420
+        },
+        "references/casebook.md": {
+          "sha256": "2f565ef9a4c4abae5b41dc0e1b5b882cc969752e4f20ab5d30c9d392e22dafa4",
+          "mode": 420
+        },
+        "references/decision-guide.md": {
+          "sha256": "b25be13c4a7c117a75e486d4a4e33a8401acf1eea25182608eec4862f6b35436",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "tdd",
+      "description": "Implement a bounded feature or bug fix test-first with red\u2013green\u2013refactor. Use for test-first requests, red\u2013green\u2013refactor requests, or an authorized delivery handoff selecting TDD.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "668fae6de77fa9da282f138939a2a6844150c617dac7be9b8098d4149ec81e38",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "fc77f9eb9c7d65f09ec135d93059a115d29bd276d38715068e046f366f361551",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "a76bfda94990416963fabfaf4104ee80a0c694322411c76c0384137f1da7c30e",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "addcb04ee5b731611713953c7b99656db49da54d523622d2989da32a8a760fae",
+          "mode": 420
+        },
+        "scripts/check-fixture.py": {
+          "sha256": "dcf81156512faa0b63a25dd37450ed7d602e64cf554d047c905d8afb011c4169",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-fixture.py"
+      ],
+      "exit": 0,
+      "output": "\nExisting coverage baseline: exit 0\ntest_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n\n\nRejected oracle passes despite missing shipping: exit 0\ntest_result_matches_itself (test_tautology.RejectedOracle.test_result_matches_itself) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n\n\nMeaningful red; existing coverage retained: exit 1\ntest_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok\ntest_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... FAIL\n\n======================================================================\nFAIL: test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<scratch>/test_checkout.py\", line 9, in test_small_cart_includes_shipping\n    self.assertEqual(checkout_total([10, 20]), 35)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 30 != 35\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n\n\nMinimal green: exit 0\ntest_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok\ntest_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n\n\nCoupled probe before refactor: exit 0\ntest_internal_expression (test_coupling.RejectedCoupling.test_internal_expression) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n\n\nBehavior-preserving refactor: exit 0\ntest_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok\ntest_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n\n\nRejected coupling breaks on equivalent behavior: exit 1\ntest_internal_expression (test_coupling.RejectedCoupling.test_internal_expression) ... FAIL\n\n======================================================================\nFAIL: test_internal_expression (test_coupling.RejectedCoupling.test_internal_expression)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<scratch>/test_coupling.py\", line 7, in test_internal_expression\n    self.assertIn(\"sum(prices)\", inspect.getsource(checkout_total))\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 'sum(prices)' not found in 'def checkout_total(prices):\\n    subtotal = sum(price for price in prices)\\n    shipping = 0 if subtotal >= 50 else 5\\n    return subtotal + shipping\\n'\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (failures=1)\n\n\nFinal retained suite: exit 0\ntest_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok\ntest_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n\nPASS: red\u2013green\u2013refactor, coverage reuse, and two rejected anti-examples\n"
+    },
+    {
+      "name": "update-changelog",
+      "description": "Maintain an existing software changelog with concise, user-relevant entries. Use automatically after completing a notable user-facing change in a project with a changelog, or when preparing a Semantic Versioning release, adding a missing historical release, or correcting an entry.",
+      "command_only": false,
+      "links": 3,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "4048820af2c958dfb1bf45874836394ea9951878406c3d9cfd429311fd6df268",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "c9ebce038a4c25c2418053e5162e22bbd48498b4f3113a40c9ef059a4cb3487d",
+          "mode": 420
+        },
+        "references/example-changelog.md": {
+          "sha256": "80c246de72b94974a74f23642b667f35f63ccda31c08906df392ba83405ecd25",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "work-on",
+      "description": "Deliver or resume one bounded change when the user requests delivery, or consume an authorized single-change lead or investigation-and-fix handoff. Own method selection, verification, independent review, repairs and PR handoff; not whole-spec scheduling or investigation-only work.",
+      "command_only": false,
+      "links": 85,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "352b596c8a5ad57aea70b43e286e87f6270577925180c7837461c71964c36c4f",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "56711cbc92ad0b6ca16e3fbe30f86dc8069240ada1eff26d1b92694455afc980",
+          "mode": 420
+        },
+        "references/build-validation.md": {
+          "sha256": "d40547e53ef21af529b11565ae85cb8d92b191d7f93143f0382bf407b2e51e79",
+          "mode": 420
+        },
+        "references/build.md": {
+          "sha256": "ddc9ec13e41f42b05659a13521fb9addb50490486a898ac890682bd87c04384a",
+          "mode": 420
+        },
+        "references/completion-validation.md": {
+          "sha256": "e7210afbcd8f8b7198fb05f0d5eb5543f37cd264cba489418256872ae074ba8f",
+          "mode": 420
+        },
+        "references/completion.md": {
+          "sha256": "a25bcf7bc5e77614cfc7bd1d01b2d34519539ac3d8e7c9924ab92b910eec1ca2",
+          "mode": 420
+        },
+        "references/contracts.md": {
+          "sha256": "99c439dac5ed0acb469f4f797d7e38e15084b0846cd1f81ad66a049990445d8a",
+          "mode": 420
+        },
+        "references/dispatch-validation.md": {
+          "sha256": "f7f7dfd1827f53e8745df4dd79bd8359a69f09703f08f10e6bda9b3f65b0f31f",
+          "mode": 420
+        },
+        "references/dispatch.md": {
+          "sha256": "1b324b9d145f219ce798d9a201cd6cf0c87bb92751c7e67b071805a781f9dd9a",
+          "mode": 420
+        },
+        "references/product-agreement-validation.md": {
+          "sha256": "a3a966431dd960b412d91d8c695658e7b9558823e55a8b821643d2c3c331a2fc",
+          "mode": 420
+        },
+        "references/product-agreement.md": {
+          "sha256": "a3594b02b21bd9b96cd1c71a26ba8718ef62c51081d90b38959a963d51d8cd9b",
+          "mode": 420
+        },
+        "references/recovery-validation.md": {
+          "sha256": "e3ab38abd2a85374084a31e844fbae633cf410f94c69f1168403f73a9aa143ae",
+          "mode": 420
+        },
+        "references/recovery.md": {
+          "sha256": "a1395b675dd5a5e014005caf29890dd457a8021dcc09d05ca2a684a617135472",
+          "mode": 420
+        },
+        "references/single-change-validation.md": {
+          "sha256": "67ffa3bf2b6d6afaee69af4feaf22e0b9c0d361273da4372f1e8be74123e5613",
+          "mode": 420
+        },
+        "references/technical-readiness-validation.md": {
+          "sha256": "0da4f24a949624a9b5bff6c849fb8b1f1aa35512a9e7731366c3f9c26b0e5cd7",
+          "mode": 420
+        },
+        "references/technical-readiness.md": {
+          "sha256": "eda5958cf8a0940cb5d2fa1e8ff0eda9bcb088d4d1f5d327b95162513b92164c",
+          "mode": 420
+        },
+        "references/ticketing-validation.md": {
+          "sha256": "01b1bffc5f42f7f53ffca7280f53e11bbf8f65dc000981b100d645097bd19bd9",
+          "mode": 420
+        },
+        "references/ticketing.md": {
+          "sha256": "c48a1e2f66e94f56080fdd27e690e6c012678558db3684b1e25e630ca8d83115",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "153d1430fa0c4df38f55758551f981cffd9fadc5fb9fc9cf4e720a2e815b82ff",
+          "mode": 420
+        },
+        "references/verification-validation.md": {
+          "sha256": "cdf1f7676af8bc96c22651bb97b5c9a55a324eac8a07a2d18ae97965e2e41d58",
+          "mode": 420
+        },
+        "references/verification.md": {
+          "sha256": "b676b8b7d18b5ba8973ad8557a59f5c92ff54d375018a764e3d0b7124bcdc6d4",
+          "mode": 420
+        },
+        "scripts/check-single-change-fixture.py": {
+          "sha256": "eb1545e43208af7ad630175eca514a0faa821326a4534c5fa45c7fb975caef5a",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-single-change-fixture.py"
+      ],
+      "exit": 0,
+      "output": "test_direct_change: check.py exit=0\ntest_direct_change: check.py exit=1\ntest_direct_change: check.py exit=0\nGit dir/worktree/index/template/config overrides: isolated; no external hook/state effects\ninstruction guard assertions: PASS (static, not agent-adherence proof)\ntest_material_check_blocker_is_not_green: check.py exit=0\ntest_material_check_blocker_is_not_green: required-integration-check.py exit=2\nmaterial integration evidence unavailable: acceptance BLOCKED; no installation/retry\ntest_method_composition_retains_baseline_and_ledger: capture.py exit=0\ntest_method_composition_retains_baseline_and_ledger: check.py exit=1\ntest_method_composition_retains_baseline_and_ledger: check.py exit=0\ntest_method_composition_retains_baseline_and_ledger: capture.py exit=0\ntest_missing_optional_model_uses_zero_calls: check.py exit=0\ntest_ready_bug_ticket_reuses_current_evidence: check.py exit=1\ntest_ready_bug_ticket_reuses_current_evidence: check.py exit=0\ntest_stale_evidence_refreshes_only_dependent_claim: check.py exit=0\ntest_stale_evidence_refreshes_only_dependent_claim: check.py exit=1\ntest_stale_evidence_refreshes_only_dependent_claim: check.py exit=0\ntest_direct_change (__main__.SingleChange.test_direct_change) ... ok\ntest_inherited_git_controls_cannot_escape_fixture (__main__.SingleChange.test_inherited_git_controls_cannot_escape_fixture) ... ok\ntest_instruction_gates_and_no_nested_pool (__main__.SingleChange.test_instruction_gates_and_no_nested_pool) ... ok\ntest_material_check_blocker_is_not_green (__main__.SingleChange.test_material_check_blocker_is_not_green) ... ok\ntest_method_composition_retains_baseline_and_ledger (__main__.SingleChange.test_method_composition_retains_baseline_and_ledger) ... ok\ntest_missing_optional_model_uses_zero_calls (__main__.SingleChange.test_missing_optional_model_uses_zero_calls) ... ok\ntest_ready_bug_ticket_reuses_current_evidence (__main__.SingleChange.test_ready_bug_ticket_reuses_current_evidence) ... ok\ntest_stale_evidence_refreshes_only_dependent_claim (__main__.SingleChange.test_stale_evidence_refreshes_only_dependent_claim) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 1.458s\n\nOK\n"
+    },
+    {
+      "name": "work-on-spec",
+      "description": "Deliver or resume an explicitly requested specification across its tickets. Coordinate native dependency eligibility, bounded Work On ticket agents, exclusive ownership, serial integration, aggregate verification/review and recovery; not a single-change or investigation-only request.",
+      "command_only": false,
+      "links": 19,
+      "files": {
+        "LICENSE": {
+          "sha256": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "43a4674b340a0f23a020f98df0d977f9b491c1ac31a5cb65a3750c8d9dcde11a",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "8d75abcc9b303c1d7e3be51d41e2da2b7e241443d8827366cd4274098f868a18",
+          "mode": 420
+        },
+        "references/aggregate.md": {
+          "sha256": "806dce247f2d69a5a31d98e3787cd582dfd52e75e453eeee2ea22a6050ac42d6",
+          "mode": 420
+        },
+        "references/dispatch-validation.md": {
+          "sha256": "406f493a7d2569ba7f2cc2f69e74f9f5abc6e23a455fe583737aecb570b35930",
+          "mode": 420
+        },
+        "references/dispatch.md": {
+          "sha256": "55d82f02f7fcb1a2078c162638703635d14bf7e67fd6fe9f626dc8f2d1de0166",
+          "mode": 420
+        },
+        "references/recovery.md": {
+          "sha256": "26b90a252ff10b092234364190284e273de36372cceddc8aaac8c76c57e55600",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "28f9fec4808dca97615d8201bc3482777e64ca89bfe9b22495e7a9b38e0f86ad",
+          "mode": 420
+        },
+        "scripts/check-coordination-fixture.py": {
+          "sha256": "1a876df2bd9fefeb25e83f155faa9da9f4150d5d1299cb470e1e3cc4d777e67e",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": [
+        "python3",
+        "-B",
+        "scripts/check-coordination-fixture.py"
+      ],
+      "exit": 0,
+      "output": "instruction assertions: static only, not runtime-adherence proof\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=0\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=0\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=0\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=0\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=1\ntest_serial_integration_refreshes_cross_ticket_evidence: cross-ticket check exit=0\ntest_failed_uncertain_owner_retains_scope (__main__.Coordination.test_failed_uncertain_owner_retains_scope) ... ok\ntest_independent_and_shared_interface_ownership (__main__.Coordination.test_independent_and_shared_interface_ownership) ... ok\ntest_instruction_boundaries_and_missing_runtime (__main__.Coordination.test_instruction_boundaries_and_missing_runtime) ... ok\ntest_one_unavailable_slot_and_no_recursive_pool (__main__.Coordination.test_one_unavailable_slot_and_no_recursive_pool) ... ok\ntest_parent_and_native_prerequisite_evidence (__main__.Coordination.test_parent_and_native_prerequisite_evidence) ... ok\ntest_resume_preserves_exhausted_lineage_and_unknown_usage (__main__.Coordination.test_resume_preserves_exhausted_lineage_and_unknown_usage) ... ok\ntest_serial_integration_refreshes_cross_ticket_evidence (__main__.Coordination.test_serial_integration_refreshes_cross_ticket_evidence) ... ok\ntest_uncertain_integration_is_inspected_not_replayed (__main__.Coordination.test_uncertain_integration_is_inspected_not_replayed) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.864s\n\nOK\n"
+    },
+    {
+      "name": "write-spec",
+      "description": "Write or revise a specification from an ordinary request or existing agreement, preserving confirmed decisions and verifiable acceptance IDs. Use for expressing agreed behavior or a bounded specification handoff, with optional authorized publication; stop before tickets or implementation.",
+      "command_only": false,
+      "links": 9,
+      "files": {
+        "LICENSE": {
+          "sha256": "668fae6de77fa9da282f138939a2a6844150c617dac7be9b8098d4149ec81e38",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "c70a1bd5d6ac208edefce7246d438f79dc280b921d0a6105cf7ff5cc1b16d0e4",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "26698eaa38cb46acd7a57a97fbdac4e02e21dac1d9c7942daf4477062edb57ec",
+          "mode": 420
+        },
+        "references/publication.md": {
+          "sha256": "d8394e7f97b01631237555c59161bd69ec42f5ef93d9ce26944fd0ce58f63d7b",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "65f8d6459312f0ece20b6ef34df7ae3b2a10a5d5a311a6a26244b4d4119c1b77",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    },
+    {
+      "name": "write-tickets",
+      "description": "Decompose an approved spec or analysis into cohesive tickets, publish ready bug evidence or explicitly investigation-only work, or reconcile existing tickets and native dependencies after exact approval.",
+      "command_only": false,
+      "links": 5,
+      "files": {
+        "LICENSE": {
+          "sha256": "668fae6de77fa9da282f138939a2a6844150c617dac7be9b8098d4149ec81e38",
+          "mode": 420
+        },
+        "README.md": {
+          "sha256": "dd5a79199b5e7e41aaa64b5aafbe7c4307690158ceeacf4618b13e4699cce1ae",
+          "mode": 420
+        },
+        "SKILL.md": {
+          "sha256": "4a7fd53c25d85f5c117a3849522f69a3006f0375c3df4513636616a3b0076cab",
+          "mode": 420
+        },
+        "references/validation.md": {
+          "sha256": "25d11994308e7dc535ccd4b9dbcbd5bdfd259b901bd7b229f2d62315ac933f5d",
+          "mode": 420
+        }
+      },
+      "isolated": true,
+      "offline_command": null
+    }
+  ],
+  "catalog": "explicit-path synthetic; no installed discovery"
+}

@@ -1,0 +1,1 @@
+PASS: artifact fidelity, spec stop, plan-only zero writes, unavailable native read blocked, persisted graph/roles/both directions/pagination, no-op rerun, targeted caller invalidation, protected source

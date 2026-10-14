@@ -1,0 +1,47 @@
+{
+  "kind": "live read-only observations; no tracker mutation",
+  "parent": {
+    "number": 48,
+    "state": "closed"
+  },
+  "blockers": [
+    {
+      "number": 69,
+      "state": "closed",
+      "blocks": [
+        73
+      ]
+    },
+    {
+      "number": 70,
+      "state": "closed",
+      "blocks": [
+        73
+      ]
+    },
+    {
+      "number": 71,
+      "state": "closed",
+      "blocks": [
+        73
+      ]
+    },
+    {
+      "number": 72,
+      "state": "closed",
+      "blocks": [
+        73
+      ]
+    }
+  ],
+  "accepted_integrations_present": {
+    "69": "c532dc698c68fca7c5496e116ce66ea4af6e325c",
+    "70": "d90f0e709157b82788bd11288ac1bcc0413bd157",
+    "71": "c3bd79eb42918ccdb41b126f48a5b8b15a1bdd12",
+    "72": "bd64584744f2e09fbba7eedf7b4c3d706f68a5d4"
+  },
+  "issue_input_sha256": {
+    "48": "f6dedccf5796fe86200c185cde35eaabdef62d673040399d7d5427bb40fe3c67",
+    "73": "eecbc2365c4351f30a32674d634b6d21841c7dd5b819283eda26f850860e6394"
+  }
+}

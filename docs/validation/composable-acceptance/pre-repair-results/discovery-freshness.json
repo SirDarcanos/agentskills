@@ -1,0 +1,20 @@
+{
+  "old_source": "8bd75d96a037084637b56b5d10703d1ffbc3ac49771ee3e0d6d8eea57874cc71",
+  "changed_caller_source": "72763e174e62db2fb228ee4bbb13d96113a0566357cb97edd4555cd74fb45771",
+  "old_page": {
+    "heading": "My reading list",
+    "titles": [
+      "Own"
+    ]
+  },
+  "changed_page": {
+    "heading": "My reading list",
+    "books": [
+      "Own"
+    ]
+  },
+  "service_result_unchanged": [
+    "Own"
+  ],
+  "disposition": "caller output-shape support stale; reader filter/order and P1\u2013P3 intent retained; old caller compatibility cannot be relied on"
+}

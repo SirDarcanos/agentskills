@@ -2,6 +2,8 @@
 
 For [#50](https://github.com/SirDarcanos/agentskills/issues/50), read with the [contract](composable-delivery.md) and [inventory](composable-delivery-inventory.md). This matrix assigns obligations, not completion. The paper checks below are authored and directly inspected design exercises, **not executed agent workflows, mock-transport tests, independent review or installed migration**.
 
+For current shipped-package checks, the three executed integrated trials and AC1–AC16 dispositions, read [#73's acceptance consolidation](../validation/composable-acceptance/README.md). It does not promote these paper scenarios to executed evidence; AC16 remains pending the separately approved real #74 operation.
+
 ## #48 acceptance traceability
 
 | #48 criterion | Procedure owner / contract coverage | Downstream implementation and executed evidence owner |

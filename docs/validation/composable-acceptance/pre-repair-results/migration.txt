@@ -1,0 +1,19 @@
+test_activation_failure_rolls_back (test_fixture.MigrationTests.test_activation_failure_rolls_back) ... ok
+test_changed_shared_source_blocks_restore (test_fixture.MigrationTests.test_changed_shared_source_blocks_restore) ... ok
+test_duplicate_discovery_blocks_success (test_fixture.MigrationTests.test_duplicate_discovery_blocks_success) ... ok
+test_full_package_restore (test_fixture.MigrationTests.test_full_package_restore) ... ok
+test_intervening_edit_blocks_rollback (test_fixture.MigrationTests.test_intervening_edit_blocks_rollback) ... ok
+test_invalid_backup_blocks_retirement (test_fixture.MigrationTests.test_invalid_backup_blocks_retirement) ... ok
+test_invalid_replacement_blocks_retirement (test_fixture.MigrationTests.test_invalid_replacement_blocks_retirement) ... ok
+test_missing_companion_blocks_retirement (test_fixture.MigrationTests.test_missing_companion_blocks_retirement) ... ok
+test_resume_all_intent_boundaries (test_fixture.MigrationTests.test_resume_all_intent_boundaries) ... ok
+test_same_name_new_source (test_fixture.MigrationTests.test_same_name_new_source) ... ok
+test_shared_symlink_retirement_and_restore (test_fixture.MigrationTests.test_shared_symlink_retirement_and_restore) ... ok
+test_unapproved_target_untouched (test_fixture.MigrationTests.test_unapproved_target_untouched) ... ok
+test_unknown_interruption_blocks_resume (test_fixture.MigrationTests.test_unknown_interruption_blocks_resume) ... ok
+test_write_escape_guard (test_fixture.MigrationTests.test_write_escape_guard) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.526s
+
+OK

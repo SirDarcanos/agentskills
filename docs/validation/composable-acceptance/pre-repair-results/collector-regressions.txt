@@ -1,0 +1,11 @@
+test_bad_or_duplicate_identity_and_missing_trigger_rejected (test_checks.PackageChecks.test_bad_or_duplicate_identity_and_missing_trigger_rejected) ... ok
+test_content_and_modes_change_identity (test_checks.PackageChecks.test_content_and_modes_change_identity) ... ok
+test_current_frontmatter_and_folded_description (test_checks.PackageChecks.test_current_frontmatter_and_folded_description) ... ok
+test_missing_link_escaping_link_and_missing_anchor_rejected (test_checks.PackageChecks.test_missing_link_escaping_link_and_missing_anchor_rejected) ... ok
+test_missing_or_truncated_notice_rejected (test_checks.PackageChecks.test_missing_or_truncated_notice_rejected) ... ok
+test_non_sibling_catalog_and_duplicate_rejection (test_checks.PackageChecks.test_non_sibling_catalog_and_duplicate_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+OK

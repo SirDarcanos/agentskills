@@ -14,7 +14,7 @@ The skill supports three modes:
 
 Potentially negative passages are classified as constructive opportunities, necessary negativity, or uncertain. Uncertain passages remain unchanged and are presented to the user for confirmation.
 
-When [`slop-guard`](../slop-guard/) is installed, Stay Positive loads it in the same mode so constructive framing also preserves voice and avoids generic prose.
+When `slop-guard` is installed, Stay Positive loads it in the same mode so constructive framing also preserves voice and avoids generic prose. Resolve that companion through your agent's skill catalog or an explicitly configured location; it need not be installed beside Stay Positive. Without it, Stay Positive remains usable on its own.
 
 ## Example requests
 

@@ -1,0 +1,33 @@
+acceptance-first 4 links; isolated check passed
+analyze 4 links; isolated check passed
+ask-clef 21 links; isolated check passed
+ask-clef-flash 21 links; isolated check passed
+ask-jev 11 links; isolated check passed
+ask-nimble 21 links; isolated check passed
+build-and-check 4 links; isolated check passed
+build-with-nimble 5 links; isolated check passed
+characterize 4 links; isolated check passed
+create-changelog 3 links; isolated check passed
+domain-modeling 9 links; isolated check passed
+github-repo-setup 5 links; isolated check passed
+implementation-preflight 1 links; isolated check passed
+investigate-bug 4 links; isolated check passed
+pr 6 links; isolated check passed
+prototype 4 links; isolated check passed
+research 6 links; isolated check passed
+review-delivery 17 links; isolated check passed
+setup-project 35 links; isolated check passed
+shape-work 5 links; isolated check passed
+slop-guard 5 links; isolated check passed
+Traceback (most recent call last):
+  File "<repository>/docs/validation/composable-acceptance/check_packages.py", line 153, in <module>
+    main()
+    ~~~~^^
+  File "<repository>/docs/validation/composable-acceptance/check_packages.py", line 107, in main
+    original = inspect_package(source)
+  File "<repository>/docs/validation/composable-acceptance/check_packages.py", line 77, in inspect_package
+    count = links.check_links(markdown, root)
+  File "<repository>/docs/validation/delivery-coverage/check_packages.py", line 48, in check_links
+    assert resolved.is_relative_to(boundary.resolve()), (path, link, "escape")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: (PosixPath('<repository>/stay-positive/README.md'), '../slop-guard/', 'escape')
