@@ -1,0 +1,72 @@
+{
+  "measured": {
+    "baseline": "6b329e002586d34fa053c0b141e50877b7be6d30",
+    "candidate": "43fd04120d213e860de4196ceaa84aa582a46fc5",
+    "diff": "diff --git a/MIGRATION.md b/MIGRATION.md\nnew file mode 100644\nindex 0000000..ff4436a\n--- /dev/null\n+++ b/MIGRATION.md\n@@ -0,0 +1,2 @@\n+After merge, the maintainer must approve and manually refresh installed copies.\n+A source revert does not restore installed copies; use the approved backup.\ndiff --git a/test_old.py b/test_new.py\nsimilarity index 48%\nrename from test_old.py\nrename to test_new.py\nindex 21c997c..25e5fcb 100644\n--- a/test_old.py\n+++ b/test_new.py\n@@ -1,5 +1,5 @@\n import unittest\n class Tests(unittest.TestCase):\n     def test_keep(self): self.assertEqual(2 + 2, 4)\n-    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n-    def test_update(self): self.assertTrue(True)\n+    def test_update(self): self.assertEqual(3 + 3, 6)\n+    def test_new(self): self.assertEqual(1 + 1, 2)",
+    "baseline_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertTrue(True)\n",
+    "candidate_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertEqual(3 + 3, 6)\n    def test_new(self): self.assertEqual(1 + 1, 2)\n",
+    "baseline_check": "test_duplicate (test_old.Tests.test_duplicate) ... ok\ntest_keep (test_old.Tests.test_keep) ... ok\ntest_update (test_old.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "candidate_check": "test_keep (test_new.Tests.test_keep) ... ok\ntest_new (test_new.Tests.test_new) ... ok\ntest_update (test_new.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "ci": ".github/workflows/check.yml",
+    "workflow": "on: [pull_request]\njobs:\n  checks:\n    runs-on: ubuntu-latest\n    steps:\n      - run: python -m unittest discover -v\n",
+    "migration": "After merge, the maintainer must approve and manually refresh installed copies.\nA source revert does not restore installed copies; use the approved backup.\n",
+    "review": {
+      "Standards": "not supplied",
+      "Spec": "M1 unresolved: restore procedure has not been exercised"
+    },
+    "authority": "local report only; no publication, benchmarks or installed migration",
+    "samples": {
+      "provenance": "synthetic CI records, NOT observed hosted runs",
+      "baseline_run": "fixture-B",
+      "candidate_run": "fixture-C",
+      "baseline_revision": "6b329e002586d34fa053c0b141e50877b7be6d30",
+      "candidate_revision": "43fd04120d213e860de4196ceaa84aa582a46fc5",
+      "date": "2026-10-14",
+      "workload": "python -m unittest discover -v, three named test functions",
+      "runner": "synthetic ubuntu-latest, 2 vCPU",
+      "cache": "cold in both records",
+      "concurrency": 1,
+      "retries_skips_failures": 0,
+      "samples_per_state": 1,
+      "baseline_elapsed_seconds": 80,
+      "candidate_elapsed_seconds": 60,
+      "baseline_runner_seconds": 70,
+      "candidate_runner_seconds": 50,
+      "billing": null
+    }
+  },
+  "unmeasured": {
+    "baseline": "6b329e002586d34fa053c0b141e50877b7be6d30",
+    "candidate": "7677a8b4a49c5c31f321a51a349527fa355873df",
+    "diff": "diff --git a/.github/workflows/check.yml b/.github/workflows/check.yml\nindex a478371..e1712e7 100644\n--- a/.github/workflows/check.yml\n+++ b/.github/workflows/check.yml\n@@ -4,3 +4,7 @@ jobs:\n     runs-on: ubuntu-latest\n     steps:\n       - run: python -m unittest discover -v\n+  syntax:\n+    runs-on: ubuntu-latest\n+    steps:\n+      - run: python -m compileall -q .\ndiff --git a/MIGRATION.md b/MIGRATION.md\nnew file mode 100644\nindex 0000000..ff4436a\n--- /dev/null\n+++ b/MIGRATION.md\n@@ -0,0 +1,2 @@\n+After merge, the maintainer must approve and manually refresh installed copies.\n+A source revert does not restore installed copies; use the approved backup.\ndiff --git a/test_old.py b/test_new.py\nsimilarity index 48%\nrename from test_old.py\nrename to test_new.py\nindex 21c997c..25e5fcb 100644\n--- a/test_old.py\n+++ b/test_new.py\n@@ -1,5 +1,5 @@\n import unittest\n class Tests(unittest.TestCase):\n     def test_keep(self): self.assertEqual(2 + 2, 4)\n-    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n-    def test_update(self): self.assertTrue(True)\n+    def test_update(self): self.assertEqual(3 + 3, 6)\n+    def test_new(self): self.assertEqual(1 + 1, 2)",
+    "baseline_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertTrue(True)\n",
+    "candidate_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertEqual(3 + 3, 6)\n    def test_new(self): self.assertEqual(1 + 1, 2)\n",
+    "baseline_check": "test_duplicate (test_old.Tests.test_duplicate) ... ok\ntest_keep (test_old.Tests.test_keep) ... ok\ntest_update (test_old.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "candidate_check": "test_keep (test_new.Tests.test_keep) ... ok\ntest_new (test_new.Tests.test_new) ... ok\ntest_update (test_new.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "ci": ".github/workflows/check.yml",
+    "workflow": "on: [pull_request]\njobs:\n  checks:\n    runs-on: ubuntu-latest\n    steps:\n      - run: python -m unittest discover -v\n  syntax:\n    runs-on: ubuntu-latest\n    steps:\n      - run: python -m compileall -q .\n",
+    "migration": "After merge, the maintainer must approve and manually refresh installed copies.\nA source revert does not restore installed copies; use the approved backup.\n",
+    "review": {
+      "Standards": "not supplied",
+      "Spec": "M1 unresolved: restore procedure has not been exercised"
+    },
+    "authority": "local report only; no publication, benchmarks or installed migration"
+  },
+  "no-ci": {
+    "baseline": "2e9175d3e0ca2e9d998e75f3bc515e2611dea66e",
+    "candidate": "48f8cf5230b9d925d8263aa2a2cc42e721e60476",
+    "diff": "diff --git a/MIGRATION.md b/MIGRATION.md\nnew file mode 100644\nindex 0000000..ff4436a\n--- /dev/null\n+++ b/MIGRATION.md\n@@ -0,0 +1,2 @@\n+After merge, the maintainer must approve and manually refresh installed copies.\n+A source revert does not restore installed copies; use the approved backup.\ndiff --git a/test_old.py b/test_new.py\nsimilarity index 48%\nrename from test_old.py\nrename to test_new.py\nindex 21c997c..25e5fcb 100644\n--- a/test_old.py\n+++ b/test_new.py\n@@ -1,5 +1,5 @@\n import unittest\n class Tests(unittest.TestCase):\n     def test_keep(self): self.assertEqual(2 + 2, 4)\n-    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n-    def test_update(self): self.assertTrue(True)\n+    def test_update(self): self.assertEqual(3 + 3, 6)\n+    def test_new(self): self.assertEqual(1 + 1, 2)",
+    "baseline_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_duplicate(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertTrue(True)\n",
+    "candidate_tests": "import unittest\nclass Tests(unittest.TestCase):\n    def test_keep(self): self.assertEqual(2 + 2, 4)\n    def test_update(self): self.assertEqual(3 + 3, 6)\n    def test_new(self): self.assertEqual(1 + 1, 2)\n",
+    "baseline_check": "test_duplicate (test_old.Tests.test_duplicate) ... ok\ntest_keep (test_old.Tests.test_keep) ... ok\ntest_update (test_old.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "candidate_check": "test_keep (test_new.Tests.test_keep) ... ok\ntest_new (test_new.Tests.test_new) ... ok\ntest_update (test_new.Tests.test_update) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK",
+    "ci": "",
+    "workflow": null,
+    "migration": "After merge, the maintainer must approve and manually refresh installed copies.\nA source revert does not restore installed copies; use the approved backup.\n",
+    "review": {
+      "Standards": "not supplied",
+      "Spec": "M1 unresolved: restore procedure has not been exercised"
+    },
+    "authority": "local report only; no publication, benchmarks or installed migration"
+  }
+}
