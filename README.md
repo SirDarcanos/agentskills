@@ -26,10 +26,6 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
 | [`work-on`](work-on/) | Explicitly start or resume delivery with context-aware routing, product agreement, technical planning, native ticket graphs, direct building, integrated verification, bounded repair/completion, multi-ticket dispatch/integration and safe interruption/failure recovery. |
 
-### Dungeons & Dragons skills
-
-The three D&D skills—`dnd-create-monster`, `dnd-format-prose`, and `dnd-speak-with-dead`—now live in [SirDarcanos/dnd-agentskills](https://github.com/SirDarcanos/dnd-agentskills). Install them with `npx skills add SirDarcanos/dnd-agentskills`. Existing copied installations are unchanged; update them from the new repository.
-
 ## Repository layout
 
 Each skill lives in its own directory and uses `SKILL.md` as its entry point:
