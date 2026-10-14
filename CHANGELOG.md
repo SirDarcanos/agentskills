@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add standalone Prototype for bounded experiments, recommendations and authority-safe artifact disposition, also available through Work On without claiming production readiness. ([#56](https://github.com/SirDarcanos/agentskills/issues/56))
 - Add standalone TDD with behavioral red–green–refactor and reusable coverage, also available through Work On's test-first route. ([#55](https://github.com/SirDarcanos/agentskills/issues/55))
 - Add independently usable Research with cited, version-aware findings, evidence reuse and optional authorized background delegation. ([#54](https://github.com/SirDarcanos/agentskills/issues/54))
-- Add Work On for context-aware delivery, verification and bounded recovery. ([#14](https://github.com/SirDarcanos/agentskills/issues/14))
+- Add Work On for technical-led single-change delivery, evidence reuse, composed methods, verification, independent review, bounded repair/recovery and PR handoff; whole-spec scheduling requires Work On Spec. ([#14](https://github.com/SirDarcanos/agentskills/issues/14), [#67](https://github.com/SirDarcanos/agentskills/issues/67))
 - Add Review Delivery for independent Standards/Spec review of standalone and bounded handoffs, with dirty-scope freshness and shared execution limits. ([#24](https://github.com/SirDarcanos/agentskills/issues/24), [#65](https://github.com/SirDarcanos/agentskills/issues/65))
 - Add Ask Clef and Ask Clef Flash for evidence-backed local judgments through Ollama, by explicit request or approved project policy.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.

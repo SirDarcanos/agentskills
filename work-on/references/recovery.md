@@ -2,6 +2,8 @@
 
 Read completely on resume after interruption/failure, unknown ownership, uncertain operations or inconsistent retained progress. This internal procedure belongs to the lead. Consume the [handoff](contracts.md#handoff-envelope), update the existing [evidence record](contracts.md#lead-evidence-record), and read [recovery validation](recovery-validation.md) when changing or validating it. Recovery grants no new authority and introduces no persistence service.
 
+For the current single-change entry, apply local artifact/owner/evidence/repair recovery only. Whole-spec graph/frontier/integration recovery belongs to discovered `work-on-spec`; the multi-ticket clauses below are retained until #68 transfers them and are not an active fallback. If that coordinator is unavailable, preserve history and report the affected boundary instead of resuming a launch list.
+
 ## 1. Reconstruct actual state before writes
 
 Read the current agreement, target authorities and retained progress/check/review records. Recheck relevant companion compatibility through [capability checks](contracts.md#capability-checks). Record missing history as unknown; a prior summary or ticket label is a discovery pointer, not proof.
@@ -46,7 +48,7 @@ Use the earliest unmet responsibility, preserving settled decisions:
 | Required tool, companion or privilege unavailable | Block only the affected route, name capability/decision owner and recommend restoring access or approving a specific alternative. Safe equivalent direct work may continue; required independent review/checks remain gates. Installation/substitution is not implicit. |
 | Changed scope, substantive disagreement, persistent failure or exhausted budget | Preserve work and return a bounded reassessment recommendation to the proper decision-maker. Further correction needs explicitly approved scope/plan/budget. |
 
-For multiple tickets, return the reconciled state to [dispatch](dispatch.md) to recompute the native ready frontier, ownership and combined capacity immediately before starts. Do not resume the old launch list. For a single change, use entry routing and the shared envelope for the selected available procedure. Preserve scope freezes while verifying/reviewing; integrate serially under actual branch/PR policy. A pending required merge remains pending.
+For multiple tickets, return the reconciled state to the overall lead or discovered compatible `work-on-spec` to recompute its frontier and shared ownership/capacity; [dispatch](dispatch.md) is retained historical material, not an active fallback. Do not resume the old launch list. For a single change, use entry routing and the shared envelope for the selected available procedure. Preserve scope freezes while verifying/reviewing; integrate serially under actual branch/PR policy. A pending required merge remains pending.
 
 **Complete when:** every work unit is retained/integrated, eligible for one justified next phase, waiting or blocked with reason/owner; any resumed execution fits current authority, preflight, ownership and unchanged budgets.
 

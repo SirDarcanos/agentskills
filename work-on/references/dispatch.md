@@ -1,5 +1,7 @@
 # Dispatch and incremental integration
 
+**Retained historical procedure, inactive after #67's single-change cutover.** #68 transfers whole-spec ownership to `work-on-spec`. Preserve this body and its original trial evidence until that transfer; the current Work On entry does not execute it, including when the new coordinator is unavailable.
+
 Read completely when coordinating multiple implementation tickets or scheduling children of a ready spec. This internal Work On procedure belongs to the lead; direct execution is the default. Consume the [handoff](contracts.md#handoff-envelope) and retain decisions in the existing [evidence record](contracts.md#lead-evidence-record). For changes or validation, read [dispatch validation](dispatch-validation.md).
 
 ## 1. Reconcile the intended and observed work graph

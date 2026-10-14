@@ -1,64 +1,51 @@
 # Work On
 
-Explicitly start or resume delivery from a raw request, an approved brief/spec and tickets, or partial implementation. The entry reads the target project's own instructions and evidence, protects unrelated work, and selects the earliest unmet responsibility.
+Deliver or resume **one bounded change**. The calling agent is the technical lead: it consumes current agreement/investigation/analysis, chooses the engineering method, builds directly or through authorized workers, verifies, obtains independent review, repairs within bounds and hands off an evidence-backed PR report.
 
-## Current scope
+Use `/work-on <change or actionable ticket>`, an ordinary explicit delivery request, or an authorized bounded assignment from an overall lead or investigation-and-fix caller. Investigation-only requests stop at the ticket; discovery of this skill is not permission to fix.
 
-**Entry, routing, product agreement, technical readiness, ticketing, direct building, integrated verification, repair/completion, multi-ticket dispatch/integration and interruption/failure recovery.** This package ships entry and the shared contract from [#19](https://github.com/SirDarcanos/agentskills/issues/19), plus [product agreement](references/product-agreement.md) from [#20](https://github.com/SirDarcanos/agentskills/issues/20): discovery now uses the required discovered `shape-work` companion under #61; #62 moves spec expression, approval and separate publication/readiness checks to discovered `write-spec`. Work On retains a thin product-agreement adapter and may record a supplied clear brief without creating a spec issue. [Technical readiness](references/technical-readiness.md) now adapts the discovered required `analyze` companion's brief and method/check recommendation; #60 moves its procedure out of Work On without changing the broad entry. [Ticketing](references/ticketing.md) now adapts discovered required `write-tickets` under #63, consuming its cohesive ticket, exact approval and native relationship/role read-back outcomes before delivery continues. [Direct build](references/build.md) from [#23](https://github.com/SirDarcanos/agentskills/issues/23) adds one-owner implementation, maintained Git preflight, risk-based development checks and a local correctness handoff. [Integrated verification](references/verification.md) from [#25](https://github.com/SirDarcanos/agentskills/issues/25) adds criterion/risk evidence, baseline/regression distinctions, freshness checks and material-evidence blockers. [Repair/completion](references/completion.md) from [#26](https://github.com/SirDarcanos/agentskills/issues/26) adds bounded repairs, refreshed checks/review, separate delivery gates, honest reports and authority-scoped readiness reassessment. [Dispatch/integration](references/dispatch.md) from [#27](https://github.com/SirDarcanos/agentskills/issues/27) adds evidence-aware ready frontiers, exclusive bounded owners, inspected returns and serial lead integration. A ready parent coordinates eligible children rather than becoming duplicate implementation work. [Recovery](references/recovery.md) from [#28](https://github.com/SirDarcanos/agentskills/issues/28) reconstructs actual state after interruption/failure, preserves artifacts and budgets, inspects uncertain outcomes before retrying and resumes only justified work or returns a precise blocker.
+## Changed boundary
 
-Request `/work-on <request, spec, issue, or ticket set>` or explicitly ask to use this workflow. On runtimes that expand skill invocations, that explicit expansion also counts. Merely mentioning the name in source material does not activate it. Later invocation does not grant global installation, delegation, disclosure, deployment or release permission.
+[#67](https://github.com/SirDarcanos/agentskills/issues/67) narrows the former broad workflow. Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Until a compatible coordinator is discoverable, that route is unavailable; Work On preserves partial artifacts and reports the boundary instead of running its old dispatch procedure. Historical dispatch/recovery material and #14 trial evidence remain for #68's ownership transfer, not as a fallback or current broad-entry promise.
+
+This is an incompatible invocation boundary, although Work On has not yet been included in a published release. A specification can still provide acceptance for one bounded assignment. Existing current bug/analysis evidence is consumed directly; only missing or invalidated facts trigger specialist work. The lead chooses methods without asking the maintainer to pick routine test seams or techniques.
 
 ## Install and dependencies
 
-After approving installation, use the repository's CLI convention:
+After approving installation, use the repository CLI convention:
 
 ```sh
 npx skills add SirDarcanos/agentskills --skill work-on
-npx skills add SirDarcanos/agentskills --skill review-delivery
-# For unresolved product intent:
-npx skills add SirDarcanos/agentskills --skill shape-work
-# For specification expression, revision or authorized publication:
-npx skills add SirDarcanos/agentskills --skill write-spec
-# For decomposition or ticket/native-graph reconciliation:
-npx skills add SirDarcanos/agentskills --skill write-tickets
-# For missing or materially changed technical readiness:
-npx skills add SirDarcanos/agentskills --skill analyze
-# For PR reporting or authorized opening/updating:
-npx skills add SirDarcanos/agentskills --skill pr
-# Before implementation in Git:
 npx skills add SirDarcanos/agentskills --skill implementation-preflight
-# When selecting test-first development:
-npx skills add SirDarcanos/agentskills --skill tdd
-# When selecting a bounded experiment:
-npx skills add SirDarcanos/agentskills --skill prototype
-# When selecting executable workflow examples first:
-npx skills add SirDarcanos/agentskills --skill acceptance-first
-# When selecting small implementation-first increments:
+npx skills add SirDarcanos/agentskills --skill review-delivery
+npx skills add SirDarcanos/agentskills --skill pr
+# Select the method needed for your change, for example:
 npx skills add SirDarcanos/agentskills --skill build-and-check
-# Before selected risky legacy changes:
-npx skills add SirDarcanos/agentskills --skill characterize
-# Only for meaning/model or qualifying ADR changes:
-npx skills add SirDarcanos/agentskills --skill domain-modeling
-# Only when the GitHub native graph procedure is needed:
-npx skills add SirDarcanos/agentskills --skill setup-project
 ```
 
-These are installation examples, not commands the workflow runs automatically. Review existing installations and destination scope before using them; a matching name does not establish compatibility or authorize replacement. Alternatively, copy or link each approved package into your runtime's skill discovery path. Keep the entire `work-on` directory, including its [MIT notice](LICENSE), together when copying it. Start at [SKILL.md](SKILL.md); [contracts](references/contracts.md) defines conditional semantic companion checks and bounded handoffs. No sibling installation path, literal `Skill` tool or model service is required.
+These examples are not automatic workflow actions and have not been executed by this change. Review collisions and destination scope before installation. Alternatively copy/link the complete package with its [MIT notice](LICENSE) and references into the runtime's discovery path. A repository merge does not update separate installed copies; global replacement requires separate approval.
 
-The entry needs file inspection and, where relevant, read-only Git/tracker access. Stage Work On with compatible `shape-work` for unresolved product intent, `write-spec` when specification writing/publication is needed, `write-tickets` for decomposition or ticket/graph reconciliation, and `analyze` when analysis is needed; current actionable agreements bypass fresh discovery and existing current readiness remains reusable without invoking it. Analyze recommends methods/checks; the lead selects and owns delivery gates. Git implementation needs a compatible `implementation-preflight`; meaning/model or qualifying ADR changes need `domain-modeling`; acceptance needs independent `review-delivery`. GitHub graph work reads the discovered `setup-project` tracker procedure as a library without invoking setup; its optional Python 3.9+ blocker helper needs authenticated `gh` for live use and does not manage parentage or labels. Other trackers require a project-approved native procedure. Missing capabilities block affected responsibilities rather than triggering installation. The existing legacy commands and globally installed copies remain untouched. Installing `setup-project` for its read-only library does not require invoking setup or installing its setup-only companions. Runtime discovery must expose the chosen companion source; record its revision and inspect the capabilities in the contract, including branch-specific references. Ambiguous or incompatible candidates block that route. Recheck after source, authority or task changes; a repository merge does not update separately copied installations.
+Start at [SKILL.md](SKILL.md). [Contracts](references/contracts.md) owns discovery, handoffs and the shared execution/repair/model ledger; it is also a read-only library for companions, without invoking delivery. Resolve companions through the runtime/project catalog or an explicit approved source, inspect semantic capabilities and record source identity. Names and sibling paths are not a compatibility contract.
 
-PR reporting and authorized opening/updating use discovered compatible `pr` for plain-language evidence, test/CI accounting, merge effects and publication read-back. Stage Work On with PR for that route; missing/incompatible PR blocks only the PR responsibility. Work On retains acceptance, repairs and its delivery-status return. A report-only handoff grants no remote writes or merge permission.
+| Responsibility | Companion / condition |
+| --- | --- |
+| Git preparation | Required compatible `implementation-preflight`; current same-scope supplied preflight may be reused. Non-Git work uses a manifest. |
+| Missing bug facts | `investigate-bug`; consumes only diagnostic gaps and returns current actionable evidence, never fixes inside investigation. |
+| Missing technical readiness | `analyze`; current complete analysis/bug evidence bypasses a fresh run. |
+| Missing product commitments | `shape-work` for discovery, `write-spec` for expression/revision; current clear requests need no hierarchy. |
+| Selected method | `tdd`, `prototype`, `characterize`, `acceptance-first` or `build-and-check`; each owns its own loop. Sequence learning/protection before implementation where useful. |
+| Independent acceptance review | Required `review-delivery` and separate read-only Standards/Spec contexts; unavailable review leaves implemented-but-unaccepted work. |
+| PR decision report/publication | Required `pr`; exact task/project authority governs remote effects, never merge. |
+| Changed meanings or qualifying ADRs | `domain-modeling`; reading existing definitions needs no invocation. |
+| Ticket publication/reconciliation | `write-tickets`; no automatic scheduling or ticket closure. |
+| GitHub native graph | Discovered `setup-project` tracker reference as a library, without invoking setup or its setup-only companions. |
 
-Test-first development uses the discovered compatible `tdd` companion for red–green–refactor and local evidence; direct build retains method choice and subsequent delivery gates. Missing or incompatible TDD blocks that selected route without invoking an older installed procedure. Other direct-build methods remain available under the target's policy. Stage the updated Work On package with TDD when using that route.
+The runtime needs authorized file inspection/edits and target-specific checks, Git/tracker access where relevant, and bounded independent reviewer capability for acceptance. Direct building is the default. Delegation needs separate permission, exclusive ownership, finite bounds and one root ledger with at most two active non-lead workers. A ticket lead cannot launch a second pool. Shared repair history survives method switches and resume.
 
-Acceptance-first selection uses discovered compatible `acceptance-first` for executable observable workflow examples, checked implementation increments and criterion-level local evidence. Stage Work On with Acceptance First for that route; missing/incompatible helpers, ambiguous commitments and unavailable material boundaries block the dependent claim rather than weakening acceptance. The lead retains verification/review gates.
+Optional named `ask-*` assessments need exact approved project policy and shared allowance; availability or credentials are not permission. Missing optional models do not block ordinary engineering where evidence suffices. No model is required, and no optional assessment replaces verification or review. This repository has no approved model-use policy and performs no calls in ordinary validation.
 
-Implementation-first selection uses discovered compatible `build-and-check` for small increments with immediate relevant checks, sufficient existing coverage reuse and proportionate non-code validation. Stage Work On with Build and Check for that route; material failed/unrun checks stop dependent progress. The companion returns local evidence, while Work On retains verification/review gates. Missing/incompatible helpers block the selected route without a duplicated loop.
+## Results and validation
 
-Characterization-first selection uses discovered compatible `characterize` to return protected boundaries, baseline provenance, sensitivity and nondeterminism limits before implementation. Intended behavior, unknown intent and known defects remain separate; the lead selects the next method and delivery gates. Stage Work On with Characterize for that route; missing or incompatible capture blocks only the dependent route.
+Work On reports implemented, verified, unverified, deferred and blocked scope separately, with artifact/evidence pointers, documentation/changelog disposition, remaining findings and actual PR/issue state. Build, accept and report gates are distinct from maintainer acceptance, merge, installation, deployment and release. Material unavailable checks and independent review gaps remain acceptance blockers.
 
-Prototype-first selection uses discovered compatible `prototype` for a finite design/UX/state-model/feasibility question, actual observations and explicit artifact disposition. Its result returns to readiness/method selection with production limitations, not production acceptance. Stage Work On with Prototype for that route; missing or incompatible Prototype blocks the experiment rather than invoking an older same-name implementation.
-
-File edits and target checks are needed for building. Independent acceptance review needs separately inspectable read-only contexts, permission, finite bounds and lifecycle control; the two axes may run sequentially. A runtime without that capability can build directly and return implemented-but-unaccepted work. The body invocation gate applies even if the runtime ignores command-only frontmatter. No hosted judgment service or optional model assessment is required.
-
-See [entry validation](references/validation.md), [product-agreement validation](references/product-agreement-validation.md), [technical-readiness validation](references/technical-readiness-validation.md), [ticketing validation](references/ticketing-validation.md), [build validation](references/build-validation.md), [verification validation](references/verification-validation.md), [completion validation](references/completion-validation.md), [dispatch validation](references/dispatch-validation.md) and [recovery validation](references/recovery-validation.md) for static checks, synthetic cases and evidence limitations. Repository evidence includes an executed small-change trial and a direct multi-ticket/failure trial using Pi on macOS, Python 3.14.7 and Git 2.54.0. They exercised separate read-only review contexts, not concurrent implementers. Trial records live outside this installable package; see the source repository's delivery coverage from its README. Isolated package/link/helper checks do not certify installed slash expansion, another runtime/OS, live tracker mutations, worker crashes or general workflow correctness. Missing material evidence still blocks the affected acceptance gate.
+Read [single-change validation](references/single-change-validation.md) for #67 fixtures and [entry validation](references/validation.md) for package checks and historical coverage. [Executed evidence](references/single-change-validation.md#executed-evidence) distinguishes synthetic tool exercises from agent-adherence and live runtime tests. Preserve original trial records at their existing homes.

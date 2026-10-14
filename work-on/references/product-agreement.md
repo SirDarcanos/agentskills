@@ -1,6 +1,6 @@
 # Product agreement adapter
 
-Read completely when entry selects unresolved product intent, spec expression/publication or changed approved commitments. Use the inspected context and [handoff contract](contracts.md#handoff-envelope). This is an internal procedure of an explicitly requested Work On run. For changes or validation, read [adapter validation](product-agreement-validation.md).
+Read completely when entry selects unresolved product intent, spec expression/publication or changed approved commitments. Use the inspected context and [handoff contract](contracts.md#handoff-envelope). This is an internal adapter of an authorized single-change Work On run; specialist procedures retain their own invocation and approval gates. For changes or validation, read [adapter validation](product-agreement-validation.md).
 
 ## 1. Inspect the agreement and select the gap
 
