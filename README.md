@@ -23,6 +23,7 @@ Reusable skills for coding agents. This repository collects skills that I use in
 | [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
 | [`github-repo-setup`](github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
 | [`implementation-preflight`](implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
+| [`investigate-bug`](investigate-bug/) | Confirm defects and cause, then prepare or reconcile workable tickets; investigation-only stops before repair. |
 | [`prototype`](prototype/) | Answer bounded design, UX, state-model or feasibility questions with runnable experiments, explicit limitations and artifact disposition. |
 | [`research`](research/) | Investigate bounded questions directly or through authorized delegation, with cited sources, freshness checks and explicit uncertainty. |
 | [`review-delivery`](review-delivery/) | Independently review Standards and Spec against the actual delivered scope, including dirty work, with pinned evidence and stale-review detection. |
@@ -73,6 +74,8 @@ git clone https://github.com/SirDarcanos/agentskills.git
 Review a skill before enabling it because instructions and tool assumptions can differ between agent runtimes.
 
 ### Delivery workflow
+
+Use `investigate-bug` for a reported defect lacking ready evidence. It uses discovered `write-tickets` for approved publication/reconciliation and stops there; a later authorized delivery consumes current evidence. The current Work On entry remains explicit-invocation-only pending its separate cutover, so investigation does not automatically invoke it.
 
 Install `work-on` for explicitly requested delivery and `review-delivery` for the independent acceptance-review gate. Follow their package READMEs for installation examples and conditional companions: `shape-work` for unresolved product intent, `write-spec` for specification writing or authorized publication, `analyze` for missing or changed technical readiness, `write-tickets` for decomposition or ticket/graph reconciliation, `implementation-preflight` for Git building, `tdd` when selecting test-first development, `prototype` when selecting a bounded experiment, `characterize` before selected risky legacy changes, `acceptance-first` when selecting executable workflow examples first, `build-and-check` when selecting small implementation-first increments, `domain-modeling` for meaning/ADR changes, and the discovered `setup-project` tracker library for GitHub graph work. Reading that library does not invoke setup. Copy complete directories and their notices; companions use semantic discovery, not sibling paths. Missing tools, compatible companions or review authority block the affected route rather than prompting automatic installation or legacy-command fallback.
 

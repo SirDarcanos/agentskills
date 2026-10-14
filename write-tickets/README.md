@@ -1,6 +1,6 @@
 # Write Tickets
 
-Create cohesive work from an approved agreement and technical readiness, publish a complete bounded bug investigation, or reconcile existing tickets. Start at [SKILL.md](SKILL.md). Exact publication and graph approval precede writes; verified native parent/blocker state is distinct from readiness and later scheduling.
+Create cohesive work from an approved agreement and technical readiness, publish bounded bug evidence as ready or explicitly investigation-only work, or reconcile existing tickets. Start at [SKILL.md](SKILL.md). Exact publication and graph approval precede writes; verified native parent/blocker state is distinct from readiness and later scheduling.
 
 ## Installation and dependencies
 
