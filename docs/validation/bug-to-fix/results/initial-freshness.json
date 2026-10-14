@@ -1,0 +1,11 @@
+{
+  "original_scope_sha256": "72b64555a716b3eb798d4058d726474ca0c6981a22affdde1e7bc37376d7e0a0",
+  "helper_result": {
+    "changed_fields": [],
+    "status": "matching-listed-paths"
+  },
+  "candidate_discovery_unchanged": true,
+  "protected_content_index_mode_link_unchanged": true,
+  "public_scope_root_normalized": true,
+  "original_scope_retained_privately": true
+}

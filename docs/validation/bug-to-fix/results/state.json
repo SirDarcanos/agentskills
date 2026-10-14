@@ -1,0 +1,21 @@
+{
+  "agreement": "6d4e81a4293a7dacf55a45e6f37ae01812a7ba325c30655c7c1398945189ede4",
+  "analysis_runs": 0,
+  "base": "5fbaa7f0ea2c5f8a5be8f80655848cf2cbf5447a",
+  "environment": "Python 3.14.7",
+  "fix_authority": true,
+  "investigation_runs": 1,
+  "methods": [
+    "characterize",
+    "tdd"
+  ],
+  "phase": "implemented-unaccepted",
+  "protected": {
+    "content": "eef5c5847e9bdc09568e4f6beecc7574e818abfadaac4aab9d4fd1361e754bdf",
+    "index": "100644 e9fd569df77505b068852fa6e2b0a1945e3dbe37 0\tprotected.txt",
+    "link": "protected.txt",
+    "mode": 416,
+    "staged": "staged unrelated work"
+  },
+  "repair_cycles": 0
+}

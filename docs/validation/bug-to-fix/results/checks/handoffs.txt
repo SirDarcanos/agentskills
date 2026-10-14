@@ -1,0 +1,12 @@
+test_collector_scrubs_external_temporary_paths_preserving_failure (test_handoffs.HandoffTests.test_collector_scrubs_external_temporary_paths_preserving_failure) ... ok
+test_direct_change_reuses_check_and_exports_only_synthetic_scope (test_handoffs.HandoffTests.test_direct_change_reuses_check_and_exports_only_synthetic_scope) ... ok
+test_existing_workspace_is_never_reinitialized (test_handoffs.HandoffTests.test_existing_workspace_is_never_reinitialized) ... ok
+test_hostile_git_routing_cannot_touch_external_repository (test_handoffs.HandoffTests.test_hostile_git_routing_cannot_touch_external_repository) ... ok
+test_investigation_stops_and_denied_fix_has_no_writes (test_handoffs.HandoffTests.test_investigation_stops_and_denied_fix_has_no_writes) ... ok
+test_same_ticket_composition_preserves_protected_layers (test_handoffs.HandoffTests.test_same_ticket_composition_preserves_protected_layers) ... ok
+test_stale_deciding_code_blocks_and_duplicate_preserves_identity (test_handoffs.HandoffTests.test_stale_deciding_code_blocks_and_duplicate_preserves_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.814s
+
+OK

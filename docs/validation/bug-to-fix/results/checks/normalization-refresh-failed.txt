@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "<repository>/docs/validation/bug-to-fix/run_checks.py", line 30, in inputs
+    files[path.relative_to(REPO).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+          ~~~~~~~~~~~~~~~~^^^^^^
+  File "<python-library>/pathlib/__init__.py", line 490, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'docs/validation/bug-to-fix/agreement.md' is not in the subpath of '<repository>'

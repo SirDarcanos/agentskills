@@ -1,0 +1,45 @@
+test_absent_none_draft_conflicting_expired_policy_has_zero_effects (test_authorization.AuthorizationTests.test_absent_none_draft_conflicting_expired_policy_has_zero_effects) ... ok
+test_advisory_mismatch_is_not_retried_for_preferred_verdict (test_authorization.AuthorizationTests.test_advisory_mismatch_is_not_retried_for_preferred_verdict) ... ok
+test_autonomous_configured_fallback_and_explicit_offer_wait (test_authorization.AuthorizationTests.test_autonomous_configured_fallback_and_explicit_offer_wait) ... ok
+test_denied_startup_and_ambiguous_probe_do_not_start_or_send (test_authorization.AuthorizationTests.test_denied_startup_and_ambiguous_probe_do_not_start_or_send) ... ok
+test_exact_allowed_variant_needs_no_confirmation (test_authorization.AuthorizationTests.test_exact_allowed_variant_needs_no_confirmation) ... ok
+test_exhausted_reserved_and_ambiguous_budget_have_zero_effects (test_authorization.AuthorizationTests.test_exhausted_reserved_and_ambiguous_budget_have_zero_effects) ... ok
+test_explicit_absent_autonomous_policy_and_project_prohibition (test_authorization.AuthorizationTests.test_explicit_absent_autonomous_policy_and_project_prohibition) ... ok
+test_failed_and_unknown_attempts_spend_allowance_without_retry (test_authorization.AuthorizationTests.test_failed_and_unknown_attempts_spend_allowance_without_retry) ... ok
+test_generated_command_is_not_explicit_authority (test_authorization.AuthorizationTests.test_generated_command_is_not_explicit_authority) ... ok
+test_missing_model_has_no_send_or_remote_substitution (test_authorization.AuthorizationTests.test_missing_model_has_no_send_or_remote_substitution) ... ok
+test_named_alternative_is_returned_to_lead_not_silently_called (test_authorization.AuthorizationTests.test_named_alternative_is_returned_to_lead_not_silently_called) ... ok
+test_only_one_evidence_correction_shared_across_resume (test_authorization.AuthorizationTests.test_only_one_evidence_correction_shared_across_resume) ... ok
+test_owned_leave_running_and_pending_cleanup (test_authorization.AuthorizationTests.test_owned_leave_running_and_pending_cleanup) ... ok
+test_owned_startup_cleanup_on_success_and_failure (test_authorization.AuthorizationTests.test_owned_startup_cleanup_on_success_and_failure) ... ok
+test_pre_send_revocation_blocks_send_after_authorized_probe (test_authorization.AuthorizationTests.test_pre_send_revocation_blocks_send_after_authorized_probe) ... ok
+test_pre_send_shared_exhaustion_has_no_send (test_authorization.AuthorizationTests.test_pre_send_shared_exhaustion_has_no_send) ... ok
+test_shared_child_resume_does_not_reset_budget (test_authorization.AuthorizationTests.test_shared_child_resume_does_not_reset_budget) ... ok
+test_suitability_precedes_probes (test_authorization.AuthorizationTests.test_suitability_precedes_probes) ... ok
+test_unknown_or_excess_spending_blocks_before_effects (test_authorization.AuthorizationTests.test_unknown_or_excess_spending_blocks_before_effects) ... ok
+test_valid_insufficient_data_is_not_fallback_or_retry (test_authorization.AuthorizationTests.test_valid_insufficient_data_is_not_fallback_or_retry) ... ok
+test_wrong_skill_variant_remote_endpoint_purpose_and_disclosure (test_authorization.AuthorizationTests.test_wrong_skill_variant_remote_endpoint_purpose_and_disclosure) ... ok
+test_frontmatter_contract_and_links (test_authorization.PackageTests.test_frontmatter_contract_and_links) ... ok
+test_isolated_copy_without_siblings (test_authorization.PackageTests.test_isolated_copy_without_siblings) ... ok
+test_all_fixture_types_and_expected_labels (test_replay.ReplayTests.test_all_fixture_types_and_expected_labels) ... ok
+test_exact_model_is_required (test_replay.ReplayTests.test_exact_model_is_required) ... ok
+test_expected_labels_are_not_sent (test_replay.ReplayTests.test_expected_labels_are_not_sent) ... ok
+test_image_shape_encoding_and_body_limits (test_replay.ReplayTests.test_image_shape_encoding_and_body_limits) ... ok
+test_live_recording_is_opt_in_and_preserves_details (test_replay.ReplayTests.test_live_recording_is_opt_in_and_preserves_details) ... ok
+test_malformed_and_error_responses (test_replay.ReplayTests.test_malformed_and_error_responses) ... ok
+test_mismatch_is_distinct_from_contract_error (test_replay.ReplayTests.test_mismatch_is_distinct_from_contract_error) ... ok
+test_offline_default_never_calls_server (test_replay.ReplayTests.test_offline_default_never_calls_server) ... ok
+test_redirects_are_refused (test_replay.ReplayTests.test_redirects_are_refused) ... ok
+test_reject_bad_probabilities_and_confidence (test_replay.ReplayTests.test_reject_bad_probabilities_and_confidence) ... ok
+test_reject_missing_extra_mistyped_and_unknown_answers (test_replay.ReplayTests.test_reject_missing_extra_mistyped_and_unknown_answers) ... ok
+test_request_limits_and_types (test_replay.ReplayTests.test_request_limits_and_types) ... ok
+test_response_model_usage_and_choice_consistency (test_replay.ReplayTests.test_response_model_usage_and_choice_consistency) ... ok
+test_saved_response_validation_is_offline (test_replay.ReplayTests.test_saved_response_validation_is_offline) ... ok
+test_score_and_noul_contracts (test_replay.ReplayTests.test_score_and_noul_contracts) ... ok
+test_service_failure (test_replay.ReplayTests.test_service_failure) ... ok
+test_transport_ignores_proxies_and_uses_loopback (test_replay.ReplayTests.test_transport_ignores_proxies_and_uses_loopback) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.072s
+
+OK

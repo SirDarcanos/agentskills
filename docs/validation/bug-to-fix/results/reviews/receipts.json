@@ -1,0 +1,20 @@
+{
+  "final-spec": {
+    "child_run": "cd2115c0-66e5-4ca4-97ab-6370d29be2cc",
+    "original_sha256": "d6b6309fec25cf9f9733e819a52a164e7fe6ae5068aac222dcb553a0861c98d8",
+    "workflow": "a91d19d4-c015-4204-99be-08d8959dfffd"
+  },
+  "final-standards": {
+    "child_run": "a966349e-8881-47bf-8dc3-f622d8e79f14",
+    "original_sha256": "1e9c5b6f90fb6e3d2af26da804027ba1c22e528c06e36d1dd1a5d6522129a673",
+    "workflow": "a91d19d4-c015-4204-99be-08d8959dfffd"
+  },
+  "spec": {
+    "child_run": "0a77d3c9-439a-4115-84f6-bbaed6e1d780",
+    "original_sha256": "dd69e99da6f299a8685ddd278fab9fcdd3f964b860613260fa8f0cf520284c81"
+  },
+  "standards": {
+    "child_run": "5f0732b8-c1f3-40e3-b5ce-8500adc92fef",
+    "original_sha256": "8e844c7082c314290fdad76342666ed238250c3b32d4c5c667e0e4f7dec5690f"
+  }
+}

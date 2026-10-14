@@ -1,0 +1,9 @@
+Question: can an absorbing cancel state ignore a late completion?
+{"bound": 2, "conclusion": "supported", "observations": [{"actual": "cancelled", "events": ["start", "cancel", "complete"], "exit": 0, "expected": "cancelled"}, {"actual": "done", "events": ["start", "complete", "cancel"], "exit": 0, "expected": "done"}], "production_ready": false, "spent": 2}
+{"bound": 1, "conclusion": "inconclusive", "observations": [{"actual": "cancelled", "events": ["start", "cancel", "complete"], "exit": 0, "expected": "cancelled"}], "production_ready": false, "spent": 1}
+Counter-hypothesis: {"bound": 1, "conclusion": "rejected", "observations": [{"actual": "cancelled", "events": ["start", "cancel", "complete"], "exit": 0, "expected": "done"}], "production_ready": false, "spent": 1}
+Recommendation: consider absorbing cancellation for this model only.
+Limitations: no real concurrency, persistence/recovery, integration, security or load evidence; production implementation needs new scope/checks.
+Retained useful probe and learning; no automatic promotion/commit.
+Disposition checks passed: authorized scratch/link removed; unowned, changed and useful artifacts protected; shared target intact.
+PASS: synthetic experiment and disposition checks; temporary fixture ended.

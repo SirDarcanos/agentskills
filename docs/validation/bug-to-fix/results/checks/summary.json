@@ -1,0 +1,279 @@
+[
+  {
+    "name": "tdd",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "tdd/scripts/check-fixture.py"
+    ],
+    "exit": 0,
+    "evidence": "tdd.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "tdd/LICENSE": "668fae6de77fa9da282f138939a2a6844150c617dac7be9b8098d4149ec81e38",
+      "tdd/README.md": "fc77f9eb9c7d65f09ec135d93059a115d29bd276d38715068e046f366f361551",
+      "tdd/SKILL.md": "a76bfda94990416963fabfaf4104ee80a0c694322411c76c0384137f1da7c30e",
+      "tdd/references/validation.md": "addcb04ee5b731611713953c7b99656db49da54d523622d2989da32a8a760fae",
+      "tdd/scripts/check-fixture.py": "dcf81156512faa0b63a25dd37450ed7d602e64cf554d047c905d8afb011c4169"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "prototype",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "prototype/scripts/check-fixture.py"
+    ],
+    "exit": 0,
+    "evidence": "prototype.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "prototype/LICENSE": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+      "prototype/README.md": "b61aa1d149a330662d6a61bb3fb1d35f382c13607b0f6d0b667d861128b35807",
+      "prototype/SKILL.md": "3a92c92e1d593e3dd6f2bae94280d691eae580b4d9ecc4a172adc839c40d70e4",
+      "prototype/references/validation.md": "f22f7e262b034bd876cdc648c831b1f9e2c87613e9b68e9594abb7638705ff25",
+      "prototype/scripts/check-fixture.py": "406d4bb9fd06efa9f7fac02f21e5e00971bad68da9247a962ba5c3c1f9abe339"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "characterize",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "characterize/scripts/check-fixture.py"
+    ],
+    "exit": 0,
+    "evidence": "characterize.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "characterize/LICENSE": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+      "characterize/README.md": "5fc1c52e4d0a97646ea2fc9b69b606144eba8aee2f3427ce425346ed27bfc8f5",
+      "characterize/SKILL.md": "6e4c16f46ea81962a03831bd18f615dda2f0bf7c3716db3508bef9db38939b20",
+      "characterize/references/validation.md": "64cc50b2fc9b7cf41c7fd3da5d686116add41ed1f85bca45f61a16f248b6caa6",
+      "characterize/scripts/check-fixture.py": "d80885736062babb18816c17143dcb3af9df611118ef6ccec7a177a6e2fcd1ee"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "acceptance-first",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "acceptance-first/scripts/check-fixture.py"
+    ],
+    "exit": 0,
+    "evidence": "acceptance-first.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "acceptance-first/LICENSE": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+      "acceptance-first/README.md": "098d92c8166faf8b536590c5ad0652787e6911fc309ea42058b1153f12633333",
+      "acceptance-first/SKILL.md": "35a96d1bbc6a022dc57a2f3aff949bfb45ff75628f29f2e7fde2301c22432ba1",
+      "acceptance-first/references/validation.md": "8e7fc8da440fcfd0a3779822221fb62a9bc72557353967e43a044bfeaa355933",
+      "acceptance-first/scripts/check-fixture.py": "fb2b055dc0a2b93296b40a6513c2aa29ee09ae773d09638da99f98147f3bd531"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "build-and-check",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "build-and-check/scripts/check-fixture.py"
+    ],
+    "exit": 0,
+    "evidence": "build-and-check.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "build-and-check/LICENSE": "cb5c8b3e772070780bec917c0798ca8c300672b32205a8b77b9e4adb77c45dd6",
+      "build-and-check/README.md": "ab5b1e7cbea0b999325024c7514be4551e1d6f2ad52b13cf979abdc753e93203",
+      "build-and-check/SKILL.md": "40a72625c2a7eadd3bba41c562879f248feef30fa5a42371396348ac61bd44a2",
+      "build-and-check/references/validation.md": "3be8d485733eb8c505a30646093b341bf07e989f63f38ff63c8300af13b05947",
+      "build-and-check/scripts/check-fixture.py": "7caac31f3c32099ad44c8a5387c1aa2a75d4d5abb0fffa8727138934895894d2"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "handoffs",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "docs/validation/bug-to-fix",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "handoffs.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "docs/validation/bug-to-fix/agreement.md": "c2b4c7a33b9cf5b2cb6a5d33a2149f0b090e87c05d524388bc54a08e522ffe08",
+      "docs/validation/bug-to-fix/run_checks.py": "9107e9224e57e3c951026bd229bc62dc51e7d5a0202828ec4124f0a6b055037b",
+      "docs/validation/bug-to-fix/run_fixture.py": "015a37f4246ecad86c2e5d3e0dae1dcf79ee00dda07feae74fd82572d5d40535",
+      "docs/validation/bug-to-fix/test_handoffs.py": "e42b1fc36ac9b990a73041f6a08bef23c0628d34d4d6fff2c9bfe63878382377"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "investigation",
+    "cwd": ".",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "docs/validation/investigate-bug",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "investigation.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "docs/validation/investigate-bug/README.md": "0d6f19ddf5dd74ad6991f556ed0f2102d211e741655699c3a0b45614e519e667",
+      "docs/validation/investigate-bug/check.py": "f7705c825a02098a914d7df52f4cc9a95ee8ed77422ccdf6235d6146486b4dfe",
+      "docs/validation/investigate-bug/test_investigation.py": "15acdc43b387f53ab97d37cf804d4bfea9dbf3ebdaa676d1463864beca63a31f"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "ask-nimble",
+    "cwd": "ask-nimble",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "ask-nimble.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "ask-nimble/README.md": "49be1add90d8304bcfe0188fc7a080460265116564542ce09c1ebf069a254d13",
+      "ask-nimble/SKILL.md": "6a865a4437779d9442cfb9c2a8fcdb12e2379727ea84890a897397900728f7c5",
+      "ask-nimble/references/authorization.md": "2cd7f7ee70d64aa1775d69468a35492fe4bcdee41ad89e3579b9537258f4c540",
+      "ask-nimble/references/judgment-design.md": "f0d3554e135b02a3f84bb55a6dfcb4871ad28ac22f9a6d2d34168c633db574b1",
+      "ask-nimble/references/ollama-api.md": "4119950ff5fc32cbe3484049f7d2a9dbb46cc2005b2c502977c45d992a49f09a",
+      "ask-nimble/references/testing.md": "efcafff2844461a0590beea97991c13424509fc278e9a03552d116f8f749bf06",
+      "ask-nimble/scripts/replay.py": "7a0f1f0b3815a82a56e9830b03047cceb2ea5e3970fc827d4f44f2a55836a8aa",
+      "ask-nimble/tests/cases.json": "51a1af2a4c4f27215f0c90985cac3a1cda62ee090e448d9dfe09ea0c5d2d6984",
+      "ask-nimble/tests/test_authorization.py": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+      "ask-nimble/tests/test_replay.py": "e58b5f803e244d5f7c6d09fc335c285a732baebe74f2a031cebc41e82d9fc78a"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "ask-clef",
+    "cwd": "ask-clef",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "ask-clef.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "ask-clef/README.md": "2c3f60550c2ffbe57e88842b8e565bb85dddec9bcd7c7fbfd9ec4d92a392ab21",
+      "ask-clef/SKILL.md": "0a338ffcce7117164e51ab9d023df1e7eda0e6c4b91794c6e402843051f94bc7",
+      "ask-clef/references/authorization.md": "32dba8bf77cb617dc3baefce68d5e835c3943b5aee620e54102e3e920353bdcd",
+      "ask-clef/references/judgment-design.md": "d4b59b7cb855a97c7262eef90edc9b060b351544b34713f67dc1c7a2e41cdf27",
+      "ask-clef/references/ollama-api.md": "169b8637bda4053c2403908279a5c495a3f2758f34c54ecb48e3ea12e6c1f82d",
+      "ask-clef/references/testing.md": "215e17b75e03fddac88884d2783f8ced25d6f95db8e4922d09c797e7f3b70c16",
+      "ask-clef/scripts/replay.py": "eee69df9cb30ba1b6a3dc84474b61a7c045b121ca9f23428675afa2812fb9522",
+      "ask-clef/tests/cases.json": "bab2d89728d62f6cdf5bf577e96ee90af479a7f9fc7cb45b634794a02dcbb4b0",
+      "ask-clef/tests/test_authorization.py": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+      "ask-clef/tests/test_replay.py": "049c31d7d1d9c71952b3e9fd111e85f43f065c7b7253bf5ddf4977d83a3a448e"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "ask-clef-flash",
+    "cwd": "ask-clef-flash",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "ask-clef-flash.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "ask-clef-flash/README.md": "71e6ab35ced702a28ffc67e91a0f8483682bc2aa09d32646ed14b9490fd21ff8",
+      "ask-clef-flash/SKILL.md": "d9be8b297b62c35d9977fc6fd0048179b9b4f94bcbcc04e590bf1a5654561609",
+      "ask-clef-flash/references/authorization.md": "daf60502a298f24bdc1ddc15127bdb6f57b157ea897ca6a8407f87e375504040",
+      "ask-clef-flash/references/judgment-design.md": "90561a9f47e815b7c4c65b1ae56b0edd8076292b248d37c57d0571f041824f2f",
+      "ask-clef-flash/references/ollama-api.md": "e508f19a667fd8e81c391579ba2812cf46c4c5a063f4e65a6662bff41c549ec9",
+      "ask-clef-flash/references/testing.md": "07325957f073a9bc8035d057a543d17e6b30bee9b607da7f74b02c4be95a23d9",
+      "ask-clef-flash/scripts/replay.py": "8baf92e0e7e6ea89a5bf05fe4620e6c9f5bd5ea9c74dd430062f233c285151e5",
+      "ask-clef-flash/tests/cases.json": "8dcd614b7a6a5710bd7f2ab9948db0541747bc2edf30d773359f4cfc34591351",
+      "ask-clef-flash/tests/test_authorization.py": "46f3190edb4dcf4a430ce99691e1c4e00d4996df69a1a4996f28b50d825bf40b",
+      "ask-clef-flash/tests/test_replay.py": "a8dad3fea33c85d361eacc8b563701d9836efa7defa213e45d74180296e26029"
+    },
+    "inputs_unchanged": true
+  },
+  {
+    "name": "ask-jev",
+    "cwd": "ask-jev",
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "evidence": "ask-jev.txt",
+    "environment": "Python 3.14.7",
+    "checked_inputs": {
+      "ask-jev/README.md": "69558c830261cd30e8349e903b10a50869700626d84c4d9a59e99a67d007af49",
+      "ask-jev/SKILL.md": "7eccdee650fdcf02abd9d7908a680dec018925bd4d5cf74e753ecf3aaf78d65d",
+      "ask-jev/references/authorization.md": "ae803fa47526418538f08b9045163f3a853044492161578fd39b3a7bf6daea4d",
+      "ask-jev/references/hosted-api.md": "3499fcb5096b6a7613e9d6cbfe0cc7f9041f4ffc014f9c0cc0a8402c182c4c28",
+      "ask-jev/references/judgment-design.md": "798c205e8d6016b0f72936fca7580ab732bedec69799ac3f9d163cb6cc83a766",
+      "ask-jev/references/testing.md": "3c8f39a7d4375a465e3e7dd2418748ffd42b361a295babe172806686a0023f12",
+      "ask-jev/tests/procedure_fixture.py": "111e4d62ae719ceb7abf3de7368c8979c47164bf3f82a441c2a8868f3d3da780",
+      "ask-jev/tests/test_procedure.py": "d21d261af77a7b2b473eeb199350ba0b7bca8bd6768c63cadb6189c9b3f27010"
+    },
+    "inputs_unchanged": true
+  }
+]

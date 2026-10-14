@@ -1,0 +1,95 @@
+
+Existing coverage baseline: exit 0
+test_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+Rejected oracle passes despite missing shipping: exit 0
+test_result_matches_itself (test_tautology.RejectedOracle.test_result_matches_itself) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+Meaningful red; existing coverage retained: exit 1
+test_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok
+test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... FAIL
+
+======================================================================
+FAIL: test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<scratch>/test_checkout.py", line 9, in test_small_cart_includes_shipping
+    self.assertEqual(checkout_total([10, 20]), 35)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 30 != 35
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=1)
+
+
+Minimal green: exit 0
+test_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok
+test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+
+Coupled probe before refactor: exit 0
+test_internal_expression (test_coupling.RejectedCoupling.test_internal_expression) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+Behavior-preserving refactor: exit 0
+test_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok
+test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+
+Rejected coupling breaks on equivalent behavior: exit 1
+test_internal_expression (test_coupling.RejectedCoupling.test_internal_expression) ... FAIL
+
+======================================================================
+FAIL: test_internal_expression (test_coupling.RejectedCoupling.test_internal_expression)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<scratch>/test_coupling.py", line 7, in test_internal_expression
+    self.assertIn("sum(prices)", inspect.getsource(checkout_total))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'sum(prices)' not found in 'def checkout_total(prices):\n    subtotal = sum(price for price in prices)\n    shipping = 0 if subtotal >= 50 else 5\n    return subtotal + shipping\n'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+
+
+Final retained suite: exit 0
+test_qualifying_cart_has_free_shipping (test_checkout.CheckoutTests.test_qualifying_cart_has_free_shipping) ... ok
+test_small_cart_includes_shipping (test_checkout.CheckoutTests.test_small_cart_includes_shipping) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+PASS: red–green–refactor, coverage reuse, and two rejected anti-examples

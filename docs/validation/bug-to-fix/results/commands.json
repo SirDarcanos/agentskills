@@ -1,0 +1,216 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_existing",
+      "-v"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "d1e323e2fa2ae378b15609734df295b2accbd57aa24943bba8f137ca9e780d42",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "baseline controls",
+    "stderr": "test_empty (test_existing.Existing.test_empty) ... ok\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "reproduction.py"
+    ],
+    "cwd": "target",
+    "exit": 1,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "d1e323e2fa2ae378b15609734df295b2accbd57aa24943bba8f137ca9e780d42",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "investigation reproduction",
+    "stderr": "Traceback (most recent call last):\n  File \"/private<workspace>/target/reproduction.py\", line 4, in <module>\n    assert actual == 90, (actual, 90)\n           ^^^^^^^^^^^^\nAssertionError: (99.9, 90)\n",
+    "stdout": "99.9\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-c",
+      "from pricing import total; print([total([40,60], d) for d in (0,.1,.2)])"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "d1e323e2fa2ae378b15609734df295b2accbd57aa24943bba8f137ca9e780d42",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "bounded cause controls",
+    "stderr": "",
+    "stdout": "[100, 99.9, 99.8]\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_existing",
+      "-v"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "d1e323e2fa2ae378b15609734df295b2accbd57aa24943bba8f137ca9e780d42",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "characterize intended controls",
+    "stderr": "test_empty (test_existing.Existing.test_empty) ... ok\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_existing",
+      "-v"
+    ],
+    "cwd": "sensitivity",
+    "exit": 1,
+    "inputs": {
+      "pricing.py": "35bd7850d4a5356752e501c67fd8afada751fe8906effc98f39f5a51f0a50b93",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "characterization sensitivity (isolated)",
+    "stderr": "test_empty (test_existing.Existing.test_empty) ... FAIL\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... FAIL\n\n======================================================================\nFAIL: test_empty (test_existing.Existing.test_empty)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<workspace>/sensitivity/test_existing.py\", line 5, in test_empty\n    def test_empty(self): self.assertEqual(total([], 0), 0)\n                          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\nAssertionError: 1 != 0\n\n======================================================================\nFAIL: test_zero_discount (test_existing.Existing.test_zero_discount)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<workspace>/sensitivity/test_existing.py\", line 4, in test_zero_discount\n    def test_zero_discount(self): self.assertEqual(total([40, 60], 0), 100)\n                                  ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 101 != 100\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=2)\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "cwd": "target",
+    "exit": 1,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "d1e323e2fa2ae378b15609734df295b2accbd57aa24943bba8f137ca9e780d42",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_discount.py": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "TDD meaningful red",
+    "stderr": "test_empty_fraction (test_discount.Discount.test_empty_fraction) ... FAIL\ntest_fraction (test_discount.Discount.test_fraction) ... FAIL\ntest_empty (test_existing.Existing.test_empty) ... ok\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... ok\n\n======================================================================\nFAIL: test_empty_fraction (test_discount.Discount.test_empty_fraction)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<workspace>/target/test_discount.py\", line 5, in test_empty_fraction\n    def test_empty_fraction(self): self.assertEqual(total([], .1), 0)\n                                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\nAssertionError: -0.1 != 0\n\n======================================================================\nFAIL: test_fraction (test_discount.Discount.test_fraction)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"<workspace>/target/test_discount.py\", line 4, in test_fraction\n    def test_fraction(self): self.assertEqual(total([40, 60], .1), 90)\n                             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 99.9 != 90\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nFAILED (failures=2)\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "a7ef71984d4dbd0a7800b6fd05e4ed106f29fffb9ac2615d675da82662b5b2fb",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_discount.py": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "TDD minimal green",
+    "stderr": "test_empty_fraction (test_discount.Discount.test_empty_fraction) ... ok\ntest_fraction (test_discount.Discount.test_fraction) ... ok\ntest_empty (test_existing.Existing.test_empty) ... ok\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-v"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "0b5abd7cd68d60e4c7261ce311cd14608a32abe1d01f5d5a98888a4fa7459b08",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_discount.py": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "TDD refactor green",
+    "stderr": "test_empty_fraction (test_discount.Discount.test_empty_fraction) ... ok\ntest_fraction (test_discount.Discount.test_fraction) ... ok\ntest_empty (test_existing.Existing.test_empty) ... ok\ntest_zero_discount (test_existing.Existing.test_zero_discount) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "reproduction.py"
+    ],
+    "cwd": "target",
+    "exit": 0,
+    "inputs": {
+      "caller.py": "f195dfb2ad03eee12b2df4cf30b289ebfb49a791cba1e293e56c30c945b13d1c",
+      "pricing.py": "0b5abd7cd68d60e4c7261ce311cd14608a32abe1d01f5d5a98888a4fa7459b08",
+      "reproduction.py": "abbd6d600606e96be16c94c852d89347e89d0aed471df58c7c62fdf25f190a86",
+      "test_discount.py": "8f2346ad2782c9dbae299529f5474a8f1ff66b1f5832c801f576c8c9ce3e6e52",
+      "test_existing.py": "7b81ed093cd1851923f37909cf2d054a75b908f0a4b943f4fcc0ee54426b75b4"
+    },
+    "name": "integrated reproduction passes",
+    "stderr": "",
+    "stdout": "90.0\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "check.py"
+    ],
+    "cwd": "direct",
+    "exit": 1,
+    "inputs": {
+      "check.py": "26d153b295bce7923f3076bce9931f4fc84df2301c5297db534d23de5ae4e4a7",
+      "display.py": "70d1f0cf57d2f9dd6e4b1d86ec2951abeef607c791243c2efb3871513905ad9f"
+    },
+    "name": "direct baseline",
+    "stderr": "Traceback (most recent call last):\n  File \"<workspace>/direct/check.py\", line 2, in <module>\n    assert display(90) == \"Total: 90.00\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "check.py"
+    ],
+    "cwd": "direct",
+    "exit": 0,
+    "inputs": {
+      "check.py": "26d153b295bce7923f3076bce9931f4fc84df2301c5297db534d23de5ae4e4a7",
+      "display.py": "d7ca4fa482c8a9fd2ffef7950de8c15d94ac62c216a616bcf7fce57b6bcbd85e"
+    },
+    "name": "build-and-check immediate increment",
+    "stderr": "",
+    "stdout": ""
+  }
+]

@@ -1,0 +1,8 @@
+diff --git a/pricing.py b/pricing.py
+index a5bc538..04dcb95 100644
+--- a/pricing.py
++++ b/pricing.py
+@@ -1,2 +1,2 @@
+ def total(prices, discount):
+-    return sum(prices) - discount
++    return sum(prices) * (1 - discount)
