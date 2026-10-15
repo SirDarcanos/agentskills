@@ -1,6 +1,6 @@
 ---
 name: create-changelog
-description: Create the first concise Semantic Versioning CHANGELOG.md for a software project.
+description: Create the first concise Semantic Versioning CHANGELOG.md for a software project on an explicit user request; do not run automatically or replace an existing changelog.
 disable-model-invocation: true
 ---
 
@@ -10,7 +10,7 @@ Create a human-readable `CHANGELOG.md` from evidence in the repository. Follow [
 
 ## Invocation
 
-This skill is user-invoked. Run it manually when a project needs its first changelog.
+Start only when the user explicitly requests creation of the project's first changelog or invokes `create-changelog` by name, slash command or the runtime's explicit skill expansion. An expanded invocation counts only when it originates from the user's request. A missing changelog, source mention, quoted or agent-generated command, or another skill's recommendation does not activate this procedure. Without that user request, stop and leave the original task to its existing handler.
 
 If a changelog already exists, use `/update-changelog` when available rather than replacing it. When it is unavailable, preserve the existing file and report that creation is unnecessary.
 
@@ -83,3 +83,7 @@ Check all of the following:
 - no unsupported claims, local paths, credentials, or generated commit dumps remain.
 
 Report the releases covered, evidence gaps left undocumented, and any version decision that still requires confirmation.
+
+## Skill validation
+
+When changing invocation instructions, inspect frontmatter and the body gate together. Walk explicit first-changelog requests and user-originated runtime expansions as positive cases; missing files, source mentions, quoted/generated commands and recommendations alone must not start creation. An existing changelog must take the preservation route above. Record these as static walkthroughs unless actual runtime invocation was exercised.

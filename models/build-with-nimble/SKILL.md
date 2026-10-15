@@ -18,8 +18,20 @@ owns the workflow, deterministic rules, and side effects. It selects among defin
 answers rather than generating explanations, arbitrary nested JSON, or source quotes.
 
 This skill helps a coding agent build the integration. The finished application
-calls Nimble directly and does not need this skill at runtime. Loading this skill
-is not an invocation of `ask-nimble`.
+calls Nimble directly and does not need this skill at runtime.
+
+## Invocation
+
+Load this skill for requests to build or update a Nimble application integration,
+explore what Nimble could add to an app, or replace a prompt-and-parse step with
+bounded decisions. No explicit invocation is required; a matching request is enough.
+
+Apply it within the existing task's authority. Exploration returns recommendations,
+not an unsolicited implementation. Loading this skill neither invokes `ask-nimble`
+nor runs inference, and grants no installation, download, service-change, spending
+or additional disclosure permission. Before transport code, SDK configuration,
+inference or serving changes, read [integration and deployment](references/integration.md)
+for the applicable execution and service-ownership rules.
 
 ## 1. Read the live docs
 
@@ -130,10 +142,9 @@ Batching reduces client round trips; it does not establish parallel execution or
 particular speedup. Nimble scores each question with its prompt. Measure actual
 request budgets, memory use, and end-to-end latency on the target hardware.
 
-Read [integration and deployment](references/integration.md) before writing transport
-code, configuring an SDK, running inference, or changing the serving environment.
-It covers endpoint selection, bounded failures, response validation, resource
-planning, and server ownership. Keep this integration reusable in the user's stack;
+Follow the integration and deployment reference's endpoint selection, bounded
+failures, response validation, resource planning and server-ownership rules.
+Keep this integration reusable in the user's stack;
 it should not depend on `ask-nimble` or another installed skill.
 
 Use probabilities to guide behavior with thresholds evaluated on the user's data
@@ -186,7 +197,11 @@ remain distinct from valid uncertainty, and untested assumptions are reported.
 When changing this skill, read it as Markdown, check frontmatter and all relative
 links, and verify technical claims against the linked live sources. Review routing
 with app-building, exploration, integration-migration, and one-off-consultation
-prompts. This package has no executable client or bundled model tests; validating
+prompts. Matching application requests need no explicit invocation; exploration
+alone must not start implementation, and a one-off consultation must not silently
+invoke `ask-nimble`. Loading the guide alone must not run inference or change services.
+Label static walkthroughs separately from executed runtime trials.
+This package has no executable client or bundled model tests; validating
 an application built with it follows section 5 and the integration reference.
 
 ## Attribution

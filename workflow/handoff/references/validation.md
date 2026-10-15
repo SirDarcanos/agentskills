@@ -15,7 +15,9 @@ For each row, apply the procedure to the supplied situation and record the requi
 
 | Scenario | Required disposition |
 | --- | --- |
+| Explicit ordinary-language handoff request or user-originated runtime expansion | Enter the procedure within the requested transfer scope; recommendations still launch nothing. |
 | No handoff request at a phase boundary | No automatic file creation or transition; explicit-request gate holds. |
+| Source mention, quoted/generated command or another skill's recommendation without a user request | Stop without creating a handoff; reading or recommending the skill is not invocation. |
 | Design-only transfer | Purpose, decisions/rationale and open questions; artifact references without copied specs or a delivery ledger. |
 | Interrupted delivery with uncertain writer/operation | Preserve existing record/owner/checkpoint and spent-budget pointers; receiver reconciles before conflicting writes or retries; no new ledger or resumed execution here. |
 | Old passing check, changed dirty source | Separate observed old pass from current evidence; include dirty-state identity or unknown freshness; receiver refreshes affected evidence rather than trusting HEAD. |
