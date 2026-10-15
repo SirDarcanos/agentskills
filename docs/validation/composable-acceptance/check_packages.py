@@ -117,8 +117,15 @@ def catalog(locations):
     return result
 
 
+def package_locations(root):
+    packages = sorted(path.parent for group in ('workflow', 'writing', 'models')
+                      for path in (root / group).glob('*/SKILL.md'))
+    assert packages, 'no skill packages discovered'
+    return packages
+
+
 def main():
-    packages = sorted(path.parent for path in REPO.glob('*/SKILL.md'))
+    packages = package_locations(REPO)
     readme = (REPO / 'README.md').read_text()
     records = []
     with tempfile.TemporaryDirectory(prefix='composable-package-check-') as scratch:
@@ -128,7 +135,7 @@ def main():
             before = manifest(source)
             original = inspect_package(source)
             assert original['name'] == source.name, 'directory/name mismatch'
-            assert f']({source.name}/)' in readme, 'missing public listing'
+            assert f']({source.relative_to(REPO).as_posix()}/)' in readme, 'missing public listing'
             # Independent arbitrary parents, not named sibling package directories.
             isolated = scratch / f'location-{index}' / 'payload'
             shutil.copytree(source, isolated, symlinks=True)

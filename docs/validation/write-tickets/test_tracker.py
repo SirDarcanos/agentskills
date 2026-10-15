@@ -8,7 +8,7 @@ from tracker_fixture import FakeTracker
 
 REPO = Path(__file__).resolve().parents[3]
 spec = importlib.util.spec_from_file_location(
-    "dependencies", REPO / "setup-project/scripts/dependencies.py")
+    "dependencies", REPO / "workflow/setup-project/scripts/dependencies.py")
 dependencies = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(dependencies)
 

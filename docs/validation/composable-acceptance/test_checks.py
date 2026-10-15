@@ -24,6 +24,22 @@ class PackageChecks(unittest.TestCase):
             with self.subTest(front=front), self.assertRaises(AssertionError):
                 checks.metadata('---\n' + front + '\n---\n# Test')
 
+    def test_grouped_package_discovery_and_empty_catalog_rejection(self):
+        with tempfile.TemporaryDirectory() as scratch:
+            root = Path(scratch)
+            with self.assertRaisesRegex(AssertionError, 'no skill packages discovered'):
+                checks.package_locations(root)
+            expected = []
+            for group in ('workflow', 'writing', 'models'):
+                package = root / group / ('test-' + group)
+                package.mkdir(parents=True)
+                (package / 'SKILL.md').write_text('synthetic entry')
+                expected.append(package)
+            decoy = root / 'docs' / 'example'
+            decoy.mkdir(parents=True)
+            (decoy / 'SKILL.md').write_text('not a distributed skill')
+            self.assertEqual(checks.package_locations(root), sorted(expected))
+
     def test_non_sibling_catalog_and_duplicate_rejection(self):
         with tempfile.TemporaryDirectory() as scratch:
             locations = []
@@ -85,7 +101,7 @@ class PackageChecks(unittest.TestCase):
             config = root / 'hostile.gitconfig'
             config.write_text('[core]\n\thooksPath = ' + str(hooks) + '\n[init]\n\ttemplateDir = ' + str(template) + '\n')
             copied = root / 'fixture'
-            shutil.copytree(checks.REPO / 'review-delivery', copied, symlinks=True)
+            shutil.copytree(checks.REPO / 'workflow/review-delivery', copied, symlinks=True)
             before = checks.manifest(external)
             hostile = dict(GIT_DIR=str(external / '.git'), GIT_WORK_TREE=str(external),
                            GIT_INDEX_FILE=str(external / '.git/index'),

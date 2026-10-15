@@ -38,7 +38,7 @@ Added TDD entry, human README, MIT notice and package-local repeatable validatio
 
 ## Limits and next action
 
-The fixture is executed code/test evidence, not an autonomous standalone/composed agent trial. Companion discovery compatibility, plan-only, missing-helper, wrong-reason-red, stale evidence and repair/delegation cases were inspected as instruction contracts; their [authored package cases](../../../tdd/references/validation.md) have not been executed as runtime trials. Real installed discovery, other runtimes/Python versions and bounded delegation remain unverified. Independent Standards/Spec inspection subsequently completed as recorded below. No local package check establishes overall #48 acceptance.
+The fixture is executed code/test evidence, not an autonomous standalone/composed agent trial. Companion discovery compatibility, plan-only, missing-helper, wrong-reason-red, stale evidence and repair/delegation cases were inspected as instruction contracts; their [authored package cases](../../../workflow/tdd/references/validation.md) have not been executed as runtime trials. Real installed discovery, other runtimes/Python versions and bounded delegation remain unverified. Independent Standards/Spec inspection subsequently completed as recorded below. No local package check establishes overall #48 acceptance.
 
 Implementation is locally checked, not accepted. Keep [PR #79](https://github.com/SirDarcanos/agentskills/pull/79) available for maintainer inspection and #55 open until accepted and merged; stop before merging. Broader composed/runtime acceptance remains with #71/#73; actual same-name installed replacement remains with separately approved #74.
 

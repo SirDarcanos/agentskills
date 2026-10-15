@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Group skill packages under `workflow/`, `writing/`, and `models/`; manual copy/link paths now include the group, while skill names and CLI selection stay unchanged.
 - Allow policy-authorized hosted Ask Jev assessments alongside explicit requests, with shared disclosure, call and spending limits. ([#53](https://github.com/SirDarcanos/agentskills/issues/53))
 - Allow policy-authorized Ask Nimble assessments alongside explicit requests, with shared budgets and scoped lifecycle/fallback authority. ([#52](https://github.com/SirDarcanos/agentskills/issues/52))
 - Move the three D&D skills to [SirDarcanos/dnd-agentskills](https://github.com/SirDarcanos/dnd-agentskills); install or update them from that repository. ([#49](https://github.com/SirDarcanos/agentskills/pull/49))

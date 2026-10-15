@@ -1,6 +1,6 @@
 # #25 integrated-verification evidence
 
-This repository-local record is not part of the installable Work On package. The runtime procedure is [integrated verification](../../../work-on/references/verification.md); its [validation reference](../../../work-on/references/verification-validation.md) separates authored cases from execution.
+This repository-local record is not part of the installable Work On package. The runtime procedure is [integrated verification](../../../workflow/work-on/references/verification.md); its [validation reference](../../../workflow/work-on/references/verification-validation.md) separates authored cases from execution.
 
 ## Execution boundary and reproduction
 

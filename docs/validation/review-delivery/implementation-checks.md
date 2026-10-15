@@ -1,6 +1,6 @@
 # Review Delivery implementation checks
 
-Historical #24 delivery evidence, retained from the former package validation reference. These are observed results, not instructions or certification shipped with the skill. For reusable checks, read the [package validation procedure](../../../review-delivery/references/validation.md); for executed reviewer behavior, read [trial results](trial-results.md).
+Historical #24 delivery evidence, retained from the former package validation reference. These are observed results, not instructions or certification shipped with the skill. For reusable checks, read the [package validation procedure](../../../workflow/review-delivery/references/validation.md); for executed reviewer behavior, read [trial results](trial-results.md).
 
 ## #24 initial implementation execution record
 

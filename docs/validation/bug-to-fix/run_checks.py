@@ -34,18 +34,18 @@ def inputs(directory):
 def main():
     output = Path(__file__).resolve().parent / 'results/checks'
     output.mkdir(parents=True, exist_ok=True)
-    jobs = [(name, REPO, [sys.executable, '-B', name + '/scripts/check-fixture.py'])
+    jobs = [(name, REPO, [sys.executable, '-B', 'workflow/' + name + '/scripts/check-fixture.py'])
             for name in ('tdd', 'prototype', 'characterize', 'acceptance-first', 'build-and-check')]
     for name, directory in [('handoffs', 'docs/validation/bug-to-fix'),
                             ('investigation', 'docs/validation/investigate-bug')]:
         jobs.append((name, REPO, [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', directory, '-p', 'test_*.py', '-v']))
     for package in ('ask-nimble', 'ask-clef', 'ask-clef-flash', 'ask-jev'):
-        jobs.append((package, REPO / package, [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py', '-v']))
+        jobs.append((package, REPO / 'models' / package, [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py', '-v']))
     summary = []
     for name, root, command in jobs:
         source = (REPO / 'docs/validation/bug-to-fix' if name == 'handoffs' else
                   REPO / 'docs/validation/investigate-bug' if name == 'investigation' else
-                  REPO / name)
+                  REPO / ('models' if name.startswith('ask-') else 'workflow') / name)
         before = inputs(source)
         result = subprocess.run(command, cwd=root, env=environment(),
                                 capture_output=True, text=True, timeout=90)

@@ -6,11 +6,11 @@ no agent executed them, no synthetic decision engine was tested and no live labe
 or edges were written. The [coverage record](README.md) owns executed evidence/gaps.
 
 Authority: target title/label policy → Work On entry/shared contract →
-[product agreement](../../../work-on/references/product-agreement.md) publication →
-[ticketing](../../../work-on/references/ticketing.md) role/graph reconciliation →
-[dispatch](../../../work-on/references/dispatch.md) eligibility →
-[completion](../../../work-on/references/completion.md) readiness/read-back →
-[Review Delivery](../../../review-delivery/references/report.md) independent challenge.
+[product agreement](../../../workflow/work-on/references/product-agreement.md) publication →
+[ticketing](../../../workflow/work-on/references/ticketing.md) role/graph reconciliation →
+[dispatch](../../../workflow/work-on/references/dispatch.md) eligibility →
+[completion](../../../workflow/work-on/references/completion.md) readiness/read-back →
+[Review Delivery](../../../workflow/review-delivery/references/report.md) independent challenge.
 The target policy owns mappings; review checks them without becoming administrator.
 
 | Starting scenario | Integrated path and static disposition |

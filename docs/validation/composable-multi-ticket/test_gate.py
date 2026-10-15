@@ -1,6 +1,7 @@
 """Exercise the actual workflow source with offline runs stubs, never agents."""
 import json
 from pathlib import Path
+import re
 import subprocess
 import unittest
 
@@ -14,11 +15,11 @@ const calls = [];
 const approval = 'ROOT_APPROVED_NEXT_STAGE';
 const runs = {
   all: async items => items.map(item => {
-    calls.push({key: item.key, output: item.output});
+    calls.push({key: item.key, output: item.output, task: item.task});
     return {key: item.key, ok: true, output: approval};
   }),
   run: async (key, item) => {
-    calls.push({key, output: item.output});
+    calls.push({key, output: item.output, task: item.task});
     return key === 'failure-recovery-gate' ? input.result
          : {key, ok: true, output: approval};
   }
@@ -43,6 +44,22 @@ def run(source, result):
 
 
 class ApprovalGate(unittest.TestCase):
+    def test_current_workflow_package_sources_exist(self):
+        observed = run(ROOT / 'trial-workflow.js',
+                       {'ok': True, 'output': 'ROOT_APPROVED_NEXT_STAGE'})
+        self.assertTrue(observed['completed'])
+        paths = {path for call in observed['calls']
+                 for path in re.findall(r'<source>/([^\s]+\.md)', call['task'])}
+        self.assertEqual(paths, {
+            'workflow/work-on/SKILL.md',
+            'workflow/work-on/references/recovery.md',
+            'workflow/build-and-check/SKILL.md',
+            'workflow/implementation-preflight/SKILL.md',
+            'workflow/review-delivery/SKILL.md',
+        })
+        for relative in paths:
+            self.assertTrue((ROOT.resolve().parents[2] / relative).is_file(), relative)
+
     def test_denials_fail_closed_before_next_writer(self):
         cases = [
             {'ok': True, 'output': 'BLOCKED: parent did not send ROOT_APPROVED_NEXT_STAGE'},

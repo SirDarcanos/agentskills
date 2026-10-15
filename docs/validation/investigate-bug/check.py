@@ -15,13 +15,13 @@ spec.loader.exec_module(checks)
 
 def main():
     notice = (ROOT / "LICENSE").read_bytes()
-    assert (ROOT / "investigate-bug/LICENSE").read_bytes() == notice
+    assert (ROOT / "workflow/investigate-bug/LICENSE").read_bytes() == notice
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))
-    checks.check_package(ROOT / "investigate-bug", "investigate-bug", False, notice)
+    checks.check_package(ROOT / "workflow/investigate-bug", "investigate-bug", False, notice)
     with tempfile.TemporaryDirectory(prefix="investigation-isolation-") as temp:
         isolated = Path(temp) / "catalog" / "non-sibling-package"
-        shutil.copytree(ROOT / "investigate-bug", isolated, symlinks=True)
+        shutil.copytree(ROOT / "workflow/investigate-bug", isolated, symlinks=True)
         checks.check_package(isolated, "investigate-bug", False, notice)
     print("Root/evidence links:", checks.check_links(
         [ROOT / "README.md", ROOT / "CHANGELOG.md", *HERE.glob("*.md")], ROOT))

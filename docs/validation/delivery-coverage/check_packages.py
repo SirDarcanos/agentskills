@@ -98,7 +98,7 @@ def run(root, *command):
 def main():
     notice = (REPO / "LICENSE").read_bytes()
     for name, command_only in PACKAGES.items():
-        source = REPO / name
+        source = REPO / 'workflow' / name
         check_package(source, name, command_only, notice)
         with tempfile.TemporaryDirectory(prefix="delivery-package-check-") as temporary:
             isolated = Path(temporary) / name

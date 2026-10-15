@@ -2,7 +2,7 @@
 
 ## Repository purpose
 
-This repository contains reusable skills for coding agents. Each top-level skill directory is an independent package with `SKILL.md` as its entry point and optional supporting files beside it.
+This repository contains reusable skills for coding agents. Skills are grouped under `workflow/`, `writing/`, and `models/`; each skill directory is an independent package with `SKILL.md` as its entry point and optional supporting files beside it.
 
 ## Project context and workflow
 
@@ -29,7 +29,7 @@ For #48 composable-delivery work, read the [shared design](docs/design/composabl
 A skill may use this structure:
 
 ```text
-skill-name/
+category/skill-name/
 ├── SKILL.md
 ├── references/
 └── scripts/

@@ -46,7 +46,7 @@ def support():
     files = [ROOT / name for name in ("plan.md", "scope.md", "capture.py", "verify.py", "delivered.diff")]
     files += list((ROOT / "evidence").glob("*.json"))
     for package in ("work-on", "review-delivery"):
-        files += [p for p in (REPO / package).rglob("*")
+        files += [p for p in (REPO / 'workflow' / package).rglob("*")
                   if p.is_file() and p.suffix in (".md", ".py")]
     files += [REPO / name for name in (
         "AGENTS.md", "CONTEXT.md", "docs/agents/project.md", "docs/agents/workflow.md",

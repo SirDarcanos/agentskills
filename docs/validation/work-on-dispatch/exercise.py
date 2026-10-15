@@ -10,7 +10,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-SNAPSHOT = Path(__file__).resolve().parents[3] / 'review-delivery/scripts/snapshot.py'
+SNAPSHOT = Path(__file__).resolve().parents[3] / 'workflow/review-delivery/scripts/snapshot.py'
 FILES = ['core.py', 'formatting.py', 'consumer.py', 'test_core.py',
          'test_formatting.py', 'test_consumer.py', 'agreement.md']
 
