@@ -13,7 +13,7 @@ Read target instructions and relevant context, workflow, tracker and domain poin
 
 Discover companions from the runtime/project catalog or an explicit approved location, not sibling paths. Read complete entries and conditional references; record source/revision or digest and check semantic capabilities. Ambiguous or incompatible candidates block the affected route; recheck changed source, task or authority. Missing helpers permit supported findings/drafts, not installation or a legacy diagnosis fallback.
 
-- `write-tickets` is required for publication/reconciliation: current bounded bug input, duplicate/partial-write handling, exact publication approval, native relationship/role read-back and no automatic readiness/scheduling. It owns all tracker writes and graph procedure discovery. An unresolved case can supply an explicitly investigation-only draft, never a ready fix claim.
+- `write-tickets` is required for ticket preparation and publication/reconciliation: current bounded bug input, duplicate/partial-write handling, exact publication approval, native relationship/role read-back and no automatic readiness/scheduling. It owns the exact proposal, all tracker writes and graph procedure discovery. Continue through its procedure in the current context without asking the user to invoke it; publication approval is separate from following the drafting procedure. An unresolved case supplies an explicitly investigation-only draft, never a ready fix claim.
 - `analyze` is conditional for material technical-readiness/method/check gaps; require current code/caller evidence, targeted reuse and recommendations without implementation. Direct cause inspection and a supported method recommendation need no automatic Analyze run.
 - `research` is conditional for unresolved authoritative source/version questions; require cited findings and freshness/disclosure bounds. Reading unchanged domain definitions needs no modeling run; actual meaning/decision work uses discovered `domain-modeling` with its plan-only/approved gate.
 - Optional delegation requires separate authorization and the discovered `work-on` read-only execution contract, not delivery invocation. The root reserves shared capacity, exclusive scopes, finite bounds and lineage; workers request work from the root rather than recursively spawning. Missing authority/contract blocks delegation, not direct diagnosis. No model assessment is required.
@@ -48,7 +48,7 @@ Trace the reproduced behavior through affected implementation and callers. Separ
 
 Identify affected source locations/revisions and scope of impact. When decisive source/version or readiness gaps remain, use the conditional companions with only the bounded question, current evidence, protected work and exact authority. Inspect their cited support and actual results on return; reuse them directly. Ask the agreement owner about consequential behavior changes rather than inventing expected behavior.
 
-Stop when the cause is sufficiently established to bound a fix and regression strategy, or the diagnostic bound/capability limit is reached. Unresolved cause returns attempted checks, remaining hypotheses, smallest next diagnostic action and owner. Confirmation alone is insufficient for an implementation-ready ticket.
+End diagnostic probing when the cause is sufficiently established to bound a fix and regression strategy, or the diagnostic bound/capability limit is reached; then continue to steps 4–5. Unresolved cause supplies attempted checks, remaining hypotheses, smallest next diagnostic action and owner for an investigation-only proposal. Confirmation alone is insufficient for an implementation-ready ticket.
 
 **Done:** cause and readiness have deciding evidence, or the unresolved material gap prevents a ready fix claim.
 
@@ -70,16 +70,27 @@ Prepare the following input for discovered Write Tickets; planned checks remain 
 
 For unconfirmed or unresolved cases, replace ready-fix scope with **investigation-only** outcome, attempted evidence, material blocker, diagnostic acceptance and next action. Preserve any supported findings without manufacturing cause or repair scope. Failed artifact cleanup or missing material readiness prevents a complete ready handoff.
 
-**Done:** every applicable field is supported or explicitly unresolved, and owned artifacts/diffs are accounted for.
+**Done:** every applicable field is supported or explicitly unresolved, and owned artifacts/diffs are accounted for. These findings are input to step 5, not the final ticket outcome.
 
-## 5. Publish/reconcile through Write Tickets, return and stop
+## 5. Prepare, approve and publish/reconcile through Write Tickets
 
 Supply the pinned investigation, current candidate issues, exact authority and expected ticket outcome to compatible `write-tickets`. It owns exact title/body/label/graph proposal and approval, persistence, duplicate/partial-write reconciliation and read-back; do not duplicate those steps here. A matching issue receives only an approved scoped update, preserving unrelated body, labels and native edges. No artificial parent, automatic readiness label, duplicate closure or scheduling follows investigation.
 
 Before sending and after return compare deciding inputs again. Changed inputs invalidate only dependent claims; refresh within remaining bounds or return stale/investigation-only. Inspect actual draft/persisted contents, classification, approval and read-back evidence, not just the companion's success label. Missing approval returns a plan-only draft; missing required persistence capability or unknown read-back is blocked/partial, never a published-ready claim. A duplicate result names the canonical issue and what was actually reconciled.
 
-Return complete/partial/blocked status, ticket identity and revision or draft, all deciding evidence/environment pointers, reused/refreshed/stale results, failed/not-run checks, uncertainty, companion identities, artifact/documentation disposition, remaining blockers and owner/next action. Record ledger use when applicable. Separate diagnostic readiness from publication, native eligibility and future delivery acceptance.
+Before the final return, record the ticket outcome below with the actual proposal or read-back evidence. Findings alone do not satisfy this checkpoint. If Write Tickets is unavailable/incompatible, return a labeled supported draft and the exact capability blocker rather than claiming the handoff ran.
+
+| Ticket outcome | Required return and next action |
+| --- | --- |
+| Awaiting or withheld publication approval | **Draft — not published**, exact proposed title/body/classification and external effects from Write Tickets; request only the missing publication approval, or record its refusal. No tracker writes or delivery recommendation as the immediate next step. |
+| Approved publication or duplicate reconciliation | Canonical issue identity, actual approved delta and verified read-back; state diagnostic readiness separately. Never create another issue just to complete this workflow. |
+| Failed/unknown persistence or read-back | **Partial/blocked**, actual successful/failed/unknown operations and bounded reconciliation next action; no blind retry or published-ready claim. |
+| Unconfirmed or unresolved cause | **Investigation-only**, exact diagnostic proposal or approved read-back, attempted evidence, blocker and bounded diagnostic next action; no ready fix or Work On recommendation. |
+
+Return complete/partial/blocked status, the ticket outcome, all deciding evidence/environment pointers, reused/refreshed/stale results, failed/not-run checks, uncertainty, companion identities, artifact/documentation disposition, remaining blockers and owner/next action. Record ledger use when applicable. Separate diagnostic readiness from publication, native eligibility and future delivery acceptance.
 
 **Complete ready:** confirmed symptom, established cause and complete current ticket contract, accounted artifacts, authorized publication/reconciliation and verified ticket read-back. **Complete duplicate reconciliation:** current matching issue inspected and approved reconciliation read back, with diagnostic readiness stated separately. **Partial/blocked:** useful supported draft/findings with missing confirmation, cause, authority, capability, freshness or persistence explicitly identified; any published unresolved work is investigation-only.
+
+After verified publication/reconciliation of an actionable fix ticket, recommend `work-on` with the canonical issue and current investigation evidence; do not invoke it. For a draft, unresolved investigation or persistence blocker, recommend the missing approval or bounded diagnostic/reconciliation action instead. A later workflow-advice request must retain that unfinished ticket outcome rather than skip to delivery.
 
 Investigation-only stops here. For a separate authorized fix request, return the ready ticket to the lead for its delivery gate. The receiver compares deciding identities, consumes current evidence without re-investigation and fills only actual gaps. Discovery of `work-on` or a ticket is not invocation authority; incompatible delivery entry gates block that route until an authorized compatible lead is available. This procedure never launches delivery automatically.
