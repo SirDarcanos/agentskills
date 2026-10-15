@@ -77,6 +77,8 @@ It shows you a plan before changing anything, applies only what you approve, and
 - **The issue workflow:** review existing labels and propose the labels and conventions that specs, tasks, and releases need. Later skills use this guidance to create spec issues, link their tasks, and record dependencies using GitHub's actual relationships. Setup does not create a backlog for you.
 - **Instructions for later sessions:** record the agreed repository, tracker, permission, and release conventions so you don't have to explain them again to every skill.
 
+If these choices are unfamiliar or you don't have a preference, tell your agent: “Choose sensible defaults based on this project's size and scope.”
+
 You'll see the proposed local and GitHub changes together before approving them. Existing settings and labels are preserved unless their changes are explicitly approved. The skill checks the resulting GitHub state; unavailable access or required protections are reported as blocked, not silently treated as complete.
 
 The GitHub route needs an authenticated GitHub CLI (`gh`) and sufficient permissions. If you aren't using GitHub, setup can stay local with no GitHub login. Setup does not build or deploy your application.
