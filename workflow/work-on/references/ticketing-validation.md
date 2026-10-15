@@ -1,6 +1,6 @@
 # Ticketing adapter validation
 
-Read [ticketing](ticketing.md), entry [validation](validation.md), and the discovered Write Tickets entry and validation completely. Ticket writing and tracker fixtures now belong to that owner; historical #22 evidence remains historical.
+Read [ticketing](ticketing.md), entry [validation](validation.md), and the discovered Write Tickets entry and validation completely. Ticket writing and tracker fixtures now belong to that owner.
 
 Check the retained Work On route: discover a non-sibling compatible package, supply the pinned shared envelope, inspect actual ticket/role/native read-back outcomes, then select build/dispatch only under existing authority and accepted prerequisite evidence. Plan-only, stale bug cause, missing companion, unknown read-back or conflicting graph blocks the affected gate. Standalone Write Tickets must stop before that continuation.
 

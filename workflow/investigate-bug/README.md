@@ -8,4 +8,4 @@ Companions resolve through the runtime/project catalog or an approved location, 
 
 Confirmed, intermittent, unconfirmed, unresolved-cause, duplicate and stale-input routes preserve actual observations and artifact disposition. Diagnostic probes never authorize a product fix. See validation for offline checks and their limits.
 
-This is original instruction prose derived from the #48 bug contract and accepted #50 design; no external diagnosis procedure or template is imported. Copyright and MIT permission are shipped in [LICENSE](LICENSE). Repository merges neither replace installed diagnosis skills nor refresh copied packages.
+This is original instruction prose; no external diagnosis procedure or template is imported. Copyright and MIT permission are shipped in [LICENSE](LICENSE). Repository merges neither replace installed diagnosis skills nor refresh copied packages.

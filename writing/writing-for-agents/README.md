@@ -14,7 +14,7 @@ Rewrite the referenced testing guide as ordered actions with checkable completio
 
 Requires file inspection and, for edits, scoped writing tools. Validation uses the target environment's existing checks where available; unavailable rendering, parsers or runtime checks are reported. There is no required companion, model service or special runtime. Optional companions must have verified `SirDarcanos/agentskills` provenance and be able to operate within that same boundary; otherwise the agent writes directly. Installed names alone are insufficient.
 
-For structure and routing choices read [structure guidance](references/structure.md). For finish checks and regression cases read [validation](references/validation.md). The repository evidence at `docs/validation/writing-for-agents/README.md` records this delivery's direct examples and limitations, not a runtime dependency.
+For structure and routing choices read [structure guidance](references/structure.md). For finish checks and regression cases read [validation](references/validation.md).
 
 ## Install
 
@@ -28,6 +28,6 @@ The installation command has not been exercised in this delivery. Repository del
 
 ## Source credit
 
-Substantially inspired by Matt Pocock's `writing-for-agents` reference skill: conditional context pointers, progressive disclosure, co-location, completion criteria and one authoritative home. This package adds an ordered writing workflow, explicit fidelity and companion boundaries, and an environment-aware validation gate under #109/#111. It does not carry forward runtime-independent claims about invocation metadata or guaranteed model behavior.
+Substantially inspired by Matt Pocock's `writing-for-agents` reference skill: conditional context pointers, progressive disclosure, co-location, completion criteria and one authoritative home. This package adds an ordered writing workflow, explicit fidelity and companion boundaries, and an environment-aware validation gate. It does not carry forward runtime-independent claims about invocation metadata or guaranteed model behavior.
 
 Upstream project: [Matt Pocock's skills](https://github.com/mattpocock/skills), distributed under the [MIT license](https://github.com/mattpocock/skills/blob/main/LICENSE). The inspected reference copy did not include a source revision; these links identify the upstream project, not an asserted exact source revision. The package [LICENSE](LICENSE) retains Matt Pocock's notice alongside Nicola Mustone's.

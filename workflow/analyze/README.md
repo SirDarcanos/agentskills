@@ -22,4 +22,4 @@ Work On's existing technical-readiness reference now adapts this companion. Stag
 
 Read [validation](references/validation.md) for package checks, six offline contract-fixture tests and routing cases. Run `python3 -B workflow/analyze/scripts/check-fixture.py` with Python 3.9+; it uses only temporary synthetic files and no services. Fixture or static passes do not prove agent adherence, installed routing, independent review or delivery acceptance.
 
-The procedure extracts and adapts repository-owned Work On technical readiness under #60 and the accepted #50 design, with original method-selection instructions. Preserve the shipped Nicola Mustone MIT notice when copying; the reused Work On material carries that notice. No external instruction body or template is newly imported.
+The procedure extracts and adapts repository-owned Work On technical readiness with original method-selection instructions. Preserve the shipped Nicola Mustone MIT notice when copying; the reused Work On material carries that notice. No external instruction body or template is newly imported.

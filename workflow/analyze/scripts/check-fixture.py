@@ -1,4 +1,4 @@
-"""Offline #50 contract fixtures, not an automatic method selector or agent trial.
+"""Offline method-contract fixtures, not an automatic selector or agent trial.
 
 Run with Python 3.9+. Only temporary synthetic files are written; no network,
 models, tracker, Git or installed-discovery changes. Expected routing is authored

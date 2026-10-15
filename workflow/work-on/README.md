@@ -6,7 +6,7 @@ Use `/work-on <change or actionable ticket>`, an ordinary explicit delivery requ
 
 ## Changed boundary
 
-[#67](https://github.com/SirDarcanos/agentskills/issues/67) narrows the former broad workflow. Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Until a compatible coordinator is discoverable, that route is unavailable; Work On preserves partial artifacts and reports the boundary instead of running its old dispatch procedure. [#68](https://github.com/SirDarcanos/agentskills/issues/68) transfers dispatch and overall recovery to that independently installable coordinator. Only compatibility pointers remain here; original #14 trial evidence stays at its historical paths, not as a fallback or current broad-entry promise.
+Whole-spec delivery, multi-ticket scheduling and overall recovery belong to independently installed `work-on-spec`. Until a compatible coordinator is discoverable, that route is unavailable; Work On preserves partial artifacts and reports the boundary instead of running its old dispatch procedure. Only compatibility pointers remain here.
 
 This is an incompatible invocation boundary, although Work On has not yet been included in a published release. A specification can still provide acceptance for one bounded assignment. Existing current bug/analysis evidence is consumed directly; only missing or invalidated facts trigger specialist work. The lead chooses methods without asking the maintainer to pick routine test seams or techniques. Requested reusable-skill corrections target the tracked package sources; a local operating-policy workaround does not replace the portable fix, and installed copies are a separately approved target.
 
@@ -48,4 +48,4 @@ Optional named `ask-*` assessments need exact approved project policy and shared
 
 Work On reports implemented, verified, unverified, deferred and blocked scope separately, with artifact/evidence pointers, documentation/changelog disposition, remaining findings and actual PR/issue state. Build, accept and report gates are distinct from maintainer acceptance, merge, installation, deployment and release. Material unavailable checks and independent review gaps remain acceptance blockers.
 
-Read [single-change validation](references/single-change-validation.md) for #67 fixtures and [entry validation](references/validation.md) for package checks and historical coverage. [Executed evidence](references/single-change-validation.md#executed-evidence) distinguishes synthetic tool exercises from agent-adherence and live runtime tests. Preserve original trial records at their existing homes.
+Read [single-change validation](references/single-change-validation.md) for fixtures and evidence limits, and [entry validation](references/validation.md) for package checks. Retain results through the [lead evidence record](references/contracts.md#lead-evidence-record).

@@ -20,4 +20,4 @@ Discovery grants no implementation, ticket publication, model, delegation or ext
 
 Read [validation](references/validation.md) for package checks and conversation/reuse cases. Static checks and direct synthetic walkthroughs are not installed-runtime or autonomous agent certification.
 
-Extracted from repository-owned Work On discovery under #61 and the accepted #50 design, with original project-oriented instructions. The shipped Nicola Mustone MIT notice covers reused material; no external instruction body or template is newly imported.
+Extracted from repository-owned Work On discovery with original project-oriented instructions. The shipped Nicola Mustone MIT notice covers reused material; no external instruction body or template is newly imported.
