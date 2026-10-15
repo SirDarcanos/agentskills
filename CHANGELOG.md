@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add `resolve-merge-conflicts` for authorized merge/rebase resolution, protected unrelated work, relevant checks and decision pauses for unsafe continuation. ([#110](https://github.com/SirDarcanos/agentskills/issues/110))
 - Add `handoff` for explicitly requested, portable session transfers with evidence pointers, approval boundaries and approved durable storage for later resumption. ([#102](https://github.com/SirDarcanos/agentskills/issues/102))
 
 - Add `work-on-spec` for bounded ticket-agent scheduling, native dependency eligibility, serial integration and aggregate verification/review/recovery under `work-on`'s shared execution ledger. ([#68](https://github.com/SirDarcanos/agentskills/issues/68))

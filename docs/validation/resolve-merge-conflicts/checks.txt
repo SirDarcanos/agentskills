@@ -1,0 +1,26 @@
+Scripted Git fixtures; no autonomous agent behavior claimed.
+test_compatible_merge_completion (__main__.Fixtures.test_compatible_merge_completion) ... ok
+test_failed_check_preserves_resolutions (__main__.Fixtures.test_failed_check_preserves_resolutions) ... ok
+test_incompatible_intent_remains_pending (__main__.Fixtures.test_incompatible_intent_remains_pending) ... ok
+test_isolated_package (__main__.Fixtures.test_isolated_package) ... ok
+test_multi_commit_rebase_continuation (__main__.Fixtures.test_multi_commit_rebase_continuation) ... ok
+test_rebase_dirty_work_blocks_continuation (__main__.Fixtures.test_rebase_dirty_work_blocks_continuation) ... ok
+test_unrelated_staged_work_blocks_completion (__main__.Fixtures.test_unrelated_staged_work_blocks_completion) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.999s
+
+OK
+Scripted Git fixtures; no autonomous agent behavior claimed.
+test_compatible_merge_completion (__main__.Fixtures.test_compatible_merge_completion) ... ok
+test_failed_check_preserves_resolutions (__main__.Fixtures.test_failed_check_preserves_resolutions) ... ok
+test_incompatible_intent_remains_pending (__main__.Fixtures.test_incompatible_intent_remains_pending) ... ok
+test_isolated_package (__main__.Fixtures.test_isolated_package) ... ok
+test_multi_commit_rebase_continuation (__main__.Fixtures.test_multi_commit_rebase_continuation) ... ok
+test_rebase_dirty_work_blocks_continuation (__main__.Fixtures.test_rebase_dirty_work_blocks_continuation) ... ok
+test_unrelated_staged_work_blocks_completion (__main__.Fixtures.test_unrelated_staged_work_blocks_completion) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.030s
+
+OK
