@@ -26,6 +26,8 @@ Git controls are sanitized and hooks/templates disabled in disposable repositori
 
 Update package/root README, one Unreleased Added entry and the accepted design's implementation pointer. No domain meanings, ADR decisions, tracker vocabulary/native edges, operating authority, model policy or installed copies change. Keep historical records unchanged; new actual evidence belongs outside the installable package.
 
-## Executed evidence
+## Evidence retention
 
-Repository record: `docs/validation/work-on-spec/README.md` at the same source revision (not shipped as a relative package dependency). Record exact commands/results, source state, static versus executed checks, independent reviews and unrun routes there and in the PR. This file's expectations are not themselves evidence.
+Follow the discovered Work On contract's **Lead evidence record** for per-change retention: a collapsed **Validation details** section or dedicated PR/issue comment, with material problems visible in the short summary. Retain exact commands/results, source and supporting-input state, static versus executed checks, limitations and original independent reviews there, not in a new committed execution report. Keep reusable fixtures/scripts in source control. If publication is unavailable or unauthorized, return evidence conversationally and name any durable-storage gap without claiming publication.
+
+This file's expectations are not themselves executed evidence.

@@ -53,11 +53,9 @@ When running an agent exercise, record actual launches, prompts, protected manif
 
 For agent exercises, additionally record actual invocation/approval, runtime, companion source identities, tools/effects, protected manifests, root ledger/repair counts, local versus integrated snapshots, independent axis reports and all failed/stale/not-run checks. A hand-authored scenario is not an executed agent trial.
 
-## Executed evidence
+## Evidence retention
 
-The #67 source-repository evidence is named in code text below rather than a required sibling link. It is not a package runtime dependency; installed copies use the runnable script and this reference:
-
-`docs/validation/work-on-single-change/README.md`
+Retain per-change results through the [lead evidence record](contracts.md#lead-evidence-record). The runnable script and this reference provide the reusable validation procedure.
 
 ## Documentation disposition
 

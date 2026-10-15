@@ -23,7 +23,21 @@ When changing the contract's [complete-read and reference-resolution procedure](
 | Required reference genuinely missing or inspection unavailable | Inspected source/path and missing-file evidence support the affected blocker; unavailable inspection stays unknown. Useful findings/protected work survive without installation, aliases, stubs, setup invocation or weakened graph requirements. |
 | Independently installed package with no sibling tree | Runtime/project discovery supplies its actual location; internal references resolve there and existing compatibility/permission checks still apply. |
 
-Record fixture inputs, actual reads/errors, before/after fingerprints and outcomes. Label static checks, direct procedure walkthroughs and autonomous agent trials separately. Assertions over authored simulations do not establish model adherence. No live tracker mutation or optional model call is required. Repository evidence for #118 is retained at `docs/validation/companion-reference-recovery/README.md` at the same source revision; it is not a shipped package dependency.
+Record fixture inputs, actual reads/errors, before/after fingerprints and outcomes. Label static checks, direct procedure walkthroughs and autonomous agent trials separately. Assertions over authored simulations do not establish model adherence. No live tracker mutation or optional model call is required.
+
+## Per-change evidence placement cases
+
+When changing evidence retention, inspect the actual shared contract, Work On Spec validation, Review Delivery validation and PR entry/validation together. Walk these focused cases with disposable local inputs. The table is authored acceptance guidance, not executed agent behavior; record actual actions/results separately under the contract's **Lead evidence record**, without adding a committed run report.
+
+| Case | Required observation |
+| --- | --- |
+| Routine documentation change | Short visible change summary; commands/link checks, checked content identities and limitations retrievable in collapsed **Validation details** or a dedicated PR/issue comment; no new committed execution report. |
+| Routine code change | Actual test commands/results, source/test/supporting-input identities and original Standards/Spec reports retrievable in the same location; reusable tests/fixtures/scripts remain committed and runnable. |
+| Failed or material unrun check | Failure/not-run status, consequence, blocker and required action remain visible outside collapsed detail; raw evidence retains the actual result, not a fabricated pass. |
+| Publication unavailable or unauthorized | Evidence returned conversationally, blocked publication and any durable-storage gap explicit; zero unauthorized remote writes or persistence claims. Temporary logs are not a durable handoff. |
+| Historical reports mixed with reusable checks | Existing reports and runnable checks remain intact; the new default grants no cleanup/migration/removal authority. |
+
+Distinguish static source inspection, direct tool walkthroughs, synthetic assertions and autonomous agent trials. Inspect publication/read-back only within existing authority; a local draft or fixture-host assertion is not live publication evidence. Repeat internal-link checks with independently copied packages.
 
 ## Authored routing cases
 
