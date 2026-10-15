@@ -5,7 +5,11 @@ description: Write or revise agent-facing skills, instruction files such as AGEN
 
 # Writing for agents
 
-Make instructions usable at the point where an agent needs them. Apply this workflow to skills, instruction files and referenced documentation, including plain guides outside a skill package. A request to review produces findings; a request to write or edit permits only the requested document changes.
+Make instructions usable at the point where an agent needs them.
+
+## Invocation
+
+Load this skill when creating, editing, or reviewing skills, agent instruction files, or referenced agent-facing documentation, including plain guides outside a skill package. No explicit invocation is required. Apply it within the existing task's authority; reviewing alone does not authorize edits.
 
 ## 1. Establish the writing boundary
 
