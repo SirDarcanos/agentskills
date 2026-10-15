@@ -46,6 +46,7 @@ Optional help with the words around your software.
 
 | Skill | What it helps you do |
 | --- | --- |
+| [`writing-for-agents`](../writing/writing-for-agents/) | Write skills, instruction files and referenced guides with clear routing, ordered actions and checkable completion while preserving project authority. |
 | [`slop-guard`](../writing/slop-guard/) | Remove generic or padded prose while keeping your meaning and voice. |
 | [`stay-positive`](../writing/stay-positive/) | Make prose more constructive without softening important warnings or forcing optimism. |
 | [`create-changelog`](../writing/create-changelog/) | Create a project's first changelog from its actual history. |
