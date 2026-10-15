@@ -2,97 +2,109 @@
 
 [![skills.sh](https://skills.sh/b/SirDarcanos/agentskills)](https://skills.sh/SirDarcanos/agentskills)
 
-Turn an idea into software with a coding agent, without having to direct every coding step.
+**Turn your idea into a clear plan, then ask your coding agent to build and check it.**
 
-These are the skills I use in my own projects and share for others to adapt. They give an agent a way to work through the questions, planning, implementation, checks, and review that sit between “I want to build this” and a result you can evaluate.
+Have an idea for an app, but aren't sure what to ask your coding agent next? You can describe who it's for and what it should do without knowing how to design a database or write a test.
 
-If you don't code, start with the problem you want to solve. The workflow asks you about users, priorities, and trade-offs while leaving routine technical choices to the agent. If you do code, it gives you a way to delegate implementation and focus your review on behavior, evidence, and risks rather than reading every generated line.
+These are the skills I use in my own projects and share for others to adapt. They guide your agent from questions about your idea to implementation, checks, and review:
 
-A **skill** is a set of instructions your coding agent can load for a particular job. These are editable files, not a separate app or a replacement for your agent. Use the idea-to-delivery workflow, or pick a skill for the task in front of you.
+- **Get clear before code.** Work through what matters, what can wait, and what a useful first version would do.
+- **Delegate the coding steps.** Let the agent choose how to build an agreed change while bringing important product choices back to you.
+- **Know what to check.** Ask for a report of what works, which checks ran, and what remains uncertain, so you can try the result and decide whether it meets your needs.
 
-[Get started](#get-started) · [See an example](#example-a-booking-tool) · [Browse the skills](#all-skills)
+Already write code? The same workflow helps you focus on behavior, review findings, and risks instead of supervising every generated line.
+
+A **skill** is a set of instructions your coding agent loads for a particular job. These are editable files for your existing agent, not another app to learn. They're free and open source under the [MIT license](LICENSE); your agent and any services you choose may have their own costs.
+
+**[Try Shape Work with your own idea](#get-started)** · [See a booking-tool example](#example-a-booking-tool) · [Browse all skills](#all-skills)
 
 ## From idea to delivery
 
-You decide what the software should do. The skills guide the agent through figuring out how to build it and showing what was checked.
+You don't need to arrive with a technical plan. Start with the problem you want to solve; use the stages that your project needs.
 
-| Stage | What the agent works on | Where you stay involved |
+| Stage | What it helps you get | Your part |
 | --- | --- | --- |
-| **Clarify the idea** | `shape-work` explores unresolved goals, users, and trade-offs through questions in manageable rounds. | Explain the problem, choose priorities, and confirm the scope. |
-| **Agree on the result** | `write-spec` turns the agreement into a description of expected behavior and how to tell whether it works. | Check that it describes what you actually want. |
-| **Plan the work** | `analyze` checks the technical starting point. For larger work, `write-tickets` proposes smaller tasks and their dependencies. | Approve consequential choices and any proposed tracker changes. |
-| **Build and check** | `work-on` delivers one agreed change, choosing a suitable implementation method and running relevant checks. `work-on-spec` coordinates a specification across multiple tasks. | Answer new product questions and approve effects outside the agreed scope. |
-| **Review and hand back** | Delivery uses `review-delivery` for separate reviews of project standards and agreed behavior, then `pr` for a plain-language change report. | Try the result, inspect the evidence and remaining risks, and decide whether to accept it. |
+| **Clarify the idea** | `shape-work` asks about goals, users, and trade-offs in manageable rounds, so the agent doesn't have to guess what you want. | Explain the problem and choose what matters first. |
+| **Agree on the result** | `write-spec` records what the software should do and how you'll tell whether it works. | Check that the plan describes what you mean. |
+| **Plan the work** | `analyze` examines the existing project. For larger work, `write-tickets` proposes smaller tasks and the order they depend on. | Decide on choices that affect scope, cost, or risk; approve any changes to your issue tracker. |
+| **Build and check** | `work-on` handles one agreed change and relevant checks. `work-on-spec` coordinates a larger plan across tasks. | Answer new product questions and approve work beyond the agreed scope. |
+| **Review the result** | `review-delivery` calls for separate reviews of project rules and agreed behavior. `pr` explains the changes and remaining risks in plain language. | Try the result and decide whether to accept it. |
 
-This is a guide, not a requirement to run every skill in order. A small, clear change can go straight to `work-on`; an existing agreement doesn't need another interview. Planning alone does not authorize building. Merging changes, publishing a release, and putting software online are separate decisions.
+For a small, clear change, start with `work-on`. You don't need another interview when the decisions are already settled. Planning alone does not authorize building; merging changes, publishing a release, and putting software online remain separate decisions.
 
-The intended handback tells you what changed, what was checked, what remains uncertain, and what needs your decision. That is more useful than “done,” whether or not you read code. Independent review needs an agent runtime that supports separate reviewers and your permission to use them; unavailable checks or review are reported as gaps, not passes.
+Independent review needs an agent that can run separate reviewers and your permission to use them. If a required check or review is unavailable, the workflow calls for reporting the gap rather than treating the work as verified.
 
 ## Get started
 
-You need a coding agent that supports skills, access to your project files, and the tools required by the skills you choose. Start in a project you can safely experiment with.
+**Start with one idea and one skill.** Try Shape Work to clarify what you want before committing to a build. You don't need to learn the whole catalog first.
 
-### 1. Install the skills
+You'll need a coding agent that supports skills and can read your project files. The terminal commands below also require Node.js and `npx`. Start in a project you can safely experiment with.
 
-With Node.js and `npx` available, run this in your terminal:
+### 1. Install Shape Work
 
-```bash
-npx skills add SirDarcanos/agentskills
-```
-
-Choose your agent, installation destination, and skills in the installer. For the idea-to-delivery workflow, choose the workflow skills; writing and model skills are optional. Review the destination and any existing same-name skills before replacing files.
-
-To try the discovery conversation first, install just `shape-work`:
+Run this in your terminal:
 
 ```bash
 npx skills add SirDarcanos/agentskills --skill shape-work
 ```
 
-Skills can need companions for particular tasks. Shape Work may need `research` or `analyze` to investigate facts before recommending a choice. For delivery, use the [Work On installation guide](workflow/work-on/README.md#install-and-dependencies); installing `work-on` alone does not supply its review, implementation, and reporting companions.
+Choose your agent and installation destination when prompted. Check for an existing skill with the same name before replacing it.
+
+This installs the discovery instructions, not an application. If the conversation needs fact-finding, Shape Work may also need `research` or `analyze`. Those companion skills are separate installs; missing requirements should be explained, not silently installed.
 
 ### 2. Start with your idea
 
-In your coding agent, ask:
+Replace the example with your own idea and send this to your coding agent:
 
 ```text
 Use shape-work to help me plan a booking tool for my classes.
 I don't code. Ask me about what it should do before we build anything.
 ```
 
-Where your agent supports skill slash commands, you can use `/shape-work` instead. Invocation and tool support vary by agent; check that it can find the installed skill.
+You should get questions about the decisions still open, followed by a brief you can confirm or correct. You can stop there: asking for help with an idea does not commit you to building it.
 
-For a new project that also needs working conventions and agent instructions, explicitly ask to use [`setup-project`](workflow/setup-project/). It proposes those changes for approval; it does not build the application.
+Where your agent supports skill slash commands, you can use `/shape-work` instead. Check that it can find the installed skill; invocation and tool support vary by agent.
+
+If your project also needs working conventions and agent instructions, ask for [`setup-project`](workflow/setup-project/). It proposes changes for approval, without starting the application build.
 
 ### 3. Move to building when you're ready
 
-After agreeing on one bounded change, ask:
+Once you have agreed on a specific change, follow the [Work On installation guide](workflow/work-on/README.md#install-and-dependencies) to add the delivery skills it needs. Then ask:
 
 ```text
 Use work-on to implement the change we agreed on.
 Show me what was checked and anything I still need to decide.
 ```
 
-For an approved specification split into multiple tasks, use [`work-on-spec`](workflow/work-on-spec/) instead. It additionally needs tracker access and an authorized runtime that can assign work to separate coding agents. See its [requirements](workflow/work-on-spec/README.md#installation-and-compatibility) before choosing that route.
+For a larger approved plan split into tasks, use [`work-on-spec`](workflow/work-on-spec/). It needs access to your issue tracker, an agent environment that can assign work to separate coding agents, and your permission to do so. Read its [requirements](workflow/work-on-spec/README.md#installation-and-compatibility) before choosing that route.
+
+To choose more skills from the collection, run:
+
+```bash
+npx skills add SirDarcanos/agentskills
+```
+
+Choose the workflow skills for idea-to-delivery guidance. Writing and model skills are optional; installing `work-on` alone does not include its implementation, review, and reporting companions.
 
 ## Example: a booking tool
 
-*This is an illustrative conversation, not a report of a tested application.*
+*An illustration of the workflow, not a tested application or customer story.*
 
-Suppose you teach small classes and want people to reserve a place without messaging you.
+Suppose you teach small classes. Each booking means another message and another check of how many places are left. You want people to reserve a place themselves.
 
-**Start with the problem.** You ask Shape Work to explore the idea. It might ask how many places each class has, whether people can cancel, and whether payment belongs in the first version. You answer in terms of how your classes work, not database design.
+**Describe your classes, not a database.** Shape Work might ask: How many places are available? Can people cancel? Do they need to pay when booking? You can answer those questions from experience, without choosing the technology.
 
-**Agree on a small first version.** For this example, suppose you choose a class list, reservations, and a clear “full” message when no places remain. You explicitly leave payments and waiting lists for later. Ask `write-spec` to capture those decisions and the observable results you expect. No implementation starts just because the specification exists.
+**Choose a first version you can judge.** Suppose you agree on a class list, reservations, and a clear “full” message. Payments and waiting lists can wait because you explicitly chose to leave them for later. `write-spec` captures the agreement before you decide to build.
 
-**Ask for the agreed work.** The agent assesses the existing project with `analyze` where technical facts are missing. If the first version needs several tasks, `write-tickets` proposes the breakdown; you approve any publication to your tracker. You can then request `work-on` for one task or `work-on-spec` for the whole agreed specification, subject to their runtime requirements.
+**Hand over the coding steps.** The agent uses `analyze` where technical facts are missing and can propose smaller tasks through `write-tickets`. You approve any publication to your tracker, then request `work-on` for one task or `work-on-spec` for the whole plan, with the tools and permissions each requires.
 
-**Evaluate more than the happy path.** Relevant checks could include reserving the last place, refusing another booking when the class is full, and handling two people trying to book that last place at once. Delivery calls for independent review against both the project rules and your agreement. The final report should distinguish checks that actually ran from anything still unverified.
+**Ask what happens to the last place.** A booking form appearing on screen isn't enough. Can someone reserve the last place? Is the next booking refused? What if two people try at once? These are examples of checks the work could need, not claims that they have run. Delivery calls for independent review and a report separating executed checks from anything unverified.
 
-You try booking a place yourself and decide whether the result meets your needs. Before putting it online, you still need to consider hosting, personal data, security, and ongoing support. Those aren't silently approved by asking the agent to build the tool.
+Now you have concrete behavior to try yourself, not just code to read. Before putting the tool online, consider hosting, personal data, security, and ongoing support separately; a build request doesn't authorize those steps.
 
 ## All skills
 
-Each link opens a human-facing overview with requirements and a link to the agent's instructions. You don't need to learn every skill before starting: begin with `shape-work` for an unclear idea or `work-on` for one agreed change.
+Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it.
 
 ### Workflow
 
@@ -102,8 +114,8 @@ Each link opens a human-facing overview with requirements and a link to the agen
 | --- | --- |
 | [`shape-work`](workflow/shape-work/) | Work out what you want to build through questions about goals, users, priorities, and trade-offs. |
 | [`research`](workflow/research/) | Investigate a question using cited sources and make uncertainty visible. |
-| [`analyze`](workflow/analyze/) | Understand what a change involves in the existing project before building it. |
-| [`write-spec`](workflow/write-spec/) | Put agreed behavior and success criteria into a clear specification. |
+| [`analyze`](workflow/analyze/) | Find technical risks and existing work you can reuse before committing to a build. |
+| [`write-spec`](workflow/write-spec/) | Give you and the agent a shared description of what to build and how to judge the result. |
 | [`write-tickets`](workflow/write-tickets/) | Break agreed work into manageable tasks, with approval before publishing them. |
 | [`domain-modeling`](workflow/domain-modeling/) | Give you and the agent shared terms for the project and records of important design decisions. |
 | [`investigate-bug`](workflow/investigate-bug/) | Find out what is going wrong and why, and prepare the evidence for a fix. Investigation alone stops before repair. |
@@ -117,10 +129,10 @@ Each link opens a human-facing overview with requirements and a link to the agen
 | [`prototype`](workflow/prototype/) | Try a runnable experiment to answer a design or feasibility question before committing to the full build. |
 | [`tdd`](workflow/tdd/) | Build with tests first: demonstrate the missing behavior, implement it, then improve the code. |
 | [`acceptance-first`](workflow/acceptance-first/) | Start with executable examples of the workflow people need, then build against them. |
-| [`characterize`](workflow/characterize/) | Capture existing behavior with checks before making a risky change to older code. |
+| [`characterize`](workflow/characterize/) | Add checks around existing behavior so you can spot unintended changes when updating older code. |
 | [`build-and-check`](workflow/build-and-check/) | Make small changes and check each one before moving on, including documentation and configuration work. |
 | [`review-delivery`](workflow/review-delivery/) | Get independent reviews of whether changes follow project rules and deliver what was agreed. |
-| [`pr`](workflow/pr/) | Explain a proposed change, its checks, risks, and reversal limits in a pull request: a reviewable proposal to merge it. |
+| [`pr`](workflow/pr/) | Get a plain-language account of what changed, what was checked, and how hard it would be to undo, in a pull request—a proposal to merge the changes. |
 
 #### Set up the project
 
@@ -128,7 +140,7 @@ Each link opens a human-facing overview with requirements and a link to the agen
 | --- | --- |
 | [`setup-project`](workflow/setup-project/) | Establish project context, agent instructions, and working conventions through an approved setup plan. |
 | [`github-repo-setup`](workflow/github-repo-setup/) | Create or configure a GitHub repository within an approved scope. |
-| [`implementation-preflight`](workflow/implementation-preflight/) | Prepare the right Git branch and pull-request target before changes begin. |
+| [`implementation-preflight`](workflow/implementation-preflight/) | Check where changes belong in Git before editing, so unrelated work stays separate. |
 
 ### Writing
 
@@ -157,9 +169,13 @@ For comparisons, see the [decision-model benchmark](benchmarks/decision-models/)
 
 ## What to expect
 
-These skills are instructions for an agent, not a guarantee that it will follow them perfectly or produce correct software. Checks and separate reviews can reduce how much you need to supervise, but they can miss problems. Try the important workflows yourself and get qualified technical review before relying on software that handles sensitive data, money, or other high-stakes operations.
+You can delegate coding without treating the result as a black box. Ask what changed, what was checked, and what still needs attention. Try the important workflows yourself.
 
-The agent should make routine engineering decisions and bring meaningful product choices back to you. It should also tell you when a tool, permission, compatible companion, or required check is missing rather than quietly declaring success. Review each skill's requirements for your agent; this collection is not certified across all runtimes.
+These skills guide an agent; they do not guarantee it will follow every instruction or produce correct software. Checks and separate reviews can miss problems. Get qualified technical review before relying on software that handles sensitive data, money, or other high-stakes operations.
+
+If a tool, permission, companion skill, or required check is missing, the agent should tell you. Check the selected skills' requirements for your agent; this collection is not certified across all runtimes.
+
+**Have an idea you'd like to work through? [Start with Shape Work](#get-started).**
 
 ## Adapting skills and finding the details
 
