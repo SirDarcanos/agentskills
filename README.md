@@ -173,6 +173,16 @@ The skill tries to reproduce the problem, trace its cause, and gather evidence f
 
 An investigation-only request stops there. When you're ready to authorize the repair, ask `work-on` to deliver the resulting ticket. Delivery reuses current investigation evidence and handles implementation, regression checks, review, and reporting; you don't need to repeat the diagnosis.
 
+## Continue in another session
+
+When moving work to another session, harness or directory, ask for a handoff:
+
+```text
+/handoff Continue investigating the booking cancellation bug.
+```
+
+[`handoff`](workflow/handoff/) writes a focused document with the relevant decisions, work state, evidence pointers, approval boundaries and suggested next skills. It runs only when requested and does not start the next task. Give the receiving agent the returned file path; for later resumption, supply an approved durable destination because temporary files can disappear. For shortening the current conversation without moving work, use your agent's built-in compaction instead.
+
 ## All skills
 
 Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it.
@@ -204,6 +214,7 @@ Pick a skill for the job in front of you. Each link explains what it does, what 
 | [`build-and-check`](workflow/build-and-check/) | Make small changes and check each one before moving on, including documentation and configuration work. |
 | [`review-delivery`](workflow/review-delivery/) | Get independent reviews of whether changes follow project rules and deliver what was agreed. |
 | [`pr`](workflow/pr/) | Get a plain-language account of what changed, what was checked, and how hard it would be to undo, in a pull request—a proposal to merge the changes. |
+| [`handoff`](workflow/handoff/) | Carry one task into another session with a purpose-specific document, existing artifact references, and clear approval boundaries. |
 
 #### Set up the project
 
