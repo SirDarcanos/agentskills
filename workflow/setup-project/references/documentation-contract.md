@@ -35,7 +35,7 @@ Use enough rigor for actual risks and requirements, not a team-size preset. Expl
 
 ## Authority and verification
 
-Workflow guidance must distinguish routine agent decisions from actions requiring approval. Cover delegation, external assessments/disclosure, spending, pushes/PRs, deployment, destructive operations, and credential changes only as relevant. Unknown permission is ungranted. Project preferences do not override runtime restrictions or explicit-invocation requirements of another skill.
+Workflow guidance must distinguish routine agent decisions from actions requiring approval. Cover delegation, external assessments/disclosure, spending, pushes/PRs, deployment, destructive operations, and credential changes only as relevant. For new guidance, include the approved [ordinary-workflow default](discovery.md#ordinary-workflow-default): ordinary skill work, bounded task delegation, independent read-only review and lead-owned repairs within requested scope need no extra permission prompt. Keep auxiliary assessment permission separate and preserve explicit existing restrictions. Unknown permission is ungranted. Project preferences do not override runtime restrictions or explicit-invocation requirements of another skill.
 
 Record delivery policy from the agreed workflow and observed configuration. Distinguish desired policy from enforced controls. Point to executable configuration for commands rather than duplicating every package script. Record important non-obvious gotchas and environment limitations.
 

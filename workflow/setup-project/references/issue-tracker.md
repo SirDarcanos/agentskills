@@ -8,7 +8,15 @@ The roles below are a starting point, not a five-label limit. Account for the pr
 
 1. Inventory all current labels, including GitHub defaults and custom labels. Use `gh label list --repo OWNER/REPO --limit 1000 --json name,description,color`; if results hit the limit, use paginated REST rather than assuming the list is complete.
 2. Inspect usage across **open and closed issues and pull requests**, issue forms, Actions/release configuration, and documented workflows. A paginated `GET repos/OWNER/REPO/issues?state=all&per_page=100` includes issues and PRs; preserve which is which. Inspect external/organization automation when relevant or mark its usage unknown. Zero assignments alone do not prove a label is unnecessary; GitHub-default status alone is not a reason to delete it.
-3. Map roles by meaning, not spelling. Classify every existing label as **keep**, **edit/rename**, **consolidate**, **remove**, or **needs clarification**, with rationale and affected usage/automation. Show exact names, descriptions, colors, renames, assignment migrations, and deletions in the approval plan. Keep custom and default labels that still serve the project.
+3. Map roles by meaning, not spelling. Classify every existing label as **keep**, **edit/rename**, **consolidate**, **remove**, or **needs clarification**, with rationale and affected usage/automation. Keep custom and default labels that still serve the project.
+
+### Present the labels step
+
+Show the audit in clearly separated **Keep unchanged**, **Rename/edit**, **Add**, **Consolidate**, **Delete**, and **Needs clarification** groups; mark empty groups “none.” Account for every inventoried label exactly once and show exact names, descriptions/colors for creates or metadata edits, assignment migrations and automation effects. Give each deletion a reason and its historical assignment impact. Ask the user to confirm this exact disposition before including it in the cumulative approved plan. A blanket “preserve GitHub defaults” is not a disposition.
+
+When retained, propose `good first issue` → `good-first-issue` and `help wanted` → `help-wanted` in **Rename/edit**, not **Keep unchanged**. Already-hyphenated labels need no rename. If both spellings exist, propose an explicit consolidation with assignment/consumer migration rather than an overwriting rename. Existing name-based consumers or organization requirements must be reconciled; unknown impact leaves the rename blocked, not silently authorized. If either label is unnecessary, propose its deletion with evidence instead of renaming it. Apply only the exact approved disposition.
+
+For a new repository that does not yet exist, show expected defaults as provisional, not an observed inventory. After creation, read back actual labels before applying the audit; unexpected labels or metadata/usage differences require a focused labels-step confirmation before affected mutations. Repository creation approval does not approve unseen label deletions.
 
 ### Roles
 
