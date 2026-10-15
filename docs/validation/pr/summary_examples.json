@@ -1,0 +1,46 @@
+{
+  "provenance": "Authored synthetic inputs and expected summaries, not executed product checks or autonomous agent trials. Issue numbers and evidence pointers are fixture-local.",
+  "cases": [
+    {
+      "name": "routine-documentation",
+      "evidence": {
+        "change": "Installation guide separates first installation from updates; commands unchanged.",
+        "checks": {"links": "passed", "command_comparison": "passed", "independent_review": "passed", "live_installation": "not run, not required for unchanged commands"},
+        "internal_accounting": "No test-source or CI changes; timing inapplicable. No merge automation changed.",
+        "closes": [201], "refs": [200]
+      },
+      "summary": "The installation guide now separates first-time setup from updating an existing copy. Previously, both paths shared one sequence, so returning users had to work out which steps still applied. Readers can now choose the instructions that match their situation without repeating setup.\n\nDocumentation checks confirmed that the links resolve and the commands are unchanged. Independent review found no remaining issues with the wording or scope. These checks cover the guide and its references; they do not demonstrate a fresh installation, which was not needed to validate this wording-only change.\n\nThe broader documentation cleanup remains separate from this focused update.\n\nCloses #201\nRefs #200\n\n[Supporting evidence](#documentation-evidence)"
+    },
+    {
+      "name": "routine-executable",
+      "evidence": {
+        "change": "CSV exporter quotes commas and embedded quotes; no other format changes.",
+        "checks": {"comma_regression": "failed before fix, passed after", "quote_regression": "passed", "existing_export_tests": "passed", "independent_review": "passed"},
+        "internal_accounting": "Two regression cases added; existing export coverage retained. Hosted timing unmeasured; no speed claim.",
+        "closes": [202], "refs": [200]
+      },
+      "summary": "CSV exports now preserve values containing commas or quotation marks. Previously, those values could be split into extra columns or read incorrectly by spreadsheet software. The exporter now quotes them correctly while leaving the rest of the export format unchanged. This fixes the affected values without asking users to change how they open exports.\n\nFocused regression checks reproduced the comma problem before the fix and passed afterward. Checks for embedded quotation marks and the existing export tests also passed. Independent review found no unresolved issues within this change. The added cases protect the affected formatting behavior; they are not a claim about every spreadsheet application.\n\nCloses #202\nRefs #200\n\n[Supporting evidence](#export-evidence)"
+    },
+    {
+      "name": "failed-unrun-stale",
+      "evidence": {
+        "change": "Retry interrupted uploads without starting over.",
+        "checks": {"local_retry": "passed", "large_file": "failed: duplicate bytes", "remote_storage": "not run: credentials unavailable", "independent_review": "stale after retry-path edit"},
+        "internal_accounting": "Acceptance blocked; no complete verification claim. Review snapshot predates retry-path edit.",
+        "closes": [], "refs": [203]
+      },
+      "summary": "This change lets interrupted uploads resume instead of starting over, but it is not ready to merge. A large-file check still fails because the resumed upload contains duplicate bytes. That could corrupt uploaded content, so the retry behavior needs correction before acceptance.\n\nThe focused local retry check passed. Remote-storage verification was not run because the required credentials were unavailable, and independent review is stale after the latest retry-path edit. Neither result establishes that the delivered upload path is safe.\n\nNext, the implementation owner must correct the duplication, obtain remote-storage verification in an authorized environment, and renew review against the updated change. Keep the issue open while those obligations remain.\n\nRefs #203\n\n[Supporting evidence](#upload-evidence)"
+    },
+    {
+      "name": "migration",
+      "evidence": {
+        "change": "Replace legacy settings with new layout; approved incompatible migration.",
+        "checks": {"conversion_fixture": "passed", "backup_restore": "not run", "independent_review": "blocked by unverified restore"},
+        "manual_action": "Maintainer approval, backup, conversion, restart in that order; do not proceed yet.",
+        "reversal": "Source revert cannot restore converted settings; restore backup required.",
+        "closes": [], "refs": [204]
+      },
+      "summary": "Settings move to the approved new layout, replacing the legacy format. Existing installations require conversion before they can use this version. This is an incompatible configuration change, not an automatic update to installed copies.\n\nThe conversion check passed on the synthetic fixture, but backup restoration has not been exercised. Independent review therefore remains blocked, and the change is not ready to merge or apply to an installation. A successful conversion alone does not establish a safe recovery path.\n\nBefore proceeding, the maintainer must obtain restore evidence and approve the migration. The required order is backup, conversion, then restart. Reverting source alone will not restore converted settings; recovery requires the saved backup.\n\nRefs #204\n\n[Supporting evidence](#migration-evidence)"
+    }
+  ]
+}

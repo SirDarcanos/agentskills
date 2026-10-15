@@ -87,5 +87,44 @@ class FixtureTests(unittest.TestCase):
             self.assertNotIn(command, source)
 
 
+class SummaryExamplesTests(unittest.TestCase):
+    """Static guardrails over authored pairs, not proof of agent behavior."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.examples = json.loads((HERE / "summary_examples.json").read_text())
+
+    def test_summary_length_and_evidence_separation(self):
+        self.assertIn("synthetic", self.examples["provenance"])
+        for case in self.examples["cases"]:
+            with self.subTest(case=case["name"]):
+                summary = case["summary"]
+                self.assertTrue(100 <= len(summary.split()) <= 200)
+                self.assertEqual(summary.count("[Supporting evidence]"), 1)
+                for detail in ("internal_accounting", "python3", "SHA-256", "runner-seconds", "**1 added"):
+                    self.assertNotIn(detail, summary)
+                self.assertNotIn("all tests passed", summary.lower())
+                self.assertTrue(case["evidence"]["checks"])
+
+    def test_closing_and_related_references(self):
+        import re
+        for case in self.examples["cases"]:
+            summary, evidence = case["summary"], case["evidence"]
+            self.assertEqual([int(n) for n in re.findall(r"Closes #(\d+)", summary)], evidence["closes"])
+            self.assertEqual([int(n) for n in re.findall(r"Refs #(\d+)", summary)], evidence["refs"])
+            self.assertNotRegex(summary, r"(?i)\b(?:fixes|resolves)\s+#")
+
+    def test_material_caveats_remain_visible(self):
+        cases = {case["name"]: case for case in self.examples["cases"]}
+        failed = cases["failed-unrun-stale"]
+        for phrase in ("not ready to merge", "duplicate bytes", "not run", "stale", "renew review"):
+            self.assertIn(phrase, failed["summary"])
+        self.assertIn("failed", failed["evidence"]["checks"]["large_file"])
+        migration = cases["migration"]
+        for phrase in ("incompatible", "not been exercised", "maintainer", "backup, conversion, then restart", "Reverting source alone"):
+            self.assertIn(phrase, migration["summary"])
+        self.assertEqual(migration["evidence"]["checks"]["backup_restore"], "not run")
+
+
 if __name__ == "__main__":
     unittest.main()
