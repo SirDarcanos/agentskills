@@ -12,6 +12,8 @@ From a copied standalone package, run unittest discovery against `tests/`. Compa
 
 The unit tests exercise the real dependency reconciler through an in-memory GitHub transport and mock the CLI transport. They cover additive/read-only behavior, ID direction, existing/transitive graph cycles, reruns, partial failure, read-back mismatches, API errors, pagination, unsupported scope, and database-ID mismatches in existing and newly written relationships. No network, credentials, or model calls are used. Packaging checks verify entry-point fields and shipped relative links, not semantic correctness.
 
+For delivery-library discovery changes, use the caller's resolved Work On validation reference and its “Complete-read and reference-recovery cases” against this package's read-only library entry. Check the tracker link from the complete inspected entry in both repository and independently copied layouts; this does not invoke setup or grant tracker mutations.
+
 ## Agent scenario matrix
 
 Use temporary fixture projects and a command shim returning synthetic GitHub observations; it must reject unplanned writes. These scenarios require an actual agent walkthrough to claim behavioral validation. Reading them or passing Python tests does not execute them.

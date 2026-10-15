@@ -6,6 +6,19 @@ Read on each authorized entry and before handing work to a procedure or companio
 
 For each needed dependency: discover candidates through the runtime/project, read the complete entry point and relevant branch-specific references, identify source/revision (or content digest), compare its behavior with the requirements below, and record the resolution. Compatibility is semantic; no particular version marker, literal `Skill` tool, SDK, installation tree, or judgment service is required. Ambiguous candidates block that route until disambiguated. Recheck changed companion files, authority, and resumed-task requirements.
 
+### Complete reads and reference resolution
+
+Apply this sequence to required instructions and companion/library discovery before dependent execution:
+
+1. Check that each required read is complete. If output is truncated or partially returned, recover omitted material through the runtime's retained-output facility or focused separate reads (with ranges when needed). A partial result is not a completed required read; do not act on an unseen pointer.
+2. Resolve references from the complete inspected companion entry point or authoritative contract, relative to the actual resolved package location. Inspect the documented target before using it. Do not invent filenames from a responsibility's name or assume sibling installation paths.
+3. After ENOENT or another missing-file result, inspect the documented pointer and actual package layout within authorized access. Distinguish a guessed or stale path from genuinely missing required material; retain explicit uncertainty when inspection is unavailable. Report an unavailable capability only with the inspected source/path and supporting evidence.
+4. Continue correctly resolved material through the existing compatibility and permission checks. Genuinely missing, ambiguous or incompatible required material blocks only its dependent route; preserve useful findings and protected work.
+
+Recovery is bounded, read-only discovery, not permission to install packages, create aliases or stub references, invoke setup, weaken native-graph requirements or ask the user to solve discoverable path details. Other effects retain their separate approval gates.
+
+### Required capabilities
+
 | Dependency / condition | Required behavior | Unavailable or incompatible outcome |
 | --- | --- | --- |
 | File tools and project checks | Inspect actual authorized files; edit only within approved scope; execute applicable existing checks when needed | Inspection can proceed with read access. Missing writes blocks building; unrun material checks block acceptance. |
