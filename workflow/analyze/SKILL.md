@@ -92,7 +92,7 @@ Compare brief and any specialist artifacts with the current agreement, sources a
 
 **Complete:** the requested technical conclusion is supported and all material readiness questions resolved. **Partial:** supported findings remain useful but scoped coverage/bounds limit the answer. **Blocked:** a deciding fact, consequential commitment, required domain capability or authority is unresolved. Distinguish technically actionable design from method availability and delivery's build/accept/report gates: execution authority, native dependency eligibility, Git preflight and later independent review are not established by analysis.
 
-Standalone use stops at this return, without product implementation, tickets, PRs or starting the delivery pipeline. An authorized caller consumes it and selects its own next responsibility; current findings need no automatic reassessment.
+Standalone use stops at this return, without product implementation, tickets, PRs or starting the delivery pipeline. In a bounded handoff, return to the calling workflow rather than treating findings as the final response to its user. The caller remains accountable: it inspects findings and supporting artifacts, decides routine design/dependency/method/check choices, and resumes the originally requested workflow within existing authority. Do not require another permission prompt for already-authorized prerequisite inspection or skill use. Current findings need no automatic reassessment. A missing permission/capability or consequential product uncertainty remains a specific affected blocker with a recommendation for its owner; continuation grants no new product commitments or external effects.
 
 ## Validation
 
