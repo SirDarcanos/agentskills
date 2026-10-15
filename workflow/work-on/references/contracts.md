@@ -42,6 +42,14 @@ Recovery is bounded, read-only discovery, not permission to install packages, cr
 
 For GitHub, locate `setup-project` through discovery and read its maintained `references/issue-tracker.md` as a procedure library, not an invocation of setup. Its helper is optional and limited to its documented scope. Target policy owns operations and authority. Other trackers need an inspected project-approved native procedure. Do not duplicate the graph algorithm here. Installation, replacement, new disclosure and spending require separate approval.
 
+## Required-review authority
+
+An explicit user delivery request through `work-on` or `work-on-spec` authorizes the required bounded read-only Standards and Spec reviewer contexts through the configured agent runtime, without another permission prompt solely for delegation. This authority travels with the packages: no repository-local standing permission is required. A bounded ticket assignment inherits this review scope from its authorized delivery root; the ticket worker requests review from that root rather than launching reviewers itself. Loading a skill or reading this contract as a library grants no execution authority, and a standalone review caller must establish its own review permission.
+
+Explicit user/project/runtime restrictions take precedence. Inspect them before launch, record the originating delivery request and permitted review scope, and pass that authority to `review-delivery`; confirming permission means checking these sources, not automatically asking again. Ordinary reviewer-agent execution uses the already configured runtime within existing approved usage and data boundaries. New sensitive disclosure, additional spending, installation or service/account changes require separate approval; reviewer availability is not permission to expand those effects. This grant excludes optional implementation/exploration workers and optional model assessments, and authorizes no merge, deployment or release.
+
+The root retains one shared ledger, finite timeout/turn bounds and at most two active non-lead workers, or fewer under target/runtime limits. Reviewers inspect only authorized task sources and raw evidence, remain separate from authors and each other's conclusions, and never edit or recursively delegate. Sequence the two axes when only one slot is available. If an explicit restriction, missing capability or an out-of-scope effect prevents review, preserve implemented-but-unaccepted work and name the specific blocker; do not substitute lead self-review or fabricate missing permission merely because no local policy exists.
+
 ## Handoff envelope
 
 Every internal or companion handoff supplies:

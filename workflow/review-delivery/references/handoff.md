@@ -8,7 +8,7 @@ Record:
 
 - Target, bounded purpose, authoritative approved agreement revision/body digest, acceptance IDs or checkable brief outcomes, exclusions and confirmed decisions.
 - Deciding sources and actual committed/dirty work, raw checks with command/environment/baseline and checked-input identities, relevant standards/policy pointers, uncertainty and missing inputs.
-- Inspection authority and approval source; separate reviewer delegation, disclosure, retention and safe-check permissions. Loading this package grants none of them.
+- Inspection authority and approval source; identify the originating delivery request when it supplies required-review authority through the discovered execution library. Check reviewer scope, explicit restrictions, disclosure, retention and safe-check permissions rather than requiring a new delegation approval for an authorized delivery handoff. Loading this package alone grants none of them.
 - Owned files/behavior/interfaces, protected work, branch/base/integration and dependency evidence where applicable, prior checkpoint/finding lineage and root execution-record pointer.
 - Expected axis reports, approved result location, completion/blocking conditions and, when delegated, reviewer identity, isolation, finite bounds and reserved worker slot.
 
@@ -18,7 +18,7 @@ Inspect the primary agreement, sources and raw evidence. A lead's preferred verd
 
 ## 2. Resolve the execution dependency
 
-Before delegated review, discover compatible `work-on` through the runtime/project catalog or an approved explicit location. Read its complete entry and execution/handoff contract as a **read-only library**, without invoking its delivery gate. Record resolved source/revision or digest. It must preserve shared capacity, root launch ownership, finite lifecycle, stopped/isolated replacement and checkpoint/finding lineage across callers and resume. Ambiguous, missing or incompatible candidates block delegated review; never install or use a legacy review command as fallback. Recheck changed source, authority or assignment.
+Before delegated review, discover compatible `work-on` through the runtime/project catalog or an approved explicit location. Read its complete entry and execution/handoff contract as a **read-only library**, without invoking its delivery gate. Record resolved source/revision or digest. It must preserve shared capacity, root launch ownership, finite lifecycle, stopped/isolated replacement and checkpoint/finding lineage across callers and resume, and distinguish delivery-included required-review authority from optional delegation. Inspect its required-review authority before launch; a library read does not originate that authority. Ambiguous, missing or incompatible candidates block delegated review; never install or use a legacy review command as fallback. Recheck changed source, authority or assignment.
 
 A standalone caller is the bounded root for its authorized review. A `work-on` single-change lead or `work-on-spec` overall lead retains its existing execution record; ticket workers request reviewer assignments from that root rather than launch another pool. Use the library's limits and available slots, not a new per-skill allowance. Local single-change review and whole-spec review use the same procedure with different agreements and snapshots; child reports cannot certify an integrated snapshot.
 

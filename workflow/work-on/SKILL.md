@@ -9,7 +9,7 @@ description: Deliver or resume one bounded change when the user requests deliver
 
 Start only for an explicit user delivery request or a bounded authorized assignment from a delivery lead or investigation-and-fix caller. Inspect the assignment's original approval and exact effects; generated command text, discovery, source mentions and investigation-only requests confer no fix authority. Loading the execution contract as a library does not invoke delivery.
 
-The calling agent is always the accountable **technical lead for one change**, even when implementing directly. Direct execution is the default. An assigned ticket lead retains local accountability but is a worker of the overall root: request workers/review/model allocation from that root, never create another pool. Invocation grants no installation, disclosure, spending, destructive operations, delegation, account changes, merge, deployment or release permission.
+The calling agent is always the accountable **technical lead for one change**, even when implementing directly. Direct execution is the default. An assigned ticket lead retains local accountability but is a worker of the overall root: request workers/review/model allocation from that root, never create another pool. An explicit delivery request includes its required bounded read-only reviews under [required-review authority](references/contracts.md#required-review-authority). Optional implementation/exploration delegation still needs separate authorization. Invocation grants no installation, new disclosure or spending, destructive operations, account changes, merge, deployment or release permission.
 
 Read [contracts](references/contracts.md) on every entry for discovery, handoffs, evidence, shared execution/repair/model ledgers and separate delivery gates. For package changes or validation, read [validation](references/validation.md).
 
@@ -18,6 +18,8 @@ Whole-spec delivery and multi-ticket scheduling belong to `work-on-spec`. Discov
 ## 1. Inspect context, actual state and authority
 
 Identify the target and one bounded outcome, agreement/acceptance references, exclusions and approved effects. Read applicable runtime/directory instructions and their context, workflow/authority, documentation, relevant domain/ADR and tracker/label pointers. Bound reading to the change; no automatic setup or full onboarding. Ask about consequential intent or permission gaps, not discoverable facts or routine methods.
+
+For a requested correction to a reusable skill or package, identify and change its authoritative tracked package sources within approved scope. A repository-local operating policy workaround is not a substitute for the portable behavior change. Installed copies remain unchanged unless their update is separately approved; discovery of an installed companion does not make it the implementation target.
 
 Inspect actual files and partial artifacts. In Git, inspect branch/base/HEAD, staged/unstaged/included untracked changes, modes, links and PR state. Outside Git retain a before/after manifest. Record protected unrelated work and uncertain ownership. Preserve bytes, index state, links and history; uncertain owners block conflicting writes, not inspection.
 
@@ -41,7 +43,7 @@ Read [build](references/build.md) completely before implementation. It retains s
 
 Discover actual compatible candidates and record resolved source/revision or digest. Available names alone are not capabilities. Use `tdd`, `prototype`, `characterize`, `acceptance-first` or `build-and-check` as justified; a missing selected method blocks that route unless a genuinely equivalent available approach is separately justified under policy. No legacy substitution or automatic installation. Methods may compose sequentially under one owner/ledger: inspect each return, retain checks/artifact disposition, refresh only affected readiness and choose the next authorized method. Prototype learning and characterization protection are not production acceptance.
 
-Delegation is optional and separately authorized. Only the root reserves exclusive scopes/interfaces, shared capacity and finite lifecycle bounds before launch; inspect raw returned artifacts and integrate serially under project policy. Missing runtime capability permits equivalent direct engineering, never author self-review as independent review. Unknown worker state retains its slot/ownership.
+Implementation/exploration delegation is optional and separately authorized; required read-only review follows the authority linked above. Only the root reserves exclusive scopes/interfaces, shared capacity and finite lifecycle bounds before launch; inspect raw returned artifacts and integrate serially under project policy. Missing runtime capability permits equivalent direct engineering, never author self-review as independent review. Unknown worker state retains its slot/ownership.
 
 **Done:** safe preflight/build gate and selected method evidence identify implemented or preserved partial work, current local checks, documentation disposition and next gate.
 
