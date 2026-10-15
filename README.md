@@ -28,12 +28,14 @@ Start with `setup-project` to establish how the agent should work in your projec
 | --- | --- | --- |
 | **Set up the project** | `setup-project` establishes project context, agent instructions, and working conventions before delivery begins. | Answer questions about how you want to work and approve the proposed setup changes. |
 | **Clarify the idea** | `shape-work` asks about goals, users, and trade-offs in manageable rounds, so the agent doesn't have to guess what you want. | Explain the problem and choose what matters first. |
-| **Agree on the result** | `write-spec` records what the software should do and how you'll tell whether it works. | Check that the plan describes what you mean. |
-| **Plan the work** | `analyze` examines the existing project. For larger work, `write-tickets` proposes smaller tasks and the order they depend on. | Decide on choices that affect scope, cost, or risk; approve any changes to your issue tracker. |
+| **Keep a specification when useful** | `write-spec` records the agreed behavior for work that needs a lasting reference. A small, single-session task can skip it. | Confirm that it captures the agreement. |
+| **Split larger work into tasks** | `write-tickets` uses the specification and current context to propose tasks and dependencies. Skip it when one change is enough. | Review the breakdown and approve publication to your tracker. |
 | **Build and check** | `work-on` handles one agreed change and relevant checks. `work-on-spec` coordinates a larger plan across tasks. | Answer new product questions and approve work beyond the agreed scope. |
 | **Review the result** | `review-delivery` calls for separate reviews of project rules and agreed behavior. `pr` explains the changes and remaining risks in plain language. | Try the result and decide whether to accept it. |
 
-Once the project is set up, a small, clear change can go straight to `work-on`. You don't need another interview when the decisions are already settled. Planning alone does not authorize building; merging changes, publishing a release, and putting software online remain separate decisions.
+These are responsibilities, not a checklist of commands you must run. Once the project is set up, a small, clear change can go straight to `work-on`. It brings in `analyze` when technical evidence is missing, selects an implementation method, and handles checks, review, and reporting. You can call a specialist directly when you want that specific job, but you don't need to manage every handoff.
+
+The skills use the conversation and project context. Give them the idea, task, or issue reference; you don't need to repeat their procedures or remind them to ask for approval. Planning, building, merging, and deployment retain their separate permission boundaries.
 
 Independent review needs an agent that can run separate reviewers and your permission to use them. If a required check or review is unavailable, the workflow calls for reporting the gap rather than treating the work as verified.
 
@@ -58,96 +60,104 @@ Skills can need other skills for particular jobs. For example, `setup-project` n
 Open your project folder in the agent, then enter:
 
 ```text
-/setup-project Set up this project for working with a coding agent. I don't code; explain the decisions I need to make and show me your plan before changing anything.
+/setup-project
 ```
 
-The agent inspects the project, asks about missing working conventions, and proposes a setup plan. Review and approve that plan before it makes changes. Setup can be local-only; GitHub configuration needs the relevant access and approval. It prepares the project's instructions and conventions, not the application itself.
+The skill inspects what already exists and asks about the missing decisions: what the project is for, how you want to work, and which actions need your approval. It prepares the agent instructions and project guidance so later skills can use those answers. You don't need to name the files or tell it how to conduct setup.
 
-If the project is already set up, `setup-project` inspects what exists and proposes only needed changes. You don't need to repeat setup for every feature.
+It shows you a plan before changing anything, applies only what you approve, and checks the result. Existing instructions and useful conventions are preserved. Run it when establishing the project, or when the setup needs updating—not before every feature.
 
-### 3. Work through your first idea
+#### When you use GitHub
 
-With setup complete, run:
+`setup-project` coordinates the GitHub work through `github-repo-setup`; you don't need to run that companion separately. It covers:
+
+- **The repository:** create a new one or configure the existing one. For a new repository, it asks about the owner, name, visibility, license where applicable, and whether to push your local work. An existing remote is not a reason to create a second repository.
+- **How changes are approved:** agree on how work reaches the main branch, such as through pull requests, then configure the approved branch protections and any exceptions. It does not invent reviewers or override existing organization rules.
+- **Security settings:** check Dependabot alerts and security updates, secret scanning, and protection against pushing secrets. Missing protections go into the approval plan; availability depends on GitHub permissions, plan, and organization rules.
+- **The issue workflow:** review existing labels and propose the labels and conventions that specs, tasks, and releases need. Later skills use this guidance to create spec issues, link their tasks, and record dependencies using GitHub's actual relationships. Setup does not create a backlog for you.
+- **Instructions for later sessions:** record the agreed repository, tracker, permission, and release conventions so you don't have to explain them again to every skill.
+
+You'll see the proposed local and GitHub changes together before approving them. Existing settings and labels are preserved unless their changes are explicitly approved. The skill checks the resulting GitHub state; unavailable access or required protections are reported as blocked, not silently treated as complete.
+
+The GitHub route needs an authenticated GitHub CLI (`gh`) and sufficient permissions. If you aren't using GitHub, setup can stay local with no GitHub login. Setup does not build or deploy your application.
+
+### 3. Bring your idea
+
+With setup complete, describe what you want:
 
 ```text
-/shape-work Help me plan a booking tool for my classes. Ask me about what it should do before we build anything.
+/shape-work I want people to book places in my classes.
 ```
 
-Answer the questions and confirm or correct the brief. Then follow the [booking example below](#example-a-booking-tool) to turn that agreement into work. You can stop after planning; building requires a separate request.
+The skill asks the product questions needed to clarify the idea. Answer them and confirm the resulting agreement. The [booking example below](#example-a-booking-tool) shows how to continue for a small task or a larger project.
 
-The examples use slash commands entered in your agent, not your terminal. Check that your agent exposes the installed skills as commands; invocation support varies. For delivery, check the [`work-on` companions](workflow/work-on/README.md#install-and-dependencies) and, for multi-task work, the [`work-on-spec` requirements](workflow/work-on-spec/README.md#installation-and-compatibility). An installed coordinator alone does not supply every tool, permission, or companion it needs.
+Enter these slash commands in your agent, not your terminal. Check that your agent exposes the installed skills as commands; invocation support varies. For delivery, check the [`work-on` companions](workflow/work-on/README.md#install-and-dependencies) and the [`work-on-spec` requirements](workflow/work-on-spec/README.md#installation-and-compatibility). Installing a skill does not supply missing tools or permissions.
 
 ## Example: a booking tool
 
-*An illustrative sequence to try in your agent, not a tested application or customer story. Run each command separately, after the previous step has finished and you've answered its questions.*
+*An illustration, not a tested application or customer story. Issue numbers below are examples. Continue after setup, one command at a time, answering questions and approving decisions as they arise.*
 
-Suppose you teach small classes and want people to reserve a place without messaging you. Install the workflow skills first, as shown above.
-
-### 1. Set up the project
-
-In your project folder, run this unless setup is already complete:
+### Start with the idea
 
 ```text
-/setup-project This project will be a booking tool for my classes. Set up the agent instructions and working conventions. Show me the proposed changes before applying them.
+/shape-work I want people to book places in my classes.
 ```
 
-Answer the setup questions, approve the changes you want, and check the setup report for anything blocked before continuing.
+The skill might ask how many places each class has, whether people can cancel, and when they pay. Suppose you agree on a class list, reservations, and a clear “full” message, leaving payments and waiting lists for later. You supply the decisions; the skill knows how to explore and record them.
 
-### 2. Decide what the first version should do
+### For a small, single-session change
+
+Once you've agreed on the work:
 
 ```text
-/shape-work I teach small classes and want people to reserve a place themselves. Help me decide what belongs in the first version. I don't code, so ask me about how bookings should work rather than which technology to use.
+/work-on the booking tool we agreed on
 ```
 
-The agent might ask how many places each class has, whether people can cancel, and when they pay. For this example, suppose you agree on a class list, reservations, and a clear “full” message. You explicitly leave payments and waiting lists for later.
+You don't need a separate specification or tickets for one cohesive change. `work-on` uses the agreement in the conversation, obtains any missing technical analysis, and takes the work through implementation, checks, review, and reporting.
 
-### 3. Record the agreement
-
-After confirming the brief:
+If the change is already captured in an issue, reference that instead:
 
 ```text
-/write-spec Write a specification from the booking-tool brief we agreed on. Keep payments and waiting lists out of this version. Describe how we'll check that bookings work, including when only one place is left. Show me the draft before publishing anything.
+/work-on #4
 ```
 
-Read the specification and correct anything that doesn't match your intent. Confirm it before moving on; writing it does not start the build.
+You can also supply the issue URL. The skill reads the issue and project context; you don't need to paste its contents or add instructions about testing and approval.
 
-### 4. Check the technical starting point
+### For larger work that needs a specification and tasks
+
+From the agreed conversation, run:
 
 ```text
-/analyze Review the approved booking-tool specification against this project. Recommend how to build and check it, and flag any decisions I still need to make. Don't implement it yet.
+/write-spec
 ```
 
-Resolve any product decisions or missing requirements. The agent should investigate technical facts rather than asking you to guess. If current analysis already covers the agreed work, reuse it instead of repeating this step.
+The skill uses the existing agreement, preserves decisions such as leaving payments for later, and asks about any missing commitments. Confirm the specification and, when using GitHub, approve any proposed publication. Suppose the resulting spec issue is `#12`.
 
-### 5. Request the build
-
-If the agreed work can be delivered as one change:
+If the work needs breaking into tasks, continue:
 
 ```text
-/work-on Implement the booking flow in the approved specification. Show which checks ran and anything still unverified. Don't deploy it.
+/write-tickets
 ```
 
-If the plan needs several tasks, first ask for a breakdown:
+It uses the specification and current context, obtains missing technical evidence when needed, and proposes the tasks and their dependencies. Review and approve the tracker changes before they are published. If suitable tasks already exist, you don't need to create them again.
+
+Then request delivery of the specification:
 
 ```text
-/write-tickets Break the approved booking-tool specification into tasks using the analysis. Show me the proposed tasks and dependencies before publishing them.
+/work-on-spec #12
 ```
 
-Review the breakdown and approve the exact tracker changes. After the approved tasks and their dependencies are published, request the whole plan. `work-on-spec` handles the order of dependent tasks during delivery:
+A link to the spec issue works too. `work-on-spec` coordinates its tasks, starts eligible work, and waits for prerequisites as needed. It requires tracker access and an agent environment that can assign work to separate coding agents, with your permission. It reports missing capability rather than pretending the work ran.
 
-```text
-/work-on-spec Deliver the approved booking-tool specification through its published tasks. Report what was checked and what still needs my decision. Don't deploy it.
-```
+These short commands rely on the conversation and project context. If you move to a fresh session, provide the relevant issue or document reference. You don't need to repeat the skills' procedures or safeguards.
 
-Use one delivery route, not both for the same work. `work-on-spec` needs tracker access and an agent environment that supports assigning work to separate coding agents, with your permission. Missing capabilities or permission block that route; they aren't supplied by the command.
+### Try the result
 
-### 6. Try the result and read the report
+Delivery handles the relevant checks and independent review through `review-delivery`, then the change report through `pr`. Required tools and permissions still apply; missing required review leaves the work unaccepted. You don't need to call those skills again to repeat completed work.
 
-Delivery includes relevant checks and, when the required reviewer capability and permission are available, independent review through `review-delivery`. Missing required review leaves the work unaccepted. `pr` prepares the change report; opening a pull request needs the project's permission. You don't need to invoke those skills again if delivery has already completed those steps.
+Read what was checked and what remains uncertain. For this tool, useful evidence might cover reserving the last place, refusing the next booking, and preventing two people from taking the same place. These are examples, not claims that checks have run. Try the booking flow yourself against the agreement.
 
-Look for evidence that someone can reserve the last place, that the next booking is refused, and that two simultaneous bookings don't take the same place. These are examples of checks to expect, not claims that they have run. Try reserving a place yourself and compare the result with the specification.
-
-Before putting the tool online, consider hosting, personal data, security, and ongoing support separately. A build request doesn't authorize those steps.
+Deployment is a separate decision: the delivery commands don't grant permission to put the tool online. You don't need to append “don't deploy” to make that boundary apply.
 
 ## All skills
 
