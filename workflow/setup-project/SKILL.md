@@ -22,36 +22,29 @@ Read the [documentation contract](references/documentation-contract.md). Map eve
 
 Select **local-only**, **new GitHub repository**, or **existing GitHub repository**. A remote already present selects configuration, not another repository creation. Inspect permissions/settings read-only when the GitHub route is requested; local-only setup needs no GitHub login. Do not initialize Git, install tools, change labels, or write project documents during discovery.
 
-Read [model-use agreement](references/model-use.md) to discover and propose none or exact bounded permissions without exercising them. Setup requires no model/service calls, startup, credentials, downloads or installations.
+Read [model-use agreement](references/model-use.md) to inventory installed assessment skills, ask explicitly about permission for the discovered names, invite other allowances/prohibitions, and propose exact permissions without exercising them. Setup requires no model/service calls, startup, credentials, downloads or installations.
 
 For an existing or interrupted setup, read [reconciliation](references/reconciliation.md) before proposing edits.
 
 **Done:** existing authorities, route, current work, known facts, gaps, and capability limits are identified without mutations.
 
-## 2. Resolve missing decisions
+## 2. Agree setup one step at a time
 
-Read [discovery](references/discovery.md) and [changelog/versioning setup](references/releases.md). Establish how this project versions and whether its changelog is maintained, generated, missing, or intentionally unnecessary before planning release labels. Reuse evidence and confirmed decisions; ask manageable rounds of consequential questions in the user's preferred language. Resolve contradictions rather than silently picking the most convenient instruction. Organization requirements are not overridden by user preferences.
+Read [discovery](references/discovery.md) and follow its ordered confirmation rounds in the user's preferred language. Present only the current round, ask for its missing decisions and confirmation, then wait for the reply before advancing. Reuse confirmed decisions and show only necessary deltas on reruns. Resolve contradictions rather than silently picking the most convenient instruction. Organization requirements are not overridden by user preferences.
+
+Prepare companion plan-only results as needed for the relevant round: use the [domain handoff](references/domain-records.md) for domain deltas and `github-repo-setup` for GitHub settings, without executing either plan. Read [changelog/versioning setup](references/releases.md) before the history round and [tracker integration](references/issue-tracker.md) before the labels round. Establish versioning/changelog policy before recommending release labels. Existing relationships change only when explicitly included; setup does not create a backlog by default.
 
 Separate confirmed decisions, proposed recommendations, unknowns, and intentionally deferred concerns. A product director need not choose test seams or internal abstractions. A technical collaborator can choose technical co-design. Neither preference sets the project's security requirements.
 
-**Done:** the selected route has enough confirmed context to plan; optional unknowns and blocking decisions are explicit.
+**Done:** applicable rounds are confirmed with exact proposed effects, or execution is paused on a blocking decision. Optional unknowns and deferred concerns remain explicit.
 
-## 3. Present one approval plan
+## 3. Confirm execution of the agreed steps
 
-Show:
-- exact target directory/repository, route, and authoritative document mapping;
-- files/sections to create or change and custom content to preserve;
-- confirmed operating decisions, permissions, and relevant unknowns;
-- model-use policy home, exact none/permitted-route delta, rationale/approval provenance, shared budgets, disclosure, lifecycle and fallback decisions from the model-use reference;
-- changelog creation/maintenance route, versioning policy, and applicable release-impact labels;
-- GitHub creation/configuration, full label-audit dispositions (including approved edits/removals), spec labeling, branch rules, bypasses, pushes, and opt-ins when requested;
-- deferred/blocked operations and which independent local work can proceed.
+Maintain one cumulative plan from the confirmed rounds, including exact effects, exclusions, preserved content, approvals and blockers. Keep detail with its round rather than presenting the full plan again. Finish with a short readiness summary and ask whether to apply the agreed steps. This final confirmation authorizes execution of those effects only; earlier round confirmations do not trigger mutations.
 
-For domain work, use the [domain handoff](references/domain-records.md) to obtain the companion's **plan-only** result and incorporate its deltas and blockers. For GitHub, obtain the companion's inspected plan **without executing it**, then incorporate it into this plan. Use [tracker integration](references/issue-tracker.md) for spec/work-ticket label roles, title/readiness conventions, and native relationships. Existing relationships are changed only when explicitly included; setup does not create a backlog by default.
+Ask for approval before any setup mutation. Approval covers only the listed actions, including commits or pushes only if explicitly agreed in the Git round. New settings, deployment, billing, disclosure, credential changes and global installations retain their own approval gates. A plan with mandatory blocked operations cannot be called complete; the user may separately approve useful independent local progress.
 
-Ask for approval before any setup mutation. Approval covers these actions, not new settings, deployment, billing, disclosure, credential changes, commits, or global installations. A plan with mandatory blocked operations cannot be called complete; the user may separately approve useful local progress.
-
-**Done:** one concrete scope is approved, or execution is paused.
+**Done:** execution of the cumulative concrete scope is approved, or execution is paused.
 
 ## 4. Apply through bounded handoffs
 
