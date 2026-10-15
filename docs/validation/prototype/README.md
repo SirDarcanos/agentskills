@@ -1,6 +1,6 @@
 # Prototype #56 execution evidence
 
-Direct author checks for [#56](https://github.com/SirDarcanos/agentskills/issues/56), under [#48](https://github.com/SirDarcanos/agentskills/issues/48) and the [accepted design](../../design/composable-delivery.md). This is actual static/fixture execution evidence, not an independent review, autonomous agent trial or production-readiness claim. Repeatable package guidance and authored scenarios live in [Prototype validation](../../../prototype/references/validation.md).
+Direct author checks for [#56](https://github.com/SirDarcanos/agentskills/issues/56), under [#48](https://github.com/SirDarcanos/agentskills/issues/48) and the [accepted design](../../design/composable-delivery.md). This is actual static/fixture execution evidence, not an independent review, autonomous agent trial or production-readiness claim. Repeatable package guidance and authored scenarios live in [Prototype validation](../../../workflow/prototype/references/validation.md).
 
 ## Authority, input and scope
 

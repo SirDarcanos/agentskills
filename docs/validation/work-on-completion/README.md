@@ -1,6 +1,6 @@
 # #26 repair/completion evidence
 
-Repository-local evidence, outside the installable package. Runtime behavior is owned by [repair/completion](../../../work-on/references/completion.md); [completion validation](../../../work-on/references/completion-validation.md) contains authored scenarios and the execution boundary.
+Repository-local evidence, outside the installable package. Runtime behavior is owned by [repair/completion](../../../workflow/work-on/references/completion.md); [completion validation](../../../workflow/work-on/references/completion-validation.md) contains authored scenarios and the execution boundary.
 
 ## Reproduction and actual execution
 

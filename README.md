@@ -6,42 +6,58 @@ Reusable skills for coding agents. This repository collects skills that I use in
 
 ## Skills
 
-### General skills
+### Workflow
 
 | Skill | When to use it |
 | --- | --- |
-| [`analyze`](analyze/) | Assess technical readiness from codebase evidence, reuse current findings and recommend proportionate methods/checks without implementation. |
-| [`ask-clef`](ask-clef/) | Request or policy-authorize a bounded evidence-backed local Clef judgment over text or images. |
-| [`ask-clef-flash`](ask-clef-flash/) | Request or policy-authorize a bounded evidence-backed local Clef Flash judgment over text or images. |
-| [`ask-jev`](ask-jev/) | Assess an evidence-backed question with hosted Jev by explicit request or exact approved project policy, within shared disclosure and spending limits. |
-| [`ask-nimble`](ask-nimble/) | Request or policy-authorize a bounded evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
-| [`build-with-nimble`](build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
-| [`build-and-check`](build-and-check/) | Implement small increments with immediate relevant checks, existing coverage reuse and proportionate documentation/configuration validation. |
-| [`acceptance-first`](acceptance-first/) | Implement agreed workflows from executable observable examples and return criterion-level evidence with explicit intent/environment gaps. |
-| [`characterize`](characterize/) | Protect relevant legacy behavior before risky changes, with baseline provenance and separate intent, unknown and defect evidence. |
-| [`create-changelog`](create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
-| [`domain-modeling`](domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
-| [`github-repo-setup`](github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
-| [`implementation-preflight`](implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
-| [`investigate-bug`](investigate-bug/) | Confirm defects and cause, then prepare or reconcile workable tickets; investigation-only stops before repair. |
-| [`pr`](pr/) | Prepare plain-language PR reports with traceable test/CI impact, risks and reversal limits, and open/update only authorized PRs. |
-| [`prototype`](prototype/) | Answer bounded design, UX, state-model or feasibility questions with runnable experiments, explicit limitations and artifact disposition. |
-| [`research`](research/) | Investigate bounded questions directly or through authorized delegation, with cited sources, freshness checks and explicit uncertainty. |
-| [`review-delivery`](review-delivery/) | Review standalone or bounded specialist handoffs with independent Standards/Spec contexts, full committed/dirty scope and revision-aware evidence. |
-| [`setup-project`](setup-project/) | Establish project-aware agent instructions, operating context, approved model-use policy, domain records, and GitHub tracker configuration. |
-| [`shape-work`](shape-work/) | Shape unresolved ideas into usable agreements in project terms, with evidence reuse, manageable rounds and preserved concern dispositions. |
-| [`slop-guard`](slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |
-| [`stay-positive`](stay-positive/) | Reframe prose constructively without forcing optimism or weakening necessary negativity. |
-| [`tdd`](tdd/) | Implement bounded test-first changes with behavioral red–green–refactor, coverage reuse and local evidence. |
-| [`update-changelog`](update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
-| [`work-on`](work-on/) | Deliver or resume one bounded change as technical lead, reusing current evidence and composing methods, verification, independent review, bounded repairs and PR handoff. |
-| [`work-on-spec`](work-on-spec/) | Coordinate overall spec delivery through bounded Work On ticket agents, native dependencies, exclusive ownership, serial integration, aggregate verification/review and recovery. |
-| [`write-spec`](write-spec/) | Express agreed behavior with stable acceptance IDs, preserve decisions and publish only with separate authority and role/readiness read-back. |
-| [`write-tickets`](write-tickets/) | Decompose agreed work or publish ready bug evidence with exact approval and verified native dependencies; stop before scheduling. |
+| [`acceptance-first`](workflow/acceptance-first/) | Implement agreed workflows from executable observable examples and return criterion-level evidence with explicit intent/environment gaps. |
+| [`analyze`](workflow/analyze/) | Assess technical readiness from codebase evidence, reuse current findings and recommend proportionate methods/checks without implementation. |
+| [`build-and-check`](workflow/build-and-check/) | Implement small increments with immediate relevant checks, existing coverage reuse and proportionate documentation/configuration validation. |
+| [`characterize`](workflow/characterize/) | Protect relevant legacy behavior before risky changes, with baseline provenance and separate intent, unknown and defect evidence. |
+| [`domain-modeling`](workflow/domain-modeling/) | Establish or revise domain vocabulary, context maps, and ADRs directly or through another workflow. |
+| [`github-repo-setup`](workflow/github-repo-setup/) | Create or configure a GitHub repository through an approved standalone plan or project-setup handoff. |
+| [`implementation-preflight`](workflow/implementation-preflight/) | Select or create the correct Git branch and PR target before an implementation workflow begins. |
+| [`investigate-bug`](workflow/investigate-bug/) | Confirm defects and cause, then prepare or reconcile workable tickets; investigation-only stops before repair. |
+| [`pr`](workflow/pr/) | Prepare plain-language PR reports with traceable test/CI impact, risks and reversal limits, and open/update only authorized PRs. |
+| [`prototype`](workflow/prototype/) | Answer bounded design, UX, state-model or feasibility questions with runnable experiments, explicit limitations and artifact disposition. |
+| [`research`](workflow/research/) | Investigate bounded questions directly or through authorized delegation, with cited sources, freshness checks and explicit uncertainty. |
+| [`review-delivery`](workflow/review-delivery/) | Review standalone or bounded specialist handoffs with independent Standards/Spec contexts, full committed/dirty scope and revision-aware evidence. |
+| [`setup-project`](workflow/setup-project/) | Establish project-aware agent instructions, operating context, approved model-use policy, domain records, and GitHub tracker configuration. |
+| [`shape-work`](workflow/shape-work/) | Shape unresolved ideas into usable agreements in project terms, with evidence reuse, manageable rounds and preserved concern dispositions. |
+| [`tdd`](workflow/tdd/) | Implement bounded test-first changes with behavioral red–green–refactor, coverage reuse and local evidence. |
+| [`work-on-spec`](workflow/work-on-spec/) | Coordinate overall spec delivery through bounded Work On ticket agents, native dependencies, exclusive ownership, serial integration, aggregate verification/review and recovery. |
+| [`work-on`](workflow/work-on/) | Deliver or resume one bounded change as technical lead, reusing current evidence and composing methods, verification, independent review, bounded repairs and PR handoff. |
+| [`write-spec`](workflow/write-spec/) | Express agreed behavior with stable acceptance IDs, preserve decisions and publish only with separate authority and role/readiness read-back. |
+| [`write-tickets`](workflow/write-tickets/) | Decompose agreed work or publish ready bug evidence with exact approval and verified native dependencies; stop before scheduling. |
+
+### Writing
+
+| Skill | When to use it |
+| --- | --- |
+| [`create-changelog`](writing/create-changelog/) | Create a project's first `CHANGELOG.md` from repository evidence and Semantic Versioning history. |
+| [`slop-guard`](writing/slop-guard/) | Audit, rewrite, or draft human-facing prose while preserving facts, meaning, and the writer's voice. |
+| [`stay-positive`](writing/stay-positive/) | Reframe prose constructively without forcing optimism or weakening necessary negativity. |
+| [`update-changelog`](writing/update-changelog/) | Maintain an existing changelog after notable changes, during release preparation, or when correcting release history. |
+
+### Models
+
+| Skill | When to use it |
+| --- | --- |
+| [`ask-clef-flash`](models/ask-clef-flash/) | Request or policy-authorize a bounded evidence-backed local Clef Flash judgment over text or images. |
+| [`ask-clef`](models/ask-clef/) | Request or policy-authorize a bounded evidence-backed local Clef judgment over text or images. |
+| [`ask-jev`](models/ask-jev/) | Assess an evidence-backed question with hosted Jev by explicit request or exact approved project policy, within shared disclosure and spending limits. |
+| [`ask-nimble`](models/ask-nimble/) | Request or policy-authorize a bounded evidence-backed local Nimble judgment, with direct answers for unsuitable questions. |
+| [`build-with-nimble`](models/build-with-nimble/) | Build applications with Nimble's composable decisions through local or self-hosted Ollama. |
 
 ## Repository layout
 
-Each skill lives in its own directory and uses `SKILL.md` as its entry point:
+Skills are grouped by purpose in `workflow/`, `writing/`, and `models/`. Workflow covers discovery, planning, setup, implementation methods, and delivery—not only coding. Each skill remains an independent package with `SKILL.md` as its entry point:
+
+```text
+workflow/    # Discovery, planning, setup, methods, and delivery
+writing/     # Prose and changelogs
+models/      # Model assessments and integrations
+```
 
 ```text
 skill-name/
@@ -51,7 +67,7 @@ skill-name/
 └── scripts/       # Optional automation
 ```
 
-A skill's `SKILL.md` explains when to use the skill and gives the agent its working instructions. Its `README.md` provides a human-facing overview. Supporting files stay beside the skill so it can be copied as one unit.
+A skill's `SKILL.md` explains when to use the skill and gives the agent its working instructions. Its `README.md` provides a human-facing overview. Supporting files stay beside the skill so it can be copied as one unit. For example, copy `workflow/shape-work/`, not the whole `workflow/` folder. Skill names and name-based CLI selection are unchanged; manual source paths now include the group. Existing installed copies are not moved or refreshed by this reorganization.
 
 ## Using a skill
 

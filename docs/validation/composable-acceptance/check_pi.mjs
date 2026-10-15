@@ -22,10 +22,17 @@ const options = skillPaths => ({ cwd: scratch, agentDir: path.join(scratch, 'emp
   skillPaths, includeDefaults: false });
 const records = [];
 try {
-  const names = fs.readdirSync(repo).filter(name => fs.existsSync(path.join(repo, name, 'SKILL.md'))).sort();
+  const packages = ['workflow', 'writing', 'models'].flatMap(group =>
+    fs.readdirSync(path.join(repo, group), { withFileTypes: true })
+      .filter(entry => entry.isDirectory() && fs.existsSync(path.join(repo, group, entry.name, 'SKILL.md')))
+      .map(entry => ({ name: entry.name, relative: `${group}/${entry.name}` })))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  assert(packages.length > 0, 'no skill packages discovered');
+  const names = packages.map(item => item.name);
+  assert.equal(new Set(names).size, names.length, 'duplicate source skill names');
   const copies = [];
-  for (const [index, name] of names.entries()) {
-    const source = path.join(repo, name);
+  for (const [index, { name, relative }] of packages.entries()) {
+    const source = path.join(repo, relative);
     const copy = path.join(scratch, `location-${index}`, name);
     fs.cpSync(source, copy, { recursive: true, dereference: false });
     copies.push(copy);
@@ -64,7 +71,7 @@ try {
   const rendering = [];
   const documents = ['README.md', 'docs/design/composable-delivery-validation.md',
     'docs/validation/composable-acceptance/README.md',
-    ...names.flatMap(name => [`${name}/SKILL.md`, `${name}/README.md`])];
+    ...packages.flatMap(({ relative }) => [`${relative}/SKILL.md`, `${relative}/README.md`])];
   for (const relative of documents) {
     const raw = fs.readFileSync(path.join(repo, relative), 'utf8');
     const body = raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');

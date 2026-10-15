@@ -58,7 +58,7 @@ Update the authoritative home when an approved change alters its facts; keep pro
 
 | Change | Owner and authoritative home |
 | --- | --- |
-| Domain meaning or relationship | Discovering/changing phase: follow [domain-modeling](../../domain-modeling/SKILL.md) to maintain [CONTEXT.md](../../CONTEXT.md). Reuse confirmed decisions and the current document mapping. |
+| Domain meaning or relationship | Discovering/changing phase: follow [domain-modeling](../../workflow/domain-modeling/SKILL.md) to maintain [CONTEXT.md](../../CONTEXT.md). Reuse confirmed decisions and the current document mapping. |
 | Qualifying enduring architectural decision | Analysis/implementation: use the same specialist to create or supersede a relevant ADR, preserving rationale and links. Default home is `docs/adr/`, created only for an actual record. |
 | Purpose, maintenance context, or operating constraint | Lead/maintainer: reconcile [project context](project.md) with appropriate approval. |
 | Authority, verification, delivery, or release convention | Lead/change owner: update this document and reconcile any affected configuration through an approved plan. |

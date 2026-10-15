@@ -16,7 +16,7 @@ Repository-only evidence for [#24](https://github.com/SirDarcanos/agentskills/is
 
 The maintainer requested that session-specific trial history and full model reports remain repository evidence rather than ship to consumers. They were moved here from `review-delivery/references/`; the initial implementation record was also extracted from the package's validation reference. Original report content and hashes remain recorded; relative links and evidence ownership pointers were reconciled.
 
-The installable package retains its entry point, runtime [scope](../../../review-delivery/references/scope.md) and [report](../../../review-delivery/references/report.md) contracts, concise [validation instructions](../../../review-delivery/references/validation.md), and reusable scripts/checks. Package-local Markdown links stay within that copied directory; the skill does not require this evidence tree or load a ticket's execution history during use.
+The installable package retains its entry point, runtime [scope](../../../workflow/review-delivery/references/scope.md) and [report](../../../workflow/review-delivery/references/report.md) contracts, concise [validation instructions](../../../workflow/review-delivery/references/validation.md), and reusable scripts/checks. Package-local Markdown links stay within that copied directory; the skill does not require this evidence tree or load a ticket's execution history during use.
 
 ## Relocation verification
 

@@ -13,7 +13,7 @@ Write Tickets remains the publication/graph owner. This change clarifies its unr
 
 ## Executable cases
 
-Run [package validation commands](../../../investigate-bug/references/validation.md). `test_investigation.py` creates only temporary synthetic code and JSON tracker state, reusing #63's `FakeTracker`. Exact local caller choices are authored tests, not a new production diagnosis service or automatic authorization mechanism.
+Run [package validation commands](../../../workflow/investigate-bug/references/validation.md). `test_investigation.py` creates only temporary synthetic code and JSON tracker state, reusing #63's `FakeTracker`. Exact local caller choices are authored tests, not a new production diagnosis service or automatic authorization mechanism.
 
 The confirmed fixture's contract is that a discount fraction applies to subtotal. For `[40, 60]` and `.10`, the actual module returns `99.9`, not `90`; zero returns `100`, `.20` returns `99.8`. Source inspection establishes subtraction of the raw fraction rather than subtotal times fraction. A meaningful reproduction assertion fails; the complete ticket records the causal evidence, identities, fix boundary, constraints, exclusions, risks, acceptance/regression and TDD recommendation. A harmless owned probe is restored and a reproduction file retained in the temporary approved home. Persisted issue/body/labels are read back, no parent is invented, and product plus unrelated bytes remain unchanged: the investigation-only test never repairs the defect.
 

@@ -7,7 +7,7 @@ import subprocess
 import sys
 import tempfile
 
-from check_packages import offline_environment
+from check_packages import offline_environment, package_locations
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
@@ -16,7 +16,7 @@ REPO = HERE.parents[2]
 def digest_inputs():
     # Full deciding packages and historical executable fixtures, not just main scripts.
     result = {}
-    roots = [p.parent for p in REPO.glob('*/SKILL.md')]
+    roots = package_locations(REPO)
     roots += [REPO / 'docs/validation', REPO / 'docs/agents', REPO / 'docs/design', REPO / 'docs/adr']
     for root in roots:
         for path in sorted(root.rglob('*')):

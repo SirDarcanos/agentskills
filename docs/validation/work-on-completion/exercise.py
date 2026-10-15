@@ -6,7 +6,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-SNAPSHOT = Path(__file__).resolve().parents[3] / "review-delivery/scripts/snapshot.py"
+SNAPSHOT = Path(__file__).resolve().parents[3] / "workflow/review-delivery/scripts/snapshot.py"
 BAD = "def public(record):\n    return dict(record)\n"
 GOOD = "def public(record):\n    return {'name': record['name']}\n"
 TEST = """import unittest

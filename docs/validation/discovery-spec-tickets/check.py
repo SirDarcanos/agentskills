@@ -25,8 +25,8 @@ def main(output):
         ("spec-extraction", ["docs/validation/write-spec/check.py"]),
         ("ticket-extraction", ["docs/validation/write-tickets/check.py"]),
         ("ticket-tests", ["-m", "unittest", "discover", "-s", "docs/validation/write-tickets", "-p", "test_*.py"]),
-        ("setup-tests", ["-m", "unittest", "discover", "-s", "setup-project/tests", "-p", "test_*.py"]),
-        ("helper-help", ["setup-project/scripts/dependencies.py", "--help"]),
+        ("setup-tests", ["-m", "unittest", "discover", "-s", "workflow/setup-project/tests", "-p", "test_*.py"]),
+        ("helper-help", ["workflow/setup-project/scripts/dependencies.py", "--help"]),
         ("package-invocation-tests", ["-m", "unittest", "discover", "-s", "docs/validation/delivery-coverage", "-p", "test_package_invocation.py"]),
         ("shared-package-checks", ["docs/validation/delivery-coverage/check_packages.py"]),
     ]
@@ -45,7 +45,7 @@ def main(output):
     expected_adapted = notice.replace(b"Copyright (c) 2026 Nicola Mustone",
                                     b"Copyright (c) 2026 Matt Pocock\nCopyright (c) 2026 Nicola Mustone")
     for name in ("shape-work", "write-spec", "write-tickets"):
-        source = REPO / name
+        source = REPO / 'workflow' / name
         assert (source / "LICENSE").read_bytes() == (notice if name == "shape-work" else expected_adapted)
         checks.check_package(source, name, False, notice)
         with tempfile.TemporaryDirectory() as tmp:
@@ -54,7 +54,7 @@ def main(output):
             checks.check_package(isolated, name, False, notice)
     # Repair #67's stale expectations rather than skip the affected package.
     # Regression tests also reject accidentally broadened invocation authority.
-    checks.check_package(REPO / "work-on", "work-on", checks.PACKAGES["work-on"], notice)
+    checks.check_package(REPO / "workflow/work-on", "work-on", checks.PACKAGES["work-on"], notice)
     links = checks.check_links(list(HERE.glob("*.md")), REPO)
     for path in HERE.glob("*.py"):
         ast.parse(path.read_text(), filename=str(path), feature_version=(3, 9))

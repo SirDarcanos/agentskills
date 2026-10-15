@@ -1,6 +1,6 @@
 # Work On single-change cutover evidence
 
-Delivery evidence for [#67](https://github.com/SirDarcanos/agentskills/issues/67), under [#48](https://github.com/SirDarcanos/agentskills/issues/48) and the [accepted design](../../design/composable-delivery.md). Package runtime instructions start at [Work On](../../../work-on/SKILL.md); [package validation](../../../work-on/references/single-change-validation.md) describes runnable checks. This record is not an agent-adherence trial or full #48 acceptance.
+Delivery evidence for [#67](https://github.com/SirDarcanos/agentskills/issues/67), under [#48](https://github.com/SirDarcanos/agentskills/issues/48) and the [accepted design](../../design/composable-delivery.md). Package runtime instructions start at [Work On](../../../workflow/work-on/SKILL.md); [package validation](../../../workflow/work-on/references/single-change-validation.md) describes runnable checks. This record is not an agent-adherence trial or full #48 acceptance.
 
 ## Scope and source
 

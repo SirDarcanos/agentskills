@@ -34,7 +34,7 @@ All rows consume the minimal envelope below. Ordinary user requests supply the s
 
 ### Shipped coordinator ownership
 
-[#68](https://github.com/SirDarcanos/agentskills/issues/68) implements [Work On Spec](../../work-on-spec/SKILL.md): dispatch/overall recovery move there, Work On retains only dispatch compatibility pointers and local recovery, and common execution/verification/completion remain resolved Work On libraries. [Package validation](../../work-on-spec/references/validation.md) and [repository evidence](../validation/work-on-spec/README.md) distinguish offline fixtures from later #72 runtime trials. Original #14 execution records remain historical evidence; source publication performs no installed migration.
+[#68](https://github.com/SirDarcanos/agentskills/issues/68) implements [Work On Spec](../../workflow/work-on-spec/SKILL.md): dispatch/overall recovery move there, Work On retains only dispatch compatibility pointers and local recovery, and common execution/verification/completion remain resolved Work On libraries. [Package validation](../../workflow/work-on-spec/references/validation.md) and [repository evidence](../validation/work-on-spec/README.md) distinguish offline fixtures from later #72 runtime trials. Original #14 execution records remain historical evidence; source publication performs no installed migration.
 
 ### Current procedure destination map
 

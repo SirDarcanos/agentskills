@@ -242,7 +242,7 @@ class BenchmarkTests(unittest.TestCase):
             with patch.object(run, "transport") as network, contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(run.main(["--models", "nimble", "--export-cases", str(target)]), 0)
                 network.assert_not_called()
-            spec = importlib.util.spec_from_file_location("nimble_replay", ROOT.parents[1] / "ask-nimble/scripts/replay.py")
+            spec = importlib.util.spec_from_file_location("nimble_replay", ROOT.parents[1] / "models/ask-nimble/scripts/replay.py")
             legacy = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(legacy)
             self.assertEqual(len(legacy.load_cases(target)), 100)

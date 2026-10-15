@@ -1,6 +1,6 @@
 # #62 specification extraction evidence
 
-Scope: standalone [Write Spec](../../../write-spec/SKILL.md), its publication/reference gates and Work On's thin product-agreement adapter. Accepted #50 design integrated through PR #75 at `a95a9588`; source baseline `c1465e7` includes #61. Native #62 blocked-by inspection returned only closed #50, and the accepted design status plus merged artifact established eligibility, not closure alone. No graph/issue-label changes were made.
+Scope: standalone [Write Spec](../../../workflow/write-spec/SKILL.md), its publication/reference gates and Work On's thin product-agreement adapter. Accepted #50 design integrated through PR #75 at `a95a9588`; source baseline `c1465e7` includes #61. Native #62 blocked-by inspection returned only closed #50, and the accepted design status plus merged artifact established eligibility, not closure alone. No graph/issue-label changes were made.
 
 ## Executed evidence
 

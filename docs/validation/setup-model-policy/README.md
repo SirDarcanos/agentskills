@@ -4,7 +4,7 @@ Direct evidence for [#51](https://github.com/SirDarcanos/agentskills/issues/51),
 
 ## Executed direct fixtures
 
-The agent created seven disposable local targets, read their entry points and existing policies, selected the necessary policy delta using the shipped [procedure](../../../setup-project/references/model-use.md), applied three synthetic-approved document plans with file tools, and read back actual outputs. Synthetic approvals N1/L1/H1 exist only for these disposable targets, never this repository or a real model call. [Input/output snapshots and decisions](fixtures.json) retain the exact text rather than authored expected results presented as execution.
+The agent created seven disposable local targets, read their entry points and existing policies, selected the necessary policy delta using the shipped [procedure](../../../workflow/setup-project/references/model-use.md), applied three synthetic-approved document plans with file tools, and read back actual outputs. Synthetic approvals N1/L1/H1 exist only for these disposable targets, never this repository or a real model call. [Input/output snapshots and decisions](fixtures.json) retain the exact text rather than authored expected results presented as execution.
 
 | Fixture | Actual outcome |
 | --- | --- |

@@ -1,6 +1,6 @@
 # #28 recovery evidence
 
-Repository-local evidence outside the installable package. [Recovery](../../../work-on/references/recovery.md) owns runtime behavior; [recovery validation](../../../work-on/references/recovery-validation.md) owns authored cases and the execution boundary.
+Repository-local evidence outside the installable package. [Recovery](../../../workflow/work-on/references/recovery.md) owns runtime behavior; [recovery validation](../../../workflow/work-on/references/recovery-validation.md) owns authored cases and the execution boundary.
 
 ## Reproduction and executed checks
 

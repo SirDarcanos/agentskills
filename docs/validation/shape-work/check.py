@@ -25,7 +25,7 @@ def digest(path):
 def main():
     notice = (REPO / "LICENSE").read_bytes()
     for name, command_only in (("shape-work", False), ("work-on", False)):
-        source = REPO / name
+        source = REPO / 'workflow' / name
         checks.check_package(source, name, command_only, notice)
         if name == "shape-work":
             assert (source / "LICENSE").read_bytes() == notice

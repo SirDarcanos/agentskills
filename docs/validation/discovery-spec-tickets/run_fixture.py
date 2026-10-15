@@ -37,9 +37,9 @@ def run(output):
     output.mkdir(parents=True, exist_ok=False)
     baseline = REPO / "docs/validation/shape-work/reading_list.py"
     protected = baseline.read_bytes(), baseline.stat().st_mode
-    source_paths = [baseline, REPO / "setup-project/scripts/dependencies.py",
+    source_paths = [baseline, REPO / "workflow/setup-project/scripts/dependencies.py",
                     REPO / "docs/validation/write-tickets/tracker_fixture.py"]
-    source_paths += [REPO / name / "SKILL.md" for name in (
+    source_paths += [REPO / "workflow" / name / "SKILL.md" for name in (
         "shape-work", "write-spec", "write-tickets", "analyze", "research",
         "domain-modeling", "setup-project", "tdd")]
     source_paths += [HERE / name for name in (
@@ -50,7 +50,7 @@ def run(output):
     (output / "baseline.txt").write_text(baseline_run.stdout + baseline_run.stderr)
     assert baseline_run.returncode == 0
     fixture = module("ticket_fixture", REPO / "docs/validation/write-tickets/tracker_fixture.py")
-    helper = module("dependencies", REPO / "setup-project/scripts/dependencies.py")
+    helper = module("dependencies", REPO / "workflow/setup-project/scripts/dependencies.py")
     plan = json.loads((HERE / "tickets.json").read_text())
     assert plan["repository"] == fixture.FakeTracker.repository
     bodies = {"SPEC": (HERE / plan["spec"]["body_file"]).read_text()}

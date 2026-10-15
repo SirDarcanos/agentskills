@@ -11,7 +11,7 @@ For [#63](https://github.com/SirDarcanos/agentskills/issues/63), under accepted 
 
 ## Reproduction and limitations
 
-Run the commands in [package validation](../../../write-tickets/references/validation.md). `tracker_fixture.py` writes only a disposable JSON store, supports native parent/blocker endpoints and page-size-one observations, and keeps issue numbers distinct from database IDs. `test_tracker.py` exercises the real Setup Project blocker reconciler through that fixture. Parent writes/conflicts, ticket creation and labels are fixture mechanics with authored caller decisions; this is neither an additional production graph algorithm nor proof of live API behavior or authorization enforcement.
+Run the commands in [package validation](../../../workflow/write-tickets/references/validation.md). `tracker_fixture.py` writes only a disposable JSON store, supports native parent/blocker endpoints and page-size-one observations, and keeps issue numbers distinct from database IDs. `test_tracker.py` exercises the real Setup Project blocker reconciler through that fixture. Parent writes/conflicts, ticket creation and labels are fixture mechanics with authored caller decisions; this is neither an additional production graph algorithm nor proof of live API behavior or authorization enforcement.
 
 Covered: persisted parent/blocker read-back in both directions, no-op rerun, preserved unrelated labels/edges, pagination, combined blocker cycle, parent ancestry cycle/conflicting parent, number-as-ID rejection, wrong-ID read-back in both blocker directions, failed parent read, partial blocker write inspected before retry, interrupted creation searched before retry, duplicate ambiguity, standalone bug and plan-only/publication without automatic readiness.
 

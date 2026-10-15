@@ -1,6 +1,6 @@
 # #27 dispatch/integration evidence
 
-Repository-local evidence, outside the installable package. [Dispatch](../../../work-on/references/dispatch.md) owns runtime behavior; [dispatch validation](../../../work-on/references/dispatch-validation.md) contains authored cases and the execution boundary.
+Repository-local evidence, outside the installable package. [Dispatch](../../../workflow/work-on/references/dispatch.md) owns runtime behavior; [dispatch validation](../../../workflow/work-on/references/dispatch-validation.md) contains authored cases and the execution boundary.
 
 ## Reproduction and actual execution
 

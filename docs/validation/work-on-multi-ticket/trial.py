@@ -44,7 +44,7 @@ def run(root, args, expected=0):
 
 
 def helper():
-    source = REPO / 'review-delivery' / 'scripts' / 'snapshot.py'
+    source = REPO / 'workflow/review-delivery' / 'scripts' / 'snapshot.py'
     spec = importlib.util.spec_from_file_location('snapshot', source)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)

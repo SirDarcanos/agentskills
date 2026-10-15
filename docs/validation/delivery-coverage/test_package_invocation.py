@@ -22,7 +22,7 @@ class WorkOnInvocation(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.package = Path(self.temp.name) / "non-sibling-catalog-entry"
-        shutil.copytree(REPO / "work-on", self.package, symlinks=True)
+        shutil.copytree(REPO / "workflow/work-on", self.package, symlinks=True)
         self.entry = self.package / "SKILL.md"
         self.notice = (REPO / "LICENSE").read_bytes()
 
