@@ -1,26 +1,28 @@
-# Agent Skills
+# Agent skills for turning ideas into software
 
 [![skills.sh](https://skills.sh/b/SirDarcanos/agentskills)](https://skills.sh/SirDarcanos/agentskills)
-
-**Turn your idea into a clear plan, then ask your coding agent to build and check it.**
 
 Have an idea for an app, but aren't sure what to ask your coding agent next? You can describe who it's for and what it should do without knowing how to design a database or write a test.
 
 These are the skills I use in my own projects and share for others to adapt. They guide your agent from questions about your idea to implementation, checks, and review:
 
-- **Get clear before code.** Work through what matters, what can wait, and what a useful first version would do.
+- **Decide what to build.** Work through what matters, what can wait, and what a useful first version would do.
 - **Delegate the coding steps.** Let the agent choose how to build an agreed change while bringing important product choices back to you.
-- **Know what to check.** Ask for a report of what works, which checks ran, and what remains uncertain, so you can try the result and decide whether it meets your needs.
+- **See what was checked.** Ask for the checks that ran, their results, and anything still unverified. Use that report alongside your own trial of the software to decide whether it meets your needs.
 
 Already write code? The same workflow helps you focus on behavior, review findings, and risks instead of supervising every generated line.
 
-A **skill** is a set of instructions your coding agent loads for a particular job. These are editable files for your existing agent, not another app to learn. They're free and open source under the [MIT license](LICENSE); your agent and any services you choose may have their own costs.
+## What are agent skills?
+
+A **skill** is a set of instructions your coding agent loads for a particular job. These are editable files for your existing agent, not another app to learn.
+
+The skills are free and open source under the [MIT license](LICENSE). Your agent and any services you choose may have their own costs.
 
 **[Try Shape Work with your own idea](#get-started)** · [See a booking-tool example](#example-a-booking-tool) · [Browse all skills](#all-skills)
 
 ## From idea to delivery
 
-You don't need to arrive with a technical plan. Start with the problem you want to solve; use the stages that your project needs.
+Use the stages your project needs.
 
 | Stage | What it helps you get | Your part |
 | --- | --- | --- |
@@ -36,7 +38,7 @@ Independent review needs an agent that can run separate reviewers and your permi
 
 ## Get started
 
-**Start with one idea and one skill.** Try Shape Work to clarify what you want before committing to a build. You don't need to learn the whole catalog first.
+Try Shape Work with one idea before choosing whether to build it. You can start here without learning the rest of the catalog.
 
 You'll need a coding agent that supports skills and can read your project files. The terminal commands below also require Node.js and `npx`. Start in a project you can safely experiment with.
 
@@ -50,7 +52,7 @@ npx skills add SirDarcanos/agentskills --skill shape-work
 
 Choose your agent and installation destination when prompted. Check for an existing skill with the same name before replacing it.
 
-This installs the discovery instructions, not an application. If the conversation needs fact-finding, Shape Work may also need `research` or `analyze`. Those companion skills are separate installs; missing requirements should be explained, not silently installed.
+If the conversation needs fact-finding, Shape Work may also need `research` or `analyze`. Those companion skills are separate installs; missing requirements should be explained, not silently installed.
 
 ### 2. Start with your idea
 
@@ -100,7 +102,7 @@ Suppose you teach small classes. Each booking means another message and another 
 
 **Ask what happens to the last place.** A booking form appearing on screen isn't enough. Can someone reserve the last place? Is the next booking refused? What if two people try at once? These are examples of checks the work could need, not claims that they have run. Delivery calls for independent review and a report separating executed checks from anything unverified.
 
-Now you have concrete behavior to try yourself, not just code to read. Before putting the tool online, consider hosting, personal data, security, and ongoing support separately; a build request doesn't authorize those steps.
+Try reserving a place yourself. Before putting the tool online, consider hosting, personal data, security, and ongoing support separately; a build request doesn't authorize those steps.
 
 ## All skills
 
@@ -169,13 +171,11 @@ For comparisons, see the [decision-model benchmark](benchmarks/decision-models/)
 
 ## What to expect
 
-You can delegate coding without treating the result as a black box. Ask what changed, what was checked, and what still needs attention. Try the important workflows yourself.
-
-These skills guide an agent; they do not guarantee it will follow every instruction or produce correct software. Checks and separate reviews can miss problems. Get qualified technical review before relying on software that handles sensitive data, money, or other high-stakes operations.
+These skills guide an agent; they do not guarantee it will follow every instruction or produce correct software. Checks and separate reviews can miss problems, so try the important workflows yourself. Get qualified technical review before relying on software that handles sensitive data, money, or other high-stakes operations.
 
 If a tool, permission, companion skill, or required check is missing, the agent should tell you. Check the selected skills' requirements for your agent; this collection is not certified across all runtimes.
 
-**Have an idea you'd like to work through? [Start with Shape Work](#get-started).**
+[Start with Shape Work](#get-started) to explore your idea before building.
 
 ## Adapting skills and finding the details
 
