@@ -22,8 +22,25 @@ From a copied package resolve `scripts/check-single-change-fixture.py` relative 
 | Material-check blocker | Focused pass plus truly absent required integration check; observed process failure remains unavailable, no install or repair retry |
 | Git environment isolation | Hostile Git variables target a separate sacrificial repository/index and hook templates; fixture init/add/commit remain local, external bytes/modes/HEAD stay unchanged and no hook marker appears |
 | Static guard assertions | Metadata/body handoff gates, no routine method questionnaire/self-review substitution/nested pools, retained shared repair/model history and inactive dispatch boundary |
+| Portable authority/source-target guards | Required-review grant and limits remain in the shipped contract; entry points to it, blanket delegation denial does not return, and reusable fixes target tracked sources rather than local policy or installed copies |
 
 The caller steps and ledger objects in these fixtures are synthetic test oracles, not runtime enforcement. They demonstrate executable checks, dirty-work preservation, drift and the modeled handoffs. Static text assertions guard accidental deletion of instructions; they do not prove an agent follows them. These fixtures neither independently review the formatter nor accept its delivery. Full autonomous composed agent/installed-runtime and live tracker/PR/model paths remain unexecuted by this script.
+
+## Required-review authority cases
+
+Read [required-review authority](contracts.md#required-review-authority) and the discovered Review Delivery handoff when exercising these cases. Use independently copied packages and a synthetic target with no local standing-permission policy. The table specifies expected decisions, not executed agent behavior; source guards check instruction presence only.
+
+| Case | Required observation |
+| --- | --- |
+| Explicit Work On delivery, no local permission policy | Originating request supplies review authority; root reserves bounded Standards/Spec contexts without asking for delegation again. |
+| Work On Spec delivery / assigned ticket | Same authority is inherited from the overall request; ticket lead asks the existing root to launch reviews, never a nested pool. |
+| Explicit user/project/runtime prohibition | Restriction wins; no unauthorized reviewer launches, and independent acceptance remains blocked. |
+| One slot / missing bounded runtime | Sequence axes with one available slot; genuinely missing capability preserves implemented-but-unaccepted work, not a fictitious permission gap. |
+| New disclosure/spending or optional worker/assessment | Required review grants none of those extra effects; obtain their separate approval or report the affected blocker. |
+| Library read or investigation-only request | No delivery execution authority is originated; standalone review must establish its own permission. |
+| Reusable-skill correction | Actual diff changes tracked skill behavior; local policy alone cannot satisfy acceptance and installed copies remain protected. |
+
+When running an agent exercise, record actual launches, prompts, protected manifests, reviewer outputs and limitations separately from this authored matrix. No live tracker mutation, service call or installation is needed to inspect these instructions.
 
 ## Acceptance mapping
 

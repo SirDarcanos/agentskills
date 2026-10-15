@@ -234,5 +234,33 @@ class SingleChange(unittest.TestCase):
         print("instruction guard assertions: PASS (static, not agent-adherence proof)")
 
 
+class PortableAuthorityInstructions(unittest.TestCase):
+    """Source-contract guards, not execution of agent authorization decisions."""
+
+    def test_required_reviews_have_portable_bounded_authority(self):
+        entry = (PACKAGE / "SKILL.md").read_text()
+        contract = (PACKAGE / "references/contracts.md").read_text()
+        self.assertIn("## Required-review authority\n", contract)
+        authority = contract.split("## Required-review authority\n", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("contracts.md#required-review-authority", entry)
+        self.assertNotIn("Delegation is optional and separately authorized.", entry)
+        self.assertNotIn("destructive operations, delegation, account changes", entry)
+        for clause in ("explicit user delivery request", "`work-on` or `work-on-spec`",
+                       "read-only Standards and Spec", "without another permission prompt",
+                       "no repository-local standing permission", "Explicit user/project/runtime restrictions",
+                       "configured agent runtime", "root", "two active non-lead workers",
+                       "New sensitive disclosure", "additional spending", "optional model assessments",
+                       "library grants no execution authority", "implemented-but-unaccepted"):
+            with self.subTest(clause=clause):
+                self.assertIn(clause, authority)
+
+    def test_reusable_package_fix_targets_sources_not_local_policy(self):
+        entry = (PACKAGE / "SKILL.md").read_text()
+        for clause in ("tracked package sources", "repository-local operating policy",
+                       "not a substitute", "Installed copies remain unchanged"):
+            with self.subTest(clause=clause):
+                self.assertIn(clause, entry)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

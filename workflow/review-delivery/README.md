@@ -17,7 +17,7 @@ Alternatively, copy or link this entire directory, including its [MIT notice](LI
 ## Requirements and limits
 
 - File inspection and actual project instructions, approved spec/brief, raw verification evidence.
-- Permission and runtime support for two distinct read-only reviewer contexts, independent of authors and each other's conclusions. They may run sequentially; finite bounds and separately inspectable results are required.
+- Permission and runtime support for two distinct read-only reviewer contexts, independent of authors and each other's conclusions. Authorized Work On/Work On Spec delivery handoffs carry required-review permission through the discovered execution contract; check that authority and explicit restrictions without a redundant delegation prompt. Standalone callers establish their own permission. They may run sequentially; finite bounds and separately inspectable results are required.
 - For delegated review, discovered compatible `work-on` execution/handoff library with shared capacity, root launch ownership, lifecycle and finding-lineage limits. Reading the library does not invoke delivery. Missing or incompatible library blocks delegated review, not plain inspection; no sibling layout is required.
 - Git for Git comparisons; an authorized before/after manifest outside Git.
 - Optional Python 3.9+ and Git for the shipped scope fingerprint helper. It uses only the standard library, captures explicit file paths and does not discover scope, run reviewers or repair findings.

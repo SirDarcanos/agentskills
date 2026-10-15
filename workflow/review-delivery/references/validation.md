@@ -25,7 +25,7 @@ The fixture's dirty formatter changes case; an untracked module duplicates norma
 3. Execute Standards and Spec separately using this skill and its report contract. Check whether they detect the dirty case regression and untracked duplicate ownership with locations, rationale and materiality. Retain actual reports, not authored expected findings.
 4. After initial reports, change an included untracked file and add a relevant caller. Repeat discovery/fingerprints and require affected evidence to be marked stale; repin before renewed review. An unchanged HEAD or tracked patch cannot identify untracked state.
 5. Include a prior-report exposure case: place retrospective verdict snippets outside the permitted source/evidence set. Directly inspect packet/search boundaries against the [packet checklist](report.md#independent-assignments). If separately authorized execution exposes those conclusions, retain the result as ineligible, stop/inspect lifecycle before replacement and renew affected axes with neutral inputs. A paper case or allowlist alone proves neither independent behavior nor a filesystem sandbox.
-6. Exercise a no-permission/unavailable-runtime handoff without launching an unauthorized worker. Require an independent-review acceptance blocker; lead self-review cannot substitute. Keep simulated handoffs distinct from actual runtime failures.
+6. Exercise an explicitly prohibited or unavailable-runtime handoff without launching an unauthorized worker. Missing local standing policy alone is not missing permission for an authorized Work On/Work On Spec delivery handoff. Require an independent-review acceptance blocker; lead self-review cannot substitute. Keep simulated handoffs distinct from actual runtime failures.
 
 ## Handoff failure and reuse scenarios
 
@@ -34,6 +34,8 @@ These are authored scenarios, not executed reviewer evidence. Record actual acti
 | Case | Required observed outcome |
 | --- | --- |
 | Standalone ordinary request / bounded local or integrated handoff | Same input checks and report owner; no forced spec hierarchy or automatic delivery; integrated agreement/snapshot is not certified by child passes |
+| Delivery handoff in a project with no standing-permission policy | Inspect originating request and execution library's required-review authority; bounded independent reviews proceed without another delegation prompt. This must work with copied packages outside this source repository. |
+| Explicit restriction / library read without delivery authority | Honor restriction or establish standalone permission; no unauthorized launch and no inference of authority from reading a library. |
 | Missing approved agreement | Spec gap/blocker, any Standards-only result partial; no invention of acceptance |
 | Current complete analysis and checks | Inspect primary sources and identities, consume evidence without automatic re-analysis/model consultation |
 | Untracked delivered module / newly relevant caller | Included module inspected; rediscovery invalidates coverage for new caller even when listed-path helper check passes |
