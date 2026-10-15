@@ -2,7 +2,7 @@
 
 Codebase-informed technical readiness and a recommended implementation method/check strategy. Use for standalone technical analysis or a bounded caller handoff; it stops at findings without building, publishing tickets or opening a PR.
 
-Start at [SKILL.md](SKILL.md). Analyze inspects implementation, callers, interfaces, reuse, dependencies, risks and assertions; reuses current investigation/research and refreshes only changed deciding evidence. It recommends TDD, prototype, characterization, acceptance-first, build-and-check or a proportionate sequence. The technical lead makes routine method choices, while consequential product/permission decisions remain with their owner.
+Start at [SKILL.md](SKILL.md). Analyze inspects implementation, callers, interfaces, reuse, dependencies, risks and assertions; reuses current investigation/research and refreshes only changed deciding evidence. It recommends TDD, prototype, characterization, acceptance-first, build-and-check or a proportionate sequence. The technical lead makes routine technical choices, while consequential product/permission decisions remain with their owner. An authorized calling workflow consumes the supported return and resumes its original task without asking again for already-authorized prerequisite inspection; standalone Analyze still stops at findings.
 
 ## Installation and dependencies
 

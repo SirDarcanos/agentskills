@@ -26,6 +26,8 @@ Read when changing this package or exercising standalone/handoff routing. Expect
 | Required missing research/domain capability | Affected conclusion/record remains blocked; unaffected analysis continues, no locally duplicated specialist |
 | Unapproved consequential behavior or document write | Proposed conclusion/plan-only disposition; permission owner receives recommendation, not routine method choice |
 | Standalone, plan-only, non-code target | Conversation brief and explicit stop without implementation, publication, new hierarchy or unapproved artifact writes |
+| Ticketing prerequisite within existing inspection authority | Bounded supported return to the caller, which consumes it and resumes drafts without asking permission for routine inspection or skill use; no standalone publication |
+| Product coverage change or missing authority | Specific affected blocker and concise outcome/scope/risk recommendation; no silent new commitment or expanded effects |
 | Interim Work On route | Discover Analyze through catalog, consume current evidence or inspected return; lead selects next gate with its own authority, never automatic standalone continuation |
 
 ## Limits
