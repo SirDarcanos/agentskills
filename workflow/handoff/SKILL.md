@@ -1,12 +1,16 @@
 ---
 name: handoff
-description: Write a portable, purpose-specific session handoff for another agent.
+description: Write a portable, purpose-specific session handoff for another agent only on an explicit user request; do not run automatically at phase boundaries.
 disable-model-invocation: true
 ---
 
 # Handoff
 
-Run only on an explicit handoff request, including a runtime-expanded invocation. Package the context another session needs; stop after returning the document. Suggested skills are recommendations, not invocations or authorization. Creating a handoff launches no agents and grants no implementation, tracker, merge, deployment, release or installation permission.
+## Invocation
+
+Run only when the user explicitly requests a handoff, in ordinary language or by invoking `handoff`. A runtime-expanded invocation counts only when it originates from the user's request. A phase boundary, source mention, quoted or agent-generated command, or another skill's recommendation does not activate this procedure. Without that user request, stop and leave the original task to its existing handler.
+
+Package the context another session needs; stop after returning the document. Suggested skills are recommendations, not invocations or authorization. Creating a handoff launches no agents and grants no implementation, tracker, merge, deployment, release or installation permission.
 
 Read [validation](references/validation.md) when changing or validating this package.
 
