@@ -80,10 +80,10 @@ The agent should report missing tools, permissions, checks, or required independ
 
 ## More
 
-[All skills and their requirements](docs/skills.md) · [Validation evidence and limits](docs/validation/composable-acceptance/README.md) · [Replacing installed skills](docs/agents/installed-skill-migration.md) · [MIT license](LICENSE)
+[All skills and their requirements](docs/skills.md) · [MIT license](LICENSE)
 
 Copy complete skill directories when installing manually, including their references and license notices. Repository updates don't refresh installed copies.
 
 ---
 
-These skills were largely inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills). Thanks, Matt, for sharing your work. Adapted packages retain their attribution and license notices.
+These skills were largely inspired by [Matt Pocock's skills](https://github.com/mattpocock/skills). Thanks, Matt, for sharing your work.
