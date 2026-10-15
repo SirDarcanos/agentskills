@@ -11,6 +11,20 @@ Use when changing or validating entry and the shared contract. For discovery, br
 3. Check the diff with `git diff --check`. Inspect for private material, credentials, workstation paths, generated logs, imported third-party prose and changes outside approved scope.
 4. Walk each case below against actual instructions. Record static reasoning separately from executed agent walkthroughs. For a real walkthrough, record invocation/runtime, authorized synthetic fixture, agreement/revision, observed tool actions, returned route/blockers and before/after protected-work fingerprints. Report deviations and unrun cases.
 
+## Complete-read and reference-recovery cases
+
+When changing the contract's [complete-read and reference-resolution procedure](contracts.md#complete-reads-and-reference-resolution), walk these cases using disposable fixtures. Inspect incoming callers, including Work On Spec's contract consumption and Setup Project's library entry boundary. Keep the procedure authoritative in the contract; these are expected observations, not another discovery algorithm.
+
+| Case | Required observation |
+| --- | --- |
+| Large combined output omits a required pointer | Retained-output or focused separate reads recover all omitted required material before dependent action; the partial read is not marked complete. |
+| Valid companion uses a different reference filename than assumed | The complete inspected entry/authoritative contract supplies the target relative to the discovered package, without inventing a responsibility-derived filename. |
+| ENOENT for a guessed or stale path | Pointer and actual layout inspection distinguish the wrong path from package absence; successful resolution resumes compatibility/permission checks. |
+| Required reference genuinely missing or inspection unavailable | Inspected source/path and missing-file evidence support the affected blocker; unavailable inspection stays unknown. Useful findings/protected work survive without installation, aliases, stubs, setup invocation or weakened graph requirements. |
+| Independently installed package with no sibling tree | Runtime/project discovery supplies its actual location; internal references resolve there and existing compatibility/permission checks still apply. |
+
+Record fixture inputs, actual reads/errors, before/after fingerprints and outcomes. Label static checks, direct procedure walkthroughs and autonomous agent trials separately. Assertions over authored simulations do not establish model adherence. No live tracker mutation or optional model call is required. Repository evidence for #118 is retained at `docs/validation/companion-reference-recovery/README.md` at the same source revision; it is not a shipped package dependency.
+
 ## Authored routing cases
 
 These are synthetic starting facts and expected outcomes, **not executed agent results**.

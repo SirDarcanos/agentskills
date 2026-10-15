@@ -12,6 +12,8 @@ Read when changing or validating this package. [Dispatch cases](dispatch-validat
 
 **Done:** complete entries and links are inspected in normal and isolated layouts, applicable executable checks have recorded results, and limitations/diff/documentation dispositions are explicit.
 
+For shared discovery changes, resolve Work On's `references/validation.md` through its inspected package and run its “Complete-read and reference-recovery cases” against this caller's contract/tracker consumption. Record recovered reads and affected blockers separately from coordination-fixture passes.
+
 ## Fixture coverage and limits
 
 The shipped fixture has synthetic native observations and authored frontier/lifecycle decisions. It asserts independent/shared-interface ownership, one unavailable slot, closed-without-accepted-integration waiting, failed/uncertain owner retention, uncertain integration read-back, budget/model history on resume, and actual serial local Git integration with cross-ticket check/freshness. Parent specs stay out of the implementation queue. Static clause assertions catch selected instruction regressions, not comprehensive semantic correctness.
