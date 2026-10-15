@@ -1,6 +1,6 @@
 # Investigate Bug
 
-Confirm a reported defect, establish its cause and produce a workable ticket through Write Tickets. Start at [SKILL.md](SKILL.md). An investigation-only request stops at the ticket; repair is a separate authorized delivery action.
+Confirm a reported defect, establish its cause and produce an exact ticket proposal through Write Tickets without another user skill invocation. Start at [SKILL.md](SKILL.md). Findings are an intermediate result: unresolved cause produces an investigation-only proposal, and withheld publication approval leaves a labeled unpublished draft. Approved publication/reconciliation needs verified read-back. An actionable published ticket leads to a Work On recommendation; repair still requires a separate explicit delivery request.
 
 Copy this complete directory, including its license and [validation guidance](references/validation.md), into your runtime's skill discovery path. No installation is performed by invoking it. The runtime needs file inspection/search and authorized command execution for runnable diagnosis. Tracker persistence additionally needs compatible `write-tickets` and its discovered native tracker procedure; missing approval or capability returns supported findings/drafts, not a publication claim.
 
