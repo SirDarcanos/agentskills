@@ -27,6 +27,7 @@ Pick a skill for the job in front of you. Each link explains what it does, what 
 | [`acceptance-first`](../workflow/acceptance-first/) | Start with executable examples of the workflow people need, then build against them. |
 | [`characterize`](../workflow/characterize/) | Add checks around existing behavior so you can spot unintended changes when updating older code. |
 | [`build-and-check`](../workflow/build-and-check/) | Make small changes and check each one before moving on, including documentation and configuration work. |
+| [`resolve-merge-conflicts`](../workflow/resolve-merge-conflicts/) | Resolve active merge/rebase conflicts within existing integration authority, preserving compatible intent and unrelated work. |
 | [`review-delivery`](../workflow/review-delivery/) | Get independent reviews of whether changes follow project rules and deliver what was agreed. |
 | [`pr`](../workflow/pr/) | Get a plain-language account of what changed, what was checked, and how hard it would be to undo, in a pull request—a proposal to merge the changes. |
 | [`handoff`](../workflow/handoff/) | Carry one task into another session with a purpose-specific document, existing artifact references, and clear approval boundaries. |
