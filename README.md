@@ -161,6 +161,18 @@ Read what was checked and what remains uncertain. For this tool, useful evidence
 
 Deployment is a separate decision: the delivery commands don't grant permission to put the tool online. You don't need to append “don't deploy” to make that boundary apply.
 
+## When something goes wrong
+
+Describe the bug in ordinary language: what you expected, what happened, and how to reproduce it if you know. When the agent recognizes that a bug needs investigation, it can load [`investigate-bug`](workflow/investigate-bug/) itself. You can also invoke it directly:
+
+```text
+/investigate-bug Cancelling a booking doesn't free up a place in the class.
+```
+
+The skill tries to reproduce the problem, trace its cause, and gather evidence for a fix. It checks for existing reports and uses `write-tickets` to prepare or update a bug ticket, with your approval before tracker changes. If it can't confirm the bug or establish the cause, it reports what remains unknown rather than calling the ticket ready for a fix.
+
+An investigation-only request stops there. When you're ready to authorize the repair, ask `work-on` to deliver the resulting ticket. Delivery reuses current investigation evidence and handles implementation, regression checks, review, and reporting; you don't need to repeat the diagnosis.
+
 ## All skills
 
 Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it.
