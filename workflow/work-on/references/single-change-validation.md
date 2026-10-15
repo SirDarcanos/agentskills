@@ -1,6 +1,6 @@
 # Single-change validation
 
-Read when changing or exercising #67's entry, method composition or shared ledger. [Entry checks](validation.md#reproducible-static-checks) still apply; preserve historical #14 trial records rather than rewriting their outcomes. This package contains instructions, not an executable delivery controller.
+Read when changing or exercising the single-change entry, method composition or shared ledger. [Entry checks](validation.md#reproducible-static-checks) still apply. This package contains instructions, not an executable delivery controller.
 
 ## Offline fixtures
 
@@ -42,23 +42,8 @@ Read [required-review authority](contracts.md#required-review-authority) and the
 
 When running an agent exercise, record actual launches, prompts, protected manifests, reviewer outputs and limitations separately from this authored matrix. No live tracker mutation, service call or installation is needed to inspect these instructions.
 
-## Acceptance mapping
-
-- #48 AC1–AC4: independently owned procedures and authorized single-change lead/handoff; discovery and retained adapters consume specialist returns rather than duplicate them.
-- AC6–AC7: all five method capabilities are inspected at cutover; selected packages own their loops, with explicit sequential returns and retained evidence/ledger.
-- AC4/AC7: complete current bug evidence bypasses reinvestigation; invalidated facts get targeted refresh.
-- AC10/AC11: [optional model allocations](contracts.md#optional-model-allocations) consume exact policy and root reservations, retain shared attempted usage and keep unavailable/insufficient-data outcomes distinct. No autonomous calls occur without permission.
-- AC12: PR owns impact/report/publication; Work On keeps verification, review and delivery gates. No report or fixture pass implies acceptance.
-- AC13–AC15: root-owned capacity, finding/repair/model history, independent dirty-scope review, documentation and isolated-package checks remain explicit. Installed replacement and whole-spec scheduling are excluded.
-
 For agent exercises, additionally record actual invocation/approval, runtime, companion source identities, tools/effects, protected manifests, root ledger/repair counts, local versus integrated snapshots, independent axis reports and all failed/stale/not-run checks. A hand-authored scenario is not an executed agent trial.
 
-## Executed evidence
+## Evidence retention
 
-The #67 source-repository evidence is named in code text below rather than a required sibling link. It is not a package runtime dependency; installed copies use the runnable script and this reference:
-
-`docs/validation/work-on-single-change/README.md`
-
-## Documentation disposition
-
-Entry/contract/build/adapters/recovery and retained dispatch status, package/root README and the existing Unreleased Work On Added entry change. No domain meaning, product agreement, ADR decision, label vocabulary, native graph or model policy changes; accepted design remains the rationale. Work On is unreleased, so update its one Added entry rather than create per-ticket history. The invocation boundary is incompatible; delivery PR impact is major, not publication authority.
+Retain per-change results through the [lead evidence record](contracts.md#lead-evidence-record). The runnable script and this reference provide the reusable validation procedure.

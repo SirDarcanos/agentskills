@@ -29,5 +29,3 @@ These are authored expectations, not executed agent results.
 | No suitable installed option or required companion | Report the gap and a bounded manual next step or clarification | AN3, AN5 |
 | User says “recommend and run it” | Return advice only; separate execution request belongs outside this advisor | AN4 |
 | User asks what Nico personally prefers | Report only documented project choices; no invented preferences or impersonation | AN3, AN6 |
-
-Repository delivery evidence, when available, lives at `docs/validation/ask-nico/README.md`. It is not a dependency of a copied package.

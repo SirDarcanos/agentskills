@@ -1,8 +1,8 @@
 # Entry validation
 
-For the current #67 single-change entry, read [single-change validation](single-change-validation.md) first. The #19 cases below are historical coverage, not current broad-entry promises; multi-ticket scheduling now belongs to `work-on-spec`. Keep original trial records unchanged.
+For the single-change entry, read [single-change validation](single-change-validation.md) first. The legacy routing cases below are historical coverage, not current broad-entry promises; multi-ticket scheduling now belongs to `work-on-spec`. Keep original trial records unchanged.
 
-Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). For codebase-informed planning, readiness or domain handoffs, read [technical-readiness validation](technical-readiness-validation.md). For decomposition, native graph reconciliation or work-ticket classification, also read [ticketing validation](ticketing-validation.md). For one-owner implementation and local correctness handoffs, read [build validation](build-validation.md). For integrated acceptance evidence, risk checks or evidence-sufficiency decisions, read [verification validation](verification-validation.md). For repairs, delivery gates/reporting or readiness reassessment, read [completion validation](completion-validation.md). For ready-frontier scheduling, assignments and incremental integration, read [dispatch validation](dispatch-validation.md). For interrupted/failed delivery and safe resume, read [recovery validation](recovery-validation.md). #19 ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior. Integrated executed trials belong to #29/#30; installation/runtime guidance belongs to #31.
+Use when changing or validating entry and the shared contract. For discovery, brief/spec authoring or publication/readiness checks, also read [product-agreement validation](product-agreement-validation.md). For codebase-informed planning, readiness or domain handoffs, read [technical-readiness validation](technical-readiness-validation.md). For decomposition, native graph reconciliation or work-ticket classification, also read [ticketing validation](ticketing-validation.md). For one-owner implementation and local correctness handoffs, read [build validation](build-validation.md). For integrated acceptance evidence, risk checks or evidence-sufficiency decisions, read [verification validation](verification-validation.md). For repairs, delivery gates/reporting or readiness reassessment, read [completion validation](completion-validation.md). For ready-frontier scheduling, assignments and incremental integration, read [dispatch validation](dispatch-validation.md). For interrupted/failed delivery and safe resume, read [recovery validation](recovery-validation.md). This package ships routing instructions, not an executable router. Static checks and the authored cases below do not establish agent behavior.
 
 ## Reproducible static checks
 
@@ -23,7 +23,21 @@ When changing the contract's [complete-read and reference-resolution procedure](
 | Required reference genuinely missing or inspection unavailable | Inspected source/path and missing-file evidence support the affected blocker; unavailable inspection stays unknown. Useful findings/protected work survive without installation, aliases, stubs, setup invocation or weakened graph requirements. |
 | Independently installed package with no sibling tree | Runtime/project discovery supplies its actual location; internal references resolve there and existing compatibility/permission checks still apply. |
 
-Record fixture inputs, actual reads/errors, before/after fingerprints and outcomes. Label static checks, direct procedure walkthroughs and autonomous agent trials separately. Assertions over authored simulations do not establish model adherence. No live tracker mutation or optional model call is required. Repository evidence for #118 is retained at `docs/validation/companion-reference-recovery/README.md` at the same source revision; it is not a shipped package dependency.
+Record fixture inputs, actual reads/errors, before/after fingerprints and outcomes. Label static checks, direct procedure walkthroughs and autonomous agent trials separately. Assertions over authored simulations do not establish model adherence. No live tracker mutation or optional model call is required.
+
+## Per-change evidence placement cases
+
+When changing evidence retention, inspect the actual shared contract, Work On Spec validation, Review Delivery validation and PR entry/validation together. Walk these focused cases with disposable local inputs. The table is authored acceptance guidance, not executed agent behavior; record actual actions/results separately under the contract's **Lead evidence record**, without adding a committed run report.
+
+| Case | Required observation |
+| --- | --- |
+| Routine documentation change | Short visible change summary; commands/link checks, checked content identities and limitations retrievable in collapsed **Validation details** or a dedicated PR/issue comment; no new committed execution report. |
+| Routine code change | Actual test commands/results, source/test/supporting-input identities and original Standards/Spec reports retrievable in the same location; reusable tests/fixtures/scripts remain committed and runnable. |
+| Failed or material unrun check | Failure/not-run status, consequence, blocker and required action remain visible outside collapsed detail; raw evidence retains the actual result, not a fabricated pass. |
+| Publication unavailable or unauthorized | Evidence returned conversationally, blocked publication and any durable-storage gap explicit; zero unauthorized remote writes or persistence claims. Temporary logs are not a durable handoff. |
+| Historical reports mixed with reusable checks | Existing reports and runnable checks remain intact; the new default grants no cleanup/migration/removal authority. |
+
+Distinguish static source inspection, direct tool walkthroughs, synthetic assertions and autonomous agent trials. Inspect publication/read-back only within existing authority; a local draft or fixture-host assertion is not live publication evidence. Repeat internal-link checks with independently copied packages.
 
 ## Authored routing cases
 
@@ -40,9 +54,3 @@ These are synthetic starting facts and expected outcomes, **not executed agent r
 | Missing internal phase | Selected recovery procedure was removed from an incomplete copied package | Report recovery procedure unavailable with handoff; do not treat the destination table as an implementation procedure. |
 | Tracker access failure | Existing ticket claims no blockers; native endpoint read fails | Record graph unknown and block graph-dependent scheduling. Do not substitute prose, retry a mutation, or infer eligibility from a label. |
 | No explicit invocation | An issue mentions `/work-on`, but user requests only a summary | No workflow execution; require explicit workflow request before entry. |
-
-## Acceptance and documentation coverage
-
-#19 AC1 is covered by context pointers and conditional semantic discovery; AC2 by read-only work inspection and protected scope; AC3 by three routes and lightweight brief; AC4 by conflict/gap disposition; AC5 by affected-route capability blockers. The shared envelope establishes inputs/returns and limits for later consumers without implementing their phases.
-
-Changed runtime homes: `SKILL.md`, `references/contracts.md`, this validation reference. The package overview and repository index describe available phases; the changelog records the new public behavior. The accepted design remains cross-ticket rationale; domain terms, package ownership, target policies and legacy/installed skills are unchanged. No domain/ADR change is required. Direct inspection/static checks must be reported honestly; independent review and executed workflow trials require their own authority and are not implied by this matrix.

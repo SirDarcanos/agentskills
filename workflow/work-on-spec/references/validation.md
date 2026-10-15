@@ -18,14 +18,10 @@ For shared discovery changes, resolve Work On's `references/validation.md` throu
 
 The shipped fixture has synthetic native observations and authored frontier/lifecycle decisions. It asserts independent/shared-interface ownership, one unavailable slot, closed-without-accepted-integration waiting, failed/uncertain owner retention, uncertain integration read-back, budget/model history on resume, and actual serial local Git integration with cross-ticket check/freshness. Parent specs stay out of the implementation queue. Static clause assertions catch selected instruction regressions, not comprehensive semantic correctness.
 
-Git controls are sanitized and hooks/templates disabled in disposable repositories. The fixture creates no production tracker items or agents, performs no remote writes, calls no models and deletes only its own temporary directory under the test's disposition. Installed skill/runtime discovery and actual worker interruption remain unexecuted. A passing synthetic graph assertion is not live API/pagination validation; a passing tool integration is not accepted spec delivery. #72/#73 own broader composed runtime/discovery trials.
+Git controls are sanitized and hooks/templates disabled in disposable repositories. The fixture creates no production tracker items or agents, performs no remote writes, calls no models and deletes only its own temporary directory under the test's disposition. Installed skill/runtime discovery and actual worker interruption remain unexecuted. A passing synthetic graph assertion is not live API/pagination validation; a passing tool integration is not accepted spec delivery.
 
-## Acceptance and documentation impact
+## Evidence retention
 
-#68 maps to entry (invocation/discovery/reuse/one root), dispatch (native eligibility/ownership/Work On assignments/serial integration), aggregate acceptance (cross-ticket verification/review/checkpoint), and recovery (actual graph/worker/effect reconstruction with preserved history). Work On loses duplicate scheduling and overall recovery clauses but retains common libraries/local delivery. The accepted #50 boundary is implemented, not redesigned.
+Follow the discovered Work On contract's **Lead evidence record** for per-change retention: a collapsed **Validation details** section or dedicated PR/issue comment, with material problems visible in the short summary. Retain exact commands/results, source and supporting-input state, static versus executed checks, limitations and original independent reviews there, not in a new committed execution report. Keep reusable fixtures/scripts in source control. If publication is unavailable or unauthorized, return evidence conversationally and name any durable-storage gap without claiming publication.
 
-Update package/root README, one Unreleased Added entry and the accepted design's implementation pointer. No domain meanings, ADR decisions, tracker vocabulary/native edges, operating authority, model policy or installed copies change. Keep historical records unchanged; new actual evidence belongs outside the installable package.
-
-## Executed evidence
-
-Repository record: `docs/validation/work-on-spec/README.md` at the same source revision (not shipped as a relative package dependency). Record exact commands/results, source state, static versus executed checks, independent reviews and unrun routes there and in the PR. This file's expectations are not themselves evidence.
+This file's expectations are not themselves executed evidence.

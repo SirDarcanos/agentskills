@@ -1,6 +1,6 @@
 # Review Delivery validation
 
-Read when changing or validating this package. These are reusable checks and trial scenarios, not retained execution reports. Record actual results in the target's approved task/PR evidence location, outside the installed skill.
+Read when changing or validating this package. These are reusable checks and trial scenarios, not retained execution reports. Follow the discovered Work On contract's **Lead evidence record**: default actual results and original independent axis reports to a collapsed **Validation details** section or dedicated PR/issue comment, outside the installed skill. Include commands/results, checked state and supporting-input identities, limitations and a retrievable pointer; keep material failures, unrun checks and unresolved blockers visible in the short summary. Use temporary local intermediates, not new committed execution reports. Reusable checks remain committed and runnable. Without publication authority/capability, return evidence conversationally and identify any durable-storage gap; do not write to the tracker or claim persistence. Preserve historical records unless migration/removal is separately approved.
 
 ## Local checks
 

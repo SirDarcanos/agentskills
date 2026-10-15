@@ -20,6 +20,6 @@ Artifacts are explicitly experimental. Useful work is preserved by default pendi
 
 ## Provenance and validation
 
-Original instructions and synthetic fixture implement [#56](https://github.com/SirDarcanos/agentskills/issues/56) under the accepted composable-delivery design. The installed prototype candidate was inspected for contract differences; no external procedure, template or supporting file is imported. This package does not prescribe that candidate's HTML/UI formats, automatic production edits or throwaway-branch commits.
+The instructions and synthetic fixture are original. The installed prototype candidate was inspected for contract differences; no external procedure, template or supporting file is imported. This package does not prescribe that candidate's HTML/UI formats, automatic production edits or throwaway-branch commits.
 
 See [validation](references/validation.md). Run `python3 workflow/prototype/scripts/check-fixture.py` with Python 3.9+; no extra dependencies, models or network are needed. It executes a bounded synthetic feasibility experiment and ownership-safe disposition checks, not an agent workflow or human UX study.

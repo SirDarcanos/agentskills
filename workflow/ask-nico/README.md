@@ -29,8 +29,8 @@ The installation command has not been exercised in this delivery. Repository del
 
 ## Validation and source credit
 
-Read [validation](references/validation.md) when modifying the package. Repository evidence at `docs/validation/ask-nico/README.md` records package checks and scenario coverage; it is not required by a copied installation.
+Read [validation](references/validation.md) when modifying the package.
 
-Substantially inspired by Matt Pocock's `ask-matt` reference skill: read skill entries before giving routing advice, and use a user-invoked advisor to make workflows discoverable. This package replaces its fixed flow map with installed-catalog discovery, project authority checks and a recommendation-only boundary under #109/#112. No phase-boundaries procedure or upstream workflow map is copied.
+Substantially inspired by Matt Pocock's `ask-matt` reference skill: read skill entries before giving routing advice, and use a user-invoked advisor to make workflows discoverable. This package replaces its fixed flow map with installed-catalog discovery, project authority checks and a recommendation-only boundary. No phase-boundaries procedure or upstream workflow map is copied.
 
 Upstream: [Matt Pocock's skills](https://github.com/mattpocock/skills), distributed under the [MIT license](https://github.com/mattpocock/skills/blob/main/LICENSE). The inspected reference copy supplied no exact source revision or bundled license; these links identify the upstream project, not an asserted revision. The package [LICENSE](LICENSE) retains Matt Pocock's notice alongside Nicola Mustone's.

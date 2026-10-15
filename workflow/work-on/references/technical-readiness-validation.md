@@ -1,6 +1,6 @@
 # Technical-readiness route validation
 
-Read when changing or validating [the compatibility route](technical-readiness.md). Technical-analysis procedure and new routing cases now belong to discovered `analyze` and its package-local validation; historical #21 and #14 repository evidence stays at its existing paths.
+Read when changing or validating [the compatibility route](technical-readiness.md). Technical-analysis procedure and new routing cases now belong to discovered `analyze` and its package-local validation.
 
 1. Follow [entry validation](validation.md#reproducible-static-checks) for rendered Markdown, frontmatter, links, isolated package copying and diff hygiene.
 2. Inspect discovery through a non-sibling catalog or explicit approved source. Read complete Analyze entry/references, pin source identity and verify the capability row in [contracts](contracts.md#capability-checks).

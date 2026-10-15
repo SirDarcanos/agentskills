@@ -36,8 +36,6 @@ Walk these against steps 3–5 and the actual returned artifact; findings or a s
 | Actionable fix ticket published/reconciled and read back | Recommend Work On with canonical identity and current evidence, without invoking it. A later explicit delivery request compares deciding identities and reuses current investigation; it fills only actual gaps. |
 | Write Tickets unavailable/incompatible | Return a labeled supported draft with the exact capability blocker; do not claim an executed handoff, install a helper or route around the blocker into delivery. |
 
-For #122's observed execution omission, rejected alternatives and evidence limits, read the repository's `docs/validation/investigate-bug/ticket-completion.md` when available. It is delivery evidence, not a copied-package runtime dependency.
-
 ## Procedure coverage
 
 - Confirmed: inspect expectation source, actual reproduction, causal evidence, all ticket fields, cleanup and verified persistence; investigation-only leaves original product bytes unchanged.

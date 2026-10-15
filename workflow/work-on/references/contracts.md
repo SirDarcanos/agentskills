@@ -66,7 +66,11 @@ Every return identifies actual outcomes, changed artifacts and delivered state, 
 
 ## Lead evidence record
 
-Use compact Markdown at the target's approved task/PR location under its retention/disclosure policy. A small direct change may keep the record in the conversation and final PR report. A multi-session run needs an approved durable artifact/pointer before leaving unfinished work; do not default to a new committed state directory or publish private logs.
+Default per-change evidence to a collapsed **Validation details** section in the PR/issue body or a dedicated PR/issue comment, under the target's retention/disclosure policy. Keep the visible summary short: changes, fixes and material risks, failed/unrun checks, unresolved blockers and required actions. Collapsing supporting detail must not hide consequential problems.
+
+Retain actual commands, results/raw outputs, relevant checked state and supporting-input identities, limitations and original independent Standards/Spec reports so another agent can retrieve and inspect them. Link the section/comment from the delivery handoff. Use temporary local storage for intermediate logs and snapshots; publish only useful, disclosure-safe evidence within existing publication authority and inspect its read-back before claiming persistence. If publication is unavailable or unauthorized, return the evidence conversationally, name the blocked publication and any durable-storage gap, and do not imply it was published. A multi-session run needs an approved durable pointer before leaving unfinished work; temporary files or a promised future PR are not that pointer.
+
+Keep reusable tests, fixtures and scripts committed and runnable. Evidence retention does not require a committed execution report: do not create routine per-change `docs/validation/` reports or a new committed state directory. Preserve historical records and reusable checks; their migration/removal requires separate approval.
 
 | Field | Minimum content |
 | --- | --- |

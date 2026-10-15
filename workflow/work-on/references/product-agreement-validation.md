@@ -10,4 +10,4 @@ Inspect entry/contracts/adapter together:
 4. Missing/incompatible/ambiguous helpers block only their dependent route; no legacy commands or installation fallback.
 5. Standalone specialists stop at their returns; the authorized Work On caller chooses the next unmet responsibility without treating product completion as build readiness.
 
-These are expected checks until executed evidence is separately recorded. Keep #20 and #14's historical repository records at their existing paths; extraction does not retroactively execute them. No duplicate spec-writing/publication procedure remains in this adapter.
+These are expected checks until executed evidence is separately recorded. No duplicate spec-writing/publication procedure remains in this adapter.

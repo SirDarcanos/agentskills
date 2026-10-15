@@ -29,5 +29,3 @@ Walk these against the actual entry point after substantive changes. They are ex
 | Project-shipped helper requires an external companion | Use it only if it can stay within the project-shipped boundary; otherwise write directly | WA5 |
 | Documented command targets an unavailable environment | Inspect available source evidence, identify the unrun environment check and avoid a runtime-success claim | WA6 |
 | Package copied without siblings | Internal references still resolve; unavailable optional companions do not prevent direct writing | WA3, WA5, WA6 |
-
-For this delivery's synthetic before/after examples and recorded checks, consult the repository's `docs/validation/writing-for-agents/README.md` when available. It is repository evidence, not a required runtime dependency of an independently copied package.

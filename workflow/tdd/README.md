@@ -18,7 +18,7 @@ The method needs file inspection/editing and the target's relevant test tools. B
 
 ## Attribution
 
-This package implements [#55](https://github.com/SirDarcanos/agentskills/issues/55) and is inspired by [Matt Pocock's TDD skill at revision `49dd158`](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/tdd/SKILL.md), particularly behavioral tests, independent expected outcomes, rejection of implementation coupling and small test-first increments. Its [MIT license](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/LICENSE) notice is retained in this package's [LICENSE](LICENSE), alongside Nicola Mustone's notice for this implementation.
+This package is inspired by [Matt Pocock's TDD skill at revision `49dd158`](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/skills/engineering/tdd/SKILL.md), particularly behavioral tests, independent expected outcomes, rejection of implementation coupling and small test-first increments. Its [MIT license](https://github.com/mattpocock/skills/blob/49dd158d1076134a641b33efb035946536778336/LICENSE) notice is retained in this package's [LICENSE](LICENSE), alongside Nicola Mustone's notice for this implementation.
 
 The procedure is newly written rather than a verbatim copy. It adds the approved authority/handoff contract, green refactoring and lead-selected seams; it does not inherit the older procedure's user-confirmation or review-only-refactoring rules.
 

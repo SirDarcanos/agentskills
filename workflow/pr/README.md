@@ -12,7 +12,7 @@ After approving installation:
 npx skills add SirDarcanos/agentskills --skill pr
 ```
 
-Copy the complete package, including [MIT notice](LICENSE). Start at [SKILL.md](SKILL.md). This is an original implementation of #48/#66 using repository-owned delivery contracts; it does not import the installed diagram-first PR/show-me template. It does not replace an installed same-name skill.
+Copy the complete package, including [MIT notice](LICENSE). Start at [SKILL.md](SKILL.md). This is an original implementation using repository-owned delivery contracts; it does not import the installed diagram-first PR/show-me template. It does not replace an installed same-name skill.
 
 File inspection and existing evidence suffice for a report. Git/host tools are conditional on repository/PR actions; GitHub examples use authenticated `gh`. Discover companions through the target/runtime catalog or explicit approved source, not sibling paths:
 
