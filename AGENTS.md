@@ -14,6 +14,8 @@ For independent-review delegation, follow the standing bounded permission in [wo
 
 For #48 composable-delivery work, read the [shared design](docs/design/composable-delivery.md), its acceptance status, inventory and validation mapping before changing specialist ownership or migration boundaries. The issue remains the product agreement; proposed design is not implementation or installation authority.
 
+For #132 session-oriented workflow work, read the [accepted ownership and transition design](docs/design/session-oriented-workflow.md), its status, caller map and reading-path evidence before changing shared guidance, prerequisites or stage boundaries. [ADR 0003](docs/adr/0003-session-oriented-project-agreement.md) records the approved ownership change. Dependent delivery still requires accepted integration and its own authority; source changes do not update installed copies.
+
 ## Working with skills
 
 - Read a skill's complete `SKILL.md` before changing it.

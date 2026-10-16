@@ -1,6 +1,6 @@
 # Reading paths and static design examples
 
-Companion to the [proposed ownership design](session-oriented-workflow.md). **Design-only reading surfaces, not replacement skills.** These deliberately bounded sketches make the proposed responsibilities countable without implementing #134–#141. They omit package metadata, detailed failure branches and maintenance validation. Consequently their counts illustrate extraction opportunities, not final package sizes, runtime tokens, timing, adherence or achieved WF-11 acceptance. Count the real migrated packages again in #143.
+Companion to the [accepted ownership design](session-oriented-workflow.md). **Design-only reading surfaces, not replacement skills.** These deliberately bounded sketches make the proposed responsibilities countable without implementing #134–#141. They omit package metadata, detailed failure branches and maintenance validation. Consequently their counts illustrate extraction opportunities, not final package sizes, runtime tokens, timing, adherence or achieved WF-11 acceptance. Count the real migrated packages again in #143.
 
 ## Measurement boundary
 

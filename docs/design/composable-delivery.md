@@ -10,6 +10,10 @@ Design for [#50](https://github.com/SirDarcanos/agentskills/issues/50), under th
 
 [ADR 0002](../adr/0002-composable-delivery-ownership.md) supersedes ADR 0001. The [previous design](delivery-workflow.md), inventory, and validation remain historical evidence for #14; current shipped procedures remain authoritative until their approved replacements land. [Inventory](composable-delivery-inventory.md) records inputs and provenance; [validation](composable-delivery-validation.md) maps every #48 criterion and separates paper checks from actual checks.
 
+### Accepted session-oriented revision (#132)
+
+The maintainer accepted [#133's ownership and staged transition](session-oriented-workflow.md) and authorized its record/policy reconciliation through [ADR 0003](../adr/0003-session-oriented-project-agreement.md). That design replaces this document's common Work On contract ownership, project-prerequisite assumptions, mandatory investigation-ticket endpoint, delivery-triggered PR endpoint and ordinary durable-session requirements. It retains independent specialists/two leads, method ownership, snapshot/graph integrity, repair limits, model permissions and separately approved installed migration. Its caller-reconciliation gates govern transition; existing shipped packages are not claimed migrated by design acceptance. The original contract, inventory and validation below retain their historical meaning and results. Dependent execution still needs accepted integration and its own authority; no merge is authorized by this acceptance.
+
 ## Ownership and standalone boundaries
 
 Each package has its own complete `SKILL.md`, conditional shipped references, invocation/authority/dependency gates, and checkable complete/partial/blocked returns. Calling a specialist uses its procedure in the current context unless separately authorized delegation is useful. Loading a skill grants no effects. Standalone completion stops at the row's output; it does not automatically advance the delivery pipeline.
