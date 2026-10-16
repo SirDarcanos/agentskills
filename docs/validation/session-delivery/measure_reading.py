@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+"""Source-development reading comparison, not a shipped consumer prerequisite.
+
+Run from any directory: python3 -B <this-file> --base <source-revision>
+Reports static whitespace-word surfaces, not tokens, speed or agent adherence.
+The source revision is an explicit input; no historical record is required by skills.
+"""
+import argparse
+import json
+from pathlib import Path
+import subprocess
+
+ROOT = Path(__file__).resolve().parents[3]
+PROJECT = ["AGENTS.md", "docs/agents/project.md", "docs/agents/workflow.md"]
+REVIEW = ["workflow/review-delivery/SKILL.md"] + [
+    f"workflow/review-delivery/references/{name}.md" for name in ("handoff", "scope", "report")]
+COMMON = PROJECT + ["workflow/work-on/SKILL.md",
+                    "workflow/implementation-preflight/SKILL.md",
+                    "workflow/build-and-check/SKILL.md"] + [
+    f"workflow/work-on/references/{name}.md" for name in ("build", "verification", "completion")
+] + REVIEW
+PR = ["workflow/pr/SKILL.md", "workflow/pr/references/impact.md"]
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--base", required=True)
+    args = parser.parse_args()
+    base = subprocess.check_output(["git", "rev-parse", "--verify", args.base + "^{commit}"],
+                                   cwd=ROOT, text=True).strip()
+
+    def surface(paths, historical):
+        result = {}
+        for path in sorted(set(paths)):
+            content = (subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT, text=True)
+                       if historical else (ROOT / path).read_text())
+            result[path] = len(content.split())
+        return {"words": sum(result.values()), "paths": result}
+
+    # Representative small code change: established compatible project, current
+    # plan, no tracker/domain/assessment gap, direct Build and Check, required
+    # independent review. Two fresh reviewers each load relevant policy and review
+    # procedure, not the lead's unrelated method/repair library. No README/LICENSE,
+    # maintenance instructions, task evidence or scripts counted as instructions.
+    # Full files count even if an operational branch uses only a section; repeated
+    # reads in one context deduplicate, distinct contexts count separately.
+    observations = {}
+    for historical, name in ((True, "baseline"), (False, "candidate")):
+        extra = "contracts" if historical else "coordination"
+        lead = surface(COMMON + [f"workflow/work-on/references/{extra}.md"], historical)
+        reviewer = surface(PROJECT + REVIEW, historical)
+        pr = surface(PROJECT + PR, historical)
+        observations[name] = {"lead_delivery": lead, "each_of_two_reviewers": reviewer,
+                              "delivery_total": lead["words"] + 2 * reviewer["words"],
+                              "selected_PR_fresh_context": pr}
+        if historical:
+            # The old entry additionally required PR-report preparation. Keep its
+            # endpoint cost separate rather than claiming all savings are dedup.
+            observations[name]["former_ordinary_endpoint_total"] = (
+                lead["words"] + 2 * reviewer["words"] + surface(PR, historical)["words"])
+    print(json.dumps({"base": base, "unit": "whitespace words; static reading paths",
+                      "assumptions": "direct small code change; same project; two neutral reviewers; no gaps",
+                      "contexts": observations}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

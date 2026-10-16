@@ -1,6 +1,6 @@
 # Delivered scope
 
-This is the authoritative snapshot contract consumed by delivery callers. Keep a compact Markdown record at the target's approved evidence location; machine fingerprints are supporting artifacts, not a mandatory state service. Retain no secret contents or unrelated private logs.
+This is the authoritative snapshot contract consumed by delivery callers. Keep a compact record in conversation or the user's selected approved evidence location; machine fingerprints are supporting artifacts, not a mandatory ledger, durable report or state service. Retain no secret contents or unrelated private logs.
 
 ## 1. Discover and bound
 

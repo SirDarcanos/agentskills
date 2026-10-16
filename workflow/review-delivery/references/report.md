@@ -39,7 +39,7 @@ Use Markdown; no required machine schema:
 Agreement: reference/revision or digest; acceptance IDs; exclusions
 Snapshot: record pointer; base/HEAD or non-Git manifest; included paths/support
 Independence: reviewer/context per axis; author relationship; authority and bounds
-Execution: resolved library source; root/record pointer; slots and finding/checkpoint lineage
+Coordination (when delegated): resolved conditional library; root/record; slots and retained checkpoint lineage
 Freshness: initial/per-review/final comparison; path-discovery and input results
 Standards: inspected files/rules; findings; checks/evidence; limitations
 Spec: per-criterion covered/gap/blocked; findings; checks/evidence; limitations
@@ -49,6 +49,6 @@ Outcome: current complete / partial (incomplete) / stale / blocked review, with 
 Next action: unresolved findings, decisions and affected review/check renewal
 ```
 
-Keep each original axis report accessible. Record commands, environment/baseline, exact inspected state, outcomes and evidence pointers. Distinguish **executed**, **static**, **not-run**, **failed**, and **stale**; authored scenarios are not execution evidence. A report cannot call itself complete if an axis or material scope is missing.
+Keep each original axis report accessible in conversation or the user-selected approved evidence home. No routine durable report is required; active owners, uncertain operations and spent allowances retain their safety accounting. Record commands, environment/baseline, exact inspected state, outcomes and evidence pointers. Distinguish **executed**, **static**, **not-run**, **failed**, and **stale**; authored scenarios are not execution evidence. A report cannot call itself complete if an axis or material scope is missing.
 
 The caller records findings' dispositions separately (resolved with fresh evidence, accepted agreement change by its owner, deferred nonmaterial issue, or unresolved blocker). Reviewers do not silently change acceptance, mutate tracker labels, repair files, merge, publish or claim acceptance. Delivery completion requires the caller's other gates too.
