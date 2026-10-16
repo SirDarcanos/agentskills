@@ -20,7 +20,7 @@ The reused helper constrains ambient Git configuration/hooks, not arbitrary proc
 
 ## Criterion-to-evidence map
 
-All source rows are inspectable current contracts. **Offline coverage** below means static assertions and authored synthetic fixtures unless an actual local operation is explicitly named. Run results belong with the delivery evidence. **Agent observation remains unrun** for the listed behavioral routes; no table row turns its expected outcome into a pass.
+All source rows are inspectable current contracts. **Offline coverage** below means static assertions and authored synthetic fixtures unless an actual local operation is explicitly named. Actual agent observations, outcomes, interventions and gaps belong with the pinned delivery evidence, separately from this reusable map. The behavioral routes below state what to observe; no table row turns its expected outcome into a pass, and a bounded observation does not establish untested branches or universal runtime adherence.
 
 | Criterion | Current source / reusable check | Evidence boundary and remaining observation |
 | --- | --- | --- |
