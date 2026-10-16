@@ -210,6 +210,45 @@ class Coordination(unittest.TestCase):
         self.assertEqual(retained["model"]["attempted"], 1)
         self.assertEqual(self.protected, self.sentinel())
 
+    def test_same_session_no_pr_completion_and_selected_followup(self):
+        self.init_target()
+        self.check()
+        # Authored delivery return: no persistence or next-stage permission needed.
+        result = {"tickets": {"A": "integrated", "C": "verified"},
+                  "gates": {"build": "pass", "accept": "pass", "report": "pass"},
+                  "evidence": "current conversation", "remote_effects": []}
+        self.assertEqual(result["gates"]["report"], "pass")
+        self.assertEqual(result["remote_effects"], [])
+        self.assertFalse((self.root / "ledger.json").exists())
+        self.assertFalse((self.root / "handoff.md").exists())
+        self.assertEqual(self.protected, self.sentinel())
+        # A required predecessor PR/merge remains a real dependent-stage gap.
+        self.assertEqual(self.assess_start("C", self.owned["C"], lead_choice=3),
+                         "prerequisite lacks accepted integration")
+        self.assertEqual(result["gates"]["report"], "pass")
+
+    def test_fresh_session_missing_history_and_partial_integration(self):
+        base = self.init_target()
+        self.git("switch", "-c", "returned-a")
+        self.put("core.py", "def value(n):\n    return n * 2\n")
+        self.git("add", "core.py")
+        self.git("commit", "-m", "partial A")
+        returned = self.git("rev-parse", "HEAD")
+        self.git("switch", "main")
+        # Only inspected current facts cross this synthetic session boundary.
+        observed = {"target": self.git("rev-parse", "HEAD"),
+                    "returned": returned, "spent": None, "owner_state": "unknown"}
+        self.assertEqual(observed["target"], base)
+        self.assertNotEqual(observed["target"], returned)
+        self.assertIsNone(observed["spent"])  # Not fabricated zero allowance.
+        self.assertEqual(observed["owner_state"], "unknown")
+        self.ledger["active"] = [{"id": "A", "scope": self.owned["A"], "status": "unknown"}]
+        self.assertEqual(self.assess_start("A", self.owned["A"], lead_choice=3),
+                         "ownership or scoped review freeze")
+        self.assertEqual(self.assess_start("D", self.owned["D"], lead_choice=3), "started")
+        self.assertEqual(self.git("rev-parse", "main"), base)  # No replay/integration.
+        self.assertEqual(self.protected, self.sentinel())
+
     def test_serial_integration_refreshes_cross_ticket_evidence(self):
         base = self.init_target()
         self.check()
@@ -254,15 +293,15 @@ class Coordination(unittest.TestCase):
         dispatch = (PACKAGE / "references/dispatch.md").read_text().lower()
         aggregate = (PACKAGE / "references/aggregate.md").read_text().lower()
         recovery = (PACKAGE / "references/recovery.md").read_text().lower()
-        for clause in ("one overall technical lead", "read-only library", "inspect-only delegate",
+        for clause in ("one overall technical lead", "only needed libraries", "inspect-only delegate",
                        "do not silently substitute", "from this root", "missing/stale",
-                       "shared worker/repair/model limits"):
+                       "project agreement", "legacy universal-contract-only"):
             self.assertIn(clause, entry)
-        for clause in ("closure", "work-on", "root-ledger", "one inspected result at a time",
+        for clause in ("closure", "work-on", "root assignment", "one inspected result at a time",
                        "blocks multi-ticket execution"):
             self.assertIn(clause, dispatch)
         self.assertIn("lead-chosen concurrency", entry)
-        self.assertIn("rather than in fixed ticket batches", entry)
+        self.assertIn("rather than fixed ticket batches", entry)
         self.assertIn("without waiting for unrelated active tickets", dispatch)
         self.assertIn("review does not stop unrelated implementation", dispatch)
         self.assertNotIn("shared ceiling", entry)
@@ -271,6 +310,14 @@ class Coordination(unittest.TestCase):
         self.assertIn("not the old launch list", recovery)
         self.assertIn("no implicit abort/reset/cleanup", recovery)
         self.assertNotIn("../work-on/", entry + dispatch + aggregate + recovery)
+        self.assertNotIn("references/contracts.md", entry + dispatch + aggregate + recovery)
+        for clause in ("stops before pr preparation/publication", "unrequested handoff/storage",
+                       "same-session evidence can remain"):
+            self.assertIn(clause, entry)
+        self.assertIn("do not open/update a pr automatically", dispatch)
+        self.assertIn("without discovering `pr`", aggregate)
+        self.assertIn("record absent history as unknown", recovery)
+        self.assertIn("stop/isolate safely", recovery)
         print("instruction assertions: static only, not runtime-adherence proof")
 
 
