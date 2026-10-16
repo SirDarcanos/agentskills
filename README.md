@@ -44,6 +44,8 @@ Slash commands go in your agent, not your terminal; support varies by runtime. S
 
 ## Pick the work you need
 
+Follow the [session workflow guide](docs/workflow-guide.md) for planning, selected artifacts, later delivery, feedback before PR publication, and explicit session transfer. Separate sessions keep context focused; they are not an enforced pipeline.
+
 You can name a skill directly or describe the job in ordinary language. You don't need to run every skill for every change.
 
 | Your situation | Start with |

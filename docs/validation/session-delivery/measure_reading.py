@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Source-development reading comparison, not a shipped consumer prerequisite.
+"""Static full-file reading comparison; never tokens, timing or agent adherence.
 
-Run from any directory: python3 -B <this-file> --base <source-revision>
-Reports static whitespace-word surfaces, not tokens, speed or agent adherence.
-The source revision is an explicit input; no historical record is required by skills.
+Run: python3 -B docs/validation/session-delivery/measure_reading.py --base 45e5a24
+The baseline is explicit and resolved to a commit. No repository writes occur.
 """
 import argparse
 import json
@@ -12,32 +11,108 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[3]
 PROJECT = ["AGENTS.md", "docs/agents/project.md", "docs/agents/workflow.md"]
-REVIEW = ["workflow/review-delivery/SKILL.md"] + [
-    f"workflow/review-delivery/references/{name}.md" for name in ("handoff", "scope", "report")]
-COMMON = PROJECT + ["workflow/work-on/SKILL.md",
-                    "workflow/implementation-preflight/SKILL.md",
-                    "workflow/build-and-check/SKILL.md"] + [
-    f"workflow/work-on/references/{name}.md" for name in ("build", "verification", "completion")
-] + REVIEW
-PR = ["workflow/pr/SKILL.md", "workflow/pr/references/impact.md"]
-# Equivalent planning outcome: Shape Work uses inline Analyze and inspects the
-# Build and Check capability. No source/domain gap or delegation is selected.
-# Analyze's domain/delegation references are mandatory only on those branches;
-# they and the discovered companion closures must be added if that task changes.
-PLANNING = PROJECT + [f"workflow/{name}/SKILL.md" for name in
-                      ("shape-work", "analyze", "build-and-check")]
-
-# Equivalent established-cause investigation followed by the selected ticket
-# stage. Baseline always drafts a ticket; candidate explicitly selects it. No
-# technical/source gap, new record, helper execution or delegation. Diagnosis-only
-# is reported separately, never substituted for the equivalent ticket endpoint.
 TRACKER_POLICY = ["docs/agents/issue-tracker.md", "docs/agents/triage-labels.md"]
-INVESTIGATION = PROJECT + TRACKER_POLICY + [
-    "workflow/investigate-bug/SKILL.md", "workflow/write-tickets/SKILL.md"]
-OLD_TRACKER = ["workflow/setup-project/SKILL.md",
-               "workflow/setup-project/references/issue-tracker.md"]
-NEW_TRACKER = ["workflow/investigate-bug/references/ticket-stage.md",
-               "workflow/setup-project/references/native-tracker.md"]
+
+
+def entry(name):
+    return f"workflow/{name}/SKILL.md"
+
+
+def ref(name, file):
+    return f"workflow/{name}/references/{file}.md"
+
+
+REVIEW = [entry("review-delivery")] + [ref("review-delivery", name)
+          for name in ("handoff", "scope", "report")]
+METHOD = [entry("implementation-preflight"), entry("build-and-check")]
+LOCAL = [ref("work-on", name) for name in ("build", "verification", "completion")]
+# PR's reporting contract reads target tracker-completion and release policy.
+# In this project workflow.md owns releases; the two tracker documents supply
+# completion and release-label rules. Charge them in both revisions/PR contexts.
+PR = [entry("pr"), ref("pr", "impact"), ref("pr", "publication")] + TRACKER_POLICY
+OLD_TRACKER = [entry("setup-project"), ref("setup-project", "issue-tracker")]
+NEW_TRACKER = [ref("setup-project", "native-tracker")]
+
+
+def manifests(historical):
+    """Explicit branches, not a Markdown crawler that loads every optional link."""
+    lead = [entry("work-on"), ref("work-on", "contracts" if historical else "coordination")]
+    delivery = lead + LOCAL + METHOD + REVIEW
+    planner = [entry(name) for name in ("shape-work", "analyze", "build-and-check")]
+    diagnosis = [entry("investigate-bug")]
+    # Baseline investigation cannot finish without its selected ticket outcome.
+    tracker = OLD_TRACKER if historical else NEW_TRACKER
+    investigation = diagnosis + [entry("write-tickets")] + tracker + TRACKER_POLICY
+    if not historical:
+        investigation += [ref("investigate-bug", "ticket-stage")]
+    return {
+        "planning": {"planner": planner},
+        "investigation_selected_ticket": {"investigator": investigation},
+        "investigation_diagnosis_only": {"investigator": investigation if historical else diagnosis},
+        "bounded_delivery_before_PR": {"lead": delivery, "standards": REVIEW, "spec": REVIEW},
+        # Equivalent published endpoint in one context: user explicitly selects PR
+        # for the candidate. Baseline requires it automatically. No repair branch.
+        "bounded_delivery_with_PR": {"lead": delivery + PR, "standards": REVIEW, "spec": REVIEW},
+        "selected_PR_fresh_context": {"publisher": PR},
+    }
+
+
+def measure(base):
+    def content(path, historical):
+        return (subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT, text=True)
+                if historical else (ROOT / path).read_text())
+
+    def surface(paths, historical):
+        return {path: len(content(path, historical).split()) for path in sorted(set(paths))}
+
+    observations = {}
+    # Hold common project instructions fixed as in the accepted design, but also
+    # expose actual per-revision totals so moving bulk into project docs is visible.
+    fixed_project = surface(PROJECT, True)
+    for historical, name in ((True, "baseline"), (False, "candidate")):
+        actual_project = surface(PROJECT, historical)
+        scenarios = {}
+        for scenario, contexts in manifests(historical).items():
+            measured = {}
+            for context, paths in contexts.items():
+                package = surface(paths, historical)
+                measured[context] = {
+                    "instruction_paths": package,
+                    "fixed_project_paths": fixed_project,
+                    "actual_project_paths": actual_project,
+                    "fixed_project_total": sum(package.values()) + sum(fixed_project.values()),
+                    "actual_project_total": sum(package.values()) + sum(actual_project.values()),
+                }
+            scenarios[scenario] = {
+                "contexts": measured,
+                "fixed_project_total": sum(row["fixed_project_total"] for row in measured.values()),
+                "actual_project_total": sum(row["actual_project_total"] for row in measured.values()),
+            }
+        observations[name] = scenarios
+    comparisons = {}
+    for kind in ("fixed", "actual"):
+        comparisons[kind] = {}
+        for scenario in observations["baseline"]:
+            before = observations["baseline"][scenario][kind + "_project_total"]
+            after = observations["candidate"][scenario][kind + "_project_total"]
+            comparisons[kind][scenario] = {
+                "baseline": before, "candidate": after,
+                "reduction_words": before - after,
+                "reduction_percent": round(100 * (before - after) / before, 2)}
+    return {"base": base, "unit": "whitespace words; full files once per context",
+            "comparisons_with_fixed_project": comparisons["fixed"],
+            "comparisons_with_actual_project": comparisons["actual"], "observations": observations,
+            "limits": [
+                "Static instruction arithmetic, not runtime tokens, latency or intervention counts.",
+                "Planning includes inline Analyze and inspected Build and Check; no source/domain gap.",
+                "Investigation selected-ticket compares the same complete published-artifact endpoint.",
+                "Diagnosis-only baseline includes its compulsory ticket route; endpoints differ.",
+                "Before-PR delivery baseline is an intermediate boundary, not its old completion endpoint.",
+                "With-PR compares equivalent completion; fresh PR context is reported separately.",
+                "Delivery includes root coordination and two separate neutral reviewer contexts.",
+                "No recovery, recorded repair, domain, optional model or whole-spec branch is selected.",
+                "Task evidence, automatic harness prompts, README/LICENSE and maintenance files excluded.",
+            ]}
 
 
 def main():
@@ -46,51 +121,7 @@ def main():
     args = parser.parse_args()
     base = subprocess.check_output(["git", "rev-parse", "--verify", args.base + "^{commit}"],
                                    cwd=ROOT, text=True).strip()
-
-    def surface(paths, historical):
-        result = {}
-        for path in sorted(set(paths)):
-            content = (subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT, text=True)
-                       if historical else (ROOT / path).read_text())
-            result[path] = len(content.split())
-        return {"words": sum(result.values()), "paths": result}
-
-    # Representative small code change: established compatible project, current
-    # plan, no tracker/domain/assessment gap, direct Build and Check, required
-    # independent review. Two fresh reviewers each load relevant policy and review
-    # procedure, not the lead's unrelated method/repair library. No README/LICENSE,
-    # maintenance instructions, task evidence or scripts counted as instructions.
-    # Full files count even if an operational branch uses only a section; repeated
-    # reads in one context deduplicate, distinct contexts count separately.
-    observations = {}
-    for historical, name in ((True, "baseline"), (False, "candidate")):
-        extra = "contracts" if historical else "coordination"
-        lead = surface(COMMON + [f"workflow/work-on/references/{extra}.md"], historical)
-        reviewer = surface(PROJECT + REVIEW, historical)
-        pr = surface(PROJECT + PR, historical)
-        observations[name] = {"planning": surface(PLANNING, historical),
-                              "investigation_to_ticket": surface(
-                                  INVESTIGATION + (OLD_TRACKER if historical else NEW_TRACKER), historical),
-                              "diagnosis_only": surface(
-                                  INVESTIGATION + OLD_TRACKER if historical else
-                                  PROJECT + ["workflow/investigate-bug/SKILL.md"], historical),
-                              "lead_delivery": lead, "each_of_two_reviewers": reviewer,
-                              "delivery_total": lead["words"] + 2 * reviewer["words"],
-                              "selected_PR_fresh_context": pr}
-        if historical:
-            # The old entry additionally required PR-report preparation. Keep its
-            # endpoint cost separate rather than claiming all savings are dedup.
-            observations[name]["former_ordinary_endpoint_total"] = (
-                lead["words"] + 2 * reviewer["words"] + surface(PR, historical)["words"])
-    print(json.dumps({"base": base, "unit": "whitespace words; static reading paths",
-                      "assumptions": "planning: inline Analyze and Build and Check capability inspection; "
-                                     "delivery: direct small code change and two neutral reviewers; "
-                                     "investigation-to-ticket: established cause and explicitly selected ticket stage; "
-                                     "same project, no source/domain gaps, no delegation; diagnosis-only "
-                                     "reported separately because baseline requires ticket preparation",
-                      "limits": "Static full-file counts, including actual project guidance per revision; "
-                                "not tokens, timing or agent adherence. Conditional branches are not measured.",
-                      "contexts": observations}, indent=2))
+    print(json.dumps(measure(base), indent=2))
 
 
 if __name__ == "__main__":
