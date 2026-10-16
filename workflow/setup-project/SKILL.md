@@ -12,7 +12,7 @@ Use normal file and shell tools. No particular agent SDK, literal Skill tool, su
 
 ## Read-only procedure library
 
-A delivery caller may discover this package and read [tracker integration](references/issue-tracker.md), especially its native-graph procedure, without invoking `/setup-project` or executing the setup steps below. Resolve the tracker link above from this inspected entry point at the discovered package location; delivery callers use their shared capability contract for complete-read recovery and reference resolution. Record the resolved source/revision and check semantic compatibility: native hierarchy/blockers, identity/pagination, conflict checks, additive writes and both-direction read-back. Target-project policy and exact caller approval govern operations; library access grants no setup, label/settings audit or mutation authority. The optional helper supports only its documented one-repository additive blocker scope; parentage, labels and unsupported cases stay with the procedure. Missing capability blocks the affected route rather than causing installation or silent prose fallback.
+Tracker consumers may discover this package and read the complete [native tracker library](references/native-tracker.md) directly, without this setup entry or the label audit. That library owns discovery/compatibility, authority, roles/readiness, native graph operations and helper limits. Reading it does not invoke setup. The [tracker integration](references/issue-tracker.md) reference retains the setup-only audit and forwards existing graph callers to the same owner. Missing/incompatible library capability blocks the affected route without installation or silent fallback; installed copies remain unchanged.
 
 ## 1. Inspect before asking or changing
 

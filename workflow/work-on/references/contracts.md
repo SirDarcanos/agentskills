@@ -4,7 +4,7 @@ Compatibility library for callers still using these anchors. Reading it does not
 
 ## Capability checks
 
-Use target/runtime discovery and common reading rules. Inspect the resolved compatible entry and relevant branch references, source/revision or digest and required authority. Missing/ambiguous capability blocks its dependent route, not unrelated work; no installation or legacy fallback. Local method/preflight responsibilities are in [build](build.md). Native GitHub graph work uses discovered `setup-project`'s maintained tracker library, without invoking setup. Diagnosis can return actionable conversation evidence without mandatory ticket publication.
+Use target/runtime discovery and common reading rules. Inspect the resolved compatible entry (or documented direct library entry) and relevant branch references, source/revision or digest and required authority. Missing/ambiguous capability blocks its dependent route, not unrelated work; no installation or legacy fallback. Local method/preflight responsibilities are in [build](build.md). Native GitHub graph work discovers the actual `setup-project` package root and reads its complete `references/native-tracker.md` library entry directly, without the setup entry or label audit; missing/incompatible libraries block that route without installation. Diagnosis can return actionable conversation evidence without mandatory ticket publication.
 
 ### Complete reads and reference resolution
 

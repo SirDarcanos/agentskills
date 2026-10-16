@@ -42,7 +42,7 @@ Operating-document and AGENTS authoring guidance ships inside this package. Doma
 
 ## Tracker procedure library
 
-Delivery workflows may discover this package and read its entry point plus [tracker integration](references/issue-tracker.md) without invoking setup. The native-graph procedure is the authoritative reconciliation algorithm; its optional helper handles only additive blockers in one github.com repository, not parentage, labels or approval. Callers record the source/revision and verify semantic compatibility. Actual operations remain subject to the target project's policy and exact approval; reading the library grants no setup or configuration authority.
+Tracker consumers discover this package root through runtime/project metadata and read the complete [native tracker library](references/native-tracker.md) directly, without the setup entry or label audit. It owns discovery/authority, roles/readiness, native graph operations and optional helper limits. Callers record source identity and check compatibility; missing/older incompatible libraries block the affected route without installation. Existing [tracker integration](references/issue-tracker.md#native-github-graph) callers forward to the same owner. Actual operations remain subject to target policy and exact approval; reading the library grants no setup or configuration authority and does not update installed copies.
 
 ## Files and validation
 
@@ -51,7 +51,8 @@ Delivery workflows may discover this package and read its entry point plus [trac
 - [Discovery](references/discovery.md) and [reconciliation](references/reconciliation.md): conditional procedures.
 - [Model-use agreement](references/model-use.md): policy discovery, exact approval, document application and unchanged rerun.
 - [Domain handoff](references/domain-records.md): setup integration with the domain-modeling companion.
-- [Tracker integration](references/issue-tracker.md): label audit/cleanup, spec classification, and native relationships.
+- [Tracker integration](references/issue-tracker.md): setup label audit/cleanup and retained graph forwarding target.
+- [Native tracker library](references/native-tracker.md): directly readable role/readiness and native relationship contract.
 - [Release setup](references/releases.md): versioning detection, changelog creation/maintenance, and release authority.
 - [Validation](references/validation.md): offline commands, scenario matrix, and limits.
 - [Dependency helper](scripts/dependencies.py): read-only planning or explicitly applied blocker edges, never parentage or label mutations.

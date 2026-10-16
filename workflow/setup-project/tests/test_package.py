@@ -81,6 +81,29 @@ class PackageTests(unittest.TestCase):
         self.assertNotIn('references/contracts.md', agreement)
         self.assertNotIn('docs/agents/', agreement)
 
+    def test_direct_native_library_and_legacy_forwarder(self):
+        library = (ROOT / 'references/native-tracker.md').read_text()
+        legacy = (ROOT / 'references/issue-tracker.md').read_text()
+        entry = (ROOT / 'SKILL.md').read_text()
+        for clause in ('without reading `SKILL.md` or the label audit',
+                       'Missing, ambiguous or incompatible',
+                       'exact approved effects', 'no setup',
+                       'Spec/work-ticket roles, titles and readiness',
+                       'Reconciliation algorithm', 'including pagination',
+                       'cross-repository identities', 'transitive blockers',
+                       'ambiguous 404', 'both relationship directions',
+                       'one github.com repository', 'does not manage parentage',
+                       'never deletes edges or retries failed writes'):
+            self.assertIn(clause, library)
+        self.assertIn('(references/native-tracker.md)', entry)
+        self.assertIn('(native-tracker.md)', legacy)
+        self.assertIn('## Native GitHub graph', legacy)
+        self.assertIn('Source changes do not update installed copies', legacy)
+        self.assertNotIn('### Reconciliation algorithm', legacy)
+        self.assertNotIn('gh api --method POST', legacy)
+        self.assertNotIn('## Label audit', library)
+        self.assertNotIn('### Present the labels step', library)
+
     def test_setup_package_has_only_package_local_file_links(self):
         self.check_package(ROOT, 'setup-project', command_only=True)
 
