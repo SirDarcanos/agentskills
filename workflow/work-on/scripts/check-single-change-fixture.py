@@ -220,8 +220,13 @@ class SingleChange(unittest.TestCase):
                        "without a maintainer method/seam questionnaire", "whole-spec",
                        "lead inspection or optional model agreement cannot substitute"):
             self.assertIn(clause, entry.lower())
-        for clause in ("two active non-lead workers", "root lead alone", "two automatic repair cycles",
+        for clause in ("root lead chooses and adjusts concurrency", "root lead alone", "two automatic repair cycles",
                        "zero autonomous calls", "without replenishing", "service/model substitution"):
+            self.assertIn(clause, contract.lower())
+        for obsolete in ("at most **two active non-lead workers**", "at most two active non-lead workers"):
+            self.assertNotIn(obsolete, contract.lower())
+        for clause in ("no universal worker ceiling", "rolling scheduling", "explicit user/project restrictions",
+                       "finite timeout/turn bounds", "does not override an existing consumer-project"):
             self.assertIn(clause, contract.lower())
         self.assertIn("compatibility pointer only", contract)
         adapter = (PACKAGE / "references/dispatch.md").read_text()
@@ -248,7 +253,7 @@ class PortableAuthorityInstructions(unittest.TestCase):
         for clause in ("explicit user delivery request", "`work-on` or `work-on-spec`",
                        "read-only Standards and Spec", "without another permission prompt",
                        "no repository-local standing permission", "Explicit user/project/runtime restrictions",
-                       "configured agent runtime", "root", "two active non-lead workers",
+                       "configured agent runtime", "root", "lead-chosen concurrency",
                        "New sensitive disclosure", "additional spending", "optional model assessments",
                        "library grants no execution authority", "implemented-but-unaccepted"):
             with self.subTest(clause=clause):

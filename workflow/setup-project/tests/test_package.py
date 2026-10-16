@@ -30,6 +30,15 @@ class PackageTests(unittest.TestCase):
                 self.assertTrue(resolved.resolve().is_relative_to(root.resolve()),
                                 f'{path}: undeclared sibling file dependency {target}')
 
+    def test_concurrency_is_a_lead_decision_not_a_setup_default_cap(self):
+        discovery = (ROOT / 'references/discovery.md').read_text()
+        for clause in ('Leave routine worker concurrency to the delivery lead',
+                       'do not invent a numerical worker ceiling',
+                       'preserve existing consumer-project concurrency limits',
+                       'exact reconciliation is approved', 'finite assignment runtime and repair bounds'):
+            self.assertIn(clause, discovery)
+        self.assertNotIn('Use finite runtime/capacity and repair bounds', discovery)
+
     def test_setup_package_has_only_package_local_file_links(self):
         self.check_package(ROOT, 'setup-project', command_only=True)
 
