@@ -64,7 +64,7 @@ Describe what you expected, what happened, and how to reproduce it if you know. 
 /investigate-bug Cancelling a booking doesn't free up a place in the class.
 ```
 
-It investigates the cause and prepares evidence for a fix, with approval before tracker changes. An investigation-only request stops before repair. Ask `work-on` to deliver the resulting ticket when you're ready; it reuses current diagnosis evidence.
+It returns the diagnosis and evidence for a fix in conversation; no ticket or tracker access is required. It can recommend direct work or ticket creation, but an investigation-only request stops before repair. Ask `work-on` to deliver a bounded ready fix from the current evidence, or explicitly request investigation-and-ticket or investigation-and-fix work. Those selected stages retain their own authority and capability gates.
 
 ### Moving to another session
 

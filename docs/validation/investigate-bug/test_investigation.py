@@ -7,6 +7,7 @@ import tempfile
 import unittest
 import subprocess
 import sys
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[3]
 SPEC = importlib.util.spec_from_file_location(
@@ -37,7 +38,14 @@ class InvestigationCases(unittest.TestCase):
         self.unrelated.write_text("protected partial work\n")
         self.original = {p: p.read_bytes() for p in
                          (self.product, self.caller, self.unrelated)}
-        self.tracker = FakeTracker(self.home / "tracker.json")
+        self._tracker = None
+
+    @property
+    def tracker(self):
+        # Diagnosis-only cases never construct a tracker or a persistence file.
+        if self._tracker is None:
+            self._tracker = FakeTracker(self.home / "tracker.json")
+        return self._tracker
 
     def observe(self, discount=0.10):
         namespace = {}
@@ -67,7 +75,7 @@ class InvestigationCases(unittest.TestCase):
             "regression": "Assert R1 fails with 99.9 on pinned source, retain R2 control",
             "method": "tdd: deterministic behavior with existing callable seam",
             "uncertainty": "Synthetic arithmetic only; no production rounding claim",
-            "artifacts": "No probes created; inline reproduction retained in ticket",
+            "artifacts": "No probes created; inline reproduction returned in conversation",
         }
 
     def publish(self, title, evidence):
@@ -160,15 +168,125 @@ class InvestigationCases(unittest.TestCase):
         self.assertEqual(len(self.tracker.load()["issues"]), 1)
         self.unchanged()
 
-    def test_current_handoff_reused_without_new_diagnosis(self):
+    def test_current_conversation_handoff_reused_without_new_diagnosis(self):
         evidence = self.evidence()
-        ticket = self.publish("Discount defect", evidence)
-        current = {"pricing.py": digest(self.product), "caller.py": digest(self.caller)}
-        self.assertEqual(current, json.loads(ticket["body"])["inputs"])
-        # Receiver reads source and pinned evidence; no new observe(), Analyze or fix.
-        self.assertIn("sum(prices) - discount", self.product.read_text())
-        self.assertEqual(evidence["method"].split(":")[0], "tdd")
+        with patch.object(self, "observe", side_effect=AssertionError("redundant reproduction")):
+            current = {"pricing.py": digest(self.product), "caller.py": digest(self.caller)}
+            self.assertEqual(current, evidence["inputs"])
+            # Receiver inspects source and evidence; no ticket/Analyze/new probe/fix.
+            self.assertIn("sum(prices) - discount", self.product.read_text())
+            self.assertEqual(evidence["method"].split(":")[0], "tdd")
+        self.assertIsNone(self._tracker)
         self.unchanged()
+
+    def test_complete_diagnosis_without_tracker_or_publication(self):
+        # Authored caller trace, not an instruction interpreter or agent trial.
+        # Fail loudly on even tracker construction: no credential/capability needed.
+        with patch.object(MODULE, "FakeTracker", side_effect=AssertionError("tracker forbidden")), \
+                patch(__name__ + ".FakeTracker", side_effect=AssertionError("tracker forbidden")):
+            diagnosis = self.evidence()
+            self.assertEqual(diagnosis["kind"], "implementation-ready")
+            for key in ("expected", "actual", "impact", "environment", "reproduction",
+                        "cause", "inputs", "fix_scope", "constraints", "exclusions",
+                        "dependencies", "risks", "acceptance", "regression", "method",
+                        "uncertainty", "artifacts"):
+                self.assertIn(key, diagnosis)
+            self.assertNotIn("issue_url", diagnosis)
+            self.assertFalse((self.home / "tracker.json").exists())
+        self.unchanged()
+
+    def test_unrelated_tracker_outage_does_not_change_local_diagnosis(self):
+        with patch(__name__ + ".FakeTracker", side_effect=PermissionError("no credentials")):
+            with self.assertRaises(PermissionError):
+                FakeTracker(self.home / "tracker.json")
+            diagnosis = self.evidence()
+            self.assertEqual(diagnosis["kind"], "implementation-ready")
+            self.assertIsNone(self._tracker)
+        self.unchanged()
+
+    def test_no_publication_unresolved_intermittent_and_wrong_reason(self):
+        observations = [self.observe(0), self.observe(.10), self.observe(0)]
+        self.assertEqual(observations, [100, 99.9, 100])
+        with self.assertRaises(TypeError):
+            self.observe(None)
+        result = {"kind": "investigation-only", "cause": None,
+                  "attempts": 3, "failures": 1, "successes": 2,
+                  "observations": observations,
+                  "limits": "Synthetic scheduled inputs; None is a harness error",
+                  "blocker": "Caller reason for alternating inputs unknown",
+                  "next_action": "Capture caller inputs within approved bounds"}
+        self.assertIsNone(result["cause"])
+        self.assertNotEqual(result["kind"], "implementation-ready")
+        self.assertIsNone(self._tracker)
+        self.assertFalse((self.home / "tracker.json").exists())
+        self.unchanged()
+
+    def test_unconfirmed_report_returns_gap_without_ticket(self):
+        observations = [self.observe(0), self.observe(0)]
+        self.assertEqual(observations, [100, 100])
+        result = {"kind": "investigation-only", "confirmed": False,
+                  "cause": None, "attempts": 2, "observations": observations,
+                  "blocker": "Reported input unavailable",
+                  "next_action": "Obtain the failing input before further probing"}
+        self.assertFalse(result["confirmed"])
+        self.assertIsNone(self._tracker)
+        self.assertFalse((self.home / "tracker.json").exists())
+        self.unchanged()
+
+    def test_intervening_edit_prevents_probe_cleanup_and_ready_handoff(self):
+        owned = self.product.read_text() + "\n# owned diagnostic probe\n"
+        self.product.write_text(owned)
+        recorded = digest(self.product)
+        self.product.write_text(owned + "# intervening unrelated edit\n")
+        current = self.product.read_bytes()
+        self.assertNotEqual(digest(self.product), recorded)
+        result = {"kind": "investigation-only", "cleanup": "blocked",
+                  "remaining": "owned diagnostic probe plus intervening edit"}
+        # The author of the diagnostic probe cannot restore the old whole file.
+        self.assertEqual(self.product.read_bytes(), current)
+        self.assertEqual(result["cleanup"], "blocked")
+        self.assertIsNone(self._tracker)
+        self.assertEqual(self.unrelated.read_bytes(), self.original[self.unrelated])
+
+    def test_explicit_ticket_compound_publishes_current_diagnosis(self):
+        diagnosis = self.evidence()
+        ticket = self.publish("Fractional discount defect", diagnosis)
+        self.assertEqual(json.loads(ticket["body"]), diagnosis)
+        self.assertEqual(len(self.tracker.load()["issues"]), 1)
+        self.unchanged()  # ticket stage did not repair the product
+
+    def test_draft_or_declined_ticket_does_not_downgrade_diagnosis(self):
+        for route in ("draft-only", "publication-declined"):
+            diagnosis = self.evidence()
+            artifact = {"status": "draft-not-published", "route": route,
+                        "title": "Fractional discount defect", "body": diagnosis}
+            self.assertEqual(artifact["body"]["kind"], "implementation-ready")
+            self.assertIsNone(self._tracker)
+        self.unchanged()
+
+    def test_failed_ticket_readback_preserves_diagnosis_and_actual_write(self):
+        diagnosis = self.evidence()
+        self.tracker.timeout_after_write = True
+        with self.assertRaisesRegex(RuntimeError, "persisted creation"):
+            self.tracker.create("Discount defect", json.dumps(diagnosis), ["bug"])
+        # A bounded reconciliation inspects existing state; never retries creation.
+        self.assertEqual(len(self.tracker.load()["issues"]), 1)
+        self.assertEqual(diagnosis["kind"], "implementation-ready")
+        self.assertEqual(json.loads(self.tracker.load()["issues"][0]["body"]), diagnosis)
+        self.unchanged()
+
+    def test_explicit_fix_compound_returns_evidence_and_original_authority(self):
+        authority = {"request": "Investigate and fix fractional discounts",
+                     "effects": "Bounded pricing correction and relevant checks"}
+        diagnosis = self.evidence()
+        handoff = {"owner": "compatible delivery lead", "authority": authority,
+                   "diagnosis": diagnosis}
+        with patch.object(self, "observe", side_effect=AssertionError("redundant reproduction")):
+            self.assertEqual(handoff["diagnosis"]["inputs"]["pricing.py"], digest(self.product))
+            self.assertIs(handoff["authority"], authority)
+            self.assertNotIn("ticket", handoff)
+        self.assertIsNone(self._tracker)
+        self.unchanged()  # producer handoff only, not a delivered fix trial
 
     def test_dirty_caller_change_invalidates_only_dependent_evidence(self):
         evidence = self.evidence()
