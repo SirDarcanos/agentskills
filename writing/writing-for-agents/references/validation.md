@@ -19,6 +19,9 @@ Walk these against the actual entry point after substantive changes. They are ex
 
 | Case | Expected result | Acceptance |
 | --- | --- | --- |
+| Project guidance compatible, absent/conflicting, or missing only conditional detail | Reuse equivalent guidance; name a common-guidance blocker and recommend explicit reconciliation; block only the conditional capability when that alone is missing. No automatic setup or delivery dependency | WA4, WA6 |
+| Non-project supplied instructions; no setup or delivery skill | Use request-specific authority; preserve the project-shipped helper restriction; no manufactured project or session artifact | WA4, WA5 |
+| Authorized domain/document maintenance, no handoff requested | Follow the agreement's authoritative record and ADR approval rules during current work; no optional handoff required | WA4 |
 | New skill with a generic trigger | Scope the supported requests, align description/body and validate frontmatter using the target runtime where available | WA1, WA2, WA6 |
 | Instruction file duplicates a guide's rule | Select the existing authoritative home, preserve unique exceptions, replace repetition with a conditional pointer | WA1, WA3, WA4 |
 | Referenced guide has an unordered procedure | Write ordered actions, observable completion and a failure path; inspect its incoming pointer | WA1, WA2 |

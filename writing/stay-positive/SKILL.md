@@ -27,6 +27,12 @@ Infer the mode from the request. Ask which mode the user wants only when the del
 - **Edit:** Revise supplied prose with the minimum effective changes.
 - **Draft:** Write new prose using constructive framing where it serves the piece.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+For non-project supplied-text work, use the request's scope and authority without requiring project setup or a delivery workflow.
+
 ## Workflow
 
 ### 1. Establish the writing contract
@@ -87,3 +93,7 @@ Verify:
 - **Slop:** When `slop-guard` is installed, its finish gate also passes.
 
 If any check fails, revise and run the gate again.
+
+## Skill validation
+
+When changing this package, check frontmatter, Markdown and all internal links in a copy without siblings. Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. Also walk non-project supplied-text constructive-framing requests without setup and preserve the companion-loading rule above. Label static walkthroughs separately from executed agent trials.

@@ -33,6 +33,12 @@ or additional disclosure permission. Before transport code, SDK configuration,
 inference or serving changes, read [integration and deployment](references/integration.md)
 for the applicable execution and service-ownership rules.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+Use the target's actual model/service and disclosure permissions for integration work; no assessment policy or delivery entry is required merely to read this guide or explore an integration. Missing inference permission blocks calls, not authorized offline design or mockable implementation. This guide grants no assessment permission.
+
 ## 1. Read the live docs
 
 **Current Nimble and Ollama documentation is the source of truth for the integration.**
@@ -201,6 +207,8 @@ prompts. Matching application requests need no explicit invocation; exploration
 alone must not start implementation, and a one-off consultation must not silently
 invoke `ask-nimble`. Loading the guide alone must not run inference or change services.
 Label static walkthroughs separately from executed runtime trials.
+Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. Walk compatible offline exploration without inference permission: recommendations only, no model calls or service effects. Missing model permission does not block authorized mocks; missing common guidance blocks dependent project work. These are static instruction walkthroughs, not runtime enforcement.
+
 This package has no executable client or bundled model tests; validating
 an application built with it follows section 5 and the integration reference.
 

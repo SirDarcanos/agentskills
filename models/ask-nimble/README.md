@@ -25,6 +25,10 @@ The agent answers factual questions, empirical probabilities, arithmetic, determ
 
 An explicit request to test Nimble against a known answer can still use it as a model test.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Named non-project assessments remain usable under their exact invocation and authorization gates. Setup and ordinary invocation grant no assessment permission; no delivery companion is required.
+
 ## Requirements
 
 An agent with repository-reading, file-writing, and shell tools; local Ollama 0.35 or later with Nimble pulled; Python 3; and curl. See [the API reference](references/ollama-api.md) for the request procedure and validation.

@@ -14,6 +14,10 @@ Start only when the user explicitly requests creation of the project's first cha
 
 If a changelog already exists, use `/update-changelog` when available rather than replacing it. When it is unavailable, preserve the existing file and report that creation is unnecessary.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
 ## Workflow
 
 ### 1. Establish the history
@@ -85,5 +89,7 @@ Check all of the following:
 Report the releases covered, evidence gaps left undocumented, and any version decision that still requires confirmation.
 
 ## Skill validation
+
+Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution.
 
 When changing invocation instructions, inspect frontmatter and the body gate together. Walk explicit first-changelog requests and user-originated runtime expansions as positive cases; missing files, source mentions, quoted/generated commands and recommendations alone must not start creation. An existing changelog must take the preservation route above. Record these as static walkthroughs unless actual runtime invocation was exercised.

@@ -49,6 +49,10 @@ Records include exact requests, raw and parsed responses when available, expecte
 
 For a real regression, sanitize the evidence first, get permission before retaining project data, and preserve the request, response, agent interpretation, and independently observed outcome. Add it to the bundled fixtures only if safe to publish. Never include credentials, personal information, real account identifiers, or private telemetry. Remove temporary records when no longer needed.
 
+## Project-context walkthroughs
+
+Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. A named non-project assessment needs no manufactured project agreement, but still passes exact authorization. Missing autonomous model policy yields no-call with zero transport/service effects (and no credential access for hosted use); a compatible project prohibition remains valid guidance, not a reason to opt in. Ordinary writing or engineering needs no model result. Existing mocked authorization tests remain the executable safety coverage, not proof that an agent follows prose.
+
 ## Agent workflow scenarios
 
 Exercise these in a real agent session; the Python tests do not enforce prose instructions:

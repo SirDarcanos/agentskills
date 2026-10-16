@@ -12,6 +12,10 @@ In Pi, use `/skill:ask-jev <question>`. Installing the skill does not create a c
 
 Jev fits bounded semantic judgments: classification, policy checks, evidence support, and explicit rubrics. Factual lookups, arithmetic, empirical probabilities, and open-ended tasks are answered directly without a Jev call.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Named non-project assessments remain usable under their exact invocation and authorization gates. Setup and ordinary invocation grant no assessment permission; no delivery companion is required.
+
 ## Requirements and consent
 
 Use an agent with evidence-reading, JSON-writing, secure HTTP, and temporary-file cleanup capabilities. API calls require an existing authorized TypeSafe credential source and are billable. The standard environment variable is `TYPESAFE_API_KEY`; configure it outside the conversation.

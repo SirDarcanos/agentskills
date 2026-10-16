@@ -29,6 +29,12 @@ When the `stay-positive` skill is installed, load and apply it in the same mode 
 - **Edit:** Revise supplied prose. Use when the user asks to rewrite, clean up, sharpen, or fix it.
 - **Draft:** Write new prose from the user's facts, purpose, audience, and desired voice.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+For non-project supplied-text work, use the request's scope and authority without requiring project setup or a delivery workflow.
+
 ## Workflow
 
 ### 1. Establish the writing contract
@@ -125,3 +131,7 @@ Before returning the work, verify:
 - **Mode:** Audits contain no rewrite; edits contain the revision and change summary; drafts respect the factual boundary.
 
 If any check fails, revise and run the gate again.
+
+## Skill validation
+
+When changing this package, check frontmatter, Markdown and all internal links in a copy without siblings. Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. Also walk non-project supplied-text audit/edit/draft requests without setup and preserve the companion-loading rule above. Label static walkthroughs separately from executed agent trials.

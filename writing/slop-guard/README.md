@@ -69,6 +69,10 @@ slop-guard/
 - [`references/pattern-catalog.md`](references/pattern-catalog.md) contains the general editorial pattern families.
 - [`references/fiction-patterns.md`](references/fiction-patterns.md) is loaded only for fiction and narrative prose.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Non-project supplied-text work remains usable without setup. No delivery workflow is required for ordinary writing; results need no automatic handoff artifact.
+
 ## Install
 
 From the repository root, install the skill for a supported coding agent:
