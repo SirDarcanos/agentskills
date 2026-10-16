@@ -18,6 +18,7 @@ For #132 session-oriented workflow work, read the [accepted ownership and transi
 
 ## Working with skills
 
+- Before authoring or reviewing a skill package or its supporting instructions, read [the source-independence decision](docs/adr/0004-skill-package-source-independence.md). Apply its instruction-portability check to the complete shipped procedure, including maintenance references and embedded prompts; source-development evidence is not a consumer prerequisite.
 - Read a skill's complete `SKILL.md` before changing it.
 - Resolve relative references from the directory containing `SKILL.md`.
 - Keep trigger conditions in frontmatter specific enough to route matching requests without activating on unrelated work.
