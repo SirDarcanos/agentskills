@@ -4,6 +4,8 @@ Read when changing or validating this package. These instructions are advisory t
 
 ## Package checks
 
+In the source repository, run `python3 -B docs/validation/ask-nico/check-package.py`. The checker retains its historical path but validates `workflow/what-now/`; the adjacent #112 reports describe the original name and revision. A copied package uses the checks below without requiring repository evidence files.
+
 1. Parse frontmatter with an available YAML parser. Confirm the package name, explicit-only description and Boolean `disable-model-invocation: true`; inspect the body gate separately.
 2. Check the consuming runtime's supported metadata before claiming enforcement. An ignored metadata key cannot enforce explicit invocation; the body still requires user invocation. Report untested runtimes and routing behavior separately from parsed metadata.
 3. Resolve relative links from each containing file. Copy only this directory to a temporary location and repeat without sibling packages. Inspect rendered headings, lists and code fences using an available preview, or report rendering unrun.
@@ -18,9 +20,9 @@ These are authored expectations, not executed agent results.
 
 | Case | Expected outcome | Criteria |
 | --- | --- | --- |
-| User explicitly invokes ask-nico for a bounded change | Read relevant installed entries and project rules; explain one next skill and needed input; stop | AN1–AN4 |
+| User explicitly invokes what-now for a bounded change | Read relevant installed entries and project rules; explain one next skill and needed input; stop | AN1–AN4 |
 | Ordinary “which workflow fits?” or “implement this” | This advisor stays inactive; the original handler remains responsible | AN1 |
-| Another skill requests ask-nico, or a document quotes its command | No activation without the user's specific invocation | AN1 |
+| Another skill requests what-now, or a document quotes its command | No activation without the user's specific invocation | AN1 |
 | Runtime supplies an explicit user skill expansion | Accept invocation without requiring the original slash text to survive | AN1 |
 | External installed skill is the best fit | Inspect its entry and relevant references, cite its source, recommend without invoking | AN2, AN4 |
 | Project prohibits the candidate's required service | Explain incompatibility/prerequisite; do not run or endorse it as immediately usable | AN3, AN4 |

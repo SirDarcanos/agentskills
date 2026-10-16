@@ -8,7 +8,7 @@ Pick a skill for the job in front of you. Each link explains what it does, what 
 
 | Skill | What it helps you do |
 | --- | --- |
-| [`ask-nico`](../workflow/ask-nico/) | Explicitly ask which installed skill or route fits; get inspected recommendations without starting a workflow. |
+| [`what-now`](../workflow/what-now/) | Explicitly ask which installed skill or route fits; get inspected recommendations without starting a workflow. |
 | [`shape-work`](../workflow/shape-work/) | Work out what you want to build through questions about goals, users, priorities, and trade-offs. |
 | [`research`](../workflow/research/) | Investigate a question using cited sources and make uncertainty visible. |
 | [`analyze`](../workflow/analyze/) | Find technical risks and existing work you can reuse before committing to a build. |

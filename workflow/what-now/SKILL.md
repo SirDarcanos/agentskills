@@ -1,16 +1,16 @@
 ---
-name: ask-nico
-description: Recommend an installed skill or workflow for your situation, without starting it. Only runs when you explicitly invoke ask-nico.
+name: what-now
+description: Recommend an installed skill or workflow for your situation, without starting it. Only runs when you explicitly invoke what-now.
 disable-model-invocation: true
 ---
 
-# Ask Nico
+# What Now
 
 An explicit-invocation workflow advisor, not a simulation of the maintainer.
 
 ## 1. Confirm the request
 
-Proceed only when the user specifically invokes `ask-nico`, by name, slash command or the runtime's explicit skill expansion. A generic workflow question, source mention, quoted command, another skill's handoff or an agent's decision to load this file does not activate it. Without that user invocation, stop this procedure and leave the original request to its existing handler.
+Proceed only when the user specifically invokes `what-now`, by name, slash command or the runtime's explicit skill expansion. A generic workflow question, source mention, quoted command, another skill's handoff or an agent's decision to load this file does not activate it. Without that user invocation, stop this procedure and leave the original request to its existing handler.
 
 Identify the user's goal, current progress and whether they want discovery, diagnosis, writing, review or delivery advice. Ask only for consequential intent that the request and available context cannot settle.
 
