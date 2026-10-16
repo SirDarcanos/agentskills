@@ -6,10 +6,10 @@ Read when changing or validating this package. These are repeatable checks and a
 
 1. Read the complete entry point and rendered Markdown. Check frontmatter: `name: tdd`, matching-request/handoff description, and no command-only invocation gate.
 2. Resolve every relative link from its containing file. Copy the entire package to an isolated directory with no sibling skills; check internal links again and run the fixture there.
-3. With Python 3.9+ and no additional dependencies, execute:
+3. From the package directory, with Python 3.9+ and no third-party dependencies, run:
 
    ```sh
-   python3 workflow/tdd/scripts/check-fixture.py
+   python3 scripts/check-fixture.py
    ```
 
    From an isolated copy, use that copy's `scripts/check-fixture.py`. The script creates/removes only a temporary synthetic target. It invokes Python's unittest runner with bounded subprocess timeouts, no network, models, Git/tracker mutations or installed skill changes.
@@ -19,9 +19,9 @@ Read when changing or validating this package. These are repeatable checks and a
 
 ## Authored workflow cases
 
-For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+Inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
 
-Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+Run package checks from an isolated copy using only its shipped files. Keep maintenance validation separate from ordinary method execution; no source checkout or historical comparison is required.
 
 Exercise these directly or in an authorized runtime trial; record actual actions separately from expected outcomes:
 

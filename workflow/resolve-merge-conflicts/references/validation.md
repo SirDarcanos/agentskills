@@ -1,6 +1,6 @@
 # Validation
 
-Read when changing or validating this package. Run `python3 -B workflow/resolve-merge-conflicts/scripts/check-fixtures.py` from the repository root, or run `scripts/check-fixtures.py` relative to a copied package. Python 3.9+ and Git are required; no inference or installation is used.
+Read when changing or validating this package. From the package directory, run `python3 -B scripts/check-fixtures.py`. An isolated copy needs only its shipped files, not a source checkout. Python 3.9+ and Git are required; no inference or installation is used.
 
 ## Acceptance mapping
 

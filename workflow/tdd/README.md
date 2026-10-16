@@ -28,4 +28,4 @@ The procedure is newly written rather than a verbatim copy. It adds the approved
 
 ## Validation
 
-See [validation](references/validation.md) for package checks, an offline Python 3.9+ fixture and authored workflow cases. Run `python3 workflow/tdd/scripts/check-fixture.py` from the repository root. The fixture executes a synthetic red–green–refactor sequence, retains existing behavioral coverage and illustrates two rejected test anti-patterns. It is not an executed agent workflow or installed-runtime certification. No model service is required.
+See [validation](references/validation.md) for package checks, an offline Python 3.9+ fixture and authored workflow cases. From the package directory, run `python3 scripts/check-fixture.py`. The fixture executes a synthetic red–green–refactor sequence, retains existing behavioral coverage and illustrates two rejected test anti-patterns. It is not an executed agent workflow or installed-runtime certification. No model service is required.

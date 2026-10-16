@@ -20,10 +20,10 @@ Expect file inspection, authorized implementation/test writes and an executable 
 
 ## Validate
 
-With Python 3.9+ and no third-party dependencies:
+From this package's directory, with Python 3.9+ and no third-party dependencies:
 
 ```sh
-python3 workflow/acceptance-first/scripts/check-fixture.py
+python3 scripts/check-fixture.py
 ```
 
 Follow [validation](references/validation.md) for packaging and authored workflow cases. The offline synthetic fixture runs an API/workflow across a real local SQLite persistence boundary: meaningful red, two checked increments, rejection without side effects and regression sensitivity. Separate synthetic reporting cases retain ambiguous intent and unavailable payment integration as blocked/unverified. These are executable fixture results, not agent-adherence, installed-discovery or live-service trials. Installation commands have not been executed here.

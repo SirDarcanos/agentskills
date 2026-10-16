@@ -22,10 +22,10 @@ The skill expects file inspection, authorized test writes and a relevant executa
 
 ## Validate
 
-With Python 3.9+ and no third-party dependencies:
+From this package's directory, with Python 3.9+ and no third-party dependencies:
 
 ```sh
-python3 workflow/characterize/scripts/check-fixture.py
+python3 scripts/check-fixture.py
 ```
 
 Follow [validation](references/validation.md) for packaging and authored workflow cases. The offline synthetic fixture demonstrates intended shipping protection, a separately recorded negative-price defect, sensitivity to a relevant mutation, allowed defect correction and bounded observations of variable receipt tokens. It is not an agent workflow or installed-discovery trial. Installation commands above have not been executed here.

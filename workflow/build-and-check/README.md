@@ -20,10 +20,10 @@ Expect file inspection, authorized scoped edits and the target's appropriate exe
 
 ## Validate
 
-With Python 3.9+ and no third-party dependencies:
+From this package's directory, with Python 3.9+ and no third-party dependencies:
 
 ```sh
-python3 workflow/build-and-check/scripts/check-fixture.py
+python3 scripts/check-fixture.py
 ```
 
 Follow [validation](references/validation.md) for package checks and authored cases. The offline synthetic fixture executes a code increment using unchanged existing checks, documentation and JSON configuration increments, and a meaningful failure that blocks a dependent artifact until repair/recheck. These are fixture results, not proof of agent adherence, installed discovery or live services. Installation examples have not been executed here.

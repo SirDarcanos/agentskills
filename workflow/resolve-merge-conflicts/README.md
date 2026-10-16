@@ -20,10 +20,10 @@ Installation has not been exercised here. Repository delivery does not update th
 
 ## Validate
 
-With Python 3.9+ and Git, from the repository root:
+With Python 3.9+ and Git, from this package's directory:
 
 ```sh
-python3 -B workflow/resolve-merge-conflicts/scripts/check-fixtures.py
+python3 -B scripts/check-fixtures.py
 ```
 
 The script uses disposable local repositories and synthetic identities without network, dependencies or global Git configuration changes. Follow [validation](references/validation.md) for acceptance mapping and limits. These are scripted Git checks, not autonomous agent-adherence tests.
