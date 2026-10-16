@@ -20,6 +20,12 @@ COMMON = PROJECT + ["workflow/work-on/SKILL.md",
     f"workflow/work-on/references/{name}.md" for name in ("build", "verification", "completion")
 ] + REVIEW
 PR = ["workflow/pr/SKILL.md", "workflow/pr/references/impact.md"]
+# Equivalent planning outcome: Shape Work uses inline Analyze and inspects the
+# Build and Check capability. No source/domain gap or delegation is selected.
+# Analyze's domain/delegation references are mandatory only on those branches;
+# they and the discovered companion closures must be added if that task changes.
+PLANNING = PROJECT + [f"workflow/{name}/SKILL.md" for name in
+                      ("shape-work", "analyze", "build-and-check")]
 
 
 def main():
@@ -50,7 +56,8 @@ def main():
         lead = surface(COMMON + [f"workflow/work-on/references/{extra}.md"], historical)
         reviewer = surface(PROJECT + REVIEW, historical)
         pr = surface(PROJECT + PR, historical)
-        observations[name] = {"lead_delivery": lead, "each_of_two_reviewers": reviewer,
+        observations[name] = {"planning": surface(PLANNING, historical),
+                              "lead_delivery": lead, "each_of_two_reviewers": reviewer,
                               "delivery_total": lead["words"] + 2 * reviewer["words"],
                               "selected_PR_fresh_context": pr}
         if historical:
@@ -59,7 +66,11 @@ def main():
             observations[name]["former_ordinary_endpoint_total"] = (
                 lead["words"] + 2 * reviewer["words"] + surface(PR, historical)["words"])
     print(json.dumps({"base": base, "unit": "whitespace words; static reading paths",
-                      "assumptions": "direct small code change; same project; two neutral reviewers; no gaps",
+                      "assumptions": "planning: inline Analyze and Build and Check capability inspection; "
+                                     "delivery: direct small code change and two neutral reviewers; "
+                                     "same project, no source/domain gaps, no planning delegation",
+                      "limits": "Static full-file counts, including actual project guidance per revision; "
+                                "not tokens, timing or agent adherence. Conditional branches are not measured.",
                       "contexts": observations}, indent=2))
 
 

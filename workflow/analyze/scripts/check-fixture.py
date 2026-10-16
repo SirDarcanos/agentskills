@@ -98,11 +98,20 @@ class ContractFixtures(unittest.TestCase):
         # Textual regression guards, not execution of the skill or a policy engine.
         entry = (Path(__file__).resolve().parents[1] / "SKILL.md").read_text()
         for phrase in ("once per context", "Equivalent existing layouts", "without starting it",
-                       "Missing common guidance", "ordinary inactive findings", "explicit agreement and permission"):
+                       "Missing common guidance", "ordinary inactive findings", "explicit agreement and permission",
+                       "recover truncated reads", "references/domain.md", "references/delegation.md"):
             self.assertIn(phrase, entry)
         self.assertNotIn("references/contracts.md", entry)
         self.assertIn("For a conditional library, inspect the documented pointer", entry)
-        self.assertIn("only the old universal contract is incompatible", entry)
+        root = Path(__file__).resolve().parents[1]
+        delegation = (root / "references/delegation.md").read_text()
+        domain = (root / "references/domain.md").read_text()
+        for phrase in ("only the old universal contract is incompatible", "finite bounds",
+                       "never recursively delegate", "finding/budget history"):
+            self.assertIn(phrase, delegation)
+        for phrase in ("plan-only", "including no draft writes", "exact files/sections/operations",
+                       "explicit agreement and permission", "rationale/history/links"):
+            self.assertIn(phrase, domain)
 
     def test_inspection_preserves_target(self):
         before = {p.name: digest(p) for p in self.target.iterdir()}
