@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `review-delivery` for independent Standards/Spec review of standalone and bounded handoffs, with delivery-inherited review permission, dirty-scope freshness, shared execution limits and original reports retained in PRs/issues. ([#24](https://github.com/SirDarcanos/agentskills/issues/24), [#65](https://github.com/SirDarcanos/agentskills/issues/65), [#127](https://github.com/SirDarcanos/agentskills/issues/127))
 - Add `ask-clef` and `ask-clef-flash` for evidence-backed local judgments through Ollama, by explicit request or approved project policy.
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
-- Add `setup-project` with stepwise confirmations, default ordinary-workflow and lead-owned review/repair permission, explicit installed-assessment choices, label dispositions and retained-label normalization alongside project documentation, model-use policy and GitHub setup. ([#8](https://github.com/SirDarcanos/agentskills/issues/8))
+- Add `setup-project` for compact project-owned agreements, semantic no-op reconciliation, user-selected publication/persistence boundaries, stepwise approvals and conditional domain, assessment and GitHub setup. ([#8](https://github.com/SirDarcanos/agentskills/issues/8), [#134](https://github.com/SirDarcanos/agentskills/issues/134))
 - Add `domain-modeling` as a reusable companion for `setup-project` and other workflows, with plan-only and approved glossary, context-map, and ADR handoffs. ([#8](https://github.com/SirDarcanos/agentskills/issues/8), [#11](https://github.com/SirDarcanos/agentskills/issues/11))
 
 ### Changed

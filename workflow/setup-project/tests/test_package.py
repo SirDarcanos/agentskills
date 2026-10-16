@@ -39,6 +39,48 @@ class PackageTests(unittest.TestCase):
             self.assertIn(clause, discovery)
         self.assertNotIn('Use finite runtime/capacity and repair bounds', discovery)
 
+    def test_compact_agreement_contract_and_stage_boundaries(self):
+        """Static contract guard, not an agent or semantic-agreement parser."""
+        contract = (ROOT / 'references/documentation-contract.md').read_text()
+        for clause in ('not filenames', 'One concise working agreement',
+                       'missing', 'conflict', 'unverifiable',
+                       'no autonomous assessment permission',
+                       'without a second full-text approval',
+                       'before PR preparation/publication',
+                       'Persistence is user-directed',
+                       'two-cycle automatic repair ceiling',
+                       'explicit agreement/permission',
+                       'not yet migrated', 'Leave existing Work On library targets'):
+            self.assertIn(clause, contract)
+        reconciliation = (ROOT / 'references/reconciliation.md').read_text()
+        for clause in ('A skill upgrade is not approval', 'Equivalent guidance',
+                       'no empty glossary', 'installed-copy changes'):
+            self.assertIn(clause, reconciliation)
+
+    def test_model_detail_is_conditional_and_bootstrap_is_explicit(self):
+        entry = (ROOT / 'SKILL.md').read_text()
+        self.assertIn('For unresolved assessment choices or a proposed policy change', entry)
+        self.assertIn('Setup is a bootstrap entry', entry)
+        self.assertIn('Ordinary consumers recommend reconciliation', entry)
+        self.assertIn('When tracker work is approved', entry)
+
+    def test_local_agreement_example_is_concise_and_self_contained(self):
+        """Authored output example; passing does not prove setup generates it."""
+        fixture = ROOT / 'tests/fixtures/local-agreement'
+        entry = (fixture / 'AGENTS.md').read_text()
+        agreement = (fixture / 'CONTRIBUTING.md').read_text()
+        self.assertIn('(CONTRIBUTING.md)', entry)
+        for clause in ('no tracker', 'Only bounded independent read-only',
+                       'assessments and service startup are prohibited',
+                       'at most two automatic repair cycles',
+                       'before PR preparation/publication',
+                       'Same-session evidence can stay in conversation'):
+            self.assertIn(clause, agreement)
+        self.assertEqual({p.name for p in fixture.iterdir()},
+                         {'AGENTS.md', 'CONTRIBUTING.md'})
+        self.assertNotIn('references/contracts.md', agreement)
+        self.assertNotIn('docs/agents/', agreement)
+
     def test_setup_package_has_only_package_local_file_links(self):
         self.check_package(ROOT, 'setup-project', command_only=True)
 

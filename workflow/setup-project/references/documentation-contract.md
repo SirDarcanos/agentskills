@@ -1,73 +1,76 @@
 # Project documentation contract
 
-This is the single authoring contract for setup's output. Other setup references own procedures, not competing document schemas. The `domain-modeling` companion owns domain/ADR procedures and receives the document mapping defined here through the domain handoff. Adapt to meaningful existing documents; these paths are defaults, not a migration requirement.
+This is setup's authoring contract, not a mandatory runtime library. The target project owns its working agreement; other skills consume that guidance without loading Setup. Preserve meaningful existing homes and customizations. Compatibility depends on responsibilities and effects, not filenames, template versions or hashes.
 
-## Homes and content
+## 1. Map the smallest useful agreement
 
-| Default home | Authoritative content |
+Locate applicable entry-point, directory and organization rules. Map each responsibility below to existing authoritative guidance or a proposed section. One concise working agreement may contain context inline or link it separately; do not create a manual of every specialist procedure.
+
+| Responsibility | Meaningful common guidance | Load only for the relevant operation |
+| --- | --- | --- |
+| Context and decisions | Purpose, operating constraints, who confirms intent/consequential commitments; agents own routine engineering within scope | Product sources and affected domain records |
+| Requested effects | Allowed ordinary actions, restrictions, user-selected stages, branch and artifact-publication authority | Tracker destination/roles, settings and release procedures |
+| Safety | Preserve unrelated files, index state, modes, links and history; truthful evidence; unknown permission remains ungranted | Exact approvals for destruction, sensitive disclosure, spending, installation, credentials, merge, deployment or release |
+| Verification and review | Risk-appropriate checks; material missing/failed checks and unresolved material findings block acceptance; applicable independent Standards/Spec review; refresh affected evidence after changes | Method loops, full dirty-state review snapshots, finite repair and worker mechanics |
+| Documentation | Maintain confirmed authorized meanings and changed documentation/changelog in their authoritative homes; selective ADRs require explicit agreement/permission and preserved rationale/history | Actual glossary, ADR and release sources when used |
+| Evidence and continuation | Same-session evidence may remain in conversation; user selects persistence; active ownership, uncertain effects and spent allowances survive interruptions | Coordination, recovery or an explicitly requested handoff |
+
+Common guidance also tells agents to discover needed companions, inspect complete entries and relevant references, verify semantic compatibility and source identity, recover truncated reads before acting, and resolve links from their containing file. Missing/incompatible helpers block only their dependent route, without installation or silent legacy substitution. This is not a catalog requiring every companion on every invocation.
+
+Choose verification by meaningful failure risk and existing coverage; new checks protect distinct failures, without test quotas or blanket test-first requirements. Preserve binding security/privacy/recovery checks; propose conflicting policy changes for approval instead of ignoring them.
+
+For delivery, retain the two-cycle automatic repair ceiling per acceptance checkpoint, finding lineage and spent allowances across methods, workers and resume. The lead chooses useful concurrency subject to actual restrictions and finite assignment bounds. Reviewers remain independent, read-only and separate from authors and each other's conclusions. Keep mechanics with their procedure owners; the common agreement need not embed their algorithms.
+
+## 2. Establish semantic compatibility
+
+Use guidance already available in context; read relevant authorities fully, not every optional record.
+
+1. Compare each responsibility with the requested operation. Record **already satisfied**, **missing**, **changed decision**, **conflict** or **unverifiable**, with its actual source and behavioral consequence. Existing equivalent prose is sufficient, even if Setup never produced it.
+2. Reuse compatible guidance without setup repetition or cosmetic rewriting. Missing common decision/safety/verification guidance blocks the dependent project workflow; ordinary skills explain the specific prerequisite and recommend explicit setup/reconciliation without starting it or inventing policy.
+3. Missing tracker/model/domain detail blocks only that capability. A local project without a tracker supports planning, diagnosis and direct local work; publication needs a destination and authority. No model policy means no autonomous assessment permission; an explicit prohibition is valid guidance, not incompatibility.
+4. Propose only necessary deltas. A newer skill cannot import permissions or replace confirmed decisions. Existing conflicting guidance needs exact approval before reconciliation; unknown permission does not prevent unrelated read-only inspection.
+
+Setup and the recommendation-only workflow advisor can operate before initialization. General non-project research or supplied-text writing needs no manufactured project. Safe state inspection by preflight, conflict resolution or handoff does not grant missing write/integration authority.
+
+**Done:** each relevant responsibility has a meaningful source or a specific affected gap; no filename/template test substitutes for this comparison.
+
+## 3. Author approved guidance and conditional pointers
+
+Default homes below are options, not required files. A single existing contribution/workflow document can own several responsibilities. On a new project create `AGENTS.md`; preserve a valid CLAUDE-only authority or symlink/pointer arrangement on an existing project. Inspect dual files, nested rules and symlink targets before edits; unresolved contradictory authorities block conflicting writes.
+
+| Home when useful | Content |
 | --- | --- |
-| `AGENTS.md` | Concise entry point: applicable rules and conditional read pointers. |
-| `docs/agents/project.md` | Purpose/stage, users and evidenced scale, maintenance/operating ownership, resources/constraints, credible risks, collaboration preference. |
-| `docs/agents/workflow.md` | Decision authority, delivery/review/verification expectations, versioning/changelog policy and sources, permitted actions, documentation upkeep. |
-| `docs/agents/model-use.md` or existing authoritative equivalent | Approved none or exact bounded model permissions, purpose/disclosure, shared limits, lifecycle, fallback, rationale and provenance. The [model-use procedure](model-use.md) owns discovery/approval/reconciliation; preserve an existing home. |
-| `docs/agents/issue-tracker.md` | Actual tracker location/access, capabilities, native parent/dependency operations, limitations, completion semantics. |
-| `docs/agents/triage-labels.md` | Spec/work-ticket roles, other applicable type/readiness/release roles mapped to actual labels/statuses; approved title conventions, role-assignment/readiness rules, and audit decisions. The tracker reference owns the authoring procedure. Omit if no label/status system is used. |
-| Existing changelog path, otherwise approved `CHANGELOG.md` or package equivalent | Evidence-backed notable change history in the project's convention; use source fragments/configuration instead for generated changelogs. |
-| `CONTEXT.md` or existing context map | Confirmed domain terms and relationships, not the operating profile. |
-| `docs/adr/` | Selective enduring decisions and rationale; created only when needed. |
+| `AGENTS.md` | Concise applicable rules and conditional pointers to the agreement and used capabilities |
+| `docs/agents/workflow.md` or existing equivalent | Working agreement above; context may be inline |
+| `docs/agents/project.md` or existing equivalent | Separate purpose, maintenance/operating ownership, resources and credible risks when that detail is useful |
+| Existing model-policy home, otherwise approved `docs/agents/model-use.md` | Exact approved assessment permissions/prohibitions and provenance; use [model-use](model-use.md) only for relevant permission discovery/proposals |
+| Existing tracker/label guidance, otherwise `docs/agents/issue-tracker.md` and `triage-labels.md` | Actual destination, capabilities, completion semantics and mapped roles; use [tracker integration](issue-tracker.md) for actual tracker work |
+| Existing changelog/configuration, otherwise approved `CHANGELOG.md` | Evidence-backed history in the agreed convention; use [release setup](releases.md) for history work |
+| Existing context map, otherwise `CONTEXT.md`; selective `docs/adr/` | Confirmed domain meanings and approved enduring decisions through [domain handoff](domain-records.md) |
 
-Create core project/workflow guidance with confirmed content. Leave optional fields unknown or omitted with reasons where they matter; avoid empty template sections. An early project can have no glossary or ADR. A tracker can be a local task file: document its actual location and explicit relationship representation instead of pretending it has GitHub features.
+A tracker may be a local task file; record its actual location and relationship representation rather than implying GitHub-native features. Preserve role/title mappings and readiness evaluation separately from publication; read back authorized assignments and relationships through the tracker owner.
 
-On a new project create AGENTS.md. On an existing project preserve its entry-point arrangement: use an existing CLAUDE-only authority if valid; inspect whether dual files are symlinked, generated, or independent. Preserve runtime-required compatibility entry points as pointers where supported. Ask before reconciling contradictory authorities; do not rewrite nested or organization rules from a root template.
+Do not create empty glossary, ADR, tracker or model-policy artifacts. A settled assessment prohibition can live in the agreement. Keep operating context out of domain records and private personal profiles out of repository guidance. Risk, maintenance resources and collaboration preference are separate facts, not team-size or competence stereotypes.
 
-## Operating context, not stereotypes
+### Stage and authority wording
 
-Keep these dimensions separate:
-- Product stage and expected usage, with evidence rather than invented traffic targets.
-- Who maintains, reviews, operates, and makes consequential decisions.
-- Resources, hosting/integration constraints, and maintenance burden.
-- Sensitive data, failure consequences, recovery needs, and binding organization requirements.
-- How to collaborate: product-level explanations, technical co-design, or a specified arrangement.
+For new guidance, propose the [ordinary-workflow default](discovery.md#ordinary-workflow-default) for approval, preserving existing restrictions on reruns. State the following boundaries in the agreement:
 
-For example, a public-safe preference is: “Agents own routine engineering decisions. Explain consequential choices in product terms and escalate scope, cost, security, or operating commitments.” Do not write that a named maintainer is inexperienced.
+- The user chooses stages; agents own routine methods, checks and authorized specialist coordination. Ask about unresolved intent, consequential scope/cost/risk and missing permission, not test seams or worker allocation.
+- Configured spec/ticket commands select scoped artifact publication without a second full-text approval of unchanged commitments. Draft/local/review-only requests override that default. New commitments, graph mutations and other consequential effects retain their exact approval gates; publication does not establish readiness.
+- Ordinary delivery returns verified/partial/blocked results before PR preparation/publication. Offer the next stage without starting it. A later selected PR stage reuses current evidence; explicit compound requests may select multiple stages. Branch/commit/push permission is not PR or merge permission.
+- Persistence is user-directed. Do not require handoffs, tickets, draft PRs or durable run reports merely because a session may end. Active owners, uncertain operations and repair/model usage still need safe accounting; a new session cannot assume unavailable conversation history or reset allowances.
 
-Use enough rigor for actual risks and requirements, not a team-size preset. Explore concerns without automatically implementing them. Record required-now, deferred, unnecessary, and accepted-limitations decisions when relevant.
+Link actual project homes with read conditions: agreement before project work; glossary/relevant ADRs for terminology-dependent work; domain specialist for meaning/decision-record changes; tracker/roles before publication or scheduling; assessment policy before proposals/calls/service actions; release policy before impact/history work. Only link targets that exist after setup. Confirmed authorized glossary maintenance remains part of current work; reading definitions alone invokes no specialist. ADR creation/supersession requires explicit agreement and permission, preserving history. Missing domain capability blocks affected modeling, not unrelated work.
 
-## Authority and verification
+Generated guidance stands on its own: no installed Setup/Work On common-contract dependency and no copied package-reference paths. Commands should point to actual executable configuration rather than duplicate every script.
 
-Workflow guidance must distinguish routine agent decisions from actions requiring approval. Cover delegation, external assessments/disclosure, spending, pushes/PRs, deployment, destructive operations, and credential changes only as relevant. For new guidance, include the approved [ordinary-workflow default](discovery.md#ordinary-workflow-default): ordinary skill work, bounded task delegation, independent read-only review and lead-owned repairs within requested scope need no extra permission prompt. Keep auxiliary assessment permission separate and preserve explicit existing restrictions. Unknown permission is ungranted. Project preferences do not override runtime restrictions or explicit-invocation requirements of another skill.
+## 4. Maintain ownership and freshness
 
-Record delivery policy from the agreed workflow and observed configuration. Distinguish desired policy from enforced controls. Point to executable configuration for commands rather than duplicating every package script. Record important non-obvious gotchas and environment limitations.
+Each fact has one authoritative home. The responsible phase maintains confirmed authorized domain records through the domain specialist, changed operating policy through its approval owner, product commitments through their decision-maker, actual tracker roles/relationships through the tracker owner, and notable changes through the agreed changelog convention. Model policy changes preserve exact approval, provenance, shared limits and lifecycle restrictions; assessment packages own enforcement. Release/label changes reconcile affected automation and assignments only through an approved plan, never imply release authority.
 
-Choose verification by meaningful failure risk and existing coverage. A new test should protect a distinct failure; existing coverage can suffice. Preserve required checks and security/privacy/recovery contracts. Do not invent test quotas, blanket “all testable code needs new tests,” or coverage targets. If existing mandatory policy conflicts, flag it and propose a change for approval rather than silently ignoring it.
+Before completion, report affected documents and updates or justify no change. Resolve code/document conflicts through evidence and authority; neither silently overrides an accepted decision. Keep proposals distinct from approval and desired remote controls distinct from observed enforcement. Verify links, actual content and safe commands; link checks alone do not prove semantic correctness. An unchanged compatible rerun produces no substantive delta.
 
-## Read pointers
+## Transition bridge
 
-Generate pointers to the project's actual files with explicit conditions. For example, adapted to the selected layout:
-
-```markdown
-Before planning or implementing, read [project context](docs/agents/project.md) and [workflow](docs/agents/workflow.md). For work using domain terms, read the linked glossary/context map and relevant ADRs. Before creating or scheduling issues, read the tracker and label guidance. Before proposing or using a model assessment, managing its service, or changing model permission, read the linked model-use policy. Before classifying release impact or updating the changelog, read the workflow's release policy and linked sources. Update the authoritative documentation when work changes its facts or decisions; include documentation impact in completion evidence.
-```
-
-Only link files that exist after setup. Include actual domain/tracker links when applicable. When domain records are present, add a conditional instruction to discover and read `domain-modeling` for changes to meanings, relationships, or decision records, following its handoff contract and the project's approval boundaries. Reading existing definitions alone needs no specialist invocation. If the companion is unavailable or incompatible, report affected modeling work blocked rather than treating another same-named package as equivalent. Do not copy this package reference path into the target as a runtime dependency; the generated project docs must stand on their own.
-
-## Documentation ownership and freshness
-
-Put this maintenance contract in the target's workflow document; the entry point links to it.
-
-| Change | Owner and required action |
-| --- | --- |
-| Domain term/relationship | Discovering phase, through `domain-modeling`: update the glossary/context map once confirmed and authorized. |
-| Model permission or budget/lifecycle/disclosure decision | Lead/setup: reconcile the single model-policy home and pointers through exact approval; the assessment package owns runtime enforcement. |
-| Operating constraint or authority | Lead/setup: reconcile the project or workflow document with appropriate approval. |
-| Delivery/check procedure | Implementation: update authoritative workflow guidance and verify safe commands. |
-| Qualifying architectural decision | Analysis/implementation, through `domain-modeling`: create or supersede an ADR under the project's authority. |
-| Product scope/behavior | Delivery lead: update the spec with the product decision-maker's approval. |
-| Spec creation and ticket classification | Spec/ticket owner: follow approved title and distinct spec/work-ticket role mappings, evaluate readiness independently, and read back assignments; classify release impact under the agreed policy, not by guesswork. |
-| Ticket dependencies/status | Ticketing/dispatch: update native relationships and actual evidence/status together. |
-| Notable user-facing change | Implementation: update the agreed changelog or change fragment when required; review checks the entry and impact classification. |
-| Release convention or label automation changes | Lead/release owner: reconcile policy, mappings, automation, and affected assignments through an approved plan; setup does not authorize publishing. |
-
-A fact's owner updates its home when the decision is confirmed, not after it has been copied elsewhere. Proposals remain labeled as proposals. Before completion, report affected documents and their updates, or justify “no documentation change required.” Review compares docs with the actual change; link checks alone prove no semantic accuracy.
-
-When code and docs conflict, determine whether code is wrong, docs are stale, or a decision is unresolved. Resolve within authority or escalate. Do not silently let code override an accepted decision. Revisit relevant context when project facts change, not through a mandatory recurring paperwork schedule.
+Project guidance can support migrated gates and legacy consumers without deleting live libraries or unique safeguards. Leave existing Work On library targets and their callers intact until their owners migrate together. A project restriction takes precedence over a package's broader default; identify incompatible effects instead of silently performing them. Legacy investigation still requires its ticket route, and legacy delivery still expects its PR handoff: those endpoints are **not yet migrated** to conversation-only diagnosis or delivery-before-PR. Report the affected route unavailable when it conflicts with selected stages; do not claim equivalent behavior, auto-publish to satisfy it, or force a new stage. Setup authors the agreement; it neither rewrites installed consumers nor retires their mechanics.

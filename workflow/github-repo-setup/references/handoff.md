@@ -15,7 +15,7 @@ For a **plan-only** handoff inspect and return the proposed delta and blockers; 
 
 ## Ownership
 
-This skill owns repository creation/configuration and its security baseline. The caller owns the larger approval plan, operating/domain docs, tracker labels, and issue-relationship guidance. It may execute the specialist procedure directly when the runtime has no skill invocation tool. It need not launch another agent.
+This skill owns repository creation/configuration and its security baseline. The caller owns the larger approval plan, compact project agreement, operating/domain docs, tracker labels, and issue-relationship guidance. Reuse the caller's authoritative mapping and stage choices; do not create a competing agreement or infer PR-publication authority from branch/commit/push approval. Setup can bootstrap absent guidance; that exception grants no unplanned repository effects. It may execute the specialist procedure directly when the runtime has no skill invocation tool. It need not launch another agent.
 
 Read SKILL.md in full and follow its existing/new route and verification rules. An absent permission or unsupported required control is reported to the caller, not worked around with a weaker baseline. Do not invoke other setup frameworks.
 
