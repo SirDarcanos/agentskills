@@ -1,6 +1,6 @@
 # ADR 0002: Compose independent specialists under two delivery leads
 
-**Status:** Accepted by the maintainer's explicit acceptance and merge authorization for [PR #75](https://github.com/SirDarcanos/agentskills/pull/75), delivering [#50](https://github.com/SirDarcanos/agentskills/issues/50) under the [#48 product direction](https://github.com/SirDarcanos/agentskills/issues/48). Supersedes [ADR 0001](0001-delivery-workflow-ownership.md), accepted previously through [PR #32](https://github.com/SirDarcanos/agentskills/pull/32). This records the design baseline, not runtime implementation or installed migration.
+**Status:** Superseded in part by accepted [ADR 0003](0003-session-oriented-project-agreement.md) for common-guidance ownership, project prerequisites, workflow endpoints and session persistence. Independent specialists, two delivery scopes and retained safeguards remain in effect as specified there. Original decision accepted by the maintainer's explicit acceptance and merge authorization for [PR #75](https://github.com/SirDarcanos/agentskills/pull/75), delivering [#50](https://github.com/SirDarcanos/agentskills/issues/50) under the [#48 product direction](https://github.com/SirDarcanos/agentskills/issues/48). Supersedes [ADR 0001](0001-delivery-workflow-ownership.md), accepted previously through [PR #32](https://github.com/SirDarcanos/agentskills/pull/32). This records the design baseline, not runtime implementation or installed migration.
 
 ## Context and decision
 

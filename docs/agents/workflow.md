@@ -7,12 +7,15 @@ The maintainer approves implementation scope and consequential changes. Agents m
 | Action | Authority |
 | --- | --- |
 | Read repository evidence; make scoped file edits; run safe local checks | Within the approved task and applicable instructions. |
-| Create a short-lived branch, commit scoped changes, push that branch, and open/update its PR | Allowed after implementation scope is approved. |
+| Create a short-lived branch, commit scoped changes, and push that branch | Allowed after implementation scope is approved. |
+| Prepare, open or update a PR | Requires an explicit user-selected PR stage or compound request that includes it; delivery completion alone grants no PR-publication authority. |
 | Merge a PR; create release tags; publish a release | Explicit maintainer approval for that action. A previous merge approval does not authorize later merges. |
 | Install or replace tools/skills/models; change credentials; deploy; spend money; perform external assessments or sensitive disclosure | Explicit approval for the specific action and scope. |
 | Change repository settings, permissions, labels, or native issue relationships; perform destructive operations | Include the exact changes in an approved task or plan. |
 | Delegate independent review | Standing permission for bounded read-only review within requested implementation, delivery or review; follow the review policy below. |
 | Delegate other work or invoke an optional assessment | Specific authorization and the invoked skill's consent requirements; independent-review permission does not authorize writers or optional assessments. |
+
+The user selects workflow stages; agents own routine engineering and necessary internal specialist use within the selected scope. Completing shaping, diagnosis or delivery does not start the next artifact/publication stage. A configured specification or ticket command selects its scoped publication outcome without duplicate approval of unchanged commitments; new consequential scope, relationships or permissions still need their proper approval. Ordinary delivery returns its result before an unrequested PR stage. Explicit compound requests can select several stages. Session persistence is user-selected, while active ownership, uncertain operations and spent repair/model allowances must still be accounted for safely.
 
 ### Independent-review permission
 
@@ -30,7 +33,7 @@ Use short-lived branches from current `main`; there is no integration branch. In
 
 The agreed `main` ruleset, `main-pull-request-workflow`, requires PRs and prevents branch deletion and force pushes. It has no bypass actors, required approving reviews, or required status checks. This supports a single maintainer without requiring self-approval or a second reviewer. Inspect the [live rules](https://github.com/SirDarcanos/agentskills/settings/rules) before changing protections; documented policy does not establish enforcement by itself.
 
-Follow the PR scope and reporting requirements in [AGENTS.md](../../AGENTS.md). Push the reviewed changes to the feature branch and make the PR available for the maintainer to inspect. Stop before merging unless that specific merge is approved. Approval for repository-local changes does not update globally installed copies of skills.
+Follow the PR scope and reporting requirements in [AGENTS.md](../../AGENTS.md). Push reviewed changes to the feature branch within approved scope and return the delivery result. Offer PR preparation/publication without starting it unless the user selected that stage, including through an explicit compound request. For a selected PR stage, reuse current delivery evidence and make the PR available for inspection; do not restart delivery merely to report it. A branch push is not permission to create a PR or edit its report, status or metadata. Stop before merging unless that specific merge is approved. Approval for repository-local changes does not update globally installed copies of skills.
 
 ## Verification and completion
 
@@ -54,7 +57,7 @@ Release preparation assesses all changes since the last published version and re
 
 ## Documentation ownership
 
-Update the authoritative home when an approved change alters its facts; keep proposals distinct from accepted decisions.
+Update the authoritative home when an approved change alters its facts; keep proposals distinct from accepted decisions. For #132 shared-guidance or stage-boundary changes, follow the accepted [session-oriented design](../design/session-oriented-workflow.md) and [ADR 0003](../adr/0003-session-oriented-project-agreement.md), including their staged compatibility and integration gates. This is not permission to implement dependent tickets or update installed skills.
 
 | Change | Owner and authoritative home |
 | --- | --- |
