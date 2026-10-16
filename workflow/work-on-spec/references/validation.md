@@ -1,6 +1,6 @@
 # Work On Spec validation
 
-Read when changing or validating this package. [Dispatch cases](dispatch-validation.md) are authored expectations, not executed agent behavior. Work On's shared contract and common verification/completion/local-recovery procedures retain their separate checks; run its single-change fixture when changing the caller boundary or shared libraries.
+Read when changing or validating this package. [Dispatch cases](dispatch-validation.md) are authored expectations, not executed agent behavior. Work On's conditional coordination and verification/completion/local-recovery procedures retain their separate checks; run its single-change fixture when changing the caller boundary or shared libraries.
 
 ## Reproducible static checks
 
@@ -12,16 +12,16 @@ Read when changing or validating this package. [Dispatch cases](dispatch-validat
 
 **Done:** complete entries and links are inspected in normal and isolated layouts, applicable executable checks have recorded results, and limitations/diff/documentation dispositions are explicit.
 
-For shared discovery changes, resolve Work On's `references/validation.md` through its inspected package and run its “Complete-read and reference-recovery cases” against this caller's contract/tracker consumption. Record recovered reads and affected blockers separately from coordination-fixture passes.
+For discovery changes, check the caller against the documented operational pointers in Work On's inspected entry and the discovered tracker's entry/library boundary. Recover truncated reads, resolve actual reference filenames, inspect stale/missing-path failures and distinguish unavailable capability from guessed paths. Exercise non-sibling discovery and reject a legacy universal-contract-only companion for the migrated route. Record static walkthroughs and affected blockers separately from fixture passes.
 
 ## Fixture coverage and limits
 
-The shipped fixture has synthetic native observations and authored frontier/lifecycle decisions. It asserts independent/shared-interface ownership, lead-selected concurrency permitting three independent tickets, rolling replenishment while unrelated work remains active, overlapping independent review and unrelated implementation, explicit project/runtime/lead resource constraints, closed-without-accepted-integration waiting, failed/uncertain owner retention without globally blocking safe unrelated work, uncertain integration read-back, budget/model history on resume, and actual serial local Git integration with cross-ticket check/freshness. Parent specs stay out of the implementation queue. Static clause assertions catch selected instruction regressions, not comprehensive semantic correctness.
+The shipped fixture has synthetic native observations and authored frontier/lifecycle decisions. It asserts independent/shared-interface ownership, lead-selected concurrency permitting three independent tickets, rolling replenishment while unrelated work remains active, overlapping independent review and unrelated implementation, explicit project/runtime/lead resource constraints, closed-without-accepted-integration waiting, failed/uncertain owner retention without globally blocking safe unrelated work, uncertain integration read-back, budget/model history on resume, and actual serial local Git integration with cross-ticket check/freshness. Parent specs stay out of the implementation queue. Additional authored examples cover same-session completion without storage or PR effects, missing fresh-session history, partial integration and retained uncertain ownership. Static clause assertions catch selected instruction regressions, not comprehensive semantic correctness.
 
 Git controls are sanitized and hooks/templates disabled in disposable repositories. The fixture creates no production tracker items or agents, performs no remote writes, calls no models and deletes only its own temporary directory under the test's disposition. Installed skill/runtime discovery and actual worker interruption remain unexecuted. A passing synthetic graph assertion is not live API/pagination validation; a passing tool integration is not accepted spec delivery.
 
 ## Evidence retention
 
-Follow the discovered Work On contract's **Lead evidence record** for per-change retention: a collapsed **Validation details** section or dedicated PR/issue comment, with material problems visible in the short summary. Retain exact commands/results, source and supporting-input state, static versus executed checks, limitations and original independent reviews there, not in a new committed execution report. Keep reusable fixtures/scripts in source control. If publication is unavailable or unauthorized, return evidence conversationally and name any durable-storage gap without claiming publication.
+Use the target agreement's retention rules. Same-session commands/results, checked inputs, limitations and original independent reports may remain in conversation; unrequested publication or hypothetical future storage does not block delivery. Only selected authorized publication uses a collapsed **Validation details** section or dedicated comment, with material problems visible. Keep reusable checks committed, not routine execution reports. Active owners, uncertain operations and spent allowances retain coordination/recovery obligations; selected transfer must report inaccessible pointers without claiming persistence.
 
 This file's expectations are not themselves executed evidence.
