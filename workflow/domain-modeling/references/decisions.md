@@ -1,6 +1,6 @@
 # Architectural decision records
 
-Read when an architectural choice needs a durable record or an existing decision is reconsidered. Apply the entry point's mode and authorization gates before writing.
+Read when an architectural choice needs a durable record or an existing decision is reconsidered. Apply the entry point's mode and authorization gates before writing. ADR creation or change, including a proposed draft, requires explicit user agreement and permission; general feature approval or a persistence destination alone is insufficient.
 
 Offer a record when **all three** apply: changing course has meaningful cost, the choice would surprise a future reader without context, and there was a real trade-off. A difficult-to-reverse provider choice or deliberate ownership boundary may qualify; an ordinary helper or speculative future abstraction usually does not. Deferral or no qualifying ADR is a legitimate outcome.
 

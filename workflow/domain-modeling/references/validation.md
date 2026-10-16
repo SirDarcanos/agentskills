@@ -7,7 +7,7 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s workflow/domain-modeli
 git diff --check
 ```
 
-For a copied standalone package, run discovery against `tests/`. Tests inspect frontmatter and package-local Markdown links. They require no network or sibling package and do not execute the agent workflow.
+For a copied standalone package, run discovery against `tests/`. Tests inspect frontmatter and package-local Markdown links. They also guard prerequisite/reuse, existing glossary authorization, explicit ADR permission, conversation-only findings and preserved supersession wording. They require no network or sibling package and do not execute an approval engine or the agent workflow.
 
 ## Behavioral scenarios
 
@@ -15,6 +15,11 @@ Use synthetic temporary projects and retain original file hashes, the exact requ
 
 | Input | Required observation |
 | --- | --- |
+| Missing/conflicting common agreement | Specific prerequisite and explicit setup/reconciliation recommendation, no automatic setup or invented policy |
+| Equivalent guidance already read | One contextual check; relevant domain branch only, no universal delivery library |
+| Confirmed glossary delta within existing task/agreement authority | Maintain authorized definition without repeated permission or mandatory separate handoff report |
+| ADR change without explicit agreement/permission | Plan-only even if feature intent and storage destination are approved; accepted ADR unchanged |
+| Conversation-only completed plan | No separate durable execution artifact; authoritative approved maintenance remains required |
 | Direct discussion without write approval | Plan-only result; no files or directories created. |
 | Caller plan-only handoff with settled answers | Reuse answers; propose exact delta; preserve every file hash. |
 | Approved handoff restricted to one glossary section | Only that section changes; other affected consumers returned to caller. |

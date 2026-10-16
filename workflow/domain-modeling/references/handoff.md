@@ -4,15 +4,7 @@ Read when another workflow invokes domain modeling. A caller may follow this ski
 
 ## Inputs
 
-The caller supplies, or identifies as unknown:
-
-- Target project/directory and the bounded terms, relationships, contexts, or decisions to examine.
-- Inspected evidence and authoritative document mapping, including relevant specs/code, glossary/context map, ADRs, and documentation maintenance policy.
-- Confirmed decisions and their source/authority, unresolved questions, proposals, and intentional deferrals.
-- **Plan-only** or **approved** mode; for approved mode, exact permitted files/sections and operations, approval evidence, and exclusions.
-- Constraints, collaboration preference, known capability limits, and any concurrent or unfinished work to preserve.
-
-Missing approval defaults to plan-only. Missing material evidence remains unknown, not permission to invent it. Verify supplied facts for freshness without repeating resolved interviews. Return consequential gaps to the caller, which owns the larger approval conversation.
+Reuse the caller's existing scope, evidence, protected work and project agreement; no second form or ledger is required. Identify the affected meanings/decisions, authoritative document mapping and plan-only/approved mode under the entry's authorization gates. An approved delta needs exact files/sections/operations and approval evidence. Inspect freshness without repeating resolved interviews; return unknown evidence or consequential authority gaps to the caller, which owns the larger approval conversation.
 
 ## Ownership
 
@@ -20,13 +12,6 @@ Domain modeling owns vocabulary, domain relationships/context maps, and selectiv
 
 ## Return contract
 
-Return a compact record containing:
+Return the entry's verified result to the caller, normally in conversation: plan-only proposed deltas with no writes, or actual approved per-operation outcomes, including partial failures. Keep reused/changed decisions, intentionally omitted records, mismatches, deferred/unverified work and required approvals explicit. Supply caller-owned entry-point pointer changes without expanding the domain write scope.
 
-- Target, scope, and mode.
-- Evidence inspected and confirmed decisions reused; unresolved or newly changed decisions.
-- In plan-only mode: exact proposed file/section deltas, preserved content, required approvals, and blockers. No writes occurred.
-- In approved mode: actual outcomes per authorized operation, affected paths, verification evidence, and any partial/failed writes.
-- Records intentionally omitted and why; remaining conflicts, code/document mismatches, and unverified/deferred items.
-- Required read/update pointers for caller-owned entry points and the smallest next action.
-
-The caller checks these outputs against its plan and inspects the resulting documents. It must not infer full completion from an unsupported success summary. Domain work requiring new authority returns to the caller before execution.
+The caller inspects the actual documents and evidence against its agreement before continuing; a success summary grants neither acceptance nor new authority.

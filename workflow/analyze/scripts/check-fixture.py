@@ -86,6 +86,24 @@ class ContractFixtures(unittest.TestCase):
         self.assertNotIn(CASES[0][2], entry.read_text())
         print("same name without required contract: incompatible fixture")
 
+    def test_changed_checks_invalidate_coverage_not_service_facts(self):
+        paths = {name: self.target / name for name in ("service.py", "caller.py", "checks.py")}
+        before = {name: digest(path) for name, path in paths.items()}
+        paths["checks.py"].write_text("assert heading().upper() == 'RECORDS'\n")
+        changed = {name for name, path in paths.items() if digest(path) != before[name]}
+        support = {"source fact": {"service.py"}, "coverage": {"service.py", "checks.py"}}
+        self.assertEqual({claim for claim, sources in support.items() if sources & changed}, {"coverage"})
+
+    def test_entry_project_and_conversation_boundaries(self):
+        # Textual regression guards, not execution of the skill or a policy engine.
+        entry = (Path(__file__).resolve().parents[1] / "SKILL.md").read_text()
+        for phrase in ("once per context", "Equivalent existing layouts", "without starting it",
+                       "Missing common guidance", "ordinary inactive findings", "explicit agreement and permission"):
+            self.assertIn(phrase, entry)
+        self.assertNotIn("references/contracts.md", entry)
+        self.assertIn("For a conditional library, inspect the documented pointer", entry)
+        self.assertIn("only the old universal contract is incompatible", entry)
+
     def test_inspection_preserves_target(self):
         before = {p.name: digest(p) for p in self.target.iterdir()}
         for path in self.target.iterdir():
