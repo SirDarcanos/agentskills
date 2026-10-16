@@ -91,17 +91,19 @@ class SingleChange(unittest.TestCase):
         self.assertEqual(self.check().returncode, 0)
         self.preserve()
 
-    def test_ready_bug_ticket_reuses_current_evidence(self):
+    def test_conversation_diagnosis_without_ticket_reuses_current_evidence(self):
         self.regression()
         observed = self.check()
         self.assertIn("AssertionError", observed.stderr)
-        ticket = {"acceptance": ["F1", "F2"], "cause": "strip leaves internal whitespace",
+        diagnosis = {"acceptance": ["F1", "F2"], "cause": "strip leaves internal whitespace",
                   "expected": "Hello world", "actual": "Hello\\t\\n world",
                   "environment": sys.version.split()[0], "scope": ["formatter.py", "check.py"],
                   "method": "tdd", "source": digest(self.root / "formatter.py"),
                   "reproduction": observed.stderr, "exit": observed.returncode}
-        self.put("ticket.json", json.dumps(ticket))
-        retained = json.loads((self.root / "ticket.json").read_text())
+        # Conversation payload serialized only inside this disposable tool fixture.
+        self.assertNotIn("ticket_id", diagnosis)
+        self.put("diagnosis.json", json.dumps(diagnosis))
+        retained = json.loads((self.root / "diagnosis.json").read_text())
         self.assertEqual(retained["source"], digest(self.root / "formatter.py"))
         self.assertEqual(retained["exit"], 1)
         # Direct cause inspection/evidence reuse: no second diagnostic owner is invoked.
@@ -160,6 +162,49 @@ class SingleChange(unittest.TestCase):
         self.preserve()
         print("material integration evidence unavailable: acceptance BLOCKED; no installation/retry")
 
+    def test_delivery_feedback_then_selected_publication_fixture(self):
+        """Tool/effect oracle, not an implemented instruction-following engine."""
+        self.regression()
+        self.implement()
+        self.assertEqual(self.check().returncode, 0)
+        before_feedback = digest(self.root / "formatter.py")
+        unaffected = digest(self.root / "note.txt")
+        # Ordinary delivery: no PR artifact or host call. No tracker is needed.
+        effects = []
+        self.assertEqual(effects, [])
+        self.assertEqual(self.git("remote"), b"")
+        self.assertFalse((self.root / "pr.md").exists())
+        # User feedback within scope: make normalization explicit using a local.
+        self.put("formatter.py", "def heading(text):\n    words = text.split()\n    return ' '.join(words)\n")
+        self.assertNotEqual(before_feedback, digest(self.root / "formatter.py"))
+        self.assertEqual(unaffected, digest(self.root / "note.txt"))
+        old_review_state = before_feedback
+        self.assertNotEqual(old_review_state, digest(self.root / "formatter.py"))
+        self.assertEqual(self.check().returncode, 0)
+        self.assertEqual(self.ledger["repairs_spent"], 1)
+        # Separate explicit publication selection: fake local host only. No claim
+        # of actual independent review or live publication is made by this oracle.
+        selected_effect = {"action": "publish", "head": digest(self.root / "formatter.py"),
+                           "status": "blocked: independent review absent", "draft": True}
+        effects.append(selected_effect)
+        self.put("fixture-host.json", json.dumps(effects))
+        readback = json.loads((self.root / "fixture-host.json").read_text())
+        self.assertEqual(readback, [selected_effect])
+        self.assertIn("blocked", readback[0]["status"])
+        self.preserve()
+        print("synthetic delivery/feedback/selected draft-host read-back; no live PR or review")
+
+    def test_missing_independent_review_is_not_acceptance(self):
+        self.implement()
+        self.assertEqual(self.check().returncode, 0)
+        # Absence is observed; the acceptance disposition is a fixture oracle.
+        for axis in ("Standards", "Spec"):
+            self.assertFalse((self.root / f"{axis}.md").exists())
+        evidence = {"local_check": "pass", "independent_review": "unavailable",
+                    "acceptance": "blocked", "report": "complete"}
+        self.assertNotEqual(evidence["acceptance"], evidence["report"])
+        self.preserve()
+
     def test_inherited_git_controls_cannot_escape_fixture(self):
         # All hostile paths are sacrificial local sandboxes, never a user's repo.
         with tempfile.TemporaryDirectory(prefix="work-on-git-controls-") as tmp:
@@ -214,20 +259,26 @@ class SingleChange(unittest.TestCase):
     def test_instruction_gates_and_no_nested_pool(self):
         entry = (PACKAGE / "SKILL.md").read_text()
         contract = (PACKAGE / "references/contracts.md").read_text()
+        coordination = (PACKAGE / "references/coordination.md").read_text()
+        completion = (PACKAGE / "references/completion.md").read_text()
+        models = (PACKAGE / "references/optional-models.md").read_text()
         build = (PACKAGE / "references/build.md").read_text()
         self.assertNotIn("disable-model-invocation:", entry)
         for clause in ("one change", "investigation-only", "without reinvestigation",
                        "without a maintainer method/seam questionnaire", "whole-spec",
                        "lead inspection or optional model agreement cannot substitute"):
             self.assertIn(clause, entry.lower())
-        for clause in ("root lead chooses and adjusts concurrency", "root lead alone", "two automatic repair cycles",
-                       "zero autonomous calls", "without replenishing", "service/model substitution"):
-            self.assertIn(clause, contract.lower())
+        for clause in ("root lead chooses and adjusts concurrency", "root lead alone",
+                       "finite timeout/turn bounds", "unknown lifecycle", "explicit user/project restrictions"):
+            self.assertIn(clause, coordination.lower())
+        self.assertIn("two automatic repair cycles", completion.lower())
+        for clause in ("zero autonomous calls", "without replenishing", "service/model substitution"):
+            self.assertIn(clause, models.lower())
         for obsolete in ("at most **two active non-lead workers**", "at most two active non-lead workers"):
             self.assertNotIn(obsolete, contract.lower())
-        for clause in ("no universal worker ceiling", "rolling scheduling", "explicit user/project restrictions",
-                       "finite timeout/turn bounds", "does not override an existing consumer-project"):
-            self.assertIn(clause, contract.lower())
+        for clause in ("no universal worker ceiling", "rolling scheduling",
+                       "does not override an existing consumer-project"):
+            self.assertIn(clause, coordination.lower())
         self.assertIn("compatibility pointer only", contract)
         adapter = (PACKAGE / "references/dispatch.md").read_text()
         self.assertNotIn("## 1.", adapter)
@@ -244,20 +295,40 @@ class PortableAuthorityInstructions(unittest.TestCase):
 
     def test_required_reviews_have_portable_bounded_authority(self):
         entry = (PACKAGE / "SKILL.md").read_text()
-        contract = (PACKAGE / "references/contracts.md").read_text()
-        self.assertIn("## Required-review authority\n", contract)
-        authority = contract.split("## Required-review authority\n", 1)[1].split("\n## ", 1)[0]
-        self.assertIn("contracts.md#required-review-authority", entry)
+        coordination = (PACKAGE / "references/coordination.md").read_text()
+        self.assertIn("## Required-review authority\n", coordination)
+        authority = coordination.split("## Required-review authority\n", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("coordination.md#required-review-authority", entry)
         self.assertNotIn("Delegation is optional and separately authorized.", entry)
         self.assertNotIn("destructive operations, delegation, account changes", entry)
         for clause in ("explicit user delivery request", "`work-on` or `work-on-spec`",
                        "read-only Standards and Spec", "without another permission prompt",
                        "no repository-local standing permission", "Explicit user/project/runtime restrictions",
-                       "configured agent runtime", "root", "lead-chosen concurrency",
+                       "configured agent runtime", "root",
                        "New sensitive disclosure", "additional spending", "optional model assessments",
                        "library grants no execution authority", "implemented-but-unaccepted"):
             with self.subTest(clause=clause):
                 self.assertIn(clause, authority)
+
+    def test_project_policy_conditional_libraries_and_stage_boundaries(self):
+        entry = (PACKAGE / "SKILL.md").read_text()
+        completion = (PACKAGE / "references/completion.md").read_text()
+        adapter = (PACKAGE / "references/contracts.md").read_text()
+        for clause in ("project agreement", "regardless of filenames", "Same-session evidence",
+                       "conversation diagnosis", "before PR preparation or publication",
+                       "explicit compound request", "Offer PR work", "No automatic PR"):
+            self.assertIn(clause.lower(), entry.lower())
+        self.assertNotIn("Read [contracts](references/contracts.md) on every entry", entry)
+        self.assertIn("not an ordinary-entry prerequisite", entry)
+        self.assertIn("Reopen only affected implementation, checks and review", completion)
+        self.assertIn("failed/partial attempts spend it", completion)
+        self.assertIn("Uncertain history blocks automatic repair", completion)
+        for heading in ("Capability checks", "Required-review authority", "Handoff envelope",
+                        "Lead evidence record", "Execution and repair limits",
+                        "Optional model allocations", "Delivery gates"):
+            self.assertIn(f"## {heading}", adapter)
+        self.assertIn("not a mandatory run record", completion)
+        print("stage/prerequisite/compatibility assertions: static only")
 
     def test_reusable_package_fix_targets_sources_not_local_policy(self):
         entry = (PACKAGE / "SKILL.md").read_text()

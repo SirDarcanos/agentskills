@@ -4,31 +4,34 @@ Read when changing or exercising the single-change entry, method composition or 
 
 ## Offline fixtures
 
-With Python 3.9+ and Git, from the repository root:
+With Python 3.9+ and Git, from this package directory:
 
 ```sh
-python3 -B workflow/work-on/scripts/check-single-change-fixture.py
+python3 -B scripts/check-single-change-fixture.py
 ```
 
-From a copied package resolve `scripts/check-single-change-fixture.py` relative to that package. The script creates temporary local Git fixtures with a synthetic commit identity, runs bounded subprocesses and removes only its own temporary directory. Git-control environment variables are stripped, global/system configuration is isolated, and hooks/templates are disabled. A separate sacrificial sandbox verifies hostile repository/worktree/index/template/config overrides cannot escape the fixture. No remote tracker/PR, installed discovery, delegation, services or model calls occur. Do not run it against a user's project.
+The same command works from an independently copied package. The script creates temporary local Git fixtures with a synthetic commit identity, runs bounded subprocesses and removes only its own temporary directory. Git-control environment variables are stripped, global/system configuration is isolated, and hooks/templates are disabled. A separate sacrificial sandbox verifies hostile repository/worktree/index/template/config overrides cannot escape the fixture. No remote tracker/PR, installed discovery, delegation, services or model calls occur. Do not run it against a user's project.
 
 | Fixture | Executed scope and failure protected |
 | --- | --- |
 | Direct change | Local branch, existing baseline, meaningful whitespace regression red, implementation green, protected staged/unstaged/untracked/link state unchanged |
-| Ready bug ticket | Retained synthetic cause/reproduction/source identity consumed directly; implementation/regression check without a second diagnostic run |
+| Conversation diagnosis, no ticket | Retained synthetic cause/reproduction/source identity consumed directly without a ticket ID, tracker or second diagnostic run |
 | Stale evidence | Deciding source digest drifts; actual check rejects the new bad state, dependent check refreshed while unaffected evidence remains current |
 | Method composition | Baseline protection then test-first increment; baseline artifact preserved and one ledger/history retained |
 | Missing optional model | Explicit none/absent endpoint fixture performs ordinary implementation/checks with zero attempted model requests |
 | Material-check blocker | Focused pass plus truly absent required integration check; observed process failure remains unavailable, no install or repair retry |
 | Git environment isolation | Hostile Git variables target a separate sacrificial repository/index and hook templates; fixture init/add/commit remain local, external bytes/modes/HEAD stay unchanged and no hook marker appears |
 | Static guard assertions | Metadata/body handoff gates, no routine method questionnaire/self-review substitution/nested pools, retained shared repair/model history and inactive dispatch boundary |
-| Portable authority/source-target guards | Required-review grant and limits remain in the shipped contract; entry points to it, blanket delegation denial does not return, and reusable fixes target tracked sources rather than local policy or installed copies |
+| Portable authority/source-target guards | Conditional coordination retains bounded review authority; tracked sources, not local policy or installed copies, receive reusable fixes |
+| Delivery → feedback → selected PR | Actual source/check drift and protected state; zero ordinary PR effects, then one explicitly selected fake-host draft/read-back with missing review visible. Not live publication or independent review. |
+| Missing review | Actual absent axis files and local pass; fixture oracle keeps acceptance blocked and report separate |
+| Project/stage/compatibility guards | Existing-guidance reuse, conditional reads, affected-only reopening and retained legacy anchors; static assertions, not agent adherence |
 
 The caller steps and ledger objects in these fixtures are synthetic test oracles, not runtime enforcement. They demonstrate executable checks, dirty-work preservation, drift and the modeled handoffs. Static text assertions guard accidental deletion of instructions; they do not prove an agent follows them. These fixtures neither independently review the formatter nor accept its delivery. Full autonomous composed agent/installed-runtime and live tracker/PR/model paths remain unexecuted by this script.
 
 ## Required-review authority cases
 
-Read [required-review authority](contracts.md#required-review-authority) and the discovered Review Delivery handoff when exercising these cases. Use independently copied packages and a synthetic target with no local standing-permission policy. The table specifies expected decisions, not executed agent behavior; source guards check instruction presence only.
+Read [required-review authority](coordination.md#required-review-authority) and the discovered Review Delivery handoff when exercising these cases. Use independently copied packages and a synthetic target with no local standing-permission policy. The table specifies expected decisions, not executed agent behavior; source guards check instruction presence only.
 
 | Case | Required observation |
 | --- | --- |
@@ -46,4 +49,6 @@ For agent exercises, additionally record actual invocation/approval, runtime, co
 
 ## Evidence retention
 
-Retain per-change results through the [lead evidence record](contracts.md#lead-evidence-record). The runnable script and this reference provide the reusable validation procedure.
+Retain per-change results in conversation or a user-selected approved destination. No routine durable report/handoff is required; active ownership, uncertain effects and spent allowances remain safety obligations. The runnable script and this reference are reusable validation, not a source-checkout prerequisite.
+
+Walk the complete written procedure from independently copied packages without this collection's Git metadata, issues or design records. Exercise compatible existing guidance, missing/conflicting common policy, no optional model permission, a no-ticket diagnosis, no-PR completion, feedback and explicit PR selection. Record actual actions separately from source guards and authored expectations. Historical comparisons for source development belong outside the copied package, never as consumer requirements.

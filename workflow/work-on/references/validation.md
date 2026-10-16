@@ -6,14 +6,14 @@ Use when changing or validating entry and the shared contract. For discovery, br
 
 ## Reproducible static checks
 
-1. Read the complete entry point and contract; inspect Markdown headings/tables and frontmatter. Confirm metadata and body agree: explicit delivery or an authorized bounded lead/investigation-and-fix assignment, with no command-only metadata gate; discovery and investigation-only work grant no fix authority.
+1. Read the complete entry point and affected conditional libraries/adapters; inspect Markdown headings/tables and frontmatter. Confirm metadata and body agree: explicit delivery or an authorized bounded lead/investigation-and-fix assignment, with no command-only metadata gate; discovery and investigation-only work grant no fix authority.
 2. Resolve every relative Markdown link from its containing file, including anchors. Copy only `work-on` to a temporary directory and repeat: no sibling skill paths should be needed. Expected future filenames are code text, not broken links or shipped procedures.
 3. Check the diff with `git diff --check`. Inspect for private material, credentials, workstation paths, generated logs, imported third-party prose and changes outside approved scope.
 4. Walk each case below against actual instructions. Record static reasoning separately from executed agent walkthroughs. For a real walkthrough, record invocation/runtime, authorized synthetic fixture, agreement/revision, observed tool actions, returned route/blockers and before/after protected-work fingerprints. Report deviations and unrun cases.
 
 ## Complete-read and reference-recovery cases
 
-When changing the contract's [complete-read and reference-resolution procedure](contracts.md#complete-reads-and-reference-resolution), walk these cases using disposable fixtures. Inspect incoming callers, including Work On Spec's contract consumption and Setup Project's library entry boundary. Keep the procedure authoritative in the contract; these are expected observations, not another discovery algorithm.
+When changing the contract's [complete-read and reference-resolution procedure](contracts.md#complete-reads-and-reference-resolution), walk these cases using disposable fixtures. Inspect incoming callers, including Work On Spec's contract consumption and Setup Project's library entry boundary. The contract retains this compatibility procedure for unmigrated callers; common operating guidance belongs to the target project. These are expected observations, not another discovery algorithm.
 
 | Case | Required observation |
 | --- | --- |
@@ -31,10 +31,10 @@ When changing evidence retention, inspect the actual shared contract, Work On Sp
 
 | Case | Required observation |
 | --- | --- |
-| Routine documentation change | Short visible change summary; commands/link checks, checked content identities and limitations retrievable in collapsed **Validation details** or a dedicated PR/issue comment; no new committed execution report. |
-| Routine code change | Actual test commands/results, source/test/supporting-input identities and original Standards/Spec reports retrievable in the same location; reusable tests/fixtures/scripts remain committed and runnable. |
+| Routine documentation change | Short delivery status; evidence can remain in conversation, with no PR/handoff/durable report. Only selected authorized publication uses collapsed **Validation details** or a comment. |
+| Routine code change | Actual commands/results, checked identities and original axis reports remain inspectable in context or selected storage; reusable checks stay committed. |
 | Failed or material unrun check | Failure/not-run status, consequence, blocker and required action remain visible outside collapsed detail; raw evidence retains the actual result, not a fabricated pass. |
-| Publication unavailable or unauthorized | Evidence returned conversationally, blocked publication and any durable-storage gap explicit; zero unauthorized remote writes or persistence claims. Temporary logs are not a durable handoff. |
+| Publication unrequested / selected but unavailable | Unrequested publication is not a delivery blocker. Requested unavailable effects and selected storage gaps are explicit; zero unauthorized writes or persistence claims. Temporary logs are not durable transfer. |
 | Historical reports mixed with reusable checks | Existing reports and runnable checks remain intact; the new default grants no cleanup/migration/removal authority. |
 
 Distinguish static source inspection, direct tool walkthroughs, synthetic assertions and autonomous agent trials. Inspect publication/read-back only within existing authority; a local draft or fixture-host assertion is not live publication evidence. Repeat internal-link checks with independently copied packages.
