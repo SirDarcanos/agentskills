@@ -1,14 +1,14 @@
-# Ask Nico
+# What Now
 
 Ask which installed skill or workflow fits your situation. [SKILL.md](SKILL.md) inspects relevant entries and project rules, explains a recommendation, and leaves execution to you.
 
 ## Use and requirements
 
-Invoke `ask-nico` explicitly, for example:
+Invoke `what-now` explicitly, for example:
 
 ```text
-Use ask-nico: I have an approved ticket; which installed workflow should I use next?
-/skill:ask-nico I only want a diagnosis, not a fix. What fits?
+Use what-now: I have an approved ticket; which installed workflow should I use next?
+/skill:what-now I only want a diagnosis, not a fix. What fits?
 ```
 
 The second form is Pi's skill command; other runtimes may use different explicit invocation syntax. Generic workflow questions and other skills do not activate this advisor. The name is a label, not a claim to speak for Nicola Mustone or predict personal preferences.
@@ -20,7 +20,7 @@ Requires read access to the runtime's discoverable installed skill entries and r
 After approving installation, copy this entire directory, including its [license](LICENSE) and references, into your runtime's skill discovery location, or use:
 
 ```sh
-npx skills add SirDarcanos/agentskills --skill ask-nico
+npx skills add SirDarcanos/agentskills --skill what-now
 ```
 
 The installation command has not been exercised in this delivery. Repository delivery does not replace or retire existing reference installations.
