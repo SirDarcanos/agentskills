@@ -1,32 +1,34 @@
 ---
 name: write-spec
-description: Write or revise a specification from an ordinary request or existing agreement, preserving confirmed decisions and verifiable acceptance IDs. Use for expressing agreed behavior or a bounded specification handoff, with optional authorized publication; stop before tickets or implementation.
+description: Write or revise a specification from an ordinary request or existing agreement, preserving confirmed decisions and verifiable acceptance IDs. Use for expressing agreed behavior or a bounded specification handoff, with configured tracker publication unless draft, local or review-only work is requested; stop before tickets or implementation.
 ---
 
 # Write spec
 
-Own specification fidelity, approval and optional publication. Follow this procedure in the caller's context; a handoff does not launch an agent. A Shape Work session is not a prerequisite.
+Own specification expression, fidelity and the selected artifact outcome. Follow this procedure in the caller's context; a handoff does not launch an agent. A Shape Work session is not a prerequisite.
 
 ## Authority and dependencies
 
-Read the target's instructions and relevant product, workflow, tracker and domain pointers. Default to authorized inspection and a conversation draft. Product approval, document-write authority, tracker publication and readiness mutation are separate permissions. Loading this skill grants no implementation, decomposition, installation, delegation, disclosure, spending, model calls, merge or release authority. Protect unrelated work, symlinks and prior history.
+Reuse the project's applicable instructions and agreement once per context, including relevant context/authority pointers and directory/runtime restrictions. Check meaningful decision/effect, safety, verification, documentation and continuation guidance, not Setup provenance or templates. Identify specific absent/conflicting guidance and recommend explicit reconciliation without starting setup or rewriting policy. Missing common guidance blocks dependent project work; missing tracker/model/domain detail blocks only that capability.
 
-Discover conditional companions through runtime/project catalogs or explicit approved locations, never sibling paths. Read complete entries and relevant branch references, record resolved source/revision or digest, and check semantic capabilities. Ambiguous, missing or incompatible helpers block only their dependent responsibility; installation or a legacy to-spec command is not a fallback.
+In a configured project, invoking `/write-spec` on an agreed plan selects authoring and publication to the established tracker within project authority. Do not paste the full spec or request approval again for unchanged commitments or routine expression. Explicit draft, local-only or review-only requests override publication. Product approval, publication and readiness remain distinct; the invocation grants no new consequential commitments or unrelated effects.
+
+Discover companions under project guidance; inspect complete entries and relevant references for actual semantic capability and source identity. Missing/incompatible helpers block their dependent route, not independent writing.
 
 - For unresolved product intent, recommend a bounded `shape-work` handoff: usable discovery brief, decision reuse and preserved concern dispositions. A writing request alone does not require a new discovery session.
 - For missing or changed material technical/design evidence, use compatible `analyze` only within authority: inspected readiness, deciding-input freshness and risks without implementation. Current complete evidence needs no rerun.
 - For changed meanings or qualifying enduring decisions, use compatible `domain-modeling` with its plan-only/approved record gates. Reading existing definitions needs no invocation.
 - For publication, read [publication](references/publication.md), including the discovered maintained tracker library. Local drafting needs no tracker companion.
 
-Optional delegation requires separate authority and the discovered Work On execution-contract library, without invoking delivery. Preserve its root ledger, ownership and finite bounds; a worker requests additional work from the root. Direct writing remains the default; no model assessment is required.
+For separately authorized delegation, discover Work On's conditional coordination library, not its delivery entry or old universal contract. Require root-owned allocation, finite bounds, protected ownership and inspectable returns; workers never recursively delegate. Missing compatibility blocks delegation, not equivalent direct work. Preserve active/uncertain state and spent allowances.
 
 ## 1. Bound the input and reuse the agreement
 
-Identify target, outcome, approval owner, authoritative spec home, existing agreement identity/revision or body digest, acceptance IDs, relevant decisions and sources, protected work, exact authorized effects and expected return. Ordinary request/context supplies these facts without a mandatory form. If no product home exists, recommend a proportionate location and obtain owner agreement before making it authoritative.
+Identify the outcome, owner, authoritative spec home, acceptance IDs, deciding agreement/evidence and authorized effects from existing context. If no home exists, recommend one and obtain agreement before making it authoritative.
 
-Inspect existing specs and deciding evidence before making a new artifact. Reuse confirmed decisions and current discovery/analysis; compare relevant agreement, source/caller/configuration/environment identities, including dirty content. Reopen only changed, contradictory or missing branches. Retain old evidence for its old state; unclear impact makes relevant findings stale rather than silently current. A phase change is not evidence invalidation.
+Inspect existing specs and current agreement/analysis support, including deciding source/caller/configuration/environment and dirty content. Reuse confirmed findings; refresh only changed, contradictory or missing claims. Preserve old-state evidence and mark unclear impact stale; a phase change alone invalidates nothing.
 
-Use only the detail needed: a small clear request can stay a brief in conversation or an approved task artifact. A multi-session handoff needs an approved durable pointer. A fuller document need not become a tracker issue. An existing authoritative spec is revised in place within authority, not duplicated into a competing policy home. A matching spec with no relevant delta may return unchanged.
+Identify the selected mode: configured publication, explicit draft/local/review-only work, or a specific missing destination/access/authority blocker. Draft output may remain in conversation or the selected local artifact; do not invent future-session storage. Missing publication capability is not permission to downgrade the selected outcome silently or conduct another full-plan interview. An existing authoritative spec is revised in place within authority, not duplicated into a competing policy home. A matching spec with no relevant delta may return unchanged.
 
 **Done:** current agreement, missing decisions, home/owner, brief or fuller-spec route and authority are known.
 
@@ -44,23 +46,23 @@ Check every criterion and disposition against the request and source agreement. 
 
 **Done:** required behavior is observable and acceptance-mapped, prior commitments/dispositions survive, and every new or unsupported commitment is visibly proposed.
 
-## 3. Confirm and reconcile the authoritative record
+## 3. Reconcile the authoritative record without duplicate approval
 
-Present new or changed consequential commitments for explicit owner approval under the target's collaboration style. Reuse inspected approval for unchanged commitments; writing them more clearly needs no fabricated fresh decision. Until approved, label the affected spec draft and block reliance on new commitments.
+The agent owns specification wording and checkable acceptance detail within the agreed outcome. Present only new or changed consequential commitments for explicit owner approval. Reuse inspected approval for unchanged commitments; routine expression needs no second full-text review. Until approved, label affected new commitments draft and block reliance on them. ADR creation/change retains explicit agreement and permission.
 
-Apply approved changes only with write/retention authority to the existing authoritative home, preserving rationale, history and supersession pointers. If writes are unapproved or unavailable, return the exact proposed delta; required unreconciled records block reliance on the changed agreement. Inspect the actual artifact after writes for fidelity and accidental scope expansion. A local summary or published issue points to the authoritative home rather than creating a second independently maintained spec.
+Reconcile authorized changes in the existing authoritative home and inspect the result for fidelity, scope and preserved history. Otherwise return the proposed delta; required unreconciled records block reliance on changed commitments. A published mirror links the authoritative home, not a competing specification.
 
 **Done:** approved versus draft status is evidenced and required authoritative reconciliation is applied/read back or explicitly blocked.
 
-## 4. Publish only when authorized, then return
+## 4. Execute the selected artifact stage, then return
 
-If no tracker publication is needed, skip it. Otherwise execute [publication](references/publication.md) and inspect actual persisted identity/content/roles/readiness. Assess readiness separately even when the spec remains local; absent material technical/shared-design evidence stays unknown or blocked, not inferred from product approval.
+For explicit draft/local/review-only work, skip tracker writes. Otherwise execute [publication](references/publication.md) and inspect actual persisted identity/content/roles/readiness. Assess readiness separately even when the spec remains local; absent material technical/shared-design evidence stays unknown or blocked, not inferred from product approval.
 
-Return target/scope, artifact or conversation-only disposition, agreement/source identities and acceptance IDs, approval evidence and pending proposals, reused/refreshed/stale findings, preserved dispositions, resolved companion sources/results, actual document changes or justified no-change decision, publication/read-back and readiness as separate outcomes, failed/not-run checks, uncertain operations, protected work, applicable ledger use and next action.
+After verified publication, lead with the spec link and a concise summary, not its full body. For unpublished/partial work, identify actual artifacts and specific failed or unknown effects without inventing a link. Keep supporting evidence available in context or the user-selected destination; no automatic durable report is required.
 
-- **Complete:** a faithful approved spec (or unchanged approved agreement) has observable acceptance and required authoritative reconciliation; requested authorized publication has matching read-back. Readiness may still be blocked for a separately identified design dependency.
-- **Partial:** a useful labeled draft or proposed delta remains, pending confirmation or retention authority; specify what remains. It is not an approved new commitment.
-- **Blocked:** a material conflict, approval, required reconciliation, capability or publication read-back prevents the requested result; retain useful artifacts and name the dependent action, owner and smallest next step.
+Retain approval/acceptance support, dispositions and actual document/companion/read-back evidence under project guidance. Report readiness separately from publication, including pending decisions, failed/unrun checks and uncertain effects.
+
+Report **complete** when the faithful spec has observable acceptance, required reconciliation and selected publication read-back; readiness can remain separately blocked. Report **partial** for a labeled draft awaiting confirmation, or **blocked** for a material conflict, missing authority/capability or failed read-back, with owner and next action.
 
 Stop at this return in standalone use. An authorized caller inspects the actual agreement and chooses the next responsibility. No automatic ticket creation, scheduling, implementation or delivery acceptance follows.
 

@@ -1,6 +1,6 @@
 # Write Tickets validation
 
-Read the complete entry, package README and discovered tracker library before changing this procedure. This is an instruction package, not an executable ticket-writing service.
+Read the complete entry and package README before changing this procedure; load the discovered tracker library when exercising tracker work. This is an instruction package, not an executable ticket-writing service.
 
 ## Static and isolated checks
 
@@ -9,19 +9,9 @@ Read the complete entry, package README and discovered tracker library before ch
 3. Inspect the integrated diff for private data, credentials, generated files and nonportable paths. Work On must retain only an adapter, not a competing ticket procedure. Standalone invocation ends at ticket/graph outcomes.
 4. Record affected documentation and actual results separately from authored scenarios. No live tracker, installed copy, model call or worker launch is needed.
 
-## Offline executable checks
+## Safe offline exercises
 
-In the source repository, Python 3.9+:
-
-```sh
-PYTHONDONTWRITEBYTECODE=1 python3 docs/validation/write-tickets/check.py
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s docs/validation/write-tickets -p 'test_*.py'
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s workflow/setup-project/tests -p 'test_*.py'
-python3 workflow/setup-project/scripts/dependencies.py --help
-git diff --check
-```
-
-Repository fixture paths are not shipped dependencies. For a copied package, use the discovered Setup Project source's documented helper checks; inspect this entry and internal links directly. The optional helper remains additive blockers in one github.com repository only. The maintained procedure owns parentage, labels and exact approval.
+Use a disposable target or available synthetic tracker to exercise publication/read-back and partial failures. If none is available, inspect the procedure cases below and report tracker execution unrun; no source checkout, collection Git history or development tracker is a prerequisite. Inspect copied-package instructions as well as links. Test the conditional tracker/helper route only through a discovered compatible package and its own documented checks. The optional helper remains additive blockers in one github.com repository only; the maintained procedure owns parentage, labels and exact approval.
 
 Persisted fake-tracker checks exercise authored caller decisions, actual JSON parent/blocker state, paginated reads, real blocker helper reconciliation, ID mismatches, hierarchy conflicts/cycles, interrupted writes/creation, duplicate searches and no automatic readiness. They do not prove agent compliance, product approval, live API semantics or authentication. Parent conflict protection is fixture behavior, not a new production algorithm. Record partial and unknown outcomes rather than claiming verified graph state after failed read-back.
 
@@ -29,10 +19,10 @@ Persisted fake-tracker checks exercise authored caller decisions, actual JSON pa
 
 - Prerequisite analysis under existing inspection authority: discover/read Analyze, supply only material gaps, inspect its supported return and resume ticket preparation without a new skill-use permission prompt or asking the user to coordinate. Routine design/dependency/method/check choices stay with the caller; no implementation or scheduling follows from ticketing.
 - Consequential scope question: ask about the user-visible coverage change with a recommendation; preserve settled scope and continue unaffected drafting. Missing authority/capability remains a specific blocker, never inferred permission.
-- Publication presentation: lead with outcomes and exact external effects, tied to complete accessible drafts and graph/label deltas by revision/digest. A concise summary cannot approve unseen content. Changed approved effects require reconciliation and renewed approval before affected writes.
+- Configured ticket command: agent-owned decomposition/wording, actual publication/read-back and concise linked ID/description table, not full bodies or another prose-approval ceremony. Reuse existing authority. Ask only for new consequential scope or uncovered exact graph/label effects; identify those effects without requiring line-by-line wording approval. Changed approved effects require reconciliation before affected writes.
 - Ordinary approved spec/analysis: preserve settled decisions and acceptance IDs; keep tightly coupled behavior with one owner, and justify true blockers without a ticket quota.
 - Current complete bug evidence: reuse without automatic Analyze/investigation; preserve expected/actual, cause, environment, regression/method and probe disposition. Standalone bug has no fake parent. Missing cause/unconfirmed symptom remains investigation work; exact approval may publish an explicitly investigation-only draft with attempted checks, blockers and bounded diagnostic acceptance, never a ready fix scope. Changed deciding inputs invalidate dependent findings only.
-- Exact plan-only or publication approval: show draft bindings, target, title/body/label deltas and intended graph. Role is independent of readiness; no copied parent labels or automatic ready status. Preserve subordinate specs, PRs, unrelated content/labels/edges.
+- Explicit draft/local/review-only request: zero writes, honest draft keys without invented tracker IDs. Publication route: keep draft bindings, target, title/body/label delta and intended graph inspectable for fidelity and read-back. Role is independent of readiness; no copied parent labels or automatic ready status. Preserve subordinate specs, PRs, unrelated content/labels/edges.
 - Combined existing/planned cycles, wrong direction/IDs, foreign/conflicting parent, failed later page/ambiguous 404 or changed graph: block affected writes, preserve known state, propose reconciliation. Read both directions using actual IDs.
 - Duplicate or interrupted creation: inspect matching content/identity before retry; ambiguous matches require clarification. Resume only missing approved effects, with no automatic rollback or replay.
 - Missing/incompatible native library: return draft/capability blocker, no silent prose substitute, installation or setup invocation. Optional helper absence alone need not block the inspected native procedure.

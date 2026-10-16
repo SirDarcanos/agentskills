@@ -50,7 +50,7 @@ You can name a skill directly or describe the job in ordinary language. You don'
 | --- | --- |
 | You need to work out what to build | [`shape-work`](workflow/shape-work/) |
 | You have one clear change or an existing issue | [`work-on`](workflow/work-on/) — give it the request, issue number, or URL. |
-| Larger work needs a lasting agreement and tasks | [`write-spec`](workflow/write-spec/), then [`write-tickets`](workflow/write-tickets/) when a breakdown is useful. Approve tracker changes before publication. |
+| Larger work needs a lasting agreement and tasks | [`write-spec`](workflow/write-spec/), then [`write-tickets`](workflow/write-tickets/) when a breakdown is useful. Configured artifact commands select publication; draft/local overrides and consequential scope/relationship approval still apply. |
 | You want to deliver a specification across its tasks | [`work-on-spec`](workflow/work-on-spec/) — give it the spec reference. It needs tracker access, separate coding-agent capability, and permission to use it. |
 | You want a review of existing changes | [`review-delivery`](workflow/review-delivery/) |
 

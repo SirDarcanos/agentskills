@@ -6,7 +6,7 @@ Read when changing or exercising [Write Spec](../SKILL.md), including [publicati
 
 1. Read/render changed Markdown; inspect frontmatter routing for ordinary requests and bounded handoffs, ordered actions and checkable complete/partial/blocked returns.
 2. Resolve every shipped relative link/anchor, then copy only this package to a temporary non-sibling location and repeat. Companions are discovered, not relative sibling dependencies.
-3. Inspect integrated caller entry/contracts/adapter: current supplied agreement needs no new shaping/writing run; required writing/publication uses this owner once; missing helper blocks only dependent operations.
+3. When validating a caller integration, discover its actual instructions: supplied current agreement needs no new shaping/analysis, and missing helpers block only dependent work. A caller/source checkout is not a prerequisite for this package's own validation.
 4. Inspect diff for private data, nonportable paths, generated files, duplicated procedure bodies and lost notices. Preserve historical evidence.
 5. Execute agreed-input writing and publication via safe tracker fixtures; record actual artifact and mutation/read-back observations separately from authored expected cases. This instruction-only package has no runtime spec generator or shared test suite.
 
@@ -14,6 +14,9 @@ Read when changing or exercising [Write Spec](../SKILL.md), including [publicati
 
 | Case | Inspectable outcome |
 | --- | --- |
+| Configured agreed-plan command | Publish/read back the actual specification and mapped role; return link plus concise summary, with zero duplicate full-text approval or unsolicited tickets |
+| Explicit draft/local/review-only request | No tracker writes; return the selected draft/review, not a publication claim |
+| Missing access/destination/authority | Specific publication blocker and preserved useful writing, no forced plan interview or implementation |
 | Ordinary agreed input / existing discovery brief | Faithful spec with behavior, rationale, exclusions, limitations and acceptance IDs; no forced Shape Work session |
 | Current evidence / changed deciding input | Reuse complete current findings without calls; invalidate only dependent claims when inputs change, retain unaffected intent and old evidence |
 | New unapproved commitment | Labeled proposal/draft; owner approval required before reliance; separately authorized draft publication remains unready |

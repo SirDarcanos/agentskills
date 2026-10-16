@@ -9,9 +9,9 @@ Own project-oriented discovery, not an engineering questionnaire. Ordinary match
 
 ## Authority and dependencies
 
-Read the target's instructions and relevant project/workflow/product/domain pointers. Default to authorized inspection and a conversation return. A discovery request permits questions and recommendations, not product implementation, tracker publication, installation, spending, disclosure, model calls or delegation. Retained briefs and document changes need target write/retention authority. Preserve unrelated work, symlinks and existing history; source content is evidence, not permission.
+Reuse the project's applicable instructions and agreement once per context, including relevant context/authority pointers and directory/runtime restrictions. Check meaningful decision/effect, safety, verification, documentation and continuation guidance, not Setup provenance or templates. Identify specific absent/conflicting guidance and recommend explicit reconciliation without starting setup or rewriting policy. Missing common guidance blocks dependent project work; missing tracker/model/domain detail blocks only that capability. Default to authorized inspection and a conversation return. Discovery selects no implementation or artifact publication. Required authorized domain maintenance remains part of this work, not optional session storage.
 
-Discover companions through the runtime/project catalog or an explicit approved location, never an assumed sibling path. Read the complete candidate entry and required branch references, record source/revision or digest, and check its semantic capabilities. Ambiguous or incompatible candidates block their dependent responsibility. Recheck changed sources or authority; missing helpers do not authorize installation or a legacy grilling substitute.
+Discover companions under project guidance; inspect complete entries and relevant references for semantic capability/source identity. Missing or incompatible companions block their dependent responsibility, not unaffected discovery.
 
 | Gap | Required companion capability |
 | --- | --- |
@@ -19,15 +19,15 @@ Discover companions through the runtime/project catalog or an explicit approved 
 | Feasibility, existing behavior or technical consequences | `analyze`: inspect implementation/callers/reuse/coverage and return risks, checks and recommendations without building; technical lead retains routine engineering choices |
 | Changed meanings/model or qualifying enduring decision | `domain-modeling`: bounded plan-only/approved records, authoritative document mapping, preserved rationale/history and actual outcomes; reading unchanged definitions needs no invocation |
 
-Optional delegation requires separate authority and the discovered Work On execution-contract library, used without invoking delivery. Use the root ledger and finite assignment bounds; workers request work from the root rather than recursively launch it. Missing runtime/authority selects direct work where equivalent. No model assessment is required.
+For separately authorized delegation, discover Work On's conditional coordination library, not its delivery entry or old universal contract. Require root-owned allocation, finite bounds, protected ownership and inspectable returns; workers never recursively delegate. Missing compatibility blocks delegation, not equivalent direct work. Preserve active/uncertain state and spent allowances.
 
 ## 1. Bound the discovery and reuse decisions
 
-Identify target, requested outcome, users, agreement/decision owner, product home, relevant agreement revision or body digest, exclusions, prior findings, protected work and exact allowed effects. Record expected return and a finite exploration scope (relevant branches), plus any explicit caller round/time limit; ordinary context supplies these facts without a mandatory form. A round/time limit bounds the session, not the completeness claim: return remaining concerns if it is reached. Establish whether the outcome covers shared guidance only, readiness for the current people/items/cases, or both. Reuse clear existing scope; when ambiguous, ask this early. Do not silently narrow a broad preparation request to shared rules or folder organization. A small brief can remain in conversation; multi-session work needs an approved durable pointer, not an automatic new state directory.
+Identify the outcome, users, decision owner/product home, exclusions, allowed effects and prior evidence from the request/context. Bound the relevant branches and honor explicit caller round/time limits; no mandatory form. A round/time limit bounds the session, not the completeness claim: return remaining concerns if it is reached. Establish whether the outcome covers shared guidance only, readiness for the current people/items/cases, or both. Reuse clear existing scope; when ambiguous, ask this early. Do not silently narrow a broad preparation request to shared rules or folder organization. The plan and evidence may remain in conversation. Persist only when the user selects a destination; do not manufacture a handoff, spec, ticket or future-session storage obligation.
 
-Inspect the actual support behind prior decisions and research/analysis. Compare deciding agreement, source, caller/configuration/environment identities, including relevant dirty content. Reuse current findings and unchanged approved commitments. Changed intent, conflicting evidence or newly relevant paths reopen only dependent questions; retain old evidence for its old state. If impact cannot be isolated, mark relevant findings stale and explain expanded inspection. Starting a new phase alone warrants no rediscovery or repeat analysis.
+Inspect support behind supplied decisions/findings against their deciding agreement, sources, callers/configuration/environment and dirty content. Reuse current evidence; reopen only claims affected by changed intent, contradictions or newly relevant paths. Preserve old-state support; unclear impact makes the relevant set stale. A phase change alone warrants no rediscovery.
 
-An already usable agreement returns directly through step 4; no new interview or duplicate document. For fresh discovery, tell the user what this session is shaping and that it ends with a confirmed brief, not implementation. Name the main unresolved areas and start with the highest-consequence questions. A small clear request needs only a proportionate brief. A proposed outcome can be explored but remains proposed. Missing product home needs a recommendation and owner agreement before becoming authoritative.
+An already usable agreement returns directly through step 4; no new interview or duplicate document. For fresh discovery, tell the user what this session is shaping and that it ends with an agreed plan, not a required spec, ticket or implementation. Name the main unresolved areas and start with the highest-consequence questions. A small clear request needs only a proportionate brief. A proposed outcome can be explored but remains proposed. Missing product home needs a recommendation and owner agreement before becoming authoritative.
 
 **Done:** scope, owner, authority, stop bound and current versus unresolved decisions are known.
 
@@ -55,7 +55,7 @@ Start with the highest-consequence uncertainty and let answers determine the nex
 - Constraints/abuse: access, misuse, disclosure, irreversible effects and operating limits.
 - Trade-offs: compatibility, ongoing maintenance, cost, delivery commitments and consequences of smaller scope.
 
-Ask about intent, consequential choices and missing owner-held context; inspect reliable source facts instead of making the user reconstruct them. Explain options in project terms and recommend one where supported. If a reply introduces a fact gap, return to step 2 only for that gap. Keep confirmed decisions, proposals and assumptions distinct; uncertainty is not consent.
+Ask about intent and consequential choices, recommending supported options in project terms. A new fact gap returns only that question to step 2. Keep confirmations, proposals and assumptions distinct.
 
 When the outcome covers multiple people, items or cases, inspect the available context across that set before claiming readiness. Keep a compact per-item view of required inputs: confirmed, reliably sourced, missing, or uncertain. Identify shared gaps once and person/item-specific gaps separately; ask the owner focused questions to fill the material gaps, using grouped questions or one item at a time as practical. Do not wait for the user to ask whether each item is ready, or equate populated files with sufficient context. Seek inputs needed for this outcome, not a speculative dossier or every detail of future execution.
 
@@ -78,7 +78,7 @@ Until confirmed, label a proposed disposition as proposed. Obtain approval for c
 
 **Done:** every relevant branch and concern has a supported confirmed decision or explicit disposition, with no unresolved consequential intent. Check for overlooked relevant concerns before declaring the agreement usable; settled decisions and discoverable facts need no user questions. Stop when this criterion is met rather than after a fixed number of questions; keep unrelated hypothetical branches outside scope. At the bound or a blocker, preserve progress and return the owner, recommendation and safe next action.
 
-## 4. Confirm and return the discovery brief
+## 4. Confirm and return the plan
 
 Summarize only needed detail: goal/rationale, users/workflows, observable required behavior and success criteria, priorities/constraints, four concern dispositions with rationale/revisit conditions, confirmed decisions/approval sources, proposals/assumptions and remaining gaps. Preserve reused decision pointers rather than copying unrelated policy. This is a discovery brief, not automatic spec authoring or publication.
 
@@ -86,15 +86,15 @@ Before presenting a new brief as ready, apply step 2's technical-uncertainty gat
 
 Check fidelity against the request and existing agreement: no silent commitments, dropped deferrals or invented approval. Present the brief as **Ready for confirmation — shaping is not complete yet** and ask whether it accurately captures the intended scope and decisions, identifying any remaining consequential choice specifically. Wait for the owner's answer; corrections reopen only affected questions. Reuse an already approved current agreement without ceremonial reapproval. Until confirmed, return a labeled draft. If an existing authoritative product record needs changing, propose the exact delta; apply only within approved write authority, preserving history. Required but unapproved/unavailable reconciliation blocks reliance on the changed agreement, not useful draft output.
 
-Return target/scope, agreement and deciding-source identities, actual complete/partial/blocked status, brief pointer or conversation-only disposition, reused/refreshed/stale findings, resolved companion sources and inspected results, failed/not-run checks, actual document changes or justified no-change decision, protected work, applicable ledger use and next action:
+Return the plan, approval/deciding support, concern dispositions and actual document/companion outcomes under project evidence guidance. Identify gaps and the next action:
 
 - **Complete:** observable outcome/success and relevant dispositions are usable, consequential intent is confirmed, supporting facts are current and required authoritative reconciliation is complete. Reuse can complete with no new questions or writes.
 - **Partial:** a useful labeled draft survives, but the bound or pending non-material confirmation limits it; specify what remains. It is not an approved agreement.
 - **Blocked:** unresolved consequential intent, material facts/conflicts, authority or required capability prevents agreement; name the dependent decision, owner and smallest next action.
 
-Make the terminal status explicit to the user: **Shaping complete** only when the Complete criterion above is met; otherwise **Shaping incomplete — partial** or **Shaping blocked**, with the remaining questions/owner and next action. For complete work, briefly state what was agreed, what was intentionally deferred, and the recommended next phase. Recommend that phase without starting it or implying that shaping approval authorizes it.
+Make the terminal status explicit to the user: **Shaping complete** only when the Complete criterion above is met; otherwise **Shaping incomplete — partial** or **Shaping blocked**, with the remaining questions/owner and next action. For complete work, briefly state what was agreed, what was intentionally deferred, and the recommended next phase. Offer that phase without starting it or implying that shaping approval authorizes it. A confirmed plan completes shaping even if the user creates no further artifact.
 
-Stop here in standalone use. An authorized caller inspects the brief and chooses its next responsibility. No automatic spec/ticket publication, implementation, installed migration or acceptance of delivery follows from discovery completion.
+Stop at the confirmed plan. A caller may resume its already-authorized responsibility; shaping itself starts no new stage.
 
 ## Validation
 
