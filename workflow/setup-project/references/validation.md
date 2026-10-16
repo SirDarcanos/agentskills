@@ -14,6 +14,26 @@ The unit tests exercise the real dependency reconciler through an in-memory GitH
 
 For delivery-library discovery changes, use the caller's resolved Work On validation reference and its “Complete-read and reference-recovery cases” against this package's read-only library entry. Check the tracker link from the complete inspected entry in both repository and independently copied layouts; this does not invoke setup or grant tracker mutations.
 
+## Compact agreement and reconciliation cases
+
+The [local agreement fixture](../tests/fixtures/local-agreement/AGENTS.md) is authored example output, also usable as existing equivalent guidance. It uses a non-default home, no tracker/domain artifacts, denied auxiliary models and tighter delegation restrictions. Package tests guard links and selected contract clauses only: there is no executable setup generator or semantic compatibility classifier. Do not call these assertions agent behavior.
+
+For a direct static walkthrough, map the fixture to the documentation contract's six responsibilities, follow its entry link and inspect the following deltas. Record reasoning as static inspection. An actual agent trial must separately record actions, before/after bytes/modes/link targets and outputs; do not infer no-op behavior from a fixture that was never run.
+
+| Fixture variation | Expected reconciliation / negative effects |
+| --- | --- |
+| New local project with the fixture's confirmed decisions | Propose compact agreement/entry only; final exact approval precedes writes; no tracker, glossary, ADR or model-policy placeholders |
+| Existing fixture unchanged; no default `docs/agents/` files | All responsibilities already satisfied; no regeneration, rename, timestamp churn, permission interview or setup ceremony |
+| Agreement absent, or common safety/verification section missing | Identify exact missing responsibility and dependent workflow; recommend explicit setup/reconciliation, no silent invocation or fabricated policy |
+| Existing PR auto-publication instruction conflicts with selected delivery-before-PR boundary | Show exact changed-decision/conflict and effects; preserve bytes until approved; do not import the newer skill's authority |
+| Denied assessments, no tracker or domain terms | Valid restrictions/omissions; direct local work remains supported, remote publication unavailable; no model calls or empty records |
+| Existing tighter delegation or repair restriction | Preserve it; only an exact approved delta changes authority; no new concurrency cap from a template |
+| Confirmed term update vs unapproved ADR replacement | Current authorized glossary maintenance remains required; ADR proposal stays unwritten/unaccepted until explicit permission, preserving history |
+| Migrated project agreement with legacy Work On/investigation consumers | Keep all live library targets and unique safeguards; report incompatible legacy endpoints as not yet migrated, never auto-publish ticket/PR or alter installed copies |
+| Approved targeted delta, then second inspection | No substantive remaining delta; preserve unrelated custom content, index and symlink arrangements; uncertain effects still require reconciliation |
+
+Measure actual mandatory instruction closure by selected branch, not just the entry file. For example, new local-only setup with no assessment candidates loads entry, documentation contract and discovery, plus release guidance only for actual history work; reconciliation is additional for existing guidance. Count per-context files once using whitespace words, report baseline revision and limits. Do not claim token savings, elapsed speed or runtime adherence from static counts. Preserve historical design measurements unchanged.
+
 ## Agent scenario matrix
 
 Use temporary fixture projects and a command shim returning synthetic GitHub observations; it must reject unplanned writes. These scenarios require an actual agent walkthrough to claim behavioral validation. Reading them or passing Python tests does not execute them.
@@ -21,7 +41,7 @@ Use temporary fixture projects and a command shim returning synthetic GitHub obs
 | Scenario / initial evidence | Required observation |
 | --- | --- |
 | New GitHub target; no files; identity and protections unresolved | Present target/Git only first, wait; files/permissions second, wait; history/safeguards then labels, each confirmed separately. Final brief apply confirmation; no mutations before it; approved baseline through companion and remote read-back. |
-| New workflow authority vs explicit existing restriction; auxiliary assessments set to none | Files/permissions defaults ordinary skill work, bounded delegation, independent read-only review and lead-owned repair/recheck/re-review to allowed within requested scope. No extra transition/repair prompts; Jev/Clef/Nimble remain gated. Preserve binding restrictions; setup itself launches no delivery/review. |
+| New workflow authority vs explicit existing restriction; auxiliary assessments set to none | Files/permissions defaults ordinary skill work, bounded delegation, independent read-only review and lead-owned repair/recheck/re-review to allowed within requested scope. No extra internal-specialist/repair prompts; user-selected stages remain distinct and Jev/Clef/Nimble remain gated. Preserve binding restrictions; setup itself launches no delivery/review. |
 | Delivery review finds in-scope defect, justified improvement, scope change and nonessential suggestion | Lead fixes valid scoped findings, reruns affected checks and renews significant-change review within existing bounds; unresolved material findings block acceptance. Escalate scope changes and explicitly disposition suggestions; reviewers stay read-only. |
 | Standalone review-only request under ordinary-workflow permission | Return review report without unsolicited fixes; standing execution permission does not expand the requested task. |
 | Labels include spaced onboarding names, existing hyphenated destination, custom labels and automation | Explicit keep/rename/add/consolidate/delete/unresolved groups account for all labels. Retained spaced names become hyphenated through approved rename or collision-aware consolidation; blocked consumers prevent destructive changes. |
@@ -48,7 +68,7 @@ Use temporary fixture projects and a command shim returning synthetic GitHub obs
 | No terms/ADR; confirmed term; proposed decision; superseded ADR | Explicitly omit unnecessary domain route; otherwise use domain-modeling and inspect its evidence. |
 | Domain companion absent or same-named incompatible installation | Block required domain work; no automatic install/replacement or fallback; independent approved local work stays possible. |
 | Domain plan-only handoff followed by approved exact delta | Planning makes no writes; deltas confirmed in their step, then brief execution approval; reuse confirmed answers; writes stay within approved scope. |
-| Installed Jev/Nimble/Clef variants plus another assessment skill; no settled policy | Name each actual installed skill and explain purpose, transport/disclosure and cost/service implications before asking disallowed/explicit-request-only/bounded automatic choices. No generic consent or automatic opt-in; unsupported automatic mode is unavailable. |
+| Installed Jev/Nimble/Clef variants plus another assessment skill; no settled policy | For unresolved choices or proposed changes, name each actual installed skill and explain purpose, transport/disclosure and cost/service implications before asking disallowed/explicit-request-only/bounded automatic choices. No generic consent or automatic opt-in; unsupported automatic mode is unavailable. |
 | No assessment skills vs unavailable discovery; owner declines all; broad “yes” answer | Distinguish none from unknown, offer no installation, and invite other allowances/prohibitions even if assessments are declined. Refine broad consent into named bounded rules before effective permission. |
 | Mixed per-skill choices, extra prohibition, existing policy and newly installed assessment | Preserve confirmed choices and binding restrictions, record extra rule in its proper home, resolve only gaps and approve deltas. New skill inherits no permission; no model/service actions occur. |
 | Model policy absent; confirmed none; local-only; bounded hosted permission | Follow [model-use agreement](model-use.md); propose before writing, require exact approval, record limits/provenance and pointers; zero model/service/credential/install effects. |
