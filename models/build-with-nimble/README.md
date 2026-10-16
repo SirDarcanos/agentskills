@@ -26,6 +26,10 @@ In Pi, you can also invoke `/skill:build-with-nimble <request>` explicitly.
 For a one-off evidence-backed consultation rather than an application integration,
 use `ask-nimble` separately.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Offline exploration and mockable implementation do not require inference permission. Setup and ordinary invocation grant no assessment permission; no delivery companion is required.
+
 ## What it covers
 
 The workflow preserves the upstream TypeSafe skill's focus on composable judgments:

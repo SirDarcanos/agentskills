@@ -49,6 +49,10 @@ update-changelog/
 - [`SKILL.md`](SKILL.md) defines automatic and manual invocation, update modes, and verification.
 - [`references/example-changelog.md`](references/example-changelog.md) is used when the project follows Keep a Changelog.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. No delivery workflow is required for ordinary writing; results need no automatic handoff artifact.
+
 ## Install
 
 ```bash

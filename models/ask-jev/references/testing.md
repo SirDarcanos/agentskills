@@ -14,6 +14,10 @@ This package is an agent workflow, not a bundled HTTP client. Validate Markdown/
 
 No offline check contacts the authenticated API or reads a credential value.
 
+## Project-context walkthroughs
+
+Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. A named non-project assessment needs no manufactured project agreement, but still passes exact authorization. Missing autonomous model policy yields no-call with zero transport/service effects (and no credential access for hosted use); a compatible project prohibition remains valid guidance, not a reason to opt in. Ordinary writing or engineering needs no model result. Existing mocked authorization tests remain the executable safety coverage, not proof that an agent follows prose.
+
 ## Agent workflow scenarios
 
 Review these branches in an agent session using synthetic evidence. Live model tests require compatible project permission and safe spending reservations even on explicit invocation. Obtain separate approval for additional live experiments; offline scenario review sends no requests. The table lists authored expectations, not executed agent walkthroughs.

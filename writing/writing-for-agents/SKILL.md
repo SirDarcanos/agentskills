@@ -11,6 +11,12 @@ Make instructions usable at the point where an agent needs them.
 
 Load this skill when creating, editing, or reviewing skills, agent instruction files, or referenced agent-facing documentation, including plain guides outside a skill package. No explicit invocation is required. Apply it within the existing task's authority; reviewing alone does not authorize edits.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+For non-project supplied-text work, use the request's scope and authority without requiring project setup or a delivery workflow. Apply the agreement's required domain/document maintenance during authorized writing; optional session handoff storage is a separate choice.
+
 ## 1. Establish the writing boundary
 
 Read the complete affected document, applicable project instructions and the authoritative sources for its facts, terms and permissions. Identify the intended reader, task, requested mode, owned files and what must remain unchanged. Inspect incoming pointers and relevant callers so a local edit does not silently change when another workflow runs.

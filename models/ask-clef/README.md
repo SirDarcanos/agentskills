@@ -27,6 +27,10 @@ An explicit request to test Clef against a known answer can still use it as a mo
 
 This skill selects `clef` only. It can judge text, JSON, and relevant images; use the separate `ask-clef-flash` command to choose the other variant. Neither skill sends evidence to Cloudflare.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Named non-project assessments remain usable under their exact invocation and authorization gates. Setup and ordinary invocation grant no assessment permission; no delivery companion is required.
+
 ## Requirements
 
 An agent with repository-reading, file-writing, and shell tools; local Ollama 0.35.1 or later with `clef` pulled; Python 3; and curl. See [the API reference](references/ollama-api.md) for the request procedure and validation.

@@ -16,6 +16,10 @@ Requires file inspection and, for edits, scoped writing tools. Validation uses t
 
 For structure and routing choices read [structure guidance](references/structure.md). For finish checks and regression cases read [validation](references/validation.md).
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Non-project supplied-text work remains usable without setup. No delivery workflow is required for ordinary writing; results need no automatic handoff artifact.
+
 ## Install
 
 After approving installation, copy this complete directory, including its [license](LICENSE) and references, into your agent's skill discovery location, or use:

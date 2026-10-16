@@ -13,6 +13,10 @@ This skill is model-invoked. Use it automatically after completing work that pro
 
 If no changelog exists, ask the user to invoke `/create-changelog` when it is installed. Otherwise, report that the project needs an initial changelog rather than creating one through this workflow.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
 ## Workflow
 
 ### 1. Read the existing convention
@@ -94,3 +98,7 @@ Check all of the following:
 - no unsupported claims, local paths, or credentials were introduced.
 
 Report the section updated, entries added or moved, and any evidence gap that prevented an entry or link.
+
+## Skill validation
+
+When changing this package, check frontmatter, Markdown and internal links in a copy without siblings. Walk project work with compatible guidance, missing/conflicting common guidance, and a missing conditional capability against the entry's project-context check. Expect reuse, a specific dependent-work blocker with an explicit reconciliation recommendation, and only the affected capability blocked, respectively. No setup invocation, policy fabrication, delivery entry, README/license read or session artifact is required for ordinary execution. Preserve the existing/missing-changelog routes and release authority. Label static walkthroughs separately from executed agent trials.

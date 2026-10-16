@@ -54,6 +54,10 @@ create-changelog/
 - [`SKILL.md`](SKILL.md) defines invocation, evidence gathering, writing, and verification.
 - [`references/example-changelog.md`](references/example-changelog.md) provides the target Keep a Changelog structure.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. No delivery workflow is required for ordinary writing; results need no automatic handoff artifact.
+
 ## Install
 
 ```bash

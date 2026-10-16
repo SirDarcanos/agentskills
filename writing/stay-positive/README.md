@@ -58,6 +58,10 @@ stay-positive/
 - [`references/decision-guide.md`](references/decision-guide.md) distinguishes constructive opportunities from necessary or uncertain negativity.
 - [`references/casebook.md`](references/casebook.md) provides apply, preserve, and ask examples.
 
+## Project context
+
+Project work requires the target's existing working agreement or meaningful equivalent; missing or conflicting guidance is reported for explicit reconciliation, not replaced by this skill. Non-project supplied-text work remains usable without setup. No delivery workflow is required for ordinary writing; results need no automatic handoff artifact.
+
 ## Install
 
 From the repository root, install the skill for a supported coding agent:

@@ -9,12 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Breaking changes
 
+- Require existing project guidance for project-oriented writing, `ask-jev`, `ask-nimble` and `build-with-nimble`; non-project supplied-text writing and named assessments remain available without setup, and model permissions stay unchanged. ([#141](https://github.com/SirDarcanos/agentskills/issues/141))
 - Require meaningful project guidance before `implementation-preflight` branch writes; safe inspection remains available, and explicit branch policy takes precedence over incidental integration-branch names. ([#136](https://github.com/SirDarcanos/agentskills/issues/136))
 
 ### Added
 
 - Add `what-now` for explicitly requested, installed-skill recommendations that respect project rules and stop before workflow execution. ([#112](https://github.com/SirDarcanos/agentskills/issues/112), [#142](https://github.com/SirDarcanos/agentskills/issues/142))
-- Add `writing-for-agents` for actionable skills, instruction files and referenced guides, preserving established meaning and authority with project-shipped companions only. ([#111](https://github.com/SirDarcanos/agentskills/issues/111))
+- Add `writing-for-agents` for project-guided or standalone supplied-text instruction writing, preserving meaning and authority with project-shipped companions only. ([#111](https://github.com/SirDarcanos/agentskills/issues/111), [#141](https://github.com/SirDarcanos/agentskills/issues/141))
 - Add `resolve-merge-conflicts` for project-agreement-aware merge/rebase resolution, protected unrelated work, relevant checks and decision pauses for unsafe continuation. ([#110](https://github.com/SirDarcanos/agentskills/issues/110), [#136](https://github.com/SirDarcanos/agentskills/issues/136))
 - Add `handoff` for user-selected, purpose-specific session transfers with approved storage, receiving-task authority and preserved unknown history, ownership and budgets. ([#102](https://github.com/SirDarcanos/agentskills/issues/102), [#140](https://github.com/SirDarcanos/agentskills/issues/140))
 
@@ -33,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add independently usable `research` with cited, version-aware findings, project or non-project prerequisites, conversation-first results and optional authorized conditional delegation. ([#54](https://github.com/SirDarcanos/agentskills/issues/54), [#135](https://github.com/SirDarcanos/agentskills/issues/135))
 - Add `work-on` for project-guided single-change delivery from plans, tickets or conversation diagnoses, with lead-selected methods, meaningful checks, independent review and bounded repair, ending before user-selected PR work or persistence. ([#14](https://github.com/SirDarcanos/agentskills/issues/14), [#67](https://github.com/SirDarcanos/agentskills/issues/67), [#118](https://github.com/SirDarcanos/agentskills/issues/118), [#127](https://github.com/SirDarcanos/agentskills/issues/127), [#139](https://github.com/SirDarcanos/agentskills/issues/139))
 - Add `review-delivery` for project-guided independent Standards/Spec review, with delivery-inherited permission, dirty-scope freshness, conditional coordination and conversation-first original reports. ([#24](https://github.com/SirDarcanos/agentskills/issues/24), [#65](https://github.com/SirDarcanos/agentskills/issues/65), [#127](https://github.com/SirDarcanos/agentskills/issues/127), [#139](https://github.com/SirDarcanos/agentskills/issues/139))
-- Add `ask-clef` and `ask-clef-flash` for evidence-backed local judgments through Ollama, by explicit request or approved project policy.
+- Add `ask-clef` and `ask-clef-flash` for evidence-backed local judgments through Ollama, by explicit standalone request or project-guided invocation under unchanged model permissions. ([#141](https://github.com/SirDarcanos/agentskills/issues/141))
 - Add a shared 100-case decision-model benchmark with known labels, per-category reporting, and opt-in local/hosted comparison.
 - Add `setup-project` for compact project-owned agreements, semantic no-op reconciliation, user-selected publication/persistence boundaries, stepwise approvals and conditional domain, assessment and GitHub setup. ([#8](https://github.com/SirDarcanos/agentskills/issues/8), [#134](https://github.com/SirDarcanos/agentskills/issues/134))
 - Add `domain-modeling` for project-agreement-aware glossary/context-map maintenance, conversation-only planning and explicitly approved ADR changes with preserved history. ([#8](https://github.com/SirDarcanos/agentskills/issues/8), [#11](https://github.com/SirDarcanos/agentskills/issues/11), [#135](https://github.com/SirDarcanos/agentskills/issues/135))

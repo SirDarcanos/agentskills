@@ -11,6 +11,12 @@ Before any transport or server operation, read [authorization and shared limits]
 
 The agent gathers evidence and explains the result; Nimble classifies the supplied state. Nimble has no automatic access to the repository, conversation, filesystem, or telemetry.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+A named standalone assessment uses request-specific scope without manufacturing a project agreement. Neither setup nor ordinary skill invocation opts into an assessment. The authorization reference still governs exact invocation/policy, disclosure, shared reservations and lifecycle; no delivery entry is needed to obtain model policy. Missing autonomous permission remains no-call, and ordinary work needs no model result.
+
 ## Workflow
 
 ### 1. Choose the answer path

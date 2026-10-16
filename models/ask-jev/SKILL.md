@@ -11,6 +11,12 @@ Before credential access or authenticated operations, read [authorization and sh
 
 The agent gathers evidence and explains the result; Jev judges only the state sent to TypeSafe's hosted service. It cannot independently inspect the repository, conversation, filesystem, or telemetry. Explicit invocation covers the named normal billable assessment under package bounds and applicable project restrictions, not installations, expanded sensitive disclosure or consequential actions.
 
+## Project context
+
+For project work, reuse applicable project instructions and the existing working agreement once per context. Check relevant decision/effect authority, safety, verification/review, documentation and continuation guidance; equivalent layouts are valid. Missing or conflicting common guidance blocks dependent project work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. A conditional tracker, model or domain gap blocks only that capability. A skill update does not change project permissions.
+
+A named standalone assessment uses request-specific scope without manufacturing a project agreement. Neither setup nor ordinary skill invocation opts into an assessment. The authorization reference still governs exact invocation/policy, disclosure, shared reservations and lifecycle; no delivery entry is needed to obtain model policy. Missing autonomous permission remains no-call, and ordinary work needs no model result.
+
 ## Workflow
 
 ### 1. Route the original question
