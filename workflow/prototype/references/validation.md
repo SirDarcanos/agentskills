@@ -19,6 +19,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 ## Authored workflow cases
 
+For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+
 | Case | Expected outcome |
 | --- | --- |
 | Standalone feasibility request | One question, finite cases/iterations/time limit, runnable probe and raw observations; narrow recommendation, limitations and artifact account; no automatic production work. |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Missing/ambiguous/incompatible companion | Dependent Git/domain/delegation route blocks; non-Git direct experiment remains possible where authorized; no sibling assumption or automatic installation. |
 | Cleanup/retention conflict | Preserve useful work by default; exact owned authorized unchanged artifacts only may be removed; preserve intervening edits and symlink targets. |
 | Favorable recommendation / production promotion | Return prototype limitations and subsequent production scope/check recommendation; never label prototype output accepted production implementation. |
-| Delegated or recorded-finding correction | Discover shared execution contract, retain root ledger/limits/lineage and request work through root; changing methods does not replenish budgets. |
+| Delegated or recorded-finding correction | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 
 ## Evidence limits
 

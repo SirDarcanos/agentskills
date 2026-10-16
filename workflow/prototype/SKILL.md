@@ -7,21 +7,19 @@ description: Answer a bounded design, UX, state-model or feasibility question wi
 
 Own the experiment and learning, not production delivery. Use directly for a matching request or inline through an authorized bounded handoff. Read [validation](references/validation.md) when changing or validating this package.
 
-## 1. Establish the question and authority
+## 1. Establish the question
 
-Read applicable target instructions, agreement/acceptance references, relevant code/callers, existing findings and environment. Inspect supplied evidence against current deciding inputs, including dirty files; reuse current observations and reassess only material gaps or changed dependencies. Record source revisions or content identities. A direct request may supply the same facts through context rather than a formal handoff.
+Reuse applicable project guidance and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation responsibilities. Direct and bounded use accept equivalent layouts. Missing/conflicting common guidance blocks dependent work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Conditional gaps block only that capability.
 
-State one deciding question and what observation would support or reject each option. Distinguish design/state behavior, human UX judgment and technical feasibility: a script can observe transitions or constraints, but cannot establish user preference. Keep settled product decisions and exclusions intact. Resolve consequential intent or permission gaps with their owner; routine experiment choices belong to the technical lead. Standalone execution acts as its own bounded lead.
+State one deciding question and what observation would support or reject each option. Inspect relevant code/callers, environment and supplied findings against current deciding inputs, including dirty content; reuse current observations. Distinguish state behavior, human UX judgment and feasibility: a script cannot establish user preference. Keep settled decisions and exclusions; the caller chooses routine experiment details.
 
-Inspect actual work and ownership before writes. Identify owned artifact locations, protected files, approved read/write/run effects, data/disclosure and retention constraints, and expected return. A request for exploration grants no production promotion, installation, delegation, service startup, spending, destructive cleanup, merge or release permission. Unknown authority remains ungranted; plan-only authority returns an experiment plan.
+Identify owned artifact locations, protected work and permitted run/data effects. Exploration is not authority to promote code to production. Plan-only requests return an experiment plan.
 
-Discover conditional companions through the runtime catalog or an explicit approved package location, not sibling paths. Read the complete candidate entry and relevant references, record source/revision or digest, and check semantic capability. Ambiguous or incompatible helpers block the dependent route; installation is not a fallback.
+Use compatible `implementation-preflight` before Git writes, or inspect a current supplied result for the same scope/state; outside Git retain a before/after manifest. Actual meaning/decision-record changes use discovered `domain-modeling`; reading definitions alone needs no invocation. Missing/incompatible companions block their dependent route.
 
-- Before Git writes, use compatible `implementation-preflight`, or inspect a current caller-supplied result for this scope/state. Outside Git, retain a before/after artifact manifest.
-- Required domain meanings or qualifying decision-record changes use the discovered `domain-modeling` owner; reading existing definitions needs no invocation.
-- Delegation or correction of recorded acceptance findings consumes the discovered `work-on` execution/repair contract as a read-only library, without invoking delivery. Retain root ownership, ledger, limits and finding lineage; workers request extra work from the root. Missing contract blocks that route, not an ordinary direct experiment.
+Only delegated work or recorded acceptance correction loads Work On's documented conditional coordination/repair library, without invoking delivery. Retain root ownership/bounds and checkpoint/lineage/spent cycles; method switches/resume reset nothing. An old universal-contract-only package blocks that route, not ordinary development.
 
-**Complete when:** one question, deciding evidence, ownership, authority and required dependencies are known; otherwise return a plan or affected-route blocker with protected work intact.
+**Complete when:** question, ownership, deciding evidence and experiment authority are actionable, or specific affected blockers preserve work.
 
 ## 2. Bound the experiment
 
@@ -62,6 +60,6 @@ Apply only the approved artifact disposition. Preserve useful runnable artifacts
 
 Inspect the scoped diff/manifest and protected work. Update owned documentation/changelog under target policy or justify no change. Return **complete**, **partial** or **blocked** separately from the question's conclusion: a completed bounded experiment may legitimately be inconclusive.
 
-Include question/agreement references and exclusions; bounds planned/spent and stopping reason; commands/interactions, actual observations, environment and source/artifact identities; reused/stale/failed/not-run evidence; conclusion, recommendation, uncertainty and production-readiness limitations; artifact manifest/disposition, companion resolutions, branch/base/PR target or non-Git state, protected work and documentation disposition. Retain the shared ledger and finding lineage when applicable.
+Return the question and scope; bounds planned/spent and stopping reason; commands/interactions, observations and checked identities; failed/unrun/stale evidence; conclusion, uncertainty and production limitations; artifact disposition, protected-work comparison and documentation outcome. Reuse current task/preflight context, not a reconstructed lead record. Include existing coordination/repair state only when applicable.
 
 **Method completion:** the bounded experiment has an honest evidence-backed result and artifact account, or preserved partial/blocking work. Return to the caller with a recommended next action; do not recursively launch analysis, another method, production implementation, a PR or delivery acceptance. The caller chooses any subsequent handoff and refreshes only affected readiness.

@@ -7,19 +7,17 @@ description: Implement agreed workflows from executable observable acceptance ex
 
 Own executable examples and small implementation increments for one agreed workflow, not independent review or delivery acceptance. Use directly for matching requests or inline through an authorized handoff. Read [validation](references/validation.md) when changing or validating this package.
 
-## 1. Bound the workflow and authority
+## 1. Bound the workflow
 
-Read target instructions, authoritative agreement/revision and acceptance IDs, exclusions, affected components/callers, existing checks and supplied readiness evidence. Compare deciding source, dirty files, tests, configuration and environment identities; reuse current evidence and reassess only dependent gaps. Ordinary request/context can supply these facts without a form.
+Reuse applicable project guidance and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation responsibilities. Direct and bounded use accept equivalent layouts. Missing/conflicting common guidance blocks dependent work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Conditional gaps block only that capability.
 
-Identify one owner, protected work, permitted file/run effects, data/retention constraints, expected return and material integration boundaries. Plan-only authority returns an example/check plan without writes. This method grants no installation, service startup, disclosure, spending, delegation, tracker publication, merge or release permission.
+Identify the agreed workflow, acceptance IDs, exclusions, affected components/callers, material integration boundaries and protected work. Inspect supplied readiness and existing checks against current source, dirty content, configuration and environment; reuse current evidence. Bound owned implementation/test effects. Plan-only requests return an example/check plan.
 
-Discover conditional companions through the runtime catalog or an explicit approved location, not sibling paths. Read the complete entry and relevant references, record source/revision or digest and check semantic capability. Ambiguous, missing or incompatible helpers block the dependent route without installation or legacy fallback:
+Use compatible `implementation-preflight` before Git writes, or inspect a current supplied result for the same scope/state; outside Git retain a before/after manifest. Actual meaning/decision-record changes use discovered `domain-modeling`; reading definitions alone needs no invocation. Missing/incompatible companions block their dependent route.
 
-- Before Git writes, consume compatible `implementation-preflight` or inspect a current caller-supplied result for this scope/state. Outside Git retain a before/after manifest.
-- Changed meanings or qualifying decisions use discovered `domain-modeling`; reading definitions alone needs no invocation.
-- Delegation or correction of recorded acceptance findings consumes discovered `work-on`'s execution/repair library without invoking delivery. Preserve root ownership, ledger, bounds and finding lineage; workers request additional work from the root. Ordinary planned development increments do not require that companion.
+Only delegated work or recorded acceptance correction loads Work On's documented conditional coordination/repair library, without invoking delivery. Retain root ownership/bounds and checkpoint/lineage/spent cycles; method switches/resume reset nothing. An old universal-contract-only package blocks that route, not ordinary development.
 
-**Complete when:** agreement, scope, authority, ownership, deciding inputs and dependencies are known, or affected blockers are recorded with protected work intact.
+**Complete when:** agreement, scope, ownership, deciding inputs and checks are actionable, or specific affected blockers preserve work.
 
 ## 2. Translate commitments into executable examples
 
@@ -57,9 +55,9 @@ Inspect the actual diff/manifest against scope and protected bytes, index work, 
 
 Return **complete**, **partial** or **blocked**, including:
 
-- Agreement/revision, acceptance IDs, exclusions, authority/owner and companion/preflight sources; branch/base/PR target or non-Git manifest.
+- Scoped acceptance IDs; reuse current task/preflight context rather than reconstructing a lead record.
 - Per criterion: examples/commands, observed baseline failure or existing-pass/sensitivity evidence, implementation increments, final result and evidence pointers, checked source/test/config/environment identities, and remaining failure-path/integration limits.
 - Explicit failed, not-run, stale, ambiguous and unavailable material boundaries; proposed owner decision or smallest next action. Distinguish implemented from verified, deferred and blocked scope.
-- Changed/retained/restored artifacts, protected work, documentation disposition and shared finding/ledger state when applicable.
+- Artifact disposition, protected-work comparison and documentation outcome; existing coordination/repair state only when applicable.
 
 **Method completion:** all scoped commitments have current local observable evidence, or the return clearly preserves partial/blocking work. Passing examples do not replace broader risk checks, independent review or final integrated acceptance. Return to the caller for those gates; do not recursively launch another method or open a PR.

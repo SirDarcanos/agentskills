@@ -7,23 +7,21 @@ description: Implement a bounded feature or bug fix test-first with red–green�
 
 Own one small behavioral increment at a time: meaningful red, minimal green implementation, then behavior-preserving refactoring while green. This method supports standalone requests and bounded handoffs. It returns local implementation/check evidence; it does not select the next method, provide independent review, or accept a whole delivery.
 
-Loading this skill grants no effects. Inspection/plan-only requests stop at a proposed increment and checks. Writes and test execution need task authority; delegation, disclosure, installation, service operations, merge and release remain separately authorized.
+Inspection/plan-only requests stop at a proposed increment and checks.
 
 For package changes or validation, read [validation](references/validation.md). The procedure below is the sole owner of the TDD loop.
 
 ## 1. Establish the bounded increment
 
-Inspect the target's instructions, agreement and relevant code, callers, checks, domain vocabulary and ADRs. Consume current analysis or reproduction evidence directly; reassess only facts dependent on changed agreement, code, callers, tests or environment. Record source revisions/content identities, including relevant dirty files, rather than relying on HEAD alone.
+Reuse applicable project guidance and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation responsibilities. Direct and bounded use accept equivalent layouts. Missing/conflicting common guidance blocks dependent work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Conditional gaps block only that capability.
 
-Establish the intended observable behavior, acceptance references, exclusions, owned files/interfaces, protected work, approved effects, dependencies and expected return. A direct request supplies these through context; no handoff form is required. Resolve consequential behavior/authority gaps with their owner; the technical lead chooses routine seams and test strategy without a maintainer questionnaire. Standalone execution acts as its own bounded lead.
+Identify the intended observable increment, acceptance references, exclusions, affected code/callers/checks and protected files/interfaces. Reuse supplied analysis or reproduction evidence after checking current deciding inputs, including dirty content. Resolve consequential behavior gaps with their owner; the caller chooses routine seams and test strategy.
 
-Discover companions through the runtime catalog or an explicit approved location, never an assumed sibling path. Read each complete entry and relevant references; record the resolved source/revision or digest and inspect semantic capabilities. Ambiguity or incompatibility blocks only the dependent route; installation is not a fallback.
+Use compatible `implementation-preflight` before Git writes, or inspect a current supplied result for the same scope/state; outside Git retain a before/after manifest. Actual meaning/decision-record changes use discovered `domain-modeling`; reading definitions alone needs no invocation. Missing/incompatible companions block their dependent route.
 
-- Before Git implementation writes, use compatible `implementation-preflight`, or inspect a current supplied result for the same scope/state: protected work, branch/base and PR target. Outside Git, retain a before/after manifest.
-- Required meaning or qualifying decision-record changes use the target's discovered `domain-modeling` owner. Reading existing definitions requires no invocation.
-- Delegated work or correction of recorded acceptance findings requires the discovered `work-on` execution/repair contract as a read-only library, without invoking delivery. Preserve its root ledger, ownership, limits and finding lineage; workers request additional work from the root rather than spawning workers. An unavailable compatible contract blocks that route, not an ordinary direct development loop. Planned red–green increments are development, not failed-acceptance repair episodes.
+Only delegated work or recorded acceptance correction loads Work On's documented conditional coordination/repair library, without invoking delivery. Retain root ownership/bounds and checkpoint/lineage/spent cycles; method switches/resume reset nothing. An old universal-contract-only package blocks that route, not ordinary development.
 
-**Complete when:** behavior, ownership, authority, deciding inputs and required dependencies are known; otherwise return a plan or affected-route blocker with preserved work.
+**Complete when:** behavior, ownership, deciding inputs and checks are actionable, or specific affected blockers preserve work.
 
 ## 2. Select a behavioral check
 
@@ -64,13 +62,13 @@ Restore green before proceeding. Record the refactor and before/after evidence. 
 
 ## 6. Return local evidence and stop
 
-Inspect the integrated local diff against the bounded agreement and protected work. Update owned documentation/changelog under target policy, or justify no change. Pin changed artifacts and deciding inputs, including dirty content/modes or link targets, so receivers can inspect and refresh dependent evidence after changes.
+Inspect the local diff and protected work; maintain affected documentation under the project agreement. Identify changed artifacts and deciding inputs, including dirty content/modes/link targets, for evidence refresh.
 
 Return **complete**, **partial** or **blocked**, with:
 
 - Implemented behavior and acceptance/risk mapping; deferred/excluded scope.
 - Red failure cause, green and refactor commands/results, environment and state identities; reused coverage/evidence and rejected-check dispositions.
 - Failed, stale and not-run checks, uncertainty, remaining findings and retained ledger/repair lineage when applicable.
-- Artifact/state pointers, branch/base/target or manifest, protected work, companion resolutions, documentation disposition and next action.
+- Changed artifacts, protected-work comparison, documentation disposition and next action; reuse current preflight/context rather than rebuilding a lead record.
 
 **Method completion:** all owned increments have meaningful red and current green/refactor evidence, or an explicitly reported already-covered/no-change outcome. Passing local checks are not independent review, integrated delivery acceptance, ticket closure, merge, deployment or release. Return to the caller without automatically launching another method or delivery phase.

@@ -19,6 +19,10 @@ Read when changing or validating this package. These are repeatable checks and a
 
 ## Authored workflow cases
 
+For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+
 Exercise these directly or in an authorized runtime trial; record actual actions separately from expected outcomes:
 
 | Case | Expected result |
@@ -32,7 +36,7 @@ Exercise these directly or in an authorized runtime trial; record actual actions
 | Plan-only or unapproved scope change | Inspect/propose only; preserve partial work and seek the consequential decision from its owner. No inferred delegation/model/installation authority. |
 | Stale evidence or competing owner | Invalidate dependent checks and reconcile ownership before conflicting writes; preserve current unaffected evidence and unrelated work. |
 | Failed refactor or regression | Restore current green within authority; no next increment with a material regression. Report unresolved failures without claiming acceptance. |
-| Recorded acceptance repair / delegated route | Discover shared Work On contract and retain root ledger/limits/lineage; missing contract blocks that route; ordinary planned TDD increments do not spend acceptance-repair cycles. |
+| Recorded acceptance repair / delegated route | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 
 ## Evidence limits
 

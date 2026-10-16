@@ -7,13 +7,17 @@ description: Prepare the correct Git branch and pull-request target before imple
 
 Complete this Git and pull-request preflight before modifying files. This skill complements the active implementation workflow; it does not replace, invoke, or restate `/implement` or another implementation skill.
 
+## Project guidance
+
+Reuse project guidance and relevant context/authority pointers, including directory/runtime restrictions. Direct and bounded use accept equivalent layouts resolving decision/effect authority, safety, verification, documentation and continuation. Missing/conflicting common guidance allows inspection, not branch writes: name the gap and recommend explicit setup/reconciliation without invoking it. Conditional gaps block only dependent effects.
+
 ## Workflow
 
 ### 1. Inspect the repository
 
 Determine:
 
-- the working tree, including staged, unstaged, and untracked changes;
+- the working tree, including staged, unstaged and untracked bytes, modes, symlink targets and index entries;
 - the current branch and its upstream;
 - the remote default branch;
 - local and remote branches;
@@ -21,7 +25,7 @@ Determine:
 - commits and diff between the current branch and its likely base;
 - the current branch's open, closed, or merged pull request when `gh` is available.
 
-Fetch remote refs when `origin` exists and fetching is safe. Treat an existing `develop` or `development` branch as the integration branch. Prefer an explicit repository convention when it names a different integration branch. Ask when multiple candidates remain ambiguous.
+Fetch remote refs when `origin` exists and fetching is safe. Explicit project branch policy wins, including a policy with no integration branch. Otherwise treat an existing `develop` or `development` branch as a candidate integration branch; ask when candidates remain ambiguous.
 
 If the directory is not a Git repository, report that no branch preflight applies and let the active implementation workflow continue.
 
@@ -61,21 +65,10 @@ When creating a branch:
 3. Avoid local and remote branch-name collisions.
 4. Preserve related working-tree changes.
 
-When continuing a branch, preserve its name, history, upstream, and working tree. Do not rebase, merge the base, force-push, or rename it merely as preflight.
+When continuing a branch, preserve its name, history, upstream, and working tree. Do not rebase, merge the base, force-push, or rename it merely as preflight. Recompare protected bytes, modes, link targets and index entries after preparation; uncertain ownership blocks conflicting branch operations, not inspection. Return a specific blocker rather than clearing protected work.
 
-Before implementation starts, state:
-
-- whether the branch was created or continued;
-- the working branch;
-- its base branch;
-- the intended pull-request target;
-- any existing pull request;
-- any limitation caused by a missing remote or unavailable GitHub CLI.
-
-This step is complete when `HEAD` is on a suitable working branch and implementation can commit without targeting the default or integration branch directly.
+Return created/continued branch, base, PR target/existing PR and unavailable remote/CLI limits. This step is complete when `HEAD` is on the suitable non-base working branch.
 
 ### 4. Yield to implementation
 
-Let the active implementation skill or instructions perform the work, validation, review, and commits. Do not duplicate or alter that workflow.
-
-After implementation finishes, report the resulting branch and existing pull request, if any. Offer to open a pull request or update the existing one against the target selected during preflight. Perform no additional validation, documentation, or changelog work through this skill.
+Yield the current result to implementation, which owns checks, review, documentation and commits. Offer PR preparation only; execute that stage only when selected. Preflight starts no implementation or publication stage itself.

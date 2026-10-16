@@ -19,6 +19,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 ## Authored workflow cases
 
+For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+
 | Case | Expected outcome |
 | --- | --- |
 | Direct legacy-change request | Bound relevant behavior and risk, classify intent, capture current checks and sensitivity, return baseline/limits before implementation. |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Plan-only or unavailable checks | No writes/install/invented baseline; return plan or affected blocker with unrun commands. |
 | Missing/ambiguous companion outside sibling layout | Block dependent Git/domain/delegation route; ordinary direct non-Git capture may proceed. |
 | Intervening edits or uncertain probe ownership | Preserve artifacts; exact authorized owned unchanged cleanup only. |
-| Recorded finding correction/delegation | Consume root execution/repair library without invoking delivery, retain ledger/lineage and root-only launch ownership. |
+| Recorded finding correction/delegation | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Follow-on implementation | Return checks, provenance and limits; do not launch another method or claim new acceptance/PR readiness. |
 
 ## Evidence limits

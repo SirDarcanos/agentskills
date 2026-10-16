@@ -9,15 +9,13 @@ Own the implementation-first loop and current local evidence, not independent re
 
 ## 1. Establish scope and checks
 
-Read target instructions, the authoritative agreement/revision and acceptance references, exclusions, affected files/callers, existing coverage and supplied readiness evidence. Compare deciding sources, dirty work, tests, configuration and environment; reuse current evidence and investigate only material gaps. Ordinary request/context supplies these facts without a mandatory form.
+Reuse applicable project guidance and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation responsibilities. Direct and bounded use accept equivalent layouts. Missing/conflicting common guidance blocks dependent work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Conditional gaps block only that capability.
 
-Identify one owner, protected work, approved file/run effects, data/retention constraints and expected return. Plan-only authority returns an increment/check plan without writes. This method grants no installation, service startup, disclosure, spending, delegation, tracker mutation, merge or release authority.
+Identify the bounded outcome, acceptance references, exclusions, affected files/callers and protected work. Inspect supplied readiness and existing coverage against current source, dirty content, configuration and environment; reuse current evidence. Bound owned file/run effects. Plan-only requests return an increment/check plan.
 
-Discover conditional companions through the runtime catalog or an explicit approved location, not sibling paths. Read complete entries and relevant references, record source/revision or digest and check semantic capabilities. Missing, ambiguous or incompatible helpers block their dependent route without installation or legacy fallback:
+Use compatible `implementation-preflight` before Git writes, or inspect a current supplied result for the same scope/state; outside Git retain a before/after manifest. Actual meaning/decision-record changes use discovered `domain-modeling`; reading definitions alone needs no invocation. Missing/incompatible companions block their dependent route.
 
-- Before Git writes, consume compatible `implementation-preflight` or inspect a current caller-supplied result for this scope/state. Outside Git retain a before/after manifest.
-- Changed meanings or qualifying decisions use discovered `domain-modeling`; reading definitions alone needs no invocation.
-- Delegation or correction of recorded acceptance findings consumes discovered `work-on`'s execution/repair library without invoking delivery. Retain root ownership, ledger, bounds and finding lineage; workers request additional work from the root. Ordinary direct development increments need no delivery companion.
+Only delegated work or recorded acceptance correction loads Work On's documented conditional coordination/repair library, without invoking delivery. Retain root ownership/bounds and checkpoint/lineage/spent cycles; method switches/resume reset nothing. An old universal-contract-only package blocks that route, not ordinary development.
 
 Map each scoped acceptance/risk to an appropriate existing check or focused inspection, expected result, command/environment and finite run bound. Inspect assertions and relevant paths rather than relying on test names/counts. Reuse sufficient coverage; add or extend checks only for a real gap. No new-test quota, coverage target or mandatory unit suite applies. Binding project method/check policy still applies; selecting this method cannot waive it.
 
@@ -45,9 +43,9 @@ Inspect the actual diff/manifest against scope, instructions and protected bytes
 
 Return **complete**, **partial** or **blocked**, with:
 
-- Agreement/revision, acceptance references, scope/exclusions, authority/owner, companion/preflight sources and branch/base/PR target or non-Git manifest.
+- Scoped acceptance references; reuse current task/preflight context rather than reconstructing a lead record.
 - Increment order, changed artifacts, risk/check mapping, actual commands/inspections and observed results, baseline distinctions, checked identities and raw evidence pointers.
 - Implemented versus verified, deferred and blocked scope; failed, not-run, stale or unavailable checks, uncertainty, documentation disposition and next action.
-- Protected/retained/restored artifacts and shared finding/ledger state when applicable.
+- Artifact disposition and protected-work comparison; existing coordination/repair state only when applicable.
 
 **Method completion:** bounded implementation has current local evidence, or a truthful partial/blocking return preserves work. Local passes do not establish independent review or final integrated acceptance. Stop at the caller handoff; this method does not open a PR or start another delivery phase.

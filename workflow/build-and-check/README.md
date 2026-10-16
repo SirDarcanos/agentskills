@@ -10,7 +10,11 @@ After approving installation:
 npx skills add SirDarcanos/agentskills --skill build-and-check
 ```
 
-Copy the complete package, including its [MIT notice](LICENSE), references and scripts. Discover companions through the runtime catalog or an explicit approved location, not neighboring directories. Git writes require compatible `implementation-preflight` or a current caller-supplied result; meaning/ADR changes require `domain-modeling`; delegation or recorded-finding correction requires discovered `work-on`'s execution/repair library. Ordinary direct non-Git increments need none of these companions. Missing or ambiguous helpers block only dependent work; installation is never automatic.
+Established project guidance (or a meaningful equivalent) is required, including for direct use. Missing or conflicting common guidance returns a specific setup/reconciliation prerequisite; the method never runs Setup automatically. Ordinary scope, evidence and outcomes may remain in conversation under that agreement.
+
+Copy the complete package, including its [MIT notice](LICENSE), references and scripts. Discover companions through the runtime catalog or an explicit approved location, not neighboring directories. Git writes require compatible `implementation-preflight` or a current caller-supplied result; meaning/ADR changes require `domain-modeling`. Missing or ambiguous helpers block only dependent work; installation is never automatic.
+
+Only delegation or recorded acceptance correction needs Work On's documented conditional coordination/repair library. Preserve root ownership, finite bounds and existing finding lineage/budgets; an old universal-contract-only package blocks those routes, not ordinary direct work. No installation or next stage is automatic.
 
 Expect file inspection, authorized scoped edits and the target's appropriate executable checks or focused inspections. Failed or materially unavailable checks stop dependent progress; retain partial work and report the gap. No service startup, model call or tool installation is implied.
 

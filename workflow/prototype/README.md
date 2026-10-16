@@ -14,7 +14,11 @@ npx skills add SirDarcanos/agentskills --skill prototype
 
 Or copy/link this complete directory into your runtime's discovery path, keeping [SKILL.md](SKILL.md), supporting files and [LICENSE](LICENSE). This example is not executed installation authority. Same-name replacement requires separate approval; merging repository changes does not update installed skills.
 
-The method needs file inspection/editing and the experiment's target tools. Git writes need discovered compatible `implementation-preflight` or a current inspected caller result. Required meaning/ADR changes use `domain-modeling`. Delegation or acceptance-finding corrections consume the discovered `work-on` execution/repair library without invoking delivery. Ordinary direct experiments do not require Work On. Companions resolve through the runtime catalog or approved locations, not sibling paths; missing or incompatible helpers block only their dependent route.
+Established project guidance (or a meaningful equivalent) is required, including for direct use. Missing or conflicting common guidance returns a specific setup/reconciliation prerequisite; the method never runs Setup automatically. Ordinary scope, evidence and outcomes may remain in conversation under that agreement.
+
+The method needs file inspection/editing and the experiment's target tools. Git writes need discovered compatible `implementation-preflight` or a current inspected caller result. Required meaning/ADR changes use `domain-modeling`. Companions resolve through the runtime catalog or approved locations, not sibling paths; missing or incompatible helpers block only their dependent route.
+
+Only delegation or recorded acceptance correction needs Work On's documented conditional coordination/repair library. Preserve root ownership, finite bounds and existing finding lineage/budgets; an old universal-contract-only package blocks those routes, not ordinary direct work. No installation or next stage is automatic.
 
 Artifacts are explicitly experimental. Useful work is preserved by default pending disposition; deletion is limited to specifically authorized owned artifacts with unchanged identities. Production promotion, publication, service use and installation retain their separate permission gates.
 

@@ -19,6 +19,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 ## Authored workflow cases
 
+For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+
 | Case | Expected outcome |
 | --- | --- |
 | Standalone agreed workflow | Map commitments, establish meaningful examples, implement/check small increments and return local criterion evidence; no automatic PR or acceptance. |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Stale input or subsequent edit | Invalidate/rerun dependent evidence; retain unaffected facts and old evidence's original state. |
 | Missing/ambiguous helper outside sibling layout | Block dependent Git/domain/delegation/correction route, not ordinary safe direct development. |
 | Plan-only authority | Return examples/check plan without file writes, runs beyond authority or installation. |
-| Recorded finding/resume | Consume root ledger/repair library, preserve budgets and lineage across method switches; ordinary planned increments do not reset corrective counts. |
+| Recorded finding/resume | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Temporary data or competing edits | Exact authorized owned unchanged cleanup only; preserve unrelated and uncertain artifacts. |
 
 ## Limits

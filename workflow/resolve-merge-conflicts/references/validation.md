@@ -15,6 +15,10 @@ Read when changing or validating this package. Run `python3 -B workflow/resolve-
 
 The harness drives prescribed fixture choices, not a skill interpreter or authorization engine. Passing checks establish Git mechanics and protected-state comparisons for these examples, not that an agent will choose correctly. Authored cases for a future agent walkthrough include missing intent sources, missing checks, denied completion authority, modify/delete, rename, binary, submodule and empty-commit decisions. No pass is claimed for unexecuted cases.
 
+## Project-guidance cases
+
+Inspect standalone and bounded callers using equivalent established guidance; neither needs Setup provenance or a reconstructed lead record. Missing/conflicting common guidance allows safe operation inspection but no resolution writes/continuation, and returns a specific reconciliation prerequisite. Missing optional detail blocks only its effect. Reuse the failed-check and protected-index fixtures below without weakening compatible-intent or unsafe-continuation gates. These guidance cases are direct/static walkthrough obligations, not assertions that the Git harness interprets instructions.
+
 ## Package checks
 
 1. Read Markdown as rendered structure: frontmatter, ordered workflow, tables, code fences and conditional routing. Verify the description routes only relevant active integration, not generic Git cleanup.

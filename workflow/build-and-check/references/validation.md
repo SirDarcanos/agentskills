@@ -18,6 +18,10 @@ Read when changing or validating this package. Authored scenarios below are expe
 
 ## Authored cases
 
+For the project-guidance migration, inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Compare representative mandatory reading with baseline `45e5a24`: count complete required files once per context, include project guidance and any selected preflight/coordination/repair loads, and distinguish static closure counts from runtime adherence. Copy only this package for link/fixture checks; do not load maintenance validation during ordinary method execution.
+
 | Case | Expected outcome |
 | --- | --- |
 | Standalone or Work On handoff | Inspect scope/current evidence, perform bounded increments inline, check immediately and return local evidence without PR/acceptance. |
@@ -28,7 +32,7 @@ Read when changing or validating this package. Authored scenarios below are expe
 | Binding test-first policy | Follow it or request approved revision; this method cannot waive it. |
 | Missing/ambiguous companion outside sibling layout | Block dependent Git/domain/delegation/correction route without install or legacy fallback. |
 | Plan-only or unknown authority | Return bounded plan/blocker; no unapproved writes, runs or service effects. |
-| Recorded finding/resume | Preserve root ledger, checkpoint/lineage and spent correction allowance; method switches do not replenish it. |
+| Recorded finding/resume | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Competing work/temporary artifacts | Preserve protected bytes/modes/links; clean only authorized unchanged owned scratch. |
 
 ## Limits
