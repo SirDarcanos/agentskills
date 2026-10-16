@@ -24,6 +24,7 @@ def main(output):
         ("shape-extraction", ["docs/validation/shape-work/check.py"]),
         ("spec-extraction", ["docs/validation/write-spec/check.py"]),
         ("ticket-extraction", ["docs/validation/write-tickets/check.py"]),
+        ("selected-stage-examples", ["-m", "unittest", "discover", "-s", "docs/validation/discovery-spec-tickets", "-p", "test_*.py"]),
         ("ticket-tests", ["-m", "unittest", "discover", "-s", "docs/validation/write-tickets", "-p", "test_*.py"]),
         ("setup-tests", ["-m", "unittest", "discover", "-s", "workflow/setup-project/tests", "-p", "test_*.py"]),
         ("helper-help", ["workflow/setup-project/scripts/dependencies.py", "--help"]),

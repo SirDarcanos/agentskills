@@ -34,6 +34,12 @@ Graph read-back: SPEC issue 1/9001 owns PIN 2/9002 and VERIFY 3/9003; **VERIFY i
 | AC8 — Research/domain | Focused local primary-source research R1 and plan-only pin-definition handoff, applied directly and stopped; current returns reused. | No external source, delegated research, applied glossary/ADR or changed existing ADR history. |
 | AC15 — Executed evidence | Raw persisted graph, operation requests/pages, source digests, baseline output, failure cases, unit/package checks and actual walkthrough separated from input scenarios. | No live tracker effects, independent workflow trial, production feature acceptance or full #48 certification. |
 
+## Current selected-stage regression examples
+
+`test_selected_stages.py` adds reusable examples for project-guided planning and artifact commands. Run `python3 -B -m unittest discover -s docs/validation/discovery-spec-tickets -p 'test_*.py'`. The current check runner includes these examples; the historical results below remain evidence of their original revisions.
+
+The examples statically guard the instruction defaults and exercise authored configured publication/read-back, concise spec links and ticket tables, draft/local/review zero-write branches, unknown reads and timeout reconciliation against the existing disposable tracker. They are not an interpreter of the skills or proof that an autonomous agent follows them. Full persisted bodies and native IDs remain distinct from concise conversational responses. No live tracker, model call or installed migration is involved. Missing guidance/access/authority and new consequential scope/relationship decisions must still be walked against the actual instructions; fixture decisions are not real consent.
+
 ## Reproduce safely
 
 From repository root, Python 3.9+ syntax (executed on Python 3.14.7/macOS):
