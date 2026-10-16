@@ -101,16 +101,68 @@ class Coordination(unittest.TestCase):
         interface_users = {"A": {"value-contract"}, "C": {"value-contract"}}
         self.assertTrue(interface_users["A"] & interface_users["C"])
 
-    def test_one_unavailable_slot_and_no_recursive_pool(self):
-        self.ledger["active"] = [{"id": "busy", "status": "idle-unfinished"}]
-        ceiling = 2  # Fixture input matching the discovered shared contract.
-        self.assertEqual(ceiling - len(self.ledger["active"]), 1)
-        for axis in ("Standards", "Spec"):
-            self.ledger["active"].append({"id": axis, "status": "read-only"})
-            self.assertEqual(len(self.ledger["active"]), ceiling)
-            self.ledger["active"].pop()  # Explicit synthetic completed return.
-        self.assertEqual(self.ledger["active"][0]["id"], "busy")
+    def assess_start(self, ticket, scope, *, lead_choice, accepted=(), project_limit=None,
+                     runtime_limit=None):
+        """Authored scheduling oracle, not a shipped scheduler or agent decision."""
+        if any(dep not in accepted for dep in self.graph["blocked_by"].get(ticket, [])):
+            return "prerequisite lacks accepted integration"
+        if any(scope & owner["scope"] for owner in self.ledger["active"]):
+            return "ownership or scoped review freeze"
+        count = len(self.ledger["active"])
+        for limit, reason in ((project_limit, "explicit project restriction"),
+                              (runtime_limit, "actual runtime capacity"),
+                              (lead_choice, "lead-selected resources/coordination")):
+            if limit is not None and count >= limit:
+                return reason
+        self.ledger["active"].append({"id": ticket, "scope": scope, "status": "active"})
+        return "started"
+
+    def test_lead_can_start_three_independent_tickets(self):
+        # B has its own stable interface in this fixture; C still depends on A.
+        self.owned["B"] = {"independent.py"}
+        self.ledger["concurrency"] = {"selected": 3, "reason": "three independent ready scopes"}
+        for ticket in ("A", "B", "D"):
+            self.assertEqual(self.assess_start(ticket, self.owned[ticket], lead_choice=3), "started")
+        self.assertEqual({owner["id"] for owner in self.ledger["active"]}, set("ABD"))
+        self.assertEqual(self.assess_start("C", self.owned["C"], lead_choice=3),
+                         "prerequisite lacks accepted integration")
         self.assertNotIn("nested_pool", self.ledger)
+
+    def test_rolling_replenishment_and_review_overlap(self):
+        self.owned["B"] = {"independent.py"}
+        for ticket in ("A", "B", "D"):
+            self.assertEqual(self.assess_start(ticket, self.owned[ticket], lead_choice=3), "started")
+        # A returns and is accepted/integrated; B and D have not finished.
+        self.ledger["active"] = [owner for owner in self.ledger["active"] if owner["id"] != "A"]
+        self.assertEqual(self.assess_start("C", self.owned["C"], lead_choice=3, accepted={"A"}), "started")
+        self.assertEqual({owner["id"] for owner in self.ledger["active"]}, set("BCD"))
+        # Independent read-only axes are root assignments, not a worker-side pool.
+        self.ledger["active"] = [{"id": axis, "scope": {"reviewed.py"}, "status": "read-only"}
+                                 for axis in ("Standards", "Spec")]
+        self.ledger["concurrency"] = {"selected": 4, "reason": "review plus unrelated ready work"}
+        for ticket in ("B", "D"):
+            self.assertEqual(self.assess_start(ticket, self.owned[ticket], lead_choice=4), "started")
+        self.assertEqual(len(self.ledger["active"]), 4)
+        self.assertEqual(self.assess_start("conflict", {"reviewed.py"}, lead_choice=4),
+                         "ownership or scoped review freeze")
+        self.assertNotIn("nested_pool", self.ledger)
+
+    def test_real_constraints_and_unknown_owners_still_defer_work(self):
+        self.ledger["active"] = [{"id": "unknown", "scope": {"core.py"},
+                                  "status": "expired-unknown"},
+                                 {"id": "busy", "scope": {"other.py"}, "status": "idle-unfinished"}]
+        self.assertEqual(self.assess_start("A", self.owned["A"], lead_choice=4),
+                         "ownership or scoped review freeze")
+        # An uncertain owner does not globally stop unrelated safe work.
+        self.assertEqual(self.assess_start("D", self.owned["D"], lead_choice=4), "started")
+        self.assertEqual(self.assess_start("extra", {"extra.py"}, lead_choice=4, project_limit=3),
+                         "explicit project restriction")
+        self.assertEqual(self.assess_start("extra", {"extra.py"}, lead_choice=4, runtime_limit=3),
+                         "actual runtime capacity")
+        self.assertEqual(self.assess_start("extra", {"extra.py"}, lead_choice=3),
+                         "lead-selected resources/coordination")
+        self.assertEqual(self.ledger["active"][0]["status"], "expired-unknown")
+        self.assertEqual(self.ledger["active"][1]["status"], "idle-unfinished")
 
     def test_failed_uncertain_owner_retains_scope(self):
         self.init_target()
@@ -209,6 +261,11 @@ class Coordination(unittest.TestCase):
         for clause in ("closure", "work-on", "root-ledger", "one inspected result at a time",
                        "blocks multi-ticket execution"):
             self.assertIn(clause, dispatch)
+        self.assertIn("lead-chosen concurrency", entry)
+        self.assertIn("rather than in fixed ticket batches", entry)
+        self.assertIn("without waiting for unrelated active tickets", dispatch)
+        self.assertIn("review does not stop unrelated implementation", dispatch)
+        self.assertNotIn("shared ceiling", entry)
         self.assertIn("local ticket passes do not establish", entry)
         self.assertIn("relocating an unresolved local cause cannot reset", aggregate)
         self.assertIn("not the old launch list", recovery)

@@ -2,6 +2,8 @@
 
 Design-level verification for [#18](https://github.com/SirDarcanos/agentskills/issues/18). Read with the [contract](delivery-workflow.md) when accepting it or checking downstream coverage. The walkthroughs below are authored paper exercises inspected directly by the design author. They are **not executed agent workflows, independent review, or trial results**. #29 and #30 remain responsible for actual integrated trials.
 
+The original two-worker design assumptions below are historical and superseded by the maintainer-approved [#130 concurrency revision](https://github.com/SirDarcanos/agentskills/issues/130). Current expectations live in [Work On Spec dispatch validation](../../workflow/work-on-spec/references/dispatch-validation.md). Original paper cases and evidence remain unchanged.
+
 ## Spec coverage
 
 | #14 criterion | Design coverage | Implementation / validation owner |

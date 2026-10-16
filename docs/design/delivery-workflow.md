@@ -4,6 +4,8 @@ Design deliverable for [#18](https://github.com/SirDarcanos/agentskills/issues/1
 
 For the agreed #48 follow-up, read the [composable delivery design](composable-delivery.md) and its accepted successor ADR before changing ownership or companion boundaries. This #14 contract and its linked inventory/validation retain the earlier design and evidence; #50 does not rewrite them to imply extraction has shipped.
 
+The original numerical concurrency ceiling below is historical: the maintainer approved lead-chosen concurrency and rolling scheduling in [#130](https://github.com/SirDarcanos/agentskills/issues/130). The [current shared contract](../../workflow/work-on/references/contracts.md#lead-chosen-concurrency) owns that behavior. This supersedes only the former worker-count restriction, not the original repair budget, ownership decisions or recorded results.
+
 ## Status and authority
 
 - **Confirmed:** #14's product commitments and ticket graph, and the maintainer's request to complete #18. Project authority, verification, and delivery rules remain in [workflow](../agents/workflow.md); domain meanings remain in [CONTEXT](../../CONTEXT.md).

@@ -71,6 +71,8 @@ Both lead and named package check authority before transport. A model's classifi
 
 ## Paper check 6: nested-worker capacity, failure and resume
 
+Historical worker-count assumptions in this paper check were superseded by [#130](https://github.com/SirDarcanos/agentskills/issues/130); they are not current concurrency policy. Use [current dispatch validation](../../workflow/work-on-spec/references/dispatch-validation.md) for lead-chosen concurrency, rolling replenishment and overlapping review/implementation expectations. Preserve the original paper scenario below; no historical execution result is changed.
+
 Synthetic spec has independent tickets A/B and C blocked by accepted integration of A. Root launches two `work-on` ticket agents within authorized runtime/ownership/bounds. Both slots remain occupied until assignments finish or are confirmed stopped/isolated.
 
 Expected: A uses specialists/methods inline; a request for research/review/model allocation goes to root. A cannot launch two more workers or treat itself as a new lead pool. Root queues additional work until a slot is available. Standards and Spec reviewers are independent of authors and each other's conclusions; they can run sequentially in the available slot. No writer/integration changes the pinned review scope.
