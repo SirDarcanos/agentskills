@@ -79,6 +79,10 @@ Use temporary fixture projects and a command shim returning synthetic GitHub obs
 
 For a repeatable local fixture, start with an authored AGENTS or CLAUDE file, project/workflow guidance, an untracked sentinel, and (where relevant) a context map/ADR. Record original byte hashes and the exact synthetic GitHub state. Include both approved deltas and exclusions. After the agent run, compare the diff, command log, remote read-back, and report to the plan; run again to check idempotence. Keep fixtures synthetic, and retain assessment artifacts only in an approved location. For model-policy fixtures, use synthetic owner approvals confined to disposable targets (never this repository), snapshot input/output bytes, verify allowed document deltas and entry-point links, then directly rerun inspection without writing. Record tool actions to establish zero service/model/credential/install operations; file assertions alone do not establish that property. Retain executed evidence separately from this authored matrix.
 
+## Direct tracker-library checks
+
+For tracker-library changes, read `references/native-tracker.md` directly from a discovered package root. Confirm it alone supplies discovery/authority, role/readiness, identity/pagination, parent and blocker graph checks, additive writes/read-back and optional helper limits. Do not preload the setup entry or label audit. The retained `issue-tracker.md#native-github-graph` target must forward to that same owner, not duplicate the algorithm. Copy the package without siblings or source Git metadata and repeat link/procedure inspection; missing or older incompatible libraries block only their dependent route without installation. Run the shipped package and dependency-helper tests. Static assertions protect routing and text placement, not agent compliance or live API behavior.
+
 ## Review and completion evidence
 
 - Read generated Markdown and frontmatter. Follow links in the package and produced entry points.

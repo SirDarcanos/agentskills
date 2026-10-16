@@ -16,7 +16,7 @@ Before creating or changing edges:
 4. Add only missing approved relationships.
 5. Read back both directions and compare actual IDs with the intended graph. After a timeout or partial failure, inspect before retrying; report unknown or failed operations.
 
-The [maintained native-relationship procedure](../../workflow/setup-project/references/issue-tracker.md#native-github-graph) owns request details and links to the official APIs. Read it before performing graph work; its optional helper handles additive blockers in one repository, not parentage or approvals. Use normal skill/file discovery when working outside this repository rather than copying workstation paths.
+The [maintained native-relationship procedure](../../workflow/setup-project/references/native-tracker.md) owns request details and links to the official APIs. Read it before performing graph work; its optional helper handles additive blockers in one repository, not parentage or approvals. Use normal skill/file discovery when working outside this repository rather than copying workstation paths.
 
 This repository's native parent and blocker endpoints were successfully inspected during setup. Future permission/API failures are blockers, not evidence that a relationship is absent. Obtain explicit agreement on an alternative if a required native feature is unavailable; never silently substitute prose.
 

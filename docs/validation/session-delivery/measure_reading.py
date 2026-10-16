@@ -27,6 +27,18 @@ PR = ["workflow/pr/SKILL.md", "workflow/pr/references/impact.md"]
 PLANNING = PROJECT + [f"workflow/{name}/SKILL.md" for name in
                       ("shape-work", "analyze", "build-and-check")]
 
+# Equivalent established-cause investigation followed by the selected ticket
+# stage. Baseline always drafts a ticket; candidate explicitly selects it. No
+# technical/source gap, new record, helper execution or delegation. Diagnosis-only
+# is reported separately, never substituted for the equivalent ticket endpoint.
+TRACKER_POLICY = ["docs/agents/issue-tracker.md", "docs/agents/triage-labels.md"]
+INVESTIGATION = PROJECT + TRACKER_POLICY + [
+    "workflow/investigate-bug/SKILL.md", "workflow/write-tickets/SKILL.md"]
+OLD_TRACKER = ["workflow/setup-project/SKILL.md",
+               "workflow/setup-project/references/issue-tracker.md"]
+NEW_TRACKER = ["workflow/investigate-bug/references/ticket-stage.md",
+               "workflow/setup-project/references/native-tracker.md"]
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -57,6 +69,11 @@ def main():
         reviewer = surface(PROJECT + REVIEW, historical)
         pr = surface(PROJECT + PR, historical)
         observations[name] = {"planning": surface(PLANNING, historical),
+                              "investigation_to_ticket": surface(
+                                  INVESTIGATION + (OLD_TRACKER if historical else NEW_TRACKER), historical),
+                              "diagnosis_only": surface(
+                                  INVESTIGATION + OLD_TRACKER if historical else
+                                  PROJECT + ["workflow/investigate-bug/SKILL.md"], historical),
                               "lead_delivery": lead, "each_of_two_reviewers": reviewer,
                               "delivery_total": lead["words"] + 2 * reviewer["words"],
                               "selected_PR_fresh_context": pr}
@@ -68,7 +85,9 @@ def main():
     print(json.dumps({"base": base, "unit": "whitespace words; static reading paths",
                       "assumptions": "planning: inline Analyze and Build and Check capability inspection; "
                                      "delivery: direct small code change and two neutral reviewers; "
-                                     "same project, no source/domain gaps, no planning delegation",
+                                     "investigation-to-ticket: established cause and explicitly selected ticket stage; "
+                                     "same project, no source/domain gaps, no delegation; diagnosis-only "
+                                     "reported separately because baseline requires ticket preparation",
                       "limits": "Static full-file counts, including actual project guidance per revision; "
                                 "not tokens, timing or agent adherence. Conditional branches are not measured.",
                       "contexts": observations}, indent=2))

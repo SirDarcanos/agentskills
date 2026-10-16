@@ -21,7 +21,7 @@ Identify the approved outcome, acceptance criteria or checkable brief, exclusion
 
 Reusable-skill corrections target authoritative tracked package sources. A repository-local operating policy workaround is not a substitute for portable behavior. Installed copies remain unchanged unless separately approved.
 
-For ticket work, discover the maintained tracker procedure and inspect paginated native parent/blocker observations and required accepted-integration evidence. For GitHub, use discovered `setup-project`'s documented tracker library without invoking setup. Failed access is unknown; closure or labels alone do not establish eligibility. A direct request needs no ticket hierarchy. Read [recovery](references/recovery.md) before writes when prior owners, operations, evidence or spent allowances are uncertain.
+For ticket work, discover the maintained tracker procedure and inspect paginated native parent/blocker observations and required accepted-integration evidence. For GitHub, discover the actual `setup-project` package root and read its complete **references/native-tracker.md** library entry directly, not its setup entry or label audit; check source identity and compatibility, blocking the route if missing/incompatible without installation. Failed access is unknown; closure or labels alone do not establish eligibility. A direct request needs no ticket hierarchy. Read [recovery](references/recovery.md) before writes when prior owners, operations, evidence or spent allowances are uncertain.
 
 **Done:** scope, agreement, authority, protected work, actual progress and applicable eligibility have evidence or specific blockers.
 
