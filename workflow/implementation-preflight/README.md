@@ -16,7 +16,7 @@ It does not replace or invoke `/implement`. You continue using the upstream impl
 
 The skill follows the repository's existing workflow:
 
-- If `develop`, `development`, or another documented integration branch exists, new work branches from it and targets it with a pull request.
+- Explicit project branch policy wins, including a documented no-integration-branch policy. Otherwise `develop` or `development` is a candidate; unresolved ambiguity pauses preparation.
 - Otherwise, new work branches from the default branch and targets the default branch.
 - It never introduces a development branch.
 
@@ -36,11 +36,19 @@ Before implementation, the skill:
 
 After implementation, it only reports the resulting branch and offers to open or update the pull request. Validation, documentation, changelog updates, review, and commits remain owned by their existing workflows.
 
+## Project prerequisite
+
+Direct and bounded use consume established project guidance or a meaningful equivalent. Missing/conflicting common guidance allows safe inspection, not branch writes; return the specific gap and recommend explicit setup/reconciliation. Do not invoke Setup or manufacture policy. Protected work includes bytes, modes, symlink targets and index entries.
+
 ## Requirements
 
 - Git
 - GitHub CLI for pull-request detection and creation when using GitHub
 - An agent runtime that supports model-invoked skills
+
+## Validate package changes
+
+Check frontmatter, rendered structure, isolated-package links and `git diff --check`. In disposable repositories, inspect direct and bounded entry with equivalent project guidance, missing/conflicting authority, explicit no-integration policy despite an incidental `develop`, continuation of related work and a finished-PR/new-branch route. Compare protected staged/unstaged/untracked bytes, modes, symlink targets and index entries before/after preparation; uncertain ownership must block conflicting operations. Record actual commands/results separately from these authored cases. Read-only inspection without guidance does not authorize branch preparation. These checks need no tracker writes, installation or model calls.
 
 ## Files
 

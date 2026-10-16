@@ -6,10 +6,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 1. Read the complete entry and rendered Markdown. Check `name: prototype`, a specific matching-request/handoff description, and no command-only gate. Verify each step's stopping/completion condition.
 2. Follow all relative links from their containing files. Copy the entire package into an isolated directory without sibling skills, recheck internal links and execute the fixture there.
-3. With Python 3.9+ and no additional dependencies, run:
+3. From the package directory, with Python 3.9+ and no third-party dependencies, run:
 
    ```sh
-   python3 workflow/prototype/scripts/check-fixture.py
+   python3 scripts/check-fixture.py
    ```
 
    Use that copy's `scripts/check-fixture.py` from an isolated package. The fixture creates only its own temporary synthetic target, runs bounded Python subprocesses with five-second timeouts, and removes the temporary target on exit. No network, model, Git/tracker mutation, installed-skill change or user-project cleanup occurs.
@@ -18,6 +18,10 @@ Read when changing or validating this package. Expected workflow cases below are
 6. Inspect the integrated diff for scope, portable paths, notices, protected work and private data. Record actual command/environment/source state/results separately from this package's expected scenarios.
 
 ## Authored workflow cases
+
+Inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Run package checks from an isolated copy using only its shipped files. Keep maintenance validation separate from ordinary method execution; no source checkout or historical comparison is required.
 
 | Case | Expected outcome |
 | --- | --- |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Missing/ambiguous/incompatible companion | Dependent Git/domain/delegation route blocks; non-Git direct experiment remains possible where authorized; no sibling assumption or automatic installation. |
 | Cleanup/retention conflict | Preserve useful work by default; exact owned authorized unchanged artifacts only may be removed; preserve intervening edits and symlink targets. |
 | Favorable recommendation / production promotion | Return prototype limitations and subsequent production scope/check recommendation; never label prototype output accepted production implementation. |
-| Delegated or recorded-finding correction | Discover shared execution contract, retain root ledger/limits/lineage and request work through root; changing methods does not replenish budgets. |
+| Delegated or recorded-finding correction | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 
 ## Evidence limits
 

@@ -6,10 +6,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 1. Read the complete entry and rendered Markdown. Check `name: characterize`, matching-request/handoff triggers, no command-only gate and checkable completion/blocking conditions.
 2. Follow every relative link from its containing file. Copy the complete package without sibling skills into an isolated directory, check its internal links and run its fixture there.
-3. With Python 3.9+ and no additional dependencies, run:
+3. From the package directory, with Python 3.9+ and no third-party dependencies, run:
 
    ```sh
-   python3 workflow/characterize/scripts/check-fixture.py
+   python3 scripts/check-fixture.py
    ```
 
    The script creates only temporary synthetic files, executes at most ten legacy/variant subprocesses with five-second timeouts, then removes its own temporary targets. No network, model, Git/tracker mutation, installed-skill change or user-project cleanup occurs.
@@ -18,6 +18,10 @@ Read when changing or validating this package. Expected workflow cases below are
 6. Inspect the integrated diff for scope, portable paths, credentials/private data, notices and protected work. Keep actual results/environment/source state separately from expected cases.
 
 ## Authored workflow cases
+
+Inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Run package checks from an isolated copy using only its shipped files. Keep maintenance validation separate from ordinary method execution; no source checkout or historical comparison is required.
 
 | Case | Expected outcome |
 | --- | --- |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Plan-only or unavailable checks | No writes/install/invented baseline; return plan or affected blocker with unrun commands. |
 | Missing/ambiguous companion outside sibling layout | Block dependent Git/domain/delegation route; ordinary direct non-Git capture may proceed. |
 | Intervening edits or uncertain probe ownership | Preserve artifacts; exact authorized owned unchanged cleanup only. |
-| Recorded finding correction/delegation | Consume root execution/repair library without invoking delivery, retain ledger/lineage and root-only launch ownership. |
+| Recorded finding correction/delegation | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Follow-on implementation | Return checks, provenance and limits; do not launch another method or claim new acceptance/PR readiness. |
 
 ## Evidence limits

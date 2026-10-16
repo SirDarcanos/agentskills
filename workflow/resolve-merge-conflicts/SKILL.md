@@ -7,6 +7,10 @@ description: Resolve an in-progress Git merge or rebase conflict during already-
 
 Use during authorized integration without requiring a separate invocation. Loading this skill grants no integration authority: inspect the original task and project policy for the operation, branches and permitted completion. A request only to inspect conflicts stays read-only. Do not start a new merge/rebase just because conflicts are mentioned.
 
+## Project guidance
+
+Reuse applicable instructions, the project agreement and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation guidance for this integration; equivalent layouts work without Setup provenance. Missing/conflicting common guidance permits safe state inspection but blocks resolution writes/continuation. Name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Missing conditional detail blocks only that capability.
+
 ## 1. Inspect the operation and protect existing work
 
 Read project instructions and the integration goal. Inspect `git status`, branch/HEAD, recent history, staged and unstaged diffs, untracked files and `git ls-files -u`. Identify the merge heads or current rebase commit and target; detached HEAD can be normal during rebase. Use `git rev-parse --git-path` for operation metadata, including in linked worktrees. If no merge/rebase is active, report that state rather than guessing a different operation.

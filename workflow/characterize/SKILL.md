@@ -7,19 +7,17 @@ description: Protect relevant existing behavior before risky legacy changes with
 
 Capture a baseline before change; own behavior protection, not the subsequent implementation or delivery acceptance. Use directly for matching requests or inline through authorized handoffs. Read [validation](references/validation.md) when changing or validating this package.
 
-## 1. Establish the boundary and authority
+## 1. Establish the boundary
 
-Read target instructions, agreement/acceptance references, affected code/callers, existing checks and supplied evidence. Identify the risky change and relevant observable boundaries: inputs, outputs, failures, side effects and state transitions. Reuse current evidence; compare deciding source, dirty-file, test, configuration and environment identities, not only HEAD. Reassess only dependent gaps or changed inputs.
+Reuse applicable project guidance and relevant context/authority pointers once per context, including directory/runtime restrictions. Check decision/effect authority, safety, verification/review, documentation and continuation responsibilities. Direct and bounded use accept equivalent layouts. Missing/conflicting common guidance blocks dependent work: name the gap and recommend explicit setup/reconciliation without starting it or inventing policy. Conditional gaps block only that capability.
 
-Record owned checks/probes, protected work, approved read/write/run effects, retention/data constraints and expected return. A standalone caller acts as its own bounded lead; ordinary context can supply the handoff facts without a form. Plan-only authority returns a capture plan, not writes. Characterization grants no production fix, broad refactor, install, service startup, disclosure, spending, delegation, tracker publication, merge or release permission.
+Identify the risky change and relevant observable boundaries: inputs, outputs, failures, side effects and state transitions. Inspect affected code/callers/checks and supplied evidence against current source, dirty content, configuration and environment; reuse current evidence. Bound owned checks/probes and protected work. Capture authority does not authorize a production fix or broad refactor; plan-only requests return a capture plan.
 
-Resolve conditional companions through the runtime catalog or an explicit approved location, not sibling paths. Read their complete entry and relevant references, record resolved source/revision or digest, and check semantic capability; ambiguity or incompatibility blocks that route, never triggers installation.
+Use compatible `implementation-preflight` before Git writes, or inspect a current supplied result for the same scope/state; outside Git retain a before/after manifest. Actual meaning/decision-record changes use discovered `domain-modeling`; reading definitions alone needs no invocation. Missing/incompatible companions block their dependent route.
 
-- Before Git writes, use compatible `implementation-preflight` or inspect a current caller-supplied preflight for this scope/state. Outside Git, retain a before/after manifest.
-- Changed domain meanings or qualifying decisions use discovered `domain-modeling`; reading existing definitions needs no invocation.
-- Delegation or correction of recorded acceptance findings uses discovered `work-on`'s execution/repair contract as a read-only library, without invoking delivery. Retain root ownership, ledger, bounds and finding lineage; workers request extra work from the root. Missing contract blocks that route, not direct baseline capture.
+Only delegated work or recorded acceptance correction loads Work On's documented conditional coordination/repair library, without invoking delivery. Retain root ownership/bounds and checkpoint/lineage/spent cycles; method switches/resume reset nothing. An old universal-contract-only package blocks that route, not ordinary development.
 
-**Complete when:** scope, sources, ownership, authority and conditional dependencies are known, or affected blockers are recorded with protected work intact.
+**Complete when:** scope, ownership, deciding sources and capture authority are actionable, or specific affected blockers preserve work.
 
 ## 2. Classify observations before protecting them
 
@@ -53,11 +51,11 @@ Inspect the actual diff/manifest: only authorized tests/probes/documentation cha
 
 Return **complete**, **partial** or **blocked**, with:
 
-- Scope/agreement references, proposed risky change, exclusions, owner and authority.
+- Proposed risky change and scoped agreement references; reuse current task/preflight context.
 - Protected intended invariants, provisional unknown baselines and separate defect reproductions, each with intent/observation provenance.
 - Runnable commands, actual baseline and sensitivity results, raw evidence pointers, source/test/config/environment identities; failed, unrun or stale checks.
 - Normalization/controlled inputs, repeat bounds and observed variation; coverage, environment and intent limits.
-- Changed/retained/restored artifacts, protected work, companion/preflight sources, branch/base/PR target or non-Git manifest, documentation disposition and any shared ledger state.
+- Artifact disposition, protected-work comparison and documentation outcome; existing coordination/repair state only when applicable.
 - Recommended follow-on scope/checks, including defect acceptance that still needs implementation and unknown boundaries requiring a decision.
 
 **Method completion:** relevant baseline protection and limits are handed back truthfully, or preserved partial/blocking work identifies the smallest next action. Passing characterization is neither approval of a defect nor proof of new behavior, integration or independent review. Return to the caller; it chooses the next implementation method and delivery gates. Do not recursively launch that method or open a PR.

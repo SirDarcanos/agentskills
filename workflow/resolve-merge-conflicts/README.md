@@ -2,6 +2,10 @@
 
 Resolve an active Git merge or rebase while preserving compatible intentions and unrelated work. The agent can load [SKILL.md](SKILL.md) during already-authorized integration without a separate command. It pauses for incompatible product rules, unsafe checks or missing completion permission.
 
+## Project prerequisite
+
+Established project guidance or a meaningful equivalent is required for resolution and continuation. Reuse it in direct and bounded use. Missing/conflicting common guidance allows safe inspection only; name the gap and recommend explicit setup/reconciliation without invoking it or fabricating authority.
+
 ## Requirements and use
 
 Requires Git, file/history inspection, scoped editing and the target project's relevant checks. No companion skills, GitHub access or additional models are required; missing remote intent evidence is reported when material. Project policy and the original task decide which integration may finish. Abort, discard, skip, push and merge-to-main remain separately authorized.
@@ -16,10 +20,10 @@ Installation has not been exercised here. Repository delivery does not update th
 
 ## Validate
 
-With Python 3.9+ and Git, from the repository root:
+With Python 3.9+ and Git, from this package's directory:
 
 ```sh
-python3 -B workflow/resolve-merge-conflicts/scripts/check-fixtures.py
+python3 -B scripts/check-fixtures.py
 ```
 
 The script uses disposable local repositories and synthetic identities without network, dependencies or global Git configuration changes. Follow [validation](references/validation.md) for acceptance mapping and limits. These are scripted Git checks, not autonomous agent-adherence tests.

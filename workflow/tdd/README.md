@@ -14,7 +14,11 @@ npx skills add SirDarcanos/agentskills --skill tdd
 
 Alternatively, copy or link this complete directory into your runtime's skill discovery path. Keep [SKILL.md](SKILL.md), shipped references/scripts and the [MIT notice](LICENSE) together. This is an installation example, not an automatically executed action. Installing a same-name replacement requires separate approval; repository merging does not update installed copies.
 
-The method needs file inspection/editing and the target's relevant test tools. Before Git writes it needs a discovered compatible `implementation-preflight` or a current inspected result from the caller. Required domain/ADR changes use `domain-modeling`. Delegated work or acceptance-finding corrections consume the discovered `work-on` execution/repair contract as a library without invoking delivery. Ordinary direct TDD does not require launching Work On. Companions may live anywhere exposed by the runtime or an explicit approved location; a matching name alone does not prove compatibility. Missing helpers block only dependent work and never trigger installation.
+Established project guidance (or a meaningful equivalent) is required, including for direct use. Missing or conflicting common guidance returns a specific setup/reconciliation prerequisite; the method never runs Setup automatically. Ordinary scope, evidence and outcomes may remain in conversation under that agreement.
+
+The method needs file inspection/editing and the target's relevant test tools. Before Git writes it needs a discovered compatible `implementation-preflight` or a current inspected result from the caller. Required domain/ADR changes use `domain-modeling`. Companions may live anywhere exposed by the runtime or an explicit approved location; a matching name alone does not prove compatibility. Missing helpers block only dependent work and never trigger installation.
+
+Only delegation or recorded acceptance correction needs Work On's documented conditional coordination/repair library. Preserve root ownership, finite bounds and existing finding lineage/budgets; an old universal-contract-only package blocks those routes, not ordinary direct work. No installation or next stage is automatic.
 
 ## Attribution
 
@@ -24,4 +28,4 @@ The procedure is newly written rather than a verbatim copy. It adds the approved
 
 ## Validation
 
-See [validation](references/validation.md) for package checks, an offline Python 3.9+ fixture and authored workflow cases. Run `python3 workflow/tdd/scripts/check-fixture.py` from the repository root. The fixture executes a synthetic red–green–refactor sequence, retains existing behavioral coverage and illustrates two rejected test anti-patterns. It is not an executed agent workflow or installed-runtime certification. No model service is required.
+See [validation](references/validation.md) for package checks, an offline Python 3.9+ fixture and authored workflow cases. From the package directory, run `python3 scripts/check-fixture.py`. The fixture executes a synthetic red–green–refactor sequence, retains existing behavioral coverage and illustrates two rejected test anti-patterns. It is not an executed agent workflow or installed-runtime certification. No model service is required.

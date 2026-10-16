@@ -6,10 +6,10 @@ Read when changing or validating this package. Expected workflow cases below are
 
 1. Read the complete entry and rendered Markdown. Check `name: acceptance-first`, matching-request/handoff triggers, ordinary model invocation and checkable completion/blocking conditions.
 2. Resolve every relative link from its containing file. Copy the complete package into an isolated directory without sibling skills, verify internal links and run the fixture there.
-3. With Python 3.9+ and no third-party dependencies, run:
+3. From the package directory, with Python 3.9+ and no third-party dependencies, run:
 
    ```sh
-   python3 workflow/acceptance-first/scripts/check-fixture.py
+   python3 scripts/check-fixture.py
    ```
 
    The script writes only owned temporary synthetic files, runs at most twelve child Python processes with five-second timeouts, and removes its own temporary directory. No network, model, Git/tracker mutation, installed-copy change or user-project cleanup occurs.
@@ -18,6 +18,10 @@ Read when changing or validating this package. Expected workflow cases below are
 6. Review the integrated diff for credentials/private data, generated files, local paths, protected work and notices. Retain actual commands/environment/source identity outside the copied package, separately from these expected cases.
 
 ## Authored workflow cases
+
+Inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Run package checks from an isolated copy using only its shipped files. Keep maintenance validation separate from ordinary method execution; no source checkout or historical comparison is required.
 
 | Case | Expected outcome |
 | --- | --- |
@@ -31,7 +35,7 @@ Read when changing or validating this package. Expected workflow cases below are
 | Stale input or subsequent edit | Invalidate/rerun dependent evidence; retain unaffected facts and old evidence's original state. |
 | Missing/ambiguous helper outside sibling layout | Block dependent Git/domain/delegation/correction route, not ordinary safe direct development. |
 | Plan-only authority | Return examples/check plan without file writes, runs beyond authority or installation. |
-| Recorded finding/resume | Consume root ledger/repair library, preserve budgets and lineage across method switches; ordinary planned increments do not reset corrective counts. |
+| Recorded finding/resume | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Temporary data or competing edits | Exact authorized owned unchanged cleanup only; preserve unrelated and uncertain artifacts. |
 
 ## Limits

@@ -6,10 +6,10 @@ Read when changing or validating this package. Authored scenarios below are expe
 
 1. Read the complete entry and rendered Markdown. Verify `name: build-and-check`, matching-request/handoff triggers, ordinary model invocation, immediate checks and checkable completion/blocking conditions.
 2. Resolve relative links from their containing files. Copy the complete package to an isolated directory without sibling skills, verify internal links and run the fixture there.
-3. With Python 3.9+ and no third-party dependencies, run:
+3. From the package directory, with Python 3.9+ and no third-party dependencies, run:
 
    ```sh
-   python3 workflow/build-and-check/scripts/check-fixture.py
+   python3 scripts/check-fixture.py
    ```
 
    The script writes only temporary synthetic files, runs six child Python checks with five-second timeouts, and removes its own temporary directory. It uses no network, model, Git/tracker mutation or installed-copy changes.
@@ -17,6 +17,10 @@ Read when changing or validating this package. Authored scenarios below are expe
 5. Review the integrated diff for credentials/private data, generated files, local paths, protected work and notices. Record actual commands, environment and source identities outside the copied package, separately from expected scenarios.
 
 ## Authored cases
+
+Inspect direct and bounded entry with the same compatible existing agreement (no filename/template or Setup-origin requirement). Check missing/conflicting common guidance yields a specific prerequisite without setup or writes; conditional gaps affect only their capability. Exercise an unavailable material check and a recorded correction with prior spent lineage, including an old universal-contract-only companion. Record actual reads/actions/outcomes separately from these expectations. Ordinary same-session work returns evidence in conversation, without a new lead ledger or durable report.
+
+Run package checks from an isolated copy using only its shipped files. Keep maintenance validation separate from ordinary method execution; no source checkout or historical comparison is required.
 
 | Case | Expected outcome |
 | --- | --- |
@@ -28,7 +32,7 @@ Read when changing or validating this package. Authored scenarios below are expe
 | Binding test-first policy | Follow it or request approved revision; this method cannot waive it. |
 | Missing/ambiguous companion outside sibling layout | Block dependent Git/domain/delegation/correction route without install or legacy fallback. |
 | Plan-only or unknown authority | Return bounded plan/blocker; no unapproved writes, runs or service effects. |
-| Recorded finding/resume | Preserve root ledger, checkpoint/lineage and spent correction allowance; method switches do not replenish it. |
+| Recorded finding/resume | Inspect only documented conditional coordination/repair libraries; preserve root ownership/bounds and existing checkpoint/lineage/spent cycles. An old universal-contract-only package blocks that route without resetting state; ordinary development remains independent. |
 | Competing work/temporary artifacts | Preserve protected bytes/modes/links; clean only authorized unchanged owned scratch. |
 
 ## Limits
