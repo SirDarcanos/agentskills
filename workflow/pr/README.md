@@ -1,6 +1,8 @@
 # PR
 
-Prepare a PR a maintainer can judge without reading code diagrams: what changes and why, checks and remaining findings, test protection, CI impact, risks, post-merge actions and reversal limits.
+Prepare an outcome-first PR summary a maintainer can judge without reading code: what changed or was fixed, whether meaningful verification succeeded, and what decision or action remains. Aim for 100–200 words for routine changes, with more room for consequential risks or migrations.
+
+Keep technical accounting and original review reports in separate supporting evidence, linked once when useful. Unchanged infrastructure needs no public boilerplate; material failed/unrun/stale checks, findings, protection changes and required actions stay visible. Use `Closes #X` for intended issue closure and `Refs #X` for related issues that should remain open.
 
 Ask “write a PR report” or “open/update this PR,” or supply a bounded delivery handoff. Reporting does not authorize publication. Current complete implementation/review evidence is reused; unknown measurements and stale checks remain visible. A complete report may describe blocked delivery.
 

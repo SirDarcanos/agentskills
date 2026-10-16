@@ -18,6 +18,12 @@ The lead then inspected the raw sources/diffs/results and followed `pr` directly
 
 Six named regression tests passed: actual local results; identity/rename/redundancy accounting; CI distinctions; synthetic measured/unmeasured/inapplicable reporting; retained source identities and findings; migration/report-only fixture boundaries. Report checks compare generated prose with source facts and selected guardrails, not every possible prose error. Fixture arithmetic is not application protection.
 
+## Reusable concise-summary fixtures
+
+[Authored summary/evidence pairs](summary_examples.json) cover routine documentation, executable fixes, failed/unrun/stale checks and an incompatible migration. Each summary can be compared with its paired synthetic evidence; issue numbers and evidence links are fixture-local, not live publication claims. The regression command above checks length, evidence separation, closing versus related references and visible material caveats, alongside the original accounting checks. Human inspection still checks outcome/purpose, claim accuracy and omitted boilerplate; string assertions do not establish semantic correctness or autonomous runtime behavior. The historical reports above remain unchanged and illustrate the earlier report format, not the current concise-summary target.
+
+These are reusable validation inputs, not retained execution reports for an implementation change. Current execution results and independent reviews belong in its PR/issue supporting record.
+
 ## Scope and documentation
 
 New runtime owner: `pr` entry, README, impact/publication/validation references and repository MIT notice. Original instructions derive from #48/#66 and maintained repository contracts; the installed PR/show-me template was inspected as an incompatible candidate, not imported or adapted. Work On retains acceptance/repair/tracker/status ownership and gains only the discovered PR route/capability; its broad entry remains until #67. Root listing and one Unreleased Added entry describe actual new behavior. No glossary/ADR/operating-policy change is needed: accepted ownership and authority are unchanged. No historical #14 evidence, CI configuration, native relationships or installed copies change. Compatible added functionality has minor impact.
