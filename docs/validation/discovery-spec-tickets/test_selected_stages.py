@@ -43,15 +43,15 @@ class SelectedStageExamples(unittest.TestCase):
         self.assertIn("Do not paste the full spec", text)
         self.assertNotIn("Default to authorized inspection and a conversation draft", text)
         # Authored configured command; no additional prose-approval turn.
-        issue = self.api.create("Reading list specification", self.body, ["spec"])
+        issue = self.api.create("Reading list specification", self.body, ["spec", "ready-for-agent"])
         actual = self.api.request(str(issue["number"]))
         self.assertEqual(actual["body"], self.body)
-        self.assertEqual(actual["labels"], ["spec"])
+        self.assertEqual(actual["labels"], ["spec", "ready-for-agent"])
         response = "[Spec #1](https://example.invalid/project/issues/1) — Reading list behavior."
         self.assertNotIn(self.body, response)
         self.assertEqual(len(self.api.load()["issues"]), 1)
         self.assertEqual(self.api.load()["parents"], {})
-        self.assertNotIn("ready-for-agent", actual["labels"])
+        self.assertIn("ready-for-agent", actual["labels"])
 
     def test_explicit_draft_local_review_overrides_have_zero_writes(self):
         for package in ("write-spec", "write-tickets"):
@@ -74,7 +74,7 @@ class SelectedStageExamples(unittest.TestCase):
         rows = []
         for title in ("Pin selected books", "Verify pin recovery"):
             body = "P1–P3: " + title + "; preserve reader filtering and input order."
-            child = self.api.create(title, body, ["implementation-step", "area-a"])
+            child = self.api.create(title, body, ["implementation-step", "area-a", "ready-for-agent"])
             self.api.request("1/sub_issues", "POST", {"sub_issue_id": child["id"]})
             read = self.api.request(str(child["number"]))
             self.assertEqual(read["body"], body)
@@ -87,7 +87,7 @@ class SelectedStageExamples(unittest.TestCase):
         self.assertIn("[#2]", response)
         self.assertIn("[#3]", response)
         self.assertNotIn("P1–P3:", response)
-        self.assertTrue(all("ready-for-agent" not in i["labels"] for i in children))
+        self.assertTrue(all("ready-for-agent" in i["labels"] for i in children))
 
     def test_partial_creation_is_reconciled_without_second_create(self):
         self.api.timeout_after_write = True

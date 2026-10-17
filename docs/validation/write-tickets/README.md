@@ -9,6 +9,10 @@ For [#63](https://github.com/SirDarcanos/agentskills/issues/63), under accepted 
 - AC13: discovered maintained tracker library retains native algorithm ownership, exact IDs, pagination, both-direction read-back, additive preservation and partial-write recovery. Spec/work-ticket roles remain distinct from independently authorized readiness; standalone publication never schedules work.
 - AC15: package checks, isolated copies and persisted fake tracker exercise useful failure modes. These are authored executable checks and direct inspection, not an autonomous or independent agent trial.
 
+## Current readiness regression checks
+
+Run `python3 -B -m unittest discover -s docs/validation/write-tickets -p 'test_*.py'`. The reusable tracker tests now include equivalent blocked/unblocked agent and human next actions, blocked parent specs, label timeout/read-back failure with inspection before retry, missing deciding evidence and preserved unrelated labels/parentage/blockers. Authored scheduling checks refuse open prerequisites despite ready labels. The graph helper's no-readiness assertions remain intentional: that helper does not classify issues. Draft/unapproved graph cases retain zero writes. These are authored caller decisions with actual JSON persistence, not an agent executor, live API proof or a new readiness service. Historical results below remain unchanged.
+
 ## Reproduction and limitations
 
 Run the commands in [package validation](../../../workflow/write-tickets/references/validation.md). `tracker_fixture.py` writes only a disposable JSON store, supports native parent/blocker endpoints and page-size-one observations, and keeps issue numbers distinct from database IDs. `test_tracker.py` exercises the real Setup Project blocker reconciler through that fixture. Parent writes/conflicts, ticket creation and labels are fixture mechanics with authored caller decisions; this is neither an additional production graph algorithm nor proof of live API behavior or authorization enforcement.

@@ -48,6 +48,13 @@ class FakeTracker:
         issue = issues[number]
         relation = "/".join(parts[1:])
         parents, blockers = state["parents"], state["blockers"]
+        if method == "PATCH" and not relation:
+            # Fixture CRUD only: the authored caller supplies the approved delta.
+            issue["labels"] = payload["labels"]
+            self.save(state)
+            if self.timeout_after_write:
+                raise RuntimeError("timeout after persisted labels")
+            return issue
         if method == "POST":
             field = "sub_issue_id" if relation == "sub_issues" else "issue_id"
             target = next((i["number"] for i in issues.values()

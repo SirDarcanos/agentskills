@@ -2,6 +2,10 @@
 
 Scope: standalone [Write Spec](../../../workflow/write-spec/SKILL.md), its publication/reference gates and Work On's thin product-agreement adapter. Accepted #50 design integrated through PR #75 at `a95a9588`; source baseline `c1465e7` includes #61. Native #62 blocked-by inspection returned only closed #50, and the accepted design status plus merged artifact established eligibility, not closure alone. No graph/issue-label changes were made.
 
+## Current readiness regression checks
+
+Run `python3 -B -m unittest discover -s docs/validation/write-spec -p 'test_*.py'`. [Readiness examples](test_readiness.py) exercise authored agent-ready/human-ready spec creation and failed label read-back using the local CRUD fixture, plus static guards for required classification and independent scheduling gates. [Ticket tracker tests](../write-tickets/test_tracker.py) cover blocked parent specs, preserved graph state and equivalent blocked/unblocked next actors. The existing checker retains the genuinely design-unready publication case. These are executable authored examples, not autonomous agent-adherence or live API evidence. The historical results below describe their original revision.
+
 ## Executed evidence
 
 Environment: Pi implementation session on macOS, Python 3.14.7, Git 2.54.0, Node 24.21.0. No delegated/model calls. Working tree began clean; created `feat/standalone-write-spec` from current `origin/main`, targeting `main`.
