@@ -2,6 +2,8 @@
 
 Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it. For the short introduction, see the [project README](../README.md); for stage selection, session boundaries and shortcuts, follow the [workflow guide](workflow-guide.md).
 
+For installation, updates and migration, use the [installation guide and support matrix](installation.md). Native plugins bundle all groups; standalone/npx installations can select skills and retain editable copies. Native commands can be namespaced; translate standalone examples using that guide.
+
 ## Workflow
 
 ### Understand and plan
@@ -71,9 +73,9 @@ For comparisons, see the [decision-model benchmark](../benchmarks/decision-model
 
 Skills live in `workflow/`, `writing/`, and `models/`. Each skill directory contains a `SKILL.md` entry point, a human-facing `README.md`, and any supporting references or scripts. When copying manually, copy the complete skill directory, including its license notices; for example, `workflow/shape-work/`, not the whole `workflow/` folder. Adjust instructions, tools, and checks to suit your project.
 
-Separate installed copies need their own updates. A merge in this repository does not refresh them, and an older skill with the same name may not be compatible with newer companions.
+Separate standalone copies need deliberate updates; native plugins use their client's catalog/plugin operations. A source merge alone does not refresh installed content. Follow the [update and migration guidance](installation.md) before replacing edits or mixing companion versions.
 
 - **Single-change delivery:** [`work-on` dependencies and runtime requirements](../workflow/work-on/README.md).
 - **Multi-task delivery:** [`work-on-spec` requirements](../workflow/work-on-spec/README.md).
-- **What has been checked:** [session-workflow coverage and remaining acceptance](validation/session-workflow/README.md), [earlier composable-delivery evidence and limits](validation/composable-acceptance/README.md), and [historical delivery coverage](validation/delivery-coverage/README.md). Historical ownership descriptions are not current installation guidance. The README's installation command has not been exercised as part of this documentation change; recorded Pi/macOS trials do not certify every agent or installation route.
+- **What has been checked:** [session-workflow coverage and remaining acceptance](validation/session-workflow/README.md), [earlier composable-delivery evidence and limits](validation/composable-acceptance/README.md), and [historical delivery coverage](validation/delivery-coverage/README.md). Historical ownership descriptions are not current installation guidance. The [distribution support matrix](installation.md#support-and-evidence) separates documentation, offline checks and pending live installation/update evidence; recorded Pi/macOS workflow trials do not certify installation routes.
 - **Replacing an existing installation:** [approved-target migration runbook](agents/installed-skill-migration.md) and [sandbox migration checks](validation/installed-skill-migration/README.md). The checks do not modify real installations.

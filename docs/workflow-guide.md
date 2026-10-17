@@ -6,7 +6,7 @@ Separate planning, delivery and publication sessions can keep context focused. T
 
 ## 1. Establish the project agreement
 
-Install the skills you need using the [installation instructions](../README.md#get-started). Copy complete packages, including references and license notices. Installation supplies instructions, not tools, permissions or compatible companions. Check the [single-change requirements](../workflow/work-on/README.md#install-and-dependencies) and [whole-spec requirements](../workflow/work-on-spec/README.md) before delivery. Whole-spec work needs a writable coding-agent runtime; an inspect-only reviewer cannot replace it.
+Choose a route using the [installation, update and migration guide](installation.md). Native plugins bundle the full collection once available; standalone/npx copies can be selective and editable. Examples below use standalone names: Claude plugin users use `/agentskills:setup-project`, `/agentskills:work-on` and the same prefix for other skills; Codex's expected `$agentskills:work-on` form remains pending live verification. Use the guide's client-specific picker/namespace instructions. Copy complete packages, including references and license notices. Installation supplies instructions, not tools, permissions or compatible companions. Check the [single-change requirements](../workflow/work-on/README.md#install-and-dependencies) and [whole-spec requirements](../workflow/work-on-spec/README.md) before delivery. Whole-spec work needs a writable coding-agent runtime; an inspect-only reviewer cannot replace it.
 
 For a new project, ask:
 
@@ -105,7 +105,7 @@ Authoritative domain maintenance is different from optional session notes. Confi
 
 The explicitly invoked advisor inspects relevant installed skills and recommends a route. It works before setup and starts no workflow. It is the former `ask-nico` advisor under a new name, not a new execution gateway. Other skills can also offer useful next steps without starting them.
 
-Repository updates do not update installed copies. Check compatibility before replacing skills; installation and migration require their own approval. No workflow shortcut grants destruction, disclosure, spending, installation, merge or release permission.
+Source merges do not refresh installed copies. Follow the [client-specific update steps and support limits](installation.md); check compatibility and preserve local edits before replacing skills. Installation and migration require their own approval. No workflow shortcut grants destruction, disclosure, spending, installation, merge or release permission.
 
 ## Evidence and limits
 

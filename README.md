@@ -8,9 +8,11 @@ You don't need to know how to design a database or write a test. You decide what
 
 ## Get started
 
-You'll need a coding agent that supports skills, plus Node.js and `npx` for installation.
+**1. Choose your installation route:**
 
-**1. Install from your terminal:**
+Native plugins install the complete **Agent Skills** collection (`agentskills`) and are the intended recommended route for Claude Code and Codex CLI once released. **They are not available yet:** the catalogs target unpublished `v2.0.0`, and live install/update verification remains pending. See the [installation guide and support matrix](docs/installation.md) for native commands, Copilot/VS Code plugins, Gemini direct skills, updates and safe migration.
+
+For now, or for selective/editable copies, use a skills-capable agent plus Node.js/`npx` and install from your terminal:
 
 ```bash
 npx skills add SirDarcanos/agentskills
@@ -40,7 +42,7 @@ Answer the questions and agree on what to build. Then ask the agent to deliver i
 
 `work-on` handles the technical steps, relevant checks, independent review, and a plain-language change report. Read what was checked, note any gaps, and try the result yourself.
 
-Slash commands go in your agent, not your terminal; support varies by runtime. Skills may require companions and tools: see the [setup requirements](workflow/setup-project/README.md#install-and-requirements) and [delivery requirements](workflow/work-on/README.md#install-and-dependencies). Installation supplies instructions, not missing tools or permissions.
+Examples here use standalone skill names. With the Claude Code plugin, use `/agentskills:setup-project`, `/agentskills:shape-work` and `/agentskills:work-on` instead. Codex's expected plugin form is `$agentskills:work-on`; released-client confirmation remains pending. Follow the [client-specific invocation guidance](docs/installation.md), not a universal slash-command assumption. Skill requests go in your agent, not your terminal; support varies by runtime. Skills may require companions and tools: see the [setup requirements](workflow/setup-project/README.md#install-and-requirements) and [delivery requirements](workflow/work-on/README.md#install-and-dependencies). Installation supplies instructions, not missing tools or permissions.
 
 ## Pick the work you need
 
@@ -84,7 +86,7 @@ The agent should report missing tools, permissions, checks, or required independ
 
 [All skills and their requirements](docs/skills.md) · [MIT license](LICENSE)
 
-Copy complete skill directories when installing manually, including their references and license notices. Repository updates don't refresh installed copies.
+Copy complete skill directories when installing manually, including their references and license notices. Repository updates don't refresh separate installed copies; native plugins have client-specific update operations. Before changing routes, [preserve local edits and resolve duplicates deliberately](docs/installation.md#migrate-existing-copies-safely).
 
 ---
 

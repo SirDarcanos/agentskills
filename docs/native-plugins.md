@@ -1,6 +1,6 @@
 # Native plugin maintenance
 
-This is the maintainer procedure for the complete `agentskills` / **Agent Skills** plugin. User installation, migration and recovery guidance belongs to the installation documentation delivered under #167. Live Claude Code/Codex acceptance belongs to #168. This foundation alone does not make 2.0.0 ready.
+This is the maintainer procedure for the complete `agentskills` / **Agent Skills** plugin. For user installation, updates, migration and recovery, read the [installation guide and support matrix](installation.md). Live Claude Code/Codex acceptance belongs to #168. This foundation alone does not make 2.0.0 ready.
 
 ## Package boundary
 
