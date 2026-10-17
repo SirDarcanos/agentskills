@@ -1,6 +1,6 @@
 # All skills
 
-Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it. For the short introduction, see the [project README](../README.md).
+Pick a skill for the job in front of you. Each link explains what it does, what it needs, and how to use it. For the short introduction, see the [project README](../README.md); for stage selection, session boundaries and shortcuts, follow the [workflow guide](workflow-guide.md).
 
 ## Workflow
 
@@ -13,7 +13,7 @@ Pick a skill for the job in front of you. Each link explains what it does, what 
 | [`research`](../workflow/research/) | Investigate a question using cited sources and make uncertainty visible. |
 | [`analyze`](../workflow/analyze/) | Find technical risks and existing work you can reuse before committing to a build. |
 | [`write-spec`](../workflow/write-spec/) | Give you and the agent a shared description of what to build and how to judge the result. |
-| [`write-tickets`](../workflow/write-tickets/) | Break agreed work into manageable tasks, with approval before publishing them. |
+| [`write-tickets`](../workflow/write-tickets/) | Create tickets from agreed work and return linked IDs with short descriptions; new consequential scope and relationship effects retain their approval gates. |
 | [`domain-modeling`](../workflow/domain-modeling/) | Give you and the agent shared terms for the project and records of important design decisions. |
 | [`investigate-bug`](../workflow/investigate-bug/) | Find out what is going wrong and why, and prepare the evidence for a fix. Investigation alone stops before repair. |
 
@@ -30,7 +30,7 @@ Pick a skill for the job in front of you. Each link explains what it does, what 
 | [`build-and-check`](../workflow/build-and-check/) | Make small changes and check each one before moving on, including documentation and configuration work. |
 | [`resolve-merge-conflicts`](../workflow/resolve-merge-conflicts/) | Resolve active merge/rebase conflicts within existing integration authority, preserving compatible intent and unrelated work. |
 | [`review-delivery`](../workflow/review-delivery/) | Get independent reviews of whether changes follow project rules and deliver what was agreed. |
-| [`pr`](../workflow/pr/) | Get a plain-language account of what changed, what was checked, and how hard it would be to undo, in a pull request—a proposal to merge the changes. |
+| [`pr`](../workflow/pr/) | Explicitly request a PR report or publication after inspecting delivery; reuse current evidence without restarting delivery. Merge remains separate. |
 | [`handoff`](../workflow/handoff/) | Carry one task into another session with a purpose-specific document, existing artifact references, and clear approval boundaries. |
 
 ### Set up the project
@@ -75,5 +75,5 @@ Separate installed copies need their own updates. A merge in this repository doe
 
 - **Single-change delivery:** [`work-on` dependencies and runtime requirements](../workflow/work-on/README.md).
 - **Multi-task delivery:** [`work-on-spec` requirements](../workflow/work-on-spec/README.md).
-- **What has been checked:** [current composable-delivery evidence and limits](validation/composable-acceptance/README.md) and [historical delivery coverage](validation/delivery-coverage/README.md). Historical ownership descriptions are not current installation guidance. The README's installation command has not been exercised as part of this documentation change; recorded Pi/macOS trials do not certify every agent or installation route.
+- **What has been checked:** [session-workflow coverage and remaining acceptance](validation/session-workflow/README.md), [earlier composable-delivery evidence and limits](validation/composable-acceptance/README.md), and [historical delivery coverage](validation/delivery-coverage/README.md). Historical ownership descriptions are not current installation guidance. The README's installation command has not been exercised as part of this documentation change; recorded Pi/macOS trials do not certify every agent or installation route.
 - **Replacing an existing installation:** [approved-target migration runbook](agents/installed-skill-migration.md) and [sandbox migration checks](validation/installed-skill-migration/README.md). The checks do not modify real installations.
