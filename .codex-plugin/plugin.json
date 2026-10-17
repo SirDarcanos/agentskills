@@ -1,0 +1,49 @@
+{
+  "name": "agentskills",
+  "version": "2.0.0",
+  "description": "Reusable coding-agent workflows, writing guidance, and bounded model skills.",
+  "author": {
+    "name": "Nicola Mustone"
+  },
+  "homepage": "https://github.com/SirDarcanos/agentskills",
+  "repository": "https://github.com/SirDarcanos/agentskills",
+  "license": "MIT",
+  "skills": [
+    "./models/ask-clef",
+    "./models/ask-clef-flash",
+    "./models/ask-jev",
+    "./models/ask-nimble",
+    "./models/build-with-nimble",
+    "./workflow/acceptance-first",
+    "./workflow/analyze",
+    "./workflow/build-and-check",
+    "./workflow/characterize",
+    "./workflow/domain-modeling",
+    "./workflow/github-repo-setup",
+    "./workflow/handoff",
+    "./workflow/implementation-preflight",
+    "./workflow/investigate-bug",
+    "./workflow/pr",
+    "./workflow/prototype",
+    "./workflow/research",
+    "./workflow/resolve-merge-conflicts",
+    "./workflow/review-delivery",
+    "./workflow/setup-project",
+    "./workflow/shape-work",
+    "./workflow/tdd",
+    "./workflow/what-now",
+    "./workflow/work-on",
+    "./workflow/work-on-spec",
+    "./workflow/write-spec",
+    "./workflow/write-tickets",
+    "./writing/create-changelog",
+    "./writing/slop-guard",
+    "./writing/stay-positive",
+    "./writing/update-changelog",
+    "./writing/writing-for-agents"
+  ],
+  "interface": {
+    "displayName": "Agent Skills",
+    "shortDescription": "Reusable coding-agent workflows, writing guidance, and bounded model skills."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "agentskills",
+  "owner": {
+    "name": "Nicola Mustone"
+  },
+  "metadata": {
+    "description": "Agent Skills released collection",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agentskills",
+      "version": "2.0.0",
+      "description": "Reusable coding-agent workflows, writing guidance, and bounded model skills.",
+      "displayName": "Agent Skills",
+      "source": {
+        "source": "github",
+        "repo": "SirDarcanos/agentskills",
+        "ref": "v2.0.0"
+      }
+    }
+  ]
+}
