@@ -10,7 +10,7 @@ You don't need to know how to design a database or write a test. You decide what
 
 **1. Choose your installation route:**
 
-Native plugins install the complete **Agent Skills** collection (`agentskills`) and are the intended recommended route for Claude Code and Codex CLI once released. **They are not available yet:** the catalogs target unpublished `v2.0.0`, and live install/update verification remains pending. See the [installation guide and support matrix](docs/installation.md) for native commands, Copilot/VS Code plugins, Gemini direct skills, updates and safe migration.
+Native plugins install the complete **Agent Skills** collection (`agentskills`) and are the intended recommended route for Claude Code and Codex CLI once released. **They are not available yet:** the catalogs target unpublished `v2.0.0`. Isolated Claude/Codex installation and update simulations passed, but public delivery and interactive reload/selection checks remain pending. See the [installation guide and support matrix](docs/installation.md) for native commands, Copilot/VS Code plugins, Gemini direct skills, updates and safe migration.
 
 For now, or for selective/editable copies, use a skills-capable agent plus Node.js/`npx` and install from your terminal:
 
@@ -42,7 +42,7 @@ Answer the questions and agree on what to build. Then ask the agent to deliver i
 
 `work-on` handles the technical steps, relevant checks, independent review, and a plain-language change report. Read what was checked, note any gaps, and try the result yourself.
 
-Examples here use standalone skill names. With the Claude Code plugin, use `/agentskills:setup-project`, `/agentskills:shape-work` and `/agentskills:work-on` instead. Codex's expected plugin form is `$agentskills:work-on`; released-client confirmation remains pending. Follow the [client-specific invocation guidance](docs/installation.md), not a universal slash-command assumption. Skill requests go in your agent, not your terminal; support varies by runtime. Skills may require companions and tools: see the [setup requirements](workflow/setup-project/README.md#install-and-requirements) and [delivery requirements](workflow/work-on/README.md#install-and-dependencies). Installation supplies instructions, not missing tools or permissions.
+Examples here use standalone skill names. With the Claude Code plugin, use `/agentskills:setup-project`, `/agentskills:shape-work` and `/agentskills:work-on` instead. Codex's native resolver exposes `agentskills:work-on`, used as `$agentskills:work-on`; interactive selection remains untested. Follow the [client-specific invocation guidance](docs/installation.md), not a universal slash-command assumption. Skill requests go in your agent, not your terminal; support varies by runtime. Skills may require companions and tools: see the [setup requirements](workflow/setup-project/README.md#install-and-requirements) and [delivery requirements](workflow/work-on/README.md#install-and-dependencies). Installation supplies instructions, not missing tools or permissions.
 
 ## Pick the work you need
 
