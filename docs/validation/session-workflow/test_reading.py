@@ -37,6 +37,21 @@ class Reading(unittest.TestCase):
             for axis in ("standards", "spec"):
                 self.assertEqual(scenarios["bounded_delivery_with_PR"][axis], reading.REVIEW)
 
+    def test_current_baseline_uses_equivalent_complete_routes(self):
+        result = reading.measure("b608804", baseline_layout="current")
+        self.assertEqual(result["baseline_layout"], "current")
+        for scenario, before in result["observations"]["baseline"].items():
+            after = result["observations"]["candidate"][scenario]
+            self.assertEqual(set(before["contexts"]), set(after["contexts"]))
+            for context, row in before["contexts"].items():
+                self.assertEqual(set(row["instruction_paths"]),
+                                 set(after["contexts"][context]["instruction_paths"]))
+        diagnosis = result["observations"]["baseline"]["investigation_diagnosis_only"]
+        self.assertEqual(set(diagnosis["contexts"]["investigator"]["instruction_paths"]),
+                         {reading.entry("investigate-bug")})
+        with self.assertRaises(ValueError):
+            reading.measure("b608804", baseline_layout="unknown")
+
     def test_full_files_per_context_and_actual_project_cost(self):
         result = reading.measure("45e5a24")
         for revision in result["observations"].values():

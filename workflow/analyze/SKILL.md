@@ -11,7 +11,7 @@ Recommend the smallest adequate design, method and check strategy from inspected
 
 Check applicable project instructions and agreement once per context, reusing guidance already read. Follow relevant context/authority and directory/runtime pointers; compare decision/effect authority, safety, verification, documentation and continuation responsibilities with this task. Equivalent existing layouts need no Setup provenance or template. Identify absent, conflicting or unverifiable guidance and recommend explicit setup/reconciliation without starting it or rewriting policy. Missing common guidance blocks dependent project analysis; missing tracker/model/domain detail blocks only that capability. Continue authorized inspection and conversation returns where supported.
 
-Discover companions through runtime/project catalogs or approved locations, not assumed siblings. Read complete entries and required references; recover truncated reads before dependent work and resolve links from their containing source. For a conditional library, inspect the documented pointer and read the complete relevant library without invoking its unrelated procedure. Record source/revision or digest and semantic compatibility; ambiguity blocks that route. Recheck changed sources/task/authority. Missing helpers grant no installation or legacy fallback.
+Discover companions through runtime/project catalogs or approved locations, not assumed siblings. Record source/revision or digest and compatibility after reading complete entries/required references; recover truncated reads and resolve relative links. For a conditional library, inspect the documented pointer and read it completely without invoking unrelated procedures. Recheck changed sources/task/authority. Missing or ambiguous helpers block their route, without installation or legacy fallback.
 
 - Use `research` only for unresolved source/API/version questions; require cited applicable findings, uncertainty and freshness.
 - For actual meaning/model changes or potentially qualifying enduring decisions, read [domain handoff](references/domain.md). Reading unchanged definitions needs no invocation. Domain writes require authorized deltas; ADRs need explicit agreement and permission.
@@ -78,11 +78,11 @@ Separate recommended capability from available compatible package. Inspect entri
 
 ## 5. Inspect the return, then stop
 
-Recheck the brief and specialist artifacts against current deciding sources; invalidate only dependent claims. Return the brief plus method recommendation/availability, domain/documentation disposition and remaining uncertainty/blockers with owner/next action. The lead retains method selection.
+Recheck the step 3 brief and specialist artifacts against current deciding sources; invalidate dependent claims. Return that brief with step 4's recommendation/availability and remaining blockers, owners and next actions. The lead retains method selection.
 
 Report **complete** for a supported conclusion with material readiness questions resolved; **partial** when coverage/bounds limit useful findings; **blocked** when a deciding fact, consequential commitment, required domain capability or authority is unresolved. Distinguish actionable design from execution authority, native eligibility, Git preflight and independent delivery acceptance: analysis establishes none of those gates.
 
-Keep findings in conversation or the selected artifact home; ordinary inactive findings need no ledger, durable handoff or future-session storage. Retain live delegation/correction state when applicable. Standalone use stops without implementation, tickets, PRs or delivery invocation. A bounded caller inspects support and resumes its already-authorized responsibility; unchanged inputs need no repeated prompt or reassessment. Recommend a next stage without starting it or granting new commitments/effects.
+Keep findings in conversation or the selected artifact home; ordinary inactive findings need no ledger or durable handoff. Retain live delegation/correction state. Stop before implementation, tickets, PRs or delivery invocation. A bounded caller may resume already-authorized work using current support without repeated prompts or reassessment. Recommend unrequested stages without starting them or granting effects.
 
 ## Validation
 

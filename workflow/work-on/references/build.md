@@ -4,11 +4,11 @@ Read completely before implementing one bounded change. Target guidance owns com
 
 ## 1. Establish readiness and ownership
 
-Inspect the approved brief/acceptance, exclusions, technical decisions, risks and check strategy against actual affected source and dirty work. Reuse current evidence. Missing technical decisions use [technical readiness](technical-readiness.md); unresolved commitments use [product agreement](product-agreement.md). For prototype-first work the agreement is the bounded experimental question, not a fictitious production-readiness pass.
+Reuse the entry's current scope/readiness evidence after comparing it with affected source and dirty work. Fill missing technical decisions through [technical readiness](technical-readiness.md), unresolved commitments through [product agreement](product-agreement.md). Prototype readiness concerns the bounded experiment, not production.
 
 Confirm one owner and protected files/interfaces. Consume entry's native dependency and accepted-integration evidence for tickets; stale/unknown observations block dependent work until refreshed through the maintained tracker procedure. Direct requests need no hierarchy.
 
-Before Git implementation writes, discover/read compatible `implementation-preflight`, perform its maintained procedure or inspect a current same-scope/state return. Record source, actual branch/base/HEAD, PR target/state and protected-work disposition. Missing capability blocks Git preparation, not inspection. Outside Git retain a before/after manifest. This procedure does not launch workers or integrate delegated results; those routes require [coordination](coordination.md).
+Before Git writes, discover/read compatible `implementation-preflight` and perform it or inspect a current same-scope/state return. Retain its source, branch/base/HEAD, PR target/state and protected-work disposition. Missing capability blocks Git preparation, not inspection. Outside Git retain a before/after manifest. Worker launch/integration instead requires [coordination](coordination.md).
 
 **Complete when:** actionable agreement/design/checks, exclusive ownership, sufficient authority, dependencies and safe preflight support the selected work.
 
@@ -16,7 +16,7 @@ Before Git implementation writes, discover/read compatible `implementation-prefl
 
 Inspect assertions and affected paths, not names/counts. Map acceptance and meaningful failure risks to existing coverage or a needed focused check, command/environment, expected result and baseline status. Cover relevant denial/disclosure, persistence/recovery, destructive-effect and domain boundaries safely. Reuse adequate coverage; no universal suite or new-test quota. Material unavailable checks remain explicit blockers, not permission to install.
 
-The lead chooses the smallest useful method respecting binding target policy, without asking the maintainer to choose routine seams. Discover/read the actual compatible entry and conditional references; record source/revision or digest:
+The lead chooses the smallest useful method under binding target policy, without a maintainer seam questionnaire. Discover/read its compatible entry and conditional references; record source/revision or digest:
 
 | Method | Use and inspect on return |
 | --- | --- |
@@ -32,16 +32,16 @@ Missing selected capability blocks that route; a genuinely equivalent alternativ
 
 ## 3. Execute and inspect the method return
 
-Supply current scope, acceptance, authority, preflight, protected work, check mapping and existing evidence. Ordinary inline work needs no new envelope file or ledger. Only delegated work adds worker/scope/bounds under coordination; recorded acceptance correction retains [completion](completion.md#2-perform-bounded-repairs-and-inspect-results)'s checkpoint history.
+Execute the method with steps 1–2's scope, acceptance, authority, preflight, protected work and check evidence; no inline envelope file or ledger. Delegation adds coordination's worker/scope/bounds. Recorded acceptance correction retains [completion](completion.md#2-perform-bounded-repairs-and-inspect-results)'s checkpoint history and spent allowance; ordinary development does not create a repair episode.
 
-Execute the selected method, then inspect actual artifacts/diff, raw commands/results, exact checked inputs, baseline-versus-regression claims, partial work and documentation disposition. Do not duplicate its loop here. Failed or materially unrun checks stop dependent progress. Ordinary development is not a fresh acceptance-repair episode; correction of recorded findings spends its retained allowance.
+Inspect its actual artifacts/diff, raw commands/results, exact checked inputs, baseline-versus-regression claims, partial work and documentation disposition. The method owns its loop. Failed or materially unrun checks stop dependent progress.
 
-Characterize returns protection and Prototype returns learning. Inspect those returns, retain artifacts and select the next authorized production method without invoking Analyze again when readiness is current. Each method stops at its handoff; the lead owns sequential composition. Only changed deciding facts need reassessment. Changed commitments/scope/meaningful risk or authority return to their proper owner; preserve partial work.
+Characterize returns protection; Prototype returns learning, not production acceptance. Retain their artifacts and select any next authorized production method as lead. Reuse current readiness without invoking Analyze again. Reassess changed deciding facts only; changed commitments/scope/meaningful risk or authority return to their owner with partial work preserved.
 
 **Complete when:** actual method results are inspected, protected work is preserved and any next method has current readiness rather than assumed acceptance.
 
 ## 4. Return local correctness evidence
 
-Return changed behavior/artifacts and state, acceptance/risk check results with raw evidence and limitations, implemented/partial/deferred/blocked scope, documentation/changelog/impact disposition and next gate. Identify absent independent review and integrated checks explicitly. Preserve any active ownership, uncertain operations and spent checkpoint/model allowances; inactive same-session evidence can remain in conversation under target guidance.
+Return the inspected step 3 evidence, changed behavior/state, acceptance/risk coverage and limitations, implemented/partial/deferred/blocked scope, documentation/changelog/impact disposition and next gate. Name missing integrated checks/independent review. Same-session evidence may remain in conversation; retain active ownership, uncertain operations and spent checkpoint/model allowances.
 
 The lead takes this return to [verification](verification.md) and independent review. Local passes are not final acceptance, ticket closure, merge or PR authority.
