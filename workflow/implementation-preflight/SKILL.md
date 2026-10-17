@@ -1,11 +1,11 @@
 ---
 name: implementation-preflight
-description: Prepare the correct Git branch and pull-request target before implementation begins. Use when an agent is about to implement a change in a Git repository, including work started through /implement, and it must decide whether to continue the current branch or create a short-lived branch.
+description: Prepare the correct Git branch and pull-request target before authorized implementation modifies a Git repository. Use for direct implementation requests or bounded handoffs from any workflow or skill when deciding whether to continue the current branch or create a short-lived branch.
 ---
 
 # Implementation preflight
 
-Complete this Git and pull-request preflight before modifying files. This skill complements the active implementation workflow; it does not replace, invoke, or restate `/implement` or another implementation skill.
+Complete this Git and pull-request preflight before authorized implementation modifies files, whether the task comes directly from the user or through a bounded workflow or skill handoff. No particular command or implementation skill is required. Preflight owns Git preparation only; it does not authorize implementation or invoke another workflow.
 
 ## Project guidance
 
@@ -69,6 +69,6 @@ When continuing a branch, preserve its name, history, upstream, and working tree
 
 Return created/continued branch, base, PR target/existing PR and unavailable remote/CLI limits. This step is complete when `HEAD` is on the suitable non-base working branch.
 
-### 4. Yield to implementation
+### 4. Return to the caller
 
-Yield the current result to implementation, which owns checks, review, documentation and commits. Offer PR preparation only; execute that stage only when selected. Preflight starts no implementation or publication stage itself.
+Return the branch, base, intended PR target, existing PR state and any blockers or unavailable information to the caller, whether that is the agent handling a direct request or a calling workflow or skill. The caller retains implementation, checks, review, documentation and commits. Offer PR preparation only; execute that stage only when selected. Preflight starts no implementation or publication stage itself.
