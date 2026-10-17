@@ -15,6 +15,8 @@ This is a single-maintainer project. See the [repository workflow](docs/agents/w
 
 Keep each pull request limited to one skill or one related change. Explain the behavior you tested and any agent, model, or tool assumptions.
 
+When adding/removing skills or preparing a collection release, follow [native plugin maintenance](docs/native-plugins.md) to regenerate inventory, check packaged resources and synchronize release metadata without advancing the published channel prematurely.
+
 ## Before opening a pull request
 
 - Read the rendered Markdown for formatting errors.
