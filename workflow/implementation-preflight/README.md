@@ -1,16 +1,12 @@
 # Implementation Preflight
 
-A companion skill that selects or creates the correct Git branch before an implementation workflow modifies files.
+A reusable Git preflight that selects or creates the correct branch before authorized implementation modifies files.
 
 ## When to use it
 
-The skill is model-invoked when implementation is about to begin in a Git repository, including work started with:
+Use the skill when authorized implementation is about to modify a Git repository, regardless of the command, skill or workflow used. It supports direct implementation requests and bounded handoffs from delivery workflows or implementation methods.
 
-```text
-/implement
-```
-
-It does not replace or invoke `/implement`. You continue using the upstream implementation skill normally, so its updates remain independent. Implementation Preflight contributes only the Git branch and pull-request policy to the same task.
+The skill is model-invoked; no particular implementation command or companion skill is required. It contributes only Git branch and pull-request preparation. Loading it does not authorize implementation or invoke another workflow.
 
 ## Branch strategy
 
@@ -32,9 +28,9 @@ Before implementation, the skill:
 2. selects the existing branch, integration branch, or default branch as the correct route;
 3. creates a typed short-lived branch when needed;
 4. reports the working branch, base, and intended pull-request target;
-5. yields to the active implementation workflow.
+5. returns that result, existing pull-request state and any blockers or unavailable information to its caller.
 
-After implementation, it only reports the resulting branch and offers to open or update the pull request. Validation, documentation, changelog updates, review, and commits remain owned by their existing workflows.
+The caller may be the agent handling a direct request or a workflow or skill. Implementation, validation, documentation, changelog updates, review and commits remain with that caller. Preflight starts no implementation or publication stage; pull-request preparation is offered, not performed unless selected.
 
 ## Project prerequisite
 
@@ -48,7 +44,7 @@ Direct and bounded use consume established project guidance or a meaningful equi
 
 ## Validate package changes
 
-Check frontmatter, rendered structure, isolated-package links and `git diff --check`. In disposable repositories, inspect direct and bounded entry with equivalent project guidance, missing/conflicting authority, explicit no-integration policy despite an incidental `develop`, continuation of related work and a finished-PR/new-branch route. Compare protected staged/unstaged/untracked bytes, modes, symlink targets and index entries before/after preparation; uncertain ownership must block conflicting operations. Record actual commands/results separately from these authored cases. Read-only inspection without guidance does not authorize branch preparation. These checks need no tracker writes, installation or model calls.
+Check frontmatter, rendered structure, isolated-package links and `git diff --check`. Walk direct implementation, a delivery-workflow handoff and an implementation-method handoff against the description and procedure: each should reach the same Git preparation and caller return without requiring a named command. Planning-only and investigation-only requests should not trigger branch preparation; missing implementation authority permits inspection only. Label these routing walkthroughs separately from executed agent trials. In disposable repositories, inspect direct and bounded entry with equivalent project guidance, missing/conflicting authority, explicit no-integration policy despite an incidental `develop`, continuation of related work and a finished-PR/new-branch route. Compare protected staged/unstaged/untracked bytes, modes, symlink targets and index entries before/after preparation; uncertain ownership must block conflicting operations. Record actual commands/results separately from these authored cases. Read-only inspection without guidance does not authorize branch preparation. These checks need no tracker writes, installation or model calls.
 
 ## Files
 

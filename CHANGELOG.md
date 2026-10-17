@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Make `implementation-preflight` routing and caller handoff independent of the implementation command, skill or workflow used. ([#160](https://github.com/SirDarcanos/agentskills/issues/160))
 - Group skill packages under `workflow/`, `writing/`, and `models/`; manual copy/link paths now include the group, while skill names and CLI selection stay unchanged.
 - Allow policy-authorized hosted `ask-jev` assessments alongside explicit requests, with shared disclosure, call and spending limits. ([#53](https://github.com/SirDarcanos/agentskills/issues/53))
 - Allow policy-authorized `ask-nimble` assessments alongside explicit requests, with shared budgets and scoped lifecycle/fallback authority. ([#52](https://github.com/SirDarcanos/agentskills/issues/52))
