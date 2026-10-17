@@ -13,7 +13,7 @@ On every entry, read [handoff](references/handoff.md) completely for standalone 
 
 ## 1. Establish agreement and authority
 
-Identify the target, approved change/exclusions, spec or lightweight brief and acceptance IDs. Read target instructions and their relevant project, workflow, domain/ADR, documentation and release-policy pointers. Inspect primary agreement and check evidence; the author's summary is context, not proof. Record source revisions or body digests and missing material inputs.
+Apply [handoff](references/handoff.md)'s input checks to the target agreement, approved scope/exclusions, acceptance IDs or brief and raw evidence. Read relevant target policy/domain/release pointers. Record source revisions/digests and material gaps; the author's summary is not proof.
 
 Confirm permission for distinct read-only reviewer contexts using the originating request, target restrictions and the conditional coordination library's required-review authority. An authorized delivery handoff carries that bounded review permission; do not ask again solely because reviewers use separate contexts or no repository-local standing permission exists. A standalone caller still establishes its own review permission, and explicit user/project/runtime restrictions prevail. Check authorized disclosure and runtime capability: separately inspectable results, finite timeout/turn bounds and lifecycle control. Reviewers must be separate from the change's authors and each other's conclusions. Use two contexts, one Standards and one Spec; sequence them if capacity permits only one. The authorized root reserves and launches reviewers under the conditional coordination library's shared limits; ticket workers request these assignments from the root. No nested delegation or automatic optional assessments.
 
@@ -23,23 +23,21 @@ If independence, permission, lifecycle control or material agreement is unavaila
 
 ## 2. Pin the actual delivered state
 
-Read [scope](references/scope.md) completely. Resolve the comparison base, delivered revision and file inventory, including committed, staged, unstaged and relevant untracked work. Protect unrelated work; examine uncertainty before excluding a potentially material path. Empty committed diffs do not imply empty delivered scope.
-
-Freeze writes/integration into reviewed files and supporting inputs, or use an authorized immutable snapshot. Supply each reviewer the same pinned state, actual diffs/files, agreement, standards and raw checks. Hashes identify evidence; they do not replace inspecting it. Review assignments are read-only, with explicit exclusions and result locations under target retention policy.
+Read and apply [scope](references/scope.md) completely: discover the full committed/dirty delivered state and supporting inputs, protect exclusions, resolve uncertainty, then pin/freeze the scope or provide an authorized immutable snapshot. Supply identical actual source/diffs, agreement, standards and raw checks to both read-only assignments under its access/freshness contract and target retention policy.
 
 **Complete when:** both reviewers can inspect the full authorized state and material inputs, protected work is excluded, and the initial freshness comparison matches.
 
 ## 3. Inspect independently on both axes
 
-Read [report](references/report.md) for axis responsibilities and required findings. Each reviewer inspects applicable instructions, the full delivered changes and relevant unchanged callers/tests/docs. Independently challenge correctness, acceptance coverage, integration/regressions, state/behavior ownership, interface depth, duplicated rules, speculative abstractions, unnecessary complexity and documentation impact. Trace findings to primary evidence; distinguish executed checks, static inspection and unrun checks. Run only safe authorized checks; read-only review does not grant arbitrary project-script execution permission.
+Read [report](references/report.md) and apply its neutral-packet, axis, finding and evidence requirements to the full scope and relevant unchanged callers/tests/docs. Run only safe authorized checks; read-only review grants no arbitrary project-script execution.
 
-Keep axis reports separate until both return. Partial, failed or timed-out reviews remain incomplete. Preserve results and confirm a failed worker stopped or is isolated before replacement. Do not average verdicts, ask for votes or infer coverage from reviewer agreement.
+Keep original axis reports separate until both return. Partial, failed or timed-out reviews remain incomplete; preserve results and confirm failed workers stopped or are isolated before replacement. Do not average verdicts, ask for votes or infer coverage from agreement.
 
 **Complete when:** each axis reports inspected files/criteria, evidence and limitations, actionable findings or an evidence-bounded no-findings result, without relying on the other axis's conclusions.
 
 ## 4. Recheck freshness and return
 
-Repeat scope discovery and fingerprints as [scope](references/scope.md) requires, including supporting inputs and newly relevant paths. A mismatch marks affected review evidence **stale**, even when checks passed. Block acceptance until scope is repinned and affected review renewed; retain the old reports as history, not evidence for new work. If impact cannot be isolated, mark both axes stale.
+Repeat discovery/fingerprints under [scope](references/scope.md)'s drift procedure. Mark affected evidence **stale** on mismatch, both axes if impact is unclear. Block acceptance until repinning and affected renewal; preserve original reports as old-state history.
 
 Return [the report](references/report.md#return-format), separate Standards/Spec findings and unresolved blockers to the caller. The caller owns disposition, repairs and acceptance under target policy. Material unresolved findings block delivery acceptance; a judgment call requests its proper decision-maker rather than becoming an invented rule. Significant repairs need renewed review and affected checks; this package does not run that repair loop.
 

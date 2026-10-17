@@ -51,6 +51,27 @@ Compare `investigation_selected_ticket` and `bounded_delivery_with_PR` for equiv
 
 Shorter text does not prove correctness, runtime efficiency or reduced human intervention. Report increases as increases; the spec sets no arbitrary reduction quota. If an equivalent complete path does not reduce aggregate reading, record a WF-11 gap rather than using only the fixed-project or changed-endpoint column to declare success. Further package optimization needs its own approved scope; #143's documentation/acceptance scope does not authorize silently changing specialist behavior. Do not use the earlier design-sketch counts as achieved source counts.
 
+## Comparing later instruction simplifications
+
+For two post-session-workflow revisions, use identical current route manifests on both sides instead of charging the historical compulsory ticket/PR endpoints to a modern baseline:
+
+```sh
+python3 -B docs/validation/session-delivery/measure_reading.py --base b608804 --baseline-layout current
+```
+
+`b608804` is the integrated source before #163. The default `historical` layout and `45e5a24` comparison remain available unchanged in meaning. Inspect the baseline's actual instructions before selecting either layout; this flag does not discover required reads. The counter emits complete per-file/per-context manifests, fixed and actual project costs, unchanged paths and increases. Retain that output in conversation or the user-selected evidence destination, not as a routine committed run report. Neither mode measures tokens, elapsed time, reliability or human interventions.
+
+The #163 simplifications preserve ownership and required reads; their reusable regression rationale is:
+
+| Simplified instruction | Coverage retained at the existing owner |
+| --- | --- |
+| Analyze companion-discovery narration and repeated return fields | Prerequisite discovery gates remain inline; steps 3–4 own brief fields and method availability; step 5 returns those results and retains stage/active-state boundaries |
+| Investigation cleanup narration and repeated diagnosis/continuation fields | Step 4 still owns probe identity/cleanup and diagnosis fields; step 5 returns them with failed checks and preserves explicit fix authority, freshness and compatible-delivery gates |
+| Direct-build repeated readiness, handoff fields and method narration | Entry evidence is compared with actual source; build steps 1–2 retain preflight, ownership, native dependencies and check/method choice; step 3 retains actual-return inspection and correction lineage |
+| Review entry's duplicate snapshot, axis and drift details | Mandatory complete `handoff`, `scope` and `report` reads remain; those existing owners retain dirty-layer capture, neutral packets, findings and freshness mechanics; entry keeps two independent axes, authority and failure boundaries |
+
+No new shared contract, companion dependency, stage, policy value or installed-copy change is introduced. Package-local guards, isolated links/notices, snapshot fixtures and the reading arithmetic suite cover static and synthetic regressions. They do not execute an autonomous planning, diagnosis, delivery or PR route. Ordinary independent delivery review is also not such an exercise. Any representative runtime exercise still needs a bounded target, effects and execution permission as described below; unavailable authority/capability must remain a reported gap, not a claimed runtime improvement.
+
 ## Bounded behavioral follow-up
 
 Aggregate acceptance remains blocked while material agent routes above are unrun. Required next evidence is an explicitly authorized disposable-runtime exercise covering the listed transitions, using pinned current packages and a compatible project agreement. Bound attempts/time and exact writable fixture scope before launch; retain raw actions, current/dirty identities, observed user interventions, checks, independent reports and before/after protected-state/effect inventories. Include negative cases, not just happy paths. Do not mutate a live tracker, call optional models or replace installations to obtain this evidence without separate exact authority.

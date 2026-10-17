@@ -57,7 +57,9 @@ def manifests(historical):
     }
 
 
-def measure(base):
+def measure(base, baseline_layout="historical"):
+    if baseline_layout not in ("historical", "current"):
+        raise ValueError("baseline_layout must be historical or current")
     def content(path, historical):
         return (subprocess.check_output(["git", "show", f"{base}:{path}"], cwd=ROOT, text=True)
                 if historical else (ROOT / path).read_text())
@@ -72,7 +74,7 @@ def measure(base):
     for historical, name in ((True, "baseline"), (False, "candidate")):
         actual_project = surface(PROJECT, historical)
         scenarios = {}
-        for scenario, contexts in manifests(historical).items():
+        for scenario, contexts in manifests(historical and baseline_layout == "historical").items():
             measured = {}
             for context, paths in contexts.items():
                 package = surface(paths, historical)
@@ -99,17 +101,22 @@ def measure(base):
                 "baseline": before, "candidate": after,
                 "reduction_words": before - after,
                 "reduction_percent": round(100 * (before - after) / before, 2)}
-    return {"base": base, "unit": "whitespace words; full files once per context",
+    return {"base": base, "baseline_layout": baseline_layout,
+            "unit": "whitespace words; full files once per context",
             "comparisons_with_fixed_project": comparisons["fixed"],
             "comparisons_with_actual_project": comparisons["actual"], "observations": observations,
             "limits": [
                 "Static instruction arithmetic, not runtime tokens, latency or intervention counts.",
                 "Planning includes inline Analyze and inspected Build and Check; no source/domain gap.",
                 "Investigation selected-ticket compares the same complete published-artifact endpoint.",
-                "Diagnosis-only baseline includes its compulsory ticket route; endpoints differ.",
-                "Before-PR delivery baseline is an intermediate boundary, not its old completion endpoint.",
+                ("Historical diagnosis-only baseline includes compulsory tickets; endpoints differ."
+                 if baseline_layout == "historical" else
+                 "Current-layout diagnosis-only compares equivalent conversation outcomes."),
+                ("Historical before-PR baseline is an intermediate boundary, not old completion."
+                 if baseline_layout == "historical" else
+                 "Current-layout before-PR compares equivalent delivery outcomes."),
                 "With-PR compares equivalent completion; fresh PR context is reported separately.",
-                "Delivery includes root coordination and two separate neutral reviewer contexts.",
+                "Delivery is a direct non-ticket change: root coordination and two separate reviewer contexts.",
                 "No recovery, recorded repair, domain, optional model or whole-spec branch is selected.",
                 "Task evidence, automatic harness prompts, README/LICENSE and maintenance files excluded.",
             ]}
@@ -118,10 +125,13 @@ def measure(base):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base", required=True)
+    parser.add_argument("--baseline-layout", choices=("historical", "current"),
+                        default="historical",
+                        help="current compares post-session-workflow revisions with identical routes")
     args = parser.parse_args()
     base = subprocess.check_output(["git", "rev-parse", "--verify", args.base + "^{commit}"],
                                    cwd=ROOT, text=True).strip()
-    print(json.dumps(measure(base), indent=2))
+    print(json.dumps(measure(base, args.baseline_layout), indent=2))
 
 
 if __name__ == "__main__":
