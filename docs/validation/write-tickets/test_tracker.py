@@ -126,6 +126,77 @@ class PersistedTicketTests(unittest.TestCase):
         self.assertEqual(len(matches), 2)  # Ambiguous: caller stops without another write.
         self.assertEqual(self.path.read_bytes(), before)
 
+    def test_readiness_survives_blockage_but_does_not_enable_scheduling(self):
+        # Authored classifications, not an executable readiness policy engine.
+        for actor in ("agent", "human"):
+            for blocked in (False, True):
+                with self.subTest(actor=actor, blocked=blocked):
+                    issue = self.api.create("Actionable next work", "AC1: defined next action",
+                                            ["implementation-step", "area-a"])
+                    number = issue["number"]
+                    self.parent(1, number)
+                    if blocked:
+                        self.api.request(f"{number}/dependencies/blocked_by", "POST",
+                                         {"issue_id": 9002})
+                    graph_before = self.api.load()
+                    expected = issue["labels"] + [f"ready-for-{actor}"]
+                    self.api.request(str(number), "PATCH", {"labels": expected})
+                    api = FakeTracker(self.path)
+                    actual = api.request(str(number))
+                    self.assertEqual(actual["labels"], expected)
+                    self.assertEqual(api.load()["parents"], graph_before["parents"])
+                    self.assertEqual(api.load()["blockers"], graph_before["blockers"])
+                    blockers = api.request(f"{number}/dependencies/blocked_by", paginated=True)
+                    # Authored scheduling gate: ready alone cannot clear open prerequisites.
+                    eligible = actor == "agent" and not blockers
+                    self.assertEqual(eligible, actor == "agent" and not blocked)
+
+    def test_blocked_specs_keep_next_actor_readiness_and_existing_edges(self):
+        for actor in ("agent", "human"):
+            issue = self.api.create("Parent agreement", "Actionable coordination or human decision",
+                                    ["spec", "area-a", f"ready-for-{actor}"])
+            number = issue["number"]
+            self.api.request(f"{number}/dependencies/blocked_by", "POST", {"issue_id": 9002})
+            api = FakeTracker(self.path)
+            self.assertEqual(api.request(str(number))["labels"],
+                             ["spec", "area-a", f"ready-for-{actor}"])
+            self.assertEqual(api.request(f"{number}/dependencies/blocked_by", paginated=True)[0]["id"], 9002)
+            # A ready parent is a coordination entry, not another implementation unit.
+            self.assertNotIn("implementation-step", api.request(str(number))["labels"])
+            self.assertEqual(api.request(f"{number}/sub_issues", paginated=True), [])
+
+    def test_label_readback_failure_preserves_unknown_write_for_inspection(self):
+        before = self.api.load()
+        expected = before["issues"][2]["labels"] + ["ready-for-agent"]
+        self.api.timeout_after_write = True
+        with self.assertRaisesRegex(RuntimeError, "timeout"):
+            self.api.request("3", "PATCH", {"labels": expected})
+        self.api.fail = "3"
+        with self.assertRaisesRegex(RuntimeError, "unavailable"):
+            self.api.request("3")
+        # No verified assignment claimed; reopen and inspect before retrying.
+        api = FakeTracker(self.path)
+        self.assertEqual(api.request("3")["labels"], expected)
+        self.assertEqual(api.load()["parents"], before["parents"])
+        self.assertEqual(api.load()["blockers"], before["blockers"])
+        self.assertEqual(api.calls, [("3", "GET", None, False)])
+
+    def test_missing_deciding_evidence_does_not_fabricate_fix_readiness(self):
+        issue = self.api.create("Unconfirmed symptom", "Cause unknown; diagnostic scope undecided",
+                                ["bug", "needs-info"])
+        actual = FakeTracker(self.path).request(str(issue["number"]))
+        self.assertEqual(actual["labels"], ["bug", "needs-info"])
+        self.assertNotIn("ready-for-agent", actual["labels"])
+
+    def test_missing_label_authority_retains_proposal_without_mutation(self):
+        before = self.path.read_bytes()
+        actual = self.api.request("3")
+        proposed = actual["labels"] + ["ready-for-agent"]
+        self.assertNotEqual(proposed, actual["labels"])
+        # This authored caller has inspection authority only, so it returns the delta.
+        self.assertEqual(self.api.calls, [("3", "GET", None, False)])
+        self.assertEqual(self.path.read_bytes(), before)
+
     def test_plan_only_has_no_writes_or_ready_assignments(self):
         before = self.path.read_bytes()
         self.assertEqual(dependencies.reconcile(self.plan, self.api)["status"], "planned")

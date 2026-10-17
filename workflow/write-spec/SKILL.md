@@ -56,7 +56,7 @@ Reconcile authorized changes in the existing authoritative home and inspect the 
 
 ## 4. Execute the selected artifact stage, then return
 
-For explicit draft/local/review-only work, skip tracker writes. Otherwise execute [publication](references/publication.md) and inspect actual persisted identity/content/roles/readiness. Assess readiness separately even when the spec remains local; absent material technical/shared-design evidence stays unknown or blocked, not inferred from product approval.
+For explicit draft/local/review-only work, skip tracker writes. Otherwise execute [publication](references/publication.md) and inspect actual persisted identity/content/roles/readiness. Assess the next responsible actor separately even when the spec remains local. During authorized publication, apply and read back the justified mapped agent-ready or human-ready label alongside the spec role through that procedure, regardless of native blockage. Absent material technical/shared-design evidence stays explicit, not inferred from product approval; an actionable human decision is distinct from implementation readiness.
 
 After verified publication, lead with the spec link and a concise summary, not its full body. For unpublished/partial work, identify actual artifacts and specific failed or unknown effects without inventing a link. Keep supporting evidence available in context or the user-selected destination; no automatic durable report is required.
 
