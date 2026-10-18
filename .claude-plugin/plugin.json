@@ -13,6 +13,7 @@
     "./models/ask-clef-flash",
     "./models/ask-jev",
     "./models/ask-nimble",
+    "./models/ask-pplx",
     "./models/build-with-nimble",
     "./workflow/acceptance-first",
     "./workflow/analyze",
